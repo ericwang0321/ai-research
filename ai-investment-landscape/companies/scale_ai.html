@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scale AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · AI 基础设施与数据平台</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#f0fdf4;color:#15803d">AI 基础设施与数据平台</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 San Francisco</span>
+    </div>
+    <h1 class="dc-title"><a href="https://scale.com/" target="_blank" rel="noopener">Scale AI</a></h1>
+    <div class="dc-oneliner">Scale AI 是从数据标注公司演化而来的模型可靠性和 AI 数据平台。它早期服务自动驾驶和计算机视觉，随后抓住 LLM/RLHF 需求，为 frontier model labs 提供训练数据、偏好反馈、red teaming、评测和安全对齐。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Scale AI 是从数据标注公司演化而来的模型可靠性和 AI 数据平台。它早期服务自动驾驶和计算机视觉，随后抓住 LLM/RLHF 需求，为 frontier model labs 提供训练数据、偏好反馈、red teaming、评测和安全对齐。</strong></p>
+<p>2025 年 6 月，Meta 以约 $14.3B-$14.8B 投资取得 49% non-voting stake，Alexandr Wang 离任加入 Meta Superintelligence Labs，Jason Droege 接任 CEO/临时 CEO 口径。投资上要把 Scale 看作 AI 数据与评测基础设施，同时关注 Meta 交易后独立客户信任、治理和收入集中度。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2016</td><td>YC / 公司成立</td><td>公开资料没有给出可核验金额</td><td>公开资料没有给出可核验估值</td><td>Y Combinator,Alexandr Wang、Lucy Guo</td><td>从数据标注起步</td><td><a href="https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2019-08</td><td>Series C / unicorn round</td><td>$100M</td><td>>$1B</td><td>Founders Fund 领投等</td><td>成为独角兽</td><td><a href="https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2020</td><td>后续大轮融资线索</td><td>$155M 线索</td><td>约 $3.5B 线索</td><td>Tiger Global 等线索</td><td>自动驾驶/AI 数据需求扩张</td><td><a href="https://www.wsj.com/articles/scale-ais-rapid-growth-reflects-widening-demand-for-smart-software-11626106800" target="_blank" rel="noopener">WSJ</a></td></tr><tr><td>2021</td><td>Series E</td><td>$325M 线索</td><td>约 $7.3B</td><td>Greenoaks、Dragoneer、Tiger Global 等线索</td><td>数据标注需求和政府/企业拓展</td><td><a href="https://www.wsj.com/articles/scale-ais-rapid-growth-reflects-widening-demand-for-smart-software-11626106800" target="_blank" rel="noopener">WSJ</a></td></tr><tr><td>2024-05</td><td>大额融资</td><td>$1B</td><td>约 $14B</td><td>Accel 领投;Amazon、Meta、Nvidia、Cisco、Intel、AMD、Qualcomm 等线索</td><td>从数据公司向 AI platform 扩张</td><td><a href="https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2025-06</td><td>Meta strategic investment</td><td>$14.3B-$14.8B</td><td>约 $29B-$30B（49% non-voting stake 隐含整体价值）</td><td>Meta</td><td>Scale 保持独立,Alexandr Wang 加入 Meta；该口径是战略交易隐含价值，不等同普通融资 post-money</td><td><a href="https://www.reuters.com/business/meta-pay-nearly-15-billion-scale-ai-stake-information-reports-2025-06-10/" target="_blank" rel="noopener">Reuters</a></td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li>Scale 是少数从 pre-LLM AI 数据公司成功转型到 LLM/RLHF 时代的公司。</li><li>2024 round 已有 Meta/Amazon/Nvidia 等战略投资人;2025 Meta 交易进一步战略化。</li><li>Meta 交易不是普通融资,而是类并购/人才+股权+商业绑定组合,不能简单等同可复制市场估值。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Scale AI</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2016 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Francisco, California</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Alexandr Wang、Lucy Guo</td></tr><tr><td class="kv-key">当前核心管理</td><td class="kv-val">Jason Droege 接任 CEO/临时 CEO 口径;Alexandr Wang 加入 Meta 并留任 Scale board 线索</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI data engine、RLHF、model evaluation、red teaming、enterprise/government AI applications</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Scale Data Engine、Generative AI Data Engine、RLHF、Scale Evaluation、Scale Donovan、Outlier、Remotasks</td></tr><tr><td class="kv-key">主要客户/场景</td><td class="kv-val">Frontier model builders、Meta、OpenAI/Microsoft/Google 线索、CDAO/DoD、Mayo Clinic、TIME、BP、Cengage、robotics/autonomy</td></tr><tr><td class="kv-key">最新重大资本事件</td><td class="kv-val">2025-06 Meta 投资约 $14.3B-$14.8B 获 49% non-voting stake，隐含 Scale 整体价值约 $29B-$30B</td></tr><tr><td class="kv-key">2024 融资</td><td class="kv-val">$1B round,估值约 $14B</td></tr><tr><td class="kv-key">公开收入线索</td><td class="kv-val">2024 revenue $870M 线索;2025 revenue target/forecast 约 $2B 线索;应用业务 $200M-$300M 线索</td></tr></tbody></table></div>
+<p>Scale 的价值链位置在模型训练和模型落地之间。模型公司需要高质量数据和人类反馈来提升能力;企业和政府需要把 AI 系统接入真实流程并可靠运行;Scale 的平台和人力网络为两端提供数据、评测、red teaming 和应用交付。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 数据标注与 Data Engine</h3>
+<p>Scale Data Engine 帮客户 collect、curate、annotate data,train models and evaluate,repeat。官网强调其 data engine 支持 generative AI、text、image、video、3D sensor fusion、LiDAR、infrared、full motion video 等。早期收入来自按项目/数据量/标签复杂度收费的标注服务,客户包括自动驾驶、机器人、地图、物流、电商和计算机视觉团队。</p>
+<p>这一业务的特点是:</p>
+<ul><li>收入与数据量、标签难度、质量要求和 turnaround time 相关;</li><li>毛利受人工标注成本和质量控制成本影响;</li><li>客户一旦把数据 pipeline 接入 Scale,切换成本较高;</li><li>但劳动力密集属性使其不具备纯软件毛利。</li></ul>
+<h3 class="subsection">4.2 RLHF 与 Generative AI Data Engine</h3>
+<p>LLM 时代,Scale 从 CV 标注扩展到 prompt-response creation、human preference ranking、model output comparison、red teaming、evaluation 和 safety alignment。官网 RLHF 页面提到 InstructGPT-style data、compare model outputs、rank/verify/interact with model outputs、specialized workforce across languages and domains。</p>
+<p>RLHF 收费通常围绕:</p>
+<ul><li>每条 prompt/response/pairwise comparison;</li><li>专家等级和领域稀缺度;</li><li>语言、代码、数学、法律、医疗等复杂度;</li><li>安全 red team 和 adversarial testing 项目;</li><li>长期模型实验/反馈 pipeline 合同。</li></ul>
+<p>这使 Scale 从“便宜标注”升级为“专家数据供应链”。前沿模型越强,越需要高质量、多领域、可验证的人类反馈;这也是 Scale 能从自动驾驶转向 LLM 的核心原因。</p>
+<h3 class="subsection">4.3 Evaluation / Safety / Alignment</h3>
+<p>Scale 官网称其评测和研究能力用于 benchmark frontier AI capability。公开资料显示 Scale 的 Safety, Evaluation and Alignment Lab 参与模型评测、red teaming,并与 Center for AI Safety 合作 Humanity's Last Exam。Scale Evaluation 平台用于测试 LLM against benchmarks,识别弱点并指向需要补充的数据。</p>
+<p>Evaluation 收入更像高端专业服务 + 软件平台:</p>
+<ul><li>benchmark design;</li><li>private eval set;</li><li>red team campaign;</li><li>model weakness diagnosis;</li><li>data generation recommendations;</li><li>compliance/safety reporting。</li></ul>
+<p>相比标注,Evaluation 更接近战略层,客户愿意为可信结果和专家设计支付更高单价。</p>
+<h3 class="subsection">4.4 Government / Donovan / Public Sector</h3>
+<p>Scale Donovan 面向 public sector,强调 AI agents 和 classified/mission data。Scale 官网 public sector 页面和首页均强调 CDAO、defense、sovereignty、turning raw classified data into actionable intelligence。Axios 2025 报道中,Jason Droege 提到 Scale 获得 $100M ceiling DoD deal,并建立在此前 $99M Army deal 之上。</p>
+<p>政府业务收费方式通常是:</p>
+<ul><li>IDIQ / ceiling contract;</li><li>task order;</li><li>software license + services;</li><li>classified data integration;</li><li>deployment and support;</li><li>evaluation and model testing。</li></ul>
+<p>政府合同的优势是金额大、期限长、进入门槛高;风险是采购周期长、政治/监管审查强、项目交付要求高。</p>
+<h3 class="subsection">4.5 Enterprise AI applications</h3>
+<p>Scale 官网 2026 版表达明显向“AI systems that actually work”和 enterprise/government applications 转向。首页列出 Mayo Clinic、TIME、Howard Hughes、BP、Cengage、Shore Capital 等案例,说明公司不只给模型实验室供数据,也在帮助企业构建 AI 应用。Jason Droege 在 Axios 2025 访谈中称应用业务 alone generates $200M-$300M,同时 data services 仍很大。</p>
+<p>企业 AI applications 的收入更像 solution platform:</p>
+<ul><li>use case discovery;</li><li>data preparation;</li><li>eval and model selection;</li><li>application build;</li><li>human-in-the-loop operations;</li><li>ongoing support and outcome ownership。</li></ul>
+<p>这让 Scale 从项目型数据供应商向 Palantir 式 AI implementation platform 靠近。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>内容</th><th>商业意义</th></tr></thead><tbody><tr><td>Scale Data Engine</td><td>数据采集、清洗、标注、训练、评测循环</td><td>模型改进基础管线</td></tr><tr><td>Generative AI Data Engine</td><td>prompt-response、RLHF、red teaming、evaluation、alignment</td><td>LLM 时代核心增长</td></tr><tr><td>RLHF</td><td>人类偏好反馈、模型输出比较、专家 workforce</td><td>提升模型 instruction following 和 safety</td></tr><tr><td>Outlier</td><td>面向 LLM 的专家/标注者网络</td><td>支撑高质量人类反馈</td></tr><tr><td>Remotasks</td><td>全球 crowdworking 标注网络</td><td>低成本规模化标注</td></tr><tr><td>Scale Evaluation</td><td>模型评测、benchmark、弱点诊断</td><td>高价值模型可靠性产品</td></tr><tr><td>SEAL / research</td><td>Safety, Evaluation and Alignment Lab</td><td>增强技术声誉和评测标准</td></tr><tr><td>Donovan</td><td>政府/国防 AI agents</td><td>高壁垒 public sector 产品</td></tr><tr><td>Enterprise Applications</td><td>医疗、能源、出版、教育、PE operations 等</td><td>从数据服务向应用交付扩展</td></tr></tbody></table></div>
+<p>Scale 的技术不是单一算法,而是“human data operations system”。它需要任务设计、worker sourcing、质量控制、专家审核、数据安全、客户 workflow integration 和评测统计。LLM 时代,高质量数据不是随机众包即可完成,而需要专家、领域知识、复杂 rubric 和模型失败模式理解。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开口径</th><th>解读</th></tr></thead><tbody><tr><td>2024 revenue</td><td>$870M 线索</td><td>数据与模型服务已达大规模</td></tr><tr><td>2025 revenue forecast/target</td><td>约 $2B 线索</td><td>若实现,增长非常强</td></tr><tr><td>2025 application business</td><td>Jason Droege 称 applications business alone $200M-$300M</td><td>说明公司从数据服务扩展到应用交付</td></tr><tr><td>2024 financing</td><td>$1B at ~$14B valuation</td><td>大额 growth round,战略投资人包括 Amazon/Meta/Nvidia 等线索</td></tr><tr><td>2025 Meta transaction</td><td>$14.3B-$14.8B for 49% non-voting stake</td><td>战略交易隐含 Scale 整体价值约 $29B-$30B,但交易结构特殊</td></tr><tr><td>员工</td><td>2025 线索约 1,200 人</td><td>与数据运营/企业交付业务匹配</td></tr><tr><td>客户覆盖</td><td>90% of world's leading generative AI model builders powered by Scale,公司官网口径</td><td>强势销售口径,需核验定义</td></tr><tr><td>Government contracts</td><td>$100M ceiling DoD deal;此前 $99M Army deal 线索</td><td>Public sector 成为重要增长方向</td></tr></tbody></table></div>
+<p>Scale 的收入比推理平台更“项目/服务化”,但也可能更稳,因为模型公司需要持续数据、评测和安全工作。关键是毛利: 如果收入增长依赖大量人工和 forward-deployed delivery,毛利率和 operating leverage 可能低于软件平台;如果 Scale Evaluation、Donovan、enterprise applications 软件化成功,财务质量会改善。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Scale 的业务可拆为四类毛利结构:</p>
+<ol><li><strong>传统标注/数据服务</strong>: 人工成本高,但规模化和流程优化可改善毛利。定价取决于数据复杂度、质量 SLA 和速度。</li><li><strong>RLHF/专家数据</strong>: 单价更高,但需要专家 workforce 和质量审核。毛利取决于专家供给、返工率和任务设计。</li><li><strong>Evaluation/software platform</strong>: 更接近软件和专业服务混合,如果可产品化,毛利更好。</li><li><strong>Government/enterprise applications</strong>: 合同大,但交付重,类似 Palantir/consulting + software。</li></ol>
+<p>Scale 的财务质量取决于能否从劳动力密集的标注转向高价值数据、evals 和应用平台。2024 revenue $870M、2025 目标 $2B 如果主要来自人工服务,估值应打折;如果应用、政府软件和 eval platform 占比上升,估值可更高。</p>
+<p>Meta 交易对单位经济性有双刃剑效果: Meta 可能带来大额、长期需求和商业背书;但其他模型客户可能减少合作,导致客户组合变窄。若 Scale 变成 Meta 的准内部数据供应链,收入可见度高但平台中立性下降。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>类别</th><th>竞争者</th><th>Scale 相对位置</th></tr></thead><tbody><tr><td>RLHF/数据服务</td><td>Surge AI、Turing、Invisible、Appen、Sama、Labelbox</td><td>Scale 品牌和大客户强,但 Surge 等在 LLM 数据上竞争激烈</td></tr><tr><td>模型公司自建</td><td>OpenAI、Google、Anthropic、Meta 内部数据团队</td><td>大客户可内部化最敏感数据和评测</td></tr><tr><td>企业 AI implementation</td><td>Palantir、C3.ai、Accenture、Deloitte、Databricks</td><td>Scale 更懂数据和模型评测,但企业软件平台深度需证明</td></tr><tr><td>Government AI</td><td>Palantir、Anduril、Booz Allen、Primer、Shield AI</td><td>Scale 有数据/LLM eval优势,但国防集成竞争激烈</td></tr><tr><td>合成数据/自动评测</td><td>Gretel、Mostly AI、模型自生成数据、LLM-as-judge 工具</td><td>可能替代部分人工数据,也可能成为 Scale 工具</td></tr></tbody></table></div>
+<p>护城河:</p>
+<ul><li>大规模高质量 human data operations;</li><li>Frontier model labs 客户经验;</li><li>专家 workforce 和质量控制;</li><li>Government/public sector 合同;</li><li>评测、安全、red teaming 能力;</li><li>Meta 交易带来的资金和战略资源。</li></ul>
+<p>脆弱点:</p>
+<ul><li>中立性被 Meta 交易削弱;</li><li>Google/OpenAI 等客户可能转向其他供应商或自建;</li><li>标注劳工和内容审核诉讼持续;</li><li>合成数据和模型自评降低部分人工需求;</li><li>政府业务政治和交付风险高。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Alexandr Wang 和 Lucy Guo 于 2016 年创立 Scale,两人均有 Quora/Y Combinator 背景。Wang 长期是公司融资、政府关系和“America must win the AI war”叙事的核心人物。2025 年 Meta 交易后,Wang 加入 Meta Superintelligence Labs 并担任关键 AI 角色,Scale 由 Jason Droege 接任 CEO/临时 CEO 口径。</p>
+<p>领导层变化是本公司最重要的近期事件。Wang 离开日常 CEO 岗位可能削弱创始人驱动,但也把 Scale 与 Meta 深度绑定。Jason Droege 的任务是向市场证明 Scale 不会因为 Meta 交易失去独立客户,并继续从 data labeling 扩展到 applications 和 government。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>客户冲突风险</strong>: Meta 49% stake 使 Google/OpenAI/Anthropic 等潜在客户担心数据和战略泄露。</li><li><strong>管理层变化风险</strong>: Alexandr Wang 离开 CEO 岗位,公司需要证明新管理层执行力。</li><li><strong>劳工与内容审核风险</strong>: Remotasks/Outlier 等全球劳动力涉及分类、薪酬、心理伤害和内容安全争议。</li><li><strong>自动化替代风险</strong>: 合成数据、LLM-as-judge、self-play、AI feedback 可能替代部分人工数据。</li><li><strong>毛利风险</strong>: 数据和应用交付人力密集,难以达到纯软件毛利。</li><li><strong>政府业务风险</strong>: 国防和公共部门合同受政治、预算、合规和舆论影响。</li><li><strong>数据隐私风险</strong>: 处理客户敏感数据和模型输出,任何泄露都会严重伤害信任。</li><li><strong>估值风险</strong>: Meta 交易隐含价值很高,但普通市场投资人未必按同样战略价值定价。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anyscale.html">Anyscale</a><a class="sib-chip" href="baseten.html">Baseten</a><a class="sib-chip" href="databricks.html">Databricks</a><a class="sib-chip" href="fireworks_ai.html">Fireworks AI</a><a class="sib-chip" href="hugging_face.html">Hugging Face</a><a class="sib-chip" href="mercor.html">Mercor</a><a class="sib-chip" href="modal.html">Modal</a><a class="sib-chip" href="together_ai.html">Together AI</a></div>
+</div>
+</body></html>

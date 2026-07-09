@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tavily · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 数据与搜索</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#fff7ed;color:#c2410c">数据与搜索</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.tavily.com/" target="_blank" rel="noopener">Tavily</a></h1>
+    <div class="dc-oneliner">Tavily 是面向 AI Agent 的实时网页访问 API。它把 search、extract、crawl、map 和 research 做成开发者可调用的接口，让 Agent 能访问实时网页、抽取结构化内容、生成引用，并降低 PII 和 prompt injection 风险。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Tavily 是面向 AI Agent 的实时网页访问 API。它把 search、extract、crawl、map 和 research 做成开发者可调用的接口，让 Agent 能访问实时网页、抽取结构化内容、生成引用，并降低 PII 和 prompt injection 风险。</strong></p>
+<p>截至 2026 年 7 月 6 日，Tavily 官网披露 2M+ developers、300M+ monthly requests、99.99% uptime、180ms p50 on <code>/search</code>、billions of pages crawled/extracted。它与 Exa 是直接竞品，也会和 Perplexity API、Brave Search API、Google/Bing Search API、Firecrawl、Linkup、SerpAPI 等竞争。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2023</td><td>GPT Researcher 开源项目 viral</td><td>项目阶段</td><td>项目阶段</td><td>社区</td><td>TechCrunch 报道称接近 20,000 GitHub stars</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024</td><td>Tavily 公司化 / 企业化</td><td>早期</td><td>早期</td><td>创始团队</td><td>TechCrunch 称 Tavily 为 1-year-old startup in 2025 报道口径</td><td><a href="https://techcrunch.com/2025/08/06/tavily-raises-25m-to-connect-ai-agents-to-the-web/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2025-08</td><td>Series A</td><td>$20M</td><td>需要后续核验</td><td>Insight Partners 领投</td><td>TechCrunch 报道总融资 $25M</td><td><a href="https://techcrunch.com/2025/08/06/tavily-raises-25m-to-connect-ai-agents-to-the-web/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2025-08</td><td>总融资</td><td>$25M</td><td>需要后续核验</td><td>Insight 等</td><td>反映早期融资不重，但 usage 增长快</td><td><a href="https://techcrunch.com/2025/08/06/tavily-raises-25m-to-connect-ai-agents-to-the-web/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2026-02</td><td>Joining Nebius</td><td>战略并入/加入</td><td>交易条款需要后续核验</td><td>Nebius</td><td>官方称 API、数据政策、ZDR、安全和用户体验不变</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-05/06</td><td>x402、LangChain Interrupt、Arcade.dev、Fieldway、Peerbound 等产品/案例更新</td><td>产品事件</td><td>产品事件</td><td>合作伙伴</td><td>加速 ecosystem distribution</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr></tbody></table></div>
+<p>需要后续核验的具体问题: Nebius 交易是否为收购、股权投资还是团队/产品加入；交易金额和员工/投资者安排；Series A 估值和 cap table；加入 Nebius 后 Tavily 是否单独计收入；Nebius 是否提供云 credits 或 infra cost subsidies。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Tavily Inc.</td></tr><tr><td class="kv-key">创始人/CEO</td><td class="kv-val">Rotem Weiss</td></tr><tr><td class="kv-key">起源</td><td class="kv-val">GPT Researcher 开源项目，TechCrunch 报道称 2023 年 viral、接近 20,000 GitHub stars 后发展为 Tavily</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">One secure API for real-time web access；the web access layer for agents</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Search API、Extract API、Crawl API、Map API、Research API、SDKs、community、enterprise integrations</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">AI agents、research agents、enterprise enrichment、coding/research workflows、金融/销售/法律/咨询/企业自动化</td></tr><tr><td class="kv-key">公开客户/伙伴</td><td class="kv-val">Writer、MongoDB、Groq、LangChain、Monday、AWS、Mastercard、Ironclad、IBM、BCG、Troutman Pepper Locke、Extend 等官网展示；IBM watsonx partnership；Databricks MCP Marketplace；JetBrains integration</td></tr><tr><td class="kv-key">公开运营指标</td><td class="kv-val">2M+ developers、300M+ monthly requests、99.99% uptime、180ms p50 <code>/search</code>、billions pages crawled/extracted</td></tr><tr><td class="kv-key">融资</td><td class="kv-val">2025 年 TechCrunch: Insight Partners 领投 $20M Series A，总融资 $25M</td></tr><tr><td class="kv-key">资本化变化</td><td class="kv-val">2026-02 官方宣布 joining Nebius</td></tr><tr><td class="kv-key">IPO 状态</td><td class="kv-val">加入 Nebius 后不再是典型独立 IPO 路径，更多是 Nebius 体系内产品线/基础设施资产</td></tr></tbody></table></div>
+<p>Tavily 的市场切入与 Exa 类似，但更强调“secure, production-grade, enterprise-ready”。官网将安全与生产规模放在首页: real-time search、intelligent caching、indexing、PII redaction、prompt injection blocking、malicious source validation、99.99% uptime、180ms p50。这个定位很适合企业 agent，因为企业对 web access 的担忧不只是“搜不搜得到”，还有数据泄露、幻觉、恶意网页、合规和稳定性。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 Pricing</h3>
+<p>Tavily 官方定价如下:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Plan</th><th>价格</th><th>包含内容</th><th>商业含义</th></tr></thead><tbody><tr><td>Free / Researcher</td><td>$0/month</td><td>1,000 API credits/month、no credit card、email support</td><td>开发者获客和原型试用</td></tr><tr><td>Pay As You Go</td><td>$0.008/credit</td><td>Pay only for what you use、cancel anytime、email support</td><td>灵活 API consumption，适合小团队和波动 workload</td></tr><tr><td>Project</td><td>页面展示可调计划，默认 4,000 API credits/month、higher rate limits、email support</td><td>面向 enthusiasts/小团队的固定月费入口</td></tr><tr><td>Enterprise</td><td>Custom</td><td>Custom API calls、custom rate limits、enterprise-grade support and SLAs、enterprise-grade security and privacy</td><td>大客户合同，真正利润和规模来源</td></tr></tbody></table></div>
+<p>Tavily 的 credit 模型让客户不必理解每个 endpoint 的底层成本，但对投资分析也意味着需要知道不同 endpoint credit burn。Search、Extract、Crawl、Research 的成本结构差异很大。Enterprise custom rate limits 和 API call commitments 是支撑 gross margin 的关键。</p>
+<h3 class="subsection">4.2 产品收费与 value metric</h3>
+<p>Tavily 的 value metric 是“agent 可安全访问 web 的次数/深度”。Search 是实时检索，Extract 是从网页抽取内容，Crawl/Map 是站点级探索，Research 是多步研究。客户用量会随 agent 运行频次增长，而不是随 seat 线性增长。因此 Tavily 比 GoLinks/GoSearch 更像 usage-based API infra，比 Dify/LangChain 更少 seat/subscription，更靠调用量和 enterprise minimums。</p>
+<h3 class="subsection">4.3 Enterprise contract</h3>
+<p>Enterprise 合同的价值在四个方面:</p>
+<ul><li>更高 rate limits 和 custom API calls；</li><li>安全、隐私、zero data retention、PII redaction、prompt injection protection；</li><li>support/SLAs；</li><li>可能的 private deployments、custom policies、采购条款和集成服务。</li></ul>
+<p>Tavily 加入 Nebius 后，enterprise sales 可以借 Nebius AI cloud 客户资源扩张；但也要看 Nebius 是否把 Tavily 打包为云服务，还是保持独立 API 品牌。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 Search API</h3>
+<p>Search API 是 Tavily 的核心。官网称它为 one secure API for real-time web access，支持 agent grounding、live web retrieval、structured chunks、latency control。首页展示 180ms p50 <code>/search</code> 和 300M+ monthly requests。对 agent 来说，搜索结果必须在可接受 latency 内返回，否则会拖慢 multi-step workflow。</p>
+<h3 class="subsection">5.2 Extract / Crawl / Map</h3>
+<p>Docs 展示 Tavily SDK 支持 <code>search</code>、<code>extract</code>、<code>crawl</code>、<code>map</code> 和 <code>research</code>。Extract 将网页正文抽取给模型，Crawl 根据 instructions 爬取站点，Map 探索站点结构。这些能力让 Tavily 不只是 SERP API，而是 web data processing layer。</p>
+<h3 class="subsection">5.3 Research API</h3>
+<p>Research API 用于多步、引用型研究。Tavily 2026 年博客多次提到 <code>/research</code> 正在成为现代 AI 系统 building block，并展示 product research agent、competitive intelligence、Fieldway 5-hour manual cycle to 25-minute agent 等案例。Research API 的战略意义是提高单次请求价值，从低价 search credits 上移到高价值 research jobs。</p>
+<h3 class="subsection">5.4 安全与治理</h3>
+<p>Tavily 首页强调 built-in safeguards: 请求经过 security、privacy、content validation layers，可以 block PII leakage、prompt injection 和 malicious sources。IBM partnership 页面也强调 zero data retention、PII redaction、prompt injection detection/mitigation。对于企业 agent，web 是不可信输入源，prompt injection 和恶意网页会影响 agent 行动。Tavily 若能在安全上领先，将比单纯搜索质量更有 enterprise 差异。</p>
+<h3 class="subsection">5.5 开发者生态</h3>
+<p>Tavily 提供 Python SDK、JavaScript SDK、cURL、docs、community、certification、events、use cases，并与 LangChain、Groq、OpenAI/Anthropic/Groq provider integrations、IBM watsonx、Databricks MCP Marketplace、JetBrains、Arcade.dev、x402 等生态集成。它的 GTM 更像 developer infrastructure: 先进入开源/agent framework，再转企业。</p>
+<h3 class="subsection">5.6 产品效果</h3>
+<p>官网公开指标非常强:</p>
+<ul><li>2M+ developers using Tavily；</li><li>300M+ monthly requests handled；</li><li>99.99% uptime；</li><li>180ms p50 on <code>/search</code>；</li><li>billions of pages crawled/extracted without downtime；</li><li>trusted by Writer、MongoDB、Groq、LangChain、Monday、AWS、Mastercard、Ironclad、IBM、BCG 等。</li></ul>
+<p>这些是 agent search API 公司最重要的 traction 指标。但需要注意: 2M+ developers 可能包含 free/community users，300M+ monthly requests 需要拆分 free vs paid、search vs extract/research、top customers concentration。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开口径</th><th>解读</th></tr></thead><tbody><tr><td>Developers</td><td>2M+</td><td>开发者心智强，但需看付费转化</td></tr><tr><td>Monthly requests</td><td>300M+</td><td>已有生产流量，优于纯早期 API</td></tr><tr><td>Uptime</td><td>99.99%</td><td>Enterprise readiness</td></tr><tr><td>Latency</td><td>180ms p50 on <code>/search</code></td><td>支持 agent loop 的关键指标</td></tr><tr><td>Pages crawled/extracted</td><td>Billions</td><td>crawler/extract 基础设施已规模化</td></tr><tr><td>Free credits</td><td>1,000 credits/month</td><td>免费入口较 Exa 20k requests 小，但 credit 口径不同</td></tr><tr><td>PAYG</td><td>$0.008/credit</td><td>透明用量计费</td></tr><tr><td>Enterprise</td><td>Custom calls/rate limits/support/security</td><td>ACV 和毛利关键</td></tr><tr><td>Funding</td><td>$20M Series A led by Insight；total $25M</td><td>2025 年 TechCrunch 口径</td></tr><tr><td>Product origin</td><td>GPT Researcher, nearly 20k GitHub stars</td><td>开源和研究社区 wedge</td></tr><tr><td>Nebius event</td><td>2026-02 joining Nebius</td><td>资本化/战略归属发生变化</td></tr></tbody></table></div>
+<p>Tavily 的商业化质量比很多开发者工具更可见，因为它披露了 monthly requests 和 uptime。不过还缺收入、付费客户数、gross margin、enterprise ACV、credit burn by endpoint 等关键财务指标。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Tavily 的单位经济性围绕 credit 经济展开:</p>
+<ul><li><strong>Revenue per credit</strong>: PAYG $0.008/credit 是基础价格，但不同计划和 enterprise 折扣会改变实际 ARPU。</li><li><strong>Cost per web operation</strong>: Search、Extract、Crawl、Map、Research 的成本不同；Research 多步任务可能消耗更多 crawling、retrieval、LLM processing。</li><li><strong>Cache / indexing efficiency</strong>: 300M+ monthly requests 下，缓存和索引效率决定毛利。</li><li><strong>Security overhead</strong>: PII redaction、prompt injection detection、malicious source filtering 会增加计算成本，但也支撑 enterprise price。</li><li><strong>Nebius infra synergy</strong>: 加入 Nebius 后，算力、存储、网络和全球部署成本可能下降，或至少获得更稳定供应。</li><li><strong>Enterprise minimums</strong>: 自定义合同可以通过 minimum commitments 和 rate limits 管理高用量客户。</li></ul>
+<p>如果按纯 PAYG，小客户 churn 和价格竞争会限制估值；如果 Tavily 能把 search/extract/research 打包进企业 agent platform，并通过 Nebius 销售给大型客户，收入质量会显著提高。需要关注 Nebius 是否把 Tavily 作为 cloud AI infra 的附加服务，形成 cross-sell。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 与 Exa</h3>
+<p>Exa 是最直接竞品。Exa 定位为 Search API for AI agents，强调自研 AI search、Contents highlights、Deep Search、Agent、Monitors、Exa Connect；Tavily 定位为 secure API for real-time web access，强调 search/extract/crawl/research、安全、规模指标和 production readiness。</p>
+<p>Tavily 相对 Exa 的优势:</p>
+<ul><li>2M+ developers、300M+ monthly requests 等公开 usage 更强；</li><li>Nebius 提供基础设施和企业云资源；</li><li>安全/PII/prompt injection narrative 更清晰；</li><li>与 IBM、Databricks、LangChain、JetBrains 等生态集成。</li></ul>
+<p>Exa 相对 Tavily 的优势:</p>
+<ul><li>Benchmark/NVenture/Benchmark capital backing 和 $700M 估值；</li><li>Contents highlights/token efficiency 和 vertical search narrative；</li><li>Agent/Monitors/Exa Connect 进入数据 enrichment；</li><li>Cursor/Cognition/HubSpot/OpenRouter 等案例。</li></ul>
+<h3 class="subsection">8.2 与 Perplexity</h3>
+<p>Perplexity 是 consumer AI search 入口，同时 API 化为 Search/Sonar/Agent API。Tavily 更专注 agent web access，不直接争 consumer 用户。对开发者来说，Perplexity 适合答案模型和引用输出，Tavily 适合可控 search/extract/crawl/research 工具。长期风险是 Perplexity API 用强品牌和模型输出质量抢开发者。</p>
+<h3 class="subsection">8.3 与 Google / Bing / Brave / SerpAPI</h3>
+<p>Google/Bing 拥有最大索引和默认搜索基础设施，但 API 输出并非专门为 autonomous agents 设计。Brave Search API 提供独立 web index，SerpAPI 提供搜索结果抓取。Tavily 的差异是 agent-specific output、安全、research workflow 和 developer docs。若 Google/Bing 将 agent-optimized search API 商业化，Tavily 的替代风险上升。</p>
+<h3 class="subsection">8.4 与 Firecrawl / Browserbase / Apify</h3>
+<p>Firecrawl 专注 crawl/extract，Browserbase 专注 browser automation，Apify 是 scraping/automation marketplace。Tavily 在 search + extract + research 层，可能与 Firecrawl overlap；但复杂页面交互和登录后网页仍可能需要 Browserbase/Apify。</p>
+<h3 class="subsection">8.5 与 Databricks / Dify / LangChain / GoSearch</h3>
+<p>Databricks Agent Bricks、Dify workflows、LangChain agents、GoSearch enterprise search 都可能调用 Tavily 作为外部 web tool。Tavily 的最佳位置是成为这些 builder 的默认 web tool，而不是自己做完整 app builder。Databricks MCP Marketplace 和 LangChain integrations 对其 distribution 很重要。</p>
+<h3 class="subsection">8.6 护城河与脆弱点</h3>
+<p>护城河:</p>
+<ul><li>2M+ developer adoption；</li><li>300M+ monthly requests 的生产规模；</li><li>安全/PII/prompt injection controls；</li><li>Nebius infra 和潜在 cloud distribution；</li><li>search/extract/crawl/research 一体化；</li><li>生态集成和开源起源。</li></ul>
+<p>脆弱点:</p>
+<ul><li>Search API switching cost 低；</li><li>Exa、Perplexity、Google、Brave、Bing、Firecrawl、Linkup 竞争；</li><li>Nebius 加入后独立品牌与战略优先级变化；</li><li>内容授权和爬虫限制；</li><li>research endpoint 成本不可控；</li><li>免费开发者规模不等于付费规模。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Rotem Weiss 是创始人，TechCrunch 报道其数据科学背景，先做 GPT Researcher 开源项目，再转向企业级 Tavily。这个背景决定 Tavily 的产品基因: 不是传统搜索门户，而是研究/agent 工具。GPT Researcher 的 viral 带来早期开发者社区，随后 Tavily 将能力产品化为 API、SDK、docs、enterprise security。</p>
+<p>加入 Nebius 后，团队需要从创业公司节奏转向基础设施公司节奏: 保持开发者体验、快速产品迭代和 community 同时，满足更大企业部署、SLA、全球低延迟和合规要求。若处理得好，Nebius 是放大器；若处理不好，可能降低独立产品敏捷性。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>独立性变化</strong>: 加入 Nebius 后，产品路线可能服务 Nebius 云战略，而非所有开发者中立需求。</li><li><strong>Exa 竞争</strong>: Exa 获得 Benchmark/NVenture 支持，并有 $700M 估值和高质量客户案例。</li><li><strong>模型厂商内置 search</strong>: OpenAI/Anthropic/Google/Perplexity 可把 web search 做成默认 tool。</li><li><strong>价格压力</strong>: PAYG $0.008/credit 面临 search commoditization。</li><li><strong>内容访问风险</strong>: Robots/paywalls/copyright/anti-scraping 会限制网页覆盖。</li><li><strong>安全事故</strong>: prompt injection、PII leakage 或恶意网页导致 agent 错误，会严重影响企业信任。</li><li><strong>Usage gross margin</strong>: 300M+ monthly requests 规模下，crawl/extract/research 成本需要严格控制。</li><li><strong>免费用户转化</strong>: 2M+ developers 中付费转化率不明。</li><li><strong>Enterprise sales cycle</strong>: 自定义 API、security review、SLAs 会拉长采购周期。</li><li><strong>差异化可持续性</strong>: latency、uptime、安全和 citations 可能被竞品追平。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="exa.html">Exa</a><a class="sib-chip" href="glean_technologies.html">Glean Technologies</a><a class="sib-chip" href="golinks_gosearch.html">GoLinks</a><a class="sib-chip" href="hebbia.html">Hebbia</a><a class="sib-chip" href="perplexity_ai.html">Perplexity AI</a><a class="sib-chip" href="pinecone.html">Pinecone</a><a class="sib-chip" href="weaviate.html">Weaviate</a></div>
+</div>
+</body></html>

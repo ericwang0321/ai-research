@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Isomorphic Labs · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">英国 London，Alphabet 体系</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.isomorphiclabs.com/" target="_blank" rel="noopener">Isomorphic Labs</a></h1>
+    <div class="dc-oneliner">Isomorphic Labs 是 Alphabet/Google DeepMind 把 AlphaFold 科研资产转化为药物发现公司的核心载体。它不按传统 SaaS 收费，而是用 IsoDDE / AI drug design engine 与大型药企做多靶点合作，并推进自研候选药物。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Isomorphic Labs 是 Alphabet/Google DeepMind 把 AlphaFold 科研资产转化为药物发现公司的核心载体。它不按传统 SaaS 收费，而是用 IsoDDE / AI drug design engine 与大型药企做多靶点合作，并推进自研候选药物。</strong></p>
+<p>截至 2026 年 7 月 6 日，公司官网显示 2026 年 5 月完成 $2.1B Series B，由 Thrive Capital 领投，Alphabet/GV 继续参与，MGX、Temasek、CapitalG、UK Sovereign AI Fund 加入。核心风险是 AlphaFold/IsoDDE 的结构预测优势能否转化为真实临床药物，以及 Alphabet 控股架构下外部投资人与药企合作方的经济权益如何分配。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>估值/资本化</th><th>投资方/参与方</th><th>事件意义</th><th>来源线索</th></tr></thead><tbody><tr><td>2021-02</td><td>公司注册</td><td>Alphabet 内部孵化</td><td>Alphabet-backed</td><td>Alphabet / DeepMind 体系</td><td>AlphaFold 科研资产商业化载体</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2021-11</td><td>公司公开宣布</td><td>Alphabet 内部</td><td>Alphabet-backed</td><td>Demis Hassabis 领导</td><td>AI drug discovery 公司正式亮相</td><td><a href="https://www.jnj.com/media-center/press-releases" target="_blank" rel="noopener">Jnj</a></td></tr><tr><td>2022-12</td><td>Lausanne office announced</td><td>内部扩张</td><td>Alphabet-backed</td><td>Swiss/London footprint</td><td>增强药物研发和欧洲人才布局</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024-01</td><td>Novartis、Eli Lilly collaborations</td><td>媒体称两项合作潜在规模接近 $3B</td><td>合作经济</td><td>Novartis、Eli Lilly</td><td>从技术公司进入 pharma BD</td><td><a href="https://www.reuters.com/technology/alphabets-isomorphic-labs-inks-drug-discovery-deals-with-lilly-novartis-2024-01-07/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td>2024-05</td><td>AlphaFold 3 with Google DeepMind</td><td>科研发布</td><td>技术资产</td><td>Google DeepMind / Isomorphic</td><td>支持 drug-like biomolecular interactions</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-03</td><td>First external funding / Series A 口径</td><td>$600M</td><td>未给出</td><td>Thrive 领投,GV/Alphabet 参与</td><td>外部资本首次大规模进入</td><td><a href="https://www.ft.com/content/14d93672-dce7-482d-9b32-fa3553b37273" target="_blank" rel="noopener">FT</a></td></tr><tr><td>2025-02/2025</td><td>Novartis expansion</td><td>金额未逐项公开</td><td>合作扩展</td><td>Novartis</td><td>初始合作后增加最多三个项目</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-01</td><td>J&J collaboration</td><td>金额未逐项公开</td><td>合作扩展</td><td>Johnson & Johnson</td><td>跨 modality 和多 target 合作</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-02</td><td>IsoDDE 技术报告</td><td>技术披露</td><td>平台升级</td><td>Isomorphic Labs</td><td>Beyond AlphaFold 的自有技术叙事</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-05</td><td>Series B</td><td>$2.1B</td><td>未给出</td><td>Thrive、Alphabet、GV、MGX、Temasek、CapitalG、UK Sovereign AI Fund</td><td>资金用于全球扩张和候选药物管线</td><td><a href="https://www.reuters.com/technology/alphabets-isomorphic-labs-inks-drug-discovery-deals-with-lilly-novartis-2024-01-07/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td>2026-07-06 前</td><td>IPO 状态</td><td>无公开 filing</td><td>私有公司</td><td>外部资本 + Alphabet</td><td>仍处于私募阶段</td><td><a href="https://predictioncenter.org/casp16/" target="_blank" rel="noopener">Predictioncenter</a></td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">Isomorphic Labs Limited</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2021 年;英国公司注册日期公开资料为 2021-02-24</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">London, UK;并在 Lausanne 等地扩张</td></tr><tr><td class="kv-key">创始人/CEO</td><td class="kv-val">Sir Demis Hassabis</td></tr><tr><td class="kv-key">核心团队</td><td class="kv-val">Max Jaderberg、Miles Congreve、Sergei Yakneen、drug discovery scientists、machine learning specialists</td></tr><tr><td class="kv-key">母公司/股东</td><td class="kv-val">Alphabet 体系孵化;2025/2026 外部融资后仍有 Alphabet/GV 重要参与</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI-first drug discovery company, building on and beyond AlphaFold</td></tr><tr><td class="kv-key">主要技术</td><td class="kv-val">AlphaFold heritage、IsoDDE / Isomorphic Labs Drug Design Engine、protein-ligand prediction、binding affinity prediction、pocket discovery、multi-modality molecule generation</td></tr><tr><td class="kv-key">合作伙伴</td><td class="kv-val">Novartis、Eli Lilly、Johnson & Johnson</td></tr><tr><td class="kv-key">融资状态</td><td class="kv-val">2025 年 $600M first external funding;2026 年 $2.1B Series B</td></tr><tr><td class="kv-key">IPO 状态</td><td class="kv-val">私有公司;截至 2026 年 7 月 6 日 没有公开 IPO filing</td></tr></tbody></table></div>
+<p>Isomorphic 的特殊性在于它不是从传统 biotech 或 SaaS 创业公司长出来,而是从 DeepMind/Alphabet 的基础科学突破转化而来。AlphaFold 解决了蛋白结构预测的巨大科学问题;Isomorphic 要解决的是更商业、更难也更长周期的问题:如何把结构预测、binding affinity、pocket discovery、生成式分子设计和湿实验验证串成可开发药物。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 AI drug design partnership</h3>
+<p>Isomorphic 的公开商业模式主要是 pharma collaboration,不是面向科研人员的公开 SaaS。合作框架通常包括:</p>
+<ul><li>大药企提供 disease biology、target expertise、开发经验和临床商业化能力;</li><li>Isomorphic 提供 AI drug design engine、模型、计算能力、药物化学和 discovery 团队;</li><li>双方围绕多个 targets、modalities 或 therapeutic areas 推进候选物;</li><li>付款结构可能包括 upfront、research funding、option fee、development/regulatory/commercial milestone、royalty。</li></ul>
+<p>公司官网 Partnerships 页写明:</p>
+<ul><li>Novartis 合作最初聚焦三个 challenging targets 的 small molecule therapeutics,2025 年扩展最多三个 additional research programs。</li><li>Eli Lilly 合作聚焦若干 undisclosed targets 的 small molecule therapeutics。</li><li>Johnson & Johnson 2026 年合作是 multi-target、cross-modality,覆盖 small molecules、antibodies、peptides、molecular glues 等多种 modality。</li></ul>
+<h3 class="subsection">4.2 自研管线</h3>
+<p>2025 年融资报道和 2026 年 Series B 公告都提到资金将用于推进 drug candidate pipeline / clinical development programs。也就是说 Isomorphic 不只做 fee-for-service,还希望持有自有药物资产经济权益。这个方向决定了它最终更像 AI biotech,而不是纯工具平台。</p>
+<h3 class="subsection">4.3 收费和经济权益的核心问题</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模块</th><th>可能收入/权益</th><th>投资意义</th><th>需要核验的问题</th></tr></thead><tbody><tr><td>Novartis collaboration</td><td>upfront + research funding + milestones + royalties</td><td>证明大药企愿意扩展合作</td><td>具体 upfront、里程碑、royalty rate</td></tr><tr><td>Lilly collaboration</td><td>upfront + milestones + royalties</td><td>进入大药企 small molecule discovery workflow</td><td>targets 数量和权利归属</td></tr><tr><td>J&J collaboration</td><td>multi-target cross-modality economics</td><td>从小分子延伸到 biologics/peptides/molecular glues</td><td>是否含 upfront、option、co-dev rights</td></tr><tr><td>Internal pipeline</td><td>自有资产未来授权或上市权益</td><td>保留更大 upside</td><td>候选物阶段、适应症、IND 时间表</td></tr><tr><td>Platform licensing</td><td>目前公开资料未显示标准外售 SaaS</td><td>若未来开放,可形成更稳定收入</td><td>是否对外授权 IsoDDE 工具</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 从 AlphaFold 到 IsoDDE</h3>
+<p>AlphaFold 解决的是结构预测问题,但药物发现需要更多能力:</p>
+<ul><li>药物和靶点如何结合;</li><li>小分子 binding affinity 有多强;</li><li>蛋白是否存在 hidden / cryptic pocket;</li><li>抗体/抗原界面如何设计;</li><li>分子如何在 potency、selectivity、ADME、toxicity、synthetic accessibility 之间优化;</li><li>预测结果如何通过实验验证并进入 lead optimization。</li></ul>
+<p>Isomorphic 在 2026 年 2 月发布 IsoDDE 进展,称其在 protein-ligand structure prediction generalisation benchmark 上 more than doubles AlphaFold 3 accuracy,在 binding affinity prediction 上超过 deep-learning methods 并可超越部分 physics-based methods,还能仅凭 amino acid sequence 识别 novel ligandable pockets。公司还称 IsoDDE 在 antibody-antigen prediction 的 high-fidelity regime 上优于 AlphaFold 3 2.3x、优于 Boltz-2 19.8x。</p>
+<h3 class="subsection">5.2 技术能力拆解</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>能力</th><th>公司披露</th><th>药物发现意义</th></tr></thead><tbody><tr><td>Protein-ligand structure prediction</td><td>hardest generalisation category 中 more than doubles AF3 accuracy</td><td>对 novel target / novel pocket 更关键</td></tr><tr><td>Binding affinity prediction</td><td>在 FEP+ 4、OpenFE、CASP16 等 benchmark 上强于 deep-learning methods,可接近/超过 physics methods</td><td>影响 lead ranking 和 optimization</td></tr><tr><td>Antibody-antigen prediction</td><td>high-fidelity DockQ >0.8 regime 上优于 AF3 和 Boltz-2</td><td>支持 biologics 和 large molecule design</td></tr><tr><td>Pocket discovery</td><td>用 sequence input 识别 ligandable pockets</td><td>支持 first-in-class target 和 allosteric modulation</td></tr><tr><td>Multi-modality generation</td><td>small molecules、antibodies、peptides、molecular glues</td><td>拓宽合作和管线空间</td></tr></tbody></table></div>
+<h3 class="subsection">5.3 技术效果的评估边界</h3>
+<p>IsoDDE 的公开 benchmark 重要,但仍不是临床证明:</p>
+<ul><li>结构预测好不代表药物一定有效;</li><li>binding affinity 好不代表 selectivity、PK、tox、CMC、human efficacy 全部成立;</li><li>benchmark 可能无法覆盖所有真实项目复杂性;</li><li>wet lab data 和 clinical data 才是最终验证;</li><li>CASP16 等外部评测曾显示 ligand prediction 领域仍很难,部分手工和传统 docking 方法在特定任务仍有竞争力。</li></ul>
+<p>因此,Isomorphic 的关键里程碑不是再发布一个 benchmark,而是把 AI-designed drug candidate 推进 IND、Phase 1 和 Phase 2。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开数据</th><th>来源口径</th><th>解读</th></tr></thead><tbody><tr><td>2025 first external round</td><td>$600M</td><td>公司/媒体</td><td>Alphabet 外部化融资,Thrive 进入</td></tr><tr><td>2026 Series B</td><td>$2.1B</td><td>公司官网 2026-05-12</td><td>资金规模极大,支持全球扩张和 pipeline</td></tr><tr><td>Series B 投资方</td><td>Thrive、Alphabet、GV、MGX、Temasek、CapitalG、UK Sovereign AI Fund</td><td>公司官网</td><td>全球主权/战略/科技资本进入</td></tr><tr><td>Pharma partners</td><td>Novartis、Eli Lilly、Johnson & Johnson</td><td>公司官网</td><td>已有三家 top pharma 级别合作方</td></tr><tr><td>Novartis expansion</td><td>初始 3 targets 扩展最多 3 additional programs</td><td>公司官网 Partnerships</td><td>合作一年后扩展,是正面信号</td></tr><tr><td>Technology</td><td>IsoDDE more than doubles AF3 accuracy on difficult protein-ligand benchmark</td><td>公司技术报告</td><td>技术叙事从 AlphaFold 继承转向自有 drug design engine</td></tr><tr><td>AlphaFold reach</td><td>AlphaFold Protein Database 被 over 3M researchers in 190+ countries 使用</td><td>Isomorphic 文章</td><td>科学影响力巨大,但不是 Isomorphic 收入</td></tr></tbody></table></div>
+<h3 class="subsection">6.1 估值与融资质量</h3>
+<p>Isomorphic 的融资质量非常高:Thrive 连续领投,Alphabet/GV 继续支持,MGX 和 Temasek 等深口袋资本进入。这种资本结构有三层意义:</p>
+<ul><li><strong>技术背书:</strong> Alphabet/DeepMind 继续支持,降低“失去技术源头”的担忧。</li><li><strong>资本耐心:</strong> 药物发现周期长,MGX/Temasek/主权 AI 基金可提供长周期资本。</li><li><strong>全球化:</strong> London/Lausanne + UK Sovereign AI Fund + MGX/Temasek,形成跨区域资本和政策支持。</li></ul>
+<p>但估值和 ownership 细节没有完全公开。Alphabet 是否仍为控股股东、外部投资人权利、员工激励池、药企合作收入分配,都需要进一步核验。</p>
+<h3 class="subsection">6.2 收入质量</h3>
+<p>公开资料没有披露 ARR 或 revenue。Isomorphic 当前收入若存在,很可能来自 pharma collaboration research funding / upfront,而不是标准软件订阅。其收入质量判断应看:</p>
+<ul><li>合作是否包含 meaningful upfront;</li><li>是否有 milestones 已触发;</li><li>是否有 option exercise;</li><li>是否有项目进入 IND-enabling;</li><li>是否有自研资产可单独授权;</li><li>是否有长期 royalty economics。</li></ul>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 Pharma collaboration value</h3>
+<p>合作价值 = upfront + research funding + option fees + development milestones × 成功概率 + regulatory milestones × 成功概率 + sales milestones × 成功概率 + royalty PV</p>
+<p>Isomorphic 的每个合作都要按靶点和阶段折现。媒体 headline “up to” 金额对投资叙事有用,但真实价值取决于:</p>
+<ul><li>target 是否进入 hit/lead;</li><li>是否产生 development candidate;</li><li>是否进入 IND-enabling;</li><li>是否由药企 exercise option;</li><li>是否进入 Phase 1/2;</li><li>royalty rate 和商业化范围。</li></ul>
+<h3 class="subsection">7.2 Internal pipeline economics</h3>
+<p>自研管线价值更高但更耗钱:</p>
+<ul><li>如果 Isomorphic 早期授权,可降低风险但放弃 upside;</li><li>如果推进到 Phase 1/2 再授权,可提升价值但 burn 更高;</li><li>如果完全自研,需要临床组织和商业化能力,不符合当前公开组织形态。</li></ul>
+<h3 class="subsection">7.3 成本结构</h3>
+<p>Isomorphic 的成本不只是 AI 算力:</p>
+<ul><li>frontier model R&D;</li><li>protein/ligand/assay 数据获取;</li><li>wet lab validation;</li><li>medicinal chemistry;</li><li>CRO/CMO/CMC;</li><li>IP/legal;</li><li>highly paid AI and drug discovery talent;</li><li>partnership project teams。</li></ul>
+<p>由于 Series B $2.1B 规模巨大,公司有能力长期投入,但资本效率仍要靠 pipeline progression 证明。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>类别</th><th>公司/机构</th><th>与 Isomorphic 的关系</th></tr></thead><tbody><tr><td>AI biotech 平台</td><td>Insilico Medicine、Recursion、Schrodinger、Exscientia、Xaira</td><td>争夺 pharma collaborations 和 clinical proof</td></tr><tr><td>Foundation biology</td><td>EvolutionaryScale、Bioptimus、Generate:Biomedicines、Arc Institute、OpenAI biology efforts</td><td>争夺 protein/biology foundation model 技术叙事</td></tr><tr><td>大药企内部 AI</td><td>Lilly、Novartis、J&J、Roche、Sanofi、AstraZeneca</td><td>既是客户也是长期竞争者</td></tr><tr><td>结构预测/开源模型</td><td>Boltz、Chai Discovery、Rosetta/academic methods、AlphaFold ecosystem</td><td>在 benchmark 和工具层竞争</td></tr><tr><td>传统计算化学</td><td>Schrodinger、OpenEye、Cresset、MOE、CRO computational chemistry teams</td><td>在 binding affinity、FEP、lead optimization 上仍有强势能力</td></tr></tbody></table></div>
+<h3 class="subsection">8.1 与 Insilico 的关系</h3>
+<p>Insilico 已有更多已披露临床资产和 2026 pharma deal;Isomorphic 的优势是 DeepMind 技术源头、AlphaFold brand、顶级 AI talent 和深口袋资本。二者未来会在三方面直接比较:</p>
+<ul><li>谁更快把 AI-designed asset 推入临床并产生疗效信号;</li><li>谁能拿到更高 upfront 而不是远期 milestone;</li><li>谁的平台在真实 pharma project 中可重复产出 development candidates。</li></ul>
+<h3 class="subsection">8.2 与 EvolutionaryScale / Bioptimus 的关系</h3>
+<p>EvolutionaryScale 和 Bioptimus 更偏 biology foundation model / protein generation / cellular model 方向。它们可能成为 Isomorphic 的上游竞争者或合作对象。Isomorphic 的差异是从结构预测和 drug design execution 出发,目标更直接指向药物候选物。</p>
+<h3 class="subsection">8.3 护城河</h3>
+<ul><li>AlphaFold heritage 和 DeepMind 科研声誉;</li><li>Demis Hassabis 的科学、AI 和资本影响力;</li><li>Alphabet/GV 持续支持;</li><li>顶级 AI + drug discovery 复合团队;</li><li>Novartis/Lilly/J&J 合作网络;</li><li>IsoDDE 在结构、affinity、pocket、biologics 上的统一引擎叙事;</li><li>$2.1B Series B 带来的资金和招聘优势。</li></ul>
+<h3 class="subsection">8.4 最容易被攻击的地方</h3>
+<ul><li>临床转化周期长,技术 benchmark 不能证明药物成功。</li><li>AlphaFold 生态不断开源/商业化,结构预测优势可能 commoditize。</li><li>大药企可与多个 AI 平台合作,不会只押注一家。</li><li>外部投资人需接受 Alphabet 控股和技术依赖结构。</li><li>若候选药物迟迟不进临床,估值会被质疑为“科研资产溢价”。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Demis Hassabis 是 Isomorphic 最大的团队资产。他同时领导 Google DeepMind,并因 AlphaFold 相关工作获得顶级科学认可。Isomorphic 团队由 machine learning specialists、drug discovery experts、medicinal chemists、structural biologists 和工程团队构成。</p>
+<p>关键团队特征:</p>
+<ul><li>AI 研究能力强,来自 DeepMind/Alphabet 体系。</li><li>药物发现 senior talent 加入,补足从模型到候选药物的路径。</li><li>Max Jaderberg 等 AI 领导层推动技术产品化。</li><li>London/Lausanne 有利于吸引欧洲 AI、制药和结构生物学人才。</li></ul>
+<p>团队风险在于:顶级 AI talent 不等于临床开发能力。公司需要持续引入 biotech CMC、regulatory、clinical development、BD licensing 经验。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>技术到临床转化风险:</strong> IsoDDE benchmark 优势不等于人体疗效。</li><li><strong>资产阶段风险:</strong> 公开管线细节仍有限,临床 proof 需要时间。</li><li><strong>合作经济不透明:</strong> Upfront、milestone、royalty 具体条款公开有限。</li><li><strong>Alphabet 依赖:</strong> 技术、品牌、资本和人才都与 Alphabet/DeepMind 深度绑定。</li><li><strong>估值压力:</strong> $2.1B Series B 暗含极高未来 pipeline 价值预期。</li><li><strong>竞争加剧:</strong> Insilico、Recursion、Xaira、Generate、EvolutionaryScale、Bioptimus 和药企自研都在抢同一叙事。</li><li><strong>IP 风险:</strong> AlphaFold 生态、公开数据、模型训练数据和 drug design IP 边界复杂。</li><li><strong>监管风险:</strong> AI-designed molecules 仍按传统药物审批,不会因 AI 而降低监管门槛。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="bioptimus.html">Bioptimus</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="evolutionaryscale.html">EvolutionaryScale</a></div>
+</div>
+</body></html>

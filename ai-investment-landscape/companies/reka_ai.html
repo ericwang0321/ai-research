@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reka AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 通用 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">通用 AI</span>
+      <span class="dc-layer">模型</span>
+      <span class="dc-region">美国/全球</span>
+    </div>
+    <h1 class="dc-title"><a href="https://reka.ai/" target="_blank" rel="noopener">Reka AI</a></h1>
+    <div class="dc-oneliner">Reka AI 是由前 Google DeepMind / Meta 研究员于 2022 年创立的多模态基础模型公司。它主打原生多模态架构，可处理 text、image、video、audio 等输入，并强调推理成本效率。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Reka AI 是由前 Google DeepMind / Meta 研究员于 2022 年创立的多模态基础模型公司。它主打原生多模态架构，可处理 text、image、video、audio 等输入，并强调推理成本效率。</strong></p>
+<p>2025 年 7 月，公司获得 Nvidia 与 Snowflake 领投的 $110M Series B，以 $1B 估值跻身独角兽。它的差异化定位是企业级多模态、视频理解和低推理成本；主要风险是核心创始人流失，以及 OpenAI、Google、Anthropic 等头部大厂在多模态模型上的持续投入。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次</th><th>金额</th><th>累计融资</th><th>投后估值</th><th>主要投资方</th><th>事件类型</th><th>来源</th></tr></thead><tbody><tr><td><strong>2022-09-29</strong></td><td>Seed</td><td>~$7.45M</td><td>~$7.45M</td><td>~$29.8M(post-money,$3.51/股)</td><td>Radical Ventures(领投,占董事会席位)、Nat Friedman、Daniel Gross、Snowflake Ventures、DST Global Partners</td><td>创立/种子</td><td><a href="https://forgeglobal.com/reka_ipo/" target="_blank" rel="noopener">Forge Global</a></td></tr><tr><td><strong>2023-06-27</strong></td><td>Series A(Stealth 出柜)</td><td>$50M(A 轮主体)/ $58M(含 seed 合计披露)</td><td>~$58M</td><td>~$300M(post-money)</td><td>DST Global Partners(领投)、Radical Ventures、Snowflake Ventures、天使投资人</td><td>A 轮 + 出 stealth + Snowflake 商业合作</td><td><a href="https://reka.ai/news/announcing-our-60m-funding-to-build-generative-models-and-advance-ai-research" target="_blank" rel="noopener">Reka 官方($60M)</a></td></tr><tr><td><strong>2025-07-22</strong></td><td>Series B(战略轮)</td><td><strong>$110M</strong></td><td>~$168–170M</td><td><strong>$1B+</strong>(估值较此前 ~$300M <strong>三倍增长</strong>)</td><td><strong>Nvidia、Snowflake</strong>(联合战略投资)+ 现有投资者</td><td>战略融资 / 独角兽</td><td><a href="https://www.bloomberg.com/news/articles/2025-07-22/snowflake-nvidia-back-new-unicorn-reka-ai-in-110-million-deal" target="_blank" rel="noopener">Bloomberg</a></td></tr></tbody></table></div>
+<p><strong>融资要点解读</strong>:</p>
+<ul><li><strong>Seed(2022)</strong>:Radical Ventures 作为 founding investor 领投并占董事会席位,估值仅 ~$30M,属典型早期 AI 研究型公司定价。</li><li><strong>Series A(2023-06)</strong>:DST Global 领投 $50M,叠加 seed 合计 ~$58M(Reka 自称 ~$60M),估值跃升至 ~$300M;同步宣布与 Snowflake 的商业合作(后者的 Snowflake Ventures 参投),确立"数据云内多模态模型"生态卡位。</li><li><strong>Series B(2025-07)</strong>:Nvidia + Snowflake 联合战略投资 $110M,估值 <strong>三倍跃升至 $1B+</strong>。这是典型的"产业资本战略背书"——Nvidia 提供 GPU 供给与生态,Snowflake 提供企业分销渠道。本轮使 Reka 正式跻身独角兽。</li><li><strong>累计融资</strong>:各来源口径不一(Forge 称 ~$134M,Dealroom/GetLatka 称 ~$170M),差异主要源于 seed 金额与未披露的中间轮融资。本研究采用 ~$170M 区间估计。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key"><strong>公司名称</strong></td><td class="kv-val">Reka AI(法律实体 Reka, Inc.)</td></tr><tr><td class="kv-key"><strong>成立时间</strong></td><td class="kv-val">2022 年</td></tr><tr><td class="kv-key"><strong>总部</strong></td><td class="kv-val">美国加州 Sunnyvale(部分资料亦列 San Francisco)</td></tr><tr><td class="kv-key"><strong>创始人</strong></td><td class="kv-val">Dani Yogatama、Yi Tay(已于 2024 年 11 月离职)、Qi Liu、Cyprien de Masson d'Autume、Mikel Artetxe — 共 5 位联合创始人</td></tr><tr><td class="kv-key"><strong>CEO</strong></td><td class="kv-val">Dani Yogatama(兼副教授)</td></tr><tr><td class="kv-key"><strong>核心定位</strong></td><td class="kv-val">多模态基础模型研发与商业化,覆盖文本、图像、视频、音频原生多模态</td></tr><tr><td class="kv-key"><strong>旗舰产品</strong></td><td class="kv-val">Reka Core(frontier 级)、Reka Flash(高效)、Reka Edge(轻量)、Reka Spark、Reka Vision(视频平台)、Reka Research(网页检索 agent)、Nexus(企业 AI 工作流平台)</td></tr><tr><td class="kv-key"><strong>最新估值</strong></td><td class="kv-val">$1B+(2025 年 7 月 Series B,独角兽)</td></tr><tr><td class="kv-key"><strong>累计融资</strong></td><td class="kv-val">约 $170M(含 seed + Series A + Series B)</td></tr><tr><td class="kv-key"><strong>员工规模</strong></td><td class="kv-val">11–50 人(lean team);GetLatka 数据约 60 人</td></tr><tr><td class="kv-key"><strong>报告 ARR</strong></td><td class="kv-val">约 $10.9M(2025,GetLatka)</td></tr><tr><td class="kv-key"><strong>主要投资方</strong></td><td class="kv-val">Nvidia、Snowflake、DST Global Partners、Radical Ventures、Nat Friedman、Daniel Gross</td></tr><tr><td class="kv-key"><strong>官网</strong></td><td class="kv-val"><a href="https://reka.ai" target="_blank" rel="noopener">https://reka.ai</a></td></tr></tbody></table></div>
+<p>来源:<a href="https://reka.ai/" target="_blank" rel="noopener">Reka 官网</a>、<a href="https://www.bloomberg.com/news/articles/2025-07-22/snowflake-nvidia-back-new-unicorn-reka-ai-in-110-million-deal" target="_blank" rel="noopener">Bloomberg</a>、<a href="https://dealroom.co/companies/reka-ai/" target="_blank" rel="noopener">Dealroom</a>、<a href="https://getlatka.com/companies/reka.ai" target="_blank" rel="noopener">GetLatka</a>、<a href="https://siliconangle.com/2025/07/22/multimodal-ai-startup-reka-ai-raises-110m-1b-valuation/" target="_blank" rel="noopener">SiliconANGLE</a></p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<p>Reka 采用 <strong>API 按量付费 + Enterprise 月结 + Research/Vision 垂直产品</strong> 的三层商业化结构。以下价格来自 Reka 官方文档(<a href="https://docs.reka.ai/pricing" target="_blank" rel="noopener">https://docs.reka.ai/pricing</a>)。</p>
+<h3 class="subsection">4.1 Reka Chat API(通用对话/生成模型)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>定位</th><th>Input(/M tokens)</th><th>Output(/M tokens)</th><th>Cached Input(/M)</th><th>Cached Output(/M)</th></tr></thead><tbody><tr><td><strong>Reka Flash</strong></td><td>快速、高性价比,适用于多数任务</td><td><strong>$0.80</strong></td><td><strong>$2.00</strong></td><td>$0.01</td><td>$0.06</td></tr><tr><td><strong>Reka Core</strong></td><td>复杂任务,frontier 级能力</td><td><strong>$2.00</strong></td><td><strong>$6.00</strong></td><td>$0.02</td><td>$0.06</td></tr><tr><td><strong>Reka Spark</strong></td><td>入门级,最低成本</td><td>从 <strong>$0.05/M</strong> tokens 起</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
+<ul><li>Reka Flash(21B 参数)在 Artificial Analysis 的混合成本(7:2:1 cache hit/input/output)基准下约 <strong>$0.26/1M tokens</strong>,被列为最经济的主流模型之一。</li><li>来源:<a href="https://docs.reka.ai/pricing" target="_blank" rel="noopener">docs.reka.ai/pricing</a>、<a href="https://www.usagepricing.com/blueprint/reka-ai" target="_blank" rel="noopener">UsagePricing</a>、<a href="https://artificialanalysis.ai/providers/reka-ai" target="_blank" rel="noopener">Artificial Analysis</a>、<a href="https://www.eesel.ai/blog/reka-ai-pricing" target="_blank" rel="noopener">eesel AI</a></li></ul>
+<h3 class="subsection">4.2 Reka Vision(视频/图像多模态平台)</h3>
+<p>按 <strong>视频处理时长 + 检索次数 + 输出 token</strong> 三维度计费。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>层级</th><th>视频索引额度</th><th>检索次数</th><th>单价</th></tr></thead><tbody><tr><td><strong>Free Tier</strong></td><td>3 indexed-video hours(180 分钟)</td><td>25 次免费检索</td><td>—</td></tr><tr><td><strong>Paid Tier</strong></td><td>按用量</td><td>按用量</td><td>视频 <strong>$0.05/minute</strong>;检索 <strong>$0.005/search</strong>;Output tokens <strong>$2.00/M</strong></td></tr></tbody></table></div>
+<ul><li>Reka Vision 定位为大规模视频/图像的"理解 + 检索 + 推理"平台,代表客户包括 Shutterstock、Turing Video。</li><li>来源:<a href="https://docs.reka.ai/vision/pricing" target="_blank" rel="noopener">docs.reka.ai/vision/pricing</a>、<a href="https://www.businesswire.com/news/home/20250723821034/en/Reka-Secures-%24110-Million-to-Accelerate-Adoption-of-Its-Multimodal-AI-Platforms" target="_blank" rel="noopener">BusinessWire</a></li></ul>
+<h3 class="subsection">4.3 Reka Research(网页检索 Agent)</h3>
+<p>按 <strong>检索请求次数(requests)</strong> 计费,而非 token,定位为深度研究型 agent。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>层级</th><th>检索额度</th><th>单价</th></tr></thead><tbody><tr><td><strong>Free Tier</strong></td><td>50 次免费检索</td><td>—</td></tr><tr><td><strong>Paid Tier — Standard</strong></td><td>—</td><td><strong>$25 / 1,000 requests</strong></td></tr><tr><td><strong>Paid Tier — Premium</strong></td><td>—</td><td><strong>$60 / 1,000 requests</strong></td></tr></tbody></table></div>
+<ul><li>Reka Research 可多跳(multi-hop)综合多源信息,以自然语言逐步推理;官方/联合创始人 Mikel Artetxe 声称在网页检索任务上 <strong>outperform Gemini、GPT、Claude</strong>。</li><li>来源:<a href="https://docs.reka.ai/research/pricing" target="_blank" rel="noopener">docs.reka.ai/research/pricing</a>、<a href="https://reka.ai/news/reka-research-knowledge-made-accessible" target="_blank" rel="noopener">Reka Research 发布</a>、<a href="https://www.linkedin.com/posts/artetxem_excited-to-launch-reka-research-an-ai-agent-activity-7348755988092485632-FFRb" target="_blank" rel="noopener">Mikel Artetxe LinkedIn</a></li></ul>
+<h3 class="subsection">4.4 Enterprise(企业级)</h3>
+<ul><li><strong>月度结算(monthly invoicing)</strong>、<strong>批量折扣(bulk discounts)</strong>、<strong>专属支持(dedicated support)</strong></li><li>提供定制化模型训练(custom AI models for enterprise),与 Snowflake 深度集成(数据云内调用)</li><li>政府/公共部门:通过 <strong>Carahsoft</strong> 分销渠道向美国政府机构交付定制 AI 模型</li><li>来源:<a href="https://reka.ai/news" target="_blank" rel="noopener">Reka 官网 News</a>、<a href="https://reka.ai/news/reka-and-carahsoft-partner-to-deliver-custom-ai-models-for-government-agencies" target="_blank" rel="noopener">Reka × Carahsoft</a></li></ul>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 模型矩阵(原生多模态:natively multimodal)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>参数规模</th><th>模态覆盖</th><th>定位</th></tr></thead><tbody><tr><td><strong>Reka Core</strong></td><td>未公开(frontier 级)</td><td>text + image + video + audio</td><td>旗舰,对标 GPT-4V / Gemini Ultra</td></tr><tr><td><strong>Reka Flash</strong></td><td>21B</td><td>text + image + video + audio</td><td>高效主力,性价比核心</td></tr><tr><td><strong>Reka Flash 3 / 3.1</strong></td><td>21B(instruction-tuned)</td><td>多模态</td><td>开源(open-weights,HuggingFace / GitHub)</td></tr><tr><td><strong>Reka Edge</strong></td><td>7B</td><td>多模态</td><td>边缘/轻量部署</td></tr><tr><td><strong>Reka Spark</strong></td><td>较小</td><td>多模态</td><td>入门级</td></tr><tr><td><strong>Reka Quant</strong></td><td>—</td><td>—</td><td>量化部署工具(2025 发布,与 Flash 3.1 同期)</td></tr></tbody></table></div>
+<p>来源:<a href="https://arxiv.org/html/2404.12387v1" target="_blank" rel="noopener">arXiv 技术报告 2404.12387</a>、<a href="https://reka.ai/news/reka-flash-3-1-and-reka-quant" target="_blank" rel="noopener">Reka Flash 3.1 &amp; Quant</a>、<a href="https://openrouter.ai/rekaai/reka-flash-3:free" target="_blank" rel="noopener">OpenRouter</a></p>
+<h3 class="subsection">5.2 平台产品</h3>
+<ul><li><strong>Reka Vision</strong>:视频/图像理解、检索与推理平台,主打"agentic video surveillance"等场景(与 Turing Video 合作)。</li><li><strong>Reka Research</strong>:网页多跳检索 agent,定位深度研究。</li><li><strong>Nexus</strong>:企业 AI 工作流(workforce)平台,以多模态推理自动化企业流程。</li></ul>
+<h3 class="subsection">5.3 Benchmark 表现(关键)</h3>
+<ul><li><strong>Reka Flash</strong> 在 MMLU、GPQA 上 <strong>超越 Gemini Pro</strong>,在 GSM8K 等任务上保持竞争力(尽管参数小得多)。(<a href="https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models" target="_blank" rel="noopener">Reka Flash 官方</a>)</li><li><strong>Reka Core</strong> 在文本、图像、视频、音频多模态评测中接近 frontier 级,arXiv 技术报告(2404.12387)提供完整评估。(<a href="https://arxiv.org/html/2404.12387v1" target="_blank" rel="noopener">arXiv</a>)</li><li>社区(Reddit r/singularity)对部分 benchmark 成绩提出"可能得益于 benchmark-style 训练数据"的质疑,需谨慎解读。(<a href="https://www.reddit.com/r/singularity/comments/1c4q17d/new_multimodal_language_model_just_dropped_reka/" target="_blank" rel="noopener">Reddit</a>)</li></ul>
+<h3 class="subsection">5.4 数据与训练</h3>
+<ul><li>与 <strong>Shutterstock</strong> 达成 <strong>多年期(multi-year)</strong> 数据授权合作,许可其图像/视频资产库用于 frontier 模型训练,并增强 Shutterstock 元数据。(<a href="https://reka.ai/news/reka-announces-partnership-with-shutterstock" target="_blank" rel="noopener">Reka × Shutterstock</a>、<a href="https://www.shutterstock.com/blog/reka-shutterstock-multimodal-ai-models-case-study" target="_blank" rel="noopener">Shutterstock Case Study</a>)</li><li>强调"高效训练与推理基础设施",以实现低推理成本为核心工程差异化。</li></ul>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数值</th><th>来源</th></tr></thead><tbody><tr><td><strong>ARR(2025)</strong></td><td>约 $10.9M</td><td><a href="https://getlatka.com/companies/reka.ai" target="_blank" rel="noopener">GetLatka</a></td></tr><tr><td><strong>估值(2025-07)</strong></td><td>$1B+(独角兽)</td><td><a href="https://www.bloomberg.com/news/articles/2025-07-22/snowflake-nvidia-back-new-unicorn-reka-ai-in-110-million-deal" target="_blank" rel="noopener">Bloomberg</a></td></tr><tr><td><strong>累计融资</strong></td><td>约 $170M</td><td><a href="https://dealroom.co/companies/reka-ai/" target="_blank" rel="noopener">Dealroom</a></td></tr><tr><td><strong>员工数</strong></td><td>11–50(lean team)/ 约 60(GetLatka)</td><td><a href="https://tracxn.com/d/companies/reka/__CA6OEk4c0RuHQVTD-0aphtcEGYBgPNDXjnl1KTJS7mw" target="_blank" rel="noopener">Tracxn</a>、<a href="https://getlatka.com/companies/reka.ai" target="_blank" rel="noopener">GetLatka</a></td></tr><tr><td><strong>公开客户</strong></td><td>Shutterstock、Turing Video</td><td><a href="https://www.businesswire.com/news/home/20250723821034/en/Reka-Secures-%24110-Million-to-Accelerate-Adoption-of-Its-Multimodal-AI-Platforms" target="_blank" rel="noopener">BusinessWire</a></td></tr><tr><td><strong>API 调用量</strong></td><td>未公开</td><td>—</td></tr><tr><td><strong>付费客户数</strong></td><td>未公开</td><td>—</td></tr><tr><td><strong>毛利率</strong></td><td>未公开</td><td>—</td></tr><tr><td><strong>估值倍数(估值/ARR)</strong></td><td>约 92×($1B / $10.9M)</td><td>计算值</td></tr></tbody></table></div>
+<blockquote><strong>注</strong>:Reka 尚处早期商业化阶段,公开运营数据有限;估值/ARR 倍数极高(~92×),反映市场对其多模态差异化与 Nvidia/Snowflake 生态加持的预期,而非当前财务表现。</blockquote>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>维度</th><th>状态</th><th>备注</th></tr></thead><tbody><tr><td><strong>公开毛利率</strong></td><td>未披露</td><td>API 模型公司毛利率通常 50–75%(推理算力为主要成本)</td></tr><tr><td><strong>推理成本优势</strong></td><td>显著</td><td>Reka Flash 混合成本 ~$0.26/1M tokens,Artificial Analysis 评其为最经济主流模型之一;工程上强调高效训练/推理</td></tr><tr><td><strong>CAC / LTV</strong></td><td>未披露</td><td>企业级 + API 自助双渠道</td></tr><tr><td><strong>现金消耗</strong></td><td>推测较高</td><td>模型训练(尤其 frontier)与算力(Nvidia GPU)为主要现金用途;Series A 时 CEO 明确资金用于"采购 Nvidia 算力 + 搭建商务团队"</td></tr><tr><td><strong>资本效率</strong></td><td>偏低</td><td>~$170M 融资对应 ~$10.9M ARR,每 $1 融资产生约 $0.064 ARR,处于早期重投入阶段</td></tr><tr><td><strong>定价竞争力</strong></td><td>强</td><td>Flash($0.80/$2.00)显著低于 GPT-4o(约 $5/M input)与 Claude Opus(约 $15/M output),以成本效率换市场</td></tr></tbody></table></div>
+<blockquote><strong>结论</strong>:Reka 当前处于"高研发投入 + 早期收入"阶段,单位经济性尚未被公开数据充分验证;其核心赌注是 <strong>以工程效率压低推理成本</strong>,从而在 API 价格战中保持毛利空间。</blockquote>
+<p>来源:<a href="https://artificialanalysis.ai/providers/reka-ai" target="_blank" rel="noopener">Artificial Analysis</a>、<a href="https://getlatka.com/companies/reka.ai" target="_blank" rel="noopener">GetLatka</a>、<a href="https://www.reuters.com/technology/ai-model-startup-reka-raises-50-mln-led-by-dst-global-2023-06-27/" target="_blank" rel="noopener">Reuters</a></p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 直接对标(多模态基础模型)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>估值/规模</th><th>多模态能力</th><th>差异化</th><th>威胁等级</th></tr></thead><tbody><tr><td><strong>OpenAI(GPT-4o / GPT-5)</strong></td><td>私募 >$300B</td><td>顶级(text+image+audio+video)</td><td>生态、品牌、资金碾压</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>Google DeepMind(Gemini)</strong></td><td>母公司万亿级</td><td>原生多模态,长上下文</td><td>算力 + 数据 + 集成 Android/Workspace</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>Anthropic(Claude)</strong></td><td>~$183B(2025)</td><td>多模态(图像为主,视频/音频弱)</td><td>安全性与企业信任</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>Cohere</strong></td><td>~$5.5B</td><td>Aya Vision(多模态)</td><td>企业定制化、私有部署、多语言</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>Mistral AI</strong></td><td>~$6.2B</td><td>部分多模态</td><td>开源/open-weight、欧洲合规</td><td>⭐⭐⭐</td></tr><tr><td><strong>xAI(Grok)</strong></td><td>估值高</td><td>多模态发展中</td><td>X 平台数据</td><td>⭐⭐⭐</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 已"退出"的竞争者(被大厂 quasi-acquisition)</h3>
+<ul><li><strong>Adept AI</strong>:2024-06 被 Amazon 准收购(雇走 ~66% 团队 + 模型授权),不再独立竞争。</li><li><strong>Inflection AI</strong>:被 Microsoft 雇走 80%+ 团队(~$650M 授权),已转向企业市场。</li><li>这类 quasi-acquisition 收紧了独立基础模型创业赛道,使 Reka、Cohere、Mistral 成为少数独立挑战者。(<a href="https://www.cnbc.com/2024/6/28/amazon-hires-execs-from-ai-startup-adept-and-licenses-its-technology.html" target="_blank" rel="noopener">CNBC</a>、<a href="https://www.reuters.com/technology/artificial-intelligence/ai-startup-cohere-prioritize-customized-over-larger-models-enterprise-push-2024-12-05/" target="_blank" rel="noopener">Reuters — Cohere pivot</a>)</li></ul>
+<h3 class="subsection">8.3 Reka 的相对位置</h3>
+<ul><li><strong>优势</strong>:原生多模态(尤其 video)、推理成本效率、Nvidia/Snowflake 生态绑定、Shutterstock 数据护城河、开源(Flash 3)建立开发者口碑。</li><li><strong>劣势</strong>:品牌与资金量远逊头部;无消费者级产品(对比 ChatGPT/Gemini App);企业客户基数小(公开仅 Shutterstock、Turing Video)。</li><li><strong>定位</strong>:在"开源 + 企业多模态 + 视频理解"三角中寻找夹缝,而非正面挑战 frontier 模型排行榜。</li></ul>
+<p>来源:<a href="https://siliconangle.com/2025/07/22/multimodal-ai-startup-reka-ai-raises-110m-1b-valuation/" target="_blank" rel="noopener">SiliconANGLE</a>、<a href="https://www.respan.ai/market-map/compare/cohere-vs-reka" target="_blank" rel="noopener">Respan Cohere vs Reka</a>、<a href="https://www.reuters.com/technology/artificial-intelligence/ai-startup-cohere-prioritize-customized-over-larger-models-enterprise-push-2024-12-05/" target="_blank" rel="noopener">Reuters</a></p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<h3 class="subsection">9.1 创始团队(共 5 位联合创始人,均出自 Google DeepMind / Meta / Google Brain)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>姓名</th><th>角色</th><th>背景</th><th>现状</th></tr></thead><tbody><tr><td><strong>Dani Yogatama</strong></td><td>Co-founder & CEO</td><td>DeepMind 高级研究员(2016–2022,伦敦,约 7 年);副教授;印尼裔</td><td>在职</td></tr><tr><td><strong>Yi Tay</strong></td><td>Co-founder & Chief Scientist</td><td>DeepMind / Google Brain 资深研究员;NTU 校友;新加坡裔</td><td><strong>2024-11 离职,回流 Google DeepMind 任 Senior Staff Research Scientist</strong></td></tr><tr><td><strong>Qi Liu</strong></td><td>Co-founder</td><td>Google / Meta 研究背景</td><td>在职(详情有限)</td></tr><tr><td><strong>Cyprien de Masson d'Autume</strong></td><td>Co-founder</td><td>DeepMind 研究背景</td><td>在职</td></tr><tr><td><strong>Mikel Artetxe</strong></td><td>Co-founder</td><td>Google / Meta;巴斯克大学荣誉研究员</td><td>在职;主导 Reka Research 发布</td></tr></tbody></table></div>
+<p>来源:<a href="https://dyogatama.github.io/" target="_blank" rel="noopener">Dani Yogatama 个人主页</a>、<a href="https://www.yitay.net/blog/returning-to-google-deepmind" target="_blank" rel="noopener">Yi Tay 博客</a>、<a href="https://x.com/YiTayML/status/1861098468628144299" target="_blank" rel="noopener">Yi Tay X/Twitter</a>、<a href="https://www.techinasia.com/news/ai-researcher-yi-tay-returns-google-deepmind" target="_blank" rel="noopener">Tech in Asia</a>、<a href="https://dealroom.co/companies/reka-ai/" target="_blank" rel="noopener">Dealroom</a>、<a href="https://www.linkedin.com/posts/artetxem_excited-to-launch-reka-research-an-ai-agent-activity-7348755988092485632-FFRb" target="_blank" rel="noopener">Mikel Artetxe LinkedIn</a></p>
+<h3 class="subsection">9.2 股权结构(Dealroom 估算)</h3>
+<ul><li><strong>Founders</strong>:约 <strong>58.5%</strong></li><li><strong>ESOP</strong>:约 13.4%</li><li><strong>Late VC / 战略投资者</strong>:其余(DST、Radical、Nvidia、Snowflake 等)</li></ul>
+<h3 class="subsection">9.3 重要人员变动</h3>
+<ul><li><strong>Yi Tay 离职(2024-11)</strong>:5 位联合创始人之一、首席科学家,在 Reka 任职约 1.5 年后回流 Google DeepMind。这是 Reka 迄今最显著的人才流失信号,引发社区对其研究持续性的讨论。(<a href="https://www.techinasia.com/news/ai-researcher-yi-tay-returns-google-deepmind" target="_blank" rel="noopener">Tech in Asia</a>、<a href="https://www.reddit.com/r/askSingapore/comments/1u28e5b/why_yi_tays_ai_startup_reka_ai_that_built_its_own/" target="_blank" rel="noopener">Reddit r/askSingapore</a>)</li></ul>
+<blockquote><strong>澄清</strong>:任务包提及的"Christopher Re"经核实 <strong>并非</strong> Reka AI 创始人。Christopher (Chris) Ré 是斯坦福大学教授、MacArthur Fellow,与 Reka AI 无关。Reka 真实创始团队为上述 5 人。</blockquote>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>核心人才流失风险</strong>:联合创始人 Yi Tay 已于 2024-11 回流 DeepMind,反映 AI 研究人才在"大厂高薪 + 算力"vs"创业股权"间的博弈;若其他创始人/关键研究员跟进流失,将严重削弱技术延续性。</li><li><strong>多模态军备竞赛</strong>:OpenAI(GPT-4o/5)、Google(Gemini)、Anthropic 在多模态(尤其 video)上投入远超 Reka,benchmark 排名易被反超,且这些巨头可"免费/低价"提供多模态,挤压 Reka 定价空间。</li><li><strong>资本效率与现金跑道</strong>:~$170M 融资对应 ~$10.9M ARR,重投入模型训练,现金消耗快;若 ARR 增长不及预期,需在估值压力下再融资。</li><li><strong>数据与版权风险</strong>:依赖 Shutterstock 等第三方数据授权;全球 AI 训练数据版权诉讼(如 NYT vs OpenAI)可能波及。</li><li><strong>被战略股东"准收购"的隐忧</strong>:Nvidia、Snowflake 既是投资方又是渠道/算力依赖方;若关系深化,可能逐步丧失独立性(参考 Adept/Inflection 路径)。</li><li><strong>客户集中度</strong>:公开知名客户仅 Shutterstock、Turing Video,客户多元化尚未被证实;若大客户流失,收入波动大。</li><li><strong>Benchmark 可信度</strong>:社区对部分评测成绩(疑似训练数据污染)存在质疑,影响对外技术叙事可信度。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="character_ai.html">Character.AI</a><a class="sib-chip" href="clay.html">Clay</a><a class="sib-chip" href="cohere.html">Cohere</a><a class="sib-chip" href="decagon_ai.html">Decagon AI</a><a class="sib-chip" href="deepseek_深度求索.html">DeepSeek</a><a class="sib-chip" href="genspark.html">Genspark</a></div>
+</div>
+</body></html>

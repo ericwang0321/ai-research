@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EvolutionaryScale · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">模型</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.evolutionaryscale.ai/" target="_blank" rel="noopener">EvolutionaryScale</a></h1>
+    <div class="dc-oneliner">EvolutionaryScale 是 ESM 系列从 Meta FAIR/开源科研项目走向独立 AI biology 平台化的公司化载体，核心资产是 ESM3:一个同时对 protein sequence、structure、function 推理的 98B 参数级 generative biology model。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>EvolutionaryScale 是 ESM 系列从 Meta FAIR/开源科研项目走向独立 AI biology 平台化的公司化载体，核心资产是 ESM3:一个同时对 protein sequence、structure、function 推理的 98B 参数级 generative biology model。</strong></p>
+<p>它已经用 esmGFP 做出实验验证，模型生成的绿色荧光蛋白与最接近天然蛋白仅 58% sequence identity,研究团队将其等价描述为模拟超过 5 亿年自然演化，并于 2025 年在 Science 发表。商业化上，公司不是传统药企 pipeline,而更像生命科学基础模型平台，通过 Forge/API、AWS SageMaker/Omics/Bedrock、NVIDIA BioNeMo/NIM、open model/non-commercial license、以及未来药企/biotech discovery collaboration 变现。</p>
+<p>最大缺口是融资、估值、收入、药企客户、milestone economics 和 API usage 没有足够公开细节。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>累计融资口径</th><th>估值</th><th>投资方/相关方</th><th>事件类型</th><th>来源</th></tr></thead><tbody><tr><td>2024-06-25</td><td>EvolutionaryScale 公开发布 ESM3 / 公司 launch</td><td>-</td><td>-</td><td>-</td><td>Alexander Rives 等前 Meta ESM 团队</td><td>公司发布/产品发布</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024-06/2024 数据库口径</td><td>Seed / launch financing</td><td>数据库口径约 $142M;需核验</td><td>约 $142M 口径;需核验</td><td>估值没有清晰公开</td><td>Lux Capital、Nat Friedman、Daniel Gross、Amazon、NVentures 等口径需交叉核验</td><td>普通股权融资</td><td>待补：未找到可公开回源报道</td></tr><tr><td>2024-06</td><td>AWS/NVIDIA 分发合作线索</td><td>-</td><td>不计入融资</td><td>-</td><td>AWS、NVIDIA</td><td>云/平台合作</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-01</td><td>ESM3 Science 论文 / Forge public beta</td><td>-</td><td>-</td><td>-</td><td>Science、Forge API</td><td>研究验证 + API 公开 beta</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026 前</td><td>ESM API / GitHub 生态迁移线索</td><td>-</td><td>-</td><td>-</td><td>Biohub/GitHub platform</td><td>分发/开源生态变化</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li>EvolutionaryScale 没有像 OpenAI/Anthropic/Mistral 那样频繁公开融资新闻,导致融资金额多依赖私募数据库和媒体引用;</li><li>约 $142M seed 口径若成立,反映投资人将其视为 AI biology foundation model 的基础设施级资产,而不是单项目 biotech;</li><li>估值没有清晰公开,不应编造;</li><li>AWS/NVIDIA 合作虽非融资,但对 AI biology 商业化同样关键,因为药企采购和算力部署通常依赖这些平台。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">EvolutionaryScale</td></tr><tr><td class="kv-key">成立/公开时间</td><td class="kv-val">2024-06 公开发布 ESM3 并介绍公司</td></tr><tr><td class="kv-key">核心创始/团队</td><td class="kv-val">Alexander Rives 等前 Meta ESM / protein language model 研究团队</td></tr><tr><td class="kv-key">公司定位</td><td class="kv-val">Frontier AI for the life sciences;开发用于理解、想象和创造蛋白质的 AI</td></tr><tr><td class="kv-key">核心模型</td><td class="kv-val">ESM3;ESM Cambrian;ESM3-open</td></tr><tr><td class="kv-key">产品入口</td><td class="kv-val">Forge API / ESM API;AWS SageMaker/Omics/Bedrock;NVIDIA BioNeMo/NIM;GitHub open model</td></tr><tr><td class="kv-key">技术特征</td><td class="kv-val">多轨 protein language model,同时建模 sequence、structure、function</td></tr><tr><td class="kv-key">最大模型规模</td><td class="kv-val">官网披露 ESM3 最大模型 98B parameters</td></tr><tr><td class="kv-key">训练数据</td><td class="kv-val">官网披露 2.78B natural proteins、771B unique tokens,训练计算约 10^24 FLOPs</td></tr><tr><td class="kv-key">实验验证</td><td class="kv-val">esmGFP 设计与湿实验验证,Science 2025 论文</td></tr><tr><td class="kv-key">开放策略</td><td class="kv-val">ESM3-open 小模型权重和代码通过 GitHub,non-commercial license;更大模型通过 API/合作平台</td></tr><tr><td class="kv-key">商业阶段</td><td class="kv-val">平台早期;API/public beta 和 partner platform 分发,药企付费数据很少</td></tr><tr><td class="kv-key">融资口径</td><td class="kv-val">多个私募数据库/媒体口径提到 2024 年大额 seed,常见口径为约 $142M,但投资方和估值需要进一步交叉核验</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://www.evolutionaryscale.ai/" target="_blank" rel="noopener">https://www.evolutionaryscale.ai/</a></td></tr></tbody></table></div>
+<p>EvolutionaryScale 的背景来自 ESM project。ESM 系列在 Meta FAIR 时期已通过蛋白语言模型展示出 structure/function representation 能力。公司化之后,ESM3 从“预测/表示蛋白”推进到“生成/设计蛋白”:用户可以给定序列、结构或功能 prompt,模型在三种模态之间联合推理,生成满足约束的新蛋白。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 平台模式:biology foundation model as API</h3>
+<p>EvolutionaryScale 的最直接商业化路径是 API/平台收费。官网写明所有 ESM3 models 可通过 Forge API closed beta 使用,2025 年 1 月更新中又提到 API for biological intelligence 进入 public beta,为学术和工业科学家提供有限时间免费 preview。该模式后续可自然演化为:</p>
+<ul><li>per-request / per-token / per-protein generation 收费;</li><li>higher-throughput enterprise API;</li><li>private deployment / VPC / cloud marketplace;</li><li>scientist workflow seat subscription;</li><li>model fine-tuning / custom protein design project;</li><li>wet-lab validated design packages;</li><li>pharma discovery collaboration with milestones。</li></ul>
+<h3 class="subsection">4.2 云和平台分销</h3>
+<p>EvolutionaryScale 没有只依赖自有前端。官网列出:</p>
+<ul><li><strong>AWS</strong>:ESM3 available on AWS via SageMaker,并计划进入 Omics platform 和 Bedrock;</li><li><strong>NVIDIA</strong>:ESM3 will be available on BioNeMo and as NVIDIA NIM microservice,并与 NVIDIA 优化;</li><li><strong>Open model</strong>:ESM3-open 代码/权重可在 GitHub 使用,non-commercial license;</li><li><strong>Forge/API</strong>:直接申请访问,面向学术和工业用户。</li></ul>
+<p>这种分销结构对 AI biology 公司很重要:药企和科研机构通常已经在 AWS、NVIDIA BioNeMo 或内部 HPC/云环境中工作,通过 marketplace/API 可以降低采购与合规门槛。</p>
+<h3 class="subsection">4.3 药企合作与 milestone 逻辑</h3>
+<p>EvolutionaryScale 公开没有给出具体药企合同金额、upfront、milestone 或 royalty。但 AI biology/protein design 平台常见合同结构包括:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>合作形式</th><th>可能收费</th><th>适用场景</th><th>关键验证</th></tr></thead><tbody><tr><td>Platform license</td><td>年费/API usage</td><td>药企内部 discovery team 使用 ESM3</td><td>使用量、续约、seat 数</td></tr><tr><td>Target/program collaboration</td><td>upfront + research fee + milestones</td><td>抗体、酶、cytokine、protein binder、enzyme engineering</td><td>in vitro hit rate、affinity、stability、specificity</td></tr><tr><td>Co-development</td><td>共同推进资产,后续 milestone/royalty</td><td>高价值 therapeutic protein</td><td>IND-enabling 数据和 IP 归属</td></tr><tr><td>Cloud marketplace</td><td>AWS/NVIDIA 用量分成</td><td>自助科研和企业实验</td><td>marketplace consumption</td></tr><tr><td>Academic/non-commercial</td><td>免费或低价 license</td><td>论文、社区 adoption</td><td>引用、GitHub/Hugging Face 使用</td></tr></tbody></table></div>
+<p>用户要求特别强调 AI biology 的 license、药企合作、实验验证和 milestone 逻辑:对 EvolutionaryScale 而言,当前最强证据是实验验证,最弱证据是药企商业合同。应避免把“可用于新药发现”直接写成“已有药企收入”。</p>
+<h3 class="subsection">4.4 为什么不能编 ARR</h3>
+<p>公开资料没有给出 ARR、API 收入、付费客户、药企合同金额、gross margin 或每个 design program 的 economics。后续核验问题应具体化:</p>
+<ul><li>Forge public beta 是否已经转收费?价格按 request、protein、compute 还是 seats?</li><li>AWS/NVIDIA 分销是否产生 marketplace revenue share?</li><li>是否已有药企 platform license 或 discovery collaboration?</li><li>esmGFP 之外是否有药物相关蛋白完成湿实验验证?</li></ul>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 ESM3:三模态 protein language model</h3>
+<p>ESM3 是一个 multi-track transformer,同时对蛋白的三个基本属性建模:</p>
+<ul><li><strong>Sequence</strong>:氨基酸序列;</li><li><strong>Structure</strong>:三维结构离散化后的表示;</li><li><strong>Function</strong>:功能关键词、注释和相关信号。</li></ul>
+<p>模型训练目标类似 masked language modeling:对蛋白的 sequence、structure、function 信息做 tokenization 和 masking,再预测被遮盖部分。因为三种属性在同一模型中联合训练,ESM3 可以接受任意组合 prompt,生成满足序列、结构或功能约束的新蛋白。</p>
+<p>官网披露的规模:</p>
+<ul><li>最大模型:98B parameters;</li><li>训练数据:2.78B natural proteins sampled from organisms and biomes;</li><li>unique tokens:771B;</li><li>训练计算:约 10^24 FLOPs / 1 trillion teraflops 口径。</li></ul>
+<h3 class="subsection">5.2 esmGFP:实验验证的核心证据</h3>
+<p>ESM3 最重要的公开验证是 esmGFP。研究团队用 GFP 作为目标,让模型生成新的绿色荧光蛋白:</p>
+<ul><li>第一轮测试 96 个生成候选,发现 B8 等可发光蛋白;</li><li>继续以 B8 为起点做 chain-of-thought 生成,再测试 96 个蛋白;</li><li>得到 esmGFP,亮度接近天然 GFP;</li><li>esmGFP 与最接近的天然 fluorescent protein 仅 58% sequence similarity,229 个氨基酸中有 96 个突变;</li><li>研究团队估算相当于模拟超过 500 million years evolution;</li><li>论文于 2025 年在 Science 发表。</li></ul>
+<p>这类证据对 AI biology 公司非常关键,因为它不是纯 benchmark。AI 药物发现常被质疑“模型分数高但实验不成”。esmGFP 证明 ESM3 至少能在一个明确蛋白家族任务上提出远离天然序列空间且仍具备功能的设计。</p>
+<h3 class="subsection">5.3 应用方向</h3>
+<p>官网列出的方向包括:</p>
+<ul><li>设计用于 carbon capture 的 protein;</li><li>设计降解 plastic 的 enzymes,如 PETase active-site scaffold;</li><li>设计 new medicines,包括 therapeutic proteins/antibodies;</li><li>从 sequence/structure/function prompt 组合生成候选;</li><li>利用实验或已有数据反馈对模型 generation 做 alignment。</li></ul>
+<h3 class="subsection">5.4 ESM3-open 与 license</h3>
+<p>官网称 ESM3-open 是小但强的模型,权重和源代码在 GitHub 上以 non-commercial license 发布。该策略类似 AI biology 平台常见的“双轨制”:</p>
+<ul><li>小模型开放给学术社区,扩大引用和生态;</li><li>大模型/API/企业部署通过商业 license 变现;</li><li>用 responsible development framework 限制生物安全风险。</li></ul>
+<p>这与 Mistral/Meta 的 open-weight 策略不同:蛋白设计涉及合成生物学和 biosecurity,因此 license 与访问控制更严格,不能简单等同通用 LLM 开源。</p>
+<h3 class="subsection">5.5 ESM Cambrian</h3>
+<p>官网首页在 2026 年显示 “Introducing ESM Cambrian”,称其为 parallel model family to generative flagship ESM3,用于 protein sequence modeling 和 representation learning,并宣称 performance/efficiency 达到新 frontier。ESM Cambrian 的商业意义是补齐 ESM3 之外的 representation layer:药企不仅需要生成蛋白,也需要对已有序列、变体、功能和 disease relevance 做 embedding、ranking 和 downstream prediction。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>当前可回源事实</th><th>解读</th></tr></thead><tbody><tr><td>模型规模</td><td>ESM3 最大 98B parameters</td><td>生命科学模型中非常大,训练成本高</td></tr><tr><td>训练数据</td><td>2.78B natural proteins,771B unique tokens</td><td>数据覆盖是护城河之一</td></tr><tr><td>训练计算</td><td>约 10^24 FLOPs</td><td>属 frontier biology model 级别</td></tr><tr><td>实验验证</td><td>esmGFP 湿实验验证并发表于 Science</td><td>当前最强产品/技术证据</td></tr><tr><td>产品分发</td><td>Forge/API、AWS、NVIDIA、GitHub open model</td><td>商业化入口已搭建</td></tr><tr><td>收入</td><td>公开资料没有给出</td><td>不能按 ARR 估值</td></tr><tr><td>客户</td><td>没有清晰公开药企客户名单</td><td>需从后续 case study/partner announcement 核验</td></tr><tr><td>融资</td><td>私募数据库/媒体常见约 $142M seed 口径</td><td>金额需用数据库/投资方披露交叉确认</td></tr></tbody></table></div>
+<p>运营指标应重点跟踪:</p>
+<ul><li>Forge API 申请用户数和付费转化;</li><li>AWS/NVIDIA marketplace consumption;</li><li>工业客户 use cases;</li><li>wet-lab hit rate、optimization rounds、assay success rate;</li><li>药企合作的 upfront/milestone/royalty;</li><li>ESM3/ESM Cambrian 在 antibody/enzyme/protein binder 上的真实实验表现。</li></ul>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>EvolutionaryScale 的财务逻辑与传统 biotech 不同,也与通用 LLM API 不同。</p>
+<h3 class="subsection">7.1 API / platform economics</h3>
+<p>收入可能来自 protein generation、embedding、ranking、structure/function-conditioned design 和 workflow seats。成本主要是模型推理、数据库/存储、云分发、scientist support 和安全审核。若客户主要通过 AWS/NVIDIA 使用,还会有 marketplace revenue share。</p>
+<p>关键变量:</p>
+<ul><li>每个 protein design job 的 compute cost;</li><li>每个客户项目需要多少生成轮次和实验反馈;</li><li>大模型是否必须调用,还是小模型/ESM Cambrian embedding 就足够;</li><li>是否需要 EvolutionaryScale scientist-in-the-loop 支持;</li><li>免费 public beta 何时转付费。</li></ul>
+<h3 class="subsection">7.2 Drug discovery collaboration economics</h3>
+<p>若与药企做项目,收入通常不会只按 API token 计费,而是:</p>
+<p>upfront + annual platform fee + FTE/research support + preclinical/clinical milestones + royalties</p>
+<p>但这个逻辑只有在具体项目和 IP 权属公开后才能量化。AI biology 公司最重要的单位经济性是“每个 discovery program 产生可验证 hit/lead 的成本和时间”,不是传统 LLM 的 cost per 1M tokens。</p>
+<h3 class="subsection">7.3 Wet-lab validation economics</h3>
+<p>esmGFP 的验证说明模型能生成远离天然空间的功能蛋白,但药物发现的经济性还要看:</p>
+<ul><li>hit rate:生成多少候选能通过体外实验;</li><li>optimization rounds:需要几轮设计-合成-测试;</li><li>assay cost:每轮实验成本;</li><li>translational relevance:体外功能是否转化到细胞/动物/临床;</li><li>IP defensibility:生成蛋白是否可申请专利并绕开现有序列空间。</li></ul>
+<h3 class="subsection">7.4 为什么估值不能简单按 biotech pipeline 看</h3>
+<p>EvolutionaryScale 更像 platform company。它可以同时服务多个 therapeutic areas、industrial enzymes、research tools 和 cloud workflows。如果商业化成功,收入会来自平台 license 和多项目 milestones;如果失败,则可能停留在科研工具和论文影响力。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 AI biology / protein design 竞争</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司/项目</th><th>定位</th><th>EvolutionaryScale 差异</th></tr></thead><tbody><tr><td>Google DeepMind AlphaFold / AlphaFold 3</td><td>structure prediction / biomolecular interaction</td><td>AlphaFold 结构预测强;ESM3 更强调生成和 sequence/structure/function 联合推理</td></tr><tr><td>Isomorphic Labs</td><td>AI drug discovery,Alphabet 生态</td><td>Isomorphic 直接做药企合作和 pipeline;EvolutionaryScale 更像基础模型/API</td></tr><tr><td>Generate:Biomedicines</td><td>generative protein therapeutics</td><td>Generate 有 therapeutics platform 和 pharma partnerships;ESM3 有更强 open science/ESM legacy</td></tr><tr><td>Cradle</td><td>protein engineering SaaS + wet lab</td><td>Cradle 更产品化/客户导向;EvolutionaryScale 模型规模和 ESM 科研声量更强</td></tr><tr><td>Profluent</td><td>AI-designed gene editors</td><td>Profluent 聚焦 gene editing;EvolutionaryScale 更通用蛋白设计</td></tr><tr><td>Chai Discovery</td><td>biomolecular structure/generative models</td><td>Chai 更偏结构/药物设计开源模型;EvolutionaryScale 的 ESM3 侧重 evolutionary-scale protein language</td></tr><tr><td>Inceptive</td><td>RNA therapeutics AI</td><td>modality 不同,同属 AI-designed biology</td></tr><tr><td>Bioptimus / Owkin</td><td>biology foundation models / pathology / multimodal patient data</td><td>Bioptimus 从 patient/pathology data 切入;EvolutionaryScale 从 protein universe 切入</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 价值链位置</h3>
+<p>EvolutionaryScale 位于药物发现价值链上游:</p>
+<p>基础模型 → 候选蛋白设计 → 合成/表达 → in vitro assay → optimization → preclinical → clinical</p>
+<p>它的价值不是替代药企全部研发,而是提高 early discovery 的搜索效率。若模型能把有效候选从极低 hit rate 提升到可工程化水平,就能改变药物发现的前端经济性。</p>
+<h3 class="subsection">8.3 护城河</h3>
+<ul><li><strong>ESM legacy</strong>:ESM 系列在蛋白语言模型领域有长期学术积累;</li><li><strong>数据规模</strong>:2.78B proteins、771B tokens;</li><li><strong>模型规模</strong>:98B 最大模型;</li><li><strong>实验验证</strong>:esmGFP 不是纯 in silico 结果;</li><li><strong>云分发</strong>:AWS/NVIDIA 合作降低企业采用门槛;</li><li><strong>responsible development</strong>:蛋白设计需要安全治理,成熟框架本身是进入药企/政府客户的前提。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<h3 class="subsection">Alexander Rives</h3>
+<p>Alexander Rives 是 ESM 项目的核心人物之一,在公开采访和公司文章中担任 EvolutionaryScale co-founder/chief scientist 角色。他长期研究 protein language models,ESM3 文章也由其团队主导。</p>
+<h3 class="subsection">前 Meta ESM 团队</h3>
+<p>EvolutionaryScale 的关键优势来自原 Meta FAIR 的 ESM 研究积累。Meta 时代的 ESM-1b、ESM-2、ESMFold 等已经在蛋白结构、功能、变体效应和抗体工程研究中广泛引用。公司化后,这些经验转化为更大规模、更偏生成式的 ESM3。</p>
+<h3 class="subsection">科学与工程复合能力</h3>
+<p>AI biology 公司必须同时拥有:</p>
+<ul><li>ML scaling 和 transformer 训练能力;</li><li>protein biology 和实验设计理解;</li><li>cloud/API 产品能力;</li><li>biosecurity/responsible development 经验;</li><li>与药企研发流程对接的 BD 能力。</li></ul>
+<p>公开资料能证明其 ML/protein research 强,但商业 BD 和药企合作深度还需要更多外部证据。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>商业化证据不足</strong>:没有公开 ARR、API 收入或药企合同金额。</li><li><strong>融资口径不够透明</strong>:常见 $142M seed 口径需要通过数据库/投资方文件继续交叉核验。</li><li><strong>从 GFP 到药物的转化风险</strong>:esmGFP 是强验证,但 therapeutics 对 potency、specificity、immunogenicity、PK/PD 要求更高。</li><li><strong>实验闭环成本</strong>:模型生成只是第一步,合成、表达、assay 和优化仍昂贵。</li><li><strong>生物安全风险</strong>:蛋白设计模型可能被用于有害分子设计,访问控制和 license 至关重要。</li><li><strong>竞争风险</strong>:AlphaFold/Isomorphic/Generate/Cradle/Chai/Profluent 都在争夺药企预算。</li><li><strong>云平台依赖</strong>:AWS/NVIDIA 分发降低门槛,也可能压缩平台议价权。</li><li><strong>IP 风险</strong>:AI 生成蛋白的专利归属、训练数据来源和 freedom-to-operate 复杂。</li><li><strong>模型泛化风险</strong>:在 GFP 家族成功不代表在抗体、酶、膜蛋白或多蛋白复合体上同样成功。</li><li><strong>组织/平台变化风险</strong>:ESM API 与 Biohub/GitHub 生态的关系需要跟踪,避免误判公司资产边界。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="bioptimus.html">Bioptimus</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="harvey.html">Harvey</a></div>
+</div>
+</body></html>

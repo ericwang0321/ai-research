@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeepSeek / 深度求索 · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 通用 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">通用 AI</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">中国杭州</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.deepseek.com/" target="_blank" rel="noopener">DeepSeek / 深度求索</a></h1>
+    <div class="dc-oneliner">DeepSeek 是 2025 年以来全球模型层最具破坏性的非美国标的。它用 V3/R1 证明，在有限高端 GPU 条件下，通过 MoE、MLA、FP8、工程优化、开源权重和极低 API 价格，也可以逼近前沿闭源模型。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>DeepSeek 是 2025 年以来全球模型层最具破坏性的非美国标的。它用 V3/R1 证明，在有限高端 GPU 条件下，通过 MoE、MLA、FP8、工程优化、开源权重和极低 API 价格，也可以逼近前沿闭源模型。</strong></p>
+<p>到 2026 年 7 月 6 日，DeepSeek 已从幻方量化自筹资金的研究型团队，演进为被腾讯、宁德时代、京东、网易、国家 AI 基金等媒体报道参与的大额融资标的。最大数据缺口仍是商业化收入、客户付费、毛利、治理结构、芯片供应、跨境合规、数据安全和内容审查风险。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>事件</th><th>金额</th><th>估值</th><th>投资方/交易方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2023</td><td>公司成立</td><td>自筹/关联资金为主</td><td></td><td>梁文锋、幻方量化/High-Flyer 相关资源</td><td>早期不依赖外部 VC</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024</td><td>V2/V2.5/Coder/Math 等模型发布</td><td>无外部融资披露</td><td></td><td>自研投入</td><td>建立技术路线</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-01</td><td>R1 与 App 破圈</td><td>无外部融资披露</td><td></td><td>自筹为主</td><td>全球关注,引发 AI 股票波动</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-04</td><td>WSJ 报道首次寻求外部融资</td><td>至少 $300M</td><td>估值 $10B-$30B</td><td>阿里、腾讯、顺为等谈判报道</td><td>说明公司开始接受外部资本</td><td><a href="https://www.wsj.com/tech/ai/chinas-deepseek-looks-to-tap-external-investors-including-alibaba-tencent-4fcb607d" target="_blank" rel="noopener">WSJ</a></td></tr><tr><td>2026-06</td><td>Axios 报道融资</td><td>约 $7.4B</td><td>估值约 $52B</td><td>腾讯、宁德时代、国家基金等报道;梁文锋个人约 $2.85B</td><td>口径显著高于 4 月初步讨论</td><td><a href="https://www.axios.com/2026/06/03/china-deepseek-billion" target="_blank" rel="noopener">Axios</a></td></tr><tr><td>2026-06/07</td><td>WSJ 报道 fresh funding 与扩招</td><td>>$7.4B</td><td>估值 >$50B</td><td>腾讯、宁德时代、京东、网易、IDG、Monolith、中国国家 AI 基金、梁文锋约 $3B 等</td><td>若交割属实,DeepSeek 成为中国最贵 AI startup 之一</td><td><a href="https://www.wsj.com/tech/ai/deepseek-becomes-chinas-most-valuable-ai-startup-after-over-7-4-billion-fundraise-78ef64c0" target="_blank" rel="noopener">WSJ</a></td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li>DeepSeek 长期自筹,保持技术独立和开源策略;这与许多依赖 VC 追逐商业化的 AI 公司不同。</li><li>2026 年外部融资如果完成,将把公司推向更强商业化、合规、财务透明和投资人治理要求。</li><li>战略投资者组合反映国家级 AI 基础设施意义: 腾讯/京东/网易代表互联网应用与云生态,宁德时代代表制造业/工业 AI,国家基金代表产业政策。</li><li>梁文锋个人大额参与的报道若成立,说明创始人仍希望保持控制与长期主义。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">杭州深度求索人工智能基础技术研究有限公司 / DeepSeek</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2023 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">中国杭州,公开招聘亦覆盖北京等地</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">梁文锋,幻方量化 / High-Flyer 背景</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">DeepSeek Chat/App、DeepSeek API、DeepSeek-V4-Pro/Flash、DeepSeek-V3.x、DeepSeek-R1、DeepSeek Coder、DeepSeek VL、DeepSeek Math、DeepSeek Prover</td></tr><tr><td class="kv-key">技术定位</td><td class="kv-val">MoE 大模型、推理模型、低成本训练/推理、开源权重、长上下文、agent/coding</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">免费 Chat/App 获客、API token、企业/云厂商私有化与部署、国产芯片/云生态适配、潜在行业方案</td></tr><tr><td class="kv-key">最新官方价格</td><td class="kv-val">V4-Flash cache miss input $0.14/M、output $0.28/M; V4-Pro cache miss input $0.435/M、output $0.87/M; cache hit 价格极低</td></tr><tr><td class="kv-key">融资/估值口径</td><td class="kv-val">2026-04 WSJ 报道寻求至少 $300M、估值 $10B-$30B; 2026-06/07 Axios/WSJ 报道约 $7.4B 融资、估值 $50B+</td></tr><tr><td class="kv-key">价值链位置</td><td class="kv-val">中国基础模型层 + 开源生态价格锚 + 国产云/芯片应用层入口</td></tr></tbody></table></div>
+<p>DeepSeek 的独特之处在于它并非先做大规模商业 SaaS,而是先通过开源模型和极低 API 价格建立全球开发者心智。V3/R1 之后,DeepSeek 被视为"AI 的拼多多式价格破坏者": 它迫使 OpenAI、Anthropic、Google、xAI、Mistral 等重新解释训练成本、推理成本与模型护城河。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 免费 Chat / App</h3>
+<p>DeepSeek 官网提供网页版和 App,主打"与 DeepSeek 免费对话"。免费入口的商业意义:</p>
+<ul><li>快速扩大用户和品牌认知;</li><li>获取真实使用反馈,用于模型迭代和产品优化;</li><li>向开发者和企业展示能力,促进 API 转化;</li><li>在中国和全球市场形成"低价高能力"心智。</li></ul>
+<p>免费产品不是主要短期收入来源,但它是 DeepSeek 打入全球 AI 讨论的入口。2025 年 1 月 DeepSeek App 曾登顶美国 iOS 免费榜并引发全球科技股波动;随后服务遭遇注册限制和攻击报道,说明免费高增长也会带来基础设施压力。</p>
+<h3 class="subsection">4.2 API token 计费</h3>
+<p>DeepSeek 官方 API pricing 页面截至检索时列出 V4-Flash 与 V4-Pro:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>Context</th><th>Thinking mode</th><th>Cache hit input</th><th>Cache miss input</th><th>Output</th><th>并发限制</th></tr></thead><tbody><tr><td>deepseek-v4-flash</td><td>1M</td><td>支持 thinking / non-thinking</td><td>$0.0028 / 1M tokens</td><td>$0.14 / 1M tokens</td><td>$0.28 / 1M tokens</td><td>2500</td></tr><tr><td>deepseek-v4-pro</td><td>1M</td><td>支持 thinking / non-thinking</td><td>$0.003625 / 1M tokens</td><td>$0.435 / 1M tokens</td><td>$0.87 / 1M tokens</td><td>500</td></tr></tbody></table></div>
+<p>官方说明 deepseek-chat 与 deepseek-reasoner 将在 2026-07-24 后退役,兼容路由到 deepseek-v4-flash 的 non-thinking / thinking 模式。这意味着 DeepSeek 已把产品线从 V3/R1 时代推进到 V4 统一长上下文模型。</p>
+<p>与 OpenAI/Anthropic/xAI 对比,DeepSeek 价格极低:</p>
+<ul><li>V4-Pro output $0.87/M 低于 xAI grok-4.3 $2.50/M,更远低于 Anthropic Sonnet/Opus;</li><li>V4-Flash output $0.28/M 直接把通用模型价格打到小模型级别;</li><li>cache hit input 几乎免费化,鼓励长上下文和重复 prompt 复用。</li></ul>
+<h3 class="subsection">4.3 开源权重与企业私有化</h3>
+<p>DeepSeek 的模型策略以开源权重为核心。R1、V3-0324、R1-0528、V3.2、V4 Preview 等都通过 GitHub/Hugging Face 或官方说明提供权重/技术报告。商业化不一定来自模型许可费,而可能来自:</p>
+<ul><li>企业在私有云/本地部署中选择 DeepSeek 模型;</li><li>国产云和大厂将 DeepSeek 模型接入 MaaS 平台;</li><li>API 官方低价服务承担自助开发者使用;</li><li>行业客户采购定制化、微调、推理加速、国产芯片适配服务;</li><li>国产芯片/云生态把 DeepSeek 作为标杆 workload。</li></ul>
+<p>开源同时带来双刃剑: 它极大扩大生态,但也降低直接收费能力,并让竞争者可快速蒸馏、量化、部署和改造模型。</p>
+<h3 class="subsection">4.4 与云厂商/芯片生态关系</h3>
+<p>DeepSeek 的模型广泛被中国云厂商和海外开发者平台接入。美国出口管制限制高端 Nvidia GPU 获取,反而强化了 DeepSeek "有限算力效率"叙事。媒体报道中,DeepSeek 也被鼓励或推动适配 Huawei Ascend 等国产芯片,但训练稳定性、互联、软件栈成熟度和推理性能仍需持续验证。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 模型时间线</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>模型/产品</th><th>关键点</th></tr></thead><tbody><tr><td>2023–2024</td><td>DeepSeek LLM / Coder / Math / VL / V2 / V2.5</td><td>建立代码、数学、多模态和 MoE 早期能力</td></tr><tr><td>2024-12</td><td>DeepSeek-V3</td><td>671B total / 37B active MoE,14.8T tokens,MLA,DeepSeekMoE,FP8,训练成本官方口径约 $5.576M</td></tr><tr><td>2025-01</td><td>DeepSeek App / R1</td><td>R1 开源,官方称性能 on par with OpenAI o1;R1 distilled models 推动开源社区</td></tr><tr><td>2025-03</td><td>V3-0324</td><td>reasoning、前端开发、tool-use 提升,MIT License</td></tr><tr><td>2025-05</td><td>R1-0528</td><td>benchmark、前端、hallucination、JSON/function calling 改进</td></tr><tr><td>2025-08/09</td><td>V3.1 / V3.2-Exp</td><td>hybrid thinking/non-thinking,DeepSeek Sparse Attention</td></tr><tr><td>2025-12</td><td>V3.2 / V3.2-Speciale</td><td>reasoning-first models,agent tool-use,IMO/ICPC/IOI 级复杂任务口径</td></tr><tr><td>2026-04</td><td>V4 Preview</td><td>V4-Pro 1.6T total / 49B active,V4-Flash 284B total / 13B active,1M context,DSA</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 技术差异化</h3>
+<p>DeepSeek 的核心技术组合:</p>
+<ol><li><strong>MoE 架构</strong>: 总参数很大,每 token 激活参数较少,降低推理成本。</li><li><strong>MLA / Multi-head Latent Attention</strong>: 减少 KV cache 压力,提升长上下文效率。</li><li><strong>DeepSeekMoE</strong>: 专家路由和负载均衡优化,提高训练/推理效率。</li><li><strong>FP8 mixed precision</strong>: 在大规模训练中使用低精度优化,降低显存和计算成本。</li><li><strong>Multi-token prediction</strong>: 提升解码效率和训练信号。</li><li><strong>GRPO / 强化学习推理训练</strong>: R1/R1-Zero 展示无需大量人工标注也能提升推理能力。</li><li><strong>DeepSeek Sparse Attention / DSA</strong>: V4 时代主打 1M context 的成本效率。</li><li><strong>开源 distilled models</strong>: 让社区用 Qwen/Llama 等基座模型获得小模型推理能力。</li></ol>
+<h3 class="subsection">5.3 产品效果</h3>
+<p>DeepSeek-V3 技术报告称 V3 在多个开放模型 benchmark 上领先,并在部分任务上接近闭源模型;R1 官方发布页称性能 on par with OpenAI-o1,且开源 MIT License;V4 官方发布页称 V4-Pro 在世界知识、reasoning、Math/STEM/Coding、agentic coding 上领先开放模型并接近顶级闭源模型。</p>
+<p>这些 benchmark 需要谨慎解读。DeepSeek 的真正行业影响不是某个分数,而是:</p>
+<ul><li>以极低 API 价格提供接近前沿的可用能力;</li><li>开源权重让开发者可私有化部署;</li><li>证明训练成本并非只能线性堆算力;</li><li>迫使投资者重新评估 Nvidia GPU capex 与模型公司毛利。</li></ul>
+<h3 class="subsection">5.4 成本叙事</h3>
+<p>DeepSeek-V3 技术报告披露 full training 需要 2.788M H800 GPU hours,成本约 $5.576M,远低于外界对 frontier model 的认知。这个数字必须正确理解:</p>
+<ul><li>它主要指 V3 训练 run 的 GPU 计算成本;</li><li>不包括早期实验、团队薪酬、数据工程、失败尝试、基础设施折旧、推理服务、机会成本等完整公司成本;</li><li>因此不能简单说 DeepSeek 全部模型只花 $5.6M;</li><li>但即便考虑完整成本,DeepSeek 仍展示了显著资本效率。</li></ul>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开口径</th><th>解读</th></tr></thead><tbody><tr><td>App adoption</td><td>2025-01 DeepSeek App 登顶美国 iOS 免费榜,媒体称数百万下载</td><td>全球品牌破圈,但下载不等于付费</td></tr><tr><td>API 定价</td><td>V4-Flash output $0.28/M,V4-Pro output $0.87/M</td><td>全球最低价 frontier 级 API 之一</td></tr><tr><td>模型开源</td><td>R1/V3/R1-0528/V3.2/V4 等权重/报告公开</td><td>生态扩张强,直接收费压力也大</td></tr><tr><td>融资估值</td><td>2026-06/07 媒体报道约 $7.4B 融资、$50B+ 估值</td><td>从自筹研究团队转向国家级资本标的</td></tr><tr><td>投资者</td><td>媒体报道腾讯、宁德时代、京东、网易、IDG、Monolith、中国国家 AI 基金、梁文锋个人出资等</td><td>战略资本覆盖互联网、制造、国家基金</td></tr><tr><td>员工扩张</td><td>2026 媒体报道计划至少 double departments / workforce</td><td>从研究组织走向规模化商业与运营</td></tr><tr><td>收入/ARR</td><td>公司没有给出可审计收入拆分;媒体强调缺乏成熟 revenue model</td><td>需要后续通过融资材料或上市文件核验</td></tr></tbody></table></div>
+<p>DeepSeek 的运营指标最大特点是"影响力远大于收入透明度"。它改变了模型定价、开源生态和全球竞争预期,但公开市场很难判断其付费 API 使用、企业客户数、云分成、毛利和现金流。对一级市场投资而言,这意味着估值更多依赖战略价值和技术心智,而不是当期财务。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>DeepSeek 的单位经济性是全球模型层的关键研究样本。</p>
+<h3 class="subsection">7.1 收入端</h3>
+<ul><li>官方 API 价格极低,靠规模、缓存、MoE efficiency 和低成本推理支撑。</li><li>免费 Chat/App 不直接贡献大量收入,但降低获客成本。</li><li>开源模型可能减少授权收入,但增加企业私有化、云厂商适配和生态影响力。</li><li>如果中国大厂和产业资本参与融资,DeepSeek 可能通过战略合作获得长期调用、私有部署和行业项目。</li></ul>
+<h3 class="subsection">7.2 成本端</h3>
+<ul><li>V3 官方训练 run 成本约 $5.576M,但完整研发成本高于该数字。</li><li>推理成本受 MoE active params、MLA/DSA、cache hit、并发优化影响。</li><li>中国高端 GPU 获取受出口管制影响,H800/H20/国产芯片组合会影响训练和推理效率。</li><li>若转向大规模免费用户和企业 SLA,需要更大推理集群和运维团队。</li></ul>
+<h3 class="subsection">7.3 财务逻辑</h3>
+<p>DeepSeek 的低价 API 可能有三种解释:</p>
+<ol><li><strong>真实成本领先</strong>: 技术效率足以支撑低价且有毛利。</li><li><strong>战略补贴获客</strong>: 通过低价压低全球价格,以生态和资本支持换份额。</li><li><strong>混合模式</strong>: 基础 API 低价,企业私有化/行业方案/战略客户另行收费。</li></ol>
+<p>目前公开材料不足以判断哪一种占主导。投资上应重点核验官方 API gross margin、cache hit 比例、企业合同 ARPU、云平台分成和推理集群利用率。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>对手</th><th>威胁</th><th>DeepSeek 的相对优势</th></tr></thead><tbody><tr><td>OpenAI</td><td>ChatGPT 分发、模型全栈、资本和企业信任</td><td>DeepSeek 价格低、开源、可私有化、资本效率叙事强</td></tr><tr><td>Anthropic</td><td>Claude Code 和企业安全强</td><td>DeepSeek 成本更低,开放权重更易部署</td></tr><tr><td>Google Gemini</td><td>自有 TPU、搜索/Android/Workspace</td><td>DeepSeek 更开放,在中国生态更可用</td></tr><tr><td>xAI/Grok</td><td>实时 X 数据、美国政府渠道、低价 API</td><td>DeepSeek 更强开源心智和更低价格</td></tr><tr><td>Meta/Llama</td><td>全球开源生态、免费权重</td><td>DeepSeek 在推理模型和成本效率上形成强品牌</td></tr><tr><td>阿里 Qwen</td><td>中国云分发和开源生态强</td><td>DeepSeek 独立模型品牌更锋利,低价心智更强</td></tr><tr><td>Moonshot/Kimi</td><td>长上下文和消费产品</td><td>DeepSeek 更技术社区化和开源化</td></tr><tr><td>百度/腾讯/字节/华为</td><td>大厂资源和渠道</td><td>DeepSeek 更灵活,但商业化渠道弱</td></tr></tbody></table></div>
+<p>DeepSeek 的护城河:</p>
+<ul><li>低成本训练/推理工程能力;</li><li>开源权重带来的全球开发者生态;</li><li>中国 AGI 叙事和国家级战略关注;</li><li>极低 API 价格形成价格锚;</li><li>梁文锋/幻方量化背景带来的工程和算法文化。</li></ul>
+<p>容易被攻击的点:</p>
+<ul><li>开源导致模型能力被快速复制;</li><li>商业化收入不透明;</li><li>高端 GPU 和国产芯片限制;</li><li>海外政府和企业对数据安全/中国法律环境敏感;</li><li>内容审查影响国际用户使用;</li><li>若融资后商业化要求上升,可能冲击长期研究文化。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>梁文锋是 DeepSeek 的核心人物。他来自浙江大学/量化投资背景,创办幻方量化,长期投入自研算力和 AI 研究。DeepSeek 的团队文化被外界描述为研究导向、扁平和重工程效率,与传统大厂 KPI 和 VC 快速商业化路线不同。</p>
+<p>团队优势:</p>
+<ul><li>量化背景带来的算法、工程、并行计算和硬件优化能力;</li><li>对基础模型长期投入,不完全依赖短期融资;</li><li>研究发布节奏快,V3/R1/V3.2/V4 均有技术报告和权重;</li><li>年轻工程团队愿意做低层系统优化。</li></ul>
+<p>团队挑战:</p>
+<ul><li>2026 扩招会改变小团队文化;</li><li>从研究组织转向商业化公司需要 sales、finance、legal、security、enterprise support;</li><li>国际合规和政府关系复杂;</li><li>如果战略投资者过多,产品路线和开放策略可能受到影响。</li></ul>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>商业化风险</strong>: 开源和免费心智强,但可审计付费收入、企业客户和毛利仍需验证。</li><li><strong>芯片供应风险</strong>: 高端 Nvidia GPU 受限,国产芯片训练稳定性和生态成熟度仍有挑战。</li><li><strong>监管与跨境风险</strong>: 美国、欧洲、亚洲多地对中国 AI app 的数据安全敏感。</li><li><strong>内容审查风险</strong>: 中国监管要求可能影响海外用户信任和模型回答范围。</li><li><strong>开源复制风险</strong>: 权重开放降低护城河,竞争者可蒸馏或微调。</li><li><strong>估值风险</strong>: $50B+ 估值要求收入和战略价值持续兑现。</li><li><strong>安全风险</strong>: 模型可能被用于网络攻击、恶意代码、虚假信息或敏感内容。</li><li><strong>组织扩张风险</strong>: 大规模招聘和资本进入可能冲击原有研究效率。</li><li><strong>国际声誉风险</strong>: distillation、数据来源、隐私政策等争议可能影响海外采用。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="character_ai.html">Character.AI</a><a class="sib-chip" href="clay.html">Clay</a><a class="sib-chip" href="cohere.html">Cohere</a><a class="sib-chip" href="decagon_ai.html">Decagon AI</a><a class="sib-chip" href="genspark.html">Genspark</a><a class="sib-chip" href="granola.html">Granola</a></div>
+</div>
+</body></html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AlphaSense · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 New York</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.alpha-sense.com/" target="_blank" rel="noopener">AlphaSense</a></h1>
+    <div class="dc-oneliner">AlphaSense 是面向金融、咨询、企业战略和市场情报团队的专业研究平台。公司把企业财报、电话会、专家访谈、券商/行业资料、私有内容和生成式搜索放在同一套工作流里，帮助用户更快完成公司研究、市场跟踪和投研材料准备。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>AlphaSense 是面向金融、咨询、企业战略和市场情报团队的专业研究平台。公司把企业财报、电话会、专家访谈、券商/行业资料、私有内容和生成式搜索放在同一套工作流里，帮助用户更快完成公司研究、市场跟踪和投研材料准备。</strong></p>
+<p>截至 2026 年 6 月，公司公告融资 $350M、估值 $7.5B，Q1 2026 ARR 超过 $600M。它的核心看点不是“会不会做 AI 搜索”，而是能否把内容授权、金融数据、专家网络、Excel/PPT 工作流和企业内部资料整合成高留存的大客户合同。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/交易对手</th><th>事件意义</th><th>来源</th></tr></thead><tbody><tr><td>2011</td><td>公司成立</td><td></td><td></td><td>Jack Kokko、Raj Neervannan</td><td>从金融/商业文档搜索切入</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2017–2021</td><td>多轮成长融资</td><td>公开资料口径分散;需核验</td><td></td><td>Innovation Endeavors、Sorenson、Triangle Peak、Viking、Goldman Sachs 等历史投资者见公开资料</td><td>由 enterprise search/market intelligence 逐步扩张</td><td>待补：未找到可公开回源报道</td></tr><tr><td>2022-06</td><td>Series D / growth round</td><td>$225M</td><td>$1.7B</td><td>Goldman Sachs Asset Management、Viking Global、CapitalG 等</td><td>AI search 与 market intelligence 平台进入独角兽后成长阶段</td><td><a href="https://www.finsmes.com/2022/06/alphasense-raises-225m-in-series-d-financing.html" target="_blank" rel="noopener">FinSMEs</a></td></tr><tr><td>2023-09</td><td>Series E</td><td>$150M</td><td>$2.5B</td><td>BOND 领投,CapitalG、Viking、Goldman Sachs、new investors 等</td><td>生成式 AI 叙事推动估值上修</td><td><a href="https://www.finsmes.com/2023/09/alphasense-raises-150m-in-series-e-financing.html" target="_blank" rel="noopener">FinSMEs</a></td></tr><tr><td>2024-06</td><td>Tegus acquisition + financing</td><td>交易约 $930M;融资与交易总额约 $650M 相关口径</td><td>~$4B</td><td>Viking Global、BDT & MSD、J.P. Morgan Growth Equity 等公开报道口径</td><td>收购 Tegus,补专家访谈和 private market insight</td><td><a href="https://www.axios.com/pro/fintech-deals/2024/06/11/alphasense-buys-private-market-rival-tegus-930m" target="_blank" rel="noopener">Axios</a></td></tr><tr><td>2025-10</td><td>Carousel acquisition</td><td>金额没有公开</td><td>未单独披露新估值</td><td>Carousel(YC W24)</td><td>收购 Excel AI assistant,同时 CEO 称 ARR 过 $500M、客户 6,500 家;不作为融资估值更新</td><td><a href="https://www.businessinsider.com/alphasense-acquires-carousel-ai-tool-for-excel-2025-10" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2026-06</td><td>New funding</td><td>$350M</td><td>$7.5B</td><td>Vitruvian Partners、Accenture Ventures、J.P. Morgan Asset Management、D. E. Shaw Ventures、Pinegrove Opportunity Partners、CapitalG、Goldman Sachs Alternatives、Viking Global Investors</td><td>ARR >$600M,Accenture 成为首个 strategic channel partner,SuperAnalyst 同日推出</td><td><a href="https://www.wsj.com/business/entrepreneurship/market-research-firm-alphasense-clinches-7-5-billion-valuation-in-new-funding-round-bda34de4" target="_blank" rel="noopener">WSJ</a></td></tr></tbody></table></div>
+<p>这条融资线说明 AlphaSense 已经不是单纯 VC 早期标的,而是接近 late-stage / pre-IPO 的金融/市场情报 AI workflow 平台。投资人组合也从 VC 扩展到 growth equity、PE、资产管理、战略渠道伙伴。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">AlphaSense, Inc.</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2011 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">New York, New York;2026 年公告提到 Hudson Yards global headquarters</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Jack Kokko(CEO,前 Wall Street analyst)、Raj Neervannan(CTO)</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI-powered market intelligence and workflow orchestration platform</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">AlphaSense Platform、Generative Search、Deep Research、SuperAnalyst、Enterprise Intelligence、Financial Data、Tegus Expert Insights、Tegus Expert Call Services、Canalyst financial models、Sentiment Indices、Workflow Agents</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">投行、PE、hedge funds、asset management、corporate strategy、competitive intelligence、IR、corp dev、consulting、life sciences、law firms、insurance、TMT/energy/industrial/consumer teams</td></tr><tr><td class="kv-key">客户规模</td><td class="kv-val">官网与 2026 年公告均称 7,000+ global enterprises;pricing FAQ 称包括 85%+ S&P 100、70% top 50 hedge funds</td></tr><tr><td class="kv-key">内容规模</td><td class="kv-val">500M+ premium financial and business documents;10,000+ curated data sources;broker research from 1,000+ sell-side/independent firms;expert transcripts、filings、news、company docs、financial data</td></tr><tr><td class="kv-key">ARR / revenue</td><td class="kv-val">公司 2026-06 公告:Q1 2026 ARR 超过 $600M,2025-10 为 $500M</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2026-06 $350M</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">$7.5B</td></tr><tr><td class="kv-key">主要投资者</td><td class="kv-val">Vitruvian Partners、Accenture Ventures、J.P. Morgan Asset Management、D. E. Shaw Ventures、Pinegrove Opportunity Partners、CapitalG、Goldman Sachs Alternatives、Viking Global Investors 等</td></tr><tr><td class="kv-key">IPO 状态</td><td class="kv-val">私有公司;CEO 对 WSJ 表示 IPO 是可能选项,但没有给出确定时间表</td></tr></tbody></table></div>
+<p>AlphaSense 的业务本质是把“研究资料入口 + 可信检索 + AI 综合 + 专业工作流输出”整合成一个 enterprise SaaS。与通用企业搜索不同,AlphaSense 的语料库天然面向高价值决策:equity research、earnings transcripts、SEC/global filings、expert calls、company presentations、private/public financial data、news、trade journals、life sciences content、客户内部文档。与单纯金融终端不同,它更强调生成式 AI 在研究流程中的“从信号到交付物”的压缩。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 收费方式:annual subscription + per-seat / enterprise package + add-ons</h3>
+<p>AlphaSense pricing 页面没有公开标准美元价格,但明确写出“flexible subscription options, from enterprise-wide solutions to per-seat pricing”,FAQ 也说明“annual subscriptions for all team sizes, ranging from enterprise packages to per-seat options”。因此可确认的商业模式是企业年度订阅,合同按组织规模、seat、内容包、内部数据接入、专家服务、金融模型/Excel 插件、training/support 和 hosting/security 需求组合。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收费层</th><th>内容</th><th>公开依据</th><th>财务含义</th></tr></thead><tbody><tr><td>Market Intelligence</td><td>premium content library、AI market intelligence workflow、ETL integration、24/7 support、enterprise-grade data protection</td><td>pricing 页面列为基础计划</td><td>核心订阅 SKU,覆盖外部内容与 GenAI search</td></tr><tr><td>Enterprise Intelligence</td><td>Market Intelligence + internal content search/summarization + cloud-hosting options + API/third-party uploads + customized training/IT support</td><td>pricing 页面列为更高层计划</td><td>把客户内部研究、memo、meeting notes、slide decks 纳入平台,提高 seat expansion 与 switching cost</td></tr><tr><td>Expert Calls / Tegus</td><td>1M pre-qualified experts、expert matching、transcriptions、translations、compliance portal;Tegus expert transcript library</td><td>pricing add-on 与 Tegus 页面</td><td>专家网络/访谈内容是高价值 add-on,也带来内容成本和 compliance 成本</td></tr><tr><td>Canalyst financial models</td><td>industry KPIs、non-GAAP metrics、auditable model data、Excel tools</td><td>pricing add-on</td><td>面向投资研究/投行/PE 的模型工作流 upsell</td></tr><tr><td>SuperAnalyst / Workflow Agents</td><td>always-on AI execution layer、monitoring、multi-step research、Excel/Word/PPT outputs、custom skills/templates</td><td>2026-06 SuperAnalyst 发布</td><td>从 search seat 升级到 agent/workflow seat,打开更高 ARPU</td></tr><tr><td>Professional services / training / IT support</td><td>custom training、private cloud、dedicated account manager、IT support</td><td>pricing 页面</td><td>大客户部署与 regulated industries 支撑高 ACV</td></tr></tbody></table></div>
+<h3 class="subsection">4.2 定价逻辑:卖“可信研究产能”,不是卖 token</h3>
+<p>AlphaSense 的客户多为高薪研究人员和决策团队。投行 analyst、PE associate、hedge fund analyst、corporate strategy team 的时间成本和机会成本远高于普通知识工作者,因此定价锚不是 token 或搜索次数,而是:</p>
+<ul><li>更快找到可引用材料,减少重复检索;</li><li>用 sentence-level citations / source-linked outputs 降低幻觉与审查成本;</li><li>把专家访谈、broker research、filings、financial data 和 internal docs 放进统一 research workflow;</li><li>让投行/PE/战略团队更快生成 briefing、IC memo、market map、competitive intelligence report、earnings summary、watchlist、slides 和 financial model;</li><li>通过 Enterprise Intelligence 把客户自己的专有知识接入平台,形成“外部内容 + 内部历史判断”的复利。</li></ul>
+<h3 class="subsection">4.3 为什么 pricing 不宜直接估 per-seat</h3>
+<p>公开页面没有给出 $/seat/month。AlphaSense 的合同很可能按客户类型差异极大:hedge fund 需要 broker research 与 expert transcript;投行可能更重 Canalyst、Excel、presentation/workflow;corporate strategy 可能更重 market intelligence 与 internal content;大企业可能需要 private cloud、dedicated account、IT/security support。后续如果要投资建模,应通过客户访谈或采购单核验:</p>
+<ul><li>enterprise package 是否按全员授权、active user、research seat 或部门 seat 收费;</li><li>expert calls 是否按 call/hour/credit 另收费;</li><li>broker research 内容是否按权限、地区或供应商分层;</li><li>SuperAnalyst early access 是否包含在平台费中,还是作为 premium agent add-on;</li><li>internal content/API 上传是否按存储、connector、文档量或调用量计费。</li></ul>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 产品架构</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>层级</th><th>产品/能力</th><th>作用</th></tr></thead><tbody><tr><td>Content layer</td><td>500M+ business documents、broker research、Tegus transcripts、filings、news、financial data、company docs、life sciences content</td><td>高质量内容是壁垒,也是答案可信度的基础</td></tr><tr><td>Internal knowledge</td><td>Enterprise Intelligence、internal content search/summarization、API/third-party uploads</td><td>把企业内部 memo、slides、notes、research library 变成可检索和可生成的知识库</td></tr><tr><td>Search / retrieval</td><td>AlphaSense AI search、Smart Synonyms、Company Topics、Snippet Explorer、Sentiment Analysis、Monitoring</td><td>从关键词搜索升级为金融/商业语义检索与事件监控</td></tr><tr><td>GenAI layer</td><td>Generative Search、Deep Research、Generative Grid</td><td>多源综合、结构化问题拆解、引用与报告生成</td></tr><tr><td>Agent layer</td><td>Workflow Agents、SuperAnalyst</td><td>执行多步骤研究、持续监控、生成 Excel/Word/PPT、写代码、调用 expert calls</td></tr><tr><td>Add-on data/workflow</td><td>Tegus Expert Insights/Calls、Canalyst models、Carousel Excel AI</td><td>专家访谈、金融模型和 Excel 自动化提高金融客户粘性</td></tr><tr><td>Enterprise controls</td><td>security、compliance、hosting options、training/support、Trust Center</td><td>满足大金融和大型企业采购要求</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 Generative Search / Deep Research</h3>
+<p>AlphaSense 官网强调“sentence-level citations and no hallucinations”,以及新一代 Generative Search 用 multi-agent architecture 连接 qualitative insights、structured financial data 和 internal knowledge。Deep Research 被描述为像一组高技能 analyst 一样,自动生成 comprehensive research outputs、investment-grade briefings,把数周分析压缩到分钟级。</p>
+<p>这里的关键不是它“能回答问题”,而是能否在高风险研究场景做到:</p>
+<ul><li>把结论锚定到具体 broker research、filing、transcript、expert call 或内部文档;</li><li>处理跨公司、跨周期、跨主题的问题,例如行业定价变化、竞争格局、供应链风险、监管影响;</li><li>把非结构化文本与结构化 financial data 结合,让 research output 直接进入 memo/model/deck;</li><li>在公司内部权限下回答问题,避免把内部材料暴露给无权限用户;</li><li>在生成结果中保留 audit trail,方便 analyst/PM/MD/strategy lead 审阅。</li></ul>
+<h3 class="subsection">5.3 SuperAnalyst:从 search 到 always-on execution layer</h3>
+<p>2026 年 6 月 AlphaSense 推出 SuperAnalyst,定位为 always-on AI execution layer。发布稿中的能力包括:</p>
+<ul><li>native access to AlphaSense platform,包括 search、financial data、financial models、expert call scheduling;</li><li>autonomously identifies relevant experts, conducts expert calls, and synthesizes findings;</li><li>24/7 monitoring filings、earnings、expert transcripts、research reports、market developments;</li><li>persistent memory,保留 project history、workflow、analytical logic、user instructions;</li><li>read/write/update/generate Excel models、Word memos、PowerPoint decks、dashboards;</li><li>write and execute code to automate analyses;</li><li>custom skills/templates;</li><li>source-linked outputs with full auditability。</li></ul>
+<p>这代表 AlphaSense 正在从“搜索/内容平台”向“研究工作执行层”升级,与 Hebbia 的 Matrix/Rogo 的 Felix 在金融 workflow 上正面重叠。差异是 AlphaSense 起点是内容和客户规模,Hebbia/Rogo 起点更像 agent-native workflow。</p>
+<h3 class="subsection">5.4 Tegus、Canalyst、Carousel 的战略意义</h3>
+<p>AlphaSense 的 moat 很大一部分来自并购整合:</p>
+<ul><li><strong>Tegus:</strong> 2024 年以约 $930M 收购,补强专家访谈、private market research、expert call services 和金融客户群。Tegus 让 AlphaSense 不只是检索公开文件,还能访问高价值专家访谈语料。</li><li><strong>Canalyst:</strong> 提供清洁、可审计的金融模型、KPI 和 Excel tools,对投行/资管/PE 极重要。</li><li><strong>Carousel:</strong> 2025 年收购 YC-backed Excel AI assistant,补金融 spreadsheet generation、模型格式化、从 PDF/slide 抽取数据、公式生成等能力。BI 报道收购时 CEO 称 ARR 已跨 $500M、客户 6,500 家。</li></ul>
+<p>AlphaSense 的演进路线很清楚:先占据 market intelligence 搜索入口,再通过 Tegus/Canalyst/Carousel 把 expert research、financial model 和 Excel 操作纳入端到端工作流,最后用 SuperAnalyst 做 agentic execution。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>说明</th></tr></thead><tbody><tr><td>ARR</td><td>>$600M in Q1 2026</td><td>公司 2026-06 公告与 WSJ 报道一致</td></tr><tr><td>ARR 前值</td><td>$500M in Oct 2025</td><td>公司公告和 BI Carousel 报道</td></tr><tr><td>客户数</td><td>7,000+ global enterprises</td><td>官网/2026 融资公告/pricing FAQ</td></tr><tr><td>2025 客户数</td><td>6,500 corporate clients</td><td>BI Carousel 报道</td></tr><tr><td>估值</td><td>$7.5B</td><td>2026-06 $350M 融资后</td></tr><tr><td>上轮估值</td><td>$4B</td><td>2024 融资/2025 BI 口径</td></tr><tr><td>内容库</td><td>500M+ premium financial and business documents</td><td>官网/融资公告</td></tr><tr><td>数据源</td><td>10,000+ curated data sources</td><td>pricing FAQ</td></tr><tr><td>Broker research</td><td>1,000+ sell-side and independent firms</td><td>pricing 页面</td></tr><tr><td>S&P 100 penetration</td><td>85%+</td><td>pricing FAQ</td></tr><tr><td>Top 50 hedge funds penetration</td><td>70%</td><td>pricing FAQ</td></tr><tr><td>最新客户举例</td><td>Adobe、Amazon、American Express、Cisco、D. E. Shaw、J.P. Morgan Chase、Microsoft、NetApp、Nestle、Nvidia、Pfizer、Salesforce、Vitruvian、Wellington</td><td>2026 融资公告</td></tr><tr><td>官网 logo / case examples</td><td>Pfizer、Microsoft、J.P. Morgan、PG&E、McKesson、Salesforce、Dow、ODDO BHF、YH2 Capital、Recurve Capital、Royalty Pharma</td><td>官网</td></tr><tr><td>员工/区域</td><td>EMEA/APAC headcount more than doubled</td><td>2026 融资公告</td></tr></tbody></table></div>
+<h3 class="subsection">6.1 ARR 质量</h3>
+<blockquote>$600M ARR 对 AI 应用层非常稀缺。和许多 2023–2025 AI 原生公司相比,AlphaSense 有两个优势:</blockquote>
+<ol><li><strong>不是纯新预算:</strong> market intelligence、financial data、research platform、expert network 本来就是企业/金融客户预算科目。</li><li><strong>内容和工作流绑定:</strong> 客户不只是为 AI 对话付费,还为 premium content、broker research、expert calls、models、internal content permissions 和 support 付费。</li></ol>
+<p>估值/ARR 粗算为 $7.5B / $600M = 12.5x,显著低于很多早期高增长 AI agent 公司,但这也反映 AlphaSense 更成熟、更接近 IPO 候选。若未来 ARR 继续高双位数增长,12.5x 对 premium vertical SaaS + data platform 并不夸张;若增长放缓到传统金融数据平台水平,估值扩张空间会受限。</p>
+<h3 class="subsection">6.2 客户结构的含义</h3>
+<p>AlphaSense 同时卖给金融服务和 corporate users。金融客户 ACV 高,愿意为内容、速度和 workflow 付费;企业客户覆盖战略、竞争情报、IR、corp dev、product/market teams,seat 潜力更大。Accenture Ventures 投资并成为 strategic channel partner 的意义在于,AlphaSense 可借咨询项目把 market intelligence 嵌入企业 agentic workflows,从单个研究团队扩到 enterprise transformation 项目。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 Revenue build</h3>
+<p>AlphaSense 的收入可拆为:</p>
+<p>ARR = 客户数 × 平均 paid seats × 每 seat 年费 × 内容/数据包 attach × enterprise/internal content attach × expert calls / Canalyst / agent add-on</p>
+<p>关键变量:</p>
+<ul><li><strong>Seat penetration:</strong> 从少数研究 seat 到全 strategy/IR/corp dev/investment team。</li><li><strong>Content attach:</strong> Tegus、broker research、expert transcripts、financial data 是否带动 ARPU。</li><li><strong>Enterprise Intelligence:</strong> 内部文档接入后,客户更难迁移到单点 AI search。</li><li><strong>SuperAnalyst attach:</strong> agentic execution 如果单独收费,可带来新增长曲线。</li><li><strong>Channel leverage:</strong> Accenture 能否把 AlphaSense 带入更多 enterprise agentic workflow 项目。</li></ul>
+<h3 class="subsection">7.2 Cost build</h3>
+<p>成本项包括:</p>
+<ul><li>content licensing / broker research / expert transcript acquisition;</li><li>Tegus expert call network、compliance portal、transcription/translation;</li><li>indexing、retrieval、LLM inference、agent execution;</li><li>financial data、Canalyst model maintenance;</li><li>enterprise security、private cloud、IT support;</li><li>sales/customer success/training/professional services。</li></ul>
+<p>AlphaSense 的毛利结构不同于纯 SaaS。内容成本可能显著,但内容也是 moat;LLM 成本随 Deep Research/SuperAnalyst 使用增长而上升,但可被高 ARPU 客户吸收。真正要关注的是:AI agent usage 增加后,COGS 是被新增 agent add-on 收入覆盖,还是被固定订阅包吸收。</p>
+<h3 class="subsection">7.3 估值逻辑</h3>
+<p>以 $600M ARR 和 $7.5B 估值粗算,AlphaSense 约 12.5x ARR。相比 Harvey/Legora/Glean 这类高增长 AI 应用动辄 50x+ ARR 的报道倍数,AlphaSense 看起来更“成熟 SaaS/data platform”。市场给它的估值来自四个因素:</p>
+<ul><li>ARR 已具规模,IPO 可比性更强;</li><li>AI 能把 market intelligence workflow 的使用频率和 ARPU 提升;</li><li>Tegus/Canalyst/Carousel 形成内容 + 模型 + Excel workflow;</li><li>7,000+ 客户和 85% S&P 100 渗透带来 enterprise distribution。</li></ul>
+<p>压力也很明确:金融数据和专家网络成本重、传统终端竞争强、agent 新功能可能被 Bloomberg/FactSet/Microsoft/OpenAI 快速追赶。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 直接竞争者</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>定位</th><th>对 AlphaSense 的威胁</th></tr></thead><tbody><tr><td>Bloomberg Terminal / BloombergGPT / Bloomberg AI features</td><td>金融终端、数据、新闻、聊天/AI 功能</td><td>最强预算入口和交易员/投研使用习惯;如果 Bloomberg 把 AI research workflow 做好,会压缩金融客户预算</td></tr><tr><td>FactSet</td><td>金融数据、工作流、AI/search</td><td>与 AlphaSense 在数据、model、research workflow 上重叠</td></tr><tr><td>S&P Capital IQ / Market Intelligence</td><td>财务数据、私募/公募数据、transcripts、workflow</td><td>投行/PE 已有预算和模型入口</td></tr><tr><td>Visible Alpha / Canalyst alternatives</td><td>sell-side consensus/modeling data</td><td>模型和 KPI 数据可替代 AlphaSense/Canalyst</td></tr><tr><td>Third Bridge / GLG / Guidepoint</td><td>expert network</td><td>Tegus expert calls 的替代来源</td></tr><tr><td>PitchBook / Preqin</td><td>private markets data</td><td>PE/VC/secondaries 研究数据入口</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 AI-native 竞争者</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>定位</th><th>相对 AlphaSense 的差异</th></tr></thead><tbody><tr><td>Hebbia</td><td>Matrix institutional intelligence,金融/法律/专业服务文档 agent</td><td>更 agent-native、适合 VDR/IC memo/large document reasoning;内容库不如 AlphaSense 广</td></tr><tr><td>Rogo</td><td>投行/资管/PE 的 finance agents,Excel/PPT/deck/model workflow</td><td>更贴近 banker deliverables 和 bespoke deployment;内容规模与客户基数较小</td></tr><tr><td>Glean</td><td>enterprise context/search/agents</td><td>更横向 enterprise search,金融内容弱</td></tr><tr><td>Perplexity Enterprise</td><td>通用答案引擎/企业搜索</td><td>成本低、体验强,但 premium financial content 和内部合规较弱</td></tr><tr><td>OpenAI / Microsoft Copilot</td><td>通用模型 + Office/Teams/SharePoint 入口</td><td>分发极强,但缺 AlphaSense 的 premium content、Tegus、Canalyst、金融工作流</td></tr></tbody></table></div>
+<h3 class="subsection">8.3 护城河</h3>
+<ul><li><strong>内容库:</strong> 500M+ premium documents、Tegus expert transcripts、broker research、financial data 是普通 AI search 难以复制的内容资产。</li><li><strong>客户工作流:</strong> 已经在 7,000+ enterprise customers 中嵌入研究流程。</li><li><strong>信任与引用:</strong> 高风险决策需要 source-linked outputs,不是普通聊天答案。</li><li><strong>并购整合:</strong> Tegus、Canalyst、Carousel 让平台覆盖 expert call、模型、Excel 自动化。</li><li><strong>企业采购能力:</strong> 85%+ S&P 100 和 majority Fortune 500 渗透说明安全、合规、销售、支持能力成熟。</li></ul>
+<h3 class="subsection">8.4 最容易被攻击的点</h3>
+<ul><li>Bloomberg/FactSet/S&P 用既有合同 bundle AI 功能;</li><li>Microsoft/OpenAI 把 internal content + Office output 做成低边际成本功能;</li><li>Hebbia/Rogo 在具体投行/PE workflow 上比 AlphaSense 更快更深;</li><li>内容授权成本上升压缩毛利;</li><li>若 GenAI search 同质化,客户可能只为内容付费而非为 AI premium 付费。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Jack Kokko 是前 Wall Street analyst,这解释了 AlphaSense 从一开始就瞄准金融和商业研究的痛点:不是“网页搜索”,而是“在无数 research docs、filings、transcripts、expert calls 中找到能支持投资/战略判断的证据”。Raj Neervannan 作为 CTO 负责 AI/search 技术底座。2026 年公司公告提到新任 CFO Samantha Greenberg,她的加入强化了资本市场和 IPO 准备信号。</p>
+<p>团队背景的投资含义:</p>
+<ul><li>创始人理解专业研究 workflow,不是先有模型再找场景;</li><li>公司运营时间长,已积累 enterprise sales、内容采购、合规和客户成功能力;</li><li>CFO 与 growth investors/strategic partners 的加入,说明资本化准备逐步成熟;</li><li>收购整合能力已经被 Tegus/Carousel 等交易验证。</li></ul>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>传统终端 bundling 风险:</strong> Bloomberg、FactSet、S&P 可以把 AI 功能作为现有合同升级的一部分,降低客户切换动力。</li><li><strong>内容成本风险:</strong> broker research、expert transcripts、financial data、private data 的授权和采购成本可能上升。</li><li><strong>AI commoditization:</strong> Generative Search 如果被通用模型追平,AlphaSense 必须靠内容和 workflow 证明 premium。</li><li><strong>Agent 可靠性:</strong> SuperAnalyst 可读写 Excel/Word/PPT、执行代码、安排专家访谈,出错成本高,需要审计和 human governance。</li><li><strong>客户预算周期:</strong> 金融机构和大型企业采购周期长,宏观/市场周期会影响 seat expansion。</li><li><strong>并购整合风险:</strong> Tegus、Canalyst、Carousel 等能力若不能顺畅集成,客户体验会碎片化。</li><li><strong>估值要求:</strong> $7.5B 估值要求公司持续保持高增长并最终获得公开市场认可。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="bioptimus.html">Bioptimus</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="evolutionaryscale.html">EvolutionaryScale</a><a class="sib-chip" href="harvey.html">Harvey</a></div>
+</div>
+</body></html>

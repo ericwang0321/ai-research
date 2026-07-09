@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meshy · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 多模态与内容生成</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#fef3c7;color:#b45309">多模态与内容生成</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">美国/全球</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.meshy.ai/" target="_blank" rel="noopener">Meshy</a></h1>
+    <div class="dc-oneliner">Meshy 是 AI 3D 生成赛道里产品化和自助商业化最清晰的公司之一。它把 text/image-to-3D、AI texturing、rigging/animation、plugins、API 和 enterprise controls 打包给创作者、游戏、3D 打印、XR、电商和影视预演客户。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Meshy 是 AI 3D 生成赛道里产品化和自助商业化最清晰的公司之一。它把 text/image-to-3D、AI texturing、rigging/animation、plugins、API 和 enterprise controls 打包给创作者、游戏、3D 打印、XR、电商和影视预演客户。</strong></p>
+<p>官网披露 100M+ generated models、10M+ users、8M+ monthly visits，并称其为 a16z Games 2024 #1 3D AI Tool。投资重点是 Meshy 能否把消费和 prosumer 使用量转成稳定付费、API 和企业合同，同时补上公开融资、估值和 ARR 信息缺口。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方</th><th>说明</th><th>来源</th></tr></thead><tbody><tr><td>2023-10</td><td>Meshy-1 产品里程碑</td><td>非融资事件</td><td>非融资事件</td><td>非融资事件</td><td>官网 journey 显示 Meshy-1：一分钟内生成 3D models 的早期里程碑</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024</td><td>a16z Games 2024 #1 3D AI Tool 线索</td><td>非融资事件</td><td>非融资事件</td><td>非融资事件</td><td>官网 about 页面披露该荣誉和用户/访问量指标；不代表融资</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-07</td><td>公开融资核验</td><td>未披露</td><td>未披露</td><td>未披露</td><td>截至本次检索，未找到 Meshy 的公开融资轮次、融资金额或估值报道</td><td>待补：未找到可公开回源报道</td></tr></tbody></table></div>
+<p>融资解读：</p>
+<ul><li><strong>不能编造融资</strong>：Meshy 的产品和用量数据很强，但公开资料没有融资金额/估值，就应保留空白。</li><li><strong>可能自我造血或低调融资</strong>：10M+ users 和 8M+ monthly visits 需要大量基础设施成本，若没有公开融资，后续要从公司主体、SEC Form D、Crunchbase/CapIQ、投资方公告或招聘规模侧面核验。</li><li><strong>估值无法判断</strong>：没有 ARR、融资和估值披露时，不能按用户数直接估值。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">Meshy / MESHY LLC</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">官网 journey 显示 2023-10 起有 Meshy-1 里程碑；公司成立时间需进一步核验</td></tr><tr><td class="kv-key">总部/团队</td><td class="kv-val">官网称 rooted in Silicon Valley with a global team；招聘覆盖 Sunnyvale、Beijing、Shanghai、Shenzhen 等</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI-powered 3D content creation platform</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Text to 3D、Image to 3D、AI Texturing、AI Image Generator、Animation、3D Agent、Creative Lab、API、Blender/Unity/Unreal/Maya/3ds Max/Godot/3D printing plugins</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">Free/paid subscription + credits + API + enterprise plans + plugins / workflow integrations</td></tr><tr><td class="kv-key">官方用户/流量</td><td class="kv-val">100M+ generated models; 10M+ users; 8M+ monthly visits; SimilarWeb 口径线索</td></tr><tr><td class="kv-key">价格</td><td class="kv-val">Free $0; Pro $20/mo; Studio $60/mo; Enterprise custom pricing</td></tr><tr><td class="kv-key">企业能力</td><td class="kv-val">SOC2 Type II、ISO27001、GDPR、SAML SSO、separate enterprise database、centralized billing、dedicated support</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">未找到公开融资报道</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">未披露</td></tr><tr><td class="kv-key">资本化状态</td><td class="kv-val">私营公司，暂无 IPO filing</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://www.meshy.ai/" target="_blank" rel="noopener">https://www.meshy.ai/</a></td></tr></tbody></table></div>
+<p>Meshy 的定位非常直接：让没有 3D 建模经验的用户从 text、image、sketch 或概念开始，生成可 preview、edit、export 的 3D asset。它的目标场景覆盖 game development、3D printing、AR/VR、product design、education、film production、VFX、e-commerce 和 interior design。相比只做单点模型生成，Meshy 逐步把生成、后处理、贴图、rigging、animation、asset management、plugins、API、enterprise admin 串成一个 workflow。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 Free / Pro / Studio / Enterprise</h3>
+<p>Meshy pricing FAQ 披露四档套餐：</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Plan</th><th>价格</th><th>Credits / 权益</th><th>商业含义</th></tr></thead><tbody><tr><td>Free</td><td>$0</td><td>100 credits/month；免费输出 CC BY 4.0，需要 attribution</td><td>低门槛获客和 SEO/社区增长</td></tr><tr><td>Pro</td><td>$20/mo 或 $240 billed annually</td><td>1,000 credits/month；API access、private asset ownership、10 concurrent tasks、60% faster generation</td><td>个人创作者/开发者付费层</td></tr><tr><td>Studio</td><td>$60/mo 或 $576 billed annually</td><td>公开页面披露为更高阶付费计划，支持额外 credits 购买</td><td>小团队/高频创作者</td></tr><tr><td>Enterprise</td><td>Custom pricing</td><td>定制价格、wire transfer、企业安全/管理能力</td><td>企业客户、工作室、教育和平台客户</td></tr></tbody></table></div>
+<p>Meshy 的价格比 Tripo 的 Pro/Max 显示价更简单，核心是把用户从 Free 带到 Pro，再通过 Studio/Enterprise 提高 ARPU。AI 3D 的关键不只是生成次数，还包括私有资产、商业授权、并发、API、导出格式和企业数据保护。</p>
+<h3 class="subsection">4.2 Credits 是内部货币</h3>
+<p>Meshy pricing FAQ 明确说明 credits 是平台内部 currency/token，可用于提交 generation tasks 或给社区作品打赏。它区分 monthly credits 和 permanent credits：monthly credits 属于 subscription plan，每月重置；permanent credits 来自额外购买或奖励，不会过期。</p>
+<p>这类 credit 体系的投资含义：</p>
+<ul><li>可以限制重度用户的 GPU 成本。</li><li>可以把不同任务复杂度映射到不同 credit 消耗。</li><li>可以通过 top-up 增加收入。</li><li>但也可能因重试率、失败率、免费 credits 和 GPU 成本波动影响毛利。</li></ul>
+<h3 class="subsection">4.3 API</h3>
+<p>Meshy API 页面定位为“create 3D assets at scale”，可通过 text、image 或 custom workflows 生成 3D models。官网展示 API 客户/伙伴 logo，包括 Nexon、DNEG、Meta、Supercell、Flashforge、ELEGOO、FunPlus、Square Enix、PICO XR、Stanford、Niantic、MIT、Harvard、Google DeepMind、UC Berkeley、Microsoft、Duke、Georgia Tech、Toronto Film School、D5 Render 等。</p>
+<p>API 能力包括 text-to-3D、image-to-3D、remesh、AI texturing、rigging and animation、webhook support。页面还披露：</p>
+<ul><li>Playground 可在写代码前测试 endpoint。</li><li>Console 可监控 request volume、success rate、latency、credit usage。</li><li>Playground available on Pro, Studio, Enterprise；Console available on Studio and Enterprise。</li><li>Pro/Studio 只有 limited endpoints，Enterprise unlocks all。</li></ul>
+<p>这说明 Meshy 的 API 商业化已经比单纯 creator app 更往开发者平台靠。对投资而言，API 的收入质量取决于调用量、失败率、客户留存、endpoint mix、enterprise commitment 和 gross margin。</p>
+<h3 class="subsection">4.4 Plugins / workflow integrations</h3>
+<p>Meshy 官网披露大量插件和工作流集成：Blender、Unity、3ds Max、Maya、Godot、Unreal Engine，以及 Bambu Studio、OrcaSlicer、Creality Print、Elegoo Slicer、Ultimaker Cura、Lychee Slicer 等 3D 打印工具。这个分发策略很重要，因为 3D 用户通常不会在一个 isolated web app 完成全部工作，而是在 Blender/Unity/Unreal/打印切片软件中继续处理资产。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 Text/Image to 3D</h3>
+<p>Meshy 的基础产品是从 text 或 image 生成 3D models。官网强调 no 3D skills required、seconds/minutes 级生成和 exportable 3D assets。与 Tripo 类似，Meshy 要解决的是 3D 内容生产效率，而不是单纯视觉 demo。</p>
+<h3 class="subsection">5.2 AI Texturing / PBR maps</h3>
+<p>Meshy 支持 AI texturing，并强调 PBR maps，包括 Diffuse、Roughness、Metallic、Normal maps，可导出到 Unreal、Unity、Blender、Maya、WebGL。PBR 是企业/游戏客户非常关键的 production readiness 指标：没有标准材质贴图，生成资产很难进入真实引擎 workflow。</p>
+<h3 class="subsection">5.3 Smart Remesh / export formats</h3>
+<p>官网披露 Smart Remesh 可调 triangle/quad counts、topology type，并在 export 时从 1k 到 300k 平衡细节和性能。Meshy 支持 FBX、GLB、OBJ、STL、3MF、USDZ、BLEND 等格式。这个能力把它从“生成模型”推向“可用模型”，尤其适合游戏引擎、WebGL、3D 打印和电商展示。</p>
+<h3 class="subsection">5.4 Rigging and Animation</h3>
+<p>Meshy 支持 automatic rigging，并提供 500+ game-ready motions，覆盖 walk、jump、shooting、fight、dance 等动作。对游戏、XR 和虚拟角色来说，rigging/animation 比静态生成更有商业价值。它也增加了用户切换成本：如果资产、骨骼、动画和导出都在 Meshy workflow 内完成，客户更可能持续使用。</p>
+<h3 class="subsection">5.5 3D Agent / Creative Lab</h3>
+<p>官网导航显示 3D Agent，可从 idea、photo 或 sketch 通过 chat 生成 3D model。这个方向类似把 prompt engineering、生成、编辑、贴图、导出串成自然语言工作流。若 3D Agent 能帮助非专业用户完成多步资产制作，它会提高 Meshy 的市场上限；但也要警惕 agent 叙事泛化，最终仍看产出质量和付费留存。</p>
+<h3 class="subsection">5.6 Enterprise controls</h3>
+<p>Meshy 已公开列出 enterprise-grade controls：</p>
+<ul><li>Multi-team management。</li><li>Shared team workspace。</li><li>SOC2 Type II、ISO27001、GDPR。</li><li>SAML SSO，支持 Okta、Google Workspace、Microsoft Entra。</li><li>Separate enterprise database。</li><li>Dedicated account support。</li><li>Forever asset retention。</li><li>Centralized billing。</li></ul>
+<p>这对企业销售很重要，因为游戏工作室、教育机构、大型内容团队和平台客户不会只看生成效果，还会看身份管理、数据隔离、资产归属、审计和付款流程。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开线索</th><th>投资解读</th></tr></thead><tbody><tr><td>Generated models</td><td>100M+</td><td>用量规模很大，但需核验导出/商用比例</td></tr><tr><td>Users</td><td>10M+</td><td>消费和 prosumer 顶层漏斗有规模</td></tr><tr><td>Monthly visits</td><td>8M+ SimilarWeb 线索</td><td>SEO/工具流量强；需核验付费转化</td></tr><tr><td>Pricing</td><td>Free $0, Pro $20/mo, Studio $60/mo, Enterprise custom</td><td>自助付费清晰</td></tr><tr><td>Pro credits</td><td>1,000 credits/month</td><td>可粗略衡量用户单位消耗</td></tr><tr><td>API</td><td>Text/Image to 3D, remesh, texturing, rigging/animation, webhooks</td><td>有开发者平台路径</td></tr><tr><td>Enterprise security</td><td>SOC2 Type II, ISO27001, GDPR, SSO</td><td>企业采购准备度较高</td></tr><tr><td>收入/ARR</td><td>未披露</td><td>最大估值缺口</td></tr><tr><td>融资/估值</td><td>未找到公开报道</td><td>资本化状态不透明</td></tr></tbody></table></div>
+<p>Meshy 的公开运营指标强于大多数 AI 3D 工具，但这些仍是上层漏斗指标。最需要追踪的是：</p>
+<ul><li>Pro/Studio/Enterprise 付费账户数。</li><li>8M+ visits 到注册、生成、导出、付费的漏斗。</li><li>100M+ generated models 中有多少进入下载、插件、API、商业项目。</li><li>API 月调用量、endpoint mix 和 enterprise ARR。</li><li>Gross margin 与生成失败/重试成本。</li></ul>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Meshy 的财务逻辑可以拆成五层：</p>
+<ol><li><strong>免费流量获客</strong></li></ol>
+<p>Free plan 100 credits/月带来大规模试用，但也带来 GPU 成本。核心是免费用户是否能生成满意结果并升级。</p>
+<ol><li><strong>Pro / Studio 订阅</strong></li></ol>
+<p>Pro $20/月，Studio $60/月，带来可预测 self-serve revenue。付费层价值来自 private ownership、API access、并发、速度和额外 credits。</p>
+<ol><li><strong>Credits top-up</strong></li></ol>
+<p>如果用户在项目周期内超额消耗，可额外购买 credits，形成 usage-based upsell。</p>
+<ol><li><strong>API</strong></li></ol>
+<p>API 更接近基础设施收入，但对 latency、success rate 和 endpoint coverage 要求更高。Console 和 Playground 是提高开发者转化的关键产品。</p>
+<ol><li><strong>Enterprise</strong></li></ol>
+<p>Enterprise custom pricing 可以承接大型游戏、XR、教育和平台客户。SOC2、ISO27001、SSO、separate database 是高 ACV 的必要条件。</p>
+<p>单位经济性风险在于，3D 资产生成常需要反复试错。用户可能多次生成、重拓扑、重贴图、重 rigging 后才得到可用结果。如果 credits 定价不能覆盖真实 GPU/存储/带宽/支持成本，毛利会被侵蚀。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>定位</th><th>对 Meshy 的压力</th></tr></thead><tbody><tr><td>Tripo AI</td><td>AI 3D foundation model + Studio + API，6.5M+ creators，$150M A3</td><td>最直接的 3D generation 平台竞争</td></tr><tr><td>Luma AI</td><td>video/image/3D/world model creative agents</td><td>若 Luma 强化 3D asset generation，会侵入 Meshy 场景</td></tr><tr><td>Kaedim</td><td>游戏资产生产，偏 studio/enterprise</td><td>更贴近游戏工作室服务/生产流程</td></tr><tr><td>Tencent / NetEase / Roblox / Unity / Epic</td><td>游戏/UGC/引擎平台</td><td>分发和生态入口更强</td></tr><tr><td>Adobe / Autodesk / Blender ecosystem</td><td>传统 3D/创意软件</td><td>若内置 AI 3D，会削弱独立工具</td></tr><tr><td>Open-source 3D models</td><td>TripoSR、Trellis、Gaussian/mesh models</td><td>基础生成能力可能商品化</td></tr></tbody></table></div>
+<p>Meshy 的差异化：</p>
+<ol><li><strong>产品完整度</strong>：生成、贴图、remesh、rigging、animation、export、asset management 都有。</li><li><strong>流量强</strong>：10M+ users 和 8M+ monthly visits 是大漏斗。</li><li><strong>企业准备度</strong>：SOC2/ISO/GDPR/SSO/separate database 让它更容易卖给组织。</li><li><strong>插件和 API</strong>：不只 web app，能进入用户现有 workflow。</li><li><strong>多场景覆盖</strong>：游戏、3D printing、XR、电商、教育、VFX，而非单一 vertical。</li></ol>
+<p>脆弱点：</p>
+<ul><li>Tripo 最新融资与产业投资方可能让其训练/市场投入更激进。</li><li>AI 3D 资产质量容易被底层开源模型追平。</li><li>如果 Unity/Epic/Adobe/Autodesk 做原生集成，独立工具获客成本上升。</li><li>流量大不等于付费强，必须证明 Pro/Studio/Enterprise 转化。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Meshy about 页面称团队 rooted in Silicon Valley with a global team，成员来自 MIT、Harvard，以及 NVIDIA、Microsoft、Google 等公司。Careers 页面显示岗位分布在 Sunnyvale、Beijing、Shanghai、Shenzhen，并覆盖 engineering、research、growth、product、sales 等职能。</p>
+<p>公开招聘线索显示公司已经具备跨中美研发和商业化团队特征：</p>
+<ul><li>Sunnyvale：security、AI infrastructure、growth、sales、developer experience 等。</li><li>Beijing / Shanghai / Shenzhen：backend、product、research、data artist、3D foundation model、graphics、HPC、technical artist 等。</li></ul>
+<p>这对 AI 3D 公司很合理：模型/图形/数据/系统可以在中国团队扩张，全球产品与企业销售在美国推进。但也带来跨境合规、IP、数据和客户信任问题。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>融资/估值缺失</strong></li></ol>
+<p>没有公开融资和 ARR，无法判断资本效率与估值合理性。</p>
+<ol><li><strong>免费流量成本高</strong></li></ol>
+<p>10M+ users 和免费 credits 带来 GPU、存储、带宽和支持成本，若转化不足会消耗现金。</p>
+<ol><li><strong>3D asset 生产质量门槛高</strong></li></ol>
+<p>真实生产需要 topology、UV、PBR、rigging、animation、LOD、文件大小、打印可用性，而不仅是视觉相似。</p>
+<ol><li><strong>版权和训练数据</strong></li></ol>
+<p>3D 模型、游戏角色、IP 风格、用户上传素材都可能带来版权问题。</p>
+<ol><li><strong>大厂入口竞争</strong></li></ol>
+<p>Adobe、Autodesk、Unity、Epic、Roblox、Tencent 等有更强 workflow 入口。</p>
+<ol><li><strong>开源模型商品化</strong></li></ol>
+<p>如果基础 text/image-to-3D 能力快速开源，Meshy 必须靠 workflow、社区、插件、企业能力建立护城河。</p>
+<ol><li><strong>跨境合规和企业信任</strong></li></ol>
+<p>美国客户、教育机构和游戏公司会关心数据存储、训练使用、IP、SOC2 和跨境团队访问。</p>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="black_forest_labs.html">Black Forest Labs</a><a class="sib-chip" href="elevenlabs.html">ElevenLabs</a><a class="sib-chip" href="heygen.html">HeyGen</a><a class="sib-chip" href="kling_ai_可灵ai.html">Kling AI</a><a class="sib-chip" href="luma_ai.html">Luma AI</a><a class="sib-chip" href="midjourney.html">Midjourney</a><a class="sib-chip" href="pika.html">Pika</a><a class="sib-chip" href="tripo_ai.html">Tripo AI</a></div>
+</div>
+</body></html>

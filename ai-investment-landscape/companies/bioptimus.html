@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bioptimus · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">模型</span>
+      <span class="dc-region">法国/全球</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.bioptimus.com/" target="_blank" rel="noopener">Bioptimus</a></h1>
+    <div class="dc-oneliner">Bioptimus 是 AI biology 中商业化路径较清晰的一类公司。它不是从单个药物管线切入，而是用 H-Optimus pathology foundation model、M-Optimus multimodal biology model 和 STELA 临床多模态数据引擎服务药企、研究机构和临床转化团队。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Bioptimus 是 AI biology 中商业化路径较清晰的一类公司。它不是从单个药物管线切入，而是用 H-Optimus pathology foundation model、M-Optimus multimodal biology model 和 STELA 临床多模态数据引擎服务药企、研究机构和临床转化团队。</strong></p>
+<p>截至 2026 年 7 月 6 日，公司已有 $35M seed 与总融资 $76M 的官方新闻口径，并推出 H-Optimus-0/1/H0-mini，在 AWS Marketplace 提供 H-Optimus-1。核心数据缺口是具体药企合同金额、ARR、模型付费用量、STELA 参与机构完整名单和真实商业化节奏。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>累计融资</th><th>估值</th><th>投资方/相关方</th><th>事件类型</th><th>来源</th></tr></thead><tbody><tr><td>2024-02-20</td><td>公司 launch + seed</td><td>$35M</td><td>$35M</td><td>没有公开估值</td><td>Sofinnova Partners、Bpifrance Large Venture、Frst、Cathay Innovation、Headline、Hummingbird、NJF Capital、Owkin 等新闻口径</td><td>Seed / 公司发布</td><td><a href="https://www.bioptimus.com/news/ex-google-deepmind-and-owkin-scientists-team-up-to-create-bioptimus-to-build-the-first-universal-ai-foundation-model-for-biology" target="_blank" rel="noopener">Bioptimus</a></td></tr><tr><td>2024-07-11</td><td>H-Optimus-0 发布</td><td>-</td><td>$35M</td><td>-</td><td>-</td><td>产品/模型发布</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024-10-23</td><td>与 Proscia 合作</td><td>-</td><td>$35M</td><td>-</td><td>Proscia</td><td>科研/药物开发合作</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-01-14</td><td>Funding milestone</td><td>新增 $41M;官方口径总融资 $76M</td><td>$76M</td><td>没有公开估值</td><td>Cathay Innovation 领投;Sofinnova Partners、Bpifrance Large Venture、Andera Partners、Hitachi Ventures、Boom Capital Ventures、Sunrise 等参与</td><td>融资里程碑</td><td><a href="https://www.bioptimus.com/news/bioptimus-hits-76m-funding" target="_blank" rel="noopener">Bioptimus</a></td></tr><tr><td>2025-05-06</td><td>H-Optimus-1 on AWS Marketplace</td><td>-</td><td>$76M</td><td>-</td><td>AWS</td><td>商业部署/分销</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-06-11</td><td>获得 NVIDIA DGX Cloud Lepton compute resources</td><td>-</td><td>$76M</td><td>-</td><td>NVIDIA DGX Cloud Lepton、Sofinnova Partners</td><td>算力资源</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-03-25</td><td>STELA 发布</td><td>-</td><td>$76M+</td><td>-</td><td>10x Genomics、Broad Clinical Labs、cancer centers</td><td>数据引擎/平台合作</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2026-06-30</td><td>FFCD 合作</td><td>-</td><td>$76M+</td><td>-</td><td>FFCD</td><td>临床试验数据合作</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li>$35M seed 在欧洲 AI biology 公司中规模较大,反映基础模型和数据需求的资本强度;</li><li>2025 年 $76M total funding milestone 说明 seed 后追加资金,但官网摘要没有在列表页完全拆出轮次名称和条款;</li><li>资本用途应主要用于模型训练、数据合作、团队扩张、商业化和算力;</li><li>与 NVIDIA DGX Cloud Lepton 的算力资源虽非股权融资,但对模型训练和产品迭代很关键。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">Bioptimus</td></tr><tr><td class="kv-key">成立/公开时间</td><td class="kv-val">2024-02 公开 launch</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">法国/欧洲 AI biotech 生态,与 Owkin 等法国生命科学 AI 网络关联紧密</td></tr><tr><td class="kv-key">创始/团队来源</td><td class="kv-val">Ex-Google DeepMind、Owkin、Google Brain、Meta、MIT、ETH Zürich、Cambridge、Helmholtz 等背景</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">Building the world model of biology;从 histology、spatial transcriptomics、genomics、clinical outcomes 学习多尺度生物学</td></tr><tr><td class="kv-key">核心平台</td><td class="kv-val">H-Optimus、M-Optimus、STELA</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">Top pharma、biotech、cancer centers、clinical research networks、科研机构、数字病理/转化医学团队</td></tr><tr><td class="kv-key">官方运营信号</td><td class="kv-val">官网称 trusted by 16 of top 20 pharma companies、1,000+ institutions worldwide、100+ papers using models、1M+ downloads</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2024 seed $35M;2025 total funding milestone $76M</td></tr><tr><td class="kv-key">主要投资方口径</td><td class="kv-val">Sofinnova Partners、Bpifrance Large Venture、Frst、Cathay Innovation、Headline、Hummingbird、NJF Capital、Owkin 等新闻口径</td></tr><tr><td class="kv-key">商业入口</td><td class="kv-val">AWS SageMaker/Marketplace、Hugging Face academic license、industry license/collaboration、STELA partnerships</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://www.bioptimus.com/" target="_blank" rel="noopener">https://www.bioptimus.com/</a></td></tr></tbody></table></div>
+<p>Bioptimus 的差异化不是只做病理图像模型。H-Optimus 先以 H&E whole-slide images 建立 pathology foundation model 标准,M-Optimus 则试图把 tissue、molecular、clinical data 放到统一 embedding space 中,STELA 负责生成和汇聚多机构、临床 linked、spatial biology/molecular/pathology 数据。这是典型的“模型 + 数据引擎 + 药企转化合作”三位一体结构。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 H-Optimus license 与部署</h3>
+<p>H-Optimus 的商业化路径较清楚:</p>
+<ul><li><strong>Academic license</strong>:H-Optimus-0 以 Apache 2.0 开源;H-Optimus-1 和 H0-mini 面向学术研究为 CC-BY-NC-ND 4.0,商业用途需要单独 license;</li><li><strong>AWS SageMaker / Marketplace</strong>:H-Optimus-1 可通过 AWS 部署,客户在自有安全云环境中 evaluate、fine-tune、deploy;</li><li><strong>Industry license</strong>:面向 pharma/clinical partners,用于 biomarker development、patient stratification、translational research;</li><li><strong>Collaboration</strong>:与药企或 cancer center 共同开发下游模型、biomarker signatures、trial enrichment 方法。</li></ul>
+<p>这意味着 Bioptimus 不一定靠公开 API token 收费,更可能通过年度 license、secure deployment、project collaboration、数据/模型共建和里程碑式成功费用变现。</p>
+<h3 class="subsection">4.2 M-Optimus 商业化</h3>
+<p>M-Optimus 是更高层的 multimodal/multiscale model,目标是从 H&E、routine sequencing、spatial transcriptomics 和 clinical outcomes 中学习 unified patient representation。官网强调它可以:</p>
+<ul><li>predict gene expression;</li><li>predict patient stratification and outcomes;</li><li>predict drug targets;</li><li>support in-silico trial design;</li><li>identify biomarkers earlier;</li><li>prioritize indications and combinations。</li></ul>
+<p>收费逻辑可能包括:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/合作</th><th>可能收费</th><th>关键客户</th><th>成功指标</th></tr></thead><tbody><tr><td>M-Optimus access</td><td>annual platform license</td><td>药企 translational medicine / biomarker team</td><td>数据集数量、模型调用、续约</td></tr><tr><td>Trial enrichment project</td><td>research fee + milestone</td><td>临床开发团队</td><td>ORR/PFS 预测提升、入组效率、trial success probability</td></tr><tr><td>Biomarker discovery</td><td>project fee + downstream milestones</td><td>oncology/ADC/immunotherapy company</td><td>candidate biomarker validation</td></tr><tr><td>Synthetic control / in-silico readout</td><td>project fee</td><td>clinical development</td><td>与真实 cohort outcome 一致性</td></tr><tr><td>Private model deployment</td><td>enterprise license + cloud cost</td><td>Top pharma / hospital network</td><td>合规部署、数据不出域</td></tr></tbody></table></div>
+<h3 class="subsection">4.3 STELA 数据引擎与合作模式</h3>
+<p>STELA 是 Bioptimus 的长期护城河。官网将其描述为跨机构、跨疾病、跨地理的 multimodal patient resource,从 tissue architecture、spatial biology、molecular assays、clinical outcomes 中生成数据,用于训练 M-Optimus。合作机构贡献患者样本、组织、临床记录或既有数据;Bioptimus 提供 spatial omics profiling、M-Optimus models 和论文/科研合作。</p>
+<p>STELA 的经济逻辑不是简单买数据,而是“共同生成数据 → 模型提升 → 合作方获得分析能力 → 药企/临床开发获得更高质量 biomarker/trial insight”。如果能实现,它会形成数据网络效应。</p>
+<h3 class="subsection">4.4 不能直接写药品收入</h3>
+<p>Bioptimus 不是传统 biotech pipeline 公司。公开资料没有显示它拥有临床药物资产、IND、临床试验或药品 royalty。它更像平台公司,收入来自 software/license/collaboration。写作上应避免把 “drug discovery & translational research” 误写成“已有药品销售”。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 H-Optimus</h3>
+<p>H-Optimus 是 Bioptimus 的病理 foundation model family。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>参数/训练数据</th><th>License/入口</th><th>说明</th></tr></thead><tbody><tr><td>H-Optimus-0</td><td>1.1B parameters,官网称训练于 500,000+ histology slides,4,000+ clinical centers</td><td>Apache 2.0 / Hugging Face / GitHub</td><td>初代开放模型,建立 adoption</td></tr><tr><td>H-Optimus-1</td><td>1.1B parameters,官网称训练于 1M+ H&E slides,800,000+ patients,50 organs,3 scanner types,4,000+ clinical centers</td><td>CC-BY-NC-ND academic;商业需单独 license;AWS 可部署</td><td>当前旗舰病理模型</td></tr><tr><td>H0-mini</td><td>从 H-Optimus-0 distilled,参数显著更小</td><td>CC-BY-NC-ND academic</td><td>降低 inference cost,更易部署</td></tr></tbody></table></div>
+<p>H-Optimus 不直接给出诊断结论,而是作为 embedding backbone:把 whole-slide image 切成 224x224 tiles,经 ViT encoder 形成 embeddings,下游再训练 MIL heads 或 specialized heads 做 biomarker prediction、grading/prognosis、gene expression estimation、tissue/cell segmentation、treatment response 等任务。</p>
+<h3 class="subsection">5.2 H-Optimus benchmark</h3>
+<p>官网称 H-Optimus-1 在 PathBench 229 tasks 上总体排名第一,并列出 H-Optimus-1、Virchow2、H-Optimus-0、UNI2、mSTAR 等比较。官网和独立文献还提到:</p>
+<ul><li>H-Optimus-1 在 biomarker prediction、spatial gene expression、survival prediction 等下游任务表现强;</li><li>2026 年 breast cancer survival benchmark 提到 H-Optimus-1 在多 cohort survival prediction 中表现最佳;</li><li>Phikon-v2 论文将 H-Optimus-0 与 GigaPath 等列为高性能 pathology foundation models。</li></ul>
+<p>投资解读:benchmark 是 adoption 的基础,但 clinical deployment 仍需要外部验证、local scanner/stain validation、prospective study 和 regulatory pathway。</p>
+<h3 class="subsection">5.3 M-Optimus</h3>
+<p>M-Optimus 是 Bioptimus 从 pathology 扩展到 multimodal biology 的关键。它不是只看 H&E slides,而是整合:</p>
+<ul><li>histology images;</li><li>spatial transcriptomics;</li><li>genomics / sequencing;</li><li>clinical records;</li><li>clinical outcomes。</li></ul>
+<p>官网称其可预测 gene expression、patient stratification/outcomes、drug targets,并用于 in-silico trial arms。商业价值在于把已有 archival H&E slides 和临床记录变成可挖掘的生物学信号,帮助药企在早期就识别患者子群和适应症扩展机会。</p>
+<h3 class="subsection">5.4 STELA</h3>
+<p>STELA 全称 Spatial Tissue Embedding Learning Atlas,目标是构建最大规模 clinical linked spatial biology atlas。2026-03 公告称 STELA 计划 profile up to 100,000 patient specimens,规模约为当时世界可用数据的 20x increase。合作方包括:</p>
+<ul><li>10x Genomics:founding spatial transcriptomics platform partner,使用 Xenium in situ 技术;</li><li>Broad Clinical Labs:single-cell 和 spatial multi-omics 数据生成能力;</li><li>leading cancer centers:美国、欧洲、亚洲 prospective cohorts,部分名称需 NDA;</li><li>FFCD:2026-06 合作,接入 3,000+ gastrointestinal cancer patients clinical trial data。</li></ul>
+<h3 class="subsection">5.5 实验验证与临床验证边界</h3>
+<p>Bioptimus 目前的验证更多是 retrospective cohort、benchmark、case study 和研究合作,而不是监管批准诊断。官网 FAQ 明确提示 H-Optimus 适合 clinical development/translational exploratory research,但不是已获 FDA/EMA clearance 的 regulated diagnostic 或 companion diagnostic。用于病人层面决策时仍需要 external validation、pre-specified endpoints、prospective bridge studies 和 confirmatory molecular assays。</p>
+<p>这点非常重要:商业化可以发生在药企研发和临床试验设计中,但不能把它写成已可直接替代病理医生或伴随诊断。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>当前可回源事实</th><th>解读</th></tr></thead><tbody><tr><td>总融资</td><td>官方新闻称 2025-01 达到 $76M funding milestone</td><td>早期资金规模足以支持模型和数据引擎建设</td></tr><tr><td>Seed</td><td>2024-02 新闻口径 $35M</td><td>欧洲 AI biology 大额 seed</td></tr><tr><td>Top pharma 覆盖</td><td>官网称 trusted by 16 of top 20 pharma companies</td><td>强商业信号,但未列完整客户和合同金额</td></tr><tr><td>机构覆盖</td><td>官网称 1,000+ institutions worldwide</td><td>主要反映模型 adoption/研究使用</td></tr><tr><td>Papers</td><td>官网称 100+ papers published using models</td><td>学术传播强</td></tr><tr><td>Downloads</td><td>官网称 total model downloads 超 1M</td><td>H-Optimus adoption 强,但下载不等于收入</td></tr><tr><td>H-Optimus 数据规模</td><td>H-Optimus-1 1M+ slides,800k+ patients,50 organs,4,000+ centers</td><td>数据规模是模型性能和泛化基础</td></tr><tr><td>STELA 目标</td><td>up to 100,000 patient specimens;FFCD 3,000+ GI cancer patients</td><td>数据网络效应和 M-Optimus 训练基础</td></tr><tr><td>商业部署</td><td>AWS Marketplace/SageMaker access</td><td>说明已有企业部署路径</td></tr></tbody></table></div>
+<p>需要注意,“16 of top 20 pharma companies”是官网信号,但它可能包括试用、研究使用、下载、合作讨论或正式付费 license,当前无法拆分。投资模型不能把它直接等同于 16 个付费大客户。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 License / deployment economics</h3>
+<p>H-Optimus 和 M-Optimus 的商业毛利取决于部署方式:</p>
+<ul><li>AWS/SageMaker:客户承担云资源,Bioptimus 收 license/usage/revenue share,毛利可能较高;</li><li>private enterprise deployment:收入较高,但需要 support、security、validation、integration;</li><li>academic license:收入低或免费,但提升引用和 adoption;</li><li>commercial license:取决于用途、机构规模和是否包括下游模型开发。</li></ul>
+<h3 class="subsection">7.2 Pharma project economics</h3>
+<p>药企合作可能按以下结构:</p>
+<p>project fee + data processing fee + model license + biomarker/trial milestone + optional success fee</p>
+<p>关键不是“每张 slide 收多少钱”,而是能否帮助药企:</p>
+<ul><li>更早发现 biomarker;</li><li>提高 trial enrichment;</li><li>降低 Phase II/III 失败率;</li><li>找到 indication expansion;</li><li>用 archival slides 生成新 biological readouts。</li></ul>
+<p>如果 M-Optimus 能提高临床开发成功概率,客户愿意支付的金额会远高于普通 pathology AI software。</p>
+<h3 class="subsection">7.3 STELA 数据网络经济性</h3>
+<p>STELA 的成本包括:</p>
+<ul><li>specimen profiling;</li><li>spatial omics / genomics / imaging 数据生成;</li><li>数据标准化和合规;</li><li>多机构协议和伦理审批;</li><li>模型训练与验证。</li></ul>
+<p>收益来自:</p>
+<ul><li>数据越多,模型越强;</li><li>合作机构获得模型和分析能力;</li><li>药企获得更强 biomarkers/trial design;</li><li>Bioptimus 获得差异化 proprietary/collaborative data moat。</li></ul>
+<h3 class="subsection">7.4 推理成本</h3>
+<p>H-Optimus-1 是 1.1B parameter ViT-g/14 pathology encoder,处理 whole-slide images 需要大量 tile extraction 和 embedding。H0-mini 的战略价值是降低 feature extraction 成本,让更多临床/研究场景可部署。未来商业化中,模型大小、slide volume、batch processing 和云部署效率会直接影响 gross margin。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 Pathology foundation model 竞争</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>来源/定位</th><th>Bioptimus 差异</th></tr></thead><tbody><tr><td>Paige Virchow / Virchow2</td><td>大规模 pathology foundation model</td><td>Bioptimus 用 H-Optimus benchmark 和 STELA/M-Optimus 扩展多模态</td></tr><tr><td>Microsoft/Providence GigaPath</td><td>大规模 whole-slide foundation model</td><td>GigaPath 有 Microsoft 生态;Bioptimus 更偏 pharma translational biology</td></tr><tr><td>Mahmood Lab UNI / UNI2</td><td>学术强模型</td><td>UNI 学术影响强;Bioptimus 商业 license 和 STELA 更明确</td></tr><tr><td>Owkin Phikon / Phikon-v2</td><td>Owkin 生态 pathology models</td><td>Bioptimus 与 Owkin 生态相关,但定位为更通用 world model</td></tr><tr><td>PathAI / Paige / Proscia</td><td>数字病理商业平台</td><td>它们偏 workflow/diagnostic;Bioptimus 偏 foundation model + drug development</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 AI biology / drug discovery 竞争</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司</th><th>定位</th><th>Bioptimus 相对位置</th></tr></thead><tbody><tr><td>EvolutionaryScale</td><td>protein foundation model</td><td>Bioptimus 从 patient/tissue/multimodal clinical data 切入</td></tr><tr><td>Isomorphic Labs</td><td>AI drug design</td><td>Isomorphic 更接近药物发现 pipeline;Bioptimus 更像 translational/model platform</td></tr><tr><td>Generate:Biomedicines</td><td>protein therapeutics</td><td>Generate 直接做 protein assets;Bioptimus 强在 pathology/biomarker/trial design</td></tr><tr><td>Tempus / Foundation Medicine</td><td>clinical/genomic data + oncology insights</td><td>Bioptimus 需要证明模型能从 histology/spatial data 提供差异化</td></tr><tr><td>Owkin</td><td>AI drug discovery + federated learning + diagnostics</td><td>Owkin 是生态友军/关联方,也可能在客户预算上部分重叠</td></tr></tbody></table></div>
+<h3 class="subsection">8.3 护城河</h3>
+<ul><li><strong>数据规模</strong>:H-Optimus-1 训练数据覆盖 1M+ slides、800k+ patients、50 organs、4,000+ centers;</li><li><strong>STELA 数据引擎</strong>:100,000 specimens 目标和多机构 clinical-linked atlas;</li><li><strong>商业部署入口</strong>:AWS Marketplace 和 industry license;</li><li><strong>学术 adoption</strong>:100+ papers、1M+ downloads;</li><li><strong>药企信任</strong>:官网称 16/20 top pharma 使用或信任;</li><li><strong>多模态路线</strong>:从 H&E 扩展到 spatial transcriptomics、genomics、clinical outcomes。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Bioptimus 团队强调 ML 和 biology 双能力。官网称团队来自 Google Brain、Google DeepMind、Meta、Owkin、MIT、ETH Zürich、Cambridge、Helmholtz 等,60% 团队成员拥有 PhD。公司还在 2025 年强化商业和科学 leadership:</p>
+<ul><li>2025-07 任命 Julie Gerardi 为 Chief Commercial Officer,强化 biotech commercialization 和 pharma partnership;</li><li>2025-08 增加 Ketan Patel 与 Tokuwa Kanno 等 commercial/scientific leadership;</li><li>2025-09 组建 scientific advisory board,八位国际专家支持 biology foundation model 方向;</li><li>Mathilda Strom 于 2024 年加入为 founding COO,负责组织扩张。</li></ul>
+<p>团队结构上,Bioptimus 相比纯模型公司更接近 pharma-facing AI company:除了 ML 研究,还需要 clinical operations、pathology、spatial biology、business development、regulatory validation 和 cloud deployment。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>官网 adoption 指标与收入之间的差距</strong>:downloads、papers、institutions 不等于付费合同。</li><li><strong>临床验证风险</strong>:retrospective benchmark 强,但 prospective clinical utility 需要长期验证。</li><li><strong>监管风险</strong>:H-Optimus 不是已获批诊断或 CDx,若用于病人决策需要额外验证。</li><li><strong>数据合规风险</strong>:STELA 跨国家/机构/临床数据,涉及隐私、同意、伦理审批和数据权属。</li><li><strong>模型泛化风险</strong>:scanner、staining、population、disease mix 变化可能影响表现。</li><li><strong>竞争风险</strong>:Virchow、GigaPath、UNI、Phikon、PathAI、Paige 等均在 pathology AI 领域强势。</li><li><strong>商业周期长</strong>:药企和临床研究网络采购、验证、合规周期较长。</li><li><strong>成本风险</strong>:spatial omics 和 multimodal profiling 成本高,STELA 需要持续资本。</li><li><strong>IP / license 复杂性</strong>:academic license、commercial license、AWS deployment、partner data 权利需要清晰。</li><li><strong>临床责任边界</strong>:模型作为 research/development backbone 与实际诊断责任必须清楚区分。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="evolutionaryscale.html">EvolutionaryScale</a><a class="sib-chip" href="harvey.html">Harvey</a></div>
+</div>
+</body></html>

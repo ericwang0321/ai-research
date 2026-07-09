@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StackBlitz / Bolt.new · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 开发工具与 Agent 平台</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eff6ff;color:#1d4ed8">开发工具与 Agent 平台</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://bolt.new/" target="_blank" rel="noopener">StackBlitz / Bolt.new</a></h1>
+    <div class="dc-oneliner">Bolt.new 是 AI app generation 赛道里最依赖浏览器运行时技术壁垒的公司之一。它背后的 StackBlitz 不是 2024 年才出现的 AI wrapper，而是 2017 年开始做 browser IDE、2021 年推出 WebContainers 的开发者工具公司。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Bolt.new 是 AI app generation 赛道里最依赖浏览器运行时技术壁垒的公司之一。它背后的 StackBlitz 不是 2024 年才出现的 AI wrapper，而是 2017 年开始做 browser IDE、2021 年推出 WebContainers 的开发者工具公司。</strong></p>
+<p>Bolt.new 在 2024 年把 Claude/Sonnet 级代码能力放到 StackBlitz 的浏览器运行环境上，让用户用自然语言生成、运行、预览和发布应用。公开报道显示 Bolt 上线第一周约新增 $1M ARR，2024 年底约 $20M ARR，2025 年继续增长。投资关键是 Bolt 能否把 viral app builder 需求转成企业设计系统、developer education 和 internal platform teams 的长期合同。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>事件/轮次</th><th>金额</th><th>估值</th><th>投资方/相关方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2017</td><td>StackBlitz public launch</td><td>-</td><td>-</td><td>Eric Simons、Albert Pai</td><td>在线 IDE / Angular/React projects</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2021-05</td><td>WebContainers 发布</td><td>-</td><td>-</td><td>-</td><td>技术底座形成</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2022-04</td><td>Seed/early round</td><td>$7.9M</td><td>未形成稳定公开估值</td><td>Greylock 等媒体线索</td><td>browser IDE 扩张</td><td><a href="https://techcrunch.com/2022/04/06/stackblitz-raises-7-9m-to-bring-a-better-ide-to-your-browser/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2024-10</td><td>Bolt.new launch</td><td>-</td><td>-</td><td>-</td><td>Anthropic Sonnet 3.5 coding ability + WebContainers</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2024-11</td><td>Investor update</td><td>-</td><td>-</td><td>-</td><td>$0 到 $4M ARR/30 days</td><td><a href="https://techcrunch.com/2022/04/06/stackblitz-raises-7-9m-to-bring-a-better-ide-to-your-browser/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2025-01</td><td>Bloomberg 融资洽谈</td><td>$83.5M 线索</td><td>~$700M</td><td>投资人未完整公开</td><td>用于 Bolt growth</td><td><a href="https://www.bloomberg.com/news/articles/2025-01-17/ai-coding-startup-stackblitz-in-talks-to-raise-funds-at-700-million-value" target="_blank" rel="noopener">Bloomberg</a></td></tr><tr><td>2025-05</td><td>BI deep dive</td><td>-</td><td>~$700M 线索</td><td>-</td><td>ARR $40M、5M users、profitable 口径</td><td><a href="https://www.bloomberg.com/news/articles/2025-01-17/ai-coding-startup-stackblitz-in-talks-to-raise-funds-at-700-million-value" target="_blank" rel="noopener">Bloomberg</a></td></tr><tr><td>2025-08</td><td>Bolt platform expansion</td><td>-</td><td>-</td><td>Netlify/Supabase/Stripe 等合作线索</td><td>从 build 走向 host/operate</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr></tbody></table></div>
+<p>融资观察:</p>
+<ul><li>StackBlitz 的资本故事从“browser IDE infra”转为“AI app builder growth”。</li><li>$700M 估值相对 Lovable/Replit 较低，可能反映收入规模较小、赛道竞争激烈，也可能提供更低 entry valuation。</li><li>最大融资风险是公开融资信息较少，需从 cap table、preferred terms、secondary、ARR 现值进一步核验。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">StackBlitz, Inc.</td></tr><tr><td class="kv-key">产品品牌</td><td class="kv-val">StackBlitz、WebContainers、Bolt.new</td></tr><tr><td class="kv-key">成立</td><td class="kv-val">2017 年 StackBlitz 公开推出；Bolt.new 于 2024 年 10 月推出</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Francisco, California</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Eric Simons、Albert Pai</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">StackBlitz online IDE、WebContainers、Codeflow、Enterprise Server、Bolt.new、Bolt Cloud、Teams/Enterprise</td></tr><tr><td class="kv-key">目标用户</td><td class="kv-val">non-technical software composers、founders、PM、marketers、agencies、web developers、enterprise design system teams</td></tr><tr><td class="kv-key">收费方式</td><td class="kv-val">Free token allowance、Pro subscription + monthly tokens、Teams per-member subscription、Enterprise custom；tokens 与 hosting/request/database limits 共同约束成本</td></tr><tr><td class="kv-key">最新收入线索</td><td class="kv-val">2025-03 Bolt ARR 约 $40M；2025 年公司称下一个披露目标是 >$100M ARR</td></tr><tr><td class="kv-key">最新估值线索</td><td class="kv-val">2025 年融资洽谈估值约 $700M 媒体线索</td></tr><tr><td class="kv-key">上市状态</td><td class="kv-val">私人公司，无公开 IPO 文件</td></tr></tbody></table></div>
+<p>StackBlitz 的历史对 Bolt 很重要。很多 AI app builder 的技术核心是“把 prompt 发给 frontier model，再把生成代码部署到云端”。StackBlitz 的差异是 WebContainers: 让 Node.js 等开发运行时在浏览器 sandbox 内运行，用户可以在本机浏览器里安装依赖、运行 dev server、预览应用，而不必每次都在远程云环境启动项目。Eric Simons 在 BI 采访中也强调，外界以为 Bolt 是突然冒出来的 AI startup，但实际上是“七年磨一剑”的 developer infra 公司。</p>
+<p>因此，Bolt 的投资叙事有两层。第一层是 AI app builder: 用自然语言生成 websites、web apps、mobile-ish experiences、登录、支付、数据库、SEO、hosting。第二层是 developer platform: WebContainers、StackBlitz Teams、Enterprise Server、private NPM registry、design systems、interactive docs、bug repros、PR review environments。若两层能结合，Bolt 既能服务非技术 builders，又能进入企业 developer workflow。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 Bolt 官方 pricing</h3>
+<p>Bolt.new 2026 年公开 pricing 显示:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>计划</th><th>标价/口径</th><th>主要权益</th><th>收入逻辑</th></tr></thead><tbody><tr><td>Free</td><td>$0</td><td>public/private projects、300K daily token limit、1M monthly tokens、Bolt branding、10MB upload、website hosting、up to 333K web requests、unlimited databases</td><td>获客和低成本试用</td></tr><tr><td>Pro</td><td>$25/月</td><td>no daily token limit、从 10M tokens/month 起、branding removal、private sharing、100MB upload、hosting、up to 1M web requests、token rollover、custom domains、SEO、expanded DB、database provider choice、AI image editing</td><td>个人/小团队主力收入</td></tr><tr><td>Teams</td><td>$30/member/月</td><td>Pro 全部权益 + centralized billing、team access management、admin controls、user provisioning、org sharing、private NPM registries、design system knowledge/per-package prompts</td><td>团队 seat + usage</td></tr><tr><td>Enterprise</td><td>Custom</td><td>advanced security、SSO/audit/compliance support、custom workflows/integrations/SLAs、large-team scalability、flexible procurement、data governance、hands-on onboarding</td><td>高 ACV 与 enterprise procurement</td></tr></tbody></table></div>
+<p>Bolt 的核心计量单位是 tokens，而不是 Lovable 的 credits 或 Replit 的 monthly credits。官方 FAQ 解释，Bolt 的 token usage 很大部分来自“同步项目文件系统到 AI”: 项目越大，每条消息需要带给模型的上下文越多，token 使用越高。这是 AI app builder 单位经济性的核心矛盾: 用户认为自己只是发一句话，供应商实际要把越来越大的 codebase context、dependencies、errors、files、design state 和运行结果喂给模型。</p>
+<h3 class="subsection">4.2 2024-2025 价格策略转折</h3>
+<p>BI 报道称 Bolt 刚推出时，主计划一开始约 $9/月；由于用户需求和 token 使用远超预期，StackBlitz 很快把主计划涨到 $20/月，并增加 $50、$100、$200 tiers。几周后，接近一半付费用户选择更贵计划。2025 年 8 月，Bolt 进一步把 entry paid tier 从 $20 调整到 $25，同时把 hosting、domain、database、serverless functions、auth、SEO、Stripe-powered payments、analytics 等纳入更完整的 end-to-end platform。</p>
+<p>这反映 Bolt 的商业化判断: 只卖“AI inference wrapper”会被 churn 和成本吞噬，必须把 build 后的 hosting、database、payments、analytics、SEO、domain 和 enterprise workflows 绑定进来，形成持续使用场景。</p>
+<h3 class="subsection">4.3 StackBlitz 企业收入</h3>
+<p>StackBlitz 传统企业产品仍有价值:</p>
+<ul><li>Enterprise Server 可在企业防火墙后、Kubernetes、air-gapped 或 SSO 环境中运行。</li><li>StackBlitz Enterprise 支持 private NPM registry、JFrog Artifactory、Sonatype Nexus 等。</li><li>典型 use cases 包括 interactive docs、design system adoption、bug reproductions、PR review environments。</li><li>官网列出 Meta、Shopify、Cloudflare、Mozilla、Google、Salesforce、Intel、Stripe 等客户/使用方 logo。</li></ul>
+<p>如果 Bolt 只能靠 prosumer tokens，它更像高增长 AI consumer SaaS；如果能把 WebContainers + Bolt + StackBlitz Enterprise 组合卖给企业设计系统、developer education、internal platform teams，它的收入质量会更好。</p>
+<h3 class="subsection">4.4 成本结构</h3>
+<p>Bolt 的成本包含:</p>
+<ol><li><strong>LLM token cost</strong>: prompt、large project context、code generation、error repair、image editing。</li><li><strong>Context sync cost</strong>: 项目文件系统越大，每轮消息越贵。</li><li><strong>Browser runtime advantage</strong>: WebContainers 在用户浏览器/设备中运行部分开发环境，有潜力减少远程云 sandbox 成本。</li><li><strong>Hosting/runtime cost</strong>: Bolt Cloud 的 web requests、databases、custom domains、serverless/auth/analytics。</li><li><strong>Support/education cost</strong>: 非技术 “software composers” 需要教学、模板、live sessions。</li><li><strong>Enterprise support</strong>: security、SSO、private registries、SLAs、custom workflows。</li></ol>
+<p>WebContainers 的经济意义在于它可能把部分 compute 从供应商云端转移到用户本地浏览器，降低 cloud workspace COGS，同时让 app preview 速度更快。不过 LLM context/token 成本仍由 Bolt 承担或通过 tokens 计价转嫁给用户。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 产品矩阵</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品</th><th>功能</th><th>商业意义</th></tr></thead><tbody><tr><td>Bolt.new</td><td>用户用自然语言生成 app/website，浏览器内运行、预览和迭代</td><td>AI app builder 核心</td></tr><tr><td>Bolt Cloud</td><td>hosting、database、auth、SEO、analytics、custom domains、payments</td><td>提高留存，降低一次性 prototype churn</td></tr><tr><td>WebContainers</td><td>浏览器内运行 Node.js/server-side runtime</td><td>StackBlitz 技术壁垒和成本/体验优势</td></tr><tr><td>StackBlitz IDE</td><td>在线开发环境，支持 frontend/Node/Python/PHP 等项目</td><td>developer base</td></tr><tr><td>Codeflow</td><td>一键打开 repo/issue/PR 的浏览器 IDE</td><td>professional developer workflow</td></tr><tr><td>StackBlitz Teams</td><td>GitHub org/private repo collaboration</td><td>团队协作</td></tr><tr><td>Enterprise Server</td><td>behind firewall / Kubernetes / air-gapped / SSO</td><td>企业部署</td></tr><tr><td>Design systems in Bolt</td><td>企业 design system、per-package prompts</td><td>进入 product/design org</td></tr><tr><td>Private NPM registries</td><td>团队/企业包管理</td><td>enterprise readiness</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 WebContainers: 技术护城河</h3>
+<p>StackBlitz 2021 年推出 WebContainers，核心是把 Node.js runtime 带到浏览器 sandbox 中，使 server-side environments 可以完全在浏览器中运行。公开资料称其可在不到一秒内启动开发环境，并因运行在 browser sandbox 中具有安全与可分享优势。对 Bolt 来说，这意味着:</p>
+<ul><li>用户生成 app 后可立即运行和预览；</li><li>不必为每个项目都启动昂贵远程 VM；</li><li>分享项目/bug repro 更轻；</li><li>教育、文档、设计系统 demo 可以嵌入网页；</li><li>与 traditional browser IDE/StackBlitz enterprise 产品形成连续性。</li></ul>
+<p>这与 Lovable/Replit 的差异在于，Lovable 更像“AI software engineer + Cloud”，Replit 更像“browser IDE + hosted cloud workspace”，Bolt 更强调“browser-native runtime + token-metered AI generation”。</p>
+<h3 class="subsection">5.3 Bolt product evolution</h3>
+<p>2024 年 10 月 Bolt.new 上线时，核心 proposition 是一个 prompt box: 用户输入想 build 的产品，Bolt 调用 Anthropic 模型写代码，并在 WebContainers 中运行。2025 年后，Bolt 的产品从“build”走向“build without boundaries”:</p>
+<ul><li>hosting、domain、databases；</li><li>serverless functions、authentication；</li><li>SEO tools；</li><li>Stripe-powered payments；</li><li>analytics；</li><li>Supabase/Netlify 等合作；</li><li>design system knowledge；</li><li>private NPM registries；</li><li>Teams/Enterprise。</li></ul>
+<p>这条路线说明 StackBlitz 意识到 AI code generation 本身会 commoditize，长期差异在于用户是否能持续 build、ship、operate。</p>
+<h3 class="subsection">5.4 产品效果和 benchmark 口径</h3>
+<p>Bolt 官网在 2026 年强调:</p>
+<ul><li>“#1 professional vibe coding tool”；</li><li>automatic model routing balancing quality and cost；</li><li>Bolt Agent Standard / Max；</li><li>98% less errors 的 marketing claim；</li><li>projects 1,000x larger than before 的 context management claim；</li><li>Bolt Cloud 提供 hosting、databases、integrations 等 backend infrastructure。</li></ul>
+<p>这些 claim 需要尽调复验。尤其是“98% less errors”和“1,000x larger”属于公司营销口径，需要看原始基准、样本、定义和对照组。更可靠的外部指标仍是 ARR ramp、paid conversion、user retention 和 enterprise adoption。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数值/口径</th><th>来源与解读</th></tr></thead><tbody><tr><td>Bolt launch</td><td>2024-10-03 上线</td><td>BI 访谈</td></tr><tr><td>首周 ARR</td><td>约新增 $1M ARR；第二周、第三周继续各新增约 $1M ARR</td><td>BI 引用 Eric Simons</td></tr><tr><td>30 天 ARR</td><td>从约 $80K 到 >$4M ARR</td><td>BI 引用 investor update</td></tr><tr><td>活跃付费客户</td><td>上线初期从约 600 增至 14,000+</td><td>BI 引用 investor update</td></tr><tr><td>2024-12 ARR</td><td>约 $20M ARR</td><td>No Priors/BI 口径</td></tr><tr><td>2025-03 ARR</td><td>约 $40M ARR</td><td>BI 口径</td></tr><tr><td>2025-05 users</td><td>约 5M registered users / software composers</td><td>BI 口径</td></tr><tr><td>盈利状态</td><td>2025 年 BI 称 StackBlitz profitable, growing, healthy</td><td>需核验口径</td></tr><tr><td>估值线索</td><td>2025 年洽谈 $83.5M 融资 at ~$700M valuation</td><td>Bloomberg/BI</td></tr><tr><td>Free plan</td><td>300K daily token limit、1M monthly tokens、hosting、333K web requests</td><td>官方 pricing</td></tr><tr><td>Pro</td><td>$25/月、10M tokens/month 起、1M web requests、custom domains/SEO/database</td><td>官方 pricing</td></tr><tr><td>Teams</td><td>$30/member/月</td><td>官方 pricing</td></tr><tr><td>Enterprise</td><td>custom</td><td>官方 pricing</td></tr></tbody></table></div>
+<p>Bolt 的商业化曲线非常陡，但绝对收入规模截至 2025 年公开口径仍低于 Lovable/Replit。它的估值约 $700M 若按 $40M ARR 看约 17.5x ARR；如果已经接近或超过 $100M ARR，倍数会显著下降，但截至 2026 年 7 月 6 日 未找到公司正式披露的 $100M+ ARR 数字。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 收入端</h3>
+<p>Bolt 收入端主要由 tokens 和 workspace seats 组成:</p>
+<ul><li>Free 用户提供 viral funnel。</li><li>Pro $25/月提供 10M tokens 起的基本付费。</li><li>Higher usage tiers/历史 $50/$100/$200 tiers 说明 heavy users 愿意为 token allowance 付费。</li><li>Teams $30/member/月提高团队协作 ARPU。</li><li>Enterprise custom 提供安全、合规、SLAs、private registries、design system support。</li><li>Bolt Cloud hosting/requests/database/custom domains 可能带来续费和 usage-based expansion。</li></ul>
+<h3 class="subsection">7.2 成本端</h3>
+<p>成本端的关键不是“用户数”，而是每个付费用户平均消耗多少 tokens 和 runtime:</p>
+<ul><li>大项目每轮消息需同步更多 files/context；</li><li>复杂 app 需要更多 repair loops；</li><li>图片、design、AI editing 增加模型成本；</li><li>hosting/database/web requests 增加 cloud COGS；</li><li>非技术用户需要更多 support 和教育；</li><li>enterprise 需要 implementation/support/SLAs。</li></ul>
+<h3 class="subsection">7.3 WebContainers 对毛利的影响</h3>
+<p>WebContainers 有机会降低部分 runtime COGS，因为开发环境运行在浏览器中，而不是所有项目都在 StackBlitz 云端启动 remote VM。它也提高速度和用户体验，可能改善 conversion/retention。但它不能消除 LLM token 成本，尤其是项目上下文越来越大时，模型费用仍可能成为主要 COGS。</p>
+<h3 class="subsection">7.4 Churn 与 platform expansion</h3>
+<p>2025 年 BI 报道提到 AI coding services 面临 churn 20%-40% 的行业压力。Bolt 的应对是把产品从 “generate code” 扩成 “build + host + domain + database + auth + SEO + payments + analytics”。如果用户的业务 app 真的运行在 Bolt Cloud 上，churn 会下降；如果用户只是生成代码后导出或丢弃项目，Bolt 仍是高 churn inference business。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 直接竞品</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞品</th><th>定位</th><th>与 Bolt 的关系</th></tr></thead><tbody><tr><td>Lovable</td><td>AI app builder / build economy</td><td>增长和品牌更强，企业 governance 加速</td></tr><tr><td>Replit</td><td>browser IDE + Agent + deployment</td><td>run/deploy/database/enterprise 闭环强，用户基础大</td></tr><tr><td>Emergent</td><td>AI app builder + personal agent</td><td>更年轻、价格较低、增长快</td></tr><tr><td>Vercel v0</td><td>UI/app generation + Vercel deploy</td><td>前端/React/Vercel ecosystem 强</td></tr><tr><td>Figma Make</td><td>design-to-app / design workflow</td><td>设计入口强，威胁 product/design use cases</td></tr><tr><td>Base44/Wix</td><td>no-code/app builder distribution</td><td>Wix 收购后 SMB/website distribution 强</td></tr><tr><td>Cursor / Claude Code / Codex</td><td>developer coding agents</td><td>专业开发者更偏这些工具</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 价值链位置</h3>
+<p>Bolt 位于:</p>
+<ul><li>上游模型: Anthropic/OpenAI/其他 coding models；</li><li>中间 runtime: WebContainers；</li><li>app builder: prompt-to-code；</li><li>platform: Bolt Cloud/hosting/database/domain/payments；</li><li>enterprise developer workflow: StackBlitz Teams/Enterprise Server/private registries/design systems。</li></ul>
+<p>如果只看 app builder，Bolt 面临激烈竞争；如果看 WebContainers + enterprise developer platform，差异更明显。</p>
+<h3 class="subsection">8.3 护城河</h3>
+<ol><li><strong>WebContainers</strong>: 浏览器内运行 server-side environments，技术积累多年。</li><li><strong>Developer credibility</strong>: StackBlitz 在 web developer ecosystem 有历史。</li><li><strong>Speed of iteration</strong>: prompt 后立即运行、预览、修复。</li><li><strong>Token pricing discipline</strong>: 较早用 tiered tokens 捕捉 heavy usage。</li><li><strong>Enterprise Server</strong>: behind firewall / Kubernetes / SSO 场景区别于纯 consumer app builder。</li></ol>
+<h3 class="subsection">8.4 脆弱点</h3>
+<ul><li>ARR 规模低于 Lovable/Replit，融资弹药和品牌声量较小。</li><li>WebContainers 主要对 web/JS ecosystem 最强，复杂 backend/mobile/native 场景可能受限。</li><li>Token 计费用户感知不透明，项目越大越贵。</li><li>如果 Lovable/Replit/Vercel/Figma 提供更完整 hosting/design/enterprise workflow，Bolt 需要持续差异化。</li><li>Anthropic/OpenAI 模型层能力变化会影响所有 app builder，Bolt 不能只靠模型进步。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Eric Simons 是 StackBlitz 联合创始人和 CEO，早年因创业经历受到媒体关注。Albert Pai 为联合创始人。团队长期做 browser IDE、developer runtime、WebContainers，这让 Bolt 的技术来源更深。BI 报道显示，StackBlitz 在 2023 年底曾面临业务压力，直到 2024 年 Claude Sonnet 3.5 级 coding model 出现后，团队用约 10 人、三个月做出 Bolt.new，形成公司转折。</p>
+<p>这段经历对投资判断有正反两面。正面是团队能在压力下快速 pivot，把多年 infra 积累产品化；反面是公司此前商业化并不顺，Bolt 的增长需要证明不是单一模型窗口期和 AI hype 驱动。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>Churn 风险</strong>: 用户生成 app 后停止使用，AI app builder 普遍存在 20%-40% churn 压力。</li><li><strong>Token 成本风险</strong>: 大项目上下文同步导致每条消息成本升高。</li><li><strong>模型依赖风险</strong>: Bolt 初期增长高度受 Anthropic coding model 进步推动。</li><li><strong>竞争风险</strong>: Lovable/Replit/Emergent/Vercel/Figma/Wix 都在同一方向扩张。</li><li><strong>技术边界风险</strong>: WebContainers 对部分 backend/native/mobile/enterprise legacy 场景可能不够。</li><li><strong>安全风险</strong>: 非技术用户发布 app、接入数据库/支付/认证，会产生数据和权限风险。</li><li><strong>融资风险</strong>: 估值和资金规模低于头部竞品，后续需要在更强资本方前证明差异化。</li><li><strong>营销 claim 复验风险</strong>: 98% less errors、1,000x larger projects 等口径需要原始数据验证。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anysphere_cursor.html">Anysphere</a><a class="sib-chip" href="braintrust.html">Braintrust</a><a class="sib-chip" href="browserbase.html">Browserbase</a><a class="sib-chip" href="cognition_ai_devin.html">Cognition AI</a><a class="sib-chip" href="dify_langgenius.html">Dify</a><a class="sib-chip" href="emergent.html">Emergent</a><a class="sib-chip" href="langchain.html">LangChain</a><a class="sib-chip" href="llamaindex.html">LlamaIndex</a></div>
+</div>
+</body></html>

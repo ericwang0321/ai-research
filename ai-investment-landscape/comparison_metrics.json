@@ -1,0 +1,7793 @@
+[
+  {
+    "company": "AI21 Labs",
+    "short": "AI21 Labs",
+    "slug": "ai21_labs",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series C extension / 同轮扩展",
+    "latest_round_date": "2023-11 左右",
+    "cells": {
+      "valuation": {
+        "value": "约 $1.4B",
+        "sort": 1.4,
+        "source": {
+          "label": "Co",
+          "url": "https://www.globes.co.il/news/article.aspx?did=1001457352"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "2023 后公开口径约 $300M+；若 2025 $300M Series D 完成则会显著上升，但截至本报告没有看到公司公告闭合",
+        "sort": 0.3,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/企业模型为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Enterprise LLM、写作助手、RAG、AI orchestration",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Co",
+        "url": "https://www.globes.co.il/news/article.aspx?did=1001457352"
+      }
+    ]
+  },
+  {
+    "company": "Anthropic",
+    "short": "Anthropic",
+    "slug": "anthropic",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series H",
+    "latest_round_date": "2026-04",
+    "cells": {
+      "valuation": {
+        "value": "$965B",
+        "sort": 965.0,
+        "source": {
+          "label": "Guardian",
+          "url": "https://www.theguardian.com/technology/2026/may/28/anthropic-ai-valuation"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "S&P/MI workbook 显示累计融资 $124.7B; 2026-04 Series H $65B; 2025-11 Series G $30B; 2025-08 Series F $13B",
+        "sort": 2026.0,
+        "source": {
+          "label": "资本强度接近 OpenAI 级别",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "Claude Code ARR: 媒体报道 2025 年末约 $1B+；总 ARR / revenue run-rate: 媒体和第三方口径从数十亿美元到更高区间不等",
+        "sort": 1.0,
+        "source": {
+          "label": "需公司财务文件确认,但为最重要产品级收入线索",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "Anthropic Economic Index 基于 Claude.ai/API conversations 显示 AI 自主委派比例上升；Databricks landmark deal、Snowflake multi-year ~$200M partnership、Amazon Bedrock、Google Vertex",
+        "sort": 0.2,
+        "source": {
+          "label": "说明使用从辅助转向自动化",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "Amazon up to $4B,Google up to $2B+后续追加,Microsoft/Nvidia 投资与 Azure/Nvidia capacity 报道",
+        "sort": 4.0,
+        "source": {
+          "label": "股权资本与算力采购绑定",
+          "url": ""
+        }
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Frontier LLM、安全模型、企业/API、Claude Code",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Guardian",
+        "url": "https://www.theguardian.com/technology/2026/may/28/anthropic-ai-valuation"
+      },
+      {
+        "label": "资本强度接近 OpenAI 级别",
+        "url": ""
+      },
+      {
+        "label": "需公司财务文件确认,但为最重要产品级收入线索",
+        "url": ""
+      },
+      {
+        "label": "说明使用从辅助转向自动化",
+        "url": ""
+      },
+      {
+        "label": "股权资本与算力采购绑定",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Character.AI",
+    "short": "Character.AI",
+    "slug": "character_ai",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series A",
+    "latest_round_date": "2023-03",
+    "cells": {
+      "valuation": {
+        "value": "投后约 $1B",
+        "sort": 1.0,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/2023/03/23/characterai-150-million-personalized-andreessen"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "YoY +250%",
+        "sort": 250.0,
+        "source": {
+          "label": "2025 FT 没有给出基数",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "主要用户: Gen Z / Gen Alpha、角色扮演用户、同人创作者、互动故事用户;未成年人用户在 2025 后进入受限体验；月活: 20M MAU",
+        "sort": 2025.0,
+        "source": {
+          "label": "2025 研究论文/FT 衡量社区规模",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "AI companion、角色聊天、消费 AI",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/2023/03/23/characterai-150-million-personalized-andreessen"
+      },
+      {
+        "label": "2025 FT 没有给出基数",
+        "url": ""
+      },
+      {
+        "label": "2025 研究论文/FT 衡量社区规模",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Clay",
+    "short": "Clay",
+    "slug": "clay",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "员工流动性/二级 headline",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "$5B",
+        "sort": 5.0,
+        "source": {
+          "label": "NYT",
+          "url": "https://www.nytimes.com/2026/06/18/technology/clay-employee-share-sale-valuation.html"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "GTM AI、sales automation",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "NYT",
+        "url": "https://www.nytimes.com/2026/06/18/technology/clay-employee-share-sale-valuation.html"
+      }
+    ]
+  },
+  {
+    "company": "Cohere",
+    "short": "Cohere",
+    "slug": "cohere",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "追加融资/second close",
+    "latest_round_date": "2025-09",
+    "cells": {
+      "valuation": {
+        "value": "约 $7B",
+        "sort": 7.0,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2024/07/22/cohere-raises-500m-to-beat-back-generative-ai-rivals/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2024-03 约 $22M ARR/annualized revenue 线索；2025-05 Reuters 称年化收入翻倍至 $100M；2026-02 CNBC/公开资料线索称收入约 $240M",
+        "sort": 2024.0,
+        "source": {
+          "label": "企业定位开始兑现，但仍需公司口径审计",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/企业模型为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Enterprise LLM、RAG、合规私有化模型",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2024/07/22/cohere-raises-500m-to-beat-back-generative-ai-rivals/"
+      },
+      {
+        "label": "企业定位开始兑现，但仍需公司口径审计",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Decagon AI",
+    "short": "Decagon AI",
+    "slug": "decagon_ai",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Employee tender",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "$4.5B",
+        "sort": 4.5,
+        "source": {
+          "label": "Decagon",
+          "url": "https://decagon.ai/blog/decagon-closes-employee-tender-at-4-5-billion-valuation"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "公开融资累计线索: 2025 BI 称 total funding $100M before Series D;Series D 后至少 $350M+",
+        "sort": 0.1,
+        "source": {
+          "label": "BI + official Series D",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Customer support AI、enterprise agent、CX automation",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Decagon",
+        "url": "https://decagon.ai/blog/decagon-closes-employee-tender-at-4-5-billion-valuation"
+      },
+      {
+        "label": "BI + official Series D",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "DeepSeek / 深度求索",
+    "short": "DeepSeek",
+    "slug": "deepseek_深度求索",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "WSJ 报道 fresh funding 与扩招",
+    "latest_round_date": "2026-06/07",
+    "cells": {
+      "valuation": {
+        "value": ">$50B",
+        "sort": 50.0,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/deepseek-becomes-chinas-most-valuable-ai-startup-after-over-7-4-billion-fundraise-78ef64c0"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "公司没有给出可审计收入拆分;媒体强调缺乏成熟 revenue model",
+        "sort": "",
+        "source": {
+          "label": "需要后续通过融资材料或上市文件核验",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "V4-Flash output $0.28/M,V4-Pro output $0.87/M",
+        "sort": 0.28,
+        "source": {
+          "label": "全球最低价 frontier 级 API 之一",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "开源 + API/应用",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Frontier model、推理模型、开源模型、低成本训练/推理",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/tech/ai/deepseek-becomes-chinas-most-valuable-ai-startup-after-over-7-4-billion-fundraise-78ef64c0"
+      },
+      {
+        "label": "需要后续通过融资材料或上市文件核验",
+        "url": ""
+      },
+      {
+        "label": "全球最低价 frontier 级 API 之一",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Genspark",
+    "short": "Genspark",
+    "slug": "genspark",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "公司注册、融资文件、投资者公告、PitchBook/Crunchbase/Dealroom 条目",
+    "latest_round_date": "",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "需要核验:公司没有在公开网页给出 ARR、revenue run-rate 或付费用户数",
+        "sort": "",
+        "source": {
+          "label": "投资判断中最大数据缺口之一",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "需要核验:公开网页没有给出稳定活跃用户",
+        "sort": "",
+        "source": {
+          "label": "对 consumer/product-led growth 很关键",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "AI Workspace、多工具 Agent、自动化",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "投资判断中最大数据缺口之一",
+        "url": ""
+      },
+      {
+        "label": "对 consumer/product-led growth 很关键",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Granola",
+    "short": "Granola",
+    "slug": "granola",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series C",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "$1.5B",
+        "sort": 1.5,
+        "source": {
+          "label": "Granola Series C",
+          "url": "https://www.granola.ai/blog/series-c"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2026 年 3 月中旬收入已达上一年 2.5x 以上",
+        "sort": 2026.0,
+        "source": {
+          "label": "The Times",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "早期用户结构: 超过半数用户处于 leadership roles；周活增长: 自 2024-05 launch 后 weekly users 增长 6x",
+        "sort": 2024.0,
+        "source": {
+          "label": "Granola 官方 Series A 公告",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "AI meeting notes、meeting memory、企业上下文、MCP workflow",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Granola Series C",
+        "url": "https://www.granola.ai/blog/series-c"
+      },
+      {
+        "label": "The Times",
+        "url": ""
+      },
+      {
+        "label": "Granola 官方 Series A 公告",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Liquid AI",
+    "short": "Liquid AI",
+    "slug": "liquid_ai",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "潜在新一轮(传闻)",
+    "latest_round_date": "2025(传闻)",
+    "cells": {
+      "valuation": {
+        "value": "~$3.7B",
+        "sort": 3.7,
+        "source": {
+          "label": "Facebook 传闻帖",
+          "url": "https://www.facebook.com/groups/595424764221375/posts/1962231784207326/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "累计融资: 约 $293–297M(Seed $37.6M + Series A $250M,另含早期 SAFE $5.6M@$56M cap)",
+        "sort": 0.297,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "约 $13.2M",
+        "sort": 0.0132,
+        "source": {
+          "label": "GetLatka",
+          "url": "https://getlatka.com/companies/liquid.ai"
+        }
+      },
+      "user_group": {
+        "value": "Mercedes-Benz、Shopify、G42、AMD、Qualcomm、Insilico Medicine、Unsloth、Ollama",
+        "sort": 42.0,
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "非 Transformer / liquid foundation models",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Facebook 传闻帖",
+        "url": "https://www.facebook.com/groups/595424764221375/posts/1962231784207326/"
+      },
+      {
+        "label": "GetLatka",
+        "url": "https://getlatka.com/companies/liquid.ai"
+      }
+    ]
+  },
+  {
+    "company": "Manus / Butterfly Effect",
+    "short": "Manus",
+    "slug": "manus_butterfly_effect",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Meta 收购/交易报道",
+    "latest_round_date": "2025-12",
+    "cells": {
+      "valuation": {
+        "value": "$2B-$3B",
+        "sort": 3.0,
+        "source": {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/technology/artificial-intelligence/meta-buy-chinese-founded-startup-manus-boost-advanced-ai-2025-12-30/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2025-08 revenue run-rate: ~$90M；2025-12 revenue run-rate: ~$125M",
+        "sort": 2025.0,
+        "source": {
+          "label": "The Information/媒体汇总",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "通用 Agent、自动化工作流",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Reuters",
+        "url": "https://www.reuters.com/technology/artificial-intelligence/meta-buy-chinese-founded-startup-manus-boost-advanced-ai-2025-12-30/"
+      },
+      {
+        "label": "The Information/媒体汇总",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "ModelBest / 面壁智能",
+    "short": "ModelBest",
+    "slug": "modelbest_面壁智能",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "新一轮融资 / 加码端侧 AI",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "官网新闻称 2025–2026 完成“数亿元融资”；2024 年也有“数亿元”融资报道，具体估值和累计融资额需后续核验",
+        "sort": 2026.0,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "公开材料没有给出收入、ARR、毛利、订单金额",
+        "sort": "",
+        "source": {
+          "label": "后续核验重点",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "主要合作线索: 吉利、长安、大众、华为、英特尔、MediaTek、百度智能云、长城汽车、加速进化机器人、大象机器人、追知工科、最高法/法信法律基座大模型等公开线索；客户/合作: 官网称与吉…",
+        "sort": "",
+        "source": {
+          "label": "需区分 demo、适配、量产和付费合同",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "开源 + API/应用",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "端侧小模型、MiniCPM",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "后续核验重点",
+        "url": ""
+      },
+      {
+        "label": "需区分 demo、适配、量产和付费合同",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Moonshot AI / 月之暗面 / Kimi",
+    "short": "Moonshot AI",
+    "slug": "moonshot_ai_月之暗面_kimi",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "最新私募融资/IPO 前资本化报道",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "约 $18B",
+        "sort": 18.0,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/chinas-moonshot-ai-seeks-listing-in-hong-kong-under-heightened-scrutiny-7a0a71ef"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "公开材料没有给出公司口径 ARR、收入 run-rate 或毛利率",
+        "sort": "",
+        "source": {
+          "label": "后续核验重点：会员收入、API 净收入、企业合同、推理毛利",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "官方 API 平台写有“Trusted by millions of professional developers”；Kimi App/Web 为主要 C 端入口；Vercel、OpenRouter、Windsurf、Cursor、Huawei、Coze、CodeBuddy、Genspark、XtalPi、DP Techno…",
+        "sort": "",
+        "source": {
+          "label": "“millions”是方向性线索，不等同于 MAU 或付费用户",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "K2 报告披露 1T MoE、32B 激活、15.5T token 训练；媒体报道提到使用 Nvidia H800 等受出口管制前采购芯片的线索",
+        "sort": 32.0,
+        "source": {
+          "label": "成本优势来自 MoE 与工程优化，但持续训练仍高度依赖算力",
+          "url": ""
+        }
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/企业模型为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "LLM、长上下文、Agent、C端助手、代码模型",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/tech/ai/chinas-moonshot-ai-seeks-listing-in-hong-kong-under-heightened-scrutiny-7a0a71ef"
+      },
+      {
+        "label": "后续核验重点：会员收入、API 净收入、企业合同、推理毛利",
+        "url": ""
+      },
+      {
+        "label": "“millions”是方向性线索，不等同于 MAU 或付费用户",
+        "url": ""
+      },
+      {
+        "label": "成本优势来自 MoE 与工程优化，但持续训练仍高度依赖算力",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "OpenAI",
+    "short": "OpenAI",
+    "slug": "openai",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Robinhood Ventures Fund I 投资",
+    "latest_round_date": "2026-04",
+    "cells": {
+      "valuation": {
+        "value": "$852B",
+        "sort": 852.0,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/2026/04/22/openai-shares-robinhood-venture-public"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "S&P/MI workbook 显示累计融资 $182.0B,最新可得 post-money $852B",
+        "sort": 182.0,
+        "source": {
+          "label": "2026 年资本化口径显著高于 2025 年 $300B 锚点",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "收入结构: ChatGPT 订阅、Business / Enterprise seats、API 按量、企业合约、政府合同、云/生态授权、Agent 和未来广告/商业交易；年化收入: 2025 年媒体报道约 $12B; 2026 年 Reuters/媒体报道…",
+        "sort": 12.0,
+        "source": {
+          "label": "高速增长来自订阅、API、企业 seat 和 agent/coding",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "ChatGPT 周活: 2025 DevDay 相关报道 800M weekly users; 2026 媒体报道 900M+；付费订阅: 2026 媒体报道 50M+ paying su…；Business users: 2025 报道 5M business users；企业大单: PwC 100,000+ license…",
+        "sort": 100000.0,
+        "source": {
+          "label": "仍需公司公告或上市文件统一口径",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Frontier model、ChatGPT/Codex、Agent、企业 AI",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/2026/04/22/openai-shares-robinhood-venture-public"
+      },
+      {
+        "label": "2026 年资本化口径显著高于 2025 年 $300B 锚点",
+        "url": ""
+      },
+      {
+        "label": "高速增长来自订阅、API、企业 seat 和 agent/coding",
+        "url": ""
+      },
+      {
+        "label": "仍需公司公告或上市文件统一口径",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Reka AI",
+    "short": "Reka AI",
+    "slug": "reka_ai",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "Series B(战略轮)",
+    "latest_round_date": "2025-07-22",
+    "cells": {
+      "valuation": {
+        "value": "$1B+",
+        "sort": 1.0,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2025-07-22/snowflake-nvidia-back-new-unicorn-reka-ai-in-110-million-deal"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "累计融资: 约 $170M(含 seed + Series A + Series B)",
+        "sort": 0.17,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "报告 ARR: 约 $10.9M(2025,GetLatka)；ARR(2025): 约 $10.9M",
+        "sort": 0.0109,
+        "source": {
+          "label": "GetLatka",
+          "url": "https://getlatka.com/companies/reka.ai"
+        }
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "多模态基础模型",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2025-07-22/snowflake-nvidia-back-new-unicorn-reka-ai-in-110-million-deal"
+      },
+      {
+        "label": "GetLatka",
+        "url": "https://getlatka.com/companies/reka.ai"
+      }
+    ]
+  },
+  {
+    "company": "Safe Superintelligence Inc. / SSI",
+    "short": "Safe Superintelligence Inc.",
+    "slug": "safe_superintelligence_inc_ssi",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "Meta 接触收购/挖角",
+    "latest_round_date": "2025-06",
+    "cells": {
+      "valuation": {
+        "value": "$32B",
+        "sort": 32.0,
+        "source": {
+          "label": "cnbc.com",
+          "url": "https://www.cnbc.com/2025/06/19/meta-tried-to-buy-safe-superintelligence-and-hired-ceo-daniel-gross.html"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "Google Cloud TPU;媒体称 Meta 曾尝试收购/挖角",
+        "sort": "",
+        "source": {
+          "label": "大厂对其团队和路线高度关注",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "2025 年 TechCrunch 报道 Google Cloud 为 SSI 研究提供 TPU 支持",
+        "sort": 2025.0,
+        "source": {
+          "label": "算力供给是核心运营指标",
+          "url": ""
+        }
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Safety-first superintelligence、研究型 AI lab",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "cnbc.com",
+        "url": "https://www.cnbc.com/2025/06/19/meta-tried-to-buy-safe-superintelligence-and-hired-ceo-daniel-gross.html"
+      },
+      {
+        "label": "大厂对其团队和路线高度关注",
+        "url": ""
+      },
+      {
+        "label": "算力供给是核心运营指标",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Sierra",
+    "short": "Sierra",
+    "slug": "sierra",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "新融资接近/完成",
+    "latest_round_date": "2025-09",
+    "cells": {
+      "valuation": {
+        "value": "$10B",
+        "sort": 10.0,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/2025/09/03/sierra-ai-agents-funding-350-million"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "ARR / revenue: Axios 2025-09: on track to exceed $100M enterprise ARR;公开百科/媒体另有 $150M revenue 口径但需以原始报道核验；ARR: on track to exceed…",
+        "sort": 2025.0,
+        "source": {
+          "label": "Axios 2025-09 source 口径",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "hundreds of customers",
+        "sort": "",
+        "source": {
+          "label": "Axios newsletter/Investors.com 报道口径",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Customer Service Agent、企业客服自动化",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/2025/09/03/sierra-ai-agents-funding-350-million"
+      },
+      {
+        "label": "Axios 2025-09 source 口径",
+        "url": ""
+      },
+      {
+        "label": "Axios newsletter/Investors.com 报道口径",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "StepFun / 阶跃星辰",
+    "short": "StepFun",
+    "slug": "stepfun_阶跃星辰",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Pre-IPO（进行中）",
+    "latest_round_date": "2026 年",
+    "cells": {
+      "valuation": {
+        "value": "投前约 $5B-$6B",
+        "sort": 6.0,
+        "source": {
+          "label": "投中网",
+          "url": "https://www.chinaventure.com.cn/news/80-20260305-390360.html"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2025 年收入（预计）: 约 5 亿元人民币；2026 年收入（预计）: 约 12 亿元人民币",
+        "sort": 1.2000000000000002,
+        "source": {
+          "label": "2025 全年",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "5 倍；多模态 API 调用量增长: 超 45 倍；开放平台 API 调用量增长: 近 20 倍",
+        "sort": 45.0,
+        "source": {
+          "label": "截至 2025 年底",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "多模态模型、视频/音频、国产芯片适配",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "投中网",
+        "url": "https://www.chinaventure.com.cn/news/80-20260305-390360.html"
+      },
+      {
+        "label": "2025 全年",
+        "url": ""
+      },
+      {
+        "label": "截至 2025 年底",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Substack",
+    "short": "Substack",
+    "slug": "substack",
+    "sector": "通用 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series C",
+    "latest_round_date": "2025-07",
+    "cells": {
+      "valuation": {
+        "value": "约 $1.1B",
+        "sort": 1.1,
+        "source": {
+          "label": "Axios 2025",
+          "url": "https://www.axios.com/2025/07/17/substack-newsletter-funding-creator-economy"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "约 $200M",
+        "sort": 0.2,
+        "source": {
+          "label": "Axios",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "高收入创作者: 50+ creators making $1M+ per year；Substack net revenue: 未正式持续披露；Axios 提到 2021 gross revenue $12M",
+        "sort": 0.012,
+        "source": {
+          "label": "Axios 转引",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "创作者订阅平台、newsletter/podcast/video、AI-assisted publishing",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios 2025",
+        "url": "https://www.axios.com/2025/07/17/substack-newsletter-funding-creator-economy"
+      },
+      {
+        "label": "Axios",
+        "url": ""
+      },
+      {
+        "label": "Axios 转引",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Thinking Machines Lab",
+    "short": "Thinking Machines Lab",
+    "slug": "thinking_machines_lab",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "Bloomberg/媒体称公司曾讨论约 $50B 新估值融资",
+    "latest_round_date": "2025-11",
+    "cells": {
+      "valuation": {
+        "value": "约 $50B",
+        "sort": 50.0,
+        "source": {
+          "label": "bloomberg.com",
+          "url": "https://www.bloomberg.com/news/articles/2025-11-14/murati-s-thinking-machines-is-in-talks-for-50-billion-valuation"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "官网列出研究者 quote、community projects、grants,但没有付费客户数",
+        "sort": "",
+        "source": {
+          "label": "仍处开发者/研究者 adoption 阶段",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Frontier AI systems、多模态、研究型模型平台",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "bloomberg.com",
+        "url": "https://www.bloomberg.com/news/articles/2025-11-14/murati-s-thinking-machines-is-in-talks-for-50-billion-valuation"
+      },
+      {
+        "label": "仍处开发者/研究者 adoption 阶段",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Writer",
+    "short": "Writer",
+    "slug": "writer",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series C",
+    "latest_round_date": "2024-11",
+    "cells": {
+      "valuation": {
+        "value": "$1.9B",
+        "sort": 1.9,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/newsletters/axios-pro-rata-153997ea-fd35-40db-8ed2-8f01203881d8"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "公开运营线索: Business Insider 2025 列表称 total raised $326M;官网客户页披露多个客户的 time saving、ROI、productivity、hours saved 指标",
+        "sort": 0.326,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "up to 5 users",
+        "sort": 5.0,
+        "source": {
+          "label": "Writer pricing",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "企业 GenAI 平台、私有模型、workflow",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/newsletters/axios-pro-rata-153997ea-fd35-40db-8ed2-8f01203881d8"
+      },
+      {
+        "label": "Writer pricing",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "xAI",
+    "short": "xAI",
+    "slug": "xai",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series E",
+    "latest_round_date": "2026-01",
+    "cells": {
+      "valuation": {
+        "value": "$230B",
+        "sort": 230.0,
+        "source": {
+          "label": "Business Insider",
+          "url": "https://www.businessinsider.com/musks-xai-closes-funding-round-to-build-ai-infrastructure-2026-1"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "WSJ 相关报道称 SpaceX+xAI 2025 combined revenue $18.7B,其中 xAI $3.2B;包含 X 广告和 Grok 订阅",
+        "sort": 18.7,
+        "source": {
+          "label": "不是纯模型 API 收入,需拆分",
+          "url": ""
+        }
+      },
+      "user_group": {
+        "value": "Databricks、Interactive Brokers、云平台入口等官方新闻",
+        "sort": "",
+        "source": {
+          "label": "企业分发开始成型",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "闭源/API 为主",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "Frontier AI、Grok、社交数据、超大算力",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Business Insider",
+        "url": "https://www.businessinsider.com/musks-xai-closes-funding-round-to-build-ai-infrastructure-2026-1"
+      },
+      {
+        "label": "不是纯模型 API 收入,需拆分",
+        "url": ""
+      },
+      {
+        "label": "企业分发开始成型",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Zyphra",
+    "short": "Zyphra",
+    "slug": "zyphra",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "Series A",
+    "latest_round_date": "2025-06",
+    "cells": {
+      "valuation": {
+        "value": "约 $1B",
+        "sort": 1.0,
+        "source": {
+          "label": "theinformation.com",
+          "url": "https://www.theinformation.com/articles/open-source-ai-startup-zyphra-targets-1-billion-valuation"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "最新战略合作: AMD/TensorWave 支撑 Zyphra Cloud;IBM Cloud + AMD 支撑 ZAYA1 训练;AWS Inferentia2 research;NV…",
+        "sort": 2.0,
+        "source": {
+          "label": "基础设施生态强,尤其 AMD 路线",
+          "url": ""
+        }
+      },
+      "model_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "开源 + API/应用",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "开源/agent foundation model",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "theinformation.com",
+        "url": "https://www.theinformation.com/articles/open-source-ai-startup-zyphra-targets-1-billion-valuation"
+      },
+      {
+        "label": "基础设施生态强,尤其 AMD 路线",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "零一万物 / 01.AI",
+    "short": "零一万物",
+    "slug": "零一万物_01_ai",
+    "sector": "通用 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "传闻估值上探",
+    "latest_round_date": "2025-初",
+    "cells": {
+      "valuation": {
+        "value": "~$2B",
+        "sort": 2.0,
+        "source": {
+          "label": "Chuangxin",
+          "url": "https://www.chuangxin.com/news"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2024 确认收入: 一个多亿元人民币(李开复自述,订单更多)；2025 收入预期: \"数倍增长\"(李开复自述)",
+        "sort": 2025.0,
+        "source": {
+          "label": "财联社",
+          "url": "https://www.cls.cn/detail/1910433"
+        }
+      },
+      "user_group": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_cost": {
+        "value": "~$3M、~2000 GPU",
+        "sort": 0.003,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2023-11-05/kai-fu-lee-s-open-source-01-ai-bests-llama-2-according-to-hugging-face"
+        }
+      },
+      "compute_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "open_closed": {
+        "value": "开源 + API/应用",
+        "sort": "",
+        "source": null
+      },
+      "app_entry": {
+        "value": "开源 LLM、企业 AI 方案、低成本推理",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Chuangxin",
+        "url": "https://www.chuangxin.com/news"
+      },
+      {
+        "label": "财联社",
+        "url": "https://www.cls.cn/detail/1910433"
+      },
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2023-11-05/kai-fu-lee-s-open-source-01-ai-bests-llama-2-according-to-hugging-face"
+      }
+    ]
+  },
+  {
+    "company": "Black Forest Labs",
+    "short": "Black Forest Labs",
+    "slug": "black_forest_labs",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2025-12-01",
+    "cells": {
+      "valuation": {
+        "value": "$3.25B",
+        "sort": 3.25,
+        "source": {
+          "label": "FT",
+          "url": "https://www.ft.com/content/299ddb72-1ae7-4691-bf6b-cd0229bbb04f"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "2025-12 官方宣布 $300M Series B，$3.25B post-money；FT 报道称自成立以来累计融资超过 $450M",
+        "sort": 2025.0,
+        "source": {
+          "label": "资本市场强认可",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "官方没有给出收入、ARR、毛利或 API run-rate",
+        "sort": "",
+        "source": {
+          "label": "后续核验重点",
+          "url": ""
+        }
+      },
+      "user_scale": {
+        "value": "官方 Series B 公告称“Millions of users are already making magic with our FLUX models”",
+        "sort": "",
+        "source": {
+          "label": "用户规模大，但没有披露 MAU、付费用户或付费生成量",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "Adobe、Canva、Meta、Microsoft、Mistral、Freepik、Picsart、Gamma、OpenArt、Fal.ai、Replicate、TogetherAI、xAI/Grok 历史集成等",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "图像基础模型、FLUX",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "output_scale": {
+        "value": "官方 Series B 公告称“Millions of users are already making magic with our FLUX models”",
+        "sort": "",
+        "source": {
+          "label": "用户规模大，但没有披露 MAU、付费用户或付费生成量",
+          "url": ""
+        }
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "FT",
+        "url": "https://www.ft.com/content/299ddb72-1ae7-4691-bf6b-cd0229bbb04f"
+      },
+      {
+        "label": "资本市场强认可",
+        "url": ""
+      },
+      {
+        "label": "后续核验重点",
+        "url": ""
+      },
+      {
+        "label": "用户规模大，但没有披露 MAU、付费用户或付费生成量",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "ElevenLabs",
+    "short": "ElevenLabs",
+    "slug": "elevenlabs",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series D / additional funding and ARR update",
+    "latest_round_date": "2026-05",
+    "cells": {
+      "valuation": {
+        "value": "$11B",
+        "sort": 11.0,
+        "source": {
+          "label": "Economic Times",
+          "url": "https://m.economictimes.com/tech/funding/voice-ai-firm-elevenlabs-tops-500-million-arr-announces-additional-funding/articleshow/130833329.cms"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "接近 $800M / 约 $781M 不同报道口径",
+        "sort": 0.8,
+        "source": {
+          "label": "WSJ/The Times",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "ARR: WSJ 报道 2025 年 ARR 约 $330M,目标 2026 doubled;Economic Times 2026 年 5 月报道 ARR 跨 $500M",
+        "sort": 0.33,
+        "source": null
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "Deutsche Telekom、Deliveroo、Square、Revolut、Ukrainian government、media/creator/enterprise users 等公开报道客户",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "语音 AI、TTS、配音、声音克隆、Voice Agent",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Free $0;Starter $6/mo;Creator $22/mo;Pro $99/mo;Scale $299/mo;Business $990/mo;Enterprise custom",
+        "sort": 990.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "Credits shared across products;TTS 约 1 credit/character;STT 330 credits/min;Music 900 credits/min;Voice Changer/Isolator 1,000 cr…",
+        "sort": 1000.0,
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Economic Times",
+        "url": "https://m.economictimes.com/tech/funding/voice-ai-firm-elevenlabs-tops-500-million-arr-announces-additional-funding/articleshow/130833329.cms"
+      },
+      {
+        "label": "WSJ/The Times",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "HeyGen",
+    "short": "HeyGen",
+    "slug": "heygen",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Funding round",
+    "latest_round_date": "2024-06",
+    "cells": {
+      "valuation": {
+        "value": "$500M",
+        "sort": 0.5,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2024-06-20/ai-video-startup-heygen-valued-at-500-million-in-funding-round"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "$35M annualized recurring revenue",
+        "sort": 0.035,
+        "source": {
+          "label": "Bloomberg/SCMP/Wikipedia 口径,2024-06 融资时",
+          "url": ""
+        }
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "目标客户: creators、marketers、sales、learning & development、HR、customer education、enterprise localization、developer products；公开客户/Logo:…",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI avatar、视频生成",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "现行订阅: Free、Creator $29/mo、Pro $49/mo、Business $149/mo + additional seats $20/seat/mo、Enterprise contact sales；API pricing: Pay-As…",
+        "sort": 29.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "Videos generated: 约 146.96M",
+        "sort": 0.14696,
+        "source": {
+          "label": "HeyGen API/about 页面实时样式数字",
+          "url": ""
+        }
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2024-06-20/ai-video-startup-heygen-valued-at-500-million-in-funding-round"
+      },
+      {
+        "label": "Bloomberg/SCMP/Wikipedia 口径,2024-06 融资时",
+        "url": ""
+      },
+      {
+        "label": "HeyGen API/about 页面实时样式数字",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Kling AI / 可灵AI",
+    "short": "Kling AI",
+    "slug": "kling_ai_可灵ai",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "外部融资/资本注入",
+    "latest_round_date": "2026-07",
+    "cells": {
+      "valuation": {
+        "value": "约 $18B",
+        "sort": 18.0,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/tech/kling-raises-2-billion-amid-planned-spinoff-from-kuaishou-8fcd1571"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "创作者、短剧、广告、影视动画、媒体、游戏、电商、教育、AI agent、creative platform、aggregator、smart device",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI 视频生成",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/tech/kling-raises-2-billion-amid-planned-spinoff-from-kuaishou-8fcd1571"
+      }
+    ]
+  },
+  {
+    "company": "Luma AI",
+    "short": "Luma AI",
+    "slug": "luma_ai",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series C",
+    "latest_round_date": "2025-11",
+    "cells": {
+      "valuation": {
+        "value": "约 $4B",
+        "sort": 4.0,
+        "source": {
+          "label": "FT",
+          "url": "https://www.ft.com/content/2009b57c-b12d-439d-bc94-9502fd8aaa1f"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "Publicis Groupe, Serviceplan, Mazda, Dentsu, HUMAIN, Wonder Project, Hartbeat, Freepik, Envato, Fal, Comfy, Flora, Runware, Krea,…",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "视频生成、3D/world model",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "前端价格: Plus $30/mo; Pro $90/mo; Ultra $300/mo; Team/Enterprise contact sales；API 价格: Ray3.2 T2V/I2V 5s: 540p $0.15, 720p $0.30, 10…",
+        "sort": 30.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "FT",
+        "url": "https://www.ft.com/content/2009b57c-b12d-439d-bc94-9502fd8aaa1f"
+      }
+    ]
+  },
+  {
+    "company": "Meshy",
+    "short": "Meshy",
+    "slug": "meshy",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "运营指标披露",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "100M+ generated models; 10M+ users; 8M+ monthly visits; SimilarWeb 口径线索",
+        "sort": 0.1,
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI 3D、3D asset workflow",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "价格: Free $0; Pro $20/mo; Studio $60/mo; Enterprise custom pricing；Pricing: Free $0, Pro $20/mo, Studio $60/mo, Enterprise custom",
+        "sort": 60.0,
+        "source": {
+          "label": "自助付费清晰",
+          "url": ""
+        }
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "自助付费清晰",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Midjourney",
+    "short": "Midjourney",
+    "slug": "midjourney",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "发布 video model",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "用户/收入线索: 诉讼/媒体报道提到约 21M 用户、2023 年收入超 $200M、2024 年约 $300M;这是诉讼方/媒体口径，不等同公司正式披露",
+        "sort": 0.2,
+        "source": null
+      },
+      "user_scale": {
+        "value": "用户/收入线索: 诉讼/媒体报道提到约 21M 用户、2023 年收入超 $200M、2024 年约 $300M;这是诉讼方/媒体口径，不等同公司正式披露；用户数: 媒体/诉讼称 2024-09 约 21M 用户",
+        "sort": 2024.0,
+        "source": {
+          "label": "社区规模大，但付费用户/MAU/留存仍需核验",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "图像生成、创作者工具",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "订阅价格线索: Basic $10/mo; Standard $30/mo; Pro $60/mo; Mega $120/mo;年付折扣线索；视频价格线索: 2025 video launch 报道称视频 job 约为 image job 8x，约等于每秒“…",
+        "sort": 2025.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "2025 Disney/NBCUniversal、Warner Bros. Discovery 诉讼",
+        "sort": 2025.0,
+        "source": {
+          "label": "最大风险项",
+          "url": ""
+        }
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "社区规模大，但付费用户/MAU/留存仍需核验",
+        "url": ""
+      },
+      {
+        "label": "最大风险项",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Pika",
+    "short": "Pika",
+    "slug": "pika",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2024-06",
+    "cells": {
+      "valuation": {
+        "value": "约 $700M",
+        "sort": 0.7,
+        "source": {
+          "label": "Pika",
+          "url": "https://pika.art/blog/pika-raises-80m-so-anyone-can-make-video-on-command"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "累计融资: 2024-06 官方口径称累计 $135M",
+        "sort": 2024.0,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI 视频生成",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "官方订阅价格: Basic $0; Standard $8/mo 年付; Pro $28/mo 年付; Fancy $76/mo 年付; 月付/周付选项也在页面提供；Pricing: 80/700/2,300/6,000 monthly credits 四档",
+        "sort": 76.0,
+        "source": {
+          "label": "self-serve monetization 清晰",
+          "url": ""
+        }
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Pika",
+        "url": "https://pika.art/blog/pika-raises-80m-so-anyone-can-make-video-on-command"
+      },
+      {
+        "label": "self-serve monetization 清晰",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Tripo AI",
+    "short": "Tripo AI",
+    "slug": "tripo_ai",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "A3轮",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "6.5M+ creators; 40K+ active developers; 700+ industry clients; 100M+ 3D models created",
+        "sort": 0.0065,
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI 3D、3D foundation model、asset workflow",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "订阅价格: Free $0; Pro $13.93/mo 年付; Max $53.94/mo 年付; Team $54.93/mo/seat 年付；订阅价格: Free / Pro / Max / Team",
+        "sort": 54.93,
+        "source": {
+          "label": "付费层清晰，Team 层可承接企业协作",
+          "url": ""
+        }
+      },
+      "output_scale": {
+        "value": "6.5M+ creators; 40K+ active developers; 700+ industry clients; 100M+ 3D models created",
+        "sort": 0.0065,
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "付费层清晰，Team 层可承接企业协作",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Runway",
+    "short": "Runway",
+    "slug": "runway",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "新一轮 / Series D 媒体口径",
+    "latest_round_date": "2025-04",
+    "cells": {
+      "valuation": {
+        "value": "超过 $3B",
+        "sort": 3.0,
+        "source": {
+          "label": "FT",
+          "url": "https://www.ft.com/content/b7ea4469-d6d3-4203-ac65-8e3afcc17e27"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "关键客户/合作: Lionsgate; 报道提到 Madonna、New Balance、The Late Show、Everything Everywhere All at Once 等使用/客户线索；企业客户: Lionsgate custom mode…",
+        "sort": "",
+        "source": {
+          "label": "影视和品牌背书强，但付费金额和合同期限需核验",
+          "url": ""
+        }
+      },
+      "media": {
+        "value": "AI video、creative tools、multimodal generation",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "官方订阅价格: Free $0; Standard $15 月付或 $12/月年付; Pro $35 月付或 $28/月年付; Max $95 月付或 $76/月年付; Enterprise custom；API 视频价格线索: Gen-4.5 12 cre…",
+        "sort": 95.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "官方 API 文档称曾被大型消费科技公司用于为用户可靠生成 millions of videos",
+        "sort": "",
+        "source": {
+          "label": "说明平台型 API 已有规模案例，但没有披露客户名、收入和毛利",
+          "url": ""
+        }
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "FT",
+        "url": "https://www.ft.com/content/b7ea4469-d6d3-4203-ac65-8e3afcc17e27"
+      },
+      {
+        "label": "影视和品牌背书强，但付费金额和合同期限需核验",
+        "url": ""
+      },
+      {
+        "label": "说明平台型 API 已有规模案例，但没有披露客户名、收入和毛利",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Suno",
+    "short": "Suno",
+    "slug": "suno",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "New round",
+    "latest_round_date": "2025-11",
+    "cells": {
+      "valuation": {
+        "value": "$2.45B",
+        "sort": 2.45,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/business/media/ai-music-platform-suno-valued-at-2-45-billion-b6bda919"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "consumer creators、musicians、prosumers、social creators、songwriters、dance/choreography、independent artists、future labels/rights hol…",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI music、creator tools、generative audio",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Free $0;Pro $8/mo annual equivalent;Premier $24/mo annual equivalent;monthly/annual toggle;commercial rights only on paid new son…",
+        "sort": 24.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "版权状态: Warner Music 2025 settlement/licensing partnership;Universal/Sony disputes/lawsuits/negotiations still key risk;GEMA 2025 s…",
+        "sort": 2025.0,
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/business/media/ai-music-platform-suno-valued-at-2-45-billion-b6bda919"
+      }
+    ]
+  },
+  {
+    "company": "Synthesia",
+    "short": "Synthesia",
+    "slug": "synthesia",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series E / new round 线索",
+    "latest_round_date": "2025-10/2026-01",
+    "cells": {
+      "valuation": {
+        "value": "$4B",
+        "sort": 4.0,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-01-25/nvidia-backed-synthesia-doubles-valuation-to-4-billion-in-new-round"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "累计融资: 2025 Series D 后 $330M+;若 $200M Series E 计入则 $530M+",
+        "sort": 0.33,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2025 annual revenue/run-rate 线索: exceeding $100M annually",
+        "sort": 0.1,
+        "source": {
+          "label": "Wikipedia/媒体摘要口径,需用原始报道确认",
+          "url": ""
+        }
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "目标客户: L&D、HR、sales enablement、marketing、IT/cybersecurity、knowledge management、compliance training、technical training、healthcare、f…",
+        "sort": "",
+        "source": null
+      },
+      "media": {
+        "value": "AI avatar、enterprise video、synthetic media",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Basic Free;Starter $29/mo;Creator $89/mo;Enterprise custom;官网顶部称 plans starting from $18/month when annual/lower price promo",
+        "sort": 29.0,
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-25/nvidia-backed-synthesia-doubles-valuation-to-4-billion-in-new-round"
+      },
+      {
+        "label": "Wikipedia/媒体摘要口径,需用原始报道确认",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Anysphere / Cursor",
+    "short": "Anysphere",
+    "slug": "anysphere_cursor",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "SpaceX/xAI 相关交易报道",
+    "latest_round_date": "2026-04/06",
+    "cells": {
+      "valuation": {
+        "value": "$60B",
+        "sort": 60.0,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/06/05/cursors-anysphere-nabs-9-9b-valuation-soars-past-500m-arr/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2025-01 ARR: >$100M；2025-04 revenue: FT 报道约 $200M ARR",
+        "sort": 2025.0,
+        "source": {
+          "label": "TechCrunch/Wikipedia 汇总引用",
+          "url": ""
+        }
+      },
+      "developer_usage": {
+        "value": "$40/user/mo",
+        "sort": 40.0,
+        "source": {
+          "label": "Cursor 官方 pricing",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "核心客户: 个人开发者、创业团队、软件公司、Fortune 500 企业研发团队；企业采用: 部分报道称 50,000+ enterprises / 60%+ Fortune 500 使用",
+        "sort": 50000.0,
+        "source": {
+          "label": "Fortune/Barron's/媒体口径，需要与公司客户定义核对",
+          "url": ""
+        }
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Individual price: $20/mo；Teams price: $40/user/mo",
+        "sort": 40.0,
+        "source": {
+          "label": "Cursor 官方 pricing",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AI Coding、IDE、开发者 Agent",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "企业采用: 部分报道称 50,000+ enterprises / 60%+ Fortune 500 使用",
+        "sort": 50000.0,
+        "source": {
+          "label": "Fortune/Barron's/媒体口径，需要与公司客户定义核对",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2025/06/05/cursors-anysphere-nabs-9-9b-valuation-soars-past-500m-arr/"
+      },
+      {
+        "label": "TechCrunch/Wikipedia 汇总引用",
+        "url": ""
+      },
+      {
+        "label": "Cursor 官方 pricing",
+        "url": ""
+      },
+      {
+        "label": "Fortune/Barron's/媒体口径，需要与公司客户定义核对",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Braintrust",
+    "short": "Braintrust",
+    "slug": "braintrust",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Topics GA / active observability",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Starter/Pro subscription + processed data usage + score usage + Topics token usage + Enterprise custom pricing + hosted/on-prem/h…",
+        "sort": "",
+        "source": null
+      },
+      "developer_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "目标客户: AI-native 产品团队、enterprise AI engineering、agents/RAG/chatbot/code assistant/customer support/education/search teams；代表客户: No…",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "LLM eval、observability、prompt/model 测试",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": []
+  },
+  {
+    "company": "Browserbase",
+    "short": "Browserbase",
+    "slug": "browserbase",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "官网展示大规模使用指标",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "developer_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "目标客户: AI agent builders、coding agents、GTM/data teams、automated testing、workflow automation、healthcare/tax/legal/supply chain team…",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Developer price: $20/month + usage；Startup price: $99/month + usage",
+        "sort": 99.0,
+        "source": {
+          "label": "低门槛获客",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Agent 浏览器自动化运行时",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "低门槛获客",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Cognition AI / Devin",
+    "short": "Cognition AI",
+    "slug": "cognition_ai_devin",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "后续融资",
+    "latest_round_date": "2025-09",
+    "cells": {
+      "valuation": {
+        "value": "~$9.8B-$10B",
+        "sort": 10.0,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2025-09-08/cognition-ai-reaches-10-billion-valuation-with-new-funding"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "$82M",
+        "sort": 0.082,
+        "source": {
+          "label": "Cognition 收购 Windsurf 官方公告",
+          "url": ""
+        }
+      },
+      "developer_usage": {
+        "value": "$80/month team plan + $40/month per full dev seat",
+        "sort": 80.0,
+        "source": {
+          "label": "Devin 官方 pricing",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Teams: $80/month team plan + $40/month per full dev seat；Windsurf enterprise customers: 350+",
+        "sort": 350.0,
+        "source": {
+          "label": "Devin 官方 pricing",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AI coding agent、软件工程自动化、IDE/agent",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "Windsurf enterprise customers: 350+",
+        "sort": 350.0,
+        "source": {
+          "label": "Cognition 官方公告",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2025-09-08/cognition-ai-reaches-10-billion-valuation-with-new-funding"
+      },
+      {
+        "label": "Cognition 收购 Windsurf 官方公告",
+        "url": ""
+      },
+      {
+        "label": "Devin 官方 pricing",
+        "url": ""
+      },
+      {
+        "label": "Cognition 官方公告",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Dify / LangGenius",
+    "short": "Dify",
+    "slug": "dify_langgenius",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Pricing 显示 Professional / Team / Sandbox / self-hosted / cloud",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "developer_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "开发者、创业公司、企业 AI 应用团队、业务自动化团队、需要自托管的组织",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Custom / private deployment / marketplace",
+        "sort": "",
+        "source": {
+          "label": "高 ACV 仍需核验",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "低代码 AI 应用开发平台、Agent workflow",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "Custom / private deployment / marketplace",
+        "sort": "",
+        "source": {
+          "label": "高 ACV 仍需核验",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "高 ACV 仍需核验",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Emergent",
+    "short": "Emergent",
+    "slug": "emergent",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2026-01",
+    "cells": {
+      "valuation": {
+        "value": "约 $300M",
+        "sort": 0.3,
+        "source": {
+          "label": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/business/india-business/emergent-triples-valuation-to-300-million-in-softbank-led-round/articleshow/126820760.cms"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "about $100M",
+        "sort": 0.1,
+        "source": {
+          "label": "BI",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "最新收入线索: 2026-02 达 $100M ARR；2026-03 月收入 $8.4M 报道；2026-01 ARR: 从 $100K 到 $50M in seven months",
+        "sort": 2026.0,
+        "source": {
+          "label": "BI",
+          "url": ""
+        }
+      },
+      "developer_usage": {
+        "value": "目标用户: 非技术用户、SMB owners、IT agencies、PM、operations teams、founders、personal productivity users；最新用户线索: 2026-01 5M users；2026-04 8M+…",
+        "sort": 2026.0,
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "custom",
+        "sort": "",
+        "source": {
+          "label": "官方 pricing",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Vibe coding、AI app builder、personal AI agent",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "custom",
+        "sort": "",
+        "source": {
+          "label": "官方 pricing",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/business/india-business/emergent-triples-valuation-to-300-million-in-softbank-led-round/articleshow/126820760.cms"
+      },
+      {
+        "label": "BI",
+        "url": ""
+      },
+      {
+        "label": "官方 pricing",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "LangChain",
+    "short": "LangChain",
+    "slug": "langchain",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Sequoia 相关融资媒体报道",
+    "latest_round_date": "2023-04",
+    "cells": {
+      "valuation": {
+        "value": "$200M",
+        "sort": 0.2,
+        "source": {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/technology/ai-startup-langchain-taps-sequoia-lead-funding-round-valuation-least-200-2023-04-13/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Seat subscription + usage-based traces/deployment/sandbox/engine + enterprise annual contracts + self-hosted/hybrid",
+        "sort": "",
+        "source": null
+      },
+      "developer_usage": {
+        "value": "2024 GA 博客披露 5k+ monthly active teams",
+        "sort": 2024.0,
+        "source": {
+          "label": "团队维度转化更关键",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "AI application developers、agent product teams、enterprise AI engineering teams、平台型 SaaS 公司",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "LangChain、LangGraph、deepagents、LangServe 等",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Monthly active teams: 2024 GA 博客披露 5k+ monthly active teams；Pricing: Developer free、Plus $39/seat/month、Enterprise custom;traces/…",
+        "sort": 2024.0,
+        "source": {
+          "label": "团队维度转化更关键",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Agent / LLM 应用开发框架",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Reuters",
+        "url": "https://www.reuters.com/technology/ai-startup-langchain-taps-sequoia-lead-funding-round-valuation-least-200-2023-04-13/"
+      },
+      {
+        "label": "团队维度转化更关键",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "LlamaIndex",
+    "short": "LlamaIndex",
+    "slug": "llamaindex",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Retrieval Harness",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "developer_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "AI application developers、RAG teams、financial analysts、insurance/claims、healthcare/pharma、manufacturing、technical docs、customer s…",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "LlamaIndex framework、Workflows、LiteParse、connectors/readers、retrievers/indexes",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Enterprise: custom,volume discount,5x rate limits,SSO,SaaS/Hybrid；Credit price: 1,000 credits = $1.25",
+        "sort": 5.0,
+        "source": {
+          "label": "企业文档工作流",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "RAG 数据连接层、检索/索引框架",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "custom,volume discount,5x rate limits,SSO,SaaS/Hybrid",
+        "sort": 5.0,
+        "source": {
+          "label": "企业文档工作流",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "企业文档工作流",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Lovable",
+    "short": "Lovable",
+    "slug": "lovable",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2025-12",
+    "cells": {
+      "valuation": {
+        "value": "$6.6B",
+        "sort": 6.6,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "最新公开收入线索: 2026 年 6 月 Business Insider 报道 Lovable 已超过 $500M ARR；2025-07 ARR: 约 $100M ARR，公开报道称 launch 后约 8 个月达成",
+        "sort": 2025.0,
+        "source": {
+          "label": "TechCrunch/Forbes/BI/媒体汇总",
+          "url": ""
+        }
+      },
+      "developer_usage": {
+        "value": "目标用户: 非技术 founders、solo builders、PM、design、marketing、sales、ops、agencies、SMB、企业内部 teams；用户: 2025 年接近 8M users；2026 年 build economy…",
+        "sort": 0.008,
+        "source": {
+          "label": "用户多为非技术背景",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "2025 年 8 月推出 enterprise offering 后，2026 年 BI 称企业业务增长最快",
+        "sort": 2026.0,
+        "source": {
+          "label": "需要跟踪 enterprise ARR 占比",
+          "url": ""
+        }
+      },
+      "code_usage": {
+        "value": "2026 年 BI 报道超过 40M projects built to date，daily new projects 超过 200,000",
+        "sort": 0.04,
+        "source": {
+          "label": "说明 usage depth 高，但需拆分付费/免费",
+          "url": ""
+        }
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Vibe coding、AI app builder、no-code/low-code",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "2025 年 8 月推出 enterprise offering 后，2026 年 BI 称企业业务增长最快",
+        "sort": 2026.0,
+        "source": {
+          "label": "需要跟踪 enterprise ARR 占比",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/"
+      },
+      {
+        "label": "TechCrunch/Forbes/BI/媒体汇总",
+        "url": ""
+      },
+      {
+        "label": "用户多为非技术背景",
+        "url": ""
+      },
+      {
+        "label": "需要跟踪 enterprise ARR 占比",
+        "url": ""
+      },
+      {
+        "label": "说明 usage depth 高，但需拆分付费/免费",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Poolside AI",
+    "short": "Poolside AI",
+    "slug": "poolside_ai",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "更高估值融资报道",
+    "latest_round_date": "2026 前后",
+    "cells": {
+      "valuation": {
+        "value": "$12-14B",
+        "sort": 14.0,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "developer_usage": {
+        "value": "约 60 人",
+        "sort": 60.0,
+        "source": {
+          "label": "负责模型发布",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "企业软件团队、政府/国防、公共部门集成商、受监管行业、需要 air-gapped/on-prem AI 的组织",
+        "sort": "",
+        "source": null
+      },
+      "code_usage": {
+        "value": "训练代码库规模: 130,000 real world code bases；Applied Research 团队: 约 60 人",
+        "sort": 130000.0,
+        "source": {
+          "label": "RLCEF 训练反馈来源",
+          "url": ""
+        }
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_dependency": {
+        "value": "自有模型+第三方",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Code model、software engineering automation、defense coding",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation"
+      },
+      {
+        "label": "负责模型发布",
+        "url": ""
+      },
+      {
+        "label": "RLCEF 训练反馈来源",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Replit",
+    "short": "Replit",
+    "slug": "replit",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Financing / Series D",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "$9B",
+        "sort": 9.0,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/newsletters/axios-pro-rata-64cecfe2-b486-4665-8e5d-a2cabece30b5"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "最新收入线索: 2025-10 BI: annual sales 约 $240M；2025-09 annualized revenue 超 $150M；目标 2026 年底 $1B revenue；2024 revenue: 约 $2.8M",
+        "sort": 2025.0,
+        "source": {
+          "label": "BI 报道称 Agent launch 前后基数很低",
+          "url": ""
+        }
+      },
+      "developer_usage": {
+        "value": "40M total users、150K paying users 报道",
+        "sort": 0.04,
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "Duolingo、Zillow 等；Microsoft/Databricks/Visa partnership",
+        "sort": "",
+        "source": {
+          "label": "需区分 paying customer、partner、reference",
+          "url": ""
+        }
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "custom，SSO/SAML、single-tenant、VPC 等",
+        "sort": "",
+        "source": {
+          "label": "官方 pricing",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AI coding、browser IDE、software agent、hosting",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "企业客户线索: Duolingo、Zillow 等；Microsoft/Databricks/Visa partnership",
+        "sort": "",
+        "source": {
+          "label": "需区分 paying customer、partner、reference",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/newsletters/axios-pro-rata-64cecfe2-b486-4665-8e5d-a2cabece30b5"
+      },
+      {
+        "label": "BI 报道称 Agent launch 前后基数很低",
+        "url": ""
+      },
+      {
+        "label": "需区分 paying customer、partner、reference",
+        "url": ""
+      },
+      {
+        "label": "官方 pricing",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "StackBlitz / Bolt.new",
+    "short": "StackBlitz",
+    "slug": "stackblitz_bolt_new",
+    "sector": "开发工具与 Agent 平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "BI deep dive",
+    "latest_round_date": "2025-05",
+    "cells": {
+      "valuation": {
+        "value": "~$700M",
+        "sort": 0.7,
+        "source": {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2025-01-17/ai-coding-startup-stackblitz-in-talks-to-raise-funds-at-700-million-value"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "最新收入线索: 2025-03 Bolt ARR 约 $40M；2025 年公司称下一个披露目标是 >$100M ARR；首周 ARR: 约新增 $1M ARR；第二周、第三周继续各新增约 $1M ARR",
+        "sort": 2025.0,
+        "source": {
+          "label": "BI 引用 Eric Simons",
+          "url": ""
+        }
+      },
+      "developer_usage": {
+        "value": "目标用户: non-technical software composers、founders、PM、marketers、agencies、web developers、enterprise design system teams；Teams: $30/me…",
+        "sort": 30.0,
+        "source": {
+          "label": "官方 pricing",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "上线初期从约 600 增至 14,000+",
+        "sort": 14000.0,
+        "source": {
+          "label": "BI 引用 investor update",
+          "url": ""
+        }
+      },
+      "code_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Teams: $30/member/月；Enterprise: custom",
+        "sort": 30.0,
+        "source": {
+          "label": "官方 pricing",
+          "url": ""
+        }
+      },
+      "model_dependency": {
+        "value": "第三方/多模型为主",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Browser IDE、AI app builder、vibe coding",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_ready": {
+        "value": "custom",
+        "sort": "",
+        "source": {
+          "label": "官方 pricing",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2025-01-17/ai-coding-startup-stackblitz-in-talks-to-raise-funds-at-700-million-value"
+      },
+      {
+        "label": "BI 引用 Eric Simons",
+        "url": ""
+      },
+      {
+        "label": "官方 pricing",
+        "url": ""
+      },
+      {
+        "label": "BI 引用 investor update",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Anyscale",
+    "short": "Anyscale",
+    "slug": "anyscale",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series C",
+    "latest_round_date": "2021-12",
+    "cells": {
+      "valuation": {
+        "value": "约 $1B",
+        "sort": 1.0,
+        "source": {
+          "label": "PRNewswire",
+          "url": "https://www.prnewswire.com/news-releases/anyscale-raises-100-million-series-c-to-accelerate-adoption-of-ray-for-building-ai-applications-301444563.html"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Usage-based ACU / compute charges、cloud infrastructure pass-through or customer cloud resources、enterprise contracts、committed-us…",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: AI labs、LLM app teams、enterprise ML platforms、data science teams、simulation/RL teams；Customers / users: Ray 案例包括 OpenAI、Ube…",
+        "sort": "",
+        "source": {
+          "label": "logo 需区分 Ray 开源用户和 Anyscale 付费客户",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AI 应用运行时与模型工作负载",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "PRNewswire",
+        "url": "https://www.prnewswire.com/news-releases/anyscale-raises-100-million-series-c-to-accelerate-adoption-of-ray-for-building-ai-applications-301444563.html"
+      },
+      {
+        "label": "logo 需区分 Ray 开源用户和 Anyscale 付费客户",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Baseten",
+    "short": "Baseten",
+    "slug": "baseten",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series F",
+    "latest_round_date": "2026-06",
+    "cells": {
+      "valuation": {
+        "value": "$13B",
+        "sort": 13.0,
+        "source": {
+          "label": "Baseten",
+          "url": "https://www.baseten.co/blog/announcing-our-series-f/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "官方称过去一年 revenue 20x",
+        "sort": 20.0,
+        "source": {
+          "label": "公司商业化进入爆发期,但基数需核验",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "Cursor、Notion、Lovable、Harvey、HubSpot、OpenEvidence、Abridge、Decagon、Parallel 等",
+        "sort": "",
+        "source": {
+          "label": "客户质量强,覆盖 coding、legal、medical、enterprise apps",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "官方称 inference volume 40x",
+        "sort": 40.0,
+        "source": {
+          "label": "AI-native 客户生产调用增长很快",
+          "url": ""
+        }
+      },
+      "margin_cost": {
+        "value": "WSJ 报道客户使用开放模型某些任务可达到约闭源成本 30%,即节省约 70%",
+        "sort": 70.0,
+        "source": {
+          "label": "需要按任务/质量/延迟核验",
+          "url": ""
+        }
+      },
+      "product_type": {
+        "value": "模型部署与推理平台",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Baseten",
+        "url": "https://www.baseten.co/blog/announcing-our-series-f/"
+      },
+      {
+        "label": "公司商业化进入爆发期,但基数需核验",
+        "url": ""
+      },
+      {
+        "label": "客户质量强,覆盖 coding、legal、medical、enterprise apps",
+        "url": ""
+      },
+      {
+        "label": "AI-native 客户生产调用增长很快",
+        "url": ""
+      },
+      {
+        "label": "需要按任务/质量/延迟核验",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Databricks",
+    "short": "Databricks",
+    "slug": "databricks",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series L",
+    "latest_round_date": "2025-12",
+    "cells": {
+      "valuation": {
+        "value": "$134B",
+        "sort": 134.0,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/articles/databricks-is-raising-funds-at-134-billion-valuation-4a2efaea"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Revenue run-rate: 2025 年 7 月超过 $4B；2025 年 10 月超过 $4.8B",
+        "sort": 4.0,
+        "source": {
+          "label": "企业 AI 与数据平台需求强，且增长仍在加速",
+          "url": ""
+        }
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: 大型企业数据团队、AI/ML 团队、平台工程团队、BI/分析团队、金融/零售/制造/医疗/媒体/政府等大客户；年消费 $1M+ 客户: WSJ 口径约 650 个",
+        "sort": 0.001,
+        "source": {
+          "label": "大客户扩张能力强，但也带来集中度和采购周期风险",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "企业数据与 AI 平台、AI Agent 后端",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/articles/databricks-is-raising-funds-at-134-billion-valuation-4a2efaea"
+      },
+      {
+        "label": "企业 AI 与数据平台需求强，且增长仍在加速",
+        "url": ""
+      },
+      {
+        "label": "大客户扩张能力强，但也带来集中度和采购周期风险",
+        "url": ""
+      }
+    ],
+    "mega_valuation": true
+  },
+  {
+    "company": "Fireworks AI",
+    "short": "Fireworks AI",
+    "slug": "fireworks_ai",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "运营披露/采访",
+    "latest_round_date": "2026-04",
+    "cells": {
+      "valuation": {
+        "value": "$4B",
+        "sort": 4.0,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/articles/ai-inference-startup-fireworks-ai-is-valued-at-4-billion-in-funding-round-758885c8"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "2025 年 WSJ 报道 Fireworks ARR 超过 $280M",
+        "sort": 0.28,
+        "source": {
+          "label": "已经不是早期开发者工具,进入规模化商业阶段",
+          "url": ""
+        }
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: AI-native 应用、coding agent、search/research agent、语音/图像/多模态产品、企业内部模型团队；客户线索: Cursor 等 AI 公司使用 Fireworks 平台",
+        "sort": "",
+        "source": {
+          "label": "AI-native 客户可带来高增长,也可能集中度高、议价强",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "2026 BI 报道约 15T tokens/day,从 2025 年末约 10T/day、数月前约 13T/day 增长",
+        "sort": 2026.0,
+        "source": {
+          "label": "说明用量增长非常快,但收入/毛利与模型 mix、价格和 batch/dedicated 比例相关",
+          "url": ""
+        }
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "模型 API 与推理服务",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/articles/ai-inference-startup-fireworks-ai-is-valued-at-4-billion-in-funding-round-758885c8"
+      },
+      {
+        "label": "已经不是早期开发者工具,进入规模化商业阶段",
+        "url": ""
+      },
+      {
+        "label": "AI-native 客户可带来高增长,也可能集中度高、议价强",
+        "url": ""
+      },
+      {
+        "label": "说明用量增长非常快,但收入/毛利与模型 mix、价格和 batch/dedicated 比例相关",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Hugging Face",
+    "short": "Hugging Face",
+    "slug": "hugging_face",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "后续公开融资",
+    "latest_round_date": "2024-2026",
+    "cells": {
+      "valuation": {
+        "value": "$4.5B",
+        "sort": 4.5,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "法语公开资料称 2022 revenue $15M,计划 2024 超过 $100M",
+        "sort": 0.015,
+        "source": {
+          "label": "需要与公司财务核验,但可作早期商业化线索",
+          "url": ""
+        }
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "模型社区、开发者平台、托管推理",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion"
+      },
+      {
+        "label": "需要与公司财务核验,但可作早期商业化线索",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Mercor",
+    "short": "Mercor",
+    "slug": "mercor",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "企业/研究产品扩展",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "$10B",
+        "sort": 10.0,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/the-ai-startup-fueling-chatgpts-expertise-is-now-valued-at-10-billion-f1281e56"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Revenue run-rate: 官网 Enterprise 页面显示 $1B+ revenue run rate",
+        "sort": 1.0,
+        "source": {
+          "label": "非审计口径,但若成立,说明已超出传统早期 SaaS 规模,更接近 Scale AI/AI 数据服务大单模式",
+          "url": ""
+        }
+      },
+      "growth_multiple": {
+        "value": "Experts 页显示 average contracted rate $79/hr",
+        "sort": 79.0,
+        "source": {
+          "label": "供给端价格明显高于基础标注,定位专业数据和 expert work",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "Frontier AI labs、AI 应用公司、需要授权/评测/agent 化的企业客户",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Expert data 与 AI 训练服务",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/tech/ai/the-ai-startup-fueling-chatgpts-expertise-is-now-valued-at-10-billion-f1281e56"
+      },
+      {
+        "label": "非审计口径,但若成立,说明已超出传统早期 SaaS 规模,更接近 Scale AI/AI 数据服务大单模式",
+        "url": ""
+      },
+      {
+        "label": "供给端价格明显高于基础标注,定位专业数据和 expert work",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Modal",
+    "short": "Modal",
+    "slug": "modal",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "产品和客户扩展",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "媒体资料提到累计融资约 $23M",
+        "sort": 0.023,
+        "source": {
+          "label": "Business Insider",
+          "url": "https://www.businessinsider.com/ai-startups-most-promising-2024-9"
+        }
+      },
+      "arr_revenue": {
+        "value": "Usage-based compute by second + Team subscription + Enterprise custom contracts + committed spend through AWS/GCP marketplace",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "客户/案例: DoorDash、Cognition、Runway、Ramp、Substack、Suno、podcast/audio/transcription、bio/robotics/coding agent 等官方/媒体案例；Customers: 官方客…",
+        "sort": "",
+        "source": {
+          "label": "AI-native 和增长型团队采用",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "B200/H200/H100/A100/L40S/A10/L4/T4 按秒计费",
+        "sort": 200.0,
+        "source": {
+          "label": "与 AI workload 使用量直接绑定",
+          "url": ""
+        }
+      },
+      "margin_cost": {
+        "value": "B200/H200/H100/A100/L40S/A10/L4/T4 按秒计费",
+        "sort": 200.0,
+        "source": {
+          "label": "与 AI workload 使用量直接绑定",
+          "url": ""
+        }
+      },
+      "product_type": {
+        "value": "Serverless AI runtime",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Business Insider",
+        "url": "https://www.businessinsider.com/ai-startups-most-promising-2024-9"
+      },
+      {
+        "label": "AI-native 和增长型团队采用",
+        "url": ""
+      },
+      {
+        "label": "与 AI workload 使用量直接绑定",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Scale AI",
+    "short": "Scale AI",
+    "slug": "scale_ai",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Meta strategic investment",
+    "latest_round_date": "2025-06",
+    "cells": {
+      "valuation": {
+        "value": "约 $29B-$30B",
+        "sort": 30.0,
+        "source": {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/meta-pay-nearly-15-billion-scale-ai-stake-information-reports-2025-06-10/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "公开收入线索: 2024 revenue $870M 线索;2025 revenue target/forecast 约 $2B 线索;应用业务 $200M-$300M 线索",
+        "sort": 0.3,
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "主要客户/场景: Frontier model builders、Meta、OpenAI/Microsoft/Google 线索、CDAO/DoD、Mayo Clinic、TIME、BP、Cengage、robotics/autonomy；客户覆盖: 90%…",
+        "sort": 90.0,
+        "source": {
+          "label": "强势销售口径,需核验定义",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "数据标注、RLHF、模型评测",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Reuters",
+        "url": "https://www.reuters.com/business/meta-pay-nearly-15-billion-scale-ai-stake-information-reports-2025-06-10/"
+      },
+      {
+        "label": "强势销售口径,需核验定义",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Together AI",
+    "short": "Together AI",
+    "slug": "together_ai",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2025-02",
+    "cells": {
+      "valuation": {
+        "value": "约 $3.3B",
+        "sort": 3.3,
+        "source": {
+          "label": "Together",
+          "url": "https://www.together.ai/blog/announcing-our-series-c"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: AI-native 应用、开发者、企业模型团队、需要 open-source/private deployment 的组织；公开客户: Cognition、Decagon、ElevenLabs、Cursor、Suno 等由公司 2026 Seri…",
+        "sort": 2026.0,
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "Decagon 迁移到 Together 后 inference 成本降低 6x,公司称开放模型客户常见 6x-20x cost reduction",
+        "sort": 20.0,
+        "source": {
+          "label": "强销售叙事,需看任务口径与模型质量",
+          "url": ""
+        }
+      },
+      "product_type": {
+        "value": "Open model cloud、推理训练服务",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Together",
+        "url": "https://www.together.ai/blog/announcing-our-series-c"
+      },
+      {
+        "label": "强销售叙事,需看任务口径与模型质量",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "AlphaSense",
+    "short": "AlphaSense",
+    "slug": "alphasense",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "New funding",
+    "latest_round_date": "2026-06",
+    "cells": {
+      "valuation": {
+        "value": "$7.5B",
+        "sort": 7.5,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/business/entrepreneurship/market-research-firm-alphasense-clinches-7-5-billion-valuation-in-new-funding-round-bda34de4"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "金融/市场情报/专业研究",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "ARR / revenue: 公司 2026-06 公告:Q1 2026 ARR 超过 $600M,2025-10 为 $500M",
+        "sort": 2026.0,
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: 投行、PE、hedge funds、asset management、corporate strategy、competitive intelligence、IR、corp dev、consulting、life sciences、law fir…",
+        "sort": 7000.0,
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "金融合规/数据权限",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: 投行、PE、hedge funds、asset management、corporate strategy、competitive intelligence、IR、corp dev、consulting、life sciences、law fir…",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/business/entrepreneurship/market-research-firm-alphasense-clinches-7-5-billion-valuation-in-new-funding-round-bda34de4"
+      }
+    ]
+  },
+  {
+    "company": "Exa",
+    "short": "Exa",
+    "slug": "exa",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Singapore expansion",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "$700M",
+        "sort": 0.7,
+        "source": {
+          "label": "Ycombinator",
+          "url": "https://www.ycombinator.com/companies/exa"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: coding agents、chatbots、news monitoring、voice agents、people search、company search、enrichment、research agents、PE/consulting f…",
+        "sort": "",
+        "source": null
+      },
+      "data_scale": {
+        "value": "$1/1k pages per content type",
+        "sort": 1.0,
+        "source": {
+          "label": "把 crawl/extract/highlight 商品化",
+          "url": ""
+        }
+      },
+      "query_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "data_type": {
+        "value": "搜索 API、Agent 检索基础设施",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "permissions": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Ycombinator",
+        "url": "https://www.ycombinator.com/companies/exa"
+      },
+      {
+        "label": "把 crawl/extract/highlight 商品化",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Glean Technologies",
+    "short": "Glean Technologies",
+    "slug": "glean_technologies",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series F",
+    "latest_round_date": "2025-06",
+    "cells": {
+      "valuation": {
+        "value": "$7.2B",
+        "sort": 7.2,
+        "source": {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/technology/search-startup-gleans-valuation-hits-72-billion-ai-funding-boom-2025-06-10/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "累计融资: 按公开轮次相加至少约 $765M+",
+        "sort": 0.765,
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "约 $100M",
+        "sort": 0.1,
+        "source": {
+          "label": "Business Insider 2025 年 2 月报道,Glean fiscal year ARR 达 $100M,较年内早些时候 $50M 提升",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "Booking.com、Zillow、TIME、Ericsson、GCash、Rivian、Samsung、Vanta、Wealthsimple、Intercom、SeatGeek、Webflow、BetterUp、Intuit、Zapier、Canva、R…",
+        "sort": "",
+        "source": null
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "data_type": {
+        "value": "Enterprise Search、企业知识管理、Work AI",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "permissions": {
+        "value": "20k+ employees trained;2.7k+ agents",
+        "sort": 20.0,
+        "source": {
+          "label": "官网客户案例",
+          "url": ""
+        }
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Reuters",
+        "url": "https://www.reuters.com/technology/search-startup-gleans-valuation-hits-72-billion-ai-funding-boom-2025-06-10/"
+      },
+      {
+        "label": "Business Insider 2025 年 2 月报道,Glean fiscal year ARR 达 $100M,较年内早些时候 $50M 提升",
+        "url": ""
+      },
+      {
+        "label": "官网客户案例",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "GoLinks / GoSearch",
+    "short": "GoLinks",
+    "slug": "golinks_gosearch",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "GoSearch Free、MCP Server、ChatGPT App Store 等",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: IT、Engineering、HR、Sales、Marketing、Support、Design、Project Management 和全员知识工作者；客户线索: Asana、Anthropic、Sony AI、MongoDB、Chime、Ab…",
+        "sort": "",
+        "source": null
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "data_type": {
+        "value": "企业知识管理、内部搜索、GoSearch",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Enterprise: Custom，含 SSO/SAML/SCIM、audit log、BYO LLM/BYOC",
+        "sort": "",
+        "source": {
+          "label": "真正 ACV 增长来源",
+          "url": ""
+        }
+      },
+      "permissions": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "真正 ACV 增长来源",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Hebbia",
+    "short": "Hebbia",
+    "slug": "hebbia",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2024-07",
+    "cells": {
+      "valuation": {
+        "value": "约 $700M",
+        "sort": 0.7,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2024/07/09/hebbia-raises-130m-at-roughly-700m-valuation-on-13-million-of-profitable-revenue/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": ">$160M",
+        "sort": 0.16,
+        "source": {
+          "label": "Bloomberg/百科口径",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: asset managers、hedge funds、investment banks、private equity、credit funds、law firms、consulting/professional services、Fortune……",
+        "sort": "",
+        "source": null
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "data_type": {
+        "value": "企业知识检索、金融/法律研究工作流",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "permissions": {
+        "value": "ISO/IEC 42001:2023、SOC 2 Type II、end-to-end encryption、no training on user data、CCPA、GDPR",
+        "sort": 42001.0,
+        "source": {
+          "label": "官网",
+          "url": ""
+        }
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2024/07/09/hebbia-raises-130m-at-roughly-700m-valuation-on-13-million-of-profitable-revenue/"
+      },
+      {
+        "label": "Bloomberg/百科口径",
+        "url": ""
+      },
+      {
+        "label": "官网",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Perplexity AI",
+    "short": "Perplexity AI",
+    "slug": "perplexity_ai",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "二级市场/分析口径",
+    "latest_round_date": "2026 初",
+    "cells": {
+      "valuation": {
+        "value": "~$21B",
+        "sort": 21.0,
+        "source": {
+          "label": "VentureBeat",
+          "url": "https://venturebeat.com/ai/perplexity-lets-you-search-your-internal-enterprise-files-and-the-web/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "第三方估算约 $200M；2024 年底估算约 $80M",
+        "sort": 0.2,
+        "source": {
+          "label": "Sacra/PM Insights 等二级市场和分析口径，需要与公司财务模型核对",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "消费者、学生、知识工作者、企业团队、开发者、媒体/出版商、广告或内容合作方",
+        "sort": "",
+        "source": null
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "月查询量: 2025 年 5 月 780M queries",
+        "sort": 0.78,
+        "source": {
+          "label": "CEO 在 Bloomberg Tech Summit 透露，TechCrunch/维基汇总引用",
+          "url": ""
+        }
+      },
+      "data_type": {
+        "value": "答案引擎、AI 搜索、AI 浏览器",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Enterprise 组织数: 50,000+ organizations trust Perplexity Enterprise",
+        "sort": 50000.0,
+        "source": {
+          "label": "Perplexity Enterprise 官网页面",
+          "url": ""
+        }
+      },
+      "permissions": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "VentureBeat",
+        "url": "https://venturebeat.com/ai/perplexity-lets-you-search-your-internal-enterprise-files-and-the-web/"
+      },
+      {
+        "label": "Sacra/PM Insights 等二级市场和分析口径，需要与公司财务模型核对",
+        "url": ""
+      },
+      {
+        "label": "CEO 在 Bloomberg Tech Summit 透露，TechCrunch/维基汇总引用",
+        "url": ""
+      },
+      {
+        "label": "Perplexity Enterprise 官网页面",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Pinecone",
+    "short": "Pinecone",
+    "slug": "pinecone",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2023-04",
+    "cells": {
+      "valuation": {
+        "value": "约 $750M",
+        "sort": 0.75,
+        "source": {
+          "label": "PRNewswire",
+          "url": "https://www.prnewswire.com/news-releases/pinecone-raises-10m-seed-funding-and-launches-first-vector-database-for-machine-learning-301216112.html"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Self-serve plans、pay-as-you-go usage、enterprise minimum usage、committed-use contracts、BYOC、support/security add-ons",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "客户: Thousands of customers;官网列 Gong、Adobe、Cisco、Workday、L'Oreal、Microsoft、OpenAI、Zapier 等；代表客户: Gong、Adobe、Cisco、Workday、L'Oreal、…",
+        "sort": "",
+        "source": {
+          "label": "AI-native 与传统企业都有覆盖",
+          "url": ""
+        }
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "data_type": {
+        "value": "RAG 向量数据库、检索数据层",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "storage/read/write/egress/import/backup/assistant tokens/embedding/rerank",
+        "sort": "",
+        "source": {
+          "label": "收入与 RAG 应用使用量高度相关",
+          "url": ""
+        }
+      },
+      "permissions": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "PRNewswire",
+        "url": "https://www.prnewswire.com/news-releases/pinecone-raises-10m-seed-funding-and-launches-first-vector-database-for-machine-learning-301216112.html"
+      },
+      {
+        "label": "AI-native 与传统企业都有覆盖",
+        "url": ""
+      },
+      {
+        "label": "收入与 RAG 应用使用量高度相关",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Tavily",
+    "short": "Tavily",
+    "slug": "tavily",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "x402、LangChain Interrupt、Arcade.dev、Fieldway、Peerbound 等产品/案例更新",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: AI agents、research agents、enterprise enrichment、coding/research workflows、金融/销售/法律/咨询/企业自动化；公开客户/伙伴: Writer、MongoDB、Groq、La…",
+        "sort": "",
+        "source": null
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "300M+",
+        "sort": 0.3,
+        "source": {
+          "label": "已有生产流量，优于纯早期 API",
+          "url": ""
+        }
+      },
+      "data_type": {
+        "value": "搜索 API、Agent 检索基础设施",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Custom calls/rate limits/support/security",
+        "sort": "",
+        "source": {
+          "label": "ACV 和毛利关键",
+          "url": ""
+        }
+      },
+      "permissions": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "已有生产流量，优于纯早期 API",
+        "url": ""
+      },
+      {
+        "label": "ACV 和毛利关键",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Weaviate",
+    "short": "Weaviate",
+    "slug": "weaviate",
+    "sector": "数据与搜索",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "AI services、Engram、Query Agent",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "Cloud plans + dedicated/enterprise contracts + usage-based embeddings/query agent + support/onboarding/training",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: AI application teams、enterprise search、RAG、recommendation、agent memory、multi-tenant SaaS、financial/legal/healthcare/media/e…",
+        "sort": 9.0,
+        "source": null
+      },
+      "data_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "query_usage": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "data_type": {
+        "value": "RAG 向量数据库、检索数据层",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "Free/Flex/Premium/Dedicated",
+        "sort": "",
+        "source": {
+          "label": "自助到企业分层",
+          "url": ""
+        }
+      },
+      "permissions": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "proprietary_data": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "自助到企业分层",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Abridge",
+    "short": "Abridge",
+    "slug": "abridge",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series E / new financing",
+    "latest_round_date": "2025-06",
+    "cells": {
+      "valuation": {
+        "value": "$5.3B",
+        "sort": 5.3,
+        "source": {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/articles/abridge-whose-ai-app-takes-notes-for-doctors-valued-at-5-3-billion-at-funding-801825f3"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "公开报道口径约 $700M+ in 18 months / total raised varies by source",
+        "sort": 0.7,
+        "source": {
+          "label": "需用原始融资公告逐轮核验",
+          "url": ""
+        }
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: 大型 health systems、academic medical centers、社区医院、医生集团、护理团队、RCM/编码/CDI团队、未来可能覆盖 payer 和 life sciences；代表客户: Kaiser Permanente…",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "100M+ powered each year",
+        "sort": 0.1,
+        "source": {
+          "label": "Abridge 官网首页",
+          "url": ""
+        }
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: 大型 health systems、academic medical centers、社区医院、医生集团、护理团队、RCM/编码/CDI团队、未来可能覆盖 payer 和 life sciences",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "WSJ",
+        "url": "https://www.wsj.com/articles/abridge-whose-ai-app-takes-notes-for-doctors-valued-at-5-3-billion-at-funding-801825f3"
+      },
+      {
+        "label": "需用原始融资公告逐轮核验",
+        "url": ""
+      },
+      {
+        "label": "Abridge 官网首页",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Ambience Healthcare",
+    "short": "Ambience Healthcare",
+    "slug": "ambience_healthcare",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "C轮",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "Business Insider 报道 40+ health systems;官网和报道提及 Cleveland Clinic、Memorial Hermann、John Muir Health、St. Luke's 等",
+        "sort": 40.0,
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "Business Insider 报道 40+ health systems;官网和报道提及 Cleveland Clinic、Memorial Hermann、John Muir Health、St. Luke's 等",
+        "sort": 40.0,
+        "source": null
+      }
+    },
+    "source_links": []
+  },
+  {
+    "company": "Bioptimus",
+    "short": "Bioptimus",
+    "slug": "bioptimus",
+    "sector": "行业 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "FFCD 合作",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "最新融资: 2024 seed $35M;2025 total funding milestone $76M",
+        "sort": 0.035,
+        "source": null
+      },
+      "vertical": {
+        "value": "生命科学/药物发现",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "Top pharma、biotech、cancer centers、clinical research networks、科研机构、数字病理/转化医学团队",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "研发验证/药物监管",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "Top pharma、biotech、cancer centers、clinical research networks、科研机构、数字病理/转化医学团队",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": []
+  },
+  {
+    "company": "Commure / Athelas",
+    "short": "Commure",
+    "slug": "commure_athelas",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "新融资",
+    "latest_round_date": "2026-05",
+    "cells": {
+      "valuation": {
+        "value": "$7B",
+        "sort": 7.0,
+        "source": {
+          "label": "Commure",
+          "url": "https://www.commure.com/press-releases/commure-raises-70m-at-7b-valuation-to-transform-healthcare-operations-using-ai"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "up to 20% collections increase、53% timely filing denial decrease、350+ documentation hours saved/year",
+        "sort": 350.0,
+        "source": {
+          "label": "公司 case/press materials",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "代表客户/Logo: HCA Healthcare、Tenet Healthcare、CommonSpirit、Dignity Health、Sutter Health、UCSF、Intermountain、Jefferson Health、CVS Heal…",
+        "sort": 500.0,
+        "source": {
+          "label": "2026-05 press release",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "up to 20% collections increase、53% timely filing denial decrease、350+ documentation hours saved/year",
+        "sort": 350.0,
+        "source": {
+          "label": "公司 case/press materials",
+          "url": ""
+        }
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "HCA Healthcare、Tenet Healthcare、CommonSpirit、Dignity Health、Sutter Health、UCSF、Intermountain、Jefferson Health、CVS Health、Northwel…",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Commure",
+        "url": "https://www.commure.com/press-releases/commure-raises-70m-at-7b-valuation-to-transform-healthcare-operations-using-ai"
+      },
+      {
+        "label": "公司 case/press materials",
+        "url": ""
+      },
+      {
+        "label": "2026-05 press release",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Corgi",
+    "short": "Corgi",
+    "slug": "corgi",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B1",
+    "latest_round_date": "2026-05/06",
+    "cells": {
+      "valuation": {
+        "value": "$2.6B",
+        "sort": 2.6,
+        "source": {
+          "label": "Business Insider",
+          "url": "https://www.businessinsider.com/corgi-founder-explains-work-culture-7-days-week-sleeps-office-2026-6"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "保险",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: Pre-seed/Seed、Series A、Growth Stage 科技创业公司，尤其是需要快速满足企业客户合同保险要求的 AI/startup 团队；客户线索: Bland、Origami、AthenaHQ、Eragon、Series、So…",
+        "sort": "",
+        "source": {
+          "label": "Corgi 官网",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "保险牌照/承保合规",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: Pre-seed/Seed、Series A、Growth Stage 科技创业公司，尤其是需要快速满足企业客户合同保险要求的 AI/startup 团队",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Business Insider",
+        "url": "https://www.businessinsider.com/corgi-founder-explains-work-culture-7-days-week-sleeps-office-2026-6"
+      },
+      {
+        "label": "Corgi 官网",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Enveda Biosciences",
+    "short": "Enveda Biosciences",
+    "slug": "enveda_biosciences",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "IPO 状态",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "生命科学/药物发现",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "研发验证/药物监管",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": []
+  },
+  {
+    "company": "EvolutionaryScale",
+    "short": "EvolutionaryScale",
+    "slug": "evolutionaryscale",
+    "sector": "行业 AI",
+    "layers": [
+      "模型层"
+    ],
+    "latest_round": "ESM API / GitHub 生态迁移线索",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "生命科学/药物发现",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "没有清晰公开药企客户名单",
+        "sort": "",
+        "source": {
+          "label": "需从后续 case study/partner announcement 核验",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "研发验证/药物监管",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "没有清晰公开药企客户名单",
+        "sort": "",
+        "source": {
+          "label": "需从后续 case study/partner announcement 核验",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "需从后续 case study/partner announcement 核验",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Harvey",
+    "short": "Harvey",
+    "slug": "harvey",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "New round",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "~$11B",
+        "sort": 11.0,
+        "source": {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-valued-at-11-billion-in-funding-round.html"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "法律",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "ARR / revenue: 2026 年 Business Insider 报道 Harvey 已跨过 $200M ARR;2025 年公开资料显示约 $100M ARR/更高 run-rate 不同口径并存",
+        "sort": 0.2,
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: 大型律所、精品律所、公司法务、投行/PE/专业服务、税务/监管/交易/诉讼团队；官方客户/案例: A&O Shearman、PwC UK、KKR、Bridgewater、Deutsche Telekom、Repsol、Syngenta、CMS、D…",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "律师责任/客户保密",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: 大型律所、精品律所、公司法务、投行/PE/专业服务、税务/监管/交易/诉讼团队",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "CNBC",
+        "url": "https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-valued-at-11-billion-in-funding-round.html"
+      }
+    ]
+  },
+  {
+    "company": "Hippocratic AI",
+    "short": "Hippocratic AI",
+    "slug": "hippocratic_ai",
+    "sector": "行业 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2025-01",
+    "cells": {
+      "valuation": {
+        "value": "约 $1.64B",
+        "sort": 1.64,
+        "source": {
+          "label": "Business Wire",
+          "url": "https://www.businesswire.com/news/home/20230516005589/en/Hippocratic-AI-Launches-with-%2450-Million-in-Seed-Funding"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "公开规模指标: 1,000+ healthcare agents;200M+ patient interactions;7,500+ licensed clinicians;725K+ test calls;官网列示 $404M total raised",
+        "sort": 0.404,
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "客户类别: Provider、Payor、Pharma；Licensed clinicians in testing: 7,500+",
+        "sort": 7500.0,
+        "source": {
+          "label": "公司官网",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "7,500+",
+        "sort": 7500.0,
+        "source": {
+          "label": "公司官网",
+          "url": ""
+        }
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "12x average ROI across use cases",
+        "sort": 12.0,
+        "source": {
+          "label": "公司官网",
+          "url": ""
+        }
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "Provider、Payor、Pharma",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Business Wire",
+        "url": "https://www.businesswire.com/news/home/20230516005589/en/Hippocratic-AI-Launches-with-%2450-Million-in-Seed-Funding"
+      },
+      {
+        "label": "公司官网",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Insilico Medicine",
+    "short": "Insilico Medicine",
+    "slug": "insilico_medicine",
+    "sector": "行业 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Takeda collaboration",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "2021 Series C $255M;2022 Series D $60M;上市前累计融资公开资料超过 $400M",
+        "sort": 0.255,
+        "source": {
+          "label": "TechCrunch/FT/公开资料",
+          "url": ""
+        }
+      },
+      "vertical": {
+        "value": "生命科学/药物发现",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "研发验证/药物监管",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch/FT/公开资料",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Isomorphic Labs",
+    "short": "Isomorphic Labs",
+    "slug": "isomorphic_labs",
+    "sector": "行业 AI",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "IPO 状态",
+    "latest_round_date": "2026",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "生命科学/药物发现",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "研发验证/药物监管",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": []
+  },
+  {
+    "company": "Legora",
+    "short": "Legora",
+    "slug": "legora",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series D extension / Australian report",
+    "latest_round_date": "2026-05",
+    "cells": {
+      "valuation": {
+        "value": "$5.6B",
+        "sort": 5.6,
+        "source": {
+          "label": "Business Insider",
+          "url": "https://www.businessinsider.com/cooley-go-lab-legora-y-combinator-2026-6"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "法律",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "ARR: 2026-04 BI: $100M ARR,从 $1M 到 $100M 用不到 18 个月",
+        "sort": 2026.0,
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: 大型律所、精品律所、企业法务、交易/监管/诉讼/合同团队、初创公司法律服务门户；公开客户: Cleary Gottlieb、HSF Kramer、White & Case、Linklaters、Deloitte、Cooley、MinterElli…",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "律师责任/客户保密",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "ROI 指标: The Australian: clients report saving average 4.3 non-billable hours per lawyer per week;42% users report helping win new…",
+        "sort": 42.0,
+        "source": {
+          "label": "The Australian",
+          "url": ""
+        }
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: 大型律所、精品律所、企业法务、交易/监管/诉讼/合同团队、初创公司法律服务门户",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "Business Insider",
+        "url": "https://www.businessinsider.com/cooley-go-lab-legora-y-combinator-2026-6"
+      },
+      {
+        "label": "The Australian",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Nabla",
+    "short": "Nabla",
+    "slug": "nabla",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "战略融资",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "客户规模: 官网披露 deployed in 190+ health organizations,loved by 100,000 clinicians；代表客户/案例: University of Iowa Health Care、McFarland Cl…",
+        "sort": 100000.0,
+        "source": null
+      },
+      "usage_scale": {
+        "value": "100,000",
+        "sort": 100000.0,
+        "source": {
+          "label": "官网",
+          "url": ""
+        }
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "客户规模: 官网披露 deployed in 190+ health organizations,loved by 100,000 clinicians",
+        "sort": 100000.0,
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "官网",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "OpenEvidence",
+    "short": "OpenEvidence",
+    "slug": "openevidence",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series D",
+    "latest_round_date": "2026-01",
+    "cells": {
+      "valuation": {
+        "value": "约 $12B",
+        "sort": 12.0,
+        "source": {
+          "label": "NY Post",
+          "url": "https://nypost.com/2026/01/21/business/ai-startup-openevidence-doubles-valuation-to-12b-in-latest-funding-round/"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "媒体报道曾提到约 $100M annualized revenue / run-rate",
+        "sort": 0.1,
+        "source": {
+          "label": "媒体报道",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "注册美国医生: 2025 年中媒体/资料显示超过 430K;2025 年底约 760K；医生端价格: verified U.S. HCP 免费",
+        "sort": 2025.0,
+        "source": {
+          "label": "媒体与公开资料",
+          "url": ""
+        }
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "商业化方向: 医生端免费;收入主要来自医疗广告、赞助、医学内容合作、药企/生命科学企业触达医生的合规渠道,未来也可能延伸 enterprise / health-system contract",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "NY Post",
+        "url": "https://nypost.com/2026/01/21/business/ai-startup-openevidence-doubles-valuation-to-12b-in-latest-funding-round/"
+      },
+      {
+        "label": "媒体报道",
+        "url": ""
+      },
+      {
+        "label": "媒体与公开资料",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Rogo",
+    "short": "Rogo",
+    "slug": "rogo",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2025-04",
+    "cells": {
+      "valuation": {
+        "value": "$350M",
+        "sort": 0.35,
+        "source": {
+          "label": "FT",
+          "url": "https://www.ft.com/content/045dac3f-eb78-469d-a3ef-3495aefa6e8f"
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "金融/投研工作流",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "目标客户: investment banks、asset managers、private equity、hedge funds、financial sponsors、equity research、credit investors、corporate fi…",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "金融合规/数据权限",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: investment banks、asset managers、private equity、hedge funds、financial sponsors、equity research、credit investors、corporate fi…",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "FT",
+        "url": "https://www.ft.com/content/045dac3f-eb78-469d-a3ef-3495aefa6e8f"
+      }
+    ]
+  },
+  {
+    "company": "Suki",
+    "short": "Suki",
+    "slug": "suki",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "管理层补强",
+    "latest_round_date": "2025",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "$1,688 average monthly revenue per user",
+        "sort": 1688.0,
+        "source": {
+          "label": "2025/2026 press releases",
+          "url": ""
+        }
+      },
+      "customers": {
+        "value": "目标客户: health systems、clinicians、EHR/healthtech partners、care management platforms、telehealth/care coordination vendors；Healthcare…",
+        "sort": 400.0,
+        "source": {
+          "label": "Suki 官网",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "HIPAA/临床安全/EHR",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "up to 76% in early Sevocity deployments",
+        "sort": 76.0,
+        "source": {
+          "label": "2026 Sevocity press release",
+          "url": ""
+        }
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "health systems、clinicians、EHR/healthtech partners、care management platforms、telehealth/care coordination vendors",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "2025/2026 press releases",
+        "url": ""
+      },
+      {
+        "label": "Suki 官网",
+        "url": ""
+      },
+      {
+        "label": "2026 Sevocity press release",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "AIsphere / 爱诗科技 / PixVerse",
+    "short": "AIsphere",
+    "slug": "aisphere_爱诗科技_pixverse",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "C 轮",
+    "latest_round_date": "2026-03",
+    "cells": {
+      "valuation": {
+        "value": "$1.0B",
+        "sort": 1.0,
+        "source": {
+          "label": "AIsphere C 轮公告",
+          "url": "https://mp.weixin.qq.com/s/dapuwBFEa9u6VjKhg3ZSGQ"
+        }
+      },
+      "latest_raise": {
+        "value": "S&P 口径 $300M；官网未在抓取文本中披露金额",
+        "sort": 0.3,
+        "source": {
+          "label": "AIsphere C 轮公告",
+          "url": "https://mp.weixin.qq.com/s/dapuwBFEa9u6VjKhg3ZSGQ"
+        }
+      },
+      "total_funding": {
+        "value": "$443.3M",
+        "sort": 0.4433,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "ARR: 超 $40M",
+        "sort": 0.04,
+        "source": {
+          "label": "AIsphere 官网里程碑",
+          "url": ""
+        }
+      },
+      "user_scale": {
+        "value": "用户规模: 2025-08 平台用户突破 1 亿；2025-01 用户: 全球用户数超 3000 万",
+        "sort": 2025.0,
+        "source": {
+          "label": "AIsphere 官网里程碑",
+          "url": ""
+        }
+      },
+      "enterprise_customers": {
+        "value": "Fal、OpenArt、Freepik、AIBY、科大讯飞、思为等",
+        "sort": "",
+        "source": {
+          "label": "AIsphere 官网",
+          "url": ""
+        }
+      },
+      "media": {
+        "value": "AI 视频生成、世界模型、创作工具/API",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "AIsphere C 轮公告",
+        "url": "https://mp.weixin.qq.com/s/dapuwBFEa9u6VjKhg3ZSGQ"
+      },
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "AIsphere 官网里程碑",
+        "url": ""
+      },
+      {
+        "label": "AIsphere 官网",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "GigaAI / 极佳视界",
+    "short": "GigaAI",
+    "slug": "gigaai_极佳视界",
+    "sector": "多模态与内容生成",
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series B",
+    "latest_round_date": "2026-06-15",
+    "cells": {
+      "valuation": {
+        "value": "$1.48B",
+        "sort": 1.48,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$147.8M",
+        "sort": 0.14780000000000001,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$547.9M",
+        "sort": 0.5478999999999999,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "user_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "enterprise_customers": {
+        "value": "20+ 签约量产交付表述",
+        "sort": 20.0,
+        "source": {
+          "label": "官网打包页面文本",
+          "url": ""
+        }
+      },
+      "media": {
+        "value": "具身智能、世界模型、机器人/自动驾驶仿真",
+        "sort": "",
+        "source": null
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "output_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "legal_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "model_app": {
+        "value": "模型 / 应用",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "官网打包页面文本",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "United Imaging Intelligence / 联影智能",
+    "short": "United Imaging Intelligence",
+    "slug": "united_imaging_intelligence_联影智能",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series A",
+    "latest_round_date": "2024-12-21",
+    "cells": {
+      "valuation": {
+        "value": "$1.39B",
+        "sort": 1.39,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$139.3M",
+        "sort": 0.1393,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "vertical": {
+        "value": "医疗影像/医院 AI",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Terminus / 特斯联",
+    "short": "Terminus",
+    "slug": "terminus_特斯联",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series D",
+    "latest_round_date": "2025-01-31",
+    "cells": {
+      "valuation": {
+        "value": "$2.98B",
+        "sort": 2.98,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$89.6M",
+        "sort": 0.0896,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$996.3M",
+        "sort": 0.9963,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "vertical": {
+        "value": "AIoT/空间智能",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "官网未系统披露",
+        "sort": "",
+        "source": {
+          "label": "案例、招投标",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "官网未系统披露",
+        "sort": "",
+        "source": {
+          "label": "案例、招投标",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "案例、招投标",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Neuracle / 博睿康",
+    "short": "Neuracle",
+    "slug": "neuracle_博睿康",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series D",
+    "latest_round_date": "2026-02-05",
+    "cells": {
+      "valuation": {
+        "value": "$571.9M",
+        "sort": 0.5719,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "total_funding": {
+        "value": "$75.9M",
+        "sort": 0.07590000000000001,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "vertical": {
+        "value": "脑机接口/神经科技",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "2026 年报道提到中国脑芯片获批销售",
+        "sort": 2026.0,
+        "source": {
+          "label": "WIRED",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "WIRED",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Semi-tech / 赛美特",
+    "short": "Semi-tech",
+    "slug": "semi_tech_赛美特",
+    "sector": "行业 AI",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series D",
+    "latest_round_date": "2026-03-31",
+    "cells": {
+      "valuation": {
+        "value": "$793.0M",
+        "sort": 0.793,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$58.0M",
+        "sort": 0.058,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$272.8M",
+        "sort": 0.2728,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "vertical": {
+        "value": "工业软件/半导体制造",
+        "sort": "",
+        "source": null
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "840+ 制造企业",
+        "sort": 840.0,
+        "source": {
+          "label": "官网",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "compliance": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "roi": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "840+ 制造企业",
+        "sort": 840.0,
+        "source": {
+          "label": "官网",
+          "url": ""
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "官网",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Enflame / 燧原科技",
+    "short": "Enflame",
+    "slug": "enflame_燧原科技",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "S&P 最新轮次字段",
+    "latest_round_date": "2026-01-30",
+    "cells": {
+      "valuation": {
+        "value": "约 $1.65B",
+        "sort": 1.65,
+        "source": {
+          "label": "SiliconAngle",
+          "url": "https://siliconangle.com/2023/09/28/chinese-ai-chipmaker-enflame-raises-237m-series-d-funding-round/"
+        }
+      },
+      "latest_raise": {
+        "value": "$14.4M",
+        "sort": 0.0144,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$1.62B",
+        "sort": 1.62,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "$137.8M",
+        "sort": 0.1378,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "面向通用并行计算",
+        "sort": "",
+        "source": {
+          "label": "对标 Nvidia GPU 生态",
+          "url": ""
+        }
+      },
+      "margin_cost": {
+        "value": "面向通用并行计算",
+        "sort": "",
+        "source": {
+          "label": "对标 Nvidia GPU 生态",
+          "url": ""
+        }
+      },
+      "product_type": {
+        "value": "AI 芯片、GPGPU、国产算力",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "SiliconAngle",
+        "url": "https://siliconangle.com/2023/09/28/chinese-ai-chipmaker-enflame-raises-237m-series-d-funding-round/"
+      },
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "对标 Nvidia GPU 生态",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Sunrise AI / 曦望智能",
+    "short": "Sunrise AI",
+    "slug": "sunrise_ai_曦望智能",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Venture / 融资",
+    "latest_round_date": "2026-04-20",
+    "cells": {
+      "valuation": {
+        "value": "$1.47B",
+        "sort": 1.47,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$146.7M",
+        "sort": 0.1467,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$1.15B",
+        "sort": 1.15,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "面向 AI 推理芯片",
+        "sort": "",
+        "source": {
+          "label": "核心硬件资产，需核验制程、显存、互联、能效",
+          "url": ""
+        }
+      },
+      "margin_cost": {
+        "value": "面向 AI 推理芯片",
+        "sort": "",
+        "source": {
+          "label": "核心硬件资产，需核验制程、显存、互联、能效",
+          "url": ""
+        }
+      },
+      "product_type": {
+        "value": "AI 推理 GPU、国产算力、算力平台",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      },
+      {
+        "label": "核心硬件资产，需核验制程、显存、互联、能效",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "ADA Space / 国星宇航",
+    "short": "ADA Space",
+    "slug": "ada_space_国星宇航",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Mature / 后期融资",
+    "latest_round_date": "2026-05-14",
+    "cells": {
+      "valuation": {
+        "value": "$1.69B",
+        "sort": 1.69,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$521.3M",
+        "sort": 0.5213,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$761.4M",
+        "sort": 0.7614,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "商业航天、遥感数据、星上 AI 计算",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "company": "Origin Quantum / 本源量子",
+    "short": "Origin Quantum",
+    "slug": "origin_quantum_本源量子",
+    "sector": "AI 基础设施与数据平台",
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Mature / 后期融资",
+    "latest_round_date": "2026-06-08",
+    "cells": {
+      "valuation": {
+        "value": "$3.54B",
+        "sort": 3.54,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "latest_raise": {
+        "value": "$442.5M",
+        "sort": 0.4425,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "total_funding": {
+        "value": "$626.1M",
+        "sort": 0.6261,
+        "source": {
+          "label": "S&P Global 本地工作簿",
+          "url": ""
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "growth_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "margin_cost": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "量子计算、量子云、前沿计算基础设施",
+        "sort": "",
+        "source": null
+      },
+      "customer_concentration": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "substitution_risk": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "S&P Global 本地工作簿",
+        "url": ""
+      }
+    ]
+  }
+]

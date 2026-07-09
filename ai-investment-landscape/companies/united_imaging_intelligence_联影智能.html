@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>United Imaging Intelligence / 联影智能 · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">中国上海</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.uii-ai.com/" target="_blank" rel="noopener">United Imaging Intelligence / 联影智能</a></h1>
+    <div class="dc-oneliner">联影智能是联影集团生态里的医疗 AI 平台公司，产品覆盖医疗影像 AI、院级工作流、科研平台、质控、筛查和“元智”医疗级多模态大模型。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>联影智能是联影集团生态里的医疗 AI 平台公司，产品覆盖医疗影像 AI、院级工作流、科研平台、质控、筛查和“元智”医疗级多模态大模型。</p>
+<p>它的业务质量可能比很多早期医疗 AI 公司更扎实，因为有设备生态、证照、医院渠道和真实临床场景。但从你之前的筛选标准看，S&P 最新轮次是 Series A，严格说不满足“最新轮次至少 A+”；同时它与上市公司联影医疗生态关系密切，不能简单当作独立私募公司处理。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/交易方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2017 年底</td><td>公司成立</td><td>-</td><td>-</td><td>联影生态相关主体</td><td>官网披露成立于 2017 年底；不是融资事件</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2024-12-21</td><td>Series A</td><td>$139.3M</td><td>$1.39B post-money</td><td>未披露</td><td>S&P Global 工作簿口径；未找到公开报道可直接证明该轮金额/估值</td><td>S&P Global 本地工作簿</td></tr></tbody></table></div>
+<p>融资观察：</p>
+<ul><li>S&P 口径显示最新轮为 Series A，若严格执行“Series A 或更早不用看，至少 A+”，联影智能应被剔除。</li><li>公开资料可以很好证明产品、证照和医院覆盖，但没有找到独立融资公开报道。</li><li>联影智能和上市联影医疗之间的股权/业务边界需要以工商和母公司公告核验。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Shanghai United Imaging Intelligent Medical Technology Co., Ltd. / 联影智能</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">官网披露 2017 年底</td></tr><tr><td class="kv-key">总部/主体</td><td class="kv-val">中国上海</td></tr><tr><td class="kv-key">四层分类</td><td class="kv-val">应用层</td></tr><tr><td class="kv-key">子赛道</td><td class="kv-val">医疗 AI、影像 AI、医疗大模型、医院智能体</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">“元智”医疗级多模态大模型、100+ 医疗 AI 产品、10+ 智能体、全流程医疗 AI 方案</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">医院、影像科、肿瘤/神经/心血管/骨科等临床科室、科研平台</td></tr><tr><td class="kv-key">最新融资/估值</td><td class="kv-val">S&P 口径：2024-12 Series A，$139.3M，post-money $1.39B</td></tr><tr><td class="kv-key">当前阶段</td><td class="kv-val">联影生态内公司；是否独立私募标的需核验</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式</h2>
+<h3 class="subsection">4.1 医院端 AI 软件和解决方案</h3>
+<p>联影智能面向医院提供影像 AI、诊断辅助、工作流优化、质控、筛查和科研平台。收入可能来自软件授权、设备配套、项目部署和维护服务。</p>
+<h3 class="subsection">4.2 设备生态协同</h3>
+<p>联影医疗的设备渠道能帮助 AI 产品进入医院，但也会带来独立性问题：需要判断联影智能收入是独立软件付费，还是设备销售的配套能力。</p>
+<h3 class="subsection">4.3 医疗大模型和智能体</h3>
+<p>“元智”医疗级多模态大模型和 10+ 智能体说明公司在从传统影像 AI 扩展到医疗大模型应用。真正价值在于能否进入医生工作流和医院收费路径。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>功能</th><th>投资解读</th></tr></thead><tbody><tr><td>元智医疗级多模态大模型</td><td>医疗场景多模态理解和生成</td><td>医疗大模型叙事核心</td></tr><tr><td>100+ 医疗 AI 产品</td><td>覆盖肿瘤、神经、心血管、骨科等</td><td>产品矩阵广</td></tr><tr><td>10+ 智能体</td><td>临床/科研/运营智能体</td><td>需要验证真实使用频次</td></tr><tr><td>NMPA / CE / FDA 证照</td><td>官网披露多项三类证和国际证照</td><td>医疗 AI 商业化门槛</td></tr><tr><td>医院部署</td><td>官网披露全球 4000+ 医院、服务 4 亿+ 人次</td><td>渠道和规模优势</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营数据</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>来源</th><th>可信度</th></tr></thead><tbody><tr><td>最新 post-money 估值</td><td>$1.39B</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>最新融资金额</td><td>$139.3M</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>医疗 AI 产品</td><td>100+</td><td>联影智能官网</td><td>中高</td></tr><tr><td>智能体数量</td><td>10+</td><td>联影智能官网</td><td>中</td></tr><tr><td>NMPA 三类证</td><td>17 项</td><td>联影智能 About</td><td>中</td></tr><tr><td>CE 证</td><td>31 项</td><td>联影智能 About</td><td>中</td></tr><tr><td>FDA 证</td><td>15 项</td><td>联影智能 About</td><td>中</td></tr><tr><td>医院覆盖</td><td>4000+</td><td>联影智能 About</td><td>中</td></tr><tr><td>服务人次</td><td>4 亿+</td><td>联影智能 About</td><td>中</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>竞争格局</h2>
+<ul><li>医疗影像 AI：推想医疗、数坤科技、深睿医疗、医准智能等。</li><li>医疗设备大厂 AI：GE HealthCare、Siemens Healthineers、Philips、联影医疗生态。</li><li>医院自研/科研转化：三甲医院和高校联合实验室。</li></ul>
+<p>联影智能优势是设备生态和证照覆盖，风险是独立平台化和非联影设备兼容能力需要验证。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>资本化/IPO 状态备注</h2>
+<ul><li>S&P 最新轮为 Series A，严格不满足“最新轮次至少 A+”标准。</li><li>与上市公司联影医疗生态关系密切，建议标为“联影生态内医疗 AI 公司/边界观察”，而不是标准独立 private 标的。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>投资方结构</h2>
+<ul><li>S&P 当前抽取字段未披露投资方。</li><li>公开检索没有找到 2024 Series A 对应投资方报道。</li></ul>
+</section>
+<section class="section" id="sec-12">
+<h2 class="section-title"><span class="sec-num">12</span>研究结论</h2>
+<ul><li>Base case：联影智能是医疗 AI 质量较高的边界样本，但严格筛选口径下应因 Series A 和联影生态关系被谨慎处理。</li><li>Bull case：医疗大模型和智能体进入真实临床流程，证照和设备渠道带来强商业化能力。</li><li>Bear case：AI 软件仍是设备生态配套，独立收入和付费意愿不足。</li></ul>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="bioptimus.html">Bioptimus</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="evolutionaryscale.html">EvolutionaryScale</a></div>
+</div>
+</body></html>

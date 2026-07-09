@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perplexity AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 数据与搜索</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#fff7ed;color:#c2410c">数据与搜索</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity AI</a></h1>
+    <div class="dc-oneliner">Perplexity 是 AI 搜索入口、可引用答案引擎、浏览器和搜索 API 的复合型公司。它围绕“检索、阅读、引用、研究和浏览器内行动”重构搜索，而不是做通用办公 Agent 或代码 Agent。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Perplexity 是 AI 搜索入口、可引用答案引擎、浏览器和搜索 API 的复合型公司。它围绕“检索、阅读、引用、研究和浏览器内行动”重构搜索，而不是做通用办公 Agent 或代码 Agent。</strong></p>
+<p>2024-2026 年，公司估值从约 $520M 快速提升到 $18B-$20B+ 区间。公开运营线索包括 2025 年 5 月 780M queries、约 30M daily queries、20%+ MoM query growth，以及第三方估算的 2026 年约 $200M ARR。投资关键是它能否把高频问答流量转化为 Pro/Max/Enterprise/API/Comet Plus 收入，同时处理内容授权、爬虫合规、推理成本和 Google/OpenAI/Anthropic 的入口竞争。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资者/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2023-03</td><td>Series A / early round</td><td>$25.6M-$26M 左右</td><td>未给出稳定口径</td><td>New Enterprise Associates、Elad Gil、Nat Friedman、Bob Muglia、Databricks 等</td><td>早期定位为 AI answer engine</td><td><a href="https://techcrunch.com/2023/04/05/ai-powered-search-engine-perplexity-ai-lands-26m-launches-ios-app/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2024-01</td><td>Series B</td><td>$73.6M</td><td>~$520M</td><td>IVP 领投，Nvidia、Jeff Bezos、Databricks、Bessemer、Tobi Lutke、Naval Ravikant 等</td><td>公司累计融资约 $100M+</td><td><a href="https://www.reuters.com/technology/ai-firm-perplexity-ai-valued-520-mln-funding-bezos-nvidia-2024-01-04/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td>2024-04</td><td>后续融资</td><td>~$62.7M</td><td>>$1B</td><td>Daniel Gross、Stanley Druckenmiller、Y Combinator、Nvidia、Jeff Bezos 等报道口径</td><td>正式跨入独角兽区间</td><td><a href="https://venturebeat.com/ai/perplexity-lets-you-search-your-internal-enterprise-files-and-the-web/" target="_blank" rel="noopener">VentureBeat</a></td></tr><tr><td>2024-12</td><td>大额融资</td><td>~$500M</td><td>~$9B</td><td>IVP 领投等报道口径</td><td>AI search 估值快速重估</td><td><a href="https://www.ft.com/content/d4fb70f9-b971-433b-884c-2f01d1d08968" target="_blank" rel="noopener">FT</a></td></tr><tr><td>2025-05/06</td><td>新轮接近完成</td><td>~$500M 报道</td><td>~$14B</td><td>Accel、IVP、Nvidia 等口径</td><td>Reuters/WSJ 报道</td><td><a href="https://www.reuters.com/technology/ai-firm-perplexity-eyes-14-billion-valuation-fresh-funding-round-wsj-reports-2025-05-12/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td>2025-07</td><td>后续融资</td><td>~$100M 报道</td><td>~$18B</td><td>未完整公开</td><td>FT/Bloomberg 报道口径</td><td><a href="https://www.ft.com/content/4e05a5c5-84ad-4f8a-991a-d7f3842de76d" target="_blank" rel="noopener">FT</a></td></tr><tr><td>2025-09</td><td>后续轮</td><td>~$200M 报道</td><td>~$20B</td><td>SoftBank、Nvidia 等报道口径</td><td>The Information/Reuters 二手转载</td><td><a href="https://www.reuters.com/technology/ai-firm-perplexity-eyes-14-billion-valuation-fresh-funding-round-wsj-reports-2025-05-12/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td>2026 初</td><td>二级市场/分析口径</td><td>未形成官方融资公告</td><td>~$21B 区间</td><td>PM Insights/Sacra 等</td><td>需要用二级成交、409A 或公司文件核验</td><td><a href="https://venturebeat.com/ai/perplexity-lets-you-search-your-internal-enterprise-files-and-the-web/" target="_blank" rel="noopener">VentureBeat</a></td></tr></tbody></table></div>
+<p>融资节奏反映了 AI 应用层估值范式的快速变化。2024 年初 $520M 的 Perplexity 还是“Google challenger”；到 2025 年 $14B-$20B 区间时，投资人定价的已是“AI search + browser + agent infrastructure + strategic distribution”。估值跳升的真正支撑不是当前 ARR，而是:</p>
+<ul><li>高频搜索入口可能带来巨大的 consumer habit。</li><li>Search/API 可被其他 AI agents 调用，成为基础设施。</li><li>Comet/Computer 让 Perplexity 有机会控制浏览器上下文。</li><li>与内容出版商的分成机制若成立，可以缓解数据供给约束。</li><li>Nvidia、Databricks、Jeff Bezos、IVP、Accel 等投资者提供品牌与生态背书。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Perplexity AI, Inc.</td></tr><tr><td class="kv-key">成立</td><td class="kv-val">2022 年 8 月</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Francisco, California</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Aravind Srinivas、Denis Yarats、Johnny Ho、Andy Konwinski</td></tr><tr><td class="kv-key">CEO</td><td class="kv-val">Aravind Srinivas</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI answer engine、AI search、Comet AI browser、Sonar/API search infrastructure</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Perplexity Free/Pro/Max、Enterprise、Comet Browser、Comet Plus、Sonar API、Search API、Agent API、Deep Research、Assistant/Computer</td></tr><tr><td class="kv-key">商业客户</td><td class="kv-val">消费者、学生、知识工作者、企业团队、开发者、媒体/出版商、广告或内容合作方</td></tr><tr><td class="kv-key">最新估值线索</td><td class="kv-val">2025 年中 $14B-$18B，2025 年 9 月约 $20B，2026 年二级市场/第三方估算约 $21B</td></tr><tr><td class="kv-key">公开运营指标</td><td class="kv-val">2025 年 5 月 780M queries，约 30M daily queries，20%+ MoM query growth；Enterprise 页面称 50,000+ organizations trust Perplexity Enterprise</td></tr><tr><td class="kv-key">IPO/上市状态</td><td class="kv-val">仍为私人公司；更像后期私募/战略入口资产，未见正式 IPO 文件</td></tr></tbody></table></div>
+<p>Perplexity 的本质是搜索入口再包装: 用户不是在搜索框里拿到蓝色链接，而是在一个有引用、有多模型路由、有追问和工作流能力的界面里获得答案。公司早期以“带引用的 ChatGPT-search”形成差异化，随后产品线明显向两端延伸: 一端是 <code>Perplexity Pro/Max/Enterprise</code> 的订阅和组织管理，另一端是 <code>Sonar API/Search API/Agent API</code> 把搜索能力开放给开发者和企业系统。2025-2026 年的战略变化是把 Comet 浏览器、Computer、Assistant、publisher revenue share 和 API 组合起来，试图从“搜索问答工具”升级为“web action layer”。</p>
+<p>与 OpenAI、Anthropic、Google 的关系要分开看: Perplexity 既调用或路由第三方 frontier models，又与它们争夺用户入口；既依赖网页内容，又与出版商存在收入分成和版权摩擦；既是 AI search 应用，也在通过 Sonar/Search API 变成开发者基础设施。它不像 Glean 那样主要做企业内部知识搜索，也不像 Cursor/Cognition 那样聚焦代码生产，更不像 Manus/Genspark 那样主打通用任务执行；Perplexity 的主战场仍是“有来源的外部信息检索 + 浏览器上下文行动”。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 收入结构: seat subscription + usage/API + enterprise contract + publisher/media experiments</h3>
+<p>Perplexity 的收费方式可以拆成五类:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>业务线</th><th>收费方式</th><th>典型客户</th><th>收入逻辑</th></tr></thead><tbody><tr><td>Consumer subscription</td><td>Free / Pro / Max，按月订阅</td><td>个人知识工作者、学生、研究人员、重度搜索用户</td><td>高频 search/research 场景，Pro/Max 解锁更多模型、更高额度、Comet/Computer 等高级能力</td></tr><tr><td>Enterprise</td><td>seat/组织合同 + custom pricing</td><td>企业、政府、金融、法律、教育、技术团队</td><td>SSO/SCIM、审计、隐私、内部文件/应用搜索、组织管理、定制保留策略</td></tr><tr><td>API</td><td>Search API 按请求、Sonar API 按 token + request fee、Agent API 按模型 token + tools</td><td>开发者、企业应用、AI agent builders</td><td>把“搜索 + 引用 + deep research”卖给第三方产品</td></tr><tr><td>Browser/agent</td><td>Comet browser、Comet Plus、Computer、Assistant</td><td>消费者和企业用户</td><td>浏览器入口、agentic actions、内容订阅、后台任务和更多 Max/Enterprise 升级</td></tr><tr><td>Publisher/ads/content</td><td>revenue share、Comet Plus、早期广告试验</td><td>出版商、媒体、广告主</td><td>缓解版权/流量侵蚀争议，探索 AI search 时代的内容供给定价</td></tr></tbody></table></div>
+<h3 class="subsection">4.2 Consumer: Pro/Max 的价值是模型选择、额度和 agent 功能</h3>
+<p>Perplexity 早期最清楚的 monetization 是个人订阅。公开报道和产品页长期显示 Pro 约 $20/月，Max 约 $200/月。Max 的战略意义不是“更贵的搜索”，而是把高成本能力集中给重度用户: Comet 早期访问、Computer/多模型高额度、Deep Research、更多模型选择、更多 agentic workflows。2025 年 Comet 刚推出时先给 $200/月 Max 用户，随后扩大给 Pro 和免费用户，说明 Max 更像早期功能和高用量容量的 price umbrella，而不是永久封闭入口。</p>
+<h3 class="subsection">4.3 Enterprise: 从“员工搜索工具”扩展到内部知识和行动平台</h3>
+<p>Enterprise 页面将产品描述为“orchestrates the best models across your files and tools”，并列出文件/应用连接、外部研究、Comet Browser、Computer、安全合规和组织管理。公开页面声称有 50,000+ organizations trust Perplexity Enterprise，并列出 SOC 2 Type II、GDPR、HIPAA、SSO/SCIM、审计日志、文件保留、用户管理、企业数据不用于训练等能力。这条线与 Glean、Microsoft Copilot、ChatGPT Enterprise、Gemini Enterprise 有重叠，但 Perplexity 的差异是“web-native research + citations”，不是企业知识图谱或办公套件原生集成。</p>
+<h3 class="subsection">4.4 API: Search API、Sonar API、Agent API 的计费更像基础设施</h3>
+<p>Perplexity 官方文档把 API 计费分三块:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>API</th><th>价格口径</th><th>关键价格</th></tr></thead><tbody><tr><td>Search API</td><td>纯 request fee</td><td>$5.00 / 1,000 requests，无额外 token 成本</td></tr><tr><td>Sonar</td><td>token + search context request fee</td><td>Sonar $1 input / $1 output per 1M tokens；Low/Medium/High context request fee $5/$8/$12 per 1K</td></tr><tr><td>Sonar Pro</td><td>token + request fee</td><td>$3 input / $15 output per 1M tokens；request fee $6/$10/$14 per 1K</td></tr><tr><td>Sonar Reasoning Pro</td><td>token + request fee</td><td>$2 input / $8 output per 1M tokens；request fee $6/$10/$14 per 1K</td></tr><tr><td>Sonar Deep Research</td><td>token + citation + search + reasoning</td><td>$2 input、$8 output、$2 citation、$5/1K searches、$3 reasoning per 1M</td></tr><tr><td>Agent API tools</td><td>per invocation/session</td><td>web_search $0.005、fetch_url $0.0005、people_search/finance_search $0.005、sandbox $0.03/session</td></tr></tbody></table></div>
+<p>这说明 Perplexity 不只是在卖订阅 seat，而是在把“搜索结果召回、网页抓取、引用、深度研究、工具调用、第三方模型路由”模块化出售。若未来 agent builders 需要可靠的 web search layer，Sonar/Search API 可能变成比 consumer app 更稳的 B2B revenue stream。</p>
+<h3 class="subsection">4.5 Comet Plus / publisher economics</h3>
+<p>Perplexity 在出版商关系上经历了“被指责抓取/改写内容”到“收入分成/Comet Plus”的转向。公开报道显示 Comet Plus 是 $5/月内容订阅，Perplexity 宣称将 80% 收入给出版商，20% 用于计算成本，并设立约 $42.5M 初始资金池。这不是传统广告联盟，而是把 AI agent 对内容的三种使用方式都纳入分成: human visits、search citations、agent actions。该机制能否 scale，取决于出版商是否接受 AI answer engine 作为新分发渠道，以及用户是否愿意为“高质量来源”额外付费。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 产品矩阵</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品</th><th>类别</th><th>功能定位</th><th>与其他应用公司的区别</th></tr></thead><tbody><tr><td>Perplexity Search</td><td>AI search / answer engine</td><td>实时检索、来源引用、答案合成、追问</td><td>不是通用 agent，核心是“问答+引用”</td></tr><tr><td>Deep Research</td><td>research workflow</td><td>多步搜索、长答案、引用密集的研究输出</td><td>与 OpenAI/Google Deep Research 竞争</td></tr><tr><td>Sonar</td><td>API / search model</td><td>给开发者提供带搜索的模型</td><td>更像搜索基础设施，不是 IDE</td></tr><tr><td>Search API</td><td>raw search API</td><td>原始 web search results + filtering</td><td>与 Tavily/Exa/SerpAPI/Google Custom Search 竞争</td></tr><tr><td>Agent API</td><td>agent infrastructure</td><td>第三方模型 + web_search/fetch/sandbox 等工具</td><td>与 OpenAI Responses API、Anthropic tool use、LangChain/agent stack 重叠</td></tr><tr><td>Comet Browser</td><td>agentic browser</td><td>浏览器侧边 assistant、网页上下文、邮件/购物/日程等行动</td><td>与 Google Chrome/Gemini、OpenAI browser、Arc/Dia、Opera/Edge AI 竞争</td></tr><tr><td>Comet Plus</td><td>content subscription</td><td>高质量出版商内容 + revenue share</td><td>试图修复 AI search 对媒体流量的破坏</td></tr><tr><td>Enterprise</td><td>team/work platform</td><td>内部文件/应用 + 外部研究 + 安全合规</td><td>与 Glean/ChatGPT Enterprise/Gemini Workspace/Copilot 竞争</td></tr><tr><td>Computer</td><td>cloud task agent</td><td>多模型协作、复杂项目、云端任务</td><td>更接近 general agent，但仍围绕 Perplexity search/research 入口</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 技术栈: 检索、模型路由、引用、浏览器行动</h3>
+<p>Perplexity 的技术不是单一模型训练故事，而是四层组合:</p>
+<ol><li><strong>Search/retrieval layer</strong>: 自建/合作搜索索引、网页抓取、结果排序、实时信息召回。</li><li><strong>Answer synthesis layer</strong>: 将多源网页内容压缩成带引用答案，降低 hallucination，同时保持速度。</li><li><strong>Model routing layer</strong>: 在自有 Sonar 与第三方 OpenAI、Anthropic、Google、xAI、Moonshot、Z.AI、NVIDIA 等模型之间路由，官方 Agent API 文档明确 third-party direct provider pricing with no markup。</li><li><strong>Action layer</strong>: Comet/Assistant/Computer 在浏览器和云端执行邮件、购物、研究、文件、应用连接等 action。</li></ol>
+<p>技术护城河不在“拥有最强 frontier model”，而在“用模型和检索把 web 信息变成可信答案和行动”。这也解释了为什么 Perplexity 与 OpenAI/Anthropic/Google 是竞合关系: 它们可能是模型供应商，也可能在 ChatGPT Search、Claude Deep Research、Gemini/Chrome 里正面攻击 Perplexity 的入口。</p>
+<h3 class="subsection">5.3 产品效果和公开使用数据</h3>
+<p>公开可核验的数据里，最有价值的是 query volume。2025 年 6 月 TechCrunch 报道 CEO 在 Bloomberg Tech Summit 透露 2025 年 5 月处理 780M queries，约 30M daily queries，并保持 20%+ MoM query growth。这验证了 Perplexity 已经从小众 AI search 进入高频 consumer information utility，但与 Google 每天数十亿/上百亿次搜索相比仍不是同量级。</p>
+<p>Comet 的效果更难量化。公开论文和媒体报道显示 Comet Assistant 用例集中在 Productivity & Workflow、Learning & Research、Courses、Shopping 等场景；这说明浏览器 agent 需求真实存在，但同样暴露安全与可靠性问题: full browser automation 面临 indirect prompt injection、钓鱼、误操作、个人数据泄露等风险。Perplexity 的防线需要从“搜索答案可信”扩展到“行动可控、权限透明、可审计”。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据/口径</th><th>来源与判断</th></tr></thead><tbody><tr><td>月查询量</td><td>2025 年 5 月 780M queries</td><td>CEO 在 Bloomberg Tech Summit 透露，TechCrunch/维基汇总引用</td></tr><tr><td>日查询量</td><td>约 30M daily queries</td><td>同上</td></tr><tr><td>查询增速</td><td>20%+ MoM growth</td><td>同上</td></tr><tr><td>Enterprise 组织数</td><td>50,000+ organizations trust Perplexity Enterprise</td><td>Perplexity Enterprise 官网页面</td></tr><tr><td>估值</td><td>2024 年初 $520M；2024 年底约 $9B；2025 年 5-6 月约 $14B；2025 年 7 月约 $18B；2025 年 9 月约 $20B</td><td>Reuters/TechCrunch/WSJ/Bloomberg/The Information 等报道口径</td></tr><tr><td>2026 ARR</td><td>第三方估算约 $200M；2024 年底估算约 $80M</td><td>Sacra/PM Insights 等二级市场和分析口径，需要与公司财务模型核对</td></tr><tr><td>API 单价</td><td>Search API $5/1K；Sonar $1/$1 token + request fee；Sonar Deep Research 另收 citation/search/reasoning</td><td>官方 docs</td></tr><tr><td>Comet Plus</td><td>$5/月，80%给出版商，20%用于计算成本，初始池约 $42.5M</td><td>Bloomberg/Windows Central/NY Post 等报道</td></tr><tr><td>Max 订阅</td><td>$200/月</td><td>多家媒体报道；Comet 初期由 Max 率先开放</td></tr></tbody></table></div>
+<p>商业化的核心 tension: 搜索是高频但低付费意愿，Deep Research/Comet/Computer 是高价值但高推理成本，Enterprise/API 是较稳但竞争更拥挤。Perplexity 若只依靠 $20 Pro，很难支持不断上升的模型和搜索成本；若过度靠广告，又会破坏“答案客观性”和用户信任。因此 2026 年更值得跟踪的是 API revenue mix、Enterprise contract size、Max/Computer 留存、Comet 活跃用户、publisher program 成本与留存。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 成本结构</h3>
+<p>Perplexity 的主要成本包括:</p>
+<ul><li><strong>Model inference</strong>: Pro/Max/Enterprise 用户调用 Claude、GPT、Gemini 等 frontier models，成本与 token 量、reasoning depth、上下文长度相关。</li><li><strong>Search/retrieval</strong>: web search、crawl、fetch、index、ranking、citation extraction。</li><li><strong>Agent runtime</strong>: Comet/Computer/Agent API 的 browser/sandbox session 成本，官方 Agent API sandbox $0.03/session 可作为外部价格线索。</li><li><strong>Content/publisher payments</strong>: Comet Plus 和 publisher program 引入内容成本，80% revenue share 意味着该产品自身毛利很低，但能换取内容供给和法律缓冲。</li><li><strong>Enterprise go-to-market</strong>: 销售、安全、合规、客户成功、数据连接器。</li></ul>
+<h3 class="subsection">7.2 Revenue per query 的挑战</h3>
+<p>传统搜索靠广告 monetization，用户点击广告的商业意图可覆盖索引和分发成本。AI answer engine 把用户答案直接留在界面，可能降低广告点击与出版商流量，同时每次查询还多了 LLM 推理成本。因此 Perplexity 的单位经济性不能只看 query growth，需要看:</p>
+<ol><li>每 1,000 queries 的平均收入。</li><li>Pro/Max 用户中高成本模型调用占比。</li><li>Search API/Sonar API 的毛利是否优于 consumer subscriptions。</li><li>Enterprise seat 使用强度是否可控。</li><li>Comet/Computer 的 action 成功率是否足以支持 $200/月 Max 或定制 enterprise 合同。</li></ol>
+<h3 class="subsection">7.3 初步倍数</h3>
+<p>若用 2026 年第三方估算 ARR ~$200M 和 $20B 左右估值，EV/ARR 约 100x；若用 2025 年底更高 ARR 或收入 run-rate，则倍数下降，但仍是高增长 AI application premium。这个倍数需要 query growth、Max/Enterprise/API 结构和毛利改善共同支撑。公开材料尚没有给出毛利率、净收入留存、enterprise ACV、Pro/Max 付费用户数、API 收入占比，因此目前只能建立“高增长、高不确定成本、入口资产估值”的框架。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 AI search / answer engine</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>位置</th><th>对 Perplexity 的威胁</th></tr></thead><tbody><tr><td>Google Search / AI Overviews / Gemini</td><td>默认搜索入口 + 浏览器 + Android + 广告系统</td><td>最大结构性威胁，拥有索引、广告、Chrome、分发</td></tr><tr><td>OpenAI ChatGPT Search / Deep Research</td><td>consumer AI habit + frontier model + plugins/tools</td><td>抢高价值 research 场景，与 Perplexity Pro/Max 正面竞争</td></tr><tr><td>Anthropic Claude Deep Research / Computer Use</td><td>企业信任、reasoning、agent safety</td><td>在高质量长研究和企业场景冲击 Perplexity</td></tr><tr><td>Microsoft Copilot / Bing</td><td>企业分发 + Office/Edge + Bing index</td><td>企业搜索和浏览器侧入口竞争</td></tr><tr><td>You.com / Phind / Kagi / Exa / Tavily</td><td>垂直 search/API/search infra</td><td>在开发者或专业搜索细分市场竞争</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 General agent / browser automation</h3>
+<p>Perplexity 的 Comet/Computer 与 Manus、Genspark、OpenAI Operator/Computer Use、Claude Computer Use、Google Project Mariner/Astra 都有重叠，但 Perplexity 的切入点是浏览器和搜索上下文。Manus 更强调“从一个 prompt 完成复杂任务/应用/报告/自动化”，Genspark 更强调超级 agent 和页面/研究生成，Cognition/Cursor 是 coding agent，Glean 是 enterprise knowledge。Perplexity 的 browser agent 若成功，价值链位置会从“问答”上移到“用户 web 操作入口”；若失败，就会退回到 AI search 工具。</p>
+<h3 class="subsection">8.3 护城河</h3>
+<ul><li><strong>品牌心智</strong>: “ask Perplexity”在 AI search 里已有领先认知。</li><li><strong>引用体验</strong>: 带来源答案仍是用户信任关键。</li><li><strong>query data</strong>: 高频问答数据可优化检索、答案质量、商业意图识别。</li><li><strong>多模型路由</strong>: 不被单一模型限制，可利用最新 frontier model。</li><li><strong>publisher program</strong>: 若内容合作规模扩大，可能形成内容供给护城河。</li><li><strong>browser context</strong>: Comet 若形成用户习惯，可获得传统搜索框拿不到的上下文和 action surface。</li></ul>
+<h3 class="subsection">8.4 脆弱点</h3>
+<ul><li>Google 可以在 Chrome/Android/Search 默认入口内直接复制体验。</li><li>OpenAI/Anthropic 能在更强模型和 assistant 入口中内置 search。</li><li>内容版权和爬虫争议可能提高内容成本或限制可索引范围。</li><li>浏览器 agent 安全事故会直接伤害信任。</li><li>API search 领域存在 Tavily、Exa、Brave Search API、Google、Bing 等替代方案，开发者 switching cost 不一定高。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Aravind Srinivas 是 CEO 和 co-founder，背景包括 OpenAI、Google DeepMind、UC Berkeley 等 AI research/ML 经历；Denis Yarats 有 Meta/AI research 背景；Johnny Ho 偏后端和系统；Andy Konwinski 来自 Berkeley 计算机系统生态并与 Databricks/Spark 生态有历史联系。创始团队组合的特点是“模型研究 + 系统工程 + 搜索/数据基础设施”，这与 Perplexity 的产品形态相符: 它不是纯模型公司，也不是传统 consumer app，而是把检索系统、LLM 和用户体验拼成一个高频入口。</p>
+<p>投资人名单也带有明显战略属性: Nvidia 代表算力生态，Databricks 代表数据/企业生态，Jeff Bezos、Nat Friedman、Tobi Lutke、Yann LeCun、Andrej Karpathy 等天使/战略投资人提供 AI 和互联网品牌背书，IVP/Accel 等后期机构支持其 growth 轮融资。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>版权和内容抓取风险</strong>: Forbes、Wired、News Corp、BBC、Dow Jones、NYT 等相关争议说明“AI answer engine 使用网页内容”仍未形成稳定行业规则。</li><li><strong>Google 入口反击</strong>: Google 同时拥有 Search、Chrome、Android、Gemini、广告系统和网页索引，Perplexity 很难在默认入口上正面抗衡。</li><li><strong>模型供应商竞合</strong>: OpenAI/Anthropic/Google 既可供给模型，又会在自己的产品中复制 AI search 和 deep research。</li><li><strong>单位经济性压力</strong>: Deep Research、Computer、Comet agent、Max 高用量用户都可能推高推理/搜索/沙箱成本。</li><li><strong>广告与信任冲突</strong>: AI answer engine 若引入广告，必须避免答案排序被商业化污染。</li><li><strong>Agent 安全</strong>: 浏览器行动涉及邮箱、支付、购物、内部工具，prompt injection 和 phishing 可能造成高严重度事故。</li><li><strong>Publisher economics 不确定</strong>: Comet Plus 80% revenue share 保护内容供给，但单品毛利有限，且未必能解决所有版权诉讼。</li><li><strong>估值兑现风险</strong>: 若 ARR 只有数亿美元而估值 $20B+，公开市场会要求极高增长和清晰毛利路径。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="exa.html">Exa</a><a class="sib-chip" href="glean_technologies.html">Glean Technologies</a><a class="sib-chip" href="golinks_gosearch.html">GoLinks</a><a class="sib-chip" href="hebbia.html">Hebbia</a><a class="sib-chip" href="pinecone.html">Pinecone</a><a class="sib-chip" href="tavily.html">Tavily</a><a class="sib-chip" href="weaviate.html">Weaviate</a></div>
+</div>
+</body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunrise AI / 曦望智能 · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · AI 基础设施与数据平台</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#f0fdf4;color:#15803d">AI 基础设施与数据平台</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">中国杭州</span>
+    </div>
+    <h1 class="dc-title"><a href="https://sunrise-ai.com/" target="_blank" rel="noopener">Sunrise AI / 曦望智能</a></h1>
+    <div class="dc-oneliner">曦望智能是国产 AI 推理 GPU 和算力平台公司。它不是模型公司，而是大模型推理需求爆发后的“算力成本和供应链安全”标的：如果中国客户需要在国产芯片上低成本跑多模态推理、Agent 和企业部署，曦望这类公司会进入预算池。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>曦望智能是国产 AI 推理 GPU 和算力平台公司。它不是模型公司，而是大模型推理需求爆发后的“算力成本和供应链安全”标的：如果中国客户需要在国产芯片上低成本跑多模态推理、Agent 和企业部署，曦望这类公司会进入预算池。</p>
+<p>S&P 口径显示其成立时间很新、融资和估值都很高，但公开融资报道不足，因此需要把“算力平台公司”与“融资可回源不足”同时写清楚。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/交易方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2025</td><td>公司成立/官网披露</td><td>-</td><td>-</td><td>-</td><td>官网页脚和 S&P 均指向 2025 年前后成立；不是融资事件</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2026-04-20</td><td>Venture / 融资</td><td>$146.7M</td><td>$1.47B post-money</td><td>未披露</td><td>S&P Global 工作簿口径；未找到公开报道可直接证明该轮金额/估值</td><td>S&P Global 本地工作簿</td></tr></tbody></table></div>
+<p>融资观察：</p>
+<ul><li>S&P 口径显示累计融资约 $1.15B，但公开来源未能直接核验融资轮次、投资方和估值。</li><li>由于公司成立时间短、融资体量大，后续需要重点核验股权结构、国资/产业资本背景、芯片量产和客户订单。</li><li>若进入主图谱，建议放在“AI 芯片/推理基础设施”，不要放在模型层。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Hangzhou Sunrise Intelligent Technology Co., Ltd. / 浙江曦望智能科技股份有限公司 / 曦望智能</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">S&P 口径为 2025 年</td></tr><tr><td class="kv-key">总部/主体</td><td class="kv-val">中国杭州</td></tr><tr><td class="kv-key">四层分类</td><td class="kv-val">基础设施</td></tr><tr><td class="kv-key">子赛道</td><td class="kv-val">AI 推理 GPU、计算卡、智算服务器、智算集群、软件栈</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">启望系列推理 GPU、智望计算卡、辰望服务器/一体机、寰望智算集群、SIRE 软件栈</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">大模型推理、企业智算、运营商、制造、金融、医疗、教育、能源等</td></tr><tr><td class="kv-key">最新融资/估值</td><td class="kv-val">S&P 口径：2026-04 Venture，$146.7M，post-money $1.47B</td></tr><tr><td class="kv-key">当前阶段</td><td class="kv-val">私人公司；公开融资可回源不足</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式</h2>
+<h3 class="subsection">4.1 芯片和计算卡销售</h3>
+<p>官网产品线显示其从推理 GPU 芯片延伸到计算卡和服务器。收入可能来自硬件销售、服务器/一体机交付和渠道合作。</p>
+<h3 class="subsection">4.2 智算平台方案</h3>
+<p>曦望不仅卖芯片，也把服务器、超节点、集群和 SIRE 软件栈打包成算力平台，目标是降低客户从芯片到可用推理服务之间的集成成本。</p>
+<h3 class="subsection">4.3 国产替代和推理成本</h3>
+<p>在中国市场，大模型推理的瓶颈不只是算力价格，也包括先进 GPU 供给限制、国产生态适配、模型框架兼容和运维成本。曦望若能在推理场景做出稳定 TCO 优势，会比单纯芯片参数更有价值。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>功能</th><th>投资解读</th></tr></thead><tbody><tr><td>启望系列推理 GPU</td><td>面向 AI 推理芯片</td><td>核心硬件资产，需核验制程、显存、互联、能效</td></tr><tr><td>智望计算卡</td><td>把芯片封装成可部署计算卡</td><td>决定交付速度和渠道适配</td></tr><tr><td>辰望服务器/一体机</td><td>面向企业和智算中心部署</td><td>从芯片销售进入系统方案</td></tr><tr><td>寰望智算集群/超节点</td><td>多卡/多机推理集群</td><td>对标大模型推理基础设施需求</td></tr><tr><td>SIRE 软件栈</td><td>驱动、编译、推理框架适配</td><td>国产 AI 芯片成败关键在软件生态</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营数据</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>来源</th><th>可信度</th></tr></thead><tbody><tr><td>最新 post-money 估值</td><td>$1.47B</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>最新融资金额</td><td>$146.7M</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>累计融资</td><td>$1.15B</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>员工规模线索</td><td>官网英文页披露约 450 人、研发约 80%</td><td>Sunrise About</td><td>中</td></tr><tr><td>产品线完整度</td><td>芯片、计算卡、服务器、集群、软件栈</td><td>官网</td><td>高</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>竞争格局</h2>
+<ul><li>国内国产算力：华为昇腾、寒武纪、燧原、壁仞、摩尔线程、沐曦等。</li><li>云厂商自研/生态：阿里云、腾讯云、百度智能云、火山引擎的推理平台。</li><li>国际参照：Nvidia GPU + CUDA 生态仍是事实标准。</li></ul>
+<p>曦望的差异点在“推理 GPU + 系统平台 + 软件栈”一体化，但真正壁垒要看模型适配、稳定性、开发者体验和单位推理成本。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>资本化/IPO 状态备注</h2>
+<ul><li>当前按私人公司处理。</li><li>S&P 融资数字较大但公开回源不足，建议在网页中用“数据库口径”标注。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>投资方结构</h2>
+<ul><li>S&P 当前抽取字段未披露投资方。</li><li>公开检索没有找到能对应 2026 融资金额的报道。</li></ul>
+</section>
+<section class="section" id="sec-12">
+<h2 class="section-title"><span class="sec-num">12</span>研究结论</h2>
+<ul><li>Base case：曦望是国产推理算力方向值得观察的新公司。</li><li>Bull case：大模型推理国产替代需求持续增长，公司用完整软件栈和系统方案切入智算中心。</li><li>Bear case：硬件指标、生态适配和客户订单无法支撑高估值，融资数字更多来自战略资本稀缺性。</li></ul>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anyscale.html">Anyscale</a><a class="sib-chip" href="baseten.html">Baseten</a><a class="sib-chip" href="databricks.html">Databricks</a><a class="sib-chip" href="fireworks_ai.html">Fireworks AI</a><a class="sib-chip" href="hugging_face.html">Hugging Face</a><a class="sib-chip" href="mercor.html">Mercor</a><a class="sib-chip" href="modal.html">Modal</a><a class="sib-chip" href="scale_ai.html">Scale AI</a></div>
+</div>
+</body></html>

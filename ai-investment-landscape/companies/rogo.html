@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rogo · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.rogo.ai/" target="_blank" rel="noopener">Rogo</a></h1>
+    <div class="dc-oneliner">Rogo 是面向投行、PE、资管和金融专业服务团队的 AI 研究与交付平台。它把 market data、filings、research、SharePoint/CRM、Excel/PPT、公司内部资料和金融专用模型连接起来，用于生成可审计的模型、memo、diligence materials 和 slide decks。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Rogo 是面向投行、PE、资管和金融专业服务团队的 AI 研究与交付平台。它把 market data、filings、research、SharePoint/CRM、Excel/PPT、公司内部资料和金融专用模型连接起来，用于生成可审计的模型、memo、diligence materials 和 slide decks。</strong></p>
+<p>官网披露 35,000+ bankers and investors using Rogo、50,000+ daily queries、250+ institutions served。2026 年 4 月，公司宣布 $160M Series D，由 Kleiner Perkins 领投。投资重点是 Rogo 能否在高 ACV、强安全、强定制的金融机构里跑出可规模化毛利，并抵御 AlphaSense/Hebbia、Bloomberg/FactSet/S&P、Microsoft/OpenAI 和大行自建平台。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方</th><th>事件意义</th><th>来源</th></tr></thead><tbody><tr><td>2021–2022</td><td>公司创立/早期阶段</td><td>公开口径较少</td><td></td><td>Gabe Stengel 等创始团队</td><td>从 finance-specific AI assistant 切入</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-04</td><td>Series B</td><td>$50M</td><td>$350M</td><td>Thrive Capital 领投,JPMorgan Chase 等参与(FT 报道口径)</td><td>证明投行/金融客户对垂直 AI workflow 买单</td><td><a href="https://www.ft.com/content/045dac3f-eb78-469d-a3ef-3495aefa6e8f" target="_blank" rel="noopener">FT</a></td></tr><tr><td>2026-04</td><td>Series D</td><td>$160M</td><td>公开来源尚未给出统一估值</td><td>Kleiner Perkins 领投;Sequoia、Thrive Capital、Khosla Ventures、J.P. Morgan Growth Equity Partners、BoxGroup、Mantis VC、Jack Altman、Evantic、Positive Sum</td><td>从产品验证进入全球扩张,资金用于 deeper integrations、forward-deployed bankers/engineers、EMEA/Asia expansion</td><td><a href="https://www.axios.com/newsletters/axios-pro-rata-954b2409-246f-4e0f-bfc8-8db789bcfcef" target="_blank" rel="noopener">Axios</a></td></tr><tr><td>2026-06</td><td>Model Broker / Fable 5 / monthly updates</td><td>产品更新</td><td></td><td>Rogo product/news</td><td>强化多模型和 finance-specific model strategy</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr></tbody></table></div>
+<p>从 Series B 到 Series D 时间很短,说明增长和资本兴趣很强。需要注意的是,轮次命名从 B 到 D 中间可能存在未充分公开的融资/内部轮次,后续尽调应核验 cap table、pre/post money、liquidation preference 和 option pool。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">Rogo AI</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">公开资料多指 2021–2022 年左右;官网当前以 Rogo AI 品牌运营</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">美国,公开页面未在首页突出总部细节</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Gabe Stengel,CEO & Co-Founder,前 Lazard 背景</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI for the most ambitious firms in finance;financial AI agents for banks, investors and private markets</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Rogo platform、Felix personal finance agent、firm-specific workflows、AI table interface、material creation、proprietary document interrogation、Model Broker、Fable 5 等产品/模型更新</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">investment banks、asset managers、private equity、hedge funds、financial sponsors、equity research、credit investors、corporate finance teams</td></tr><tr><td class="kv-key">官网客户/评价</td><td class="kv-val">Truist Securities、Nomura、Baird Global Investment Banking、Lucerne Capital、Schonfeld 等公开 quote</td></tr><tr><td class="kv-key">官网运营指标</td><td class="kv-val">35,000+ bankers and investors;50,000+ daily queries;250+ institutions served</td></tr><tr><td class="kv-key">数据/系统集成</td><td class="kv-val">SharePoint、CRM、market data、filings、research、proprietary sources;官网列 LSEG、Dow Jones、FactSet、Capital IQ、PitchBook、Preqin、real-time web/news、SEC filings、transcripts、Quartr、international filings</td></tr><tr><td class="kv-key">安全合规</td><td class="kv-val">SOC2、CCPA、ISO 27001、GDPR、EU AI Act;产品页还强调 no training on your data、end-to-end encryption、audit trails、role-based access</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2026-04 $160M Series D</td></tr><tr><td class="kv-key">最新投资者</td><td class="kv-val">Kleiner Perkins 领投;Sequoia、Thrive Capital、Khosla Ventures、J.P. Morgan Growth Equity Partners、BoxGroup、Mantis VC、Jack Altman、Evantic、Positive Sum 等参与</td></tr><tr><td class="kv-key">资本化状态</td><td class="kv-val">私有公司;截至 2026 年 7 月 6 日 没有公开 IPO filing</td></tr></tbody></table></div>
+<p>Rogo 的产品语言非常金融化。它不把自己包装成普通 enterprise search,而是说“Just as Bloomberg digitized financial data in the 1980s, Rogo is now transforming financial workflows.” 这句话定义了它的战略野心:Bloomberg/FactSet/S&P 已经把数据数字化,下一层价值是让 banker/investor 把数据、文档、模型、deck、memo 和客户沟通工作自动化。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 收费方式:bespoke enterprise deployment,没有公开 self-serve 价格</h3>
+<p>Rogo 官网入口是 Request Demo / Request Access,没有标准 pricing table。首页明确写“Every firm is different. That’s why every Rogo deployment is bespoke.” 产品页还写 guided implementation 由 ex-bankers and private equity investors 白手套参与。可确认的商业模式是金融机构 enterprise contract,可能按 seat、团队/部门、数据连接、workflow 模块、部署方式和用量打包。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收费模块</th><th>可能口径</th><th>公开依据</th><th>财务含义</th></tr></thead><tbody><tr><td>Platform seats</td><td>banker/investor named users 或 team seats</td><td>官网 35,000+ bankers and investors using Rogo</td><td>金融专业人士 seat 单价可高于普通 enterprise seat</td></tr><tr><td>Felix / agent access</td><td>personalized agent,可在界面和 email 中委派工作</td><td>Felix 页面 Request Access</td><td>若 Felix 单独 premium,可提升 ARPU</td></tr><tr><td>Data integrations</td><td>LSEG、Dow Jones、FactSet、Capital IQ、PitchBook、Preqin、SEC filings、Quartr、internal docs</td><td>产品页列 trusted data providers</td><td>数据连接越多,部署价值越高,但授权边界要核验</td></tr><tr><td>Firm-specific workflows</td><td>earnings comp analysis、public company strip profile、meeting prep、private company profile、sponsor overview、news run、proofread my deck 等</td><td>产品页 workflow examples</td><td>可按 workflow library / department bundle upsell</td></tr><tr><td>Custom-trained models</td><td>finance-specific professionally labeled data;custom-trained LLMs</td><td>产品页</td><td>差异化强,但数据标注和维护成本高</td></tr><tr><td>Security / single tenant</td><td>granular permissions、audit trails、single tenant deployment</td><td>产品页</td><td>大行/资管安全要求支撑高价</td></tr><tr><td>Forward-deployed support</td><td>ex-bankers/private equity investors guided implementation</td><td>产品页/Series D 公告</td><td>提高落地成功率,但影响服务成本和可扩展性</td></tr></tbody></table></div>
+<h3 class="subsection">4.2 价格锚:用 AI 替代 analyst/associate 的重复执行,释放 senior banker 时间</h3>
+<p>Rogo 的 ROI 主要来自:</p>
+<ul><li>junior banker 少花时间 shell deck、refresh materials、turn comments;</li><li>analyst/associate 更快 build model、spread comps、update backup;</li><li>senior bankers 更快做 client meeting prep、company profile、personal bio、sponsor overview;</li><li>投资团队更快做 diligence、IC memo、market scan、portfolio monitoring;</li><li>输出保持 auditable、consistent、firm-style,减少返工和风险。</li></ul>
+<p>Truist、Nomura、Baird 的官网 quote 都指向相同价值:boost productivity、reduce risk、create capacity、analyze market data faster、improve consistency in deliverables、senior bankers more autonomously get information、junior banker work-life balance 和 talent retention。</p>
+<h3 class="subsection">4.3 数据授权与合同边界</h3>
+<p>Rogo 集成大量金融数据源,但公开页面没有说明哪些数据由 Rogo 转售,哪些由客户自带 entitlement。金融数据许可很关键:</p>
+<ul><li>Bloomberg/FactSet/S&P/LSEG 等数据通常有严格使用和再分发限制;</li><li>若客户已有合同,Rogo 可能作为 authenticated access / workflow layer;</li><li>若 Rogo 自带数据包,COGS 和授权谈判会更重;</li><li>AI agent 用于生成 deck/model 可能涉及版权、research redistribution 和 compliance review。</li></ul>
+<p>投资尽调需要拆合同条款:数据成本由谁承担、是否按数据源加价、是否可跨团队共享、输出是否有来源和 redistribution 限制。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 平台核心能力</h3>
+<p>官网 product 页面把 Rogo 拆为四个能力:</p>
+<ol><li><strong>All your content in one place:</strong> 把公司内部文件、数据源、market data、research、filings、proprietary docs 统一。</li><li><strong>Transparent, auditable sources:</strong> 生成结果需要可追溯,适合投行/投资/合规。</li><li><strong>Automate your workflows:</strong> earnings comp analysis、meeting prep、company profile、proofread deck 等 workflow。</li><li><strong>Proprietary document interrogation:</strong> 对私有文档、数据室、内部材料做问答、抽取、比较。</li></ol>
+<p>这比 generic chatbot 更接近金融团队的实际流程。金融工作不是“问一个问题”,而是“从多个数据源抽证据,更新 Excel,生成 PowerPoint,写 memo,给 MD/IC/客户能看的东西”。</p>
+<h3 class="subsection">5.2 Felix:个人化金融 agent</h3>
+<p>Felix 页面强调“AI in finance has been treated like a better search box”,而 Felix 改变的是执行层。用户既可以在界面探索 ideas,也可以像给同事发 email 一样把更复杂工作委派给 Felix,并随着交付物推进持续迭代。Felix 覆盖:</p>
+<ul><li>Banking;</li><li>Private Markets;</li><li>Public Markets;</li><li>Decks: shell the deck, refresh materials, turn comments;</li><li>Spreadsheets: build the model, spread the comps, update the backup;</li><li>Reports: draft the memo, prep the meeting, run the research。</li></ul>
+<p>这正是投行和买方工作中耗时最多、但又要求格式/口径/数据一致性的部分。Felix 如果能做到“90% of the way there”并让人类做最后判断,就能提供强 ROI。</p>
+<h3 class="subsection">5.3 数据与系统集成</h3>
+<p>Rogo 产品页列出 trusted data providers 和数据类型:</p>
+<ul><li>LSEG;</li><li>Dow Jones;</li><li>FactSet;</li><li>Capital IQ;</li><li>PitchBook;</li><li>Preqin;</li><li>Real-time Web & News;</li><li>SEC Filings;</li><li>Transcripts;</li><li>Quartr;</li><li>International Filings;</li><li>Your Firm’s Data;</li><li>SharePoint、CRM、file systems。</li></ul>
+<p>这使 Rogo 的位置更像“finance workflow orchestration layer”。它不必拥有所有数据,但必须保证 entitlement、permission、citation、freshness 和 audit trail。金融客户尤其关心 output 是否能追溯到 filing、research note、transcript、database field 或内部文件。</p>
+<h3 class="subsection">5.4 Workflow library</h3>
+<p>官网列出的 workflow examples 包括:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>工作流</th><th>用户</th><th>输出</th></tr></thead><tbody><tr><td>Earnings Comp Analysis</td><td>equity research / IB / hedge fund</td><td>comps, earnings summary, KPI comparison</td></tr><tr><td>Public Company Strip Profile</td><td>IB / PE / AM</td><td>one-page company profile, valuation and operating snapshot</td></tr><tr><td>Meeting Prep</td><td>senior banker / investor</td><td>agenda, recent developments, bio, talking points</td></tr><tr><td>Private Company Profile</td><td>PE / growth / banker</td><td>company overview, market, investors, comparable companies</td></tr><tr><td>Personal Bio</td><td>banker / IR / sales</td><td>客户/管理层背景材料</td></tr><tr><td>Financial Sponsor Overview</td><td>IB sponsor coverage / PE</td><td>sponsor portfolio, strategy, deal history</td></tr><tr><td>News Run</td><td>banker / investor</td><td>recent developments and implications</td></tr><tr><td>Secondaries Buyer Overview</td><td>private markets</td><td>buyer landscape and fit</td></tr><tr><td>Proofread My Deck</td><td>IB / PE</td><td>consistency, language, formatting and number checks</td></tr></tbody></table></div>
+<p>这些 workflows 说明 Rogo 深刻理解金融专业服务不是单一模型输出,而是一组可重复但高标准的 deliverables。</p>
+<h3 class="subsection">5.5 安全、治理与部署</h3>
+<p>Rogo 产品页强调:</p>
+<ul><li>no training on your data;</li><li>modern secure data practices;</li><li>end-to-end encryption;</li><li>audited & tested;</li><li>granular permission controls;</li><li>role-based access management;</li><li>comprehensive audit trails;</li><li>customizable governance policies;</li><li>single tenant deployment options。</li></ul>
+<p>对大行/资管/PE 来说,这些不是可选项。没有 RBAC、audit trail、single tenant、data isolation,AI 工具无法进入真实 deal flow。Rogo 的白手套部署和 ex-finance team 是销售优势,但也带来交付成本。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>来源/说明</th></tr></thead><tbody><tr><td>Users</td><td>35,000+ bankers and investors</td><td>Rogo 官网</td></tr><tr><td>Daily queries</td><td>50,000+</td><td>Rogo 官网</td></tr><tr><td>Institutions served</td><td>250+</td><td>Rogo 官网</td></tr><tr><td>最新融资</td><td>$160M Series D</td><td>2026-04 Rogo 官方公告</td></tr><tr><td>Series D lead</td><td>Kleiner Perkins</td><td>官方公告</td></tr><tr><td>Series D investors</td><td>Sequoia、Thrive、Khosla、J.P. Morgan Growth Equity Partners、BoxGroup、Mantis VC、Jack Altman、Evantic、Positive Sum</td><td>官方公告</td></tr><tr><td>2025 Series B</td><td>$50M</td><td>FT 报道口径</td></tr><tr><td>2025 Series B valuation</td><td>$350M</td><td>FT 报道口径</td></tr><tr><td>客户/quote</td><td>Truist Securities、Nomura、Baird、Lucerne Capital、Schonfeld</td><td>官网</td></tr><tr><td>团队扩张</td><td>2026 年报道团队从 30 人增至 125 人,计划年底 300 人</td><td>Financial News 报道</td></tr><tr><td>安全合规</td><td>SOC2、CCPA、ISO 27001、GDPR、EU AI Act</td><td>官网</td></tr></tbody></table></div>
+<h3 class="subsection">6.1 用户与查询量解读</h3>
+<p>35,000+ bankers and investors 与 50,000+ daily queries 表明 Rogo 已经进入真实使用。粗略看,平均每用户每日 query 约 1.4 次,但这个数字可能被 inactive seats、team seats 或 heavy users 扭曲。金融 workflow 的关键不只是 query 数,而是 query 是否对应高价值 deliverable:</p>
+<ul><li>一次 “build buyer universe” 可能比几十次普通问答更有价值;</li><li>一次 deck/model 自动化节省的时间可能以小时计;</li><li>senior banker 的 meeting prep 价值高于 junior 的一般搜索;</li><li>如果 Rogo 产生的材料能直接进入 client deck,其价值远高于 research assistant。</li></ul>
+<h3 class="subsection">6.2 客户质量</h3>
+<p>官网 quote 来自 Truist Securities CEO、Nomura International Head of Investment Banking、Baird Global Investment Banking COO,这些是高质量背书。金融客户采用外部 AI agent 的门槛很高,尤其在投行涉及 MNPI、client confidential info、compliance 和 data licensing。能进入这些机构说明 Rogo 在安全和工作流落地上有一定证明。</p>
+<h3 class="subsection">6.3 收入透明度</h3>
+<p>公开资料没有 ARR。FT 报道 2025 年 $50M Series B at $350M valuation;2026 年 $160M Series D 未在官方公告中披露估值。用户数和机构数可以说明规模,但不能替代 ARR。后续应核验:</p>
+<ul><li>35,000+ users 中 paid active users 比例;</li><li>250+ institutions 的付费 ACV 分布;</li><li>query / workflow / document processing 是否收费;</li><li>expansion from pilot to firmwide deployment 的周期;</li><li>Series D 后估值和收入 run-rate。</li></ul>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 Revenue build</h3>
+<p>Rogo revenue 可拆为:</p>
+<p>ARR = 机构数 × 平均部门数 × paid users × 每 user / platform fee × workflow / data / deployment premium × usage/overage</p>
+<p>关键变量:</p>
+<ul><li><strong>Institution expansion:</strong> 从投行一个 coverage team 扩到全 IB、equity research、capital markets、wealth/asset management。</li><li><strong>Seat density:</strong> banker/investor seat 单价高,但用户群比 horizontal SaaS 小。</li><li><strong>Workflow attach:</strong> Felix、deck/model、research、meeting prep、proofread deck 等是否单独计费。</li><li><strong>Data entitlements:</strong> Rogo 是否能利用客户既有金融数据订阅降低 COGS。</li><li><strong>Implementation leverage:</strong> 白手套部署能否产品化,否则服务成本会随客户增长线性上升。</li></ul>
+<h3 class="subsection">7.2 Cost build</h3>
+<p>成本包括:</p>
+<ul><li>LLM inference / model broker / custom finance model training;</li><li>professionally labeled finance data;</li><li>data connectors and entitlement management;</li><li>document ingestion、indexing、retrieval、citation;</li><li>Excel/PPT generation and validation;</li><li>security/compliance/single tenant deployment;</li><li>forward-deployed bankers and engineers;</li><li>enterprise sales。</li></ul>
+<p>金融 workflow 的输出质量要求高,尤其 Excel/PPT 中数字和来源要一致。Rogo 若要真正做到 client-ready,必须投入验证、source map、audit trail 和 QA,这会增加工程和服务成本。</p>
+<h3 class="subsection">7.3 毛利与规模化判断</h3>
+<p>积极因素:</p>
+<ul><li>金融专业人士愿意为节省高价值时间付费;</li><li>大行/资管 ACV 高;</li><li>workflows 可复用,随着客户积累 prompt library 和 templates;</li><li>Rogo 可借客户已有数据订阅避免部分内容成本;</li><li>使用量大且真实,50,000+ daily queries 有 adoption 信号。</li></ul>
+<p>压力因素:</p>
+<ul><li>bespoke deployment 与 forward-deployed team 可能拖累 gross margin;</li><li>数据许可和权限复杂;</li><li>client-ready Excel/PPT 失败成本高;</li><li>大客户议价强;</li><li>内部自建 AI 平台会持续施压。</li></ul>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 与 Hebbia</h3>
+<p>Hebbia Matrix 更像复杂文档/数据的矩阵式 analyst,适合 VDR、IC memo、contracts、expert calls。Rogo 更像投行/投资专业人士的 day-to-day agent,强调 deck、spreadsheet、reports、meeting prep。二者在金融研究和 diligence 上正面竞争:</p>
+<ul><li>Hebbia 的 UI/Matrix 可能更适合批量结构化比较;</li><li>Rogo 的 Felix 和 workflow library 更贴 banker deliverables;</li><li>Hebbia 可能服务法律/专业服务更宽;</li><li>Rogo 的 ex-bankers implementation 和 finance-specific model 可能更懂投行格式。</li></ul>
+<h3 class="subsection">8.2 与 AlphaSense</h3>
+<p>AlphaSense 拥有 500M+ premium docs、Tegus、Canalyst、>$600M ARR 和 7,000+ customers。Rogo 的优势是 workflow execution 和 bespoke finance deployment。客户可能组合使用:</p>
+<ul><li>AlphaSense 用于市场/公司/专家内容检索;</li><li>Rogo 用于把材料转成 deck/model/memo 和 firm-specific outputs。</li></ul>
+<p>如果 AlphaSense SuperAnalyst 在 Excel/Word/PPT 和 expert call execution 上成熟,Rogo 的差异化会被压缩;如果 Rogo 在投行交付物质量上显著领先,它可以成为金融团队真正的 agent workspace。</p>
+<h3 class="subsection">8.3 与传统金融平台</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>优势</th><th>Rogo 的应对</th></tr></thead><tbody><tr><td>Bloomberg</td><td>终端入口、数据、新闻、工作流、品牌</td><td>Rogo定位 workflow automation,不直接替代所有终端</td></tr><tr><td>FactSet / S&P Capital IQ</td><td>数据、Excel plugin、金融模型、客户关系</td><td>Rogo连接这些数据,在生成式 workflow 上加值</td></tr><tr><td>PitchBook / Preqin</td><td>private markets data</td><td>Rogo用于 buyer universe、sponsor overview、private company profile</td></tr><tr><td>LSEG / Refinitiv</td><td>market data、news、analytics</td><td>Rogo作为 agentic interface</td></tr><tr><td>Internal bank AI platforms</td><td>数据权限和内部系统天然优势</td><td>Rogo需用产品速度、专业 workflow、cross-client learning 证明外部 vendor 价值</td></tr></tbody></table></div>
+<h3 class="subsection">8.4 与 Microsoft/OpenAI</h3>
+<p>Microsoft Copilot 拥有 Office/SharePoint/Teams/Excel/PPT 分发入口,OpenAI 拥有模型能力。Rogo 的防线在:</p>
+<ul><li>金融领域 prompt/workflow;</li><li>data provider integrations;</li><li>auditable finance outputs;</li><li>ex-banker implementation;</li><li>client-ready deck/model/memo QA;</li><li>customized governance for financial institutions。</li></ul>
+<p>若 Microsoft/OpenAI 提供足够好的 Excel/PPT agent,但缺金融数据 entitlements 和投行格式,Rogo 仍有空间;若大行用 Microsoft stack 自建 finance workflow,Rogo 可能被挤压。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Gabe Stengel 前 Lazard 背景很重要。投行/PE workflow 的细节非常多,从公司 strip profile、sponsor overview、meeting prep 到 pitch deck consistency,每个输出都有行业惯例。没有从业者经验的 AI team 容易把产品做成“看似聪明的聊天框”,但不能进 MD/IC/client 流程。</p>
+<p>Rogo 官网也强调 team of former bankers and investors,并在 implementation 中让 ex-bankers/private equity investors 作为 change-management partners。这是销售优势,因为客户会更信任“lived the problem”的团队;同时也是成本挑战,因为这类人才昂贵且难规模化。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>大行自建风险:</strong> JPMorgan、Goldman、Morgan Stanley 等都有内部 AI 平台和强数据/权限优势。</li><li><strong>数据授权风险:</strong> Rogo 连接多个金融数据源,输出和再分发权利需要严格管理。</li><li><strong>client-ready 输出风险:</strong> Excel/PPT/memo 出错会直接影响客户交付和声誉。</li><li><strong>服务成本风险:</strong> bespoke deployment 和 forward-deployed bankers/engineers 难以完全软件化。</li><li><strong>竞争加剧:</strong> AlphaSense SuperAnalyst、Hebbia Matrix、Bloomberg/FactSet AI、Microsoft Copilot 都会争夺同一预算。</li><li><strong>用户 adoption 不等于 ARR:</strong> 35,000+ users 和 50,000+ queries 是好信号,但付费规模和留存需要核验。</li><li><strong>估值和融资节奏:</strong> Series B 到 Series D 速度快,若收入增长跟不上估值,后续融资可能承压。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="bioptimus.html">Bioptimus</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="evolutionaryscale.html">EvolutionaryScale</a></div>
+</div>
+</body></html>

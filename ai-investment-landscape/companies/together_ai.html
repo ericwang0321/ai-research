@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Together AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · AI 基础设施与数据平台</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#f0fdf4;color:#15803d">AI 基础设施与数据平台</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 San Francisco</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.together.ai/" target="_blank" rel="noopener">Together AI</a></h1>
+    <div class="dc-oneliner">Together AI 是开放模型生产云。它同时提供 serverless inference、dedicated inference、fine-tuning/evaluation、GPU clusters、sandbox、managed storage 和 AI Factory，而不是只卖单点推理工具。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Together AI 是开放模型生产云。它同时提供 serverless inference、dedicated inference、fine-tuning/evaluation、GPU clusters、sandbox、managed storage 和 AI Factory，而不是只卖单点推理工具。</strong></p>
+<p>公司 2026 年 7 月宣布最新融资，估值提升至约 $6B。它的核心机会来自企业和 AI-native 应用对开放模型、定制模型和多云推理的需求；主要风险是推理价格战、GPU 供应、客户自建和 Fireworks/Baseten/云厂商竞争。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2022</td><td>公司成立</td><td>公开资料没有给出可核验金额</td><td>公开资料没有给出可核验估值</td><td>Vipul Ved Prakash 等</td><td>围绕开放模型云和生成式 AI infra 创立</td><td><a href="https://www.together.ai/blog/announcing-our-series-c" target="_blank" rel="noopener">Together</a></td></tr><tr><td>2023-11</td><td>Series A</td><td>$102.5M</td><td>公开资料没有给出可核验估值</td><td>Kleiner Perkins 领投,其他投资者参与</td><td>用于扩大 generative AI cloud</td><td><a href="https://www.together.ai/blog/announcing-our-series-c" target="_blank" rel="noopener">Together</a></td></tr><tr><td>2024-03</td><td>Salesforce-led round</td><td>$106M</td><td>Reuters 报道约 $1.25B</td><td>Salesforce Ventures 领投/参与</td><td>强化企业分发和战略背书</td><td><a href="https://www.reuters.com/technology/together-ai-valued-125-bln-salesforce-led-funding-round-2024-03-13/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td>2025-02</td><td>Series B</td><td>$305M</td><td>约 $3.3B</td><td>General Catalyst 领投,Prosperity7 co-led 等</td><td>用于 compute infrastructure 和平台建设</td><td><a href="https://www.together.ai/blog/announcing-our-series-c" target="_blank" rel="noopener">Together</a></td></tr><tr><td>2026-07</td><td>Series C</td><td>$800M</td><td>官方公告未给出估值</td><td>Aramco Ventures、NVIDIA、Vista Equity、General Catalyst、Emergence、SE Ventures、Pegatron、Salesforce Ventures、March Capital、DTCP Growth、Lux、Geodesic、PSP 等</td><td>同时宣布 500MW+ compute commitments</td><td><a href="https://www.together.ai/blog/announcing-our-series-c" target="_blank" rel="noopener">Together</a></td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li>Together 的资本路线从软件/开源平台融资转向 compute-backed financing。</li><li>2026 Series C 投资者名单中既有 VC,也有产业资本、能源/制造/硬件相关投资方,这与 500MW+ compute commitments 一致。</li><li>与 Fireworks/Baseten 相比,Together 更早强调 GPU clusters 和 AI Factory,估值应同时参考软件平台和 AI cloud capacity。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Together AI</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2022 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Francisco, California</td></tr><tr><td class="kv-key">创始人/CEO</td><td class="kv-val">Vipul Ved Prakash</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">面向开放模型的 full-stack AI cloud: inference、training/fine-tuning、GPU clusters、developer environments</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Serverless Inference、Batch Inference、Dedicated Model/Container Inference、GPU Clusters、AI Factory、Fine-Tuning、Evaluations、Sandbox、Managed Storage</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">AI-native 应用、开发者、企业模型团队、需要 open-source/private deployment 的组织</td></tr><tr><td class="kv-key">公开客户</td><td class="kv-val">Cognition、Decagon、ElevenLabs、Cursor、Suno 等由公司 2026 Series C 公告列名</td></tr><tr><td class="kv-key">最新融资口径</td><td class="kv-val">2026-07 Series C $800M; 2025-02 Series B $305M at ~$3.3B valuation</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">API usage、dedicated endpoints、GPU cluster rental/commitments、fine-tuning、enterprise/private cloud contracts</td></tr><tr><td class="kv-key">价值链位置</td><td class="kv-val">在开源模型、GPU capacity 和应用开发者之间提供生产化运行层</td></tr></tbody></table></div>
+<p>Together 的定位比 Fireworks 更“全栈”。Fireworks 更像高性能 inference 和部署平台;Together 同时强调 research systems、accelerated compute、GPU clusters、AI Factory 和 post-training。这使 Together 更像面向开放模型的 CoreWeave + OpenAI API alternative + MLOps 平台混合体。对客户而言,它的购买理由是选择权、控制权和成本: 可以使用 DeepSeek、MiniMax、Kimi、GLM、Qwen、Llama、Mistral、gpt-oss 等开放模型,也可以微调、部署 custom models,并在 dedicated capacity 上控制延迟、区域和合规。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 Serverless Inference</h3>
+<p>Together 官方价格页显示,多数团队从 serverless inference 开始,然后在规模化后迁移到 dedicated endpoints。Serverless 按 1M tokens 计价,覆盖 chat、vision、image、audio、video、transcribe、embeddings、rerank、moderation 等类别。公开页面列出的例子包括 DeepSeek V4 Pro input $1.74/M、output $3.48/M;MiniMax M3 input $0.30/M、output $1.20/M;gpt-oss-120B input $0.15/M、output $0.60/M;Qwen3 235B A22B FP8 input $0.20/M、output $0.60/M。部分模型还有 cached input price。</p>
+<p>Serverless 的战略意义是开发者入口和模型市场。Together 越快接入新开放模型,越能成为 AI 应用测试和迁移的默认 API。由于 OpenAI-compatible API 已成为行业事实标准,客户迁移成本主要在 eval、prompt、latency 和模型质量,而不在 SDK。</p>
+<h3 class="subsection">4.2 Dedicated Inference 与 Dedicated Container</h3>
+<p>当客户进入高并发和生产阶段,Together 提供 Dedicated Model Inference 与 Dedicated Container Inference。前者适合热门模型的稳定低延迟部署,后者适合 custom models 或客户自有容器。收费通常围绕 dedicated hardware、capacity commitment、throughput、region 和 support 设计,公开页面引导客户联系销售。</p>
+<p>Dedicated 的商业价值在于把 usage revenue 变成 committed spend。对 Together 来说,客户承诺 capacity 可以提高 GPU 利用率和收入可预测性;对客户来说,它换来更稳定 SLA、更高 rate limit、更低 per-token 成本和数据/模型控制。</p>
+<h3 class="subsection">4.3 GPU Clusters 与 AI Factory</h3>
+<p>Together 价格页和导航将 Accelerated Compute 独立列出,包括 GPU Clusters 和 AI Factory。2026 Series C 公告称,除 $800M equity 外,Together 获得了 500MW+ compute capacity commitments,由新投资者独立资本化,以支持未来 compute growth。这说明 Together 的商业模式已经超出 API: 它需要为大型训练、post-training、inference 和企业/主权 AI 部署锁定物理 capacity。</p>
+<p>GPU clusters 的收入可能来自:</p>
+<ul><li>按 GPU-hour / cluster-hour 使用;</li><li>多月或多年 capacity commitment;</li><li>AI Factory 项目的定制基础设施和托管服务;</li><li>主权 AI / 私有云 / regulated deployment 的项目合同;</li><li>训练、fine-tuning、evaluation 与 inference 打包。</li></ul>
+<h3 class="subsection">4.4 Fine-Tuning、Evaluations 与 Model Shaping</h3>
+<p>Together 把 Fine-Tuning 和 Evaluations 放在 Model Shaping 下。其含义是: 客户不是只买一个 base model API,而是用自己的数据、反馈和 eval harness 改造模型。模型商业化的关键在 post-training: 开源模型本身是免费或低成本的,但企业需要 domain adaptation、tool calling、reasoning、vision-language、safety eval 和 deployment workflow。Together 的收入可以从一次性训练任务扩展到持续 eval/fine-tune/serve 循环。</p>
+<h3 class="subsection">4.5 Enterprise / Private Cloud</h3>
+<p>Together 2024–2026 的产品表达持续强调 enterprise AI platform、private cloud、sovereign AI、regulation-ready infrastructure。企业合同通常不以公开 token price 为主,而是包含:</p>
+<ul><li>committed usage / prepaid credits;</li><li>VPC/private cloud/on-premises deployment;</li><li>SSO、RBAC、audit、data residency;</li><li>support 和 solution engineering;</li><li>dedicated GPUs 或 AI Factory capacity;</li><li>模型选择、benchmark、fine-tuning、eval 和 production serving。</li></ul>
+<p>这使 Together 更接近“开放模型平台供应商”,而非单纯 GPU 云。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品线</th><th>功能</th><th>价值</th></tr></thead><tbody><tr><td>Serverless Inference</td><td>多模型 API、快速接入、按 token 收费</td><td>开发者入口和低门槛试验</td></tr><tr><td>Batch Inference</td><td>批量任务、异步调用</td><td>提高 GPU 利用率,降低客户单位成本</td></tr><tr><td>Dedicated Model Inference</td><td>固定模型 dedicated serving</td><td>高并发、低延迟、稳定 SLA</td></tr><tr><td>Dedicated Container Inference</td><td>自定义容器/custom model</td><td>支持企业自有模型和特殊依赖</td></tr><tr><td>GPU Clusters</td><td>H100/H200/B200/GB200/GB300 等 compute 产品线</td><td>训练、post-training、大规模推理</td></tr><tr><td>AI Factory</td><td>frontier-scale custom infrastructure</td><td>主权 AI、企业私有 AI 平台</td></tr><tr><td>Fine-Tuning</td><td>用客户数据 shaping 模型</td><td>提升客户粘性和模型差异化</td></tr><tr><td>Evaluations</td><td>测试模型质量、安全、任务表现</td><td>连接数据、微调和生产部署</td></tr><tr><td>Sandbox</td><td>开发环境/代码执行</td><td>服务 coding agents 和 agent workflows</td></tr><tr><td>Managed Storage</td><td>权重和数据存储</td><td>让模型生命周期留在 Together 云内</td></tr></tbody></table></div>
+<p>技术上,Together 强调 research-to-production pipeline。2026 Series C 公告提到 FlashAttention-4 for NVIDIA Blackwell、Together Megakernel、together.compile、post-training APIs、tool calling、reasoning、vision-language models。这表明其壁垒在 kernel、compiler、inference engine、training infra 和开放模型生态组合。</p>
+<p>Together 的平台逻辑是“全栈效率”: 模型本身、kernel、compiler、inference system、training infrastructure、hardware utilization 和上层软件都影响生产 AI 成本。若 Together 能比普通开源 serving engine 提供更高 tokens/sec、更低 P95 latency、更好 GPU utilization,就能以较低价格抢占客户且保留软件毛利。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开口径</th><th>解读</th></tr></thead><tbody><tr><td>2026 Series C</td><td>$800M equity</td><td>资本规模进入后期大型 AI infra 阶段</td></tr><tr><td>Compute commitments</td><td>500MW+ compute capacity commitments</td><td>重资产 capacity 需求强,也带来利用率压力</td></tr><tr><td>2025 Series B</td><td>$305M,估值约 $3.3B</td><td>2025 年已是 AI infra 独角兽后期轮</td></tr><tr><td>2024 round</td><td>$106M,Reuters 报道估值约 $1.25B</td><td>Salesforce Ventures 等战略投资强化企业生态</td></tr><tr><td>2023 Series A</td><td>$102.5M,Kleiner Perkins 领投</td><td>早期确立 open model cloud 方向</td></tr><tr><td>客户</td><td>Cognition、Decagon、ElevenLabs、Cursor、Suno</td><td>AI-native 高增长客户,但客户集中需核验</td></tr><tr><td>成本改善案例</td><td>Decagon 迁移到 Together 后 inference 成本降低 6x,公司称开放模型客户常见 6x-20x cost reduction</td><td>强销售叙事,需看任务口径与模型质量</td></tr><tr><td>开发者生态</td><td>早期 RedPajama 1.2T tokens 开源数据集;平台支持 200+ 模型线索</td><td>开源社区心智是低 CAC 资产</td></tr></tbody></table></div>
+<p>Together 尚未公开 ARR、gross margin、GPU utilization、客户集中度和 NDR。由于 $800M Series C 与 500MW+ commitments 说明公司进入资本密集扩张,尽调时不能只看收入增长,必须看每 MW capacity 的收入、毛利、合同期限和空置风险。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Together 的单位经济性可以分为 API、dedicated 和 AI Factory 三类:</p>
+<ol><li><strong>Serverless API</strong>: 收入 = input/output token price × volume;成本 = GPU time + serving overhead + idle capacity + network/storage。优势是开发者自助,缺点是价格透明、竞争强。</li><li><strong>Dedicated Inference</strong>: 收入 = committed capacity 或 discounted token plan;成本 = reserved GPU 和运维。优势是可预测收入和稳定客户关系,风险是客户议价强。</li><li><strong>GPU Clusters / AI Factory</strong>: 收入 = large contract / capacity lease / managed infra;成本 = power、data center、GPU、network、financing。优势是合同大,风险是资本重、周期长。</li></ol>
+<p>Together 的 gross margin 取决于四个变量:</p>
+<ul><li>GPU procurement cost 与融资结构;</li><li>utilization,尤其是 prefill/decode 分离、batching 和多租户调度;</li><li>software efficiency,包括 FlashAttention、Megakernel、compiler;</li><li>customer pricing power,即客户是否愿意为开放模型控制权和成本节省支付平台溢价。</li></ul>
+<p>Series C 公告称开放模型客户常见 6x-20x 成本降低。若该节省来自模型选择而非 Together 独有软件,竞争会很快压价;若来自 Together kernel/serving/full-stack optimization,则平台可保留一部分价值。Decagon 6x cost reduction 是强案例,但需要核验迁移前后的模型、任务、质量、延迟和并发口径。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>类别</th><th>竞争者</th><th>竞争点</th></tr></thead><tbody><tr><td>Open model inference platforms</td><td>Fireworks AI、Baseten、Replicate、Modal、Anyscale</td><td>模型覆盖、延迟、价格、enterprise support</td></tr><tr><td>AI cloud / GPU capacity</td><td>CoreWeave、Lambda、Crusoe、Nebius、Oracle Cloud</td><td>GPU availability、价格、区域、电力</td></tr><tr><td>Hyperscalers</td><td>AWS、Azure、GCP</td><td>企业采购、合规、credits、model garden</td></tr><tr><td>Model API providers</td><td>OpenAI、Anthropic、Google、Mistral、xAI</td><td>闭源模型质量、品牌、tooling</td></tr><tr><td>开源自建</td><td>vLLM、TGI、TensorRT-LLM、SGLang、KServe</td><td>大客户可自建,压缩平台溢价</td></tr><tr><td>Nvidia ecosystem</td><td>NIM、Triton、Dynamo、DGX Cloud</td><td>芯片厂商可向上整合 serving stack</td></tr></tbody></table></div>
+<p>Together 的护城河:</p>
+<ul><li>开源社区和研究系统品牌;</li><li>模型覆盖广,能快速响应开放模型迭代;</li><li>full-stack 产品从 inference 到 GPU clusters;</li><li>2026 以后更强的 compute capacity;</li><li>企业/private/sovereign deployment 叙事。</li></ul>
+<p>脆弱点:</p>
+<ul><li>如果开放模型 API 变成 commodity,客户会按价格切换;</li><li>如果 compute commitments 太大,利用率下行会伤害毛利;</li><li>Hyperscaler 可通过 credits 和采购合同锁住企业;</li><li>AI-native 客户增长快但集中度和预算波动高。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>CEO Vipul Ved Prakash 是 Together 的核心创始人和叙事输出者。公司团队背景覆盖 Stanford、MIT、University of Chicago 等研究/工程网络,并围绕开放模型、系统优化和生产 AI infrastructure 建立组织。Together 的品牌不是单纯“便宜 API”,而是“开放 AI 应该 abundant, not expensive”。这类使命叙事对吸引开源社区、研究工程师和 AI-native 客户有帮助。</p>
+<p>2024–2025 年收购 CodeSandbox 和 Refuel.ai 也反映团队意图: CodeSandbox 增强 developer environment / code execution / European engineering presence;Refuel.ai 增强数据准备和企业 AI workflow。Together 正把自己从模型 serving 平台扩展为 AI development-to-production platform。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>重资产风险</strong>: 500MW+ commitments 带来规模优势,也带来利用率和融资成本压力。</li><li><strong>价格战风险</strong>: 开放模型 API 价格透明,Fireworks、Baseten、clouds 都会竞争。</li><li><strong>模型供应风险</strong>: Together 依赖开放模型持续接近闭源模型质量。</li><li><strong>客户自建风险</strong>: 大客户可能用 vLLM/TensorRT-LLM 自建 serving。</li><li><strong>客户集中风险</strong>: AI-native 客户用量大,但预算和产品生命周期波动高。</li><li><strong>云厂商挤压</strong>: AWS/Azure/GCP 用企业采购和 credits 绑定客户。</li><li><strong>资本化风险</strong>: 若后续估值过高而毛利不够,IPO/下一轮压力上升。</li><li><strong>合规和主权 AI 执行风险</strong>: 区域部署涉及数据、能源、政府关系和本地供应链。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anyscale.html">Anyscale</a><a class="sib-chip" href="baseten.html">Baseten</a><a class="sib-chip" href="databricks.html">Databricks</a><a class="sib-chip" href="fireworks_ai.html">Fireworks AI</a><a class="sib-chip" href="hugging_face.html">Hugging Face</a><a class="sib-chip" href="mercor.html">Mercor</a><a class="sib-chip" href="modal.html">Modal</a><a class="sib-chip" href="scale_ai.html">Scale AI</a></div>
+</div>
+</body></html>

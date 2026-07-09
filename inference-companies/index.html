@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Inference Companies Brief</title>
+<style>
+  :root {
+    --blue: #4472C4;
+    --blue-dark: #2f549c;
+    --blue-deep: #1e3a6e;
+    --blue-light: #e8eefa;
+    --blue-lighter: #f4f7fd;
+    --ink: #1f2a44;
+    --ink-soft: #55618a;
+    --line: #d7e0f2;
+    --white: #ffffff;
+    --green: #2e9e6b;
+    --amber: #c98a1e;
+    --red: #c0504d;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", -apple-system, sans-serif;
+    background: var(--blue-lighter);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  body.lang-zh .en { display: none !important; }
+  body.lang-en .zh { display: none !important; }
+
+  header {
+    background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 74%, #5a86d6 100%);
+    color: var(--white);
+    padding: 44px 24px 42px;
+  }
+  .header-inner, .wrap { max-width: 1120px; margin: 0 auto; }
+  .header-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+  h1 { font-size: 30px; line-height: 1.25; font-weight: 760; letter-spacing: 0; }
+  .sub { margin-top: 12px; max-width: 820px; font-size: 14.5px; opacity: 0.92; }
+  .lang-btn {
+    color: var(--white);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .lang-btn:hover { background: rgba(255,255,255,0.28); }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  nav.toc a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 999px;
+    padding: 5px 13px;
+  }
+
+  .wrap { padding: 0 24px 64px; }
+  section { margin-top: 42px; scroll-margin-top: 20px; }
+  .part-tag {
+    display: inline-block;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    border-radius: 999px;
+    padding: 3px 12px;
+    margin-bottom: 10px;
+  }
+  .sec-title h2 { font-size: 23px; color: var(--blue-dark); letter-spacing: 0; }
+  .sec-lede { margin-top: 8px; max-width: 860px; color: var(--ink-soft); font-size: 14px; }
+
+  .panel {
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-top: 14px;
+  }
+  .panel p { font-size: 14px; }
+  .panel p + p { margin-top: 10px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; }
+  @media (max-width: 900px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 17px;
+  }
+  .card h3, .card h4 { color: var(--blue-dark); font-size: 15px; margin-bottom: 7px; }
+  .card p, .card li { font-size: 13.5px; color: var(--ink); }
+  .card ul { padding-left: 18px; }
+  .card li + li { margin-top: 5px; }
+  .tag {
+    display: inline-block;
+    background: var(--blue-light);
+    border: 1px solid var(--line);
+    color: var(--blue-dark);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 9px;
+    margin-bottom: 8px;
+  }
+  .tag.green { color: var(--green); background: #edf7f1; border-color: #bfe3d0; }
+  .tag.amber { color: var(--amber); background: #fff7e8; border-color: #f0d7a8; }
+  .tag.red { color: var(--red); background: #fbefef; border-color: #edcaca; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 12px; overflow: hidden; }
+  th, td { border: 1px solid var(--line); padding: 11px 12px; vertical-align: top; font-size: 13px; }
+  th { background: var(--blue-light); color: var(--blue-dark); font-weight: 760; text-align: left; }
+  td b { color: var(--blue-dark); }
+  .table-scroll { overflow-x: auto; margin-top: 14px; border-radius: 12px; }
+
+  .callout {
+    margin-top: 14px;
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 10px 10px 0;
+    padding: 13px 16px;
+    font-size: 13.5px;
+  }
+  .callout b:first-child { color: var(--blue-dark); }
+  .risk-low { color: var(--green); font-weight: 760; }
+  .risk-mid { color: var(--amber); font-weight: 760; }
+  .risk-high { color: var(--red); font-weight: 760; }
+
+  footer { max-width: 1120px; margin: 48px auto 0; padding: 0 24px 40px; color: var(--ink-soft); font-size: 12.5px; }
+</style>
+</head>
+<body class="lang-zh">
+<header>
+  <div class="header-inner">
+    <div class="header-top">
+      <div>
+        <h1><span class="zh">AI 推理公司精简版：技术地图、商业入口与壁垒</span><span class="en">AI Inference Companies: Technology Map, Business Models, and Moats</span></h1>
+        <p class="sub">
+          <span class="zh">这版去掉长篇展开，只回答四个问题：推理公司主要做哪些技术？每项技术大概是什么？Fireworks、Together、Baseten 谁主推什么？行业价值、壁垒和被上下游蚕食的风险在哪里？</span>
+          <span class="en">This brief strips out the long explanations and answers four questions: what technologies inference companies build, what each technology roughly does, which company emphasizes what, and where the industry's value, moats, and erosion risks sit.</span>
+        </p>
+      </div>
+      <button class="lang-btn" onclick="toggleLang()"><span class="zh">EN · English</span><span class="en">ZH · Chinese</span></button>
+    </div>
+    <nav class="toc">
+      <a href="#value"><span class="zh">01 行业价值</span><span class="en">01 Industry Value</span></a>
+      <a href="#tech"><span class="zh">02 技术地图</span><span class="en">02 Technology Map</span></a>
+      <a href="#companies"><span class="zh">03 三家主推</span><span class="en">03 Company Focus</span></a>
+      <a href="#moats"><span class="zh">04 壁垒</span><span class="en">04 Moats</span></a>
+      <a href="#erosion"><span class="zh">05 蚕食风险</span><span class="en">05 Erosion Risks</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="value">
+    <span class="part-tag">01 VALUE</span>
+    <div class="sec-title"><h2><span class="zh">推理行业的价值：把昂贵 GPU 变成更便宜、更稳定的 token</span><span class="en">The Value of Inference: Turning Expensive GPUs Into Cheaper, More Reliable Tokens</span></h2></div>
+    <p class="sec-lede">
+      <span class="zh">推理公司不是在训练基础模型，而是在做一件更工程化的事：同样的模型、同样的 GPU，谁能每秒产出更多 token、首字延迟更低、服务更稳定，谁就能吃到优化差价。</span>
+      <span class="en">Inference companies are not training foundation models. They are doing something more operational: given the same model and the same GPU, whoever produces more tokens per second, lowers latency, and runs more reliably captures the optimization spread.</span>
+    </p>
+
+    <div class="grid-4">
+      <div class="card">
+        <span class="tag"><span class="zh">成本</span><span class="en">Cost</span></span>
+        <h3><span class="zh">GPU 是固定账单</span><span class="en">GPU spend is fixed</span></h3>
+        <p><span class="zh">GPU 按小时烧钱。不管请求多不多、卡有没有跑满，账单都在走。推理优化的第一目标就是提高 GPU 利用率。</span><span class="en">GPUs burn money by the hour. Whether the card is full or idle, the bill runs. Inference optimization starts with keeping GPUs busy.</span></p>
+      </div>
+      <div class="card">
+        <span class="tag"><span class="zh">产出</span><span class="en">Output</span></span>
+        <h3><span class="zh">token 是可优化产量</span><span class="en">Tokens are the output</span></h3>
+        <p><span class="zh">更快的 kernel、更好的批处理、更少的重复计算，都会让同一块 GPU 每小时吐出更多 token，单位成本下降。</span><span class="en">Better kernels, batching, and cache reuse make the same GPU produce more tokens per hour, driving unit cost down.</span></p>
+      </div>
+      <div class="card">
+        <span class="tag"><span class="zh">体验</span><span class="en">UX</span></span>
+        <h3><span class="zh">延迟决定产品体感</span><span class="en">Latency defines the product feel</span></h3>
+        <p><span class="zh">首字等待和逐字速度直接决定 AI 应用是否“顺手”。推理公司把这些变成可承诺的 SLA。</span><span class="en">Time-to-first-token and streaming speed decide whether an AI product feels responsive. Inference companies turn them into SLAs.</span></p>
+      </div>
+      <div class="card">
+        <span class="tag"><span class="zh">主权</span><span class="en">Control</span></span>
+        <h3><span class="zh">开源模型需要运行层</span><span class="en">Open models need a runtime layer</span></h3>
+        <p><span class="zh">Llama、Qwen、DeepSeek 等开源模型给了客户选择权，但真正上线还需要推理、调度、监控和可靠性。</span><span class="en">Open models such as Llama, Qwen, and DeepSeek create choice, but production still needs serving, scheduling, monitoring, and reliability.</span></p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="zh"><b>一句话：</b>推理行业的价值，不是“又训练了一个模型”，而是把模型运行这件事做得更快、更便宜、更稳定，并把 GPU 成本优势转化为毛利和客户体验。</span>
+      <span class="en"><b>In one line:</b> inference value is not "training another model." It is running models faster, cheaper, and more reliably, then turning GPU efficiency into margin and user experience.</span>
+    </div>
+  </section>
+
+  <section id="tech">
+    <span class="part-tag">02 TECHNOLOGY</span>
+    <div class="sec-title"><h2><span class="zh">推理主要做哪些技术：一张工具箱地图</span><span class="en">What Inference Companies Actually Build: The Toolbox</span></h2></div>
+    <p class="sec-lede">
+      <span class="zh">三家公司技术方向高度重叠。区别不在于“某项技术只有谁会”，而在于谁把哪一项做成招牌、做得多深、是否跑到生产级。</span>
+      <span class="en">The technical directions overlap heavily. The difference is not that one company alone owns a technique; it is which technique each turns into a flagship, how deep the implementation goes, and whether it works in production.</span>
+    </p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th><span class="zh">技术</span><span class="en">Technology</span></th>
+            <th><span class="zh">大概是什么</span><span class="en">What it does</span></th>
+            <th><span class="zh">主要改善</span><span class="en">Main effect</span></th>
+            <th><span class="zh">谁最主推</span><span class="en">Who emphasizes it most</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b><span class="zh">内核 / Attention 优化</span><span class="en">Kernels / attention optimization</span></b></td>
+            <td><span class="zh">重写 GPU 上真正执行计算的小程序，减少 HBM 与计算单元之间的数据搬运。</span><span class="en">Rewrite the low-level GPU programs that do the math, cutting data movement between HBM and compute.</span></td>
+            <td><span class="zh">更低延迟、更高吞吐，尤其是 Prefill 和注意力计算。</span><span class="en">Lower latency and higher throughput, especially in prefill and attention.</span></td>
+            <td><span class="zh"><b>Fireworks</b>（FireAttention）和 <b>Together</b>（FlashAttention 科研）</span><span class="en"><b>Fireworks</b> via FireAttention; <b>Together</b> via FlashAttention research.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">量化</span><span class="en">Quantization</span></b></td>
+            <td><span class="zh">把权重或 KV Cache 从 FP16 压到 FP8/FP4，减少数据体积。</span><span class="en">Compress weights or KV cache from FP16 to FP8/FP4, reducing bytes moved and stored.</span></td>
+            <td><span class="zh">Decode 更快、显存装下更多并发。</span><span class="en">Faster decode and more concurrency in the same GPU memory.</span></td>
+            <td><span class="zh"><b>Fireworks</b> 最常把它当招牌讲；三家都会用。</span><span class="en"><b>Fireworks</b> makes it a signature theme; all three use it.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">KV Cache 管理</span><span class="en">KV-cache management</span></b></td>
+            <td><span class="zh">缓存前文算过的 Key/Value，做分页、压缩、复用、前缀缓存。</span><span class="en">Store prior Key/Value states, then page, compress, reuse, and prefix-cache them.</span></td>
+            <td><span class="zh">少重复计算，更多并发，更低首字等待。</span><span class="en">Less recomputation, more concurrency, lower time-to-first-token.</span></td>
+            <td><span class="zh"><b>Together</b> 强调分页/压缩/复用；<b>Baseten</b> 强调 KV 感知路由。</span><span class="en"><b>Together</b> emphasizes paging/compression/reuse; <b>Baseten</b> emphasizes KV-aware routing.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">连续批处理 / 调度</span><span class="en">Continuous batching / scheduling</span></b></td>
+            <td><span class="zh">把很多请求动态拼在一起跑，生成完的下车，新请求上车。</span><span class="en">Dynamically batch many requests: completed ones leave, new ones enter, and the GPU stays full.</span></td>
+            <td><span class="zh">提高 GPU 利用率，同时控制排队和 OOM。</span><span class="en">Higher utilization while controlling queues and OOM risk.</span></td>
+            <td><span class="zh"><b>Baseten</b> 最强调生产调度；三家都必须做。</span><span class="en"><b>Baseten</b> emphasizes production scheduling; all three need it.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">投机解码</span><span class="en">Speculative decoding</span></b></td>
+            <td><span class="zh">用小模型先猜，大模型一次性批改，猜对就省掉多步生成。</span><span class="en">A small model drafts ahead; the large model verifies in one pass, saving multiple decode steps when guesses are accepted.</span></td>
+            <td><span class="zh">加速逐字生成，通常用于 Decode。</span><span class="en">Speeds up token-by-token generation, mainly in decode.</span></td>
+            <td><span class="zh"><b>Fireworks</b> 用 FireOptimizer 定制 drafter；<b>Together</b> 用 ATLAS 在线适应。</span><span class="en"><b>Fireworks</b> customizes drafters via FireOptimizer; <b>Together</b> adapts online with ATLAS.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">P/D 分离</span><span class="en">Prefill/decode disaggregation</span></b></td>
+            <td><span class="zh">把 Prefill 和 Decode 分到不同 GPU 池，按两种工作负载分别扩容。</span><span class="en">Split prefill and decode into separate GPU pools that scale independently.</span></td>
+            <td><span class="zh">减少队头阻塞，让长输入和逐字输出互不拖累。</span><span class="en">Reduces head-of-line blocking so long inputs do not stall streaming output.</span></td>
+            <td><span class="zh"><b>Fireworks</b> 公开作为架构卖点；大规模平台普遍会采用类似思路。</span><span class="en"><b>Fireworks</b> markets it openly; large-scale platforms generally use related ideas.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">部署、冷启动、多云</span><span class="en">Deployment, cold starts, multi-cloud</span></b></td>
+            <td><span class="zh">把模型标准化上线，快速拉起 GPU，跨云调度容量和故障切换。</span><span class="en">Standardize model deployment, spin up GPUs quickly, and schedule/fail over across clouds.</span></td>
+            <td><span class="zh">可靠性、弹性扩容、客户少操心。</span><span class="en">Reliability, elastic scaling, and less operational burden for customers.</span></td>
+            <td><span class="zh"><b>Baseten</b> 最主推；<b>Together</b> 在自有集群层也很重。</span><span class="en"><b>Baseten</b> leads this story; <b>Together</b> is also heavy at the owned-fleet layer.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="companies">
+    <span class="part-tag">03 COMPANIES</span>
+    <div class="sec-title"><h2><span class="zh">三家公司技术都做，但主推的产品形态不同</span><span class="en">They Share the Toolbox, but Sell Different Products</span></h2></div>
+    <p class="sec-lede">
+      <span class="zh">最重要的判断：技术栈趋同，商业包装和客户入口不同。</span>
+      <span class="en">The key judgment: the technology stacks converge, but the commercial packaging and customer entry points differ.</span>
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">Fireworks</span>
+        <h3><span class="zh">卖更快更便宜的 token</span><span class="en">Sells faster, cheaper tokens</span></h3>
+        <ul>
+          <li><span class="zh"><b>客户入口：</b>“我不想自己跑 Llama/Qwen/DeepSeek，给我一个快 API。”</span><span class="en"><b>Entry point:</b> "I don't want to run Llama/Qwen/DeepSeek; give me a fast API."</span></li>
+          <li><span class="zh"><b>主推：</b>FireAttention、FP8/FP4、P/D 分离、FireOptimizer。</span><span class="en"><b>Emphasis:</b> FireAttention, FP8/FP4, P/D disaggregation, FireOptimizer.</span></li>
+          <li><span class="zh"><b>商业形态：</b>轻资产，租云上 GPU，靠软件优化吃差价。</span><span class="en"><b>Business model:</b> asset-light, rented cloud GPUs, monetizing software efficiency.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Together AI</span>
+        <h3><span class="zh">卖 token + 算力</span><span class="en">Sells tokens plus compute</span></h3>
+        <ul>
+          <li><span class="zh"><b>客户入口：</b>从 API 用量开始，也可以长成微调、训练、整租集群。</span><span class="en"><b>Entry point:</b> starts with API usage, can grow into fine-tuning, training, and cluster contracts.</span></li>
+          <li><span class="zh"><b>主推：</b>FlashAttention 科研、FlashDecoding、ATLAS、GB200/Neocloud。</span><span class="en"><b>Emphasis:</b> FlashAttention research, FlashDecoding, ATLAS, GB200/neocloud.</span></li>
+          <li><span class="zh"><b>商业形态：</b>重资产，自有或长租 GPU，软件优势叠加算力供给。</span><span class="en"><b>Business model:</b> capital-heavy, owned or long-leased GPUs, stacking software edge on compute supply.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Baseten</span>
+        <h3><span class="zh">卖部署与可靠运行</span><span class="en">Sells deployment and reliable operation</span></h3>
+        <ul>
+          <li><span class="zh"><b>客户入口：</b>“这是我自己的模型，帮我稳定上线。”</span><span class="en"><b>Entry point:</b> "Here is my own model; help me run it in production."</span></li>
+          <li><span class="zh"><b>主推：</b>Truss、Engine Builder、连续批处理、KV 路由、多云、冷启动、SLA。</span><span class="en"><b>Emphasis:</b> Truss, Engine Builder, continuous batching, KV routing, multi-cloud, cold starts, SLAs.</span></li>
+          <li><span class="zh"><b>商业形态：</b>轻资产平台，按 replica 运行时长和平台能力收费。</span><span class="en"><b>Business model:</b> asset-light platform, billing around replica runtime and managed operations.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="zh"><b>更精确的说法：</b>Fireworks 和 Together 更像“帮你用优化好的公共开源模型”；Baseten 更像“帮你的任意模型变成生产服务”。前两家卖推理结果，Baseten 卖生产运行能力。</span>
+      <span class="en"><b>More precise framing:</b> Fireworks and Together are closer to "use our optimized public open models"; Baseten is closer to "turn your model into a production service." The first two sell inference output; Baseten sells production runtime.</span>
+    </div>
+  </section>
+
+  <section id="moats">
+    <span class="part-tag">04 MOATS</span>
+    <div class="sec-title"><h2><span class="zh">竞争壁垒：单点技术会被追，生产系统会沉淀</span><span class="en">Moats: Point Technologies Get Copied; Production Systems Compound</span></h2></div>
+    <p class="sec-lede">
+      <span class="zh">考虑 vLLM/SGLang 的影响，不能把任何单点技术都当永久壁垒。开源会把“及格线”不断抬高，真正能留住客户的是生产级系统、客户工作流和运营经验。</span>
+      <span class="en">With vLLM/SGLang in the picture, no single technique should be treated as a permanent moat. Open source keeps raising the baseline. What retains customers is production-grade systems, customer workflow, and operating experience.</span>
+    </p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th><span class="zh">公司</span><span class="en">Company</span></th>
+            <th><span class="zh">真正壁垒</span><span class="en">Real moat</span></th>
+            <th><span class="zh">vLLM 的影响</span><span class="en">Impact of vLLM</span></th>
+            <th><span class="zh">壁垒质量判断</span><span class="en">Moat quality</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Fireworks</b></td>
+            <td><span class="zh">低延迟品牌、核心客户流量、FireOptimizer 定制 drafter、每个客户的调优配方。</span><span class="en">Low-latency brand, flagship customer traffic, FireOptimizer custom drafters, per-customer tuning recipes.</span></td>
+            <td><span class="zh">vLLM 会持续追近基础速度，压缩“只是更快”的溢价。</span><span class="en">vLLM keeps closing the baseline speed gap, compressing any "we are just faster" premium.</span></td>
+            <td><span class="zh"><span class="risk-mid">中等偏强：</span>速度领先会腐烂，客户定制和流量飞轮更耐久。</span><span class="en"><span class="risk-mid">Moderately strong:</span> raw speed decays; customer-specific optimization is stickier.</span></td>
+          </tr>
+          <tr>
+            <td><b>Together AI</b></td>
+            <td><span class="zh">顶级系统科研团队、自有/长租算力、API→微调→集群的升级阶梯。</span><span class="en">Top systems research bench, owned/leased compute, and the API→fine-tune→cluster upgrade ladder.</span></td>
+            <td><span class="zh">vLLM 侵蚀 API 层通用推理优势，但难以替代大规模算力合约和完整集群供给。</span><span class="en">vLLM erodes generic API-serving advantage, but does not replace large capacity contracts or full-cluster supply.</span></td>
+            <td><span class="zh"><span class="risk-mid">高上限、高风险：</span>算力稀缺时壁垒强，利用率不足时折旧反噬。</span><span class="en"><span class="risk-mid">High ceiling, high risk:</span> strong when compute is scarce; dangerous when utilization falls.</span></td>
+          </tr>
+          <tr>
+            <td><b>Baseten</b></td>
+            <td><span class="zh">客户部署工作流、Truss 入口、多云运营经验、SLA、监控、扩缩容配置。</span><span class="en">Customer deployment workflow, Truss front door, multi-cloud operating experience, SLAs, monitoring, autoscaling configs.</span></td>
+            <td><span class="zh">vLLM 降低中小客户自建门槛，但高 SLA、多云、复杂自有模型仍需要平台化能力。</span><span class="en">vLLM lowers the DIY bar for smaller customers, but hard SLAs, multi-cloud, and complex custom models still need platform muscle.</span></td>
+            <td><span class="zh"><span class="risk-low">实践中较粘：</span>技术不神秘，但迁移意味着重建生产基础设施。</span><span class="en"><span class="risk-low">Sticky in practice:</span> the pieces are not magical, but leaving means rebuilding production infrastructure.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="zh"><b>壁垒总判断：</b>这三家最容易被高估的是“某个技术独家”；最容易被低估的是“生产系统长期调出来的参数、客户流程、故障经验和切换成本”。</span>
+      <span class="en"><b>Moat judgment:</b> the easiest thing to overrate is "exclusive technology." The easiest thing to underrate is the compound value of tuned production parameters, customer workflows, failure experience, and switching cost.</span>
+    </div>
+  </section>
+
+  <section id="erosion">
+    <span class="part-tag">05 RISKS</span>
+    <div class="sec-title"><h2><span class="zh">被上下游蚕食的可能性：谁会来抢中间层利润</span><span class="en">Erosion Risk: Who Can Attack the Middle Layer?</span></h2></div>
+    <p class="sec-lede">
+      <span class="zh">推理公司站在云、GPU、模型和应用之间。这个位置有价值，也天然会被上下游挤压。</span>
+      <span class="en">Inference companies sit between clouds, GPUs, model labs, and applications. That middle position is valuable, but naturally exposed to pressure from both sides.</span>
+    </p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th><span class="zh">攻击方</span><span class="en">Attacker</span></th>
+            <th><span class="zh">怎么蚕食</span><span class="en">How it attacks</span></th>
+            <th><span class="zh">为什么不一定碾压</span><span class="en">Why it may not crush them</span></th>
+            <th><span class="zh">受影响最大</span><span class="en">Most exposed</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b><span class="zh">vLLM / SGLang 开源栈</span><span class="en">vLLM / SGLang open-source stack</span></b></td>
+            <td><span class="zh">不断提高自建“及格线”，让客户用 K8s + vLLM 自己跑。</span><span class="en">Keeps raising the DIY baseline, letting customers self-serve with K8s + vLLM.</span></td>
+            <td><span class="zh">开源引擎不是完整生产平台；SLA、扩缩容、成本治理、故障恢复仍要自己做。</span><span class="en">An engine is not a full production platform; SLAs, autoscaling, cost control, and recovery remain the customer's burden.</span></td>
+            <td><span class="zh">低端客户、纯速度溢价。</span><span class="en">Low-end customers and pure speed premiums.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">云厂商</span><span class="en">Hyperscalers</span></b></td>
+            <td><span class="zh">SageMaker、Vertex、Bedrock 等补齐推理托管，用算力折扣和云账户关系抢单。</span><span class="en">Managed platforms such as SageMaker, Vertex, and Bedrock improve serving and win with compute discounts and existing cloud relationships.</span></td>
+            <td><span class="zh">不够中立；AWS 不会把负载调到 GCP，GCP 也不会帮你用 AWS。体验也常慢于专业推理平台。</span><span class="en">They are not neutral; AWS will not route workloads to GCP, and vice versa. Their UX can also lag specialized inference platforms.</span></td>
+            <td><span class="zh"><b>Baseten</b> 功能重合最高；Fireworks/Together 也会被价格挤压。</span><span class="en"><b>Baseten</b> has the most functional overlap; Fireworks/Together face pricing pressure too.</span></td>
+          </tr>
+          <tr>
+            <td><b>NVIDIA</b></td>
+            <td><span class="zh">用 TensorRT-LLM、NIM、Dynamo、DGX Cloud/Lepton 向上吃推理运行时和算力调度。</span><span class="en">Uses TensorRT-LLM, NIM, Dynamo, and DGX Cloud/Lepton to move up into runtime and compute orchestration.</span></td>
+            <td><span class="zh">最大客户就是云厂商和推理公司；亲自抢服务会有渠道冲突，也缺少多硬件中立性。</span><span class="en">Its biggest customers are clouds and inference platforms; going direct creates channel conflict and lacks multi-hardware neutrality.</span></td>
+            <td><span class="zh">所有中间层，尤其是工具化和基础运行时。</span><span class="en">All middle-layer players, especially tooling and base runtime.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">LLM 公司</span><span class="en">LLM labs</span></b></td>
+            <td><span class="zh">OpenAI、Anthropic、Google 自身就是最大推理运营者，理论上能托管开源/客户模型。</span><span class="en">OpenAI, Anthropic, and Google already run massive inference and could theoretically host open or customer models.</span></td>
+            <td><span class="zh">托管开源会冲击自家闭源模型；客户也担心把私有模型和流量交给潜在应用层竞争者。</span><span class="en">Hosting open models undermines their closed-model business; customers may not trust potential application-layer rivals with proprietary models and traffic.</span></td>
+            <td><span class="zh">公共模型 API 层，尤其是 Fireworks/Together。</span><span class="en">Public model API layer, especially Fireworks/Together.</span></td>
+          </tr>
+          <tr>
+            <td><b><span class="zh">大客户自建</span><span class="en">Large customers in-source</span></b></td>
+            <td><span class="zh">当流量足够大，客户可能自租 GPU，用 vLLM/SGLang 自己跑。</span><span class="en">At enough scale, customers may rent GPUs and run vLLM/SGLang themselves.</span></td>
+            <td><span class="zh">需要稀缺工程团队和 7x24 运维；除非体量很大或合规强，否则外包常更划算。</span><span class="en">It requires scarce engineering talent and 24/7 ops; unless scale or compliance demands it, outsourcing often remains cheaper.</span></td>
+            <td><span class="zh">巨型客户账户，三家都受影响。</span><span class="en">Very large accounts; all three are exposed.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag red"><span class="zh">高风险</span><span class="en">High risk</span></span>
+        <h3><span class="zh">纯速度差异被追平</span><span class="en">Raw speed gets copied</span></h3>
+        <p><span class="zh">开源和 NVIDIA 工具链会持续压缩单点技术溢价。只靠“我比 vLLM 快一点”很难长期防守。</span><span class="en">Open source and NVIDIA tooling keep compressing point-tech premiums. "We are a bit faster than vLLM" is hard to defend forever.</span></p>
+      </div>
+      <div class="card">
+        <span class="tag amber"><span class="zh">中风险</span><span class="en">Medium risk</span></span>
+        <h3><span class="zh">云厂商托管体验追上</span><span class="en">Cloud managed serving catches up</span></h3>
+        <p><span class="zh">如果 SageMaker/Vertex/Bedrock 把体验和性能补齐，中间层必须靠中立多云和更懂推理来防守。</span><span class="en">If SageMaker/Vertex/Bedrock catch up on UX and performance, middle-layer players must defend with neutrality and deeper inference craft.</span></p>
+      </div>
+      <div class="card">
+        <span class="tag green"><span class="zh">较耐久</span><span class="en">More durable</span></span>
+        <h3><span class="zh">客户流程和生产责任</span><span class="en">Customer workflow and production ownership</span></h3>
+        <p><span class="zh">一旦监控、扩缩、SLA、定制调优和故障经验长在平台上，迁移就不只是换 API，而是重建生产系统。</span><span class="en">Once monitoring, scaling, SLAs, custom tuning, and incident history live on the platform, switching is not just changing an API; it is rebuilding production.</span></p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="zh"><b>最终判断：</b>这不是一个“谁有独家技术”的行业，而是一个“谁能把趋同技术做成稳定产品、客户入口和运营复利”的行业。vLLM 会让基础推理越来越商品化，但也会把客户教育好，让他们更清楚什么时候该自建、什么时候该买专业平台。</span>
+      <span class="en"><b>Bottom line:</b> this is not an "exclusive technology" industry. It is an industry about turning converging techniques into stable products, customer entry points, and operating compounding. vLLM commoditizes the baseline, but it also educates buyers: when to self-build, and when a specialist platform is worth paying for.</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="zh">基于长版材料整理的精简版。重点是框架判断，不展开底层细节；仅供学习与研究，不构成投资建议。</span>
+  <span class="en">A condensed version based on the full report. It focuses on the analytical frame rather than low-level detail. For learning and research only; not investment advice.</span>
+</footer>
+
+<script>
+function toggleLang() {
+  const body = document.body;
+  if (body.classList.contains('lang-zh')) {
+    body.classList.remove('lang-zh');
+    body.classList.add('lang-en');
+    document.documentElement.lang = 'en';
+  } else {
+    body.classList.remove('lang-en');
+    body.classList.add('lang-zh');
+    document.documentElement.lang = 'zh';
+  }
+}
+</script>
+</body>
+</html>

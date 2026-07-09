@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Genspark · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 通用 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">通用 AI</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">中国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.genspark.ai/" target="_blank" rel="noopener">Genspark</a></h1>
+    <div class="dc-oneliner">Genspark 已从早期 AI search 产品扩展为 AI Workspace。它把搜索、研究、PPT/文档/表格生成、图像/视频/音频生成、电话、邮件和 CRM 等任务做成可消费的工作流。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Genspark 已从早期 AI search 产品扩展为 AI Workspace。它把搜索、研究、PPT/文档/表格生成、图像/视频/音频生成、电话、邮件和 CRM 等任务做成可消费的工作流。</strong></p>
+<p>公司商业化已经从个人订阅延展到 Team Plan 和 Enterprise 合同。投资问题不是它能否再做一个答案引擎，而是能否在 Manus、Perplexity、ChatGPT Agent 之间找到稳定高频场景，并把第三方模型调用、素材生成和用户 credit 消耗之间的单位经济性跑通。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<p>Genspark 的融资披露是本篇最大缺口。官网 business 页面有“Backed by world class investors”模块,露出 SBI Holdings、LG、UpHonest Capital 等 logo,但没有在正文披露融资金额、轮次、估值、日期或领投关系。公开搜索截至 2026 年 7 月 6 日 未能稳定回源到完整融资公告。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>事件</th><th>金额</th><th>估值</th><th>投资方</th><th>当前可确认度</th><th>来源</th></tr></thead><tbody><tr><td>2024–2026</td><td>产品公开运营与 Genspark AI Workspace / Business 页面上线</td><td>需要核验</td><td>需要核验</td><td>需要核验</td><td>产品存在、商业化页面存在；不作为融资金额证据</td><td><a href="https://www.genspark.ai/business" target="_blank" rel="noopener">Genspark Business</a></td></tr><tr><td>2026 前后</td><td>官网披露 investor logos</td><td>需要核验</td><td>需要核验</td><td>SBI Holdings、LG、UpHonest Capital 等</td><td>可确认 logo 露出,但无法确认轮次/金额</td><td><a href="https://www.genspark.ai/business" target="_blank" rel="noopener">Genspark Business</a></td></tr><tr><td>后续需要补证</td><td>公司注册、融资文件、投资者公告、PitchBook/Crunchbase/Dealroom 条目</td><td>需要核验</td><td>需要核验</td><td>需要核验</td><td>需要从付费数据库或公司确认</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr></tbody></table></div>
+<p>需要后续核验的融资问题:</p>
+<ul><li>SBI Holdings、LG、UpHonest Capital 分别是哪一轮进入?是股权投资、战略合作、渠道合作还是 logo partnership?</li><li>是否存在 seed / Series A / strategic round?金额、post-money valuation、清算优先权、参与权等条款是什么?</li><li>Genspark Inc. 的法定主体、股权结构、董事会席位和主要创始人持股比例是什么?</li><li>是否有日本/韩国/美国多主体结构?官网存在 Korea/Japan/Brasil/France/Italia/Español 等区域入口,需要确认是否只是 localization 还是有区域运营实体。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">Genspark Inc. / Genspark</td></tr><tr><td class="kv-key">总部/主体</td><td class="kv-val">官网披露为 Genspark Inc.;公开资料需要继续核验具体注册地、历史主体与股权结构</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">产品公开可见时间约 2024 年;公司法定成立日期需要后续从州公司注册或融资文件核验</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">All-in-one AI Workspace,覆盖 AI search、research agent、content generation、slides/spreadsheet/document、media generation、business workflow</td></tr><tr><td class="kv-key">官网定位</td><td class="kv-val">“Genspark AI Workspace 4.0”“Your all-in-one AI workspace”</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Genspark AI Workspace、Genspark Agents、Genspark Business / Team Plan、Genspark Claw、Speakly、GenClipboard、GenTerminal、Genspark Design、AI Presentation Maker、AI Spreadsheet Generator、AI PDF tools、AI Phone Call 等</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">个人 prosumer、创作者、GTM/销售/市场团队、中小企业、企业知识工作者、需要自动生成可交付物的业务团队</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">自助订阅 + team seat + enterprise contract + credit usage;底层大量调用 OpenAI/Anthropic/Google/Microsoft/AWS/ElevenLabs 等模型和工具</td></tr><tr><td class="kv-key">官方披露价格</td><td class="kv-val">Team Plan: $30 / user / month,2–150 users,12,000 credits/month per seat;Enterprise: Contact Sales</td></tr><tr><td class="kv-key">官方能力指标</td><td class="kv-val">70+ AI models、150+ toolkits、20+ curated datasets;SOC 2 Type II、ISO 27001 certified;ISO 42001/GDPR in progress</td></tr><tr><td class="kv-key">官方披露客户/背书</td><td class="kv-val">Howard Hughes(NYSE:HHH)、Spyglaz AI、GEOPARK 等客户 quote;官网列出 business plan 场景</td></tr><tr><td class="kv-key">官方披露投资者</td><td class="kv-val">官网 business 页面露出 SBI Holdings、LG、UpHonest Capital 等 investor logos;融资金额、轮次、估值没有在官网正文给出</td></tr><tr><td class="kv-key">IPO/资本化状态</td><td class="kv-val">私有公司;截至 2026 年 7 月 6 日 没有看到公开上市申请或 SPAC/并购公告</td></tr></tbody></table></div>
+<p>Genspark 与 Perplexity、Manus 的差异在于“入口”不同。Perplexity 的核心是 answer engine/search distribution,把网页检索、引用和 AI 摘要变成可替代 Google 的消费入口;Manus 的核心是 long-running autonomous agent,强调跨浏览器、文件、代码和任务规划的自主执行;Genspark 的产品页则更像“AI workflow supermarket”:用大量垂直工具把用户需求拆成 PPT、报表、proposal、CRM、invoice、voice、video、image、database、website、flowchart 等具体产物。这个定位有利于捕捉明确付费意愿的 productivity 场景,但也使其护城河更依赖工作流质量、成本控制、分发和留存,而不只是搜索质量。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 收入结构:个人/团队订阅 + credits + 企业合同</h3>
+<p>Genspark 的可观察商业化分为三层:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>层级</th><th>收费口径</th><th>当前公开信息</th><th>财务含义</th></tr></thead><tbody><tr><td>个人/自助用户</td><td>订阅 + credits</td><td>pricing 页面会引导登录;公开网页更完整披露 Team Plan,个人套餐细项需要登录内页核验</td><td>获客快,但 churn 与模型成本敏感</td></tr><tr><td>Team Plan</td><td>seat subscription + 每席 credits</td><td>$30 / month;2–150 users;12,000 credits/month per seat;每席 60GB AI Drive;中央管理、billing、roles、usage analytics、SSO/SAML、invoices、connector management</td><td>比个人订阅更稳定,ACV 约等于 seats × $30 × 12,但 heavy media generation 会挤压毛利</td></tr><tr><td>Enterprise</td><td>custom contract</td><td>Contact Sales;企业安全、数据隔离、zero training policy、zero data retention、SOC2/ISO27001;更高 seats、权限、合规和支持</td><td>若能进入部门/全员部署,价值高于搜索订阅;需看 seat expansion 与 credit overage</td></tr></tbody></table></div>
+<p>官方 Team Plan 的关键条款值得拆开看:</p>
+<ul><li><strong>价格:</strong> $30 / user / month。若 50 人团队全员订阅,年化合约金额约 $18,000;150 人上限对应 $54,000 ARR before discounts。Enterprise 可能通过更高 seat 数、私有部署/数据承诺和采购折扣提高 ACV。</li><li><strong>用量:</strong> 12,000 credits/month per seat。Genspark 把复杂任务统一折算为 credits,这比单一 token billing 更适合多模态工作流,因为 PPT/图片/视频/音频生成的成本结构差异很大。</li><li><strong>模型调用:</strong> 官方宣传 Team Plan 含“unlimited chat with top-tier models, zero credits cost in AI Chat Agent”以及“unlimited image generation with top-tier models, zero credits cost in AI Image Agent”,并标注 valid until Dec 31, 2026。这个促销条款有利于拉动 adoption,但需要持续核验其对 gross margin 的影响。</li><li><strong>企业控制:</strong> centralized admin & billing controls、member roles、usage analytics、SSO/SAML、invoices、connector management,说明产品已经从消费者工具转向企业采购需要的管理面。</li></ul>
+<h3 class="subsection">4.2 Genspark Business / Enterprise 的合同逻辑</h3>
+<p>Genspark for Business 页面把卖点集中在“从 research 到 slides、images、video 一站式完成”,并强调 70+ AI models、SOC 2 Type II、ISO 27001。企业合同大概率按以下方式组合:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收费模块</th><th>可能口径</th><th>公开依据</th><th>需要核验的问题</th></tr></thead><tbody><tr><td>Seat</td><td>每用户每月/每年</td><td>Team Plan 明示 $30/月/seat</td><td>Enterprise 是否按全员 seat、部门 seat 或 named user 计费</td></tr><tr><td>Credits</td><td>每席月度额度 + 超额购买</td><td>Team Plan 明示 12,000 credits/month per seat</td><td>超额 credit 单价、rollover、enterprise pooled credits 规则</td></tr><tr><td>Model / media usage</td><td>由 credits 内部折算</td><td>产品覆盖 GPT/Claude/Gemini、video/audio/image models</td><td>不同模型和视频/音频任务的 credit 消耗表</td></tr><tr><td>Support/security</td><td>enterprise uplift</td><td>Contact Sales,SSO/SAML,trust center</td><td>DPA/SLA、data residency、audit log、private workspace 是否加价</td></tr><tr><td>Services</td><td>workflow setup / enablement</td><td>客户 quote 提到从测试到 enterprise agreement</td><td>是否存在 implementation fee、training fee 或 custom workflow fee</td></tr></tbody></table></div>
+<p>Genspark 的收费方式与 Perplexity 的 Pro/Enterprise Pro 不同。Perplexity 更接近“搜索入口 + 高级模型 + API/enterprise knowledge”的订阅;Genspark 更像“AI 工具包 + credit wallet”。与 Manus 相比,Genspark 更透明地把具体产物工具化,但 Manus 在 autonomous task execution 的品牌心智更强。</p>
+<h3 class="subsection">4.3 毛利与成本侧敏感项</h3>
+<p>Genspark 不自称基础模型公司,而是聚合 70+ models 和 150+ toolkits。这样的应用层公司单位经济性取决于:</p>
+<ul><li><strong>第三方模型成本:</strong> GPT、Claude、Gemini、Grok、DeepSeek、Kimi、MiniMax、GLM 等模型价格不同;若用户大量调用高端模型,订阅收入可能被推理成本吃掉。</li><li><strong>多媒体生成成本:</strong> video generation、audio generation、voice cloning、music generation 比文本推理更贵;Team Plan 允许访问最新 video/audio models,必须依赖 credits、rate limit 或 fair-use policy 控制滥用。</li><li><strong>工具链维护成本:</strong> 150+ toolkits 意味着每个垂直工具都需要 prompt、workflow、UI、质量评估、集成和异常处理,产品复杂度较高。</li><li><strong>企业合规成本:</strong> SOC 2、ISO、SSO/SAML、zero retention、data isolation 会增加工程、审计和客户支持成本,但也提升可售 ACV。</li></ul>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 产品矩阵</h3>
+<p>Genspark 官网把产品分为 Workspace、tools、business productivity、writing/content、design/visuals、audio/video 等板块。核心不是单一 chat,而是把复杂任务变成模板化 agent。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/功能</th><th>定位</th><th>对应商业场景</th></tr></thead><tbody><tr><td>Genspark AI Workspace 4.0</td><td>一站式 AI 工作台</td><td>个人与团队的通用入口</td></tr><tr><td>Genspark Agents</td><td>任务型 agent</td><td>研究、写作、整理、文件生成</td></tr><tr><td>Genspark Business / Team Plan</td><td>团队版工作区</td><td>GTM、销售、市场、企业研究、管理层汇报</td></tr><tr><td>AI Presentation Maker / AI PowerPoint Generator</td><td>自动生成 slide deck</td><td>咨询、市场、融资、销售提案</td></tr><tr><td>AI Spreadsheet Generator</td><td>自动生成 spreadsheet</td><td>初步建模、预算、计划表、数据表</td></tr><tr><td>AI Report / White Paper / Case Study / Proposal Generator</td><td>文档类 deliverable</td><td>研究报告、销售材料、客户交付</td></tr><tr><td>AI CRM Builder / AI Database Builder / AI Dashboard Generator</td><td>业务系统生成</td><td>SMB 和 GTM workflow</td></tr><tr><td>AI Image / Photo Editor / Avatar / Headshot / Room Design</td><td>图像生成与编辑</td><td>设计、内容营销、电商素材</td></tr><tr><td>AI Video / Image to Video / AI Music / Podcast / Voice Cloning / TTS</td><td>多媒体生成</td><td>广告、视频、音频内容、语音应用</td></tr><tr><td>AI Phone Call / AI Email Generator</td><td>沟通自动化</td><td>销售外呼、客服、行政和 GTM</td></tr><tr><td>Genspark Claw / GenTerminal / GenClipboard</td><td>独立产品入口</td><td>可能面向浏览器/桌面/开发者工作流</td></tr><tr><td>Speakly</td><td>语音相关产品</td><td>口语/语音交互方向</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 技术路线:multi-model orchestration 而非自研 foundation model</h3>
+<p>Genspark for Business 明示“70+ AI models including ChatGPT, Claude, and Gemini”,并展示 OpenAI、Microsoft、Anthropic、AWS 等 model partnerships。其技术路线更像 <strong>orchestration layer</strong>:</p>
+<ol><li><strong>Intent routing:</strong> 根据用户输入判断是搜索、研究、写作、PPT、图片、视频、语音还是业务系统生成。</li><li><strong>Model selection:</strong> 在不同模型之间选择成本/质量最优组合。例如复杂 reasoning 用高端模型,批量改写或结构化用更便宜模型。</li><li><strong>Tool execution:</strong> 通过内部 150+ toolkits 调用网页检索、文件处理、表格生成、图像/视频/音频模型、Office 导出等能力。</li><li><strong>Artifact rendering:</strong> 把模型输出变成用户可下载、可展示、可继续编辑的 PPT、PDF、doc、sheet、image、video 等文件。</li><li><strong>Enterprise controls:</strong> 通过 admin、roles、usage analytics、SSO/SAML、connector management 把工作流纳入企业治理。</li></ol>
+<p>这个路线的优势是上新速度快、覆盖面广、能跟随最强模型迭代;劣势是底层模型同质化,护城河必须来自 workflow 数据、UI/UX、模板库、企业分发和成本调度。</p>
+<h3 class="subsection">5.3 产品效果:从“答案”到“可交付物”</h3>
+<p>Genspark 的客户 quote 主要强调“生成高质量 presentation”和“boardroom-ready output”。这说明当前最强商业场景不是普通问答,而是以下高意愿任务:</p>
+<ul><li><strong>投资/管理层材料:</strong> 50 页 slide deck、市场研究、竞争分析、提案、财务模型初稿。</li><li><strong>GTM 自动化:</strong> lead list、个性化 outreach email、sales proposals、CRM 和 dashboard。</li><li><strong>重复性知识工作:</strong> data entry、email drafting、report compilation、meeting prep。</li><li><strong>多媒体营销:</strong> AI image/video/music/voice 生成,用于内容和广告。</li></ul>
+<p>产品效果需要注意两点。第一,生成“看起来完成”的 deliverable 容易提升感知价值,但事实准确性、引用可追溯、格式可编辑性决定企业续费。第二,若用户把 Genspark 用于严肃财务、法律、医疗或投资材料,必须建立人工复核流程,否则幻觉风险会转化为业务风险。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>当前可回源数据</th><th>解读</th></tr></thead><tbody><tr><td>Team Plan 价格</td><td>$30 / month,2–150 users</td><td>自助团队版可形成小 ACV;150 seats 上限暗示更大客户走 enterprise</td></tr><tr><td>Team Plan 用量</td><td>12,000 credits/month per seat</td><td>credit 池是控制多模态成本的核心</td></tr><tr><td>AI models</td><td>70+</td><td>产品以模型聚合为卖点</td></tr><tr><td>Toolkits</td><td>150+</td><td>覆盖大量垂直任务,但维护复杂度高</td></tr><tr><td>Curated datasets</td><td>20+</td><td>用于增强搜索/研究/生成准确性</td></tr><tr><td>Storage</td><td>60GB AI Drive per seat</td><td>进入 workspace 与文件管理场景</td></tr><tr><td>安全认证</td><td>SOC 2 Type II、ISO 27001 certified;ISO 42001/GDPR in progress</td><td>企业采购门槛逐步补齐</td></tr><tr><td>客户背书</td><td>Howard Hughes、Spyglaz AI、GEOPARK quote</td><td>有真实企业测试/采购案例,但公开客户数量和 ACV 需要继续核验</td></tr><tr><td>投资者露出</td><td>SBI Holdings、LG、UpHonest Capital</td><td>官方仅露出 logos,没有给金额/轮次/估值</td></tr><tr><td>ARR/收入</td><td>需要核验:公司没有在公开网页给出 ARR、revenue run-rate 或付费用户数</td><td>投资判断中最大数据缺口之一</td></tr><tr><td>MAU/DAU</td><td>需要核验:公开网页没有给出稳定活跃用户</td><td>对 consumer/product-led growth 很关键</td></tr></tbody></table></div>
+<p>从当前公开材料看,Genspark 的运营指标披露弱于 Harvey、Glean、ElevenLabs。它已经具备企业版 SKU 和安全认证,但还没有可回源的 ARR、客户数、付费用户数、净留存、毛利率、credit 消耗或调用量数据。因此本研究不能用估值/ARR 倍数评价,只能通过产品定价、客户 quote 与竞争定位做阶段判断。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 粗略收入模型</h3>
+<p>Team Plan 已经提供可量化入口:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>情景</th><th>seats</th><th>单价</th><th>年化收入</th><th>备注</th></tr></thead><tbody><tr><td>小团队</td><td>10</td><td>$30/月</td><td>$3,600</td><td>适合 agency/startup/GTM 小组</td></tr><tr><td>中型团队</td><td>50</td><td>$30/月</td><td>$18,000</td><td>若能按部门部署,ACV 接近低端 SaaS</td></tr><tr><td>Team Plan 上限</td><td>150</td><td>$30/月</td><td>$54,000</td><td>超过 150 users 走 enterprise</td></tr><tr><td>Enterprise</td><td>150+</td><td>custom</td><td>需要核验</td><td>可能有 volume discount、security uplift、support 和 pooled credits</td></tr></tbody></table></div>
+<p>这个模型说明 Genspark 要做大收入,不能只靠个人付费,必须把高频工作流嵌入团队或企业。若一个客户只是偶尔生成 PPT,续费风险高;若客户把 Genspark 用作销售提案、市场内容、研究报告和内部知识工作流的默认入口,seat expansion 才成立。</p>
+<h3 class="subsection">7.2 成本模型</h3>
+<p>成本项包括:</p>
+<ul><li><strong>LLM input/output tokens:</strong> chat、research、summarization、document generation。</li><li><strong>搜索与网页抓取:</strong> AI search 和研究 agent 需要检索、去重、引用和网页处理。</li><li><strong>图像/视频/音频生成:</strong> 明显高于文本任务,也是 credits 设计的主要原因。</li><li><strong>文件渲染:</strong> PPT、PDF、spreadsheet、HTML、image/video export 需要额外 compute 和存储。</li><li><strong>存储与带宽:</strong> 60GB AI Drive per seat 会带来 storage cost。</li><li><strong>企业安全/审计:</strong> SOC2、ISO、Vanta trust center、SSO/SAML 和 connector 管理带来固定成本。</li></ul>
+<h3 class="subsection">7.3 毛利敏感性</h3>
+<p>Genspark 的毛利敏感性高于纯企业搜索 SaaS,因为它鼓励用户生成多模态内容。若用户每月只用 chat 和文本研究,$30/seat/month 可能有较好毛利;若用户大量生成视频、音乐、图片和语音,则必须通过 credits、rate limits、促销截止日期和 enterprise 价格保护毛利。</p>
+<p>关键观察点:</p>
+<ul><li><strong>Credits 是否足够约束高成本任务:</strong> 12,000 credits/seat/month 是控制成本阀门,但每种工具的 credit 消耗表需要核验。</li><li><strong>“unlimited”条款是否长期存在:</strong> 官方标注部分 zero credits 条款 valid until Dec 31, 2026,说明可能是促销而非长期价格。</li><li><strong>Enterprise 是否能转嫁成本:</strong> 对高用量客户,enterprise 合同需包含 pooled credits、overage、fair use 或 dedicated capacity。</li><li><strong>模型采购折扣:</strong> 若 Genspark 与 OpenAI/Microsoft/Anthropic/AWS 有战略合作,可能获得更好 API 条款;公开资料没有给出成本折扣。</li></ul>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 AI search / general agent 对比</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司</th><th>核心入口</th><th>收费模式</th><th>Genspark 相对位置</th></tr></thead><tbody><tr><td>Perplexity</td><td>AI answer engine/search</td><td>consumer Pro、Enterprise Pro、API/ads/commerce 探索</td><td>Perplexity 搜索心智更强,Genspark deliverable workflow 更强</td></tr><tr><td>Manus</td><td>autonomous general agent</td><td>invite/订阅/agent usage</td><td>Manus 更强调自主执行与长任务,Genspark 更强调工具集合和可交付物</td></tr><tr><td>ChatGPT / OpenAI</td><td>general assistant + agent + tools</td><td>subscription/API/enterprise</td><td>最大平台威胁;Genspark 必须靠 workflow packaging 和具体产物差异化</td></tr><tr><td>Google Gemini / AI Mode</td><td>搜索+生产力套件</td><td>consumer/Workspace enterprise</td><td>Google 有默认分发和文档生态;Genspark 对抗点是更快的跨模型工具聚合</td></tr><tr><td>Microsoft Copilot</td><td>Office/Windows/Teams</td><td>enterprise seat</td><td>对企业 PPT、Excel、Word 场景威胁极大</td></tr><tr><td>Notion AI / Coda / Canva / Gamma / Tome</td><td>文档/知识库/设计/PPT 垂直场景</td><td>seat subscription</td><td>Genspark 横向覆盖更广,但每个垂类都有强对手</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 价值链位置</h3>
+<p>Genspark 位于 AI stack 的应用编排层:</p>
+<p>基础模型/多模态模型 → 模型 API / 云服务 → Genspark workflow orchestration → 用户可交付物 → 企业工作流</p>
+<p>护城河不在模型参数,而在:</p>
+<ul><li><strong>工作流覆盖:</strong> 150+ toolkits 越贴近真实任务,越能减少用户迁移。</li><li><strong>多模型调度:</strong> 用最佳模型完成最佳子任务,同时控制成本。</li><li><strong>产物质量:</strong> PPT、报告、表格、视频、图像必须可直接交付。</li><li><strong>企业信任:</strong> zero training、zero retention、SOC2、ISO、SSO、usage analytics。</li><li><strong>分发与口碑:</strong> 个人创作者/团队先采用,再进入 enterprise procurement。</li></ul>
+<h3 class="subsection">8.3 与 Perplexity 和 Manus 的核心差异</h3>
+<ul><li><strong>Perplexity:</strong> 强在搜索、引用、实时答案和用户入口;弱点是从答案到可交付物仍需外部工具。Genspark 若能在“研究后一键生成 PPT/报告/表格”上形成闭环,可避开纯搜索正面战。</li><li><strong>Manus:</strong> 强在 autonomous agent 叙事和跨任务执行;弱点是稳定性、可控性、成本与安全审计。Genspark 工具化拆分更适合企业先从具体场景试点。</li><li><strong>Genspark:</strong> 强在产物工具化和多模态覆盖;弱点是品牌心智、底层模型差异化、融资/运营披露较少。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>公开官网对团队信息披露有限。Business 页面强调企业能力、客户 quote、model partnerships 和 investor logos,但没有像 Harvey/Glean/ElevenLabs 那样在公开资料中稳定呈现创始人履历、前雇主、董事会和高管团队。</p>
+<p>需要后续核验:</p>
+<ul><li>创始人、CEO、CTO、CPO、CRO 分别是谁?是否来自搜索、广告、Baidu/Google/Microsoft/AI lab 或 enterprise SaaS 背景?</li><li>核心技术团队是自研模型、agent orchestration、workflow automation 还是前端/product growth 为主?</li><li>销售团队是否具备 enterprise SaaS 经验?客户 quote 显示已有企业对接,但具体 sales motion 需要访谈验证。</li><li>日本、韩国、巴西、欧洲等本地化入口由总部团队维护还是存在本地团队/渠道伙伴?</li></ul>
+<p>团队透明度不足会影响一级市场尽调,因为 Genspark 的成功依赖产品执行、成本控制和企业销售,这些都高度依赖团队能力。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>模型依赖风险:</strong> 底层依赖 OpenAI、Anthropic、Google、Microsoft、AWS 等模型,若模型供应商直接推出相同工作流或改变 API 价格,Genspark 毛利和差异化都会受压。</li><li><strong>产品过宽风险:</strong> 150+ toolkits 覆盖很广,但每个垂直工具都需要质量打磨;若“什么都能做但都不够深”,用户可能回到专门工具。</li><li><strong>成本失控风险:</strong> video/audio/image 任务成本高,Team Plan 的 unlimited/zero credits 促销可能造成 heavy user 亏损。</li><li><strong>企业采购风险:</strong> 从个人工具转 enterprise 需要安全、权限、审计、数据 residency、support、procurement,销售周期拉长。</li><li><strong>事实准确性风险:</strong> Genspark 用于研究和报告时,错误引用或幻觉会影响用户信任,尤其在金融、法律、医疗、战略咨询场景。</li><li><strong>竞争风险:</strong> Perplexity 占据 AI search 心智,Manus 占据 general agent 心智,OpenAI/Google/Microsoft 占据模型和分发入口。</li><li><strong>融资透明度风险:</strong> 公开材料没有完整融资金额和估值,一级市场投资时难以判断资本结构、优先权和现有投资人质量。</li><li><strong>版权/内容风险:</strong> 图像、视频、音乐、语音生成涉及素材授权、训练数据、名人声音、商用许可等问题。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="character_ai.html">Character.AI</a><a class="sib-chip" href="clay.html">Clay</a><a class="sib-chip" href="cohere.html">Cohere</a><a class="sib-chip" href="decagon_ai.html">Decagon AI</a><a class="sib-chip" href="deepseek_深度求索.html">DeepSeek</a><a class="sib-chip" href="granola.html">Granola</a></div>
+</div>
+</body></html>

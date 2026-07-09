@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Baseten · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · AI 基础设施与数据平台</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#f0fdf4;color:#15803d">AI 基础设施与数据平台</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.baseten.co/" target="_blank" rel="noopener">Baseten</a></h1>
+    <div class="dc-oneliner">Baseten 是 AI 应用从闭源 API 走向开放模型、自定义模型和多云推理部署时的生产运行层。它的核心产品不是传统 MLOps dashboard，而是把 open-source/custom models 打包成可自动扩缩容、可观测、低延迟、按分钟或按 token 计费的推理平台。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Baseten 是 AI 应用从闭源 API 走向开放模型、自定义模型和多云推理部署时的生产运行层。它的核心产品不是传统 MLOps dashboard，而是把 open-source/custom models 打包成可自动扩缩容、可观测、低延迟、按分钟或按 token 计费的推理平台。</strong></p>
+<p>2026 年 6 月，公司宣布 $1.5B Series F，估值 $13B。官方称过去一年 revenue 增长 20x、inference volume 增长 40x，客户包括 Cursor、Notion、Lovable、Harvey、HubSpot、OpenEvidence、Abridge、Decagon、Parallel 等。这说明 Baseten 已经进入 AI-native 应用的核心生产链路。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2019</td><td>公司成立</td><td>公开资料没有给出可核验金额</td><td>公开资料没有给出可核验估值</td><td>Tuhin Srivastava、Amir Haghighat、Phil Howes、Pankaj Gupta</td><td>初始定位为 ML application/model deployment platform</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2022-04</td><td>Series A / launch round</td><td>$20M</td><td>公开资料没有给出可核验估值</td><td>Greylock、South Park Commons、AI Fund、Caffeinated Capital 等</td><td>TechCrunch 报道 Baseten nabs $20M</td><td><a href="https://techcrunch.com/2022/04/26/baseten-nabs-20m-to-make-it-easier-to-build-machine-learning-based-applications/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2024-03</td><td>Series B</td><td>$40M</td><td>约 $200M 线索</td><td>IVP、Spark Capital、Greylock、South Park Commons 等</td><td>用于 cloud AI inference platform</td><td><a href="https://www.baseten.co/blog/announcing-our-series-f/" target="_blank" rel="noopener">Baseten</a></td></tr><tr><td>2025-02</td><td>Series C</td><td>$75M</td><td>约 $825M 线索</td><td>IVP、Spark co-led; Greylock、Conviction、South Park Commons、01 Advisors、Lachy Groom 等</td><td>DeepSeek 后开放模型需求升温</td><td><a href="https://www.baseten.co/blog/announcing-our-series-f/" target="_blank" rel="noopener">Baseten</a></td></tr><tr><td>2026-06</td><td>Series F</td><td>$1.5B</td><td>$13B</td><td>Altimeter、Conviction、Spark led; Sands、Wellington co-led; Battery、Blackbird、D.E. Shaw Ventures、Durable、Greylock、IVP、Verified、01A 等</td><td>官方称四次融资发生在 18 个月内</td><td><a href="https://www.baseten.co/blog/announcing-our-series-f/" target="_blank" rel="noopener">Baseten</a></td></tr></tbody></table></div>
+<p>融资时间线里,2026 Series F 与此前公开 Series C 中间还存在公司所称“四次融资”的其他轮次;公开可回源资料没有完整列出每次轮次、金额和估值。尽调时需要从公司融资材料、PitchBook/Crunchbase、409A 或 cap table 获取 Series D/E 的具体条款。这里不把无法核验的中间轮次强行填入,避免把媒体片段误写成完整资本表。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Baseten Labs / Baseten</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2019 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Francisco, California</td></tr><tr><td class="kv-key">创始团队</td><td class="kv-val">Tuhin Srivastava、Amir Haghighat、Phil Howes、Pankaj Gupta</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">Production inference platform for custom, fine-tuned and open-source models</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Dedicated Inference、Model APIs、Training、Frontier Gateway、Truss、Model Runtimes、Infrastructure、Multi-cloud、Self-hosted、Hybrid</td></tr><tr><td class="kv-key">部署方式</td><td class="kv-val">Baseten cloud、customer VPC/self-hosted、hybrid</td></tr><tr><td class="kv-key">收费方式</td><td class="kv-val">Model API token pricing、dedicated deployment compute minute/hour、training compute、enterprise quote、volume discount</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2026-06 Series F $1.5B, $13B valuation</td></tr><tr><td class="kv-key">公开运营指标</td><td class="kv-val">过去一年 revenue 20x、inference volume 40x;客户包括 Cursor、Notion、Lovable 等</td></tr><tr><td class="kv-key">价值链位置</td><td class="kv-val">在开放模型/自定义模型与应用产品之间提供高性能生产部署和工程服务</td></tr></tbody></table></div>
+<p>Baseten 的定位和 Fireworks/Together 相近,但产品叙事更强调“embedded engineering”和“own your intelligence”。它不是简单提供模型列表,而是让客户把专有数据、evals、domain harness、post-training、custom RL environments 和 inference serving 连成一个持续优化系统。对于 Harvey、Abridge、OpenEvidence、Cursor 这类 AI-native 应用,模型不是后台工具,而是产品体验本身;Baseten 因此进入客户核心生产链路。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 Basic / Pro / Enterprise: 平台层套餐</h3>
+<p>Baseten 官方 pricing 将账户/平台层分为 Basic、Pro、Enterprise:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>套餐</th><th>公开口径</th><th>核心权益</th><th>投资解读</th></tr></thead><tbody><tr><td>Basic</td><td>$0/month,pay as you go</td><td>dedicated deployments、Model APIs、Training、fast cold starts、SOC 2 Type II、HIPAA、email/in-app support</td><td>自助开发者入口,降低试用阻力</td></tr><tr><td>Pro</td><td>quote / volume discount</td><td>priority access to high-demand GPUs、dedicated compute、higher Model API rate limits、hands-on engineering、Slack/Zoom support</td><td>从自助走向生产客户</td></tr><tr><td>Enterprise</td><td>quote / volume discount</td><td>custom SLAs、self-host deployments、on-demand flex compute、use existing cloud commitments、data residency、advanced security/RBAC、custom regions</td><td>面向大客户和 regulated deployments</td></tr></tbody></table></div>
+<p>这一结构说明 Baseten 的真正收入不在 seat fee,而在 compute、token、training 和 enterprise commitments。Basic 用于拉开发者;Pro/Enterprise 才是 ACV 和毛利空间。</p>
+<h3 class="subsection">4.2 Model APIs: 预优化模型按 token 收费</h3>
+<p>Baseten Model APIs 提供 pre-optimized models,按 1M tokens 计价。公开价格页列出的例子包括 GLM 5.2 input $1.40/M、cache input $0.26/M、output $4.40/M;Kimi K2.7 Code input $0.95/M、cache $0.16/M、output $4.00/M;DeepSeek V4 input $1.74/M、cache $0.145/M、output $3.48/M;GPT OSS 120B input $0.10/M、output $0.50/M。Model API 与 Fireworks/Together 的 serverless API 类似,但 Baseten 同时强调可以进一步迁移到 dedicated deployment 和自定义模型。</p>
+<h3 class="subsection">4.3 Dedicated Deployments: 按分钟/小时计费的生产推理</h3>
+<p>Baseten 的 Dedicated Deployments 只为实际使用 compute 付费,按分钟/小时计价。公开价格包括 T4 $0.01052/min、L4 $0.01414/min、A10G $0.02012/min、A100 $0.06667/min、H100 MIG $0.0625/min、H100 $0.10833/min、B200 $0.16633/min。换算小时,H100 约 $6.50/hour,B200 约 $9.98/hour。</p>
+<p>Dedicated 适合客户部署:</p>
+<ul><li>自己 fine-tuned 的模型;</li><li>从 Hugging Face/开源社区拿到的模型;</li><li>特殊依赖或自定义 runtime;</li><li>需要 autoscaling、cold starts、observability 和 SLA 的生产 API。</li></ul>
+<p>Baseten 的卖点是客户不为 idle time 付费,只为模型部署、扩缩容和预测时使用的 compute 付费。这能降低企业从 prototype 到 production 的心理门槛。</p>
+<h3 class="subsection">4.4 Training 与 post-training</h3>
+<p>价格页显示 Training 使用同一组 GPU/CPU instance 计价,面向 fine-tuning、post-training、custom training jobs。2026 Series F 公告中,Baseten 特别强调客户正在构建由 proprietary data、evals、domain-specific harnesses、post-training 和 custom RL environments 形成的学习系统。这说明 Baseten 已经从“deploy a model”扩展到“持续改进模型”。</p>
+<p>Training/post-training 的收入价值高于一次性 deployment,因为它连接客户私有数据和工作流。客户模型越依赖 Baseten 的 eval、数据、训练和 serving 闭环,迁移成本越高。</p>
+<h3 class="subsection">4.5 Enterprise contract: 自有云承诺、数据驻留和工程嵌入</h3>
+<p>Baseten Enterprise 支持 self-host、hybrid、customer VPC、custom global regions、data residency、advanced RBAC 和 custom SLAs。它还突出“hands-on engineering expertise”“forward deployed engineers”。这意味着大客户合同可能包含:</p>
+<ul><li>年度 committed spend;</li><li>GPU capacity reservation;</li><li>专属工程团队或 solution architect;</li><li>安全、合规、HIPAA/SOC 2、区域部署;</li><li>与客户现有 AWS/GCP/Azure commitments 对接;</li><li>custom model runtime、observability、eval pipeline。</li></ul>
+<p>这类合同更像 Palantir/Databricks 式的 enterprise platform + infrastructure spend,而不是纯 API 自助消费。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>内容</th><th>护城河意义</th></tr></thead><tbody><tr><td>Truss</td><td>开源模型打包和服务标准</td><td>让任意 framework 模型更容易部署</td></tr><tr><td>Model APIs</td><td>预优化 GLM、Kimi、DeepSeek、Nemotron、GPT OSS 等</td><td>低门槛 API 入口</td></tr><tr><td>Dedicated Inference</td><td>autoscaling、fast cold starts、compute billing</td><td>生产客户核心产品</td></tr><tr><td>Model Runtimes</td><td>不同模型和硬件的 runtime 优化</td><td>决定延迟和成本</td></tr><tr><td>Multi-cloud</td><td>从多云/GPU 供应商抽象 compute</td><td>降低单一云依赖,支持成本套利</td></tr><tr><td>Self-hosted / Hybrid</td><td>在客户云或混合环境运行</td><td>满足金融、医疗、企业数据要求</td></tr><tr><td>Frontier Gateway</td><td>连接闭源 frontier 与开放模型</td><td>支持客户混合模型策略</td></tr><tr><td>Training</td><td>post-training 和 custom training jobs</td><td>增强客户模型差异化</td></tr><tr><td>Forward deployed engineers</td><td>工程团队嵌入客户</td><td>加快大客户落地,提高切换成本</td></tr></tbody></table></div>
+<p>Baseten 技术壁垒不是某个独家模型,而是模型运行系统和客户工程。AI-native 应用常见问题是: 模型版本快速变化、traffic spiky、P95 latency 敏感、GPU 贵且稀缺、开源 runtime 在生产环境需要大量调优。Baseten 的价值就是把这些“每家公司都会踩一次”的问题平台化。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开口径</th><th>解读</th></tr></thead><tbody><tr><td>Series F</td><td>2026-06 $1.5B</td><td>后期大型融资,说明资本市场认可 inference 平台</td></tr><tr><td>估值</td><td>$13B</td><td>对收入和毛利要求极高</td></tr><tr><td>增长</td><td>官方称过去一年 revenue 20x</td><td>公司商业化进入爆发期,但基数需核验</td></tr><tr><td>用量</td><td>官方称 inference volume 40x</td><td>AI-native 客户生产调用增长很快</td></tr><tr><td>客户</td><td>Cursor、Notion、Lovable、Harvey、HubSpot、OpenEvidence、Abridge、Decagon、Parallel 等</td><td>客户质量强,覆盖 coding、legal、medical、enterprise apps</td></tr><tr><td>WSJ 线索</td><td>2026-06 报道客户还包括 Cursor、Mercor、OpenEvidence;公司从 20+ cloud providers sourcing compute</td><td>多云供给是成本和可用性核心</td></tr><tr><td>成本节省</td><td>WSJ 报道客户使用开放模型某些任务可达到约闭源成本 30%,即节省约 70%</td><td>需要按任务/质量/延迟核验</td></tr></tbody></table></div>
+<p>Baseten 的收入增长可能来自两类客户: 一类是 AI-native 应用,模型调用直接随终端用户增长;另一类是企业客户,从小规模 POC 迁到 production。前者增长快但集中度高,后者销售周期长但合同更稳。公开材料没有给出 ARR、gross margin、top customer concentration、NDR,这些是估值判断核心。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Baseten 的财务模型核心是“客户节省的闭源 API 成本,有多少能被 Baseten 捕获”。例如客户原来使用 OpenAI/Anthropic 完成某个任务,成本为 100;如果开放模型 + Baseten 运行成本为 30,理论节省 70。Baseten 可以用平台费、GPU margin、engineering service、enterprise commitment 捕获其中一部分,客户保留剩余节省。</p>
+<p>关键变量:</p>
+<ol><li><strong>GPU cost</strong>: Baseten 从 20+ cloud providers sourcing compute,说明它通过多云采购、区域套利和供应商竞争降低成本。</li><li><strong>Utilization</strong>: autoscaling 和按分钟计费对客户友好,但平台端必须控制 idle 和 cold-start 成本。</li><li><strong>Software efficiency</strong>: runtime 优化、batching、quantization 和 model-specific tuning 决定每 GPU tokens/sec。</li><li><strong>Support intensity</strong>: embedded engineering 能拿大客户,但人力成本高;需要看 support cost 占收入比例。</li><li><strong>Revenue mix</strong>: Model API 更像 usage SaaS;dedicated deployment 更像 compute margin;enterprise/self-host 更像软件+服务合同。</li></ol>
+<p>$13B 估值下,即便按高增长 infra software 看,公司也需要很高 ARR 或明确可见的收入 run-rate。若 revenue 20x 是从较小基数增长,估值需要未来增长兑现;若已有数亿美元 ARR 且 gross margin 健康,则可支撑更高倍数。公开材料没有给出具体 ARR,这是最重要的数据缺口。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>相似点</th><th>Baseten 差异</th></tr></thead><tbody><tr><td>Fireworks AI</td><td>高性能开放模型 inference/API</td><td>Fireworks 更偏 serverless inference;Baseten 更强调 dedicated deployments、embedded engineering、自托管</td></tr><tr><td>Together AI</td><td>open model cloud、fine-tuning、GPU clusters</td><td>Together 更 full-stack compute/AI Factory;Baseten 更贴近生产推理客户工程</td></tr><tr><td>Modal / Replicate</td><td>开发者友好部署</td><td>Baseten 更 enterprise production 和 AI-native 大客户</td></tr><tr><td>Lambda / CoreWeave / Crusoe</td><td>GPU capacity</td><td>Baseten 抽象 GPU 并提供模型 runtime/serving layer</td></tr><tr><td>AWS / Azure / GCP</td><td>云基础设施、模型市场</td><td>Baseten 可跨云,并支持客户现有 cloud commitments</td></tr><tr><td>OpenAI / Anthropic / Google</td><td>闭源模型 API</td><td>Baseten 帮客户用开放模型替代部分闭源调用</td></tr><tr><td>自建 vLLM/TensorRT-LLM/SGLang</td><td>大客户内部方案</td><td>Baseten 用速度、支持、观测和多云采购抵抗自建</td></tr></tbody></table></div>
+<p>Baseten 护城河:</p>
+<ul><li>高质量 AI-native 客户带来的生产反馈;</li><li>多云 GPU sourcing 与调度经验;</li><li>Truss/runtime/deployment 工具链;</li><li>forward deployed engineering 提高客户落地速度;</li><li>self-host/hybrid/data residency 能打企业采购。</li></ul>
+<p>脆弱点:</p>
+<ul><li>开源 runtime 进步会降低平台差异;</li><li>大客户规模化后可能自建;</li><li>云厂商可用 credits 和 enterprise agreement 压价;</li><li>模型 API 价格战会压缩 token margin;</li><li>$13B 估值提高执行容错要求。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Baseten 由 Tuhin Srivastava、Amir Haghighat、Phil Howes、Pankaj Gupta 等创立。团队早期做的是让机器学习应用更容易构建和部署,后来随着生成式 AI 需求爆发,产品重心转向 inference platform。这个转型很重要: 传统 ML app platform 市场天花板有限,而 LLM inference 是所有 AI 应用的生产成本中心。</p>
+<p>2026 Series F 公告由四位创始/高管共同署名,强调公司与客户“closely work”和“researchers and engineers embed with customers”。这说明团队文化偏产品工程和客户深度合作,而不是纯自助 SaaS。对于 Harvey/Abridge/OpenEvidence 这类高合规行业客户,这种工程支持可能是赢单关键。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>估值风险</strong>: $13B 对尚未公开 ARR 的公司要求极高。</li><li><strong>毛利风险</strong>: GPU 成本、云供应商价格和客户折扣会吞噬平台收益。</li><li><strong>客户集中风险</strong>: AI-native 大客户贡献高,但任何一个自建/换供应商都会影响增长。</li><li><strong>价格战风险</strong>: Fireworks、Together、云厂商和模型公司持续压价。</li><li><strong>自建风险</strong>: 大客户可用 vLLM/TensorRT-LLM/SGLang 构建内部 serving。</li><li><strong>服务成本风险</strong>: forward deployed engineering 有助于成交,但可能拉低 operating leverage。</li><li><strong>模型风险</strong>: 开放模型若质量停滞,替代闭源 API 的市场空间受限。</li><li><strong>合规风险</strong>: 医疗、法律、企业数据部署必须满足严格安全和审计要求。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anyscale.html">Anyscale</a><a class="sib-chip" href="databricks.html">Databricks</a><a class="sib-chip" href="fireworks_ai.html">Fireworks AI</a><a class="sib-chip" href="hugging_face.html">Hugging Face</a><a class="sib-chip" href="mercor.html">Mercor</a><a class="sib-chip" href="modal.html">Modal</a><a class="sib-chip" href="scale_ai.html">Scale AI</a><a class="sib-chip" href="together_ai.html">Together AI</a></div>
+</div>
+</body></html>

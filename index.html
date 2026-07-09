@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Research</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --ink: #111827;
+      --muted: #5f6b7a;
+      --line: #dde3ee;
+      --blue: #2563eb;
+      --green: #15803d;
+      --amber: #b45309;
+      --card: #ffffff;
+      --shadow: 0 18px 48px rgba(30, 41, 59, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 56px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.05;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 14px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+    }
+
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .module {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 18px;
+      min-height: 280px;
+      padding: 22px;
+      color: inherit;
+      text-decoration: none;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .module:hover {
+      transform: translateY(-3px);
+      border-color: rgba(37, 99, 235, 0.42);
+      box-shadow: 0 22px 60px rgba(30, 41, 59, 0.14);
+    }
+
+    .module:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.32);
+      outline-offset: 3px;
+    }
+
+    .module-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .badge.blue {
+      background: var(--blue);
+    }
+
+    .badge.green {
+      background: var(--green);
+    }
+
+    .badge.amber {
+      background: var(--amber);
+    }
+
+    .module-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .module-body {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .module-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: #f8fafc;
+    }
+
+    .arrow {
+      font-size: 22px;
+      line-height: 1;
+      color: var(--blue);
+    }
+
+    .note {
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 880px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .modules {
+        grid-template-columns: 1fr;
+      }
+
+      .module {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div class="brand">
+        <h1>AI Research</h1>
+        <p class="subtitle">统一存放 AI 一级市场、推理技术和推理公司研究页面。每个主题使用独立目录，方便后续继续扩展。</p>
+      </div>
+      <div class="date">Updated 2026-07-09</div>
+    </header>
+
+    <section class="modules" aria-label="Research modules">
+      <a class="module" href="ai-investment-landscape/">
+        <div class="module-head">
+          <span class="badge blue">01</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+        <h2 class="module-title">AI Investment Landscape</h2>
+        <p class="module-body">AI 一级市场公司矩阵、公司详情页、估值排序、潜在 IPO 和横向对比表。</p>
+        <div class="module-meta">
+          <span class="pill">Company matrix</span>
+          <span class="pill">Comparison</span>
+          <span class="pill">92 companies</span>
+        </div>
+      </a>
+
+      <a class="module" href="inference/">
+        <div class="module-head">
+          <span class="badge green">02</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+        <h2 class="module-title">AI Inference</h2>
+        <p class="module-body">从模型部署到 Serving 的推理全流程说明，覆盖请求路径、调度、缓存、并发和硬件执行。</p>
+        <div class="module-meta">
+          <span class="pill">Serving flow</span>
+          <span class="pill">Architecture</span>
+          <span class="pill">Interactive page</span>
+        </div>
+      </a>
+
+      <a class="module" href="inference-companies/">
+        <div class="module-head">
+          <span class="badge amber">03</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+        <h2 class="module-title">Inference Companies</h2>
+        <p class="module-body">AI 推理公司精简版研究，围绕技术地图、商业入口、竞争壁垒和被大厂蚕食风险。</p>
+        <div class="module-meta">
+          <span class="pill">Company brief</span>
+          <span class="pill">Moats</span>
+          <span class="pill">Risks</span>
+        </div>
+      </a>
+    </section>
+
+    <p class="note">Public GitHub Pages site. Source pages are static HTML artifacts generated and curated locally.</p>
+  </main>
+</body>
+</html>

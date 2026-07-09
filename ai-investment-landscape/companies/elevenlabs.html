@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ElevenLabs · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 多模态与内容生成</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#fef3c7;color:#b45309">多模态与内容生成</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">英国/美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://elevenlabs.io/" target="_blank" rel="noopener">ElevenLabs</a></h1>
+    <div class="dc-oneliner">ElevenLabs 是 AI 语音赛道从 text-to-speech 工具升级为 voice AI platform 的代表公司。它的产品覆盖 TTS、STT、dubbing、voice cloning、voice agents、music/SFX 和 voice marketplace。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>ElevenLabs 是 AI 语音赛道从 text-to-speech 工具升级为 voice AI platform 的代表公司。它的产品覆盖 TTS、STT、dubbing、voice cloning、voice agents、music/SFX 和 voice marketplace。</strong></p>
+<p>公司通过创作者订阅、开发者 API、Business/Scale workspace、Enterprise 和 voice licensing 商业化。投资重点是它能否把高自然度语音、低延迟和多语言能力转成企业客服、媒体本地化、教育、出版和可授权声音资产收入，同时控制 deepfake、版权和人格权风险。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次</th><th>金额</th><th>估值</th><th>主要投资方</th><th>事件意义</th><th>来源</th></tr></thead><tbody><tr><td>2023-01</td><td>Pre-seed</td><td>$2M</td><td>需要核验</td><td>Credo Ventures、Concept Ventures 等</td><td>beta 发布前后,验证 AI voice 方向</td><td><a href="https://www.businessinsider.com/ai-voice-startup-elevenlabs-pitch-deck-2-million-funding-2023-1" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2023-06</td><td>Series A</td><td>$19M</td><td>~$100M</td><td>Andreessen Horowitz、Nat Friedman、Daniel Gross co-led;SV Angel、Mike Krieger、Brendan Iribe、Mustafa Suleyman、Tim O'Reilly 等</td><td>TTS/voice cloning 出圈,a16z 入局</td><td><a href="https://techcrunch.com/2023/06/20/voice-generating-platform-elevenlabs-raises-19m-launches-detection-tool/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2024-01</td><td>Series B</td><td>$80M</td><td>$1.1B</td><td>Andreessen Horowitz、Nat Friedman、Daniel Gross、Sequoia 等</td><td>成为独角兽;推出 Voice Marketplace、Dubbing Studio、mobile app 等</td><td><a href="https://elevenlabs.io/blog/elevenlabs-releases-new-voice-ai-products-and-raises-80m-series-b" target="_blank" rel="noopener">ElevenLabs</a></td></tr><tr><td>2025-01</td><td>Series C</td><td>$180M</td><td>$3.3B</td><td>a16z、ICONIQ Growth co-led;NEA、WiL、Valor、Endeavor Catalyst、Lunate;Deutsche Telekom、LG Technology Ventures、HubSpot Ventures、NTT DOCOMO Ventures、RingCentral Ventures 等战略投资</td><td>估值三倍,企业和战略投资者进入</td><td><a href="https://elevenlabs.io/blog/series-c" target="_blank" rel="noopener">ElevenLabs</a></td></tr><tr><td>2026-02</td><td>Series D</td><td>$500M</td><td>$11B</td><td>Sequoia led;Andreessen Horowitz、ICONIQ 等参与</td><td>估值超过三倍增长,公司考虑潜在 IPO</td><td><a href="https://www.wsj.com/tech/ai/voice-ai-startup-elevenlabs-raises-500-million-568c0c60" target="_blank" rel="noopener">WSJ</a></td></tr><tr><td>2026-05</td><td>Series D / additional funding and ARR update</td><td>报道称 Series D 合计 $500M,ARR 跨 $500M</td><td>$11B</td><td>同轮投资者口径</td><td>强调 2026 前四个月 ARR 跨 $500M</td><td><a href="https://m.economictimes.com/tech/funding/voice-ai-firm-elevenlabs-tops-500-million-arr-announces-additional-funding/articleshow/130833329.cms" target="_blank" rel="noopener">Economic Times</a></td></tr></tbody></table></div>
+<p>融资轨迹体现了 ElevenLabs 的稀缺性:从 2023 年 $100M valuation 到 2024 年 $1.1B,2025 年 $3.3B,2026 年 $11B。相比许多 AI 应用,ElevenLabs 有非常清晰的计费和用量体系,并且 ARR 规模已显著领先多数语音 AI 同行。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">ElevenLabs Inc. / ElevenLabs</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2022 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">London / New York 双重运营特征;公开资料常称 London-based</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Mati Staniszewski(CEO,前 Palantir)、Piotr Dabkowski(CTO,前 Google)</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">AI voice and audio platform,覆盖 speech generation、speech recognition、voice agents、dubbing、music、sound effects、voice licensing</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">Text to Speech、Speech to Text、Voice Changer、Voice Isolator、Sound Effects、Music、Automatic Dubbing、Dubbing Studio、Studio、Productions、Ads Engine、Conversational AI/ElevenAgents、Voice Marketplace、Professional Voice Cloning</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">免费层 + self-serve subscription + shared credits + workspace seats + API usage + enterprise custom pricing</td></tr><tr><td class="kv-key">官方价格</td><td class="kv-val">Free $0;Starter $6/mo;Creator $22/mo;Pro $99/mo;Scale $299/mo;Business $990/mo;Enterprise custom</td></tr><tr><td class="kv-key">官方用量口径</td><td class="kv-val">Credits shared across products;TTS 约 1 credit/character;STT 330 credits/min;Music 900 credits/min;Voice Changer/Isolator 1,000 credits/min;Dubbing 2,000–10,000 credits/min</td></tr><tr><td class="kv-key">低延迟 TTS</td><td class="kv-val">Business plan 提到 as low as 5c/minute</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">2026 Series D 后约 $11B</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2026 年 2 月 $500M Series D,Sequoia 领投;Andreessen Horowitz、ICONIQ 等参与</td></tr><tr><td class="kv-key">ARR</td><td class="kv-val">WSJ 报道 2025 年 ARR 约 $330M,目标 2026 doubled;Economic Times 2026 年 5 月报道 ARR 跨 $500M</td></tr><tr><td class="kv-key">客户</td><td class="kv-val">Deutsche Telekom、Deliveroo、Square、Revolut、Ukrainian government、media/creator/enterprise users 等公开报道客户</td></tr><tr><td class="kv-key">员工</td><td class="kv-val">公开资料 2026 年约 400 人口径</td></tr><tr><td class="kv-key">IPO/资本化</td><td class="kv-val">私有公司;2026 融资报道提到 eyes potential IPO,但未见 IPO filing</td></tr></tbody></table></div>
+<p>ElevenLabs 最初以高质量 TTS 和 voice cloning 出圈,随后快速把产品扩展为 AI audio infrastructure。它的优势是语音质量、低延迟、多语言、开发者 API、创作者分发和 enterprise use cases;风险是 voice cloning misuse、版权/人格权、价格竞争、平台自研模型和监管。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 官方套餐与 credits</h3>
+<p>ElevenLabs 采用清晰的 self-serve pricing,并把不同产品统一折算为 monthly credits。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Plan</th><th>月费</th><th>Credits/month</th><th>Seats</th><th>主要权益</th></tr></thead><tbody><tr><td>Free</td><td>$0</td><td>10,000</td><td>1</td><td>入门试用</td></tr><tr><td>Starter</td><td>$6</td><td>30,000</td><td>1</td><td>更高额度,适合轻量创作者/API 测试</td></tr><tr><td>Creator</td><td>$22</td><td>121,000</td><td>1</td><td>更高 TTS 用量,首月促销 $11</td></tr><tr><td>Pro</td><td>$99</td><td>600,000</td><td>1</td><td>专业创作者/开发者</td></tr><tr><td>Scale</td><td>$299</td><td>1,800,000</td><td>3</td><td>3 workspace seats、team collaboration、3 professional voice clones</td></tr><tr><td>Business</td><td>$990</td><td>6,000,000</td><td>10</td><td>low-latency TTS as low as 5c/minute、10 professional voice clones、10 seats</td></tr><tr><td>Enterprise</td><td>Custom</td><td>Custom</td><td>Custom</td><td>DPA/SLA、HIPAA BAA、custom SSO、more seats/voices、elevated concurrency、managed dubbing、scale discounts、priority support</td></tr></tbody></table></div>
+<p>官方 FAQ 明确:credits 在所有产品间共享,每个 billing cycle 重置;付费订阅 unused credits 可 rollover up to two months,最多达到 3x monthly quota。</p>
+<h3 class="subsection">4.2 字符、分钟、音频任务计费</h3>
+<p>ElevenLabs 的关键不是单一 seat,而是多产品共享 credit pool:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品</th><th>官方 credit 消耗</th><th>可换算含义</th></tr></thead><tbody><tr><td>Text to Speech</td><td>约 1 credit per character;部分 Flash/Turbo API 模型 0.5–1 credit/character</td><td>以字符计费,对 API 开发者最关键</td></tr><tr><td>Speech to Text</td><td>330 credits per minute</td><td>以音频分钟计费</td></tr><tr><td>Eleven Music</td><td>900 credits per minute</td><td>音乐生成成本高于 STT</td></tr><tr><td>Sound Effects</td><td>200 credits per generation</td><td>按生成次数</td></tr><tr><td>Voice Changer</td><td>1,000 credits per minute</td><td>音频分钟</td></tr><tr><td>Voice Isolator</td><td>1,000 credits per minute</td><td>音频分钟</td></tr><tr><td>Automatic Dubbing</td><td>2,000 credits/min with watermark;3,000 credits/min without watermark</td><td>多语言视频/音频本地化</td></tr><tr><td>Dubbing Studio</td><td>5,000 credits/min with watermark;10,000 credits/min without watermark</td><td>专业 dubbing 工作流</td></tr></tbody></table></div>
+<p>这套计费有两个优点。第一,用户可以在一个钱包里消费 TTS、STT、music、dubbing 等不同产品,降低购买摩擦。第二,公司能用 credit ratios 控制不同任务的毛利。Dubbing Studio without watermark 10,000 credits/min 明显比普通 TTS 更贵,反映专业音频/视频本地化更高成本和更高价值。</p>
+<h3 class="subsection">4.3 API 计费与 enterprise 合同</h3>
+<p>ElevenLabs 的 API 业务面向开发者和企业应用,如客服 voice agents、onboarding、游戏/影视/广告音频生成、教育和无障碍产品。价格页面把 API 使用纳入 credits,并指出部分低延迟 TTS 可低至 $0.05/minute。Enterprise 则通过 custom credits/seats、concurrency、DPA/SLA、HIPAA BAA、SSO、priority support 和 discounts at scale 形成大客户合同。</p>
+<p>收入结构可以理解为:</p>
+<ul><li><strong>Creator subscriptions:</strong> 低 ACV、高数量、高 churn,贡献品牌和分发。</li><li><strong>Developer/API usage:</strong> 随用量增长,毛利受模型推理和音频处理成本影响。</li><li><strong>Business/Scale workspace:</strong> seats + credits,适合团队内容生产。</li><li><strong>Enterprise:</strong> 高 ACV,客服、媒体、通信、政府、医疗等场景,可能有 SLA、volume discount 和 data/privacy 条款。</li><li><strong>Voice marketplace/licensing:</strong> 名人/演员/权利方授权声音,公司可能抽佣或收平台费。</li></ul>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 产品矩阵</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品</th><th>功能</th><th>目标场景</th></tr></thead><tbody><tr><td>Text to Speech</td><td>文本转自然语音</td><td>内容创作、有声书、视频旁白、客服语音</td></tr><tr><td>Speech to Text / Scribe</td><td>语音转文字</td><td>会议转录、字幕、客服分析、语音输入</td></tr><tr><td>Voice Cloning / Professional Voice Cloning</td><td>克隆/定制声音</td><td>品牌声音、配音演员、企业 voice persona</td></tr><tr><td>Voice Changer</td><td>将输入音频转换为目标声音</td><td>创作、游戏、媒体制作</td></tr><tr><td>Voice Isolator</td><td>分离人声/降噪</td><td>后期制作、播客、视频</td></tr><tr><td>Automatic Dubbing / Dubbing Studio</td><td>多语言配音和本地化</td><td>视频平台、教育、影视、企业培训</td></tr><tr><td>Sound Effects</td><td>生成音效</td><td>游戏、广告、视频制作</td></tr><tr><td>Eleven Music</td><td>AI 音乐生成</td><td>广告、内容、创作者、媒体</td></tr><tr><td>Conversational AI / ElevenAgents</td><td>实时语音 agent</td><td>客服、销售、onboarding、虚拟助手</td></tr><tr><td>Studio / Productions / Ads Engine</td><td>内容生产工作台</td><td>专业媒体和营销团队</td></tr><tr><td>Voice Marketplace</td><td>授权名人/演员声音</td><td>品牌、影视、授权内容</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 技术能力</h3>
+<p>ElevenLabs 的核心技术方向包括:</p>
+<ul><li><strong>Naturalness / expressiveness:</strong> 高质量语音、情绪、语调、停顿和上下文表达。</li><li><strong>Low latency:</strong> 实时语音 agent 需要低延迟 TTS/STT/turn-taking。</li><li><strong>Multilingual dubbing:</strong> 保留说话人音色并跨语言生成。</li><li><strong>Voice cloning safety:</strong> 声音克隆需要 consent、watermark/detection、policy enforcement。</li><li><strong>Audio generation beyond speech:</strong> music 和 sound effects 扩大 TAM。</li><li><strong>API reliability:</strong> 企业将 voice agents 放进客服/业务流程,需要 uptime、concurrency、SLA。</li></ul>
+<p>2026 年产品叙事已经不只是“会说话的模型”,而是“voice as interface”。如果 AI agent 成为用户与软件交互的重要入口,ElevenLabs 可成为语音输出/输入的基础层。</p>
+<h3 class="subsection">5.3 产品效果</h3>
+<p>ElevenLabs 早期出圈来自自然度高、生成速度快和免费层友好。2026 年,效果评价需要分产品:</p>
+<ul><li><strong>TTS:</strong> 语音自然度、情感控制、多语言、低延迟、稳定性。</li><li><strong>STT:</strong> 准确率、实时性、噪声鲁棒性、语言覆盖。</li><li><strong>Dubbing:</strong> 口型/时间轴、说话人保持、翻译质量、后期编辑。</li><li><strong>Voice agents:</strong> 端到端延迟、打断处理、turn-taking、上下文保持、工具调用。</li><li><strong>Music/SFX:</strong> 商用许可、风格控制、版权安全、可编辑性。</li></ul>
+<p>客户案例中,Deliveroo 用于 courier onboarding,Deutsche Telekom 用于 customer service voice agents,Ukrainian government 用于教育等公共项目,说明产品已经从 creator tool 扩展到企业/政府应用。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>来源/说明</th></tr></thead><tbody><tr><td>2025 ARR</td><td>约 $330M</td><td>WSJ 2026-02 报道 CEO 口径</td></tr><tr><td>2026 ARR</td><td>2026 前四个月跨 $500M</td><td>Economic Times 2026-05 报道</td></tr><tr><td>最新估值</td><td>$11B</td><td>2026 Series D</td></tr><tr><td>最新融资</td><td>$500M</td><td>2026-02 Series D,Sequoia led</td></tr><tr><td>累计融资</td><td>接近 $800M / 约 $781M 不同报道口径</td><td>WSJ/The Times</td></tr><tr><td>2025 Series C</td><td>$180M at $3.3B</td><td>公司/媒体 2025-01</td></tr><tr><td>2024 Series B</td><td>$80M at $1.1B</td><td>公司公告 2024-01</td></tr><tr><td>2023 Series A</td><td>$19M at ~$100M valuation</td><td>TechCrunch/FT/公开资料</td></tr><tr><td>2023 pre-seed</td><td>$2M</td><td>Business Insider/公开资料</td></tr><tr><td>员工</td><td>2026 约 400</td><td>公开资料</td></tr><tr><td>Business plan price</td><td>$990/month,6M credits,10 seats</td><td>官方 pricing</td></tr><tr><td>Low-latency TTS</td><td>as low as 5c/minute</td><td>官方 pricing</td></tr><tr><td>Startup grants</td><td>12 months free,33M characters</td><td>官方 pricing</td></tr></tbody></table></div>
+<h3 class="subsection">6.1 ARR 质量</h3>
+<p>ElevenLabs 的 ARR 增长非常强。2025 年约 $330M ARR,2026 前四个月跨 $500M ARR,意味着:</p>
+<ul><li>语音生成不再只是创作者玩具,企业/API 用量正在拉动收入;</li><li>credit + subscription + enterprise 合同组合有效;</li><li>voice agents 和 dubbing 等高价值场景可能提高 ARPU;</li><li>市场愿意给 voice AI 平台高估值。</li></ul>
+<p>以 $11B / $500M ARR 粗略计算,估值/ARR 约 22x;以 $330M ARR 计算约 33x。相比 Harvey/Glean,ElevenLabs 的 ARR base 更大,估值倍数相对低一些,但仍要求高增长和强毛利。</p>
+<h3 class="subsection">6.2 用户和客户结构</h3>
+<p>ElevenLabs 横跨三类客户:</p>
+<ul><li><strong>Creators/prosumers:</strong> YouTubers、podcasters、audiobook creators、marketers。</li><li><strong>Developers/startups:</strong> 用 API 构建语音应用、agents、education、accessibility。</li><li><strong>Enterprises/governments:</strong> Deutsche Telekom、Deliveroo、Square、Revolut、Ukraine government 等。</li></ul>
+<p>这个结构有利于 product-led growth,但也带来合规风险。免费层和低价层容易被滥用,企业层则要求严格 consent、data processing 和 misuse prevention。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 Revenue build</h3>
+<p>收入可拆为:</p>
+<p>ARR = self-serve subscribers × plan price + API usage credits + business/workspace seats + enterprise contracts + marketplace/licensing take-rate</p>
+<p>关键增长驱动:</p>
+<ul><li><strong>API embedding:</strong> 开发者把 ElevenLabs 嵌入产品后,用量随终端用户增长。</li><li><strong>Enterprise voice agents:</strong> 客服/销售/onboarding 可产生大规模语音分钟。</li><li><strong>Dubbing/localization:</strong> 高 credit/minute,对媒体和教育内容价值高。</li><li><strong>Business seats:</strong> 内容团队、营销团队、媒体团队多人协作。</li><li><strong>Voice marketplace:</strong> 授权声音可创造新的平台收入。</li></ul>
+<h3 class="subsection">7.2 Cost build</h3>
+<p>成本包括:</p>
+<ul><li>TTS/STT/music/audio 模型推理;</li><li>GPU/云计算;</li><li>音频存储、带宽、低延迟 serving;</li><li>safety/detection/watermarking;</li><li>content moderation 和 abuse response;</li><li>enterprise support、SLA 和 compliance;</li><li>voice rights/licensing 分成。</li></ul>
+<p>ElevenLabs 的 credit ratios 是毛利管理工具。TTS 1 credit/character,STT 330 credits/min,Dubbing Studio 10,000 credits/min,体现不同任务的成本和价值差异。</p>
+<h3 class="subsection">7.3 毛利敏感性</h3>
+<p>积极因素:</p>
+<ul><li>Self-serve pricing 清晰,用户可预付 credits;</li><li>高价值 enterprise voice agents 可用 volume contract 锁定收入;</li><li>Dubbing、voice cloning、music 等高阶产品提高 ARPU;</li><li>ARR base 大,固定研发成本可被摊薄。</li></ul>
+<p>压力因素:</p>
+<ul><li>TTS/STT 基础能力可能 commoditize,价格持续下行;</li><li>OpenAI、Google、Microsoft、Amazon 都可提供语音模型/API;</li><li>低延迟语音 agent 对 serving 成本和 reliability 要求高;</li><li>deepfake 滥用导致 moderation 成本和法律风险上升;</li><li>若 marketplace 需要向权利人分成,毛利低于纯软件。</li></ul>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 主要竞争者</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>定位</th><th>对 ElevenLabs 的威胁</th></tr></thead><tbody><tr><td>OpenAI Realtime / TTS / Voice</td><td>通用模型平台 + ChatGPT voice</td><td>模型能力和开发者分发强</td></tr><tr><td>Google Cloud Text-to-Speech / Gemini voice</td><td>云语音 API + Android/Workspace</td><td>企业云渠道强</td></tr><tr><td>Microsoft Azure AI Speech</td><td>企业语音 API + Copilot/Teams</td><td>企业采购和合规优势</td></tr><tr><td>Amazon Polly / Transcribe / Lex</td><td>AWS 语音服务</td><td>开发者和云客户基础</td></tr><tr><td>Cartesia</td><td>low-latency voice AI</td><td>实时语音 agent 竞争</td></tr><tr><td>PlayHT</td><td>AI voice generation</td><td>创作者/API 竞争</td></tr><tr><td>Resemble AI</td><td>voice cloning / enterprise voice</td><td>安全和企业 voice cloning</td></tr><tr><td>Speechify</td><td>TTS consumer/productivity</td><td>消费者分发强</td></tr><tr><td>Deepgram</td><td>STT / voice AI infra</td><td>开发者 STT/agent stack</td></tr><tr><td>AssemblyAI</td><td>speech-to-text API</td><td>STT API 竞争</td></tr><tr><td>Murf / Descript / WellSaid</td><td>creator/business voice tools</td><td>内容生产工作流竞争</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 ElevenLabs 护城河</h3>
+<ul><li><strong>品牌和质量心智:</strong> 早期高自然度 TTS 建立了强认知。</li><li><strong>开发者 API:</strong> 易接入、清晰 credits、丰富产品线。</li><li><strong>多产品平台:</strong> TTS/STT/dubbing/music/sfx/agents/marketplace 形成 cross-sell。</li><li><strong>Enterprise customers:</strong> Deutsche Telekom、Deliveroo 等证明 voice agents 商业价值。</li><li><strong>Voice marketplace:</strong> 若权利人和名人声音授权形成规模,可产生内容护城河。</li><li><strong>Safety infrastructure:</strong> 在高风险 voice cloning 领域,合规和信任本身是护城河。</li></ul>
+<h3 class="subsection">8.3 价值链位置</h3>
+<p>ElevenLabs 位于模型层与应用层之间:</p>
+<p>基础音频模型 → API/平台 → 开发者/企业 voice workflows → 终端用户语音交互</p>
+<p>它既是模型/API provider,也是应用平台。与纯应用不同,ElevenLabs 直接暴露 API 和 usage pricing;与纯模型不同,它有 Studio、Dubbing、Agents、Marketplace 等应用层 workflow。这种 full-stack 位置带来更大 TAM,也带来更重的研发和安全责任。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<ul><li><strong>Mati Staniszewski:</strong> CEO,前 Palantir deployment strategist。Palantir 背景有助于 enterprise sales、部署和复杂客户需求理解。</li><li><strong>Piotr Dabkowski:</strong> CTO,前 Google machine learning engineer。负责核心 voice AI 技术。</li><li>两位创始人在波兰成长,创立灵感来自对糟糕影视配音的体验,这使公司从一开始就关注 dubbing、多语言和自然语音。</li><li>投资方包括 a16z、Sequoia、ICONIQ、Nat Friedman、Daniel Gross、NEA、战略投资者 Deutsche Telekom、LG、HubSpot、NTT DOCOMO、RingCentral 等,有助于企业和通信渠道。</li></ul>
+<p>团队优势是技术+enterprise deployment 组合。语音 AI 不只是模型 demo,需要低延迟、可靠 API、合规、安全和客户集成,这与两位创始人背景匹配。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>Deepfake / misuse 风险:</strong> voice cloning 可被用于诈骗、政治 robocall、名人冒充和骚扰。</li><li><strong>版权和人格权风险:</strong> 声音是否可授权、训练数据是否合法、名人和演员权益如何保护,都会影响平台责任。</li><li><strong>价格竞争风险:</strong> TTS/STT API 可能被 OpenAI/Google/Microsoft/Amazon 低价化。</li><li><strong>模型 commoditization:</strong> 语音自然度优势可能被追平,需要靠 workflow/API/enterprise trust 维持差异。</li><li><strong>低延迟成本风险:</strong> Voice agents 需要实时 STT+LLM+TTS,成本和 latency 都难。</li><li><strong>监管风险:</strong> 政治广告、电话营销、金融诈骗、未成年人保护等领域可能出台更严格规则。</li><li><strong>内容审核成本:</strong> 免费层和低价层越大,abuse monitoring 成本越高。</li><li><strong>平台依赖风险:</strong> 如果主要客户通过云厂商采购语音 API,云平台可能压缩独立供应商空间。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="black_forest_labs.html">Black Forest Labs</a><a class="sib-chip" href="heygen.html">HeyGen</a><a class="sib-chip" href="kling_ai_可灵ai.html">Kling AI</a><a class="sib-chip" href="luma_ai.html">Luma AI</a><a class="sib-chip" href="meshy.html">Meshy</a><a class="sib-chip" href="midjourney.html">Midjourney</a><a class="sib-chip" href="pika.html">Pika</a><a class="sib-chip" href="tripo_ai.html">Tripo AI</a></div>
+</div>
+</body></html>

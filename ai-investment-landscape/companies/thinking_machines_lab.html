@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thinking Machines Lab · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 通用 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">通用 AI</span>
+      <span class="dc-layer">模型</span>
+      <span class="dc-region">美国 San Francisco</span>
+    </div>
+    <h1 class="dc-title"><a href="https://thinkingmachines.ai/" target="_blank" rel="noopener">Thinking Machines Lab</a></h1>
+    <div class="dc-oneliner">Thinking Machines Lab 是 Mira Murati 离开 OpenAI 后创立的前沿研究实验室。它不像 SSI 那样完全回避产品，而是先用 Tinker 训练 API，把 fine-tuning、reinforcement learning 和开放模型训练能力产品化。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Thinking Machines Lab 是 Mira Murati 离开 OpenAI 后创立的前沿研究实验室。它不像 SSI 那样完全回避产品，而是先用 Tinker 训练 API，把 fine-tuning、reinforcement learning 和开放模型训练能力产品化。</strong></p>
+<p>截至 2026 年 7 月 6 日，公司已完成约 $2B 早期融资、估值约 $12B，投资方包括 a16z、Nvidia、AMD、Cisco、Jane Street、Accel 等。2026 年 3 月，公司又与 NVIDIA 宣布长期 gigawatt-scale 战略合作。商业化仍处早期，但 Tinker 已公开定价并支持多种 open-weight 模型训练，比 SSI 更容易形成 API 收入和开发者生态。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>金额</th><th>累计融资口径</th><th>估值</th><th>投资方/相关方</th><th>事件类型</th><th>来源</th></tr></thead><tbody><tr><td>2025-02</td><td>公司公开启动</td><td>-</td><td>-</td><td>-</td><td>Mira Murati、John Schulman 等前 OpenAI 团队</td><td>创立/出 stealth</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-04</td><td>Reuters 报道 a16z 拟领投 mega round</td><td>媒体报道目标约 $2B</td><td>-</td><td>约 $10B-$12B 谈判口径</td><td>Andreessen Horowitz 等</td><td>融资谈判</td><td><a href="https://www.reuters.com/technology/artificial-intelligence/a16z-eyes-leading-mega-round-former-openai-ctos-startup-thinking-machines-sources-2025-04-11/" target="_blank" rel="noopener">reuters.com</a></td></tr><tr><td>2025-05</td><td>Albania government 投资计划</td><td>$10M</td><td>-</td><td>跟随主轮估值</td><td>Albania government</td><td>政府投资/预算修订</td><td><a href="https://albaniandailynews.com/news/albania-invests-10-million-in-mira-murati-s-ai-startup" target="_blank" rel="noopener">albaniandailynews.com</a></td></tr><tr><td>2025-07-15</td><td>Early-stage/seed mega round</td><td>约 $2B</td><td>约 $2B</td><td>约 $12B</td><td>a16z 领投;Nvidia、AMD、Cisco、Jane Street、Accel 等报道参与</td><td>普通股权融资</td><td><a href="https://www.reuters.com/technology/artificial-intelligence/mira-muratis-ai-startup-thinking-machines-valued-12-billion-early-stage-funding-2025-07-15/" target="_blank" rel="noopener">reuters.com</a></td></tr><tr><td>2025-07-15</td><td>官方/媒体宣布 cofounders 与融资</td><td>约 $2B</td><td>约 $2B</td><td>约 $12B</td><td>a16z、Nvidia、AMD、Cisco、Accel 等</td><td>出融资新闻</td><td><a href="https://www.wired.com/story/thinking-machines-lab-mira-murati-funding/" target="_blank" rel="noopener">wired.com</a></td></tr><tr><td>2025-10-01</td><td>Tinker 首款产品发布</td><td>-</td><td>-</td><td>-</td><td>Thinking Machines;早期 beta 用户</td><td>产品发布</td><td>非融资金额/估值事件;不提供融资来源链接</td></tr><tr><td>2025-11</td><td>Bloomberg/媒体称公司曾讨论约 $50B 新估值融资</td><td>金额没有清楚公开</td><td>约 $2B+</td><td>约 $50B 讨论口径</td><td>投资者名单未完整公开</td><td>融资讨论</td><td><a href="https://www.bloomberg.com/news/articles/2025-11-14/murati-s-thinking-machines-is-in-talks-for-50-billion-valuation" target="_blank" rel="noopener">bloomberg.com</a></td></tr><tr><td>2026-03-10</td><td>NVIDIA 长期战略合作</td><td>投资金额没有公开</td><td>约 $2B+</td><td>不涉及公开新估值</td><td>NVIDIA</td><td>战略投资 + 多年算力合作</td><td><a href="https://thinkingmachines.ai/news/thinking-machines-lab-and-nvidia-announce-long-term-gigawatt-scale-strategic-partnership/" target="_blank" rel="noopener">thinkingmachines.ai</a></td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li><strong>$2B early round 的本质</strong>:这不是普通 seed,而是“OpenAI 前核心团队 + front-line infrastructure product + 算力稀缺”带来的 mega round。</li><li><strong>$12B 估值压力</strong>:按普通 SaaS 逻辑极难解释,因为公开收入尚少;必须用未来训练平台和自研 frontier model 的期权估值。</li><li><strong>NVIDIA 投资的战略含义</strong>:NVIDIA 不只是财务投资方,还是潜在算力供应方、硬件路线伙伴和客户背书。</li><li><strong>$50B 讨论口径要谨慎</strong>:截至本报告日期,公开资料更像融资讨论或市场报道,不能写成已完成新轮。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司名称</td><td class="kv-val">Thinking Machines Lab Inc.</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2025 年 2 月公开启动</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">美国 San Francisco</td></tr><tr><td class="kv-key">公司类型</td><td class="kv-val">私人公司;公开资料称为 public benefit corporation</td></tr><tr><td class="kv-key">创始人/CEO</td><td class="kv-val">Mira Murati,前 OpenAI CTO</td></tr><tr><td class="kv-key">Chief scientist</td><td class="kv-val">John Schulman,OpenAI 联合创始人、RLHF/ChatGPT 关键研究者</td></tr><tr><td class="kv-key">关键创始/早期团队</td><td class="kv-val">Barret Zoph、Lilian Weng、Andrew Tulloch、Luke Metz、Jonathan Lachman 等 OpenAI/Meta/Mistral 背景成员;部分成员 2025-2026 年被 Meta/OpenAI 挖走</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">让 AI systems 更可理解、更可定制、更通用;强调 multimodal、human-AI collaboration、frontier model intelligence</td></tr><tr><td class="kv-key">首款产品</td><td class="kv-val">Tinker,面向研究者和开发者的模型训练/fine-tuning API</td></tr><tr><td class="kv-key">产品状态</td><td class="kv-val">Tinker 已从申请访问走向 general availability,官网给出模型列表和按 tokens/compute usage 的价格</td></tr><tr><td class="kv-key">最新明确估值</td><td class="kv-val">2025-07 约 $12B</td></tr><tr><td class="kv-key">已知融资</td><td class="kv-val">2025-07 约 $2B early-stage/seed mega round;2026-03 NVIDIA 战略投资金额没有公开</td></tr><tr><td class="kv-key">主要投资方</td><td class="kv-val">Andreessen Horowitz/a16z 领投;Nvidia、AMD、Cisco、Jane Street、Accel、Albania government 等报道参与</td></tr><tr><td class="kv-key">员工规模</td><td class="kv-val">公开资料约 100 人量级</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://thinkingmachines.ai/" target="_blank" rel="noopener">https://thinkingmachines.ai/</a></td></tr></tbody></table></div>
+<p>Thinking Machines 的差异化在于:它不是单纯发布一个闭源聊天模型,而是把 frontier lab 内部用于 post-training、LoRA、RL、distributed training 的能力封装成 API,让外部研究者和企业在不用自己管理 GPU 集群的情况下训练/微调开放模型。它的核心客户可能不是普通消费者,而是研究型开发者、AI startup、大学实验室、企业 AI 团队和需要定制模型的行业客户。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 当前产品:Tinker training API</h3>
+<p>Tinker 是 Thinking Machines 第一款公开产品。官网把它定义为“training API for researchers”:用户控制数据、算法、训练循环和保存 checkpoint,Thinking Machines 负责分布式训练基础设施、调度、资源管理和可靠性。核心 API 抽象只有四类函数:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>函数</th><th>作用</th><th>商业含义</th></tr></thead><tbody><tr><td><code>forward_backward</code></td><td>前向和反向传播,累积梯度</td><td>直接对应训练 compute 消耗</td></tr><tr><td><code>optim_step</code></td><td>根据梯度更新权重</td><td>使用户可控制训练算法</td></tr><tr><td><code>sample</code></td><td>生成 tokens,用于交互、评估或 RL action</td><td>可按采样 tokens 收费</td></tr><tr><td><code>save_state</code></td><td>保存训练进度,便于恢复</td><td>形成 storage 和 checkpoint 收费</td></tr></tbody></table></div>
+<p>与传统 API 相比,Tinker 卖的不是一个固定模型输出,而是<strong>可管理的训练过程</strong>。这使它更接近“frontier training infrastructure as a service”。</p>
+<h3 class="subsection">4.2 Tinker 定价</h3>
+<p>截至官网 2026 年页面,Tinker 使用反映 compute usage 的定价,单位为 USD / million tokens,并对 storage 收 $0.10/GB-month。官网列示的示例价格包括:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>上下文</th><th>Prefill</th><th>Sample</th><th>Train</th><th>备注</th></tr></thead><tbody><tr><td>Nemotron-3-Nano-30B-A3B-BF16</td><td>64K</td><td>$0.13</td><td>$0.33</td><td>$0.40</td><td>官网显示限时 50% 折扣</td></tr><tr><td>Nemotron-3-Super-120B-A12B-BF16</td><td>64K</td><td>$0.38</td><td>$0.96</td><td>$1.16</td><td>MoE</td></tr><tr><td>Nemotron-3-Super-120B-A12B-BF16</td><td>256K</td><td>$0.76</td><td>$1.92</td><td>$2.32</td><td>长上下文</td></tr><tr><td>Nemotron-3-Ultra-550B-A55B-BF16</td><td>64K</td><td>$1.66</td><td>$4.15</td><td>$4.98</td><td>大 MoE</td></tr><tr><td>Qwen3.6-35B-A3B</td><td>64K</td><td>$0.36</td><td>$0.89</td><td>$1.07</td><td>MoE</td></tr><tr><td>Qwen3.6-27B</td><td>64K</td><td>$1.24</td><td>$3.73</td><td>$3.73</td><td>Dense</td></tr><tr><td>Qwen3.5-397B-A17B</td><td>64K</td><td>$2.00</td><td>$5.00</td><td>$6.00</td><td>大 MoE</td></tr><tr><td>DeepSeek-V3.1</td><td>32K</td><td>$1.13</td><td>$2.81</td><td>$3.38</td><td>open-weight inference/training</td></tr><tr><td>GPT-OSS-120B</td><td>32K</td><td>$0.18</td><td>$0.44</td><td>$0.52</td><td>MoE</td></tr><tr><td>Kimi K2.6</td><td>32K</td><td>$1.47</td><td>$3.66</td><td>$4.40</td><td>MoE</td></tr></tbody></table></div>
+<p>这套价格说明公司已具备明确 monetization:按训练和采样 tokens 计费,另收存储费,未来可加 reserved capacity、enterprise SLA、VPC/on-prem、model hosting、fine-tuned checkpoint management、教育/研究 grants 到 paid conversion。</p>
+<h3 class="subsection">4.3 未来商业化路径</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>路径</th><th>可能收费</th><th>当前证据</th><th>投资含义</th></tr></thead><tbody><tr><td>Tinker self-serve API</td><td>tokens/compute usage + storage</td><td>官网已有价格</td><td>最短期收入来源</td></tr><tr><td>Enterprise training platform</td><td>年度合同、SLA、reserved clusters</td><td>大模型定制需求强,但客户名单很少</td><td>可能对 AI startup 和企业 ML 团队有吸引力</td></tr><tr><td>Research grants → paid conversion</td><td>免费/补贴试用后转付费</td><td>官网有 grants 和 community projects</td><td>有利于学术和开发者生态</td></tr><tr><td>NVIDIA strategic capacity</td><td>算力承诺、联合客户、硬件优化</td><td>2026-03 NVIDIA partnership</td><td>可降低供给风险,也可能绑定硬件路线</td></tr><tr><td>自有 frontier model/API</td><td>token API、license、agent 产品</td><td>官网强调 frontier intelligence 和 multimodal</td><td>中长期可能与 OpenAI/Anthropic 正面竞争</td></tr><tr><td>多模态协作系统</td><td>seat subscription、workflow automation</td><td>官网强调 human-AI collaboration</td><td>可能从研究工具扩展到企业生产力</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 公司技术路线</h3>
+<p>Thinking Machines 官网把使命写成三件事:让 AI 更可理解、更可定制、更通用。技术路线包括:</p>
+<ul><li><strong>human-AI collaboration</strong>:不只追求完全 autonomous agents,而是构建能与人协作的 multimodal systems;</li><li><strong>customizable AI</strong>:让模型适配具体领域、工作流和价值偏好;</li><li><strong>frontier model intelligence</strong>:在科学、编程等领域推进前沿模型能力;</li><li><strong>advanced multimodality</strong>:语言、视觉、音频等更自然的交互方式;</li><li><strong>infrastructure quality</strong>:强调研究生产力、可靠性、安全和长期正确性。</li></ul>
+<h3 class="subsection">5.2 Tinker 支持的模型生态</h3>
+<p>官网显示 Tinker 支持多类 open-source/open-weight 模型,包括:</p>
+<ul><li>Qwen:Qwen3.6-35B-A3B、Qwen3.6-27B、Qwen3.5-4B/9B/35B-A3B/397B-A17B 等;</li><li>GPT-OSS:GPT-OSS-120B、GPT-OSS-20B;</li><li>DeepSeek:DeepSeek-V3.1;</li><li>Moonshot/Kimi:Kimi-K2.5、Kimi-K2.6;</li><li>NVIDIA Nemotron:Nemotron-3-Nano/Super/Ultra。</li></ul>
+<p>这说明 Tinker 的定位不是替代开源模型,而是成为 open-weight model training layer。它让用户选择基础模型,再用 LoRA、supervised learning 或 reinforcement learning 做定制,最后下载 checkpoint 或部署。</p>
+<h3 class="subsection">5.3 LoRA 与 post-training</h3>
+<p>Tinker 使用 LoRA 微调,即训练一个小型 adapter 而不是改动全部 base weights。John Schulman 及团队在 2025 年发布 “LoRA Without Regret” 研究,强调在合适设置下 LoRA 可以接近 full fine-tuning 的学习表现,同时降低计算和部署复杂度。对商业模式而言,LoRA 让 Tinker 能服务更多中小团队:用户不需要全量训练 100B+ 模型,但仍可获得领域定制能力。</p>
+<h3 class="subsection">5.4 Research output</h3>
+<p>2025-2026 年公司已经发布多篇研究/技术博客:</p>
+<ul><li>“Defeating Nondeterminism in LLM Inference”:关注推理确定性和可复现性;</li><li>“LoRA Without Regret”:关注高效 fine-tuning;</li><li>“On-Policy Distillation”:关注策略蒸馏;</li><li>“Interaction Models”:关注人机协作的可扩展交互模型;</li><li>“Learning to Replicate Expert Judgment in Financial Tasks”:用金融任务专家判断作为研究对象;</li><li>“Training LLMs to Predict World Events”:与 Mantic 的 guest post,关注预测类任务。</li></ul>
+<p>这些研究主题与 Tinker 产品高度相关:训练效率、可复现性、RL/post-training、人机交互和专家任务评估,都是把前沿研究能力转化为可用训练平台的基础。</p>
+<h3 class="subsection">5.5 NVIDIA gigawatt-scale partnership</h3>
+<p>2026-03-10,Thinking Machines 和 NVIDIA 宣布长期 gigawatt-scale strategic partnership。公开资料提到未公开金额投资、多年协议,以及部署 1 gigawatt Vera Rubin computing capacity。对模型公司来说,这相当于把未来算力供给前置锁定,其重要性接近甚至超过单纯股权融资:</p>
+<ul><li>为 Tinker 和自研 frontier systems 提供训练/推理基础;</li><li>让 Thinking Machines 成为 NVIDIA 新一代硬件生态的旗舰客户之一;</li><li>给外部客户传递“可持续供给”的信号;</li><li>也增加对 NVIDIA 硬件周期、功耗、数据中心建设和资本开支的依赖。</li></ul>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>当前可回源事实</th><th>解读</th></tr></thead><tbody><tr><td>融资</td><td>2025-07 约 $2B,估值约 $12B</td><td>早期融资规模创纪录,体现团队稀缺性</td></tr><tr><td>战略投资</td><td>2026-03 NVIDIA 投资金额没有公开</td><td>算力供给成为资本化的一部分</td></tr><tr><td>产品</td><td>Tinker training API 已上线并给出价格</td><td>比 SSI 更靠近收入</td></tr><tr><td>收费</td><td>按 prefill/sample/train tokens + $0.10/GB-month storage</td><td>具备清晰 usage-based monetization</td></tr><tr><td>客户/用户</td><td>官网列出研究者 quote、community projects、grants,但没有付费客户数</td><td>仍处开发者/研究者 adoption 阶段</td></tr><tr><td>员工</td><td>约 100 人公开口径</td><td>从 OpenAI/Meta/Mistral 等挖来研究和工程人才</td></tr><tr><td>商业合同</td><td>公开资料没有给出 ARR、enterprise 合同金额或付费客户数</td><td>估值仍主要来自团队/算力/产品期权</td></tr><tr><td>人才流动</td><td>Andrew Tulloch 被 Meta 挖走;2026 年 Barret Zoph、Luke Metz 被报道回到 OpenAI</td><td>高估值 frontier labs 同时也是大厂挖角目标</td></tr></tbody></table></div>
+<p>Tinker 的商业化质量需要重点观察:</p>
+<ul><li>免费/研究 grants 用户转付费比例;</li><li>average training job size 和 repeat usage;</li><li>是否有 AI startup 把 Tinker 用作长期 post-training pipeline;</li><li>enterprise 是否愿意把私有数据传入 Tinker,还是要求 VPC/on-prem;</li><li>NVIDIA 合作是否降低 unit cost,并让价格相对 Together/Fireworks/Anyscale/Modal/Runpod 有竞争力。</li></ul>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Thinking Machines 的财务逻辑比 SSI 更可建模,因为 Tinker 已经收费。</p>
+<h3 class="subsection">7.1 Tinker 单位经济性</h3>
+<p>Tinker 收入大致来自:</p>
+<p>收入 = prefill tokens × 单价 + sample tokens × 单价 + train tokens × 单价 + storage GB-month × $0.10 + enterprise SLA / reserved capacity</p>
+<p>成本大致来自:</p>
+<p>成本 = GPU/加速器折旧或租赁 + 电力 + 网络 + 存储 + 调度/平台工程 + support + 安全审核</p>
+<p>关键变量:</p>
+<ul><li><strong>GPU utilization</strong>:训练 API 如果 job 碎片化,利用率低会伤毛利;</li><li><strong>模型 mix</strong>:Nemotron Ultra / Qwen large MoE / Kimi / DeepSeek 等大模型成本差异很大;</li><li><strong>上下文长度</strong>:256K context 价格显著更高,同时 KV cache 和 memory bandwidth 成本更高;</li><li><strong>LoRA adapter</strong>:比 full fine-tune 成本低,有助于服务长尾用户;</li><li><strong>NVIDIA partnership</strong>:若能锁定低成本或优先 capacity,毛利空间更好;</li><li><strong>enterprise reserved capacity</strong>:比纯按量 self-serve 更稳定,也可降低空置风险。</li></ul>
+<h3 class="subsection">7.2 与普通 inference API 的区别</h3>
+<p>普通 inference API 的成本主要是 serving tokens;Tinker 的成本包含训练、采样和保存 checkpoint,更接近 cloud compute。优点是付费意愿更高:客户微调模型是为了获得差异化能力,不是只买 commodity tokens。缺点是需求更窄:普通开发者会直接调用 OpenAI/Anthropic/DeepSeek API,只有需要定制模型和 RL 的团队才会用 Tinker。</p>
+<h3 class="subsection">7.3 估值逻辑</h3>
+<p>以 $12B 估值看,Thinking Machines 需要证明至少一种大路径:</p>
+<ul><li>成为 open-weight model post-training 的默认平台,类似“frontier AI training cloud”;</li><li>发布自有 frontier model,进入 OpenAI/Anthropic/xAI 级别竞争;</li><li>用 NVIDIA 合作获得显著成本/供给优势,成为企业训练和 agent workload 的基础设施;</li><li>通过 Tinker 建立开发者生态,再向企业平台和多模态协作产品扩展。</li></ul>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 训练/微调平台竞争</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争者</th><th>定位</th><th>Thinking Machines 差异</th></tr></thead><tbody><tr><td>Together AI</td><td>open model inference/fine-tuning cloud</td><td>Tinker 更偏 frontier research training loop 和 RL 控制</td></tr><tr><td>Fireworks AI</td><td>高性能 open model serving</td><td>Thinking Machines 团队品牌更强,但商业成熟度更早</td></tr><tr><td>Anyscale</td><td>Ray 生态和大规模训练/serving</td><td>Tinker 把复杂训练抽象得更少代码、更产品化</td></tr><tr><td>Modal / Runpod / Lambda</td><td>GPU cloud/dev infra</td><td>Tinker 卖训练 API,不是裸 GPU</td></tr><tr><td>Hugging Face AutoTrain/Inference Endpoints</td><td>模型生态入口</td><td>Thinking Machines 若能提供更强训练能力,可做高端层</td></tr><tr><td>OpenAI fine-tuning</td><td>闭源模型 fine-tune</td><td>Tinker 支持 open-weight 模型和 checkpoint 下载</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 Frontier lab 竞争</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司</th><th>竞争点</th><th>Thinking Machines 优势</th><th>Thinking Machines 劣势</th></tr></thead><tbody><tr><td>OpenAI</td><td>模型能力、人才、开发者平台</td><td>前 OpenAI 团队理解 post-training;更开放路线</td><td>OpenAI 有 ChatGPT/API/企业收入和 Microsoft 资源</td></tr><tr><td>Anthropic</td><td>安全、企业、Claude</td><td>Tinker 更 open-weight/customization</td><td>Anthropic 商业化更成熟</td></tr><tr><td>Google DeepMind</td><td>research + TPU + Gemini</td><td>小团队产品速度快</td><td>DeepMind 资金和模型能力强得多</td></tr><tr><td>SSI</td><td>OpenAI 离职顶级团队</td><td>Thinking Machines 已有产品和价格</td><td>SSI 的 Ilya 安全叙事更纯粹</td></tr><tr><td>Mistral / DeepSeek / Qwen</td><td>open-weight model ecosystem</td><td>Tinker 可利用这些模型成为训练层</td><td>模型提供方也可能自建训练平台</td></tr></tbody></table></div>
+<h3 class="subsection">8.3 护城河</h3>
+<p>Thinking Machines 的护城河可能来自四层:</p>
+<ol><li><strong>团队</strong>:Mira Murati、John Schulman 等前 OpenAI 核心人物带来招聘和融资优势。</li><li><strong>训练 API know-how</strong>:把 RL/post-training/distributed systems 封装成稳定 API,比裸 GPU 更难复制。</li><li><strong>算力供给</strong>:NVIDIA 1GW Vera Rubin 合作若落实,是非常强的基础设施壁垒。</li><li><strong>开发者生态</strong>:Tinker 若成为研究者微调 open models 的默认工具,会积累 cookbook、adapter、eval、社区项目和数据流。</li></ol>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<h3 class="subsection">Mira Murati</h3>
+<p>Mira Murati 曾任 OpenAI CTO,参与 DALL-E、ChatGPT、GPT-4 时代产品和研究工程管理,并在 2023 年 OpenAI 董事会危机期间短暂担任 interim CEO。她的优势是兼具技术、产品和组织经验,比纯研究型 founder 更适合把 frontier lab 能力产品化。</p>
+<h3 class="subsection">John Schulman</h3>
+<p>John Schulman 是 OpenAI 联合创始人,长期研究 reinforcement learning、policy optimization、RLHF,是 ChatGPT post-training 路线的重要人物。Tinker 把 RL/fine-tuning 开放成 API,与 Schulman 的技术背景高度一致。</p>
+<h3 class="subsection">其他核心成员</h3>
+<ul><li>Barret Zoph:前 OpenAI VP of Research/Post-Training,2026 年被报道离开回到 OpenAI;</li><li>Lilian Weng:前 OpenAI 安全/机器人/研究负责人之一;</li><li>Andrew Tulloch:前 OpenAI/Meta 背景,2025 年被 Meta 挖走;</li><li>Luke Metz:post-training specialist,2026 年被报道离开回到 OpenAI;</li><li>Alec Radford、Bob McGrew 等被报道为 adviser 或早期相关人物。</li></ul>
+<p>团队风险在于:Thinking Machines 的最大资产也是最容易被攻击的资产。Meta/OpenAI/Anthropic/Google 能用现金、股权、算力和研究资源直接挖人。2025-2026 年几次核心人员流动说明公司需要从“明星名单”转向“可持续组织能力”。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>估值先于收入</strong>:$12B 估值建立在团队、产品期权和算力合作上,而非公开 ARR。</li><li><strong>人才流失</strong>:Meta 和 OpenAI 已经挖走/吸回部分关键成员。</li><li><strong>产品需求深度</strong>:Tinker 面向高端研究者和开发者,市场规模可能小于通用 chat/API。</li><li><strong>安全与滥用</strong>:开放 fine-tuning 和 RL 能力可能被用于生成危险能力或绕过安全限制,需要强 vetting。</li><li><strong>数据信任</strong>:企业是否愿意把私有训练数据传到 Tinker,取决于安全、隔离和合规。</li><li><strong>算力资本开支</strong>:1GW 级合作意味着巨大的电力、数据中心和硬件周期风险。</li><li><strong>open-weight 依赖</strong>:Tinker 价值部分依赖 Qwen/DeepSeek/Kimi/Nemotron 等外部模型生态。</li><li><strong>大厂平台夹击</strong>:OpenAI、Google、Anthropic、AWS、Microsoft、NVIDIA 自己都可向 training platform 延伸。</li><li><strong>监管</strong>:训练 API 让用户生成自己的模型,责任边界和模型输出责任更复杂。</li><li><strong>治理集中</strong>:创始人控制权保护长期主义,也可能降低投资人对风险控制的影响。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="character_ai.html">Character.AI</a><a class="sib-chip" href="clay.html">Clay</a><a class="sib-chip" href="cohere.html">Cohere</a><a class="sib-chip" href="decagon_ai.html">Decagon AI</a><a class="sib-chip" href="deepseek_深度求索.html">DeepSeek</a><a class="sib-chip" href="genspark.html">Genspark</a></div>
+</div>
+</body></html>

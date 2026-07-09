@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liquid AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 通用 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">通用 AI</span>
+      <span class="dc-layer">模型</span>
+      <span class="dc-region">美国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.liquid.ai/" target="_blank" rel="noopener">Liquid AI</a></h1>
+    <div class="dc-oneliner">Liquid AI 是从 MIT CSAIL 走出的非 Transformer 架构基础模型公司。它的核心赌注是 Liquid Foundation Models（LFM）：用动力系统、Hyena operator 和 MoE 等混合架构，在更低内存占用和推理成本下支持端侧、边缘和私有部署。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Liquid AI 是从 MIT CSAIL 走出的非 Transformer 架构基础模型公司。它的核心赌注是 Liquid Foundation Models（LFM）：用动力系统、Hyena operator 和 MoE 等混合架构，在更低内存占用和推理成本下支持端侧、边缘和私有部署。</strong></p>
+<p>AMD 领投的 $250M Series A 让公司获得约 $2.0B-$2.35B 估值口径。公司已锁定 Mercedes-Benz、Shopify、G42 等旗舰客户，并与 Qualcomm/AMD 端侧芯片生态深度绑定。商业模式更像开源权重、商业 license 和 OEM/on-prem 部署的组合，而不是纯 per-token 云 API。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>轮次</th><th>时间</th><th>金额</th><th>估值(post-money)</th><th>领投</th><th>参投 / 其他</th><th>来源</th></tr></thead><tbody><tr><td><strong>早期 SAFE</strong></td><td>2023 年初(法人设立前后)</td><td>约 $5.6M</td><td>$56M(cap)</td><td>OSS Capital(founding lead)</td><td>—</td><td><a href="https://www.lw.com/en/news/latham-watkins-advises-liquid-ai-in-us37-5-million-seed-financing" target="_blank" rel="noopener">Lw</a></td></tr><tr><td><strong>Seed</strong></td><td>2023年12月</td><td><strong>$37.5–37.6M</strong></td><td>未披露(推测 ~$300M+ 段位)</td><td><strong>OSS Capital + PagsGroup</strong>(Stephen Pagliuca 家族办公室,Celtics 联合所有人)</td><td>Breyer Capital、Samsung NEXT、Automattic(WordPress 母公司)、Tom Preston-Werner(GitHub 联创)、Naval Ravikant、Safar Partners、Duke Capital Partners</td><td><a href="https://www.lw.com/en/news/latham-watkins-advises-liquid-ai-in-us37-5-million-seed-financing" target="_blank" rel="noopener">Latham &amp; Watkins</a></td></tr><tr><td><strong>Series A</strong></td><td><strong>2024年12月13日</strong></td><td><strong>$250M</strong></td><td><strong>~$2.0B(部分来源 $2.28–2.35B)</strong></td><td><strong>AMD Ventures</strong>(战略领投)</td><td>OSS Capital、PagsGroup、Samsung NEXT、Breyer Capital、Automattic、Safar Partners、Capgemini 等</td><td><a href="https://www.reuters.com/technology/liquid-ai-closes-250-mln-early-stage-funding-round-led-by-amd-2024-12-13/" target="_blank" rel="noopener">Reuters</a></td></tr><tr><td><strong>潜在新一轮(传闻)</strong></td><td>2025(传闻)</td><td>传闻拟融 ~$300M</td><td>传闻 ~$3.7B</td><td>未确认</td><td>Facebook 群组流出传闻,未经官方证实</td><td><a href="https://www.facebook.com/groups/595424764221375/posts/1962231784207326/" target="_blank" rel="noopener">Facebook 传闻帖</a></td></tr></tbody></table></div>
+<p><strong>⚠️ 重要数据校正</strong>:任务包中将 $250M / $2B 归于「2025 战略融资」。<strong>经多源(Reuters、TechCrunch、Liquid 官方博客)核实,该轮实际为 2024 年 12 月 13 日完成的 Series A,由 AMD Ventures 领投</strong>。2025 年是否另有战略轮,公开一手来源未确认;存在 Facebook 传闻(拟 $300M@$3.7B),但置信度低。本报告以核实版本为准。</p>
+<p><strong>累计融资合计</strong>:$5.6M(SAFE)+ $37.6M(Seed)+ $250M(Series A)≈ <strong>$293M</strong>(与 Forge Global 的 $293.1M、Tracxn 的 $297M 口径一致,差异来自 SAFE 是否计入)。</p>
+<p><strong>投资方阵营解读</strong>:</p>
+<ul><li><strong>芯片方</strong>:AMD(领投)、Samsung NEXT、Qualcomm(通过 G42 间接)——典型的「硬件资本押注软件生态以卖芯片」。</li><li><strong>开源/平台方</strong>:OSS Capital(开源商业专家 Joseph Jacks)、Automattic(WordPress)、Breyer Capital——押注开源权重商业化。</li><li><strong>产业/金融方</strong>:PagsGroup(Pagliuca)、Capgemini(咨询/集成渠道)、Safar Partners(MIT 校友基金)。</li><li><strong>天使</strong>:Tom Preston-Werner、Naval Ravikant——硅谷顶端人脉背书。</li></ul>
+<p>来源:<a href="https://www.reuters.com/technology/liquid-ai-closes-250-mln-early-stage-funding-round-led-by-amd-2024-12-13/" target="_blank" rel="noopener">Reuters</a>、<a href="https://www.liquid.ai/blog/we-raised-250m-to-scale-capable-and-efficient-general-purpose-ai" target="_blank" rel="noopener">Liquid AI Blog – We raised $250M</a>、<a href="https://techcrunch.com/2024/12/20/heres-the-full-list-of-49-us-ai-startups-that-have-raised-100m-or-more-in-2024/" target="_blank" rel="noopener">TechCrunch – 49 US AI startups $100M+ in 2024</a>、<a href="https://www.alleywatch.com/2025/01/us-startup-funding-top-largest-december-2024-vc/" target="_blank" rel="noopener">AlleyWatch – Dec 2024 largest rounds</a></p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司全称</td><td class="kv-val">Liquid AI, Inc.</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">美国马萨诸塞州波士顿 / Cambridge(MIT 周边)</td></tr><tr><td class="kv-key">成立</td><td class="kv-val">2023 年(早期 2023 年完成法人设立,由 OSS Capital 作为 founding lead seed investor 介入)</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Ramin Hasani(CEO)、Mathias Lechner、Alexander Amini、Daniela Rus(MIT CSAIL 主任)</td></tr><tr><td class="kv-key">学术出身</td><td class="kv-val">MIT CSAIL(计算机科学与人工智能实验室)+ TU Wien / IST Austria</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">Liquid Foundation Models(LFM)系列:LFM-1B / 3B / 7B / 13B / 40B;LFM2 系列(350M / 450M / 800M / 1.2B);LFM2.5 系列(含 LFM2.5-8B-A1B、LFM2.5-1.2B-Thinking)</td></tr><tr><td class="kv-key">定位</td><td class="kv-val">"General-purpose AI models built from first principles"——基于动力系统(dynamical systems)而非 Transformer 的生成式基础模型</td></tr><tr><td class="kv-key">累计融资</td><td class="kv-val">约 $293–297M(Seed $37.6M + Series A $250M,另含早期 SAFE $5.6M@$56M cap)</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">约 $2.0–2.35B(Series A,2024年12月)</td></tr><tr><td class="kv-key">员工规模</td><td class="kv-val">Hugging Face 组织页显示约 88 名成员(含合作者),实际全职约数十人量级(公开口径未精确披露)</td></tr><tr><td class="kv-key">旗舰合作伙伴</td><td class="kv-val">Mercedes-Benz、Shopify、G42、AMD、Qualcomm、Insilico Medicine、Unsloth、Ollama</td></tr></tbody></table></div>
+<p><strong>一句话画像</strong>:这是一家「学术血统极正 + 架构路线极反主流 + 商业落地极务实」的组合——创始人团队是 liquid neural networks 这一学术方向的真正发明者(2021 AAAI 论文 <em>Liquid Time-constant Networks</em>),但商业上选择了一条与 OpenAI/Anthropic 完全相反的「轻量化、端侧、私有部署」路径。</p>
+<p>来源:<a href="https://www.csail.mit.edu/person/ramin-hasani" target="_blank" rel="noopener">MIT CSAIL – Ramin Hasani</a>、<a href="https://oss.capital/portfolio/liquid-ai/" target="_blank" rel="noopener">OSS Capital Portfolio</a>、<a href="https://www.reuters.com/technology/liquid-ai-closes-250-mln-early-stage-funding-round-led-by-amd-2024-12-13/" target="_blank" rel="noopener">Reuters</a>、<a href="https://huggingface.co/LiquidAI" target="_blank" rel="noopener">Hugging Face – LiquidAI</a></p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<p>Liquid AI 的商业模式是其最具差异化、也最值得一级市场理解的部分。<strong>它刻意回避了 per-token metering(按调用量计费)的云 API 模式,转而走「开源权重 + 商业 license 阈值 + OEM/on-prem 部署服务」三层结构。</strong></p>
+<h3 class="subsection">4.1 模型授权:LFM Open License v1.0</h3>
+<ul><li><strong>License 名称</strong>:LFM Open License v1.0(自研许可,<strong>非</strong> Apache 2.0,也非严格意义的 OSI 开源)。</li><li><strong>核心条款</strong>:模型权重<strong>免费开放</strong>(open weights),<strong>含商用权利</strong>,但设有<strong>年营收门槛</strong>——</li><li>当使用方(企业/实体)年营收 <strong>< $10M</strong> 时,可<strong>免费商用</strong>;</li><li>当年营收 <strong>≥ $10M</strong> 时,必须另行与 Liquid AI 签署<strong>商业 license</strong>。</li><li><strong>严格性说明</strong>:因设有「营收门槛 + 使用规模条件」,该 license 在 OSI 严格定义下属于 <strong>open weights(开放权重)而非 open source(开放源代码)</strong>。这一点与 Meta Llama 系列的「Llama Community License(>700M MAU 需授权)」逻辑类似,但门槛维度不同(营收 vs. 用户数)。</li></ul>
+<p>来源:<a href="https://www.liquid.ai/lfm-license" target="_blank" rel="noopener">Liquid AI – LFM License</a>、<a href="https://docs.liquid.ai/lfm/help/model-license" target="_blank" rel="noopener">Liquid Docs – Model License</a>、<a href="https://huggingface.co/LiquidAI/LFM2-350M/blob/main/LICENSE" target="_blank" rel="noopener">HuggingFace LICENSE 文件</a>、<a href="https://www.liquid.ai/pricing" target="_blank" rel="noopener">Liquid AI Pricing</a></p>
+<h3 class="subsection">4.2 三层收入结构</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>层级</th><th>模式</th><th>典型客户</th><th>计费逻辑</th></tr></thead><tbody><tr><td><strong>① 开源采用(免费/获客层)</strong></td><td>权重免费下载、社区扩散</td><td>开发者、初创公司(<$10M ARR)、Ollama / Unsloth 等推理框架集成</td><td>0 元;换取生态势能与 Hugging Face 下载量(已超 100 万/周)</td></tr><tr><td><strong>② 商业 License + 企业支持</strong></td><td>年营收 >$10M 客户需购买商业授权,含 SLA、安全审计、合规支持</td><td>中大型企业、受监管行业</td><td>按 license + 支持等级订阅(具体价格未公开)</td></tr><tr><td><strong>③ OEM / On-prem / 边缘部署服务</strong></td><td>为芯片厂商、车企、运营商做模型定制、量化、硬件适配、私有化部署</td><td>Mercedes-Benz、G42、AMD、Qualcomm</td><td>项目制 + 部署规模/设备数 + 优化服务费</td></tr></tbody></table></div>
+<p><strong>关键认知</strong>:Liquid <strong>不卖 API tokens</strong>,这与 OpenAI / Anthropic / Cohere 的收入模型根本不同。它的收入锚定的是「<strong>部署规模与硬件渗透</strong>」——这正是 AMD、Qualcomm、Samsung NEXT 这类芯片/设备生态资本深度介入的原因:<strong>Liquid 模型越小越快,芯片卖得越多</strong>。这种「软件为硬件出货量铺路」的结构,使其在估值逻辑上更接近「端侧 AI IP 授权商」而非「SaaS API 公司」。</p>
+<h3 class="subsection">4.3 旗舰合作伙伴落地情况</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>合作伙伴</th><th>公告时间</th><th>内容</th><th>战略意义</th></tr></thead><tbody><tr><td><strong>Mercedes-Benz</strong></td><td>2026年4月(Repairer Driven News 报道日期)/ 多年期</td><td>多年期合作,将 LFM 嵌入奔驰北美车型的<strong>车载端侧智能</strong>(下一代端到端语音助手、车载服务);模型运行于<strong>车辆已有的硬件</strong>,强调「fast, private, sovereign」</td><td>证明端侧推理可行性 + 进入高单价 OEM 渠道</td></tr><tr><td><strong>Shopify</strong></td><td>2025年11月13日</td><td>多年期合作,将<strong><20ms 延迟</strong>的 LFM 引入 Shopify 核心商务体验</td><td>证明「亚 20ms 端到端推理」可商用,锁定电商低延迟场景</td></tr><tr><td><strong>G42</strong></td><td>2025年6月17日(BusinessWire)</td><td>联合开发并部署<strong>私有、本地、高效的生成式 AI</strong>,覆盖中东(MENA)起步的企业级市场</td><td>进入主权 AI / 私有部署蓝海,G42 提供 GCC 地缘通道</td></tr><tr><td><strong>AMD</strong></td><td>战略投资方 + 技术合作</td><td>AMD Ventures 领投 Series A;LFM 针对 AMD Instinct / Ryzen / NPU 优化</td><td>端侧/数据中心双线绑定 AMD 硬件</td></tr><tr><td><strong>Qualcomm</strong></td><td>通过 G42 入驻 Qualcomm AI Hub</td><td>LFM 经 G42 渠道进入 Qualcomm 边缘芯片部署生态</td><td>Snapdragon 端侧推理的潜在落地通道</td></tr><tr><td><strong>Insilico Medicine</strong></td><td>featured partner</td><td>药物发现领域的 AI 应用(具体细节公开有限)</td><td>进入生物医药高价值垂直</td></tr><tr><td><strong>Unsloth / Ollama</strong></td><td>开源生态</td><td>LFM 权重已在 Ollama、Unsloth 等主流推理框架可用</td><td>降低开发者采用摩擦,放大下载量</td></tr></tbody></table></div>
+<p>来源:<a href="https://www.liquid.ai/press/liquid-ai-and-mercedes-benz-partner-to-scale-embedded-in-car-intelligence" target="_blank" rel="noopener">Liquid AI Press – Mercedes-Benz</a>、<a href="https://media.mbusa.com/releases/mercedes-benz-and-liquid-ai-partner-to-scale-embedded-in-car-intelligence-in-north-america" target="_blank" rel="noopener">Mercedes-Benz USA Media</a>、<a href="https://www.safar.partners/ai-it-robotics/liquid-ai-announces-multi-year-partnership-with-shopify-to-bring-sub-20ms-foundation-models-to-core-commerce-experiences/" target="_blank" rel="noopener">Safar Partners – Shopify</a>、<a href="https://www.businesswire.com/news/home/20250617744482/en/ADDING-MULTIMEDIA-G42-and-Liquid-AI-Partner-to-Deliver-Private-Local-and-Efficient-AI-Solutions-to-Enterprises-at-Scale" target="_blank" rel="noopener">BusinessWire – G42</a>、<a href="https://aihub.qualcomm.com/model-makers/g42" target="_blank" rel="noopener">Qualcomm AI Hub – G42</a></p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术(LFM 架构创新)</h2>
+<h3 class="subsection">5.1 学术根基:Liquid Neural Networks</h3>
+<p>LFM 的技术源头是创始团队在 MIT CSAIL 的 <strong>liquid time-constant networks(LTC)</strong> 与 <strong>closed-form continuous-time neural networks(CfC)</strong> 研究:</p>
+<ul><li><strong>LTC(2021, AAAI)</strong>:<em>Liquid Time-constant Networks</em>——Hasani、Lechner、Amini、Rus、Grosu。受线虫(C. elegans)神经系统启发,用<strong>连续时间微分方程</strong>定义神经元动态,网络规模可极小(曾用 19 个神经元实现无人机端到端驾驶)且具备<strong>因果性、可解释性、对扰动鲁棒</strong>的特性。</li><li><strong>CfC(2022, Nature Machine Intelligence)</strong>:<em>Closed-form continuous-time neural networks</em>——将 LTC 的 ODE 求解封闭化,大幅降低推理计算量,使连续时间网络可在毫秒级延迟下运行。</li><li><strong>Hyena Hierarchy(2023)</strong>:与 Stanford / Together AI 团队同期工作相关,提出用<strong>长卷积 + 门控(hyena operator)</strong>替代注意力机制,实现对长序列的<strong>亚二次复杂度</strong>建模。</li></ul>
+<p>LFM 即把上述三股学术脉络(LTC/CfC 的连续时间动态 + Hyena 的线性/卷积算子 + 现代 MoE 路由)<strong>工业化</strong>的产物。</p>
+<p>来源:<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16936" target="_blank" rel="noopener">AAAI – Liquid Time-constant Networks</a>、<a href="https://arxiv.org/abs/2006.04439" target="_blank" rel="noopener">arXiv 2006.04439</a>、<a href="https://www.nature.com/articles/s42256-022-00556-7" target="_blank" rel="noopener">Nature Machine Intelligence – CfC</a>、<a href="https://news.mit.edu/2022/solving-brain-dynamics-gives-rise-flexible-machine-learning-models-1115" target="_blank" rel="noopener">MIT News 2022</a>、<a href="https://www.turingpost.com/p/liquidhyena" target="_blank" rel="noopener">Turing Post – LFMs &amp; Hyena Edge</a></p>
+<h3 class="subsection">5.2 LFM 架构:非 Transformer 的混合体</h3>
+<p>LFM <strong>不是单一架构</strong>,而是<strong>混合架构(hybrid)</strong>,核心组件包括:</p>
+<ol><li><strong>Hyena / 卷积算子(attention-free)</strong>:替代部分注意力层,处理长序列时复杂度为 <strong>O(N)</strong> 或 <strong>O(N log N)</strong> 而非 Transformer 的 <strong>O(N²)</strong>。</li><li><strong>选择性注意力(selective attention)</strong>:在关键层保留少量注意力,兼顾质量。</li><li><strong>Mixture of Experts(MoE)</strong>:在 LFM-40B 及 LFM2.5-8B-A1B 中使用,实现<strong>稀疏激活</strong>——总参数大但<strong>激活参数小</strong>(LFM2.5-8B-A1B 总参 8B、激活约 1B,故命名 "A1B"),显著降低推理成本。</li><li><strong>动力系统骨干(dynamical systems backbone)</strong>:继承 LTC/CfC 的连续时间动态特性,使模型对长程依赖与扰动更具鲁棒性。</li></ol>
+<h3 class="subsection">5.3 模型家族(LFM / LFM2 / LFM2.5)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>系列</th><th>代表模型</th><th>参数</th><th>上下文</th><th>定位</th></tr></thead><tbody><tr><td><strong>LFM(初代,2024年8月)</strong></td><td>LFM-1B / 3B / 7B / 13B / 40B(MoE)</td><td>1B–40B</td><td>32K</td><td>首批生成式 LFM,对标同规模 Llama / Mistral</td></tr><tr><td><strong>LFM2</strong></td><td>LFM2-350M / 450M / 800M / 1.2B</td><td>350M–1.2B</td><td>—</td><td>纯端侧小型模型,主打「quality + speed + memory efficiency」</td></tr><tr><td><strong>LFM2.5</strong></td><td>LFM2.5-1.2B-Thinking、LFM2.5-8B-A1B</td><td>1.2B–8B</td><td><strong>128K</strong></td><td>最新一代,8B-A1B 为 on-device MoE,支持 128K 上下文 + 工具调用;<1GB 可塞进手机</td></tr><tr><td><strong>Hyena Edge</strong></td><td>—</td><td>小型</td><td>—</td><td>专为移动/边缘设计的纯 Hyena 变体</td></tr></tbody></table></div>
+<blockquote><strong>关于「300+ variants」的说明</strong>:任务包中提及「300+ variants」。公开资料中 Liquid AI 官方模型库(liquid.ai/models)展示了针对不同语言(含 LFM2.5-1.2B-JP 日语版)、不同硬件、不同量化版本的多个变体,但「300+」这一具体数字在搜索的官方一手来源中<strong>未能精确证实</strong>,可能指内部/定制变体总数。<strong>标注为待核实数据缺口。</strong></blockquote>
+<h3 class="subsection">5.4 核心技术优势(官方宣称 + 第三方验证)</h3>
+<ol><li><strong>更小的内存占用</strong>:由于不用(或少用)注意力,LFM 的 <strong>KV cache 显著小于同规模 Transformer</strong>(Transformer 在长上下文下 KV cache 线性膨胀,LFM 因卷积/递归结构而受控)。官方称在 32K–128K 长上下文下,LFM-7B 的显存占用可低于 Llama-3-8B 数倍。</li><li><strong>更快的推理</strong>:同等质量下吞吐更高、延迟更低(Shopify 案例中的 <20ms 端到端)。</li><li><strong>长上下文原生支持</strong>:LFM2.5 支持 <strong>128K context</strong>,且因架构特性,长上下文的边际成本远低于 Transformer。</li><li><strong>端侧可部署</strong>:LFM2.5-1.2B-Thinking 可在 <strong><1GB</strong> 手机内存中运行推理模型;LFM2-350M 等可跑在 MCU 级硬件。</li></ol>
+<p>来源:<a href="https://www.liquid.ai/blog/liquid-foundation-models-our-first-series-of-generative-ai-models" target="_blank" rel="noopener">Liquid AI Blog – LFM 首发系列</a>、<a href="https://www.liquid.ai/blog/lfm2-5-8b-a1b" target="_blank" rel="noopener">Liquid AI Blog – LFM2.5-8B-A1B</a>、<a href="https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai" target="_blank" rel="noopener">Liquid AI Blog – Introducing LFM2.5</a>、<a href="https://arxiv.org/html/2511.23404v1" target="_blank" rel="noopener">LFM2 Technical Report – arXiv 2511.23404</a>、<a href="https://recipes.vllm.ai/LiquidAI/LFM2.5-8B-A1B" target="_blank" rel="noopener">vLLM Recipes</a>、<a href="https://www.liquid.ai/blog/lfm2-5-1-2b-thinking-on-device-reasoning-under-1gb" target="_blank" rel="noopener">Liquid AI – LFM2.5-1.2B-Thinking</a></p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<h3 class="subsection">6.1 已披露运营指标</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数值</th><th>来源</th></tr></thead><tbody><tr><td>Hugging Face 周下载量</td><td><strong>>1,000,000 / 周</strong></td><td><a href="https://www.linkedin.com/posts/dukecapitalpartners_we-are-thrilled-to-share-that-our-portfolio-activity-7420474300828323840-kcwF" target="_blank" rel="noopener">Duke Capital Partners LinkedIn</a></td></tr><tr><td>Hugging Face 组织成员</td><td>约 88(含合作者,非全部全职)</td><td><a href="https://huggingface.co/LiquidAI" target="_blank" rel="noopener">HuggingFace – LiquidAI</a></td></tr><tr><td>2025 年 ARR(第三方估算)</td><td>约 <strong>$13.2M</strong></td><td><a href="https://getlatka.com/companies/liquid.ai" target="_blank" rel="noopener">GetLatka</a>(第三方估算,非官方,置信度低)</td></tr><tr><td>估值(最近一轮)</td><td>$2.0–2.35B</td><td>多源</td></tr><tr><td>累计融资</td><td>$293–297M</td><td><a href="https://tracxn.com/d/companies/liquidai/__WcgGMTavFS-PIXLKpe46XDv3j7Q4kwlkc7Hd-zvaYko" target="_blank" rel="noopener">Tracxn</a>、<a href="https://forgeglobal.com/liquid-ai_ipo/" target="_blank" rel="noopener">Forge Global</a></td></tr></tbody></table></div>
+<p><strong>注</strong>:$13.2M ARR 为 GetLatka 第三方爬取估算,存在高不确定性;官方未披露 ARR。鉴于 Liquid 的 license + OEM 模式,真实收入可能在企业 license + 项目制收入之间,需谨慎对待该数字。</p>
+<h3 class="subsection">6.2 商业化节奏判断</h3>
+<ul><li><strong>2023</strong>:成立 + Seed,纯研发期,无显著收入。</li><li><strong>2024</strong>:首批 LFM 发布(8月);12 月完成 $250M Series A,进入商业化加速期。</li><li><strong>2025</strong>:连续签署 Shopify(11月)、G42(6月)等多年期企业合同;LFM2 / LFM2.5 发布;Hugging Face 下载量突破百万/周。</li><li><strong>2026</strong>(截至 7 月):Mercedes-Benz 多年期合作正式落地报道(4 月);端侧推理商业化进入兑现期。</li></ul>
+<p><strong>定性判断</strong>:公司处于「<strong>签约验证期 → 收入兑现期</strong>」的过渡阶段。企业多年期合同已签,但 ARR 兑现节奏取决于 OEM 项目交付周期(车企项目通常 18–36 个月才能反映在收入上)。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性(端侧推理成本)</h2>
+<p>Liquid AI 的单位经济性逻辑与传统 LLM API 公司<strong>根本不同</strong>,理解这一点是评估其估值的关键。</p>
+<h3 class="subsection">7.1 成本结构对比(Transformer vs LFM,长上下文推理)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>维度</th><th>Transformer(如 Llama-3-8B)</th><th>LFM(如 LFM-7B / LFM2.5-8B-A1B)</th><th>差异来源</th></tr></thead><tbody><tr><td><strong>KV cache 增长</strong></td><td>O(N)(随上下文线性膨胀,128K 时巨大)</td><td><strong>显著更小</strong>(卷积/递归结构,固定状态)</td><td>架构差异</td></tr><tr><td><strong>注意力计算</strong></td><td>O(N²)</td><td>O(N) / O(N log N)(Hyena 卷积)</td><td>长序列优势</td></tr><tr><td><strong>激活参数(MoE)</strong></td><td>全参激活</td><td>LFM2.5-8B-A1B 仅激活 ~1B</td><td>MoE 稀疏</td></tr><tr><td><strong>128K 上下文显存</strong></td><td>高(常需多卡)</td><td>低(可单卡/端侧)</td><td>实测为 LFM 主打卖点</td></tr></tbody></table></div>
+<blockquote><strong>量化案例</strong>(官方宣称):LFM-7B 在 32K 上下文下的显存占用据称比 Llama-3-8B 低数倍,使「单 GPU 跑长上下文」成为可能;LFM2.5-1.2B-Thinking 可在 <1GB 内存运行,意味着可塞进主流手机甚至更小的边缘设备。</blockquote>
+<p>来源:<a href="https://www.liquid.ai/blog/liquid-foundation-models-our-first-series-of-generative-ai-models" target="_blank" rel="noopener">Liquid AI Blog – LFM 首发</a>、<a href="https://www.turingpost.com/p/liquidhyena" target="_blank" rel="noopener">Turing Post</a></p>
+<h3 class="subsection">7.2 商业单位经济性</h3>
+<ul><li><strong>对客户</strong>:LFM 的价值主张是「<strong>同样的钱,更长的上下文 / 更低的延迟 / 更私有的部署</strong>」。对车企、电商、医疗等<strong>不能把数据发云</strong>的场景,LFM 的 on-prem 部署消除 per-token 云成本,把变动成本变为固定 license 费。</li><li><strong>对 Liquid</strong>:</li><li>收入 = license 费(年订阅)+ OEM 项目费(一次性 + 维护)+ 部署优化服务费;</li><li>边际成本主要为工程人力(模型适配、量化、硬件调优),<strong>无大规模 GPU 推理集群折旧</strong>(因为它不在云端跑 per-token 服务);</li><li>毛利结构理论上高于云 API 厂商(后者需承担 GPU 折旧),但规模化受限于「能签多少 OEM/企业大单」。</li></ul>
+<h3 class="subsection">7.3 与 AMD/Qualcomm 的协同经济学</h3>
+<p>AMD 领投的本质:<strong>Liquid 模型让 AMD 的消费级/边缘芯片(NPU、Ryzen AI、Instinct)能跑得动有竞争力的 LLM</strong>,从而提升 AMD 硬件的 AI 卖点。这是一种「<strong>软件补贴硬件</strong>」的反向飞轮——Liquid 的 license 收入对 AMD 是零头,但 AMD 多卖出的芯片价值远超投资额。同理 Samsung NEXT、Qualcomm 生态。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 直接竞争:非 Transformer 架构阵营</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>对手</th><th>架构</th><th>代表模型</th><th>资金/背景</th><th>与 LFM 差异</th></tr></thead><tbody><tr><td><strong>RWKV</strong></td><td>线性注意力 RNN</td><td>RWKV-x / Eagle</td><td>开源社区驱动(开源基金会模式,商业化弱)</td><td>RWKV 更纯社区,商业化远弱于 LFM;LFM 有 MoE + 企业渠道</td></tr><tr><td><strong>Mamba / S4 团队(Princeton/Stanford)</strong></td><td>State Space Models</td><td>Mamba、Mamba-2</td><td>学术衍生,商业化由 Together AI / Ai2 推动</td><td>Mamba 学术影响力强,但无单一公司主导商业化;LFM 有公司实体</td></tr><tr><td><strong>Zyphra</strong></td><td>Zamba(Mamba+attention 混合)</td><td>Zamba2</td><td>早期创业公司</td><td>同为混合架构,但融资规模、客户、知名度均远小于 LFM</td></tr><tr><td><strong>xLSTM(Sepp Hochreiter 团队)</strong></td><td>Extended LSTM</td><td>NXAI 模型</td><td>学术</td><td>思路类似(复活 RNN 血统),商业化初期</td></tr><tr><td><strong>Jamba(AI21 Labs)</strong></td><td>Mamba+Transformer 混合</td><td>Jamba</td><td>AI21(已融数亿)</td><td>商业化更成熟,但 AI21 主线仍是 Transformer API</td></tr></tbody></table></div>
+<p><strong>结论</strong>:在「非 Transformer 商业化」这一细分赛道,Liquid AI 是<strong>资金最雄厚、客户最实、生态绑定最深</strong>的玩家。RWKV/Mamba 学术声望高但商业实体弱;Zyphra/Jamba 体量更小或路线更杂。</p>
+<h3 class="subsection">8.2 间接竞争:主流 Transformer 阵营(真正的威胁)</h3>
+<ul><li><strong>Meta Llama 系列</strong>:开源权重王者,Llama 3/4 下载量与生态碾压,且 license 门槛(MAU)与 LFM(营收)不同。<strong>最大威胁</strong>——一旦 Llama 在端侧/小模型上接近 LFM 的效率,LFM 的差异化被侵蚀。</li><li><strong>Qwen(阿里)、DeepSeek、Mistral</strong>:小模型端侧赛道(如 Qwen2.5-1.5B、DeepSeek 小模型)直接与 LFM2 竞争,且部分采用 Apache 2.0(无营收门槛),对开发者更友好。</li><li><strong>Google Gemma、Microsoft Phi</strong>:大厂小模型,渠道与品牌优势。</li><li><strong>云端 API 厂商(OpenAI/Anthropic/Cohere)</strong>:非直接竞争(Liquid 不卖云 API),但在「客户预算争夺」上间接竞争。</li></ul>
+<h3 class="subsection">8.3 竞争态势判断</h3>
+<p>LFM 的护城河<strong>不在「架构本身」</strong>(Hyena/Mamba 思路公开,任何人可复现),而在于:</p>
+<ol><li><strong>创始团队对该架构的世界级研究深度</strong>(LTC/CfC 原作者,迭代速度快);</li><li><strong>OEM/芯片生态的排他性绑定</strong>(AMD 领投、奔驰多年期、G42 中东渠道);</li><li><strong>数据 + 部署 know-how 的积累</strong>(端侧量化、硬件适配是脏活累活,先发优势明显)。</li></ol>
+<p><strong>最大风险</strong>:Transformer 阵营通过<strong>工程优化(KV cache 压缩、量化、推测解码、MoE)</strong>持续缩小效率差距,使「非 Transformer」的差异化窗口收窄。</p>
+<p>来源:<a href="https://www.latent.space/p/2024-post-transformers" target="_blank" rel="noopener">Latent Space – 2024 Post-Transformers</a>、<a href="https://failfast.ai/blog/generative-ai-architecture-comparison-2026/" target="_blank" rel="noopener">Fail Fast AI – Mamba vs Transformer vs RWKV 2026</a>、<a href="https://www.together.ai/blog/stripedhyena-7b" target="_blank" rel="noopener">Together AI – StripedHyena</a>、<a href="https://nebius.com/blog/posts/model-pre-training/transformer-alternatives-2024" target="_blank" rel="noopener">Nebius – Transformer Alternatives 2024</a></p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景(MIT CSAIL 学术血统)</h2>
+<h3 class="subsection">9.1 创始四人组</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>姓名</th><th>角色</th><th>学术背景</th><th>关键贡献</th></tr></thead><tbody><tr><td><strong>Ramin Hasani</strong></td><td>联合创始人 / CEO</td><td>MIT CSAIL Research Affiliate + TU Wien</td><td>LTC/CfC 一作;liquid neural networks 命名人;Google Scholar 高引</td></tr><tr><td><strong>Mathias Lechner</strong></td><td>联合创始人</td><td>IST Austria(现 Kyushu Univ.)</td><td>LTC/CfC 共同一作;2022 HPC Innovation Excellence Award(与 Hasani 共获)</td></tr><tr><td><strong>Alexander Amini</strong></td><td>联合创始人</td><td>MIT CSAIL(博士/博士后)</td><td>LTC/CfC 共同作者;MIT 6.S191 深度学习课程核心讲师</td></tr><tr><td><strong>Daniela Rus</strong></td><td>联合创始人 / 学术 guardian</td><td><strong>MIT CSAIL 主任(Director)</strong>、Andrew & Erna Viterbi 教授</td><td>ACM Fellow、AAAI Fellow、MacArthur Genius;MIT 机器人与 AI 领域最具影响力学者之一</td></tr></tbody></table></div>
+<h3 class="subsection">9.2 学术血统的含金量</h3>
+<ul><li><strong>原创性</strong>:团队是 liquid time-constant networks 这一方向的<strong>真正发明者</strong>(2021 AAAI、2022 Nature MI),而非跟随者。</li><li><strong>跨学科</strong>:LTC 灵感来自线虫神经科学,兼具<strong>连续数学(ODE)、神经科学、机器人、自动驾驶</strong>背景——这种组合在 AI 创业团队中极为罕见。</li><li><strong>导师背书</strong>:Daniela Rus 作为 MIT CSAIL 主任,其署名为公司在学术界与政策界提供顶级信用。</li><li><strong>早期验证</strong>:liquid neural networks 的<strong>极简网络</strong>(19 神经元无人机驾驶)在 2021–2022 年引发广泛关注,证明该路线「能用极小模型解决真实控制问题」——这正是 LFM 「小而强」叙事的学术源头。</li></ul>
+<h3 class="subsection">9.3 团队规模与组织</h3>
+<ul><li>Hugging Face 组织页显示约 88 名成员(含研究合作者,非全部全职员工)。</li><li>实际全职规模据公开口径约数十人量级(任务包估计 30–50,合理但未经官方确认)。</li><li><strong>结构特点</strong>:重研究、重工程,轻销售——典型的「学者型创业公司」,这也是其商业模式选择「license + OEM」而非「自建销售重推云 API」的内在原因。</li></ul>
+<p>来源:<a href="https://www.csail.mit.edu/person/ramin-hasani" target="_blank" rel="noopener">MIT CSAIL – Ramin Hasani</a>、<a href="https://mlech26l.github.io/" target="_blank" rel="noopener">Mathias Lechner 个人页</a>、<a href="https://news.mit.edu/2022/solving-brain-dynamics-gives-rise-flexible-machine-learning-models-1115" target="_blank" rel="noopener">MIT News 2022</a>、<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16936" target="_blank" rel="noopener">AAAI LTC</a>、<a href="https://www.linkedin.com/posts/josephjacks_huge-day-for-liquid-ai-congratulations-activity-7246538508608176128-Y2J5" target="_blank" rel="noopener">Joseph Jacks LinkedIn</a>、<a href="https://huggingface.co/LiquidAI" target="_blank" rel="noopener">HuggingFace – LiquidAI</a></p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>架构差异化窗口收窄(最大风险)</strong>:Transformer 阵营通过 KV cache 压缩、量化(GPTQ/AWQ)、推测解码(speculative decoding)、MoE、ring attention 等工程手段持续提升长上下文与端侧效率。一旦差距 <2x,「非 Transformer」的采用理由大幅减弱。</li><li><strong>生态惯性</strong>:Hugging Face、PyTorch、vLLM、TensorRT-LLM 等整个推理栈围绕 Transformer 优化;LFM 需维护自己的 kernel 与推理后端,工程负担重、第三方支持滞后。</li><li><strong>收入兑现不确定</strong>:OEM/企业 license 模式签约周期长(车企 18–36 个月)、单笔大但波动高;GetLatka 估算的 $13.2M ARR 相对 $2B+ 估值,<strong>估值/收入倍数极高</strong>(>150x),依赖未来兑现。</li><li><strong>人才稀释风险</strong>:学者型创始团队(Daniela Rus 仍为 MIT CSAIL 主任)在学术与管理双重负荷下,公司运营深度依赖少数核心人员。</li><li><strong>地缘与监管</strong>:G42 合作涉及中东/主权 AI,若美中/美-中东科技管制升级,可能影响合作落地;同时欧盟 AI Act、美国出口管制对端侧模型分发的影响尚不明朗。</li><li><strong>License 合规风险</strong>:LFM Open License 的「$10M 营收门槛」法律可执行性与社区接受度参差,部分开发者可能因「非纯开源」而倾向 Llama / Qwen / Mistral(Apache)。</li><li><strong>大厂直接下场</strong>:若 Google(MobileLM)、Apple(端侧 Foundation Model)、Meta(Llama Edge)在小模型端侧认真投入,Liquid 的细分市场被挤压。</li><li><strong>「300+ variants」与部分运营数据未经官方证实</strong>:可能导致对该公司的规模认知偏差。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="character_ai.html">Character.AI</a><a class="sib-chip" href="clay.html">Clay</a><a class="sib-chip" href="cohere.html">Cohere</a><a class="sib-chip" href="decagon_ai.html">Decagon AI</a><a class="sib-chip" href="deepseek_深度求索.html">DeepSeek</a><a class="sib-chip" href="genspark.html">Genspark</a></div>
+</div>
+</body></html>

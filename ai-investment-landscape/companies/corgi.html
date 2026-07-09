@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corgi · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 行业 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">行业 AI</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 San Francisco</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.corgi.insure/" target="_blank" rel="noopener">Corgi</a></h1>
+    <div class="dc-oneliner">Corgi 是 AI 应用从软件工具进入受监管金融产品生产的典型样本。它不是给保险公司卖 underwriting copilot，而是自己做 AI-native、full-stack insurance carrier，面向科技创业公司销售商业保险。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Corgi 是 AI 应用从软件工具进入受监管金融产品生产的典型样本。它不是给保险公司卖 underwriting copilot，而是自己做 AI-native、full-stack insurance carrier，面向科技创业公司销售商业保险。</strong></p>
+<p>Corgi 2026 年 1 月披露 Seed + Series A 合计 $108M，估值 $630M；Business Insider 2026 年 6 月报道其 2026 年 5 月完成 Series B 后估值 $1.3B，并在三周后完成 Series B1，估值 $2.6B。投资关键是它能否在快速增长的同时守住承保纪律、loss ratio、再保险能力和监管合规，而不是把高增长 SaaS 估值套在实际承担保险风险的业务上。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/交易方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2024</td><td>公司成立 / YC S24</td><td>-</td><td>-</td><td>Nico Laqua、Emily Yuan；Y Combinator</td><td>创立并进入 YC S24，面向 startup insurance 场景</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2025-07</td><td>Licensed carrier approval 相关报道</td><td>-</td><td>-</td><td>监管/牌照相关</td><td>公开资料称获得 licensed carrier 相关批准；具体牌照主体和州别需继续核验</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2026-01</td><td>Seed + Series A / 出 stealth</td><td>$108M</td><td>$630M</td><td>Y Combinator、Kindred Ventures、Oliver Jung、Leblon Capital、Contrary、Glade Brook Capital 等 co-led；SV Angel、Alumni Ventures 等参与</td><td>官方口径称 build future of financial infrastructure，并推出 technology companies insurance</td><td><a href="https://www.linkedin.com/posts/nico-laqua-302b17233_today-corgi-is-coming-out-of-stealth-with-activity-7415090932015968256-KurN" target="_blank" rel="noopener">Nico Laqua LinkedIn</a></td></tr><tr><td>2026-05</td><td>Series B</td><td>未披露</td><td>$1.3B</td><td>未披露</td><td>Business Insider 报道称 Corgi became a unicorn in May, raising its Series B at a $1.3B valuation</td><td><a href="https://www.businessinsider.com/corgi-founder-explains-work-culture-7-days-week-sleeps-office-2026-6" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2026-05/06</td><td>Series B1</td><td>未披露</td><td>$2.6B</td><td>未披露</td><td>Business Insider 报道称 Series B1 在 Series B 三周后完成，估值 $2.6B；融资金额未披露</td><td><a href="https://www.businessinsider.com/corgi-founder-explains-work-culture-7-days-week-sleeps-office-2026-6" target="_blank" rel="noopener">Business Insider</a></td></tr></tbody></table></div>
+<p>融资观察：</p>
+<ul><li>2026-01 的 $108M / $630M 已经远高于普通 seed + A 应用公司，反映投资人把它看成有监管/资本/金融产品属性的平台，而不是单点 SaaS。</li><li>2026-05/06 的 $1.3B 到 $2.6B 估值跳升很快，但公开资料未披露融资金额和具体条款，因此要警惕 preferred terms、结构化条款或小额标价轮对估值的放大。</li><li>Corgi 的估值质量必须用保险指标验证：premium growth、loss ratio、combined ratio、risk-adjusted ROE、reinsurance terms、renewal retention，而不是只看 ARR 叙事。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Corgi</td></tr><tr><td class="kv-key">成立/推出</td><td class="kv-val">2024 年创立；YC S24；2026-01 公开出圈并披露 Seed + Series A</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Nico Laqua、Emily Yuan</td></tr><tr><td class="kv-key">总部/主体</td><td class="kv-val">美国 San Francisco；Corgi Insurance / Corgi</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">面向科技创业公司的商业保险；CGL、D&O、Tech & AI Liability、Cyber、Media、EPLI、Fiduciary、HNOA 等</td></tr><tr><td class="kv-key">所属层级</td><td class="kv-val">应用层</td></tr><tr><td class="kv-key">子赛道</td><td class="kv-val">AI-native insurance、创业公司商业保险、承保/报价/理赔工作流、金融服务 AI 应用</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">Pre-seed/Seed、Series A、Growth Stage 科技创业公司，尤其是需要快速满足企业客户合同保险要求的 AI/startup 团队</td></tr><tr><td class="kv-key">收费方式</td><td class="kv-val">保险保费 / carrier 模式；公开资料未披露单产品费率、保费规模和 loss ratio</td></tr><tr><td class="kv-key">最新融资/估值</td><td class="kv-val">2026-05/06 Series B1 报道估值 $2.6B；金额未披露</td></tr><tr><td class="kv-key">资本化状态</td><td class="kv-val">私人公司，未上市</td></tr></tbody></table></div>
+<p>Corgi 的切入点很清楚：科技创业公司在卖给大客户、签 enterprise contract、租办公室、上生产系统、处理员工和董事责任时，往往需要快速拿到保险证明和合适的保障组合。传统路径通常要经过经纪人、carrier、人工风险审核、来回补材料和多天到多周的 underwriting cycle。Corgi 把这个流程包装成面向 founder 的在线申请、快速报价、同日 bind 和 certificate of insurance 输出。</p>
+<p>从投资视角看，Corgi 有三层叙事：</p>
+<ul><li>第一层是 startup insurance distribution：用 founder-to-founder 的品牌和 YC/AI 圈层渠道获客。</li><li>第二层是 underwriting workflow automation：用 AI 和结构化数据减少人工审核、报价调整、policy servicing 和 claims handling 的摩擦。</li><li>第三层是 full-stack financial infrastructure：不是纯经纪，也不是纯软件，而是把产品设计、承保、服务和理赔管理尽量放到一个平台内。</li></ul>
+<p>第三层最关键。若 Corgi 只是快一点的保险经纪，长期会被传统经纪、insurtech 和 carrier 压价；若它能把 AI/startup 风险理解、承保资本、监管许可、再保险和分销整合起来，才有可能成为新一代垂直金融基础设施。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式</h2>
+<h3 class="subsection">4.1 收入逻辑</h3>
+<p>Corgi 的收入不是典型 SaaS seat，而是保险业务收入，核心来自保费、承保利润、服务费/费用结构以及可能的再保险安排。公开资料没有披露 written premium、earned premium、take rate、commission、loss ratio 或 combined ratio，因此目前只能从模式上拆解。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收入/经济来源</th><th>说明</th><th>投资含义</th></tr></thead><tbody><tr><td>保费</td><td>客户购买 CGL、D&O、Cyber、Tech & AI Liability 等保单</td><td>规模上限比普通垂直 SaaS 更大，但受承保资本和监管约束</td></tr><tr><td>承保利润</td><td>若赔付率和费用率低于保费收入，carrier 可获得 underwriting profit</td><td>关键不在增长，而在风险选择和定价准确性</td></tr><tr><td>服务和运营效率</td><td>AI 压缩 quote、bind、certificate、policy servicing、claims 流程</td><td>可改善 expense ratio，但不能替代风险资本</td></tr><tr><td>分销效率</td><td>面向 YC/AI/startup 圈层建立品牌，降低 CAC</td><td>早期增长可能很快，但 cohort loss 和续保更重要</td></tr></tbody></table></div>
+<h3 class="subsection">4.2 为什么创业公司保险是好入口</h3>
+<p>科技创业公司有几个特点，使其适合被 Corgi 这种产品重新包装：</p>
+<ul><li>保险需求由事件触发：融资、签大客户、租办公室、招聘、董事会、SOC2/security review、enterprise procurement。</li><li>客户愿意为速度付费：合同即将签署时，快速拿到 COI 和合适 coverage 比最低价格更重要。</li><li>风险结构变化快：AI 产品、数据、模型输出、网络安全、媒体内容、专业责任和董事责任交织，传统模板不一定贴合。</li><li>founder 圈层传播强：YC、AI founder、企业客户要求和投资人网络能形成 referral loop。</li></ul>
+<h3 class="subsection">4.3 成本和资本约束</h3>
+<p>Corgi 的成本结构与普通 AI 应用不同：</p>
+<ul><li>获客和销售：founder 社群、内容、线下空间、Corgi Cafe、客户案例、YC 网络；</li><li>承保运营：风险评估、报价、policy wording、endorsement、certificate、renewal；</li><li>理赔和合规：claims intake、claims handling、监管报备、消费者/企业客户保护要求；</li><li>保险资本：carrier capital、reinsurance、risk retention、reserve management；</li><li>AI 系统：文档解析、风险数据抽取、自动化审核、客户沟通和内部 workflow。</li></ul>
+<p>如果 Corgi 增长太快但定价不足，保险账本会在滞后期暴露问题；如果过度保守，则难以兑现“快、便宜、懂科技公司”的产品承诺。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 核心产品形态</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>功能</th><th>投资解读</th></tr></thead><tbody><tr><td>Startup insurance packages</td><td>按 Pre-seed/Seed、Series A、Growth Stage、Custom Package 组合 coverage</td><td>用生命周期包装复杂保险需求，降低 founder 认知成本</td></tr><tr><td>Self-serve quote</td><td>在线申请、分钟级报价、同日 bind</td><td>把商业保险体验做成 SaaS onboarding</td></tr><tr><td>Full-stack carrier</td><td>官网称设计并管理 underwriting、policy design、servicing、claims administration</td><td>若属实，价值链比 broker 更深，但风险也更重</td></tr><tr><td>Tech & AI Liability</td><td>覆盖技术产品或服务未按预期履约造成客户财务损失的索赔</td><td>把 AI 产品责任包装成创业公司可购买的模块</td></tr><tr><td>D&O / Cyber / CGL / EPLI 等</td><td>覆盖董事责任、网络安全、一般责任、雇佣责任等</td><td>满足融资、enterprise procurement 和运营合规</td></tr><tr><td>Same-day certificate</td><td>客户案例强调快速拿到 certificate of insurance</td><td>对签约和采购流程有直接价值</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 技术路线</h3>
+<p>Corgi 的 AI 技术更像 insurance operations stack，而不是基础模型：</p>
+<ul><li>输入端：公司基本信息、收入、融资、客户合同、产品类型、行业、风险暴露、历史 claims、财务文件；</li><li>风险建模：根据 startup stage、产品形态、客户类型、合规需求、AI liability 暴露做风险分层；</li><li>文档和流程自动化：申请表、policy review、endorsement、certificate、renewal、claims intake；</li><li>人机协同：复杂客户走 specialist demo / advisory，标准客户走 self-serve；</li><li>资本和监管层：carrier approval、承保容量、再保险、loss reserve、监管合规。</li></ul>
+<p>真正的壁垒不是“用 LLM 读表格”，而是四件事能否同时成立：</p>
+<ol><li>风险数据足够细，能比传统 carrier 更理解 AI/startup 风险；</li><li>报价足够快，但不牺牲 underwriting discipline；</li><li>客户获取足够便宜，能穿透 YC/AI founder 圈层；</li><li>赔付、再保险和监管关系跟得上增长速度。</li></ol>
+<h3 class="subsection">5.3 与传统保险流程的差异</h3>
+<p>Corgi 官网把传统 carrier 描述为 broker review、quote adjustment、manual risk audit、underwriting cycles often run multiple weeks。Corgi 的产品叙事则是 full-stack、quote in minutes、same-day bind 和 founder-built。</p>
+<p>这个差异非常适合创业公司早期购买场景，但也容易被误读。保险真正困难的部分不是前端表单，而是：</p>
+<ul><li>风险是否被准确定价；</li><li>policy wording 是否覆盖真实风险但不失控；</li><li>claims 是否能被高质量处理；</li><li>reinsurance 和 capital provider 是否持续支持；</li><li>监管审查是否接受其 AI workflow 和定价逻辑。</li></ul>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营数据</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据/口径</th><th>来源</th><th>投资解读</th></tr></thead><tbody><tr><td>Seed + Series A</td><td>$108M</td><td>Nico Laqua LinkedIn 官方披露</td><td>早期融资规模极大，说明资本市场将其视为 financial infrastructure / carrier 机会</td></tr><tr><td>2026-01 估值</td><td>$630M</td><td>Nico Laqua LinkedIn 官方披露</td><td>公开出圈时已接近独角兽</td></tr><tr><td>Series B 估值</td><td>$1.3B</td><td>Business Insider 引述 20VC / 公司口径</td><td>2026-05 已成为独角兽</td></tr><tr><td>Series B1 估值</td><td>$2.6B</td><td>Business Insider</td><td>三周后估值翻倍，显示融资市场对其增长和叙事高度认可</td></tr><tr><td>报价速度</td><td>官网称 quote in minutes；self-serve 可 same-day bind</td><td>Corgi 官网</td><td>产品体验的核心卖点</td></tr><tr><td>产品覆盖</td><td>CGL、D&O、Tech & AI Liability、Cyber、Media、EPLI、Fiduciary、HNOA 等</td><td>Corgi 官网</td><td>覆盖 startup 从早期到 growth 的常见商业保险需求</td></tr><tr><td>客户线索</td><td>Bland、Origami、AthenaHQ、Eragon、Series、Sorcerer、Intryc、Hallway、Pax、Imagine AI 等官网案例</td><td>Corgi 官网</td><td>客户画像明显偏 AI-native / startup</td></tr><tr><td>员工线索</td><td>Business Insider 报道 PitchBook 显示约 177 人</td><td>Business Insider</td><td>2024 创立后团队扩张很快，需关注费用率和运营质量</td></tr><tr><td>监管状态</td><td>公开报道称 2025 年获得 licensed carrier 相关批准</td><td>行业报道 / Wikipedia 汇编</td><td>需要继续核验具体州、牌照主体、承保范围和资本结构</td></tr></tbody></table></div>
+<p>商业化判断：</p>
+<ul><li>Corgi 的早期 go-to-market 很强，尤其能抓住 AI startup 对“快、懂、能帮我过 procurement”的需求。</li><li>客户案例里出现 Bland、AthenaHQ、Eragon、Pax 等 AI 公司，说明它正在把 AI founder 圈层变成分销渠道。</li><li>真正需要跟踪的不是客户 logo，而是 written premium、renewal rate、loss ratio、combined ratio、risk retention 和再保险容量。</li></ul>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>竞争格局</h2>
+<h3 class="subsection">7.1 直接竞品</h3>
+<p>Corgi 所处市场不是空白。创业公司商业保险和科技企业保险已有多个方向：</p>
+<ul><li>startup commercial insurance / broker：Vouch、Embroker、Founder Shield、Marsh / Aon / Gallagher startup practice；</li><li>cyber / technology risk carrier：Coalition、At-Bay、Cowbell、Resilience；</li><li>SMB / digital insurance：NEXT Insurance、Hiscox digital、The Hartford、Chubb small business；</li><li>insurance workflow AI：FurtherAI、Sixfold、Federato、Gradient AI、ZestyAI 等更偏 software / underwriting workflow 的公司。</li></ul>
+<p>Corgi 的差异是“full-stack carrier + startup brand + AI-native workflow”。它不是单纯帮 carrier 提效，也不是单纯转售第三方保单，而是试图把承保和服务链条做深。</p>
+<h3 class="subsection">7.2 为什么仍可能胜出</h3>
+<p>Corgi 有几个有利点：</p>
+<ol><li>Startup 和 AI 公司对速度非常敏感，尤其在签 enterprise contract 时。</li><li>创始团队和品牌很会抓 AI founder 文化，传播效率高。</li><li>官网产品包按融资阶段组织，比传统保险语言更接近 founder 购买心智。</li><li>Full-stack 模式如果做成，能把定价、承保、服务、claims 数据闭环。</li><li>Tech & AI Liability 模块契合新一代 AI 公司对产品责任、模型输出和客户损失的担忧。</li></ol>
+<h3 class="subsection">7.3 核心风险</h3>
+<p>最大风险是“增长速度”和“保险风险滞后暴露”之间错配：</p>
+<ul><li>保费增长当下好看，claims 可能在多个季度或多年后出现；</li><li>AI startup 客户风险新，历史 loss data 不够；</li><li>若承保条款过宽，AI liability 可能出现尾部风险；</li><li>若依赖再保险，一旦 loss experience 不佳，capacity 和 pricing 会恶化；</li><li>传统 carrier 可以模仿前端体验，但拥有更深 capital base 和 claims 经验。</li></ul>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>单位经济性与财务逻辑</h2>
+<p>Corgi 的单位经济性不能按 SaaS 简单看毛利，而要拆成保险账本和软件效率两部分。</p>
+<p>收入端：</p>
+<ul><li>gross written premium：核心规模指标，但公开未披露；</li><li>net written premium：扣除再保险后公司实际保留风险的规模；</li><li>earned premium：随时间确认的保费收入；</li><li>underwriting profit：保费减赔付和费用后的结果；</li><li>renewal and expansion：客户融资、员工增长、合同变复杂后 coverage 增加。</li></ul>
+<p>成本端：</p>
+<ul><li>losses and loss adjustment expenses：赔付和理赔处理成本；</li><li>acquisition cost：founder 圈层获客、销售、客户成功、品牌活动；</li><li>underwriting operations：风险审核、policy servicing、endorsement、certificate；</li><li>reinsurance cost：转移风险所付成本；</li><li>regulatory and compliance：牌照、报备、审计、资本要求；</li><li>AI / engineering：自动化系统、数据、模型、内部 workflow。</li></ul>
+<p>核心判断：</p>
+<ul><li>如果 Corgi 的 AI 系统只是降低 expense ratio，它仍然要面对保险行业低 margin 和资本约束。</li><li>如果 Corgi 能用更好的 startup risk data 实现更准定价和更低 adverse selection，它的价值会显著高于普通 broker。</li><li>如果高增长主要来自激进定价或条款放松，后续 loss ratio 会反噬估值。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>投资方结构</h2>
+<p>Corgi 的投资人结构偏“YC + founder/operator + growth VC + tech angels”：</p>
+<ul><li>Y Combinator：早期孵化和 co-led 线索，是 Corgi startup 分销网络的重要背书。</li><li>Kindred Ventures、Contrary、Glade Brook Capital、Leblon Capital、Oliver Jung：2026-01 官方披露的 co-led / 核心投资人。</li><li>SV Angel、Alumni Ventures、Rebel Fund、Fellows Fund、Tekedia Capital、Phosphor Capital 等：创始人 LinkedIn 披露的参与方。</li><li>多位 founder/operator angel：有利于在 AI/startup 圈层传播。</li></ul>
+<p>这类 cap table 对 Corgi 很重要，因为它的早期客户获取高度依赖创业公司网络和 founder 信任。保险产品本身复杂，若由传统保险品牌销售，startup founder 可能不愿花时间理解；但由 YC/AI 圈层品牌切入，获客摩擦会低很多。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>研究结论</h2>
+<p>Base case：Corgi 是 AI-native vertical application 里更激进的一类，不满足于做保险 workflow SaaS，而是进入 full-stack carrier。它的早期优势是速度、品牌、founder 网络和对 AI/startup 风险的叙事理解；如果能守住承保纪律，它可能成为创业公司商业保险里的新一代 infrastructure layer。</p>
+<p>Bull case：Corgi 把 startup insurance 做成默认入口，从 Seed 到 Growth Stage 伴随客户融资、员工增长、企业客户合同和全球化扩张，逐步沉淀风险数据、续保数据和 claims 数据。此时它不只是保险销售前端，而是 AI 公司和科技创业公司的 risk operating system。</p>
+<p>Bear case：Corgi 用高增长和强品牌获得高估值，但实际保险账本在 12-36 个月后暴露问题：loss ratio 上升、再保险成本提高、监管审查加强、传统 carrier 降价或扩展条款，导致其估值从 AI software multiple 回归 insurance multiple。</p>
+<p>优先跟踪指标：</p>
+<ul><li>gross written premium、earned premium、net premium retention；</li><li>loss ratio、combined ratio、reserve development；</li><li>quote-to-bind conversion、renewal rate、average premium per customer；</li><li>reinsurance terms、risk retention、capital requirement；</li><li>AI liability claims 和 exclusion 变化；</li><li>Series B/B1 的真实融资金额和条款；</li><li>监管牌照、rate filing、customer complaint 数据。</li></ul>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="bioptimus.html">Bioptimus</a><a class="sib-chip" href="commure_athelas.html">Commure</a><a class="sib-chip" href="enveda_biosciences.html">Enveda Biosciences</a><a class="sib-chip" href="evolutionaryscale.html">EvolutionaryScale</a><a class="sib-chip" href="harvey.html">Harvey</a></div>
+</div>
+</body></html>

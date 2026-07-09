@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIsphere / 爱诗科技 / PixVerse · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 多模态与内容生成</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#fef3c7;color:#b45309">多模态与内容生成</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">中国北京</span>
+    </div>
+    <h1 class="dc-title"><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere / 爱诗科技 / PixVerse</a></h1>
+    <div class="dc-oneliner">爱诗科技是这批新增公司里信息最完整、AI 属性最纯的一家：它公开定位为 AI 视频生成大模型及应用公司，核心产品是 PixVerse / 拍我 AI，同时提供面向 C 端创作者的产品和面向企业的 API。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>爱诗科技是这批新增公司里信息最完整、AI 属性最纯的一家：它公开定位为 AI 视频生成大模型及应用公司，核心产品是 PixVerse / 拍我 AI，同时提供面向 C 端创作者的产品和面向企业的 API。</p>
+<p>分类上应双挂“模型层 + 应用层”。原因不是它用了模型，而是官网明确把自研视频生成大模型、Diffusion + Transformer 架构、PixVerse R1 世界模型、API 开放平台和视频创作产品作为核心资产。投资问题是：在 Sora、Runway、Veo、可灵、即梦等强竞争下，它能否用速度、成本、模板传播、API 生态和付费转化形成可持续商业化。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/交易方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2023-04</td><td>公司成立 / 首轮融资</td><td>数千万元人民币</td><td>未披露</td><td>未披露</td><td>官网里程碑披露“公司成立，完成数千万元首轮融资”</td><td><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere 官网</a></td></tr><tr><td>2024-03</td><td>A1 轮</td><td>亿级人民币</td><td>未披露</td><td>达晨财智领投；光源资本担任独家财务顾问</td><td>官网里程碑披露</td><td><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere 官网</a></td></tr><tr><td>2024-04</td><td>A2 轮</td><td>超 1 亿元人民币</td><td>未披露</td><td>蚂蚁集团领投</td><td>官网里程碑披露</td><td><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere 官网</a></td></tr><tr><td>2025-03</td><td>A 轮</td><td>超 4 亿元人民币</td><td>未披露</td><td>蚂蚁集团、北京市人工智能产业投资基金、国科投资、光源资本等</td><td>官网里程碑披露</td><td><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere 官网</a></td></tr><tr><td>2025-09</td><td>B 轮</td><td>超 $60M</td><td>未披露</td><td>阿里巴巴领投；达晨财智、深创投、北京市人工智能产业投资基金、湖南电广传媒、巨人网络、Antler 等跟投</td><td>官网里程碑披露</td><td><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere 官网</a></td></tr><tr><td>2025-10</td><td>B+ 轮</td><td>1 亿元人民币；B 轮系列总额超 4 亿元人民币</td><td>未披露</td><td>未披露</td><td>官网同时披露 ARR 超 $40M</td><td><a href="https://aishiai.com/" target="_blank" rel="noopener">AIsphere 官网</a></td></tr><tr><td>2026-03</td><td>C 轮</td><td>S&P 口径 $300M；官网未在抓取文本中披露金额</td><td>S&P 口径 $1.0B post-money</td><td>鼎晖投资领投，超过 20 家机构参与</td><td>官网新闻/里程碑确认 C 轮和领投方；金额和估值采用 S&P 口径</td><td><a href="https://mp.weixin.qq.com/s/dapuwBFEa9u6VjKhg3ZSGQ" target="_blank" rel="noopener">AIsphere C 轮公告</a> / S&P Global 本地工作簿</td></tr></tbody></table></div>
+<p>融资观察：</p>
+<ul><li>官网融资历程较完整，且保留了原始币种口径：RMB 与 USD 混合。</li><li>S&P 最新轮显示 $300M、post-money $1.0B；公开官网抓取文本只确认 C 轮和鼎晖领投，金额/估值仍需以公告全文或数据库进一步核验。</li><li>2025-10 官网披露 ARR 超 $40M，是视频生成公司里非常关键的商业化数据点，后续应重点核验口径和可持续性。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Beijing Aishi Technology Co., Ltd. / 北京爱诗科技有限公司 / AIsphere</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">官网披露 2023-04</td></tr><tr><td class="kv-key">总部/主体</td><td class="kv-val">中国北京</td></tr><tr><td class="kv-key">四层分类</td><td class="kv-val">模型层 + 应用层</td></tr><tr><td class="kv-key">子赛道</td><td class="kv-val">AI 视频生成、多模态生成、世界模型、创作工具、API</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">PixVerse / 拍我 AI、拍我 AI 开放平台、PixVerse R1、Agent 创作助手、模板库</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">C 端创作者、营销、电商、游戏、影视、动漫、广告、企业 API 客户</td></tr><tr><td class="kv-key">最新融资/估值</td><td class="kv-val">2026 C 轮；S&P 口径 $300M、post-money $1.0B</td></tr><tr><td class="kv-key">当前阶段</td><td class="kv-val">私人公司，快速商业化阶段</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式</h2>
+<h3 class="subsection">4.1 C 端订阅和生成额度</h3>
+<p>PixVerse / 拍我 AI 面向全球和国内创作者，提供文生视频、图生视频、模板、音画同步、视频编辑、多镜头成片等功能。C 端增长逻辑类似 Midjourney/Runway：靠模板传播、生成效果、速度和移动端体验获得用户，再通过订阅或生成额度收费。</p>
+<h3 class="subsection">4.2 B 端 API 和行业方案</h3>
+<p>官网明确展示开放平台和 API，场景包括电商营销、互动娱乐、游戏制作、影视制作、动漫动画、广告宣传。API 客户线索包括 Fal、OpenArt、Freepik、AIBY、科大讯飞、思为等，说明它不只是消费产品，也在做模型能力输出。</p>
+<h3 class="subsection">4.3 Agent 和模板商业化</h3>
+<p>Agent 创作助手和商用模板库能降低 prompt 门槛，把模型能力包装成可复用工作流。对企业客户来说，价值不是“生成一次视频”，而是把营销素材、短视频、电商素材和品牌内容生产标准化。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>功能</th><th>投资解读</th></tr></thead><tbody><tr><td>PixVerse / 拍我 AI</td><td>文生/图生视频、模板、多镜头、编辑、音画同步</td><td>C 端增长和付费入口</td></tr><tr><td>PixVerse R1</td><td>官网称通用实时世界模型，支持无限时长、物理一致、多模态交互</td><td>模型层标签的关键依据</td></tr><tr><td>API 开放平台</td><td>企业接入视频生成能力</td><td>决定 B 端收入和毛利结构</td></tr><tr><td>Agent 创作助手</td><td>降低 prompt 门槛，生成短片工作流</td><td>提高非专业用户转化率</td></tr><tr><td>模板库</td><td>特效模板和商用模板</td><td>强传播和低门槛增长机制</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营数据</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>来源</th><th>可信度</th></tr></thead><tbody><tr><td>最新 post-money 估值</td><td>$1.0B</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>最新融资金额</td><td>$300M</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>累计融资</td><td>$443.3M</td><td>S&P Global 本地工作簿</td><td>中</td></tr><tr><td>ARR</td><td>超 $40M</td><td>AIsphere 官网里程碑</td><td>中</td></tr><tr><td>用户规模</td><td>2025-08 平台用户突破 1 亿</td><td>AIsphere 官网里程碑</td><td>中</td></tr><tr><td>2025-01 用户</td><td>全球用户数超 3000 万</td><td>AIsphere 官网里程碑</td><td>中</td></tr><tr><td>API 客户线索</td><td>Fal、OpenArt、Freepik、AIBY、科大讯飞、思为等</td><td>AIsphere 官网</td><td>中</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>竞争格局</h2>
+<ul><li>全球：OpenAI Sora、Google Veo、Runway、Pika、Luma、Midjourney 视频能力。</li><li>国内：快手可灵、字节即梦、通义万相、腾讯混元视频、生数 Vidu 等。</li><li>API 生态：Fal、Replicate、Together、云厂商模型市场也可能聚合多家视频模型。</li></ul>
+<p>爱诗的竞争优势可能来自速度、模板传播和 API 商业化；最大压力来自大厂模型成本优势和分发入口。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>资本化/IPO 状态备注</h2>
+<ul><li>当前按私人公司处理。</li><li>最新轮次为 C 轮，满足“至少 A+”筛选标准。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>投资方结构</h2>
+<ul><li>官网披露过达晨财智、蚂蚁集团、北京市人工智能产业投资基金、国科投资、光源资本、阿里巴巴、深创投、湖南电广传媒、巨人网络、Antler、鼎晖投资等。</li><li>C 轮超过 20 家机构参与，完整名单需进一步打开公告全文核验。</li></ul>
+</section>
+<section class="section" id="sec-12">
+<h2 class="section-title"><span class="sec-num">12</span>研究结论</h2>
+<ul><li>Base case：爱诗是中国 AI 视频生成头部创业公司之一，模型和应用双线都值得跟踪。</li><li>Bull case：模板传播 + API 生态 + 世界模型能力带来高 ARR 和可控推理成本。</li><li>Bear case：视频生成快速商品化，大厂压低价格，C 端热度难转化为高毛利收入。</li></ul>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="black_forest_labs.html">Black Forest Labs</a><a class="sib-chip" href="elevenlabs.html">ElevenLabs</a><a class="sib-chip" href="heygen.html">HeyGen</a><a class="sib-chip" href="kling_ai_可灵ai.html">Kling AI</a><a class="sib-chip" href="luma_ai.html">Luma AI</a><a class="sib-chip" href="meshy.html">Meshy</a><a class="sib-chip" href="midjourney.html">Midjourney</a><a class="sib-chip" href="pika.html">Pika</a></div>
+</div>
+</body></html>

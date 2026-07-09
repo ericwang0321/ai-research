@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Poolside AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 开发工具与 Agent 平台</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eff6ff;color:#1d4ed8">开发工具与 Agent 平台</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">美国/法国</span>
+    </div>
+    <h1 class="dc-title"><a href="https://poolside.ai/" target="_blank" rel="noopener">Poolside AI</a></h1>
+    <div class="dc-oneliner">Poolside 已从 2024 年“尚未公开产品、但融资 $500M 的 coding model lab”，升级为全栈 AI coding 公司。到 2026 年，公司已公开发布 Laguna agentic coding 模型、Poolside Platform、政府安全部署方案和大规模 AI 基础设施计划。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>Poolside 已从 2024 年“尚未公开产品、但融资 $500M 的 coding model lab”，升级为全栈 AI coding 公司。到 2026 年，公司已公开发布 Laguna agentic coding 模型、Poolside Platform、政府安全部署方案和大规模 AI 基础设施计划。</strong></p>
+<p>公司 2024 年 10 月宣布 $500M 融资，媒体报道估值约 $3B；2025 年又出现 Nvidia 最高 $1B 战略投资、估值约 $12B，以及继续融资支持 2GW Project Horizon 数据中心的报道。投资关键是 Poolside 能否把安全边界内运行的 coding foundation models、Agent platform 和政府/企业部署转成真实收入。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次 / 事件</th><th>金额</th><th>估值</th><th>投资方 / 交易方</th><th>说明</th><th>来源</th></tr></thead><tbody><tr><td>2023</td><td>Seed</td><td>$26M</td><td>没有公开可靠口径</td><td>早期投资人</td><td>创立后启动 coding model lab</td><td><a href="https://www.businessinsider.com/poolside-ai-startup-coding-assistant-revenue-engine-2024-10" target="_blank" rel="noopener">Business Insider</a></td></tr><tr><td>2023</td><td>后续早期轮</td><td>$100M</td><td>没有公开可靠口径</td><td>Xavier Niel、Felicis、Redpoint 等媒体线索</td><td>支持美国/法国团队扩张和训练</td><td><a href="https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation" target="_blank" rel="noopener">Bloomberg</a></td></tr><tr><td>2024-10</td><td>大额融资</td><td>$500M</td><td>媒体报道约 $3B</td><td>Bain Capital Ventures 领投;Nvidia、eBay、Felicis、Redpoint、DST 等报道线索</td><td>官方确认金额,投资方以媒体/数据库核验为准</td><td><a href="https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation" target="_blank" rel="noopener">Bloomberg</a></td></tr><tr><td>2025-10</td><td>Nvidia 战略投资报道</td><td>up to $1B</td><td>约 $12B</td><td>Nvidia</td><td>Bloomberg / Wikipedia 引用线索;需要确认最终条款</td><td><a href="https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation" target="_blank" rel="noopener">Bloomberg</a></td></tr><tr><td>2026 前后</td><td>更高估值融资报道</td><td>媒体提及 $2B raise / $14B valuation 等口径</td><td>$12-14B 区间报道</td><td>多方</td><td>截至 2026 年 7 月 6 日 需持续核验闭合状态</td><td><a href="https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation" target="_blank" rel="noopener">Bloomberg</a></td></tr></tbody></table></div>
+<p>融资解读:</p>
+<ul><li>2024 的 $3B 估值建立在"coding 是 AGI 首个经济场景 + 创始人 GitHub 背景 + 高额算力"叙事上,当时产品仍很早。</li><li>2026 年产品发布后,估值逻辑从"承诺"进入"模型能力 + 企业/政府收入 + 算力控制"三重验证期。</li><li>Nvidia 投资若按 $12B 估值完成,资本市场把 Poolside 视为 strategic coding frontier lab,不是普通 devtool SaaS。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Poolside AI / poolside</td></tr><tr><td class="kv-key">成立</td><td class="kv-val">2023 年 4 月左右</td></tr><tr><td class="kv-key">创始人</td><td class="kv-val">Jason Warner、Eiso Kant</td></tr><tr><td class="kv-key">总部/运营</td><td class="kv-val">官方政府页称 U.S.-based AI company;公司在美国、法国、英国等有团队,巴黎是重要工作/研发据点</td></tr><tr><td class="kv-key">定位</td><td class="kv-val">Agentic coding foundation model lab + enterprise/government AI deployment platform</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">Laguna XS 2.1、Laguna XS.2、Laguna M.1、pool terminal agent、Shimmer cloud dev experience、Poolside Platform、Atlas inference engine</td></tr><tr><td class="kv-key">技术路线</td><td class="kv-val">MoE coding models、RLCEF(Reinforcement Learning from Code Execution Feedback)、Model Factory、open-weight agentic coding models</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">企业软件团队、政府/国防、公共部门集成商、受监管行业、需要 air-gapped/on-prem AI 的组织</td></tr><tr><td class="kv-key">最新确定融资</td><td class="kv-val">2024-10 $500M fundraise</td></tr><tr><td class="kv-key">最新估值线索</td><td class="kv-val">2024 $3B;2025 Nvidia 投资报道约 $12B;WSJ 等报道后续融资/数据中心计划给出更高估值讨论</td></tr><tr><td class="kv-key">上市状态</td><td class="kv-val">私人公司,没有公开 IPO 时间表</td></tr></tbody></table></div>
+<p>Poolside 的核心判断是:软件开发是最先可被 AI 达到/超过人类能力的大规模经济活动之一,因为代码可以执行,执行结果能给模型稳定反馈。公司因此提出 <strong>RLCEF</strong>:模型在真实代码库和任务上尝试解决方案,通过代码执行反馈训练推理与编码能力。2024 官方募资文章称其模型在 <strong>130,000 个真实代码库</strong> 上探索数百万任务并接收执行反馈;2025 起又用 Model Factory 系列文章公开训练、数据、执行环境、推理评估和 post-training 流水线。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<p>Poolside 的收费逻辑与 GitHub Copilot / Cursor 的 $20-$40/seat SaaS 不同。它更像"模型权重 + 企业平台 + 安全部署 + 专业服务 + 算力/硬件生态"的组合。</p>
+<h3 class="subsection">4.1 政府 / 安全部署:不按 token 收费</h3>
+<p>Poolside 政府页明确写到,其面向政府机构的方案是 on-premises / air-gapped deployment,机构在自有硬件上运行推理,<strong>no per-token fees</strong>,从而把不可预测的 API 账单变成可规划的基础设施和订阅投入。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>部署方式</th><th>收费逻辑</th><th>价值主张</th></tr></thead><tbody><tr><td>Full stack inside boundary</td><td>平台订阅 + 模型权重/部署 + 支持</td><td>基础模型、推理、基础设施和安全整包交付</td></tr><tr><td>Modular</td><td>模块化订阅/授权</td><td>客户已有环境中嵌入 Poolside 模型和 agent runtime</td></tr><tr><td>Bring your own hardware</td><td>模型/平台授权 + 部署服务</td><td>客户用自有 GPU/服务器,降低数据外流</td></tr><tr><td>AWS / GovCloud / VPC</td><td>云市场/企业合同</td><td>通过 AWS 合同和安全体系采购</td></tr><tr><td>Dell turnkey hardware</td><td>硬件合作 + Poolside 平台</td><td>企业/政府更快部署 air-gapped AI</td></tr></tbody></table></div>
+<p>这意味着 Poolside 收入不是单纯 token GMV,而可能包括:</p>
+<ul><li>年度模型 license / platform subscription。</li><li>政府合同和系统集成合同。</li><li>Atlas inference engine / Poolside Platform 授权。</li><li>FDRE / solutions architect 专业服务。</li><li>云市场采购和硬件合作渠道收入。</li></ul>
+<h3 class="subsection">4.2 Poolside Platform 企业订阅</h3>
+<p>2026-05 官方发布 Poolside Platform,称其是可在客户安全边界内运行 AI agents 的生产级系统。平台提供:</p>
+<ul><li>在 VS Code、Visual Studio、Zed、IntelliJ、terminal 等开发环境中运行 agent。</li><li>连接 Slack、Jira、GitHub、Workday、Salesforce 等工具,通过 centrally managed MCP servers 管理。</li><li>容器化执行环境、secret management、network policy control。</li><li>记录每个 agent action、tool call、file edit、reasoning step 和 decision,形成 searchable trajectory。</li><li>四种部署:bare metal、air-gapped turnkey hardware via Dell、AWS/Azure/GCP VPC。</li></ul>
+<p>公开材料没有给出标准 seat price。考虑其客户定位,更可能按企业合同、开发者席位、模型使用规模、部署方式和支持等级综合定价。</p>
+<h3 class="subsection">4.3 开发者 API / OpenRouter / Preview</h3>
+<p>2026-04 发布 Laguna XS.2 和 Laguna M.1 时,公司称两个模型在 API 和 OpenRouter 上限时免费使用。Laguna XS.2 为 Apache 2.0 open weights,有助于开发者试用和生态扩散;Laguna M.1 后续也开放权重。开发者 API 在早期更像获客和 benchmark 分发,真正收入重心仍在企业/政府部署。</p>
+<h3 class="subsection">4.4 基础设施战略</h3>
+<p>2025 年 Poolside 与 CoreWeave 宣布 Project Horizon 2GW AI campus 计划,媒体报道包括首期 250MW、可扩 500MW、CoreWeave 作为 anchor tenant / operating partner、40,000+ Nvidia GB300 GPU 集群等线索。若落地,Poolside 将从纯软件公司变成重资产 AI infrastructure + model lab。好处是获得长期算力成本控制;风险是资本开支、融资依赖和能源/建设执行压力极高。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 Laguna 模型家族</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>参数 / 架构</th><th>状态</th><th>重点</th></tr></thead><tbody><tr><td>Laguna XS.2</td><td>33B total / 3B active,MoE;Apache 2.0 open weights</td><td>2026-04 发布</td><td>单 GPU 可运行,agentic coding,开放权重</td></tr><tr><td>Laguna XS 2.1</td><td>XS.2 升级版</td><td>2026-07-02 发布</td><td>官方最新轻量 agentic coding 模型</td></tr><tr><td>Laguna M.1</td><td>225B total / 23B active</td><td>2026-04 发布,后续 open weights</td><td>长程 agentic coding、大模型路线</td></tr><tr><td>Malibu / Point</td><td>AWS 合作早期模型名线索</td><td>2024-12 AWS 文章提及</td><td>企业 AWS 部署阶段的 foundation models</td></tr></tbody></table></div>
+<p>2026-04 官方称 Laguna M.1 是 225B-A23B,为长程 agentic coding 工作设计;Laguna XS.2 是 33B-A3B,可在单 GPU 运行,并与 Qwen、Devstral、Gemma、Claude Haiku 等同类模型比较。2026-05 又宣布 XS.2 和 M.1 支持 256K context,并在 SWE-bench Verified、SWE-Bench Pro、Terminal-Bench 2.0 等指标上更新成绩。网页中的部分 chart 数值在文本抓取中显示异常,投资分析时需要以官方图表或独立 benchmark 页面复核。</p>
+<h3 class="subsection">5.2 Model Factory</h3>
+<p>Poolside 公开的 Model Factory 系列包括:</p>
+<ul><li>hidden engineering behind foundation model building。</li><li>data pipelines。</li><li>distributed training codebase Titan。</li><li>code execution environment。</li><li>inference and evaluation inside Model Factory。</li><li>post-training at scale。</li></ul>
+<p>这套体系说明 Poolside 的技术路线不是只训练代码补全模型,而是把数据、训练、执行、评估、post-training 全链路工业化。其特别强调代码执行反馈,因为代码任务可以通过测试、编译、运行和环境反馈形成自动监督。</p>
+<h3 class="subsection">5.3 Atlas inference engine</h3>
+<p>政府页称 Atlas 是 Poolside 的 inference engine,可提升模型性能 up to 30%。如果这项能力被客户采用,它会形成独立价值:同样硬件运行更多推理、在 air-gapped 环境中降低成本,也让 Poolside 不只是卖模型权重,而是卖可运行、可审计、可治理的完整系统。</p>
+<h3 class="subsection">5.4 安全与治理</h3>
+<p>Poolside 面向政府的功能包括:</p>
+<ul><li>Air-gapped and disconnected。</li><li>STIG-hardened OS。</li><li>ATO achieved。</li><li>Cleared resources。</li><li>IL5 deployable。</li><li>On-prem / GovCloud / edge。</li><li>Poolside Federal LLC、CAGE Code、NAICS Code、UEI。</li></ul>
+<p>这使公司与纯 IDE 插件明显区分。它瞄准的是"云 API 不能进入"的环境,包括国防、情报、关键基础设施、受监管企业。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>公开数据</th><th>时间</th><th>说明</th></tr></thead><tbody><tr><td>早期 seed</td><td>$26M</td><td>2023</td><td>多源报道</td></tr><tr><td>后续早期融资</td><td>$100M</td><td>2023</td><td>Xavier Niel 等欧洲资本线索较多</td></tr><tr><td>大额融资</td><td>$500M</td><td>2024-10</td><td>官方公告金额;媒体报道估值约 $3B</td></tr><tr><td>训练代码库规模</td><td>130,000 real world code bases</td><td>2024 官方募资文章</td><td>RLCEF 训练反馈来源</td></tr><tr><td>AWS GPU 规模</td><td>1,000 GPU 起步到 10,000 GPU cluster</td><td>2024-12 官方 AWS 文章</td><td>AWS 合作与训练规模</td></tr><tr><td>Applied Research 团队</td><td>约 60 人</td><td>2026-04 Laguna 文章</td><td>负责模型发布</td></tr><tr><td>全公司员工</td><td>约 150 人线索</td><td>2025/2026 多源</td><td>需要后续核验</td></tr><tr><td>政府/公共部门伙伴</td><td>Vibrint、Northrop Grumman、Cubic、Sterling、Dell、Hunted Labs、Atos、IQT 等 logo/引用</td><td>2026 政府页</td><td>不等于全部付费客户</td></tr><tr><td>Project Horizon</td><td>2GW campus,首期 250MW,CoreWeave anchor tenant,40,000+ GB300 GPU 集群报道</td><td>2025</td><td>重资产算力战略</td></tr><tr><td>Nvidia 投资报道</td><td>up to $1B,估值约 $12B</td><td>2025-10 Bloomberg 线索</td><td>公司公告层面需跟踪</td></tr></tbody></table></div>
+<p>收入方面,公开来源没有给出 ARR、收入 run-rate、净收入、合同 ACV 或毛利。政府页的客户 logo 和报价只能证明商业化方向,不能直接证明收入规模。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<h3 class="subsection">7.1 与 Copilot/Cursor 的差异</h3>
+<p>GitHub Copilot、Cursor、Windsurf 等更多是开发者 seat SaaS / usage-based assistant;Poolside 更重:</p>
+<ul><li>模型权重交付。</li><li>私有部署。</li><li>政府安全认证。</li><li>inference engine。</li><li>解决方案工程。</li><li>自有/合作算力。</li></ul>
+<p>这带来更高 ACV 潜力,也带来更长销售周期和更重交付成本。</p>
+<h3 class="subsection">7.2 政府 no-token-fee 经济学</h3>
+<p>客户视角:</p>
+<ul><li>采购硬件/云资源 + Poolside license。</li><li>推理无限或大规模内部使用,不怕 token 账单失控。</li><li>数据不离开边界,合规价值高。</li></ul>
+<p>Poolside 视角:</p>
+<ul><li>收入更像年度平台/模型 license,毛利理论上高于自营云 API。</li><li>成本主要是研发、部署、支持和解决方案人员。</li><li>如果客户使用自有硬件,Poolside 不承担全部推理变量成本。</li></ul>
+<h3 class="subsection">7.3 基础设施资本开支</h3>
+<p>Project Horizon 使单位经济性复杂化。若 Poolside 自己承担大量数据中心资本开支,短期现金消耗会显著上升;但若 CoreWeave 作为 anchor tenant / operating partner 承担运营和部分负载,Poolside 可能以长期容量、能源和训练成本优势换取重资产风险。该项目需要重点跟踪:</p>
+<ul><li>谁出资本开支。</li><li>Poolside 是否承诺最低采购。</li><li>电力/天然气/水/土地审批进度。</li><li>GPU 采购和折旧。</li><li>与 Nvidia 投资是否形成循环交易。</li></ul>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<h3 class="subsection">8.1 直接竞争</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>对手</th><th>定位</th><th>Poolside 的差异</th></tr></thead><tbody><tr><td>GitHub Copilot</td><td>IDE 内 AI coding 默认入口</td><td>分发强;Poolside 更强私有部署/权重/政府</td></tr><tr><td>Cursor / Anysphere</td><td>AI-native IDE</td><td>产品体验和开发者心智强;Poolside 更偏 enterprise/government</td></tr><tr><td>Cognition / Devin</td><td>autonomous software engineer</td><td>Agent 叙事强;Poolside 强调模型和部署</td></tr><tr><td>Replit</td><td>云 IDE + agent</td><td>中小开发者和在线运行环境强</td></tr><tr><td>OpenAI / Anthropic Claude Code</td><td>frontier model + coding agent</td><td>模型能力强;受限环境部署不如 Poolside 专注</td></tr><tr><td>Mistral / DeepSeek / Qwen / Devstral</td><td>open coding / reasoning models</td><td>开源成本低;Poolside 用 coding-specific RLCEF 和 enterprise security 区分</td></tr><tr><td>IBM / Palantir / Anduril / Shield AI 相关工具</td><td>政府/国防 AI</td><td>渠道强;Poolside 专注 coding foundation model</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 护城河</h3>
+<ul><li><strong>创始人背景</strong>:Jason Warner 曾任 GitHub CTO,深刻理解开发者平台和企业软件工程;Eiso Kant 有软件创业背景。</li><li><strong>执行反馈数据</strong>:RLCEF 需要可运行代码环境和大规模任务反馈,比纯静态代码语料更难复制。</li><li><strong>安全部署能力</strong>:air-gapped、IL5、STIG、cleared personnel、Poolside Federal 等公共部门能力建立进入门槛。</li><li><strong>模型开放策略</strong>:Laguna XS.2 Apache 2.0 open weights 有利于开发者验证和生态。</li><li><strong>基础设施控制</strong>:与 AWS、Dell、CoreWeave、Nvidia 的绑定能缓解算力瓶颈。</li></ul>
+<h3 class="subsection">8.3 脆弱点</h3>
+<ul><li>公开 benchmark 需要第三方验证,官网图表抓取异常说明外部可读性还有问题。</li><li>IDE / developer workflow 分发不如 Cursor 和 GitHub。</li><li>政府销售周期长,收入确认慢。</li><li>重资产算力策略可能让公司从软件高毛利变成资本密集型模型/基础设施公司。</li><li>$12B+ 估值需要非常高的收入增长或战略价值支撑。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Jason Warner 曾任 GitHub CTO,也曾在 Redpoint 等投资/技术生态中活跃,对企业软件开发、代码协作、开源生态和开发者工具有深经验。Eiso Kant 是软件企业家,两人共同把 Poolside 的目标设为"让软件开发成为 AI 首个达到人类级/超人级能力的经济领域"。</p>
+<p>公司采用分布式但定期集中工作的文化,美国和欧洲团队都很重要。2026 Laguna 文章提到约 60 人 Applied Research 组织参与模型发布,覆盖 infrastructure、architecture、data、pre-training、reinforcement learning。这说明团队结构已经从早期研究小组扩展为工业化模型团队。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>估值风险</strong>:$12B+ 报道估值需要远超普通 devtool 的收入或战略价值支撑。</li><li><strong>模型真实性风险</strong>:Laguna benchmark 需要独立验证,否则可能被 Cursor/Copilot/Claude Code 体验压制。</li><li><strong>销售周期风险</strong>:政府/国防/on-prem 合同 ACV 高但周期长,收入兑现慢。</li><li><strong>交付成本风险</strong>:FDRE、solutions architects、cleared personnel 会提高服务成本。</li><li><strong>资本开支风险</strong>:2GW 数据中心计划可能吞噬现金,并暴露于电力、建设、GPU、融资市场变化。</li><li><strong>竞争风险</strong>:GitHub/Microsoft、OpenAI、Anthropic、Google 可通过既有分发快速进入企业 coding agent。</li><li><strong>开源替代风险</strong>:Qwen、DeepSeek、Devstral、Mistral 等 open models 可能以更低成本逼近能力。</li><li><strong>政府合规风险</strong>:公共部门安全认证、出口管制、涉密项目都可能拖慢部署。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anysphere_cursor.html">Anysphere</a><a class="sib-chip" href="braintrust.html">Braintrust</a><a class="sib-chip" href="browserbase.html">Browserbase</a><a class="sib-chip" href="cognition_ai_devin.html">Cognition AI</a><a class="sib-chip" href="dify_langgenius.html">Dify</a><a class="sib-chip" href="emergent.html">Emergent</a><a class="sib-chip" href="langchain.html">LangChain</a><a class="sib-chip" href="llamaindex.html">LlamaIndex</a></div>
+</div>
+</body></html>

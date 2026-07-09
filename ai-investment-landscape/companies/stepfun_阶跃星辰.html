@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StepFun / 阶跃星辰 · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 通用 AI</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">通用 AI</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">中国上海</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.stepfun.com/" target="_blank" rel="noopener">StepFun / 阶跃星辰</a></h1>
+    <div class="dc-oneliner">阶跃星辰（StepFun）是由前微软全球副总裁姜大昕于 2023 年 4 月创立的上海大模型公司，定位"超级模型 + 超级应用"，以多模态（文本/图像/视频/音频）全栈自研为核心差异化。公开报道显示，公司 2026 年推进 Pre-IPO 融资，第一拨投前约 $4B、第二拨投前约 $5B-$6B，并计划冲刺港股 IPO；此前 B+ 轮融资超 50 亿元人民币，估值约 200–300 亿元。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p><strong>阶跃星辰（StepFun）是由前微软全球副总裁姜大昕于 2023 年 4 月创立的上海大模型公司，定位"超级模型 + 超级应用"，以多模态（文本/图像/视频/音频）全栈自研为核心差异化。公开报道显示，公司 2026 年推进 Pre-IPO 融资，第一拨投前约 $4B、第二拨投前约 $5B-$6B，并计划冲刺港股 IPO；此前 B+ 轮融资超 50 亿元人民币，估值约 200–300 亿元。</strong></p>
+<p>关键看点：①国内唯一在文/图/视/音四大模态均有旗舰开源/商用模型的公司。<strong> ②与吉利/千里科技（李书福系）深度绑定"AI+车"，并由旷视系印奇出任董事长；③Step 3 实现华为昇腾/燧原等近 10 家国产芯片"模芯协同"适配，是国产算力生态标杆。> ⚠️ </strong>重要更正<strong>：任务包中"创始人黄小明（曾是金山办公 CTO）"信息有误。阶跃星辰创始人兼 CEO 为 </strong>姜大昕（前微软全球副总裁、微软亚洲互联网工程院 STCA 首席科学家/副院长），并非黄小明，亦非金山办公系。详见第 9 节团队。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<p>阶跃星辰累计完成 5 轮融资，是中国大模型赛道融资最活跃的公司之一。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>轮次</th><th>时间</th><th>金额</th><th>投后估值</th><th>主要投资方</th><th>来源</th></tr></thead><tbody><tr><td><strong>天使轮</strong></td><td>2023 年（成立前后）</td><td>数亿元（未精确披露）</td><td>—</td><td>新思资本（New Silk Capital）等</td><td><a href="https://www.chinaventure.com.cn/news/80-20260305-390360.html" target="_blank" rel="noopener">投中网</a></td></tr><tr><td><strong>A 轮</strong></td><td>2023 年底–2024 年初</td><td>数亿美元</td><td>超 <strong>10 亿美元</strong>（独角兽）</td><td>启明创投、五源资本、源码资本、新思资本等</td><td><a href="https://www.chinaventure.com.cn/news/80-20260305-390360.html" target="_blank" rel="noopener">投中网</a></td></tr><tr><td><strong>A+ 轮</strong></td><td>2024 年中</td><td>数亿美元</td><td>传闻约 <strong>20 亿美元</strong></td><td>老股东跟投</td><td><a href="https://wap.eastmoney.com/a/202601263630607736.html" target="_blank" rel="noopener">东方财富</a></td></tr><tr><td><strong>B 轮</strong></td><td>2024 年 12 月</td><td><strong>数亿美元</strong></td><td>据称约 <strong>30 亿美元</strong>（200 亿元门槛）</td><td><strong>上海国投先导基金</strong>（领投，国资）、浦东创投、<strong>腾讯</strong>（战略）、五源资本、启明创投（财务跟投）</td><td><a href="https://www.stcn.com/article/detail/1464249.html" target="_blank" rel="noopener">证券时报</a></td></tr><tr><td><strong>B+ 轮</strong></td><td><strong>2026 年 1 月 26 日</strong></td><td><strong>超 50 亿元人民币</strong>（刷新过去 12 个月中国大模型单笔最高纪录）</td><td><strong>200–300 亿元人民币</strong></td><td>国资 + 产业投资人（上国投先导基金等）；老股东启明、五源跟投；同步宣布印奇出任董事长</td><td><a href="https://news.pedaily.cn/202601/560382.shtml" target="_blank" rel="noopener">投资界</a></td></tr><tr><td><strong>Pre-IPO</strong>（进行中）</td><td>2026 年</td><td>计划 20–30 亿元（分两拨）</td><td>投前约 <strong>$5B-$6B</strong>（第二拨；第一拨约 $4B）</td><td>一家运营商（已确定领投），其他老股东跟投</td><td><a href="https://www.chinaventure.com.cn/news/80-20260305-390360.html" target="_blank" rel="noopener">投中网</a></td></tr></tbody></table></div>
+<p><strong>投资方阵营</strong>：</p>
+<ul><li><strong>国资</strong>：上海国有资本投资（上海国投先导基金）、浦东创投 — 体现上海市政府对本土大模型龙头的扶持</li><li><strong>战略/互联网巨头</strong>：腾讯</li><li><strong>产业资本</strong>：吉利系/千里科技（李书福）、旷视系（印奇）</li><li><strong>一线财务</strong>：启明创投、五源资本、源码资本、新思资本（均从 A 轮一路跟投至 B+ 轮）</li></ul>
+<blockquote>任务包中"B 轮领投 Fortera Capital"未在中文权威信源中核实到，中文信源一致指向 <strong>上海国投先导基金</strong>（上海国资旗下）。Fortera Capital 可能为其英文名或关联实体，待核实（见数据缺口）。</blockquote>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key"><strong>公司全称</strong></td><td class="kv-val">上海阶跃星辰智能科技股份有限公司（曾用名：上海阶跃星辰智能科技有限公司）</td></tr><tr><td class="kv-key"><strong>品牌</strong></td><td class="kv-val">StepFun / 阶跃星辰</td></tr><tr><td class="kv-key"><strong>成立时间</strong></td><td class="kv-val">2023 年 4 月 6 日</td></tr><tr><td class="kv-key"><strong>总部</strong></td><td class="kv-val">上海市徐汇区云锦路 701 号 30 层</td></tr><tr><td class="kv-key"><strong>法定代表人</strong></td><td class="kv-val">姜大昕</td></tr><tr><td class="kv-key"><strong>创始人 / CEO</strong></td><td class="kv-val">姜大昕（兼算法负责人）</td></tr><tr><td class="kv-key"><strong>董事长</strong></td><td class="kv-val">印奇（2026 年 1 月 26 日正式出任，旷视科技联合创始人、千里科技董事长）</td></tr><tr><td class="kv-key"><strong>使命</strong></td><td class="kv-val">"智能阶跃，十倍每个人的可能"</td></tr><tr><td class="kv-key"><strong>战略定位</strong></td><td class="kv-val">"超级模型 + 超级应用"；通用人工智能（AGI）方向</td></tr><tr><td class="kv-key"><strong>赛道标签</strong></td><td class="kv-val">中国大模型"AI 六小虎/六小强"之一</td></tr><tr><td class="kv-key"><strong>团队规模</strong></td><td class="kv-val">约 150 人（早期）→ 持续扩张（具体最新人数未披露）</td></tr><tr><td class="kv-key"><strong>核心产品</strong></td><td class="kv-val">Step 系列基座模型（Step-1 / Step-1V / Step-2 / Step 3 / Step-3.5-Flash / Step-3.7-Flash）、Step-Video（T2V / TI2V / Turbo）、Step-Audio（ASR / TTS）、Step Image Edit、Step Plan、开放平台 platform.stepfun.com</td></tr><tr><td class="kv-key"><strong>目标客户</strong></td><td class="kv-val">开发者（API/Step Plan）、车企（吉利/千里）、国产芯片生态、政务/企业</td></tr><tr><td class="kv-key"><strong>当前阶段</strong></td><td class="kv-val">中后期私募 / Pre-IPO / 港股 IPO 冲刺</td></tr></tbody></table></div>
+<p>阶跃星辰成立仅 3 年即跻身中国大模型第一梯队，与 MiniMax、月之暗面（Kimi）、智谱 AI、百川智能、零一万物并称"六小虎"。其差异化在于：①多模态"全栈卷王"，文本/视觉/视频/语音四条线均有旗舰模型；②与汽车产业（吉利/千里科技）的深度绑定，走"AI+终端"落地路径；③国资（上海国投先导基金）+ 互联网巨头（腾讯）+ 产业资本（吉利系/旷视系）+ 一线财务（启明、五源、源码）的多元化股东结构。</p>
+<p>来源：<a href="https://www.stepfun.com/" target="_blank" rel="noopener">阶跃星辰官网</a>、<a href="https://platform.stepfun.com/" target="_blank" rel="noopener">开放平台</a>、<a href="https://www.stcn.com/article/detail/1464249.html" target="_blank" rel="noopener">证券时报</a>、<a href="https://www.qbitai.com/2024/12/235732.html" target="_blank" rel="noopener">量子位</a></p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<p>阶跃星辰采用 <strong>"开放平台 API 按量 + Step Plan 订阅 + 企业/行业定制"</strong> 三层商业化结构，近期重点押注 AI Coding（编码）订阅赛道。</p>
+<h3 class="subsection">4.1 开放平台 API（标准按量计费）</h3>
+<p>按模态分计：文本/多模态按 1M tokens、图像按张、语音按字符/小时/音色，搜索与文件存储为增值服务。限速最高档 V5：10000 并发 / 200000 RPM / 100000000 TPM。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模型</th><th>输入（缓存未命中）</th><th>输入（缓存命中）</th><th>输出</th><th>备注</th></tr></thead><tbody><tr><td><strong>step-3.7-flash</strong></td><td>¥1.35 / M tokens</td><td>¥0.27 / M tokens</td><td>¥8.10 / M tokens</td><td>MoE 196B+1.8B(ViT)/激活 11B，256K 上下文，400 Tps</td></tr><tr><td><strong>step-3.5-flash</strong></td><td>¥0.70 / M tokens</td><td>¥0.14 / M tokens</td><td>¥2.10 / M tokens</td><td>旗舰编码模型，SWE-bench 表现优秀</td></tr><tr><td><strong>Step Image Edit 2</strong></td><td>—</td><td>—</td><td>¥0.02 / 张</td><td>图像编辑，响应 1–2 秒</td></tr><tr><td><strong>StepAudio 2.5 TTS</strong></td><td>—</td><td>—</td><td>¥5.80 / 万字符</td><td>文本转语音</td></tr><tr><td><strong>StepAudio 2.5 ASR</strong></td><td>—</td><td>—</td><td>按小时/音色计费</td><td>语音识别，4B 参数 MTP</td></tr></tbody></table></div>
+<blockquote>注：美元口径下 Step-3.7-Flash 约为输入 $0.20/M、缓存命中 $0.04/M、输出 $1.15/M（来源 ModelScope 模型详情页）。</blockquote>
+<h3 class="subsection">4.2 Step Plan（订阅制，2026 年 3 月 23 日发布）</h3>
+<p>专为 Agent 与高频 AI 开发者设计的包月套餐，可在 Cursor、Claude Code、Trae、OpenClaw 等主流编码工具中以订阅价调用旗舰模型。计费单位为 prompt（1 prompt ≈ 15–20 次模型调用），全档位标配高速推理不加价。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>档位</th><th>月费</th><th>额度</th></tr></thead><tbody><tr><td><strong>Flash Mini</strong></td><td>¥49 / 月（社区限时半价低至 ¥25）</td><td>起步档</td></tr><tr><td><strong>Flash Plus</strong></td><td>¥99 / 月</td><td>~1,600 prompts（约 24,000 次调用）</td></tr><tr><td><strong>Flash Pro</strong></td><td>¥199 / 月</td><td>~1,500+ prompts（约 22,500+ 次调用）</td></tr><tr><td><strong>Flash Max</strong></td><td>¥699 / 月</td><td>最高档</td></tr></tbody></table></div>
+<h3 class="subsection">4.3 企业与行业定制</h3>
+<ul><li><strong>政务</strong>：一体化办公助手、城市生命体征、法律咨询等场景，推进政务大模型落地。</li><li><strong>汽车（AI+车）</strong>：与吉利/千里科技合作，Step 3 大模型上车（吉利银河 M9 首发），共建下一代智能座舱 Agent OS。</li><li><strong>终端（AI+终端）</strong>：OPPO、荣耀等手机厂商端侧部署。</li><li><strong>IP/内容</strong>：与上海电影集团合作"大闹天宫"等 IP 项目。</li></ul>
+<p>来源：<a href="https://platform.stepfun.com/" target="_blank" rel="noopener">开放平台</a>、<a href="https://platform.stepfun.com/docs/zh/step-plan/overview" target="_blank" rel="noopener">Step Plan 概述</a>、<a href="https://juejin.cn/post/7623066322222170112" target="_blank" rel="noopener">稀土掘金</a>、<a href="https://www.leiphone.com/category/industrynews/69TcSsm0DfnOiBxY.html" target="_blank" rel="noopener">雷锋网</a>、<a href="https://modelscope.cn/models/stepfun-ai/Step-3.7-Flash" target="_blank" rel="noopener">ModelScope</a>、<a href="http://finance.sina.com.cn/stock/t/2026-03-23/doc-inhryxfp3984918.shtml" target="_blank" rel="noopener">新浪财经</a></p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<p>阶跃星辰是国内为数不多在 <strong>语言、视觉、视频、语音</strong> 四大模态均有自研旗舰模型的公司，模型迭代节奏极快（平均每季度一次重大发布）。</p>
+<h3 class="subsection">5.1 模型迭代时间线</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>模型</th><th>类型</th><th>关键参数/亮点</th></tr></thead><tbody><tr><td>2023</td><td><strong>Step-1</strong></td><td>语言</td><td>千亿参数，经千万级用户产品验证</td></tr><tr><td>2024.01</td><td><strong>Step-1V</strong></td><td>多模态理解</td><td>千亿参数，万亿 token 预训练，视觉-语言理解，MMBench/MMMU 接近 GPT-4V</td></tr><tr><td>2024</td><td><strong>Step-2</strong></td><td>语言</td><td>万亿参数 MoE</td></tr><tr><td>2024</td><td><strong>Step-1A</strong> / <strong>Step-Audio</strong></td><td>语音</td><td>语音理解与生成</td></tr><tr><td>2025.02</td><td><strong>Step-Video-T2V</strong></td><td>文生视频</td><td><strong>30B 参数，全球最大开源视频生成模型</strong>（与吉利联合开源），204 帧 / 540P / 中英双语</td></tr><tr><td>2025.03</td><td><strong>Step-Video-TI2V</strong></td><td>图生视频</td><td>基于 30B T2V，102 帧 / 5 秒 / 540P，运动幅度可控</td></tr><tr><td>2025.07（WAIC）</td><td><strong>Step 3</strong></td><td>基座多模态</td><td>新一代基础大模型，发布即适配华为昇腾/燧原/沐曦/壁仞/天数智芯/平头哥等近 10 家国产芯片（完整多模态版，非阉割）</td></tr><tr><td>2025–2026</td><td><strong>Step-3.5-Flash</strong></td><td>Agent/编码</td><td>MoE 196B/激活 11B，SWE-bench 表现优秀，周调用量 1.34 万亿 token</td></tr><tr><td>2026</td><td><strong>Step-3.7-Flash</strong></td><td>生产级 Agent</td><td>196B+1.8B(ViT)/激活 11B，256K 上下文，400 Tps，原生多模态 + 联网/视觉搜索 + 工具调用编排</td></tr><tr><td>2026</td><td><strong>Step Image Edit 2</strong></td><td>图像编辑</td><td>响应 1–2 秒，¥0.02/张</td></tr><tr><td>2026</td><td><strong>StepAudio 2.5</strong></td><td>语音</td><td>TTS ¥5.8/万字符；ASR 4B 参数 MTP</td></tr></tbody></table></div>
+<h3 class="subsection">5.2 技术差异化</h3>
+<ul><li><strong>全模态自研</strong>：文/图/视/音四线齐发，是国内"最卷的多模态"厂商，多数同行仅覆盖 1–2 模态。</li><li><strong>开源策略</strong>：Step-Video-T2V（30B）、Step-Video-TI2V 等开源，在 Hugging Face <code>stepfun-ai</code> 主页发布，建立开发者口碑。</li><li><strong>MoE 架构 + 长上下文</strong>：Step-3.5/3.7-Flash 采用稀疏 MoE（196B 总参/11B 激活），256K 上下文，兼顾能力与成本。</li><li><strong>模芯协同（模型-芯片协同）</strong>：Step 3 与华为昇腾 910B 在"算术强度（Arithmetic intensity）"特性上高度匹配，是国产算力适配的标杆案例。</li></ul>
+<p>来源：<a href="https://www.qbitai.com/2025/02/255199.html" target="_blank" rel="noopener">量子位 Step-Video</a>、<a href="https://www.stcn.com/article/detail/1531282.html" target="_blank" rel="noopener">证券时报</a>、<a href="https://modelscope.cn/models/stepfun-ai/Step-3.7-Flash" target="_blank" rel="noopener">ModelScope Step-3.7-Flash</a>、<a href="https://www.cls.cn/detail/2098887" target="_blank" rel="noopener">财联社国产芯片</a>、<a href="https://www.mittrchina.com/news/detail/15065" target="_blank" rel="noopener">MIT 科技评论中文版</a>、<a href="https://www.guancha.cn/economy/2025_07_30_784903.shtml" target="_blank" rel="noopener">观察者网</a>、<a href="https://hub.baai.ac.cn/view/47659" target="_blank" rel="noopener">智源社区</a>、<a href="https://zhuanlan.zhihu.com/p/31775732208" target="_blank" rel="noopener">知乎 Step-Video-TI2V</a></p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>时间</th></tr></thead><tbody><tr><td><strong>多模态 API 调用量增长</strong></td><td>超 <strong>45 倍</strong></td><td>2024 下半年</td></tr><tr><td><strong>开放平台 API 调用量增长</strong></td><td>近 <strong>20 倍</strong></td><td>截至 2025 年底</td></tr><tr><td><strong>终端 Agent API 调用量增长</strong></td><td>连续三季度增长近 <strong>170%</strong></td><td>截至 2025 年底</td></tr><tr><td><strong>Step 3.5 Flash (free) 周调用量</strong></td><td><strong>1.34 万亿 Token</strong>，环比 +79%</td><td>近期（周维度）</td></tr><tr><td><strong>活跃用户增长</strong></td><td><strong>5 倍</strong></td><td>截至 2025 年底</td></tr><tr><td><strong>2025 年收入（预计）</strong></td><td>约 <strong>5 亿元人民币</strong></td><td>2025 全年</td></tr><tr><td><strong>2026 年收入（预计）</strong></td><td>约 <strong>12 亿元人民币</strong></td><td>2026 全年</td></tr><tr><td><strong>全球大模型 API 调用量排名</strong></td><td>Step 3.5 Flash 进入 <strong>前十</strong></td><td>近期</td></tr><tr><td><strong>C 端产品验证</strong></td><td>Step-1 经 <strong>千万级用户</strong>产品验证</td><td>早期</td></tr><tr><td><strong>团队规模</strong></td><td>约 150 人（早期报道）→ 扩张中</td><td>—</td></tr></tbody></table></div>
+<p><strong>商业化解读</strong>：阶跃星辰收入仍处早期（2025 年 5 亿元），但增长斜率陡峭（YoY 收入翻倍以上、API 调用量数十倍增长）。收入结构以 B 端 API + 行业定制（汽车/政务/终端）为主，C 端通过 Step Plan 订阅和 AI 应用（如"歌词爆改机""胃之书"等走红应用）补充。对标 MiniMax/月之暗面，阶跃在 C 端流量与商业化收入上仍有差距，但在多模态技术深度与产业落地（尤其汽车）上有差异化优势。</p>
+<p>来源：<a href="https://m.36kr.com/p/3704466512671491" target="_blank" rel="noopener">36氪</a>、<a href="https://www.mycaijing.com/article/detail/564409" target="_blank" rel="noopener">财经客户端</a>、<a href="https://m.cls.cn/detail/1949837" target="_blank" rel="noopener">财联社</a></p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性</h2>
+<p>公开数据有限，以下为基于可得信息的推断（标注不确定性）：</p>
+<ul><li><strong>毛利率（推断）</strong>：API 业务采用 MoE 稀疏激活（11B/196B），单次推理激活参数低，叠加国产昇腾芯片降本，毛利率有望显著高于稠密模型；但具体数字未披露。Step-3.7-Flash 输入 ¥1.35/M、输出 ¥8.10/M 的价差（约 6 倍）反映输出 token 的算力成本更高。</li><li><strong>缓存命中经济性</strong>：缓存命中价仅为未命中的 1/5（¥0.27 vs ¥1.35），鼓励高频重复调用，提升 GPU 利用率。</li><li><strong>CAC / LTV</strong>：未披露。Step Plan 订阅（¥49–699/月）走 PLG（产品驱动增长）路线，CAC 相对低。</li><li><strong>算力成本</strong>：与华为昇腾/燧原等国产芯片深度协同，长期有望降低对英伟达 GPU 的依赖与算力成本（国产芯片采购成本通常为同档英伟达的 50–70%）。</li><li><strong>盈亏平衡</strong>：未见披露。以 2025 年 5 亿收入 + 大额研发投入（千亿/万亿参数训练）推断，仍处亏损扩张期，符合行业常态。</li></ul>
+<blockquote>⚠️ 单位经济性数据严重不足，主要靠推断，需待 IPO 招股书披露。</blockquote>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<p>阶跃星辰身处中国大模型"六小虎"激烈竞争，同时在多模态与 AI+车赛道有差异化卡位。</p>
+<h3 class="subsection">8.1 "AI 六小虎"横向对比</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司</th><th>创始人/背景</th><th>核心产品</th><th>差异化</th><th>估值量级</th></tr></thead><tbody><tr><td><strong>阶跃星辰</strong></td><td>姜大昕（微软系）</td><td>Step 系列（全模态）</td><td>多模态全栈 + AI+车（吉利）</td><td>200–300 亿元</td></tr><tr><td><strong>MiniMax（稀宇）</strong></td><td>闫俊杰（商汤系）</td><td>海螺 AI、abab</td><td>语音/视频生成、ToC 应用生态</td><td>数十亿美元</td></tr><tr><td><strong>月之暗面</strong></td><td>杨植麟（清华/卡内基梅隆）</td><td>Kimi</td><td>超长上下文、C 端品牌</td><td>数十亿美元</td></tr><tr><td><strong>智谱 AI</strong></td><td>唐杰（清华系）</td><td>ChatGLM/GLM</td><td>B 端政企、开源生态成熟</td><td>数十亿美元</td></tr><tr><td><strong>百川智能</strong></td><td>王小川（搜狗）</td><td>Baichuan</td><td>医疗方向</td><td>数十亿美元</td></tr><tr><td><strong>零一万物</strong></td><td>李开复</td><td>Yi 系列</td><td>国际化路线</td><td>已调整/收缩</td></tr></tbody></table></div>
+<h3 class="subsection">8.2 直接 / 间接 / 大厂竞品</h3>
+<ul><li><strong>直接竞品（六小虎）</strong>：MiniMax、月之暗面 Kimi、智谱 GLM、百川 Baichuan、DeepSeek、零一万物 Yi</li><li><strong>间接竞品（大厂）</strong>：阿里 Qwen、字节豆包、腾讯混元、百度文心、华为盘古</li><li><strong>细分赛道对标</strong>：视频生成对标快手可灵、Sora；AI Coding 对标 Cursor / Claude Code / 通义灵码 / CodeGeeX</li></ul>
+<h3 class="subsection">8.3 阶跃星辰的竞争位势</h3>
+<p><strong>优势</strong>：</p>
+<ul><li>✅ <strong>多模态深度</strong>：唯一在文/图/视/音四模态均有旗舰开源/商用模型，Step-Video 30B 为全球最大开源视频模型</li><li>✅ <strong>产业落地</strong>：与吉利/千里科技深度绑定"AI+车"，Step 3 已上车（吉利银河 M9），具身智能卡位</li><li>✅ <strong>国产算力生态</strong>：Step 3 与近 10 家国产芯片"模芯协同"，政策与供应链安全加分</li><li>✅ <strong>技术声誉</strong>：登顶全球大模型趋势榜；姜大昕入选 IEEE Fellow 2025</li></ul>
+<p><strong>劣势/挑战</strong>：</p>
+<ul><li>⚠️ C 端流量与商业化收入落后于 Kimi、MiniMax</li><li>⚠️ 收入规模（2025 年 5 亿）相对估值（200–300 亿）PS 偏高</li><li>⚠️ 模型声量不如 DeepSeek/Kimi；与字节豆包（海量 C 端流量 + 自有算力）的正面竞争加剧</li><li>⚠️ 核心壁垒（多模态技术、国产芯适配、上海生态）最易被大厂正面进攻</li></ul>
+<p>来源：<a href="https://m.36kr.com/p/3704466512671491" target="_blank" rel="noopener">36氪登顶趋势榜</a>、<a href="https://m.cls.cn/detail/1949837" target="_blank" rel="noopener">财联社多模态</a></p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<h3 class="subsection">9.1 创始人 姜大昕（CEO 兼算法负责人）</h3>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key"><strong>教育</strong></td><td class="kv-val">1993 年考入中国科学技术大学（少年班 9311），1998 年学士；2005 年纽约州立大学布法罗分校计算机科学博士</td></tr><tr><td class="kv-key"><strong>微软生涯</strong></td><td class="kv-val">2007 年加入微软，工作 <strong>16 年</strong>；历任微软全球副总裁、微软亚洲互联网工程院（STCA）首席科学家/副院长</td></tr><tr><td class="kv-key"><strong>微软核心贡献</strong></td><td class="kv-val">带领 400+ 人团队，主导 <strong>Bing 必应搜索引擎</strong>核心搜索、<strong>Cortana 智能助手</strong>自然语言理解、<strong>Azure</strong> AI/NLP 研发</td></tr><tr><td class="kv-key"><strong>学术声誉</strong></td><td class="kv-val">NLP 领域全球知名专家；入选 <strong>2025 年度 IEEE Fellow</strong>；入选"2025 年度 AI 人物"</td></tr><tr><td class="kv-key"><strong>创业</strong></td><td class="kv-val">2023 年 4 月创立阶跃星辰，兼任算法负责人</td></tr></tbody></table></div>
+<h3 class="subsection">9.2 核心团队</h3>
+<ul><li><strong>印奇</strong>（董事长，2026.1.26 出任）：38 岁，清华姚班毕业，哥伦比亚大学计算机硕士，旷视科技联合创始人、千里科技董事长，同时身兼两家公司董事长。其"空降"被市场解读为加速 IPO 与强化"AI+车/具身智能"战略。</li><li><strong>朱亦博</strong>（系统负责人）：曾在谷歌、字节跳动、微软等多家任职，负责基础设施与训练系统。</li><li><strong>焦斌星</strong>（数据负责人）：前微软必应相关背景。</li><li><strong>团队规模</strong>：约 150 人（早期报道），以算法与系统工程师为主，微软系背景浓厚。</li></ul>
+<h3 class="subsection">9.3 团队特色</h3>
+<p>阶跃星辰团队被形容为"卧虎藏龙"，核心技术骨干多来自微软亚洲互联网工程院（STCA）及必应搜索/Cortana 团队，是国内"微软系"AI 创业的代表（与商汤/旷视系的 MiniMax、清华系的智谱、搜狗系的百川形成对照）。</p>
+<p>来源：<a href="https://www.tmtpost.com/7005612.html" target="_blank" rel="noopener">钛媒体深度对话</a>、<a href="http://jjckb.xinhuanet.com/20260126/cc111f7e591b47df9225e8ea86ac138c/c.html" target="_blank" rel="noopener">经济参考报印奇挂帅</a></p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li><strong>估值与收入倒挂（PS 过高）</strong>：B+ 轮投后 200–300 亿元 vs 2025 年收入 5 亿元，PS 约 40–60 倍，IPO 定价需消化高估值，若收入不及预期（12 亿）存在破发风险。</li><li><strong>C 端流量劣势</strong>：相比 Kimi、字节豆包，阶跃 C 端存在感弱，过度依赖 B 端 API 与汽车场景，收入集中度风险。</li><li><strong>国产芯片生态成熟度</strong>：模芯协同是亮点但也意味着对国产算力的押注，若昇腾/燧原产能或性能不达预期，训练/推理成本风险上升。</li><li><strong>大模型烧钱持续</strong>：千亿/万亿参数训练 + 多模态四线并行，资本开支巨大，B+ 轮 50 亿元可能仍不够，IPO 募资 5 亿美元仅能覆盖 1–2 年。</li><li><strong>股东结构复杂</strong>：国资 + 腾讯 + 吉利系 + 旷视系 + 多家财务投资人，治理与战略方向协调难度高；印奇"空降"董事长或引发创始人/新董事长权力平衡问题。</li><li><strong>竞争白热化</strong>：六小虎 + 字节豆包 + 阿里通义 + DeepSeek 开源，价格战（API 按量已降至 ¥0.7/M）挤压毛利。</li><li><strong>地缘/合规</strong>：国产芯片适配虽利好政策，但海外模型/数据合作受限可能影响技术前沿性。</li><li><strong>商业化路径验证不足</strong>：Step Plan（AI Coding 订阅）为 2026 年新业务，留存与 LTV 待验证；汽车场景收入规模化节奏未明。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="character_ai.html">Character.AI</a><a class="sib-chip" href="clay.html">Clay</a><a class="sib-chip" href="cohere.html">Cohere</a><a class="sib-chip" href="decagon_ai.html">Decagon AI</a><a class="sib-chip" href="deepseek_深度求索.html">DeepSeek</a><a class="sib-chip" href="genspark.html">Genspark</a></div>
+</div>
+</body></html>
