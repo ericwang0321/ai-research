@@ -1890,6 +1890,11 @@
           "url": ""
         }
       },
+      "content_vertical": {
+        "value": "图像生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "官方没有给出收入、ARR、毛利或 API run-rate",
         "sort": "",
@@ -1995,6 +2000,11 @@
           "url": ""
         }
       },
+      "content_vertical": {
+        "value": "语音生成/Voice AI",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "ARR: WSJ 报道 2025 年 ARR 约 $330M,目标 2026 doubled;Economic Times 2026 年 5 月报道 ARR 跨 $500M",
         "sort": 0.33,
@@ -2076,6 +2086,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "content_vertical": {
+        "value": "数字人/企业视频",
         "sort": "",
         "source": null
       },
@@ -2174,6 +2189,11 @@
         "sort": "",
         "source": null
       },
+      "content_vertical": {
+        "value": "视频生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
@@ -2255,6 +2275,11 @@
         "sort": "",
         "source": null
       },
+      "content_vertical": {
+        "value": "视频生成/3D 生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
@@ -2327,6 +2352,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "content_vertical": {
+        "value": "3D 生成",
         "sort": "",
         "source": null
       },
@@ -2405,6 +2435,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "content_vertical": {
+        "value": "图像生成",
         "sort": "",
         "source": null
       },
@@ -2499,6 +2534,11 @@
         "sort": 2024.0,
         "source": null
       },
+      "content_vertical": {
+        "value": "视频生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
@@ -2581,6 +2621,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "content_vertical": {
+        "value": "3D 生成",
         "sort": "",
         "source": null
       },
@@ -2669,6 +2714,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "content_vertical": {
+        "value": "视频生成",
         "sort": "",
         "source": null
       },
@@ -2767,6 +2817,11 @@
         "sort": "",
         "source": null
       },
+      "content_vertical": {
+        "value": "音乐生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
@@ -2845,6 +2900,11 @@
       "total_funding": {
         "value": "累计融资: 2025 Series D 后 $330M+;若 $200M Series E 计入则 $530M+",
         "sort": 0.33,
+        "source": null
+      },
+      "content_vertical": {
+        "value": "数字人/企业视频",
+        "sort": "",
         "source": null
       },
       "arr_revenue": {
@@ -7053,6 +7113,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "content_vertical": {
+        "value": "视频生成",
         "sort": "",
         "source": null
       },
