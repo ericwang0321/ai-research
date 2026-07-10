@@ -48,11 +48,6 @@
         "value": "大型企业 IT、数据与安全团队、业务部门",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -258,11 +253,6 @@
         "value": "销售、市场营销、RevOps 与增长团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -322,11 +312,6 @@
       },
       "target_customers": {
         "value": "大型企业 IT、数据与安全团队、业务部门",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -391,11 +376,6 @@
       },
       "target_customers": {
         "value": "客服中心、客户体验团队、消费品牌与服务企业",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -1198,11 +1178,6 @@
           "label": "Axios newsletter/Investors.com 报道口径",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -1405,11 +1380,6 @@
       },
       "target_customers": {
         "value": "大型企业 IT、数据与安全团队、业务部门",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -2455,11 +2425,6 @@
         "sort": "",
         "source": null
       },
-      "code_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "pricing": {
         "value": "Individual price: $20/mo；Teams price: $40/user/mo",
         "sort": 40.0,
@@ -2538,11 +2503,6 @@
         "sort": "",
         "source": null
       },
-      "code_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -2607,11 +2567,6 @@
       },
       "developer_customers": {
         "value": "Agent 开发者、自动化团队、代码与数据产品团队",
-        "sort": "",
-        "source": null
-      },
-      "code_usage": {
-        "value": "",
         "sort": "",
         "source": null
       },
@@ -2692,11 +2647,6 @@
         "sort": "",
         "source": null
       },
-      "code_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "pricing": {
         "value": "Teams: $80/month team plan + $40/month per full dev seat；Windsurf enterprise customers: 350+",
         "sort": 350.0,
@@ -2772,11 +2722,6 @@
       },
       "developer_customers": {
         "value": "开发者、创业公司、企业 AI 与业务自动化团队",
-        "sort": "",
-        "source": null
-      },
-      "code_usage": {
-        "value": "",
         "sort": "",
         "source": null
       },
@@ -2860,11 +2805,6 @@
         "sort": 2026.0,
         "source": null
       },
-      "code_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "pricing": {
         "value": "custom",
         "sort": "",
@@ -2946,11 +2886,6 @@
           "url": ""
         }
       },
-      "code_usage": {
-        "value": "LangChain、LangGraph、deepagents、LangServe 等",
-        "sort": "",
-        "source": null
-      },
       "pricing": {
         "value": "Monthly active teams: 2024 GA 博客披露 5k+ monthly active teams；Pricing: Developer free、Plus $39/seat/month、Enterprise custom;traces/…",
         "sort": 2024.0,
@@ -3019,11 +2954,6 @@
       },
       "developer_customers": {
         "value": "RAG/知识应用开发者与企业数据团队",
-        "sort": "",
-        "source": null
-      },
-      "code_usage": {
-        "value": "LlamaIndex framework、Workflows、LiteParse、connectors/readers、retrievers/indexes",
         "sort": "",
         "source": null
       },
@@ -3104,14 +3034,6 @@
         "sort": "",
         "source": null
       },
-      "code_usage": {
-        "value": "2026 年 BI 报道超过 40M projects built to date，daily new projects 超过 200,000",
-        "sort": 0.04,
-        "source": {
-          "label": "说明 usage depth 高，但需拆分付费/免费",
-          "url": ""
-        }
-      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -3135,10 +3057,6 @@
       },
       {
         "label": "TechCrunch/Forbes/BI/媒体汇总",
-        "url": ""
-      },
-      {
-        "label": "说明 usage depth 高，但需拆分付费/免费",
         "url": ""
       }
     ]
@@ -3188,14 +3106,6 @@
         "sort": "",
         "source": null
       },
-      "code_usage": {
-        "value": "训练代码库规模: 130,000 real world code bases；Applied Research 团队: 约 60 人",
-        "sort": 130000.0,
-        "source": {
-          "label": "RLCEF 训练反馈来源",
-          "url": ""
-        }
-      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -3216,10 +3126,6 @@
       {
         "label": "Bloomberg",
         "url": "https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation"
-      },
-      {
-        "label": "RLCEF 训练反馈来源",
-        "url": ""
       }
     ]
   },
@@ -3272,11 +3178,6 @@
           "label": "BI 2025-10 报道",
           "url": ""
         }
-      },
-      "code_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
       },
       "pricing": {
         "value": "custom，SSO/SAML、single-tenant、VPC 等",
@@ -3363,11 +3264,6 @@
         "sort": "",
         "source": null
       },
-      "code_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "pricing": {
         "value": "Teams: $30/member/月；Enterprise: custom",
         "sort": 30.0,
@@ -3441,11 +3337,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "目标客户: AI labs、LLM app teams、enterprise ML platforms、data science teams、simulation/RL teams；Customers / users: Ray 案例包括 OpenAI、Ube…",
         "sort": "",
@@ -3459,23 +3350,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "AI 应用运行时与模型工作负载",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -3530,14 +3406,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "官方称过去一年 revenue 20x",
-        "sort": 20.0,
-        "source": {
-          "label": "公司商业化进入爆发期,但基数需核验",
-          "url": ""
-        }
-      },
       "customers": {
         "value": "Cursor、Notion、Lovable、Harvey、HubSpot、OpenEvidence、Abridge、Decagon、Parallel 等",
         "sort": "",
@@ -3554,26 +3422,8 @@
           "url": ""
         }
       },
-      "margin_cost": {
-        "value": "WSJ 报道客户使用开放模型某些任务可达到约闭源成本 30%,即节省约 70%",
-        "sort": 70.0,
-        "source": {
-          "label": "需要按任务/质量/延迟核验",
-          "url": ""
-        }
-      },
       "product_type": {
         "value": "模型部署与推理平台",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -3584,19 +3434,11 @@
         "url": "https://www.baseten.co/blog/announcing-our-series-f/"
       },
       {
-        "label": "公司商业化进入爆发期,但基数需核验",
-        "url": ""
-      },
-      {
         "label": "客户质量强,覆盖 coding、legal、medical、enterprise apps",
         "url": ""
       },
       {
         "label": "AI-native 客户生产调用增长很快",
-        "url": ""
-      },
-      {
-        "label": "需要按任务/质量/延迟核验",
         "url": ""
       }
     ]
@@ -3643,11 +3485,6 @@
           "url": ""
         }
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "目标客户: 大型企业数据团队、AI/ML 团队、平台工程团队、BI/分析团队、金融/零售/制造/医疗/媒体/政府等大客户；年消费 $1M+ 客户: WSJ 口径约 650 个",
         "sort": 0.001,
@@ -3661,23 +3498,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "企业数据与 AI 平台、AI Agent 后端",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -3740,11 +3562,6 @@
           "url": ""
         }
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "目标客户: AI-native 应用、coding agent、search/research agent、语音/图像/多模态产品、企业内部模型团队；客户线索: Cursor 等 AI 公司使用 Fireworks 平台",
         "sort": "",
@@ -3761,23 +3578,8 @@
           "url": ""
         }
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "模型 API 与推理服务",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -3843,11 +3645,6 @@
           "url": ""
         }
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "",
         "sort": "",
@@ -3858,23 +3655,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "模型社区、开发者平台、托管推理",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -3932,14 +3714,6 @@
           "url": ""
         }
       },
-      "growth_multiple": {
-        "value": "Experts 页显示 average contracted rate $79/hr",
-        "sort": 79.0,
-        "source": {
-          "label": "供给端价格明显高于基础标注,定位专业数据和 expert work",
-          "url": ""
-        }
-      },
       "customers": {
         "value": "Frontier AI labs、AI 应用公司、需要授权/评测/agent 化的企业客户",
         "sort": "",
@@ -3950,23 +3724,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "Expert data 与 AI 训练服务",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -3978,10 +3737,6 @@
       },
       {
         "label": "非审计口径,但若成立,说明已超出传统早期 SaaS 规模,更接近 Scale AI/AI 数据服务大单模式",
-        "url": ""
-      },
-      {
-        "label": "供给端价格明显高于基础标注,定位专业数据和 expert work",
         "url": ""
       }
     ]
@@ -4028,11 +3783,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "客户/案例: DoorDash、Cognition、Runway、Ramp、Substack、Suno、podcast/audio/transcription、bio/robotics/coding agent 等官方/媒体案例；Customers: 官方客…",
         "sort": "",
@@ -4049,26 +3799,8 @@
           "url": ""
         }
       },
-      "margin_cost": {
-        "value": "B200/H200/H100/A100/L40S/A10/L4/T4 按秒计费",
-        "sort": 200.0,
-        "source": {
-          "label": "与 AI workload 使用量直接绑定",
-          "url": ""
-        }
-      },
       "product_type": {
         "value": "Serverless AI runtime",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -4131,11 +3863,6 @@
         "sort": 0.3,
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "主要客户/场景: Frontier model builders、Meta、OpenAI/Microsoft/Google 线索、CDAO/DoD、Mayo Clinic、TIME、BP、Cengage、robotics/autonomy；客户覆盖: 90%…",
         "sort": 90.0,
@@ -4149,23 +3876,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "数据标注、RLHF、模型评测",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -4220,11 +3932,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "目标客户: AI-native 应用、开发者、企业模型团队、需要 open-source/private deployment 的组织；公开客户: Cognition、Decagon、ElevenLabs、Cursor、Suno 等由公司 2026 Seri…",
         "sort": 2026.0,
@@ -4235,26 +3942,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "Decagon 迁移到 Together 后 inference 成本降低 6x,公司称开放模型客户常见 6x-20x cost reduction",
-        "sort": 20.0,
-        "source": {
-          "label": "强销售叙事,需看任务口径与模型质量",
-          "url": ""
-        }
-      },
       "product_type": {
         "value": "Open model cloud、推理训练服务",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -4263,10 +3952,6 @@
       {
         "label": "Reuters",
         "url": "https://www.investing.com/news/stock-market-news/together-ai-raises-800-million-at-83-billion-valuation-4771027"
-      },
-      {
-        "label": "强销售叙事,需看任务口径与模型质量",
-        "url": ""
       }
     ]
   },
@@ -4321,11 +4006,6 @@
           "label": "官网/2026 融资公告/pricing FAQ",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "金融合规/数据权限",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -4383,14 +4063,6 @@
         "sort": "",
         "source": null
       },
-      "data_scale": {
-        "value": "$1/1k pages per content type",
-        "sort": 1.0,
-        "source": {
-          "label": "把 crawl/extract/highlight 商品化",
-          "url": ""
-        }
-      },
       "query_usage": {
         "value": "",
         "sort": "",
@@ -4405,26 +4077,12 @@
         "value": "",
         "sort": "",
         "source": null
-      },
-      "permissions": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
       {
         "label": "Exa",
         "url": "https://exa.ai/blog/announcing-series-c"
-      },
-      {
-        "label": "把 crawl/extract/highlight 商品化",
-        "url": ""
       }
     ]
   },
@@ -4475,11 +4133,6 @@
         "sort": "",
         "source": null
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "",
         "sort": "",
@@ -4494,19 +4147,6 @@
         "value": "",
         "sort": "",
         "source": null
-      },
-      "permissions": {
-        "value": "20k+ employees trained;2.7k+ agents",
-        "sort": 20.0,
-        "source": {
-          "label": "官网客户案例",
-          "url": ""
-        }
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -4516,10 +4156,6 @@
       },
       {
         "label": "Business Insider 2025 年 2 月报道,Glean fiscal year ARR 达 $100M,较年内早些时候 $50M 提升",
-        "url": ""
-      },
-      {
-        "label": "官网客户案例",
         "url": ""
       }
     ]
@@ -4565,11 +4201,6 @@
         "sort": "",
         "source": null
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "",
         "sort": "",
@@ -4587,16 +4218,6 @@
           "label": "真正 ACV 增长来源",
           "url": ""
         }
-      },
-      "permissions": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -4657,11 +4278,6 @@
         "sort": "",
         "source": null
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "",
         "sort": "",
@@ -4676,19 +4292,6 @@
         "value": "",
         "sort": "",
         "source": null
-      },
-      "permissions": {
-        "value": "ISO/IEC 42001:2023、SOC 2 Type II、end-to-end encryption、no training on user data、CCPA、GDPR",
-        "sort": 42001.0,
-        "source": {
-          "label": "官网",
-          "url": ""
-        }
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -4698,10 +4301,6 @@
       },
       {
         "label": "Bloomberg/百科口径",
-        "url": ""
-      },
-      {
-        "label": "官网",
         "url": ""
       }
     ]
@@ -4753,11 +4352,6 @@
         "sort": "",
         "source": null
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "月查询量: 2025 年 5 月 780M queries",
         "sort": 0.78,
@@ -4778,16 +4372,6 @@
           "label": "Perplexity Enterprise 官网页面",
           "url": ""
         }
-      },
-      "permissions": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -4856,11 +4440,6 @@
           "url": ""
         }
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "",
         "sort": "",
@@ -4878,16 +4457,6 @@
           "label": "收入与 RAG 应用使用量高度相关",
           "url": ""
         }
-      },
-      "permissions": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -4946,11 +4515,6 @@
         "sort": "",
         "source": null
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "300M+",
         "sort": 0.3,
@@ -4971,16 +4535,6 @@
           "label": "ACV 和毛利关键",
           "url": ""
         }
-      },
-      "permissions": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5042,11 +4596,6 @@
         "sort": 9.0,
         "source": null
       },
-      "data_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "query_usage": {
         "value": "",
         "sort": "",
@@ -5064,16 +4613,6 @@
           "label": "自助到企业分层",
           "url": ""
         }
-      },
-      "permissions": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "proprietary_data": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5144,11 +4683,6 @@
           "label": "Abridge 官网首页/客户页",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5218,11 +4752,6 @@
         "value": "医院、医疗集团、医生与临床运营团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5275,11 +4804,6 @@
       },
       "target_customers": {
         "value": "药企、生物科技公司、CRO 与科研机构",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "研发验证/药物监管",
         "sort": "",
         "source": null
       }
@@ -5345,11 +4869,6 @@
           "label": "2026-05 press release",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5418,11 +4937,6 @@
           "label": "公司披露、客户访谈、broker/channel checks",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "保险牌照/承保合规",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5484,11 +4998,6 @@
         "value": "药企、生物科技公司、CRO 与科研机构",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "研发验证/药物监管",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5541,11 +5050,6 @@
       },
       "target_customers": {
         "value": "药企、生物科技公司、CRO 与科研机构",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "研发验证/药物监管",
         "sort": "",
         "source": null
       }
@@ -5603,11 +5107,6 @@
       },
       "target_customers": {
         "value": "律师事务所、企业法务与专业服务机构",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "律师责任/客户保密",
         "sort": "",
         "source": null
       }
@@ -5674,11 +5173,6 @@
           "label": "公司官网",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5736,11 +5230,6 @@
       },
       "target_customers": {
         "value": "药企、生物科技公司、CRO 与科研机构",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "研发验证/药物监管",
         "sort": "",
         "source": null
       }
@@ -5803,11 +5292,6 @@
           "label": "BI 2026-04;The Australian",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "律师责任/客户保密",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5872,11 +5356,6 @@
           "label": "官网/Case studies",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -5945,11 +5424,6 @@
         "value": "医院、医疗集团、医生与临床运营团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -6009,11 +5483,6 @@
       },
       "target_customers": {
         "value": "投行、资管、研究机构与企业战略团队",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "金融合规/数据权限",
         "sort": "",
         "source": null
       }
@@ -6079,11 +5548,6 @@
           "label": "Suki 官网",
           "url": ""
         }
-      },
-      "compliance": {
-        "value": "HIPAA/临床安全/EHR",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -6225,11 +5689,6 @@
         "value": "机器人公司、主机厂与自动驾驶研发团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -6291,11 +5750,6 @@
         "value": "医院、影像科、医疗设备与临床 AI 团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -6351,11 +5805,6 @@
       },
       "target_customers": {
         "value": "城市、园区、楼宇与公共空间运营方",
-        "sort": "",
-        "source": null
-      },
-      "compliance": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -6415,11 +5864,6 @@
         "value": "医院、科研机构、康复与神经科技团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -6477,11 +5921,6 @@
         "value": "晶圆厂、封测厂与半导体制造运营团队",
         "sort": "",
         "source": null
-      },
-      "compliance": {
-        "value": "",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -6530,11 +5969,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "",
         "sort": "",
@@ -6548,26 +5982,8 @@
           "url": ""
         }
       },
-      "margin_cost": {
-        "value": "面向通用并行计算",
-        "sort": "",
-        "source": {
-          "label": "对标 Nvidia GPU 生态",
-          "url": ""
-        }
-      },
       "product_type": {
         "value": "AI 芯片、GPGPU、国产算力",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -6625,11 +6041,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "",
         "sort": "",
@@ -6643,26 +6054,8 @@
           "url": ""
         }
       },
-      "margin_cost": {
-        "value": "面向 AI 推理芯片",
-        "sort": "",
-        "source": {
-          "label": "核心硬件资产，需核验制程、显存、互联、能效",
-          "url": ""
-        }
-      },
       "product_type": {
         "value": "AI 推理 GPU、国产算力、算力平台",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -6721,11 +6114,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "",
         "sort": "",
@@ -6736,23 +6124,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "商业航天、遥感数据、星上 AI 计算",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
@@ -6803,11 +6176,6 @@
         "sort": "",
         "source": null
       },
-      "growth_multiple": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "customers": {
         "value": "",
         "sort": "",
@@ -6818,23 +6186,8 @@
         "sort": "",
         "source": null
       },
-      "margin_cost": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
       "product_type": {
         "value": "量子计算、量子云、前沿计算基础设施",
-        "sort": "",
-        "source": null
-      },
-      "customer_concentration": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "substitution_risk": {
-        "value": "",
         "sort": "",
         "source": null
       }
