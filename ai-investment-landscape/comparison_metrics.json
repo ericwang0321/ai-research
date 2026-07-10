@@ -3,7 +3,7 @@
     "company": "AI21 Labs",
     "short": "AI21 Labs",
     "slug": "ai21_labs",
-    "sector": "通用 AI",
+    "sector": "行业 AI",
     "layers": [
       "模型层",
       "应用层"
@@ -32,41 +32,61 @@
         "sort": 0.3,
         "source": null
       },
+      "vertical": {
+        "value": "企业 AI 平台",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "user_group": {
+      "customers": {
+        "value": "Fnac、Capgemini、Wix",
+        "sort": "",
+        "source": {
+          "label": "公开提及,合同规模没有给出",
+          "url": ""
+        }
+      },
+      "usage_scale": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "model_cost": {
+      "compliance": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "compute_scale": {
+      "roi": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/企业模型为主",
+      "sales_motion": {
+        "value": "",
         "sort": "",
         "source": null
       },
-      "app_entry": {
-        "value": "Enterprise LLM、写作助手、RAG、AI orchestration",
+      "commercial_maturity": {
+        "value": "Fnac、Capgemini、Wix",
         "sort": "",
-        "source": null
+        "source": {
+          "label": "公开提及,合同规模没有给出",
+          "url": ""
+        }
       }
     },
     "source_links": [
       {
         "label": "AI21",
         "url": "https://www.ai21.com/blog/ai21-completes-208-million-oversubscribed-series-c-round/"
+      },
+      {
+        "label": "公开提及,合同规模没有给出",
+        "url": ""
       }
     ]
   },
@@ -252,7 +272,7 @@
     "company": "Clay",
     "short": "Clay",
     "slug": "clay",
-    "sector": "通用 AI",
+    "sector": "行业 AI",
     "layers": [
       "应用层"
     ],
@@ -277,33 +297,46 @@
         "sort": "",
         "source": null
       },
+      "vertical": {
+        "value": "销售/GTM",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "user_group": {
+      "customers": {
+        "value": "核心客户: GTM ops、sales、marketing、growth、revenue operations、founders、startup/enterprise GTM teams；客户: 100K+ customers from self serve…",
+        "sort": 100.0,
+        "source": {
+          "label": "Clay press page",
+          "url": ""
+        }
+      },
+      "usage_scale": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "model_cost": {
+      "compliance": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "compute_scale": {
+      "roi": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/API 为主",
+      "sales_motion": {
+        "value": "收费方式: Free/Launch/Growth/Enterprise；actions + data credits；provider marketplace；BYO API key；enterprise quote",
         "sort": "",
         "source": null
       },
-      "app_entry": {
-        "value": "GTM AI、sales automation",
+      "commercial_maturity": {
+        "value": "核心客户: GTM ops、sales、marketing、growth、revenue operations、founders、startup/enterprise GTM teams",
         "sort": "",
         "source": null
       }
@@ -312,6 +345,10 @@
       {
         "label": "NYT",
         "url": "https://www.nytimes.com/2026/06/18/technology/clay-employee-share-sale-valuation.html"
+      },
+      {
+        "label": "Clay press page",
+        "url": ""
       }
     ]
   },
@@ -319,7 +356,7 @@
     "company": "Cohere",
     "short": "Cohere",
     "slug": "cohere",
-    "sector": "通用 AI",
+    "sector": "行业 AI",
     "layers": [
       "模型层",
       "应用层"
@@ -348,6 +385,11 @@
         "sort": "",
         "source": null
       },
+      "vertical": {
+        "value": "企业 AI 平台",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "2024-03 约 $22M ARR/annualized revenue 线索；2025-05 Reuters 称年化收入翻倍至 $100M；2026-02 CNBC/公开资料线索称收入约 $240M",
         "sort": 2024.0,
@@ -356,28 +398,36 @@
           "url": ""
         }
       },
-      "user_group": {
+      "customers": {
+        "value": "客户/伙伴: Oracle、Salesforce、Fujitsu、RBC、LG CNS、Dell、Bell Canada、Ensemble Health Partners、SAP、McKinsey、Canadian/UK public sector、Thal…",
+        "sort": 1.0,
+        "source": {
+          "label": "行业客户质量高，需核验合同金额和续约",
+          "url": ""
+        }
+      },
+      "usage_scale": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "model_cost": {
+      "compliance": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "compute_scale": {
+      "roi": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/企业模型为主",
+      "sales_motion": {
+        "value": "",
         "sort": "",
         "source": null
       },
-      "app_entry": {
-        "value": "Enterprise LLM、RAG、合规私有化模型",
+      "commercial_maturity": {
+        "value": "客户/伙伴: Oracle、Salesforce、Fujitsu、RBC、LG CNS、Dell、Bell Canada、Ensemble Health Partners、SAP、McKinsey、Canadian/UK public sector、Thal…",
         "sort": "",
         "source": null
       }
@@ -390,6 +440,10 @@
       {
         "label": "企业定位开始兑现，但仍需公司口径审计",
         "url": ""
+      },
+      {
+        "label": "行业客户质量高，需核验合同金额和续约",
+        "url": ""
       }
     ]
   },
@@ -397,7 +451,7 @@
     "company": "Decagon AI",
     "short": "Decagon AI",
     "slug": "decagon_ai",
-    "sector": "通用 AI",
+    "sector": "行业 AI",
     "layers": [
       "应用层"
     ],
@@ -428,33 +482,46 @@
           "url": ""
         }
       },
+      "vertical": {
+        "value": "客服/CX",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "user_group": {
+      "customers": {
+        "value": "目标客户: Retail、travel & hospitality、technology、financial services、health & wellness、media、telecom 等有高量客服/会员/交易场景的企业；公开客户/案例: Chime、…",
+        "sort": "",
+        "source": null
+      },
+      "usage_scale": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "model_cost": {
+      "compliance": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "compute_scale": {
+      "roi": {
+        "value": "70% chat/voice resolution、3x CSAT、80% deflection、65% cost reduction、50%+ voice deflection、32% increase in deflection",
+        "sort": 80.0,
+        "source": {
+          "label": "Decagon homepage",
+          "url": ""
+        }
+      },
+      "sales_motion": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/API 为主",
-        "sort": "",
-        "source": null
-      },
-      "app_entry": {
-        "value": "Customer support AI、enterprise agent、CX automation",
+      "commercial_maturity": {
+        "value": "目标客户: Retail、travel & hospitality、technology、financial services、health & wellness、media、telecom 等有高量客服/会员/交易场景的企业",
         "sort": "",
         "source": null
       }
@@ -466,6 +533,10 @@
       },
       {
         "label": "BI + official Series D",
+        "url": ""
+      },
+      {
+        "label": "Decagon homepage",
         "url": ""
       }
     ]
@@ -1303,7 +1374,7 @@
     "company": "Sierra",
     "short": "Sierra",
     "slug": "sierra",
-    "sector": "通用 AI",
+    "sector": "行业 AI",
     "layers": [
       "应用层"
     ],
@@ -1331,39 +1402,43 @@
         "sort": "",
         "source": null
       },
+      "vertical": {
+        "value": "客服/CX",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
-        "value": "ARR / revenue: Axios 2025-09: on track to exceed $100M enterprise ARR;公开百科/媒体另有 $150M revenue 口径但需以原始报道核验；ARR: on track to exceed…",
+        "value": "ARR / revenue: Axios 2025-09: on track to exceed $100M enterprise ARR;公开百科/媒体另有 $150M revenue 口径但需以原始报道核验",
         "sort": 2025.0,
-        "source": {
-          "label": "Axios 2025-09 source 口径",
-          "url": ""
-        }
+        "source": null
       },
-      "user_group": {
-        "value": "hundreds of customers",
+      "customers": {
+        "value": "目标客户: 大型 consumer brands、金融服务、医疗、通信、媒体、旅行酒店、零售消费品、科技、客服中心、会员/订阅业务；公开客户 logo: Rocket Mortgage、Gap Inc.、Singtel、SoftBank、SiriusXM、W…",
         "sort": "",
-        "source": {
-          "label": "Axios newsletter/Investors.com 报道口径",
-          "url": ""
-        }
+        "source": null
       },
-      "model_cost": {
+      "usage_scale": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "compute_scale": {
+      "compliance": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/API 为主",
+      "roi": {
+        "value": "Rocket Mortgage 4x higher conversion rates、$1B folders/month;Singtel <10 weeks time to live;Airtable 80% resolution rate;SoFi NPS…",
+        "sort": 1.0,
+        "source": null
+      },
+      "sales_motion": {
+        "value": "",
         "sort": "",
         "source": null
       },
-      "app_entry": {
-        "value": "Customer Service Agent、企业客服自动化",
+      "commercial_maturity": {
+        "value": "目标客户: 大型 consumer brands、金融服务、医疗、通信、媒体、旅行酒店、零售消费品、科技、客服中心、会员/订阅业务",
         "sort": "",
         "source": null
       }
@@ -1372,14 +1447,6 @@
       {
         "label": "Axios",
         "url": "https://www.axios.com/pro/enterprise-software-deals/2026/05/04/sierra-ai-valuation-agentic-enterprise"
-      },
-      {
-        "label": "Axios 2025-09 source 口径",
-        "url": ""
-      },
-      {
-        "label": "Axios newsletter/Investors.com 报道口径",
-        "url": ""
       }
     ]
   },
@@ -1633,7 +1700,7 @@
     "company": "Writer",
     "short": "Writer",
     "slug": "writer",
-    "sector": "通用 AI",
+    "sector": "行业 AI",
     "layers": [
       "模型层",
       "应用层"
@@ -1662,36 +1729,43 @@
         "sort": 0.326,
         "source": null
       },
+      "vertical": {
+        "value": "企业 AI 平台",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "user_group": {
-        "value": "up to 5 users",
-        "sort": 5.0,
-        "source": {
-          "label": "Writer pricing",
-          "url": ""
-        }
+      "customers": {
+        "value": "目标客户: 大型企业的 marketing、sales、support、legal、HR、L&D、finance、IT、operations、product/UX、regulated industries；公开客户: Vanguard、Salesforce、…",
+        "sort": "",
+        "source": null
       },
-      "model_cost": {
+      "usage_scale": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "compute_scale": {
+      "compliance": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/API 为主",
+      "roi": {
+        "value": "",
         "sort": "",
         "source": null
       },
-      "app_entry": {
-        "value": "企业 GenAI 平台、私有模型、workflow",
+      "sales_motion": {
+        "value": "Starter 14-day trial; up to 5 users; Enterprise contact sales; pricing FAQ 显示 Starter 为月/年 per-seat + fixed credit limits,Enterpr…",
+        "sort": 14.0,
+        "source": null
+      },
+      "commercial_maturity": {
+        "value": "目标客户: 大型企业的 marketing、sales、support、legal、HR、L&D、finance、IT、operations、product/UX、regulated industries",
         "sort": "",
         "source": null
       }
@@ -1700,10 +1774,6 @@
       {
         "label": "Axios",
         "url": "https://www.axios.com/newsletters/axios-pro-rata-153997ea-fd35-40db-8ed2-8f01203881d8"
-      },
-      {
-        "label": "Writer pricing",
-        "url": ""
       }
     ]
   },
