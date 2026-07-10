@@ -123,6 +123,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "语言/视觉理解模型 + Claude/代码 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "Claude Code ARR: 媒体报道 2025 年末约 $1B+；总 ARR / revenue run-rate: 媒体和第三方口径从数十亿美元到更高区间不等",
         "sort": 1.0,
@@ -213,6 +218,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "positioning": {
+        "value": "角色/陪伴式消费 AI + 自研对话模型",
         "sort": "",
         "source": null
       },
@@ -574,6 +584,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "开源语言/推理/代码模型 + API/助手",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "公司没有给出可审计收入拆分;媒体强调缺乏成熟 revenue model",
         "sort": "",
@@ -656,6 +671,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "positioning": {
+        "value": "第三方模型集成型应用（无自研基础模型）：通用 Agent/AI 工作区",
         "sort": "",
         "source": null
       },
@@ -743,6 +763,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "第三方模型集成型应用（无自研基础模型）：会议记录/知识助手",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "2026 年 3 月中旬收入已达上一年 2.5x 以上",
         "sort": 2026.0,
@@ -827,6 +852,11 @@
         "sort": 0.297,
         "source": null
       },
+      "positioning": {
+        "value": "高效新架构基础模型 + 端侧/本地部署",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $13.2M",
         "sort": 0.0132,
@@ -904,6 +934,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "第三方模型集成型应用（无自研基础模型）：通用执行 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "2025-08 revenue run-rate: ~$90M；2025-12 revenue run-rate: ~$125M",
         "sort": 2025.0,
@@ -977,6 +1012,11 @@
       "total_funding": {
         "value": "官网新闻称 2025–2026 完成“数亿元融资”；2024 年也有“数亿元”融资报道，具体估值和累计融资额需后续核验",
         "sort": 2026.0,
+        "source": null
+      },
+      "positioning": {
+        "value": "端侧小模型 + 本地/设备内部署",
+        "sort": "",
         "source": null
       },
       "arr_revenue": {
@@ -1061,6 +1101,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "positioning": {
+        "value": "语言/视觉/代码模型 + Kimi 助手/Agent",
         "sort": "",
         "source": null
       },
@@ -1156,6 +1201,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "语言/图像/音频/视频模型 + ChatGPT/Codex/Sora",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "收入结构: ChatGPT 订阅、Business / Enterprise seats、API 按量、企业合约、政府合同、云/生态授权、Agent 和未来广告/商业交易；年化收入: 2025 年媒体报道约 $12B; 2026 年 Reuters/媒体报道…",
         "sort": 12.0,
@@ -1241,6 +1291,11 @@
         "sort": 0.17,
         "source": null
       },
+      "positioning": {
+        "value": "语言/图像/视频理解模型 + API",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "报告 ARR: 约 $10.9M(2025,GetLatka)；ARR(2025): 约 $10.9M",
         "sort": 0.0109,
@@ -1315,6 +1370,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "positioning": {
+        "value": "通用超级智能模型研究；暂无公开产品",
         "sort": "",
         "source": null
       },
@@ -1483,6 +1543,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "语言/图像/视频/音频模型 + 助手/API",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "2025 年收入（预计）: 约 5 亿元人民币；2026 年收入（预计）: 约 12 亿元人民币",
         "sort": 1.2000000000000002,
@@ -1564,6 +1629,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "positioning": {
+        "value": "通用多模态模型 + 训练/定制平台",
         "sort": "",
         "source": null
       },
@@ -1725,6 +1795,11 @@
         "sort": "",
         "source": null
       },
+      "positioning": {
+        "value": "开源高效模型 + 端侧 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
@@ -1800,6 +1875,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "positioning": {
+        "value": "开源语言模型 + 企业本地部署/解决方案",
         "sort": "",
         "source": null
       },
