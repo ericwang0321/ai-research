@@ -4059,14 +4059,12 @@
         "source": null
       },
       "customers": {
-        "value": "目标客户: coding agents、chatbots、news monitoring、voice agents、people search、company search、enrichment、research agents、PE/consulting f…",
+        "value": "AI 开发者、Agent/搜索产品团队与研究机构；数千家客户；覆盖 AI 开发工具、销售软件与研究平台",
         "sort": "",
-        "source": null
-      },
-      "query_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "source": {
+          "label": "adoption 已跨 coding agents、sales enrichment、AI apps",
+          "url": ""
+        }
       },
       "data_type": {
         "value": "搜索 API、Agent 检索基础设施",
@@ -4083,6 +4081,10 @@
       {
         "label": "Exa",
         "url": "https://exa.ai/blog/announcing-series-c"
+      },
+      {
+        "label": "adoption 已跨 coding agents、sales enrichment、AI apps",
+        "url": ""
       }
     ]
   },
@@ -4129,12 +4131,7 @@
         }
       },
       "customers": {
-        "value": "Booking.com、Zillow、TIME、Ericsson、GCash、Rivian、Samsung、Vanta、Wealthsimple、Intercom、SeatGeek、Webflow、BetterUp、Intuit、Zapier、Canva、R…",
-        "sort": "",
-        "source": null
-      },
-      "query_usage": {
-        "value": "",
+        "value": "各类中大型企业及其知识工作团队；代表客户覆盖科技、金融、工业、媒体和消费互联网等行业",
         "sort": "",
         "source": null
       },
@@ -4197,12 +4194,7 @@
         "source": null
       },
       "customers": {
-        "value": "目标客户: IT、Engineering、HR、Sales、Marketing、Support、Design、Project Management 和全员知识工作者；客户线索: Asana、Anthropic、Sony AI、MongoDB、Chime、Ab…",
-        "sort": "",
-        "source": null
-      },
-      "query_usage": {
-        "value": "",
+        "value": "各类企业的 IT、工程、销售、HR 与知识工作团队",
         "sort": "",
         "source": null
       },
@@ -4274,12 +4266,7 @@
         "source": null
       },
       "customers": {
-        "value": "目标客户: asset managers、hedge funds、investment banks、private equity、credit funds、law firms、consulting/professional services、Fortune……",
-        "sort": "",
-        "source": null
-      },
-      "query_usage": {
-        "value": "",
+        "value": "金融机构、律所、咨询与专业服务公司",
         "sort": "",
         "source": null
       },
@@ -4348,17 +4335,9 @@
         }
       },
       "customers": {
-        "value": "消费者、学生、知识工作者、企业团队、开发者、媒体/出版商、广告或内容合作方",
+        "value": "消费者、学生、知识工作者、企业团队与开发者；Enterprise 公开称 50,000+ organizations",
         "sort": "",
         "source": null
-      },
-      "query_usage": {
-        "value": "月查询量: 2025 年 5 月 780M queries",
-        "sort": 0.78,
-        "source": {
-          "label": "CEO 在 Bloomberg Tech Summit 透露，TechCrunch/维基汇总引用",
-          "url": ""
-        }
       },
       "data_type": {
         "value": "答案引擎、AI 搜索、AI 浏览器",
@@ -4381,10 +4360,6 @@
       },
       {
         "label": "Sacra/PM Insights 等二级市场和分析口径，需要与公司财务模型核对",
-        "url": ""
-      },
-      {
-        "label": "CEO 在 Bloomberg Tech Summit 透露，TechCrunch/维基汇总引用",
         "url": ""
       },
       {
@@ -4433,15 +4408,7 @@
         "source": null
       },
       "customers": {
-        "value": "客户: Thousands of customers;官网列 Gong、Adobe、Cisco、Workday、L'Oreal、Microsoft、OpenAI、Zapier 等；代表客户: Gong、Adobe、Cisco、Workday、L'Oreal、…",
-        "sort": "",
-        "source": {
-          "label": "AI-native 与传统企业都有覆盖",
-          "url": ""
-        }
-      },
-      "query_usage": {
-        "value": "",
+        "value": "各类 AI 应用企业与开发者，覆盖软件、SaaS 与消费品牌；数千家客户；覆盖企业软件、SaaS、消费品牌与 AI 公司",
         "sort": "",
         "source": null
       },
@@ -4463,10 +4430,6 @@
       {
         "label": "Pinecone",
         "url": "https://www.pinecone.io/blog/series-b/"
-      },
-      {
-        "label": "AI-native 与传统企业都有覆盖",
-        "url": ""
       },
       {
         "label": "收入与 RAG 应用使用量高度相关",
@@ -4511,17 +4474,9 @@
         "source": null
       },
       "customers": {
-        "value": "目标客户: AI agents、research agents、enterprise enrichment、coding/research workflows、金融/销售/法律/咨询/企业自动化；公开客户/伙伴: Writer、MongoDB、Groq、La…",
+        "value": "AI/Agent 开发者及金融、销售、法律、咨询等企业团队",
         "sort": "",
         "source": null
-      },
-      "query_usage": {
-        "value": "300M+",
-        "sort": 0.3,
-        "source": {
-          "label": "已有生产流量，优于纯早期 API",
-          "url": ""
-        }
       },
       "data_type": {
         "value": "搜索 API、Agent 检索基础设施",
@@ -4541,10 +4496,6 @@
       {
         "label": "TechCrunch",
         "url": "https://techcrunch.com/2025/08/06/tavily-raises-25m-to-connect-ai-agents-to-the-web/"
-      },
-      {
-        "label": "已有生产流量，优于纯早期 API",
-        "url": ""
       },
       {
         "label": "ACV 和毛利关键",
@@ -4592,12 +4543,7 @@
         "source": null
       },
       "customers": {
-        "value": "目标客户: AI application teams、enterprise search、RAG、recommendation、agent memory、multi-tenant SaaS、financial/legal/healthcare/media/e…",
-        "sort": 9.0,
-        "source": null
-      },
-      "query_usage": {
-        "value": "",
+        "value": "各类企业 AI/RAG 团队与开发者；数千家客户；覆盖金融、法律、医疗、媒体与企业搜索",
         "sort": "",
         "source": null
       },
