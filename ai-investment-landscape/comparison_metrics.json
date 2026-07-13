@@ -144,9 +144,9 @@
     "company": "Character.AI",
     "short": "Character.AI",
     "slug": "character_ai",
-    "sector": "通用 AI",
-    "comparison_group": "消费对话/陪伴 AI",
-    "comparison_group_rank": 3,
+    "sector": "多模态与内容生成",
+    "comparison_group": "角色互动/AI 娱乐",
+    "comparison_group_rank": 6,
     "layers": [
       "模型层",
       "应用层"
@@ -175,8 +175,8 @@
         "sort": "",
         "source": null
       },
-      "positioning": {
-        "value": "角色/陪伴式消费 AI + 自研对话模型",
+      "content_vertical": {
+        "value": "角色互动/AI 娱乐",
         "sort": "",
         "source": null
       },
@@ -188,20 +188,23 @@
           "url": ""
         }
       },
+      "media": {
+        "value": "AI companion、角色互动、AI 娱乐",
+        "sort": "",
+        "source": null
+      },
       "user_group": {
-        "value": "消费用户、角色扮演与陪伴用户、内容创作者",
+        "value": "角色扮演与陪伴用户、互动内容消费者、角色创作者",
         "sort": "",
         "source": null
       },
-      "open_closed": {
-        "value": "闭源/API 为主",
-        "sort": "",
-        "source": null
-      },
-      "app_entry": {
-        "value": "AI companion、角色聊天、消费 AI",
-        "sort": "",
-        "source": null
+      "pricing": {
+        "value": "YoY +250%",
+        "sort": 250.0,
+        "source": {
+          "label": "2025 FT 没有给出基数",
+          "url": ""
+        }
       }
     },
     "source_links": [
@@ -501,7 +504,7 @@
     "slug": "genspark",
     "sector": "通用 AI",
     "comparison_group": "第三方模型集成应用",
-    "comparison_group_rank": 4,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -575,7 +578,7 @@
     "slug": "granola",
     "sector": "通用 AI",
     "comparison_group": "第三方模型集成应用",
-    "comparison_group_rank": 4,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -723,7 +726,7 @@
     "slug": "manus_butterfly_effect",
     "sector": "通用 AI",
     "comparison_group": "第三方模型集成应用",
-    "comparison_group_rank": 4,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -1094,7 +1097,7 @@
     "slug": "safe_superintelligence_inc_ssi",
     "sector": "通用 AI",
     "comparison_group": "研究型通用智能",
-    "comparison_group_rank": 5,
+    "comparison_group_rank": 4,
     "layers": [
       "模型层"
     ],
