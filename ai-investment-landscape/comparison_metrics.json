@@ -1823,23 +1823,23 @@
       "模型层",
       "应用层"
     ],
-    "latest_round": "外部融资/资本注入",
-    "latest_round_date": "2026-07",
+    "latest_round": "外部融资协议/资本注入",
+    "latest_round_date": "2026-07-02",
     "cells": {
       "valuation": {
-        "value": "约 $18B",
+        "value": "约 US$18B",
         "sort": 18.0,
         "source": {
-          "label": "WSJ",
-          "url": "https://www.wsj.com/tech/kling-raises-2-billion-amid-planned-spinoff-from-kuaishou-8fcd1571"
+          "label": "快手港交所公告",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0702/2026070204065.pdf"
         }
       },
       "latest_raise": {
-        "value": "RMB19.04B",
-        "sort": 2.6444444444444444,
+        "value": "初始认购 RMB13.8236B（US$2.0282B）；总认购上限 RMB20.4471B（US$3B）",
+        "sort": 1.9199444444444447,
         "source": {
-          "label": "WSJ",
-          "url": "https://www.wsj.com/tech/kling-raises-2-billion-amid-planned-spinoff-from-kuaishou-8fcd1571"
+          "label": "快手港交所公告",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0702/2026070204065.pdf"
         }
       },
       "total_funding": {
@@ -1881,8 +1881,8 @@
     },
     "source_links": [
       {
-        "label": "WSJ",
-        "url": "https://www.wsj.com/tech/kling-raises-2-billion-amid-planned-spinoff-from-kuaishou-8fcd1571"
+        "label": "快手港交所公告",
+        "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0702/2026070204065.pdf"
       },
       {
         "label": "快手 · 2026-01-13",
@@ -3724,11 +3724,11 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "2025 年 WSJ 报道 Fireworks ARR 超过 $280M",
+        "value": "2025 年 ARR 超过 $280M",
         "sort": 0.28,
         "source": {
-          "label": "已经不是早期开发者工具,进入规模化商业阶段",
-          "url": ""
+          "label": "WSJ · 2025-10",
+          "url": "https://www.wsj.com/articles/ai-inference-startup-fireworks-ai-is-valued-at-4-billion-in-funding-round-758885c8"
         }
       },
       "customers": {
@@ -3740,11 +3740,11 @@
         }
       },
       "usage_scale": {
-        "value": "2026 BI 报道约 15T tokens/day,从 2025 年末约 10T/day、数月前约 13T/day 增长",
+        "value": "约 15T tokens/day（2026-04；此前 2025 年末约 10T/day）",
         "sort": 2026.0,
         "source": {
-          "label": "说明用量增长非常快,但收入/毛利与模型 mix、价格和 batch/dedicated 比例相关",
-          "url": ""
+          "label": "Business Insider / Yahoo · 2026-04",
+          "url": "https://tech.yahoo.com/ai/articles/fireworks-ai-ceo-explains-why-210242559.html"
         }
       },
       "product_type": {
@@ -3759,16 +3759,16 @@
         "url": "https://www.wsj.com/articles/ai-inference-startup-fireworks-ai-is-valued-at-4-billion-in-funding-round-758885c8"
       },
       {
-        "label": "已经不是早期开发者工具,进入规模化商业阶段",
-        "url": ""
+        "label": "WSJ · 2025-10",
+        "url": "https://www.wsj.com/articles/ai-inference-startup-fireworks-ai-is-valued-at-4-billion-in-funding-round-758885c8"
       },
       {
         "label": "AI-native 客户可带来高增长,也可能集中度高、议价强",
         "url": ""
       },
       {
-        "label": "说明用量增长非常快,但收入/毛利与模型 mix、价格和 batch/dedicated 比例相关",
-        "url": ""
+        "label": "Business Insider / Yahoo · 2026-04",
+        "url": "https://tech.yahoo.com/ai/articles/fireworks-ai-ceo-explains-why-210242559.html"
       }
     ]
   },
