@@ -3,7 +3,7 @@
     "company": "AI21 Labs",
     "short": "AI21 Labs",
     "slug": "ai21_labs",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "企业 AI 平台",
     "comparison_group_rank": 0,
     "layers": [
@@ -144,7 +144,7 @@
     "company": "Character.AI",
     "short": "Character.AI",
     "slug": "character_ai",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "角色互动/AI 娱乐",
     "comparison_group_rank": 6,
     "layers": [
@@ -222,7 +222,7 @@
     "company": "Clay",
     "short": "Clay",
     "slug": "clay",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "销售/GTM",
     "comparison_group_rank": 2,
     "layers": [
@@ -290,7 +290,7 @@
     "company": "Cohere",
     "short": "Cohere",
     "slug": "cohere",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "企业 AI 平台",
     "comparison_group_rank": 0,
     "layers": [
@@ -355,7 +355,7 @@
     "company": "Decagon AI",
     "short": "Decagon AI",
     "slug": "decagon_ai",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "客服/CX",
     "comparison_group_rank": 1,
     "layers": [
@@ -1169,7 +1169,7 @@
     "company": "Sierra",
     "short": "Sierra",
     "slug": "sierra",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "客服/CX",
     "comparison_group_rank": 1,
     "layers": [
@@ -1375,7 +1375,7 @@
     "company": "Writer",
     "short": "Writer",
     "slug": "writer",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "企业 AI 平台",
     "comparison_group_rank": 0,
     "layers": [
@@ -1582,7 +1582,7 @@
     "company": "Black Forest Labs",
     "short": "Black Forest Labs",
     "slug": "black_forest_labs",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "图像生成",
     "comparison_group_rank": 0,
     "layers": [
@@ -1670,7 +1670,7 @@
     "company": "ElevenLabs",
     "short": "ElevenLabs",
     "slug": "elevenlabs",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "语音生成/Voice AI",
     "comparison_group_rank": 3,
     "layers": [
@@ -1745,7 +1745,7 @@
     "company": "HeyGen",
     "short": "HeyGen",
     "slug": "heygen",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "数字人/企业视频",
     "comparison_group_rank": 5,
     "layers": [
@@ -1819,7 +1819,7 @@
     "company": "Kling AI / 可灵AI",
     "short": "Kling AI",
     "slug": "kling_ai_可灵ai",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "视频生成",
     "comparison_group_rank": 1,
     "layers": [
@@ -1901,7 +1901,7 @@
     "company": "Luma AI",
     "short": "Luma AI",
     "slug": "luma_ai",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "视频生成/3D 生成",
     "comparison_group_rank": 1,
     "layers": [
@@ -1976,7 +1976,7 @@
     "company": "Meshy",
     "short": "Meshy",
     "slug": "meshy",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "3D 生成",
     "comparison_group_rank": 2,
     "layers": [
@@ -2048,7 +2048,7 @@
     "company": "Midjourney",
     "short": "Midjourney",
     "slug": "midjourney",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "图像生成",
     "comparison_group_rank": 0,
     "layers": [
@@ -2113,7 +2113,7 @@
     "company": "Pika",
     "short": "Pika",
     "slug": "pika",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "视频生成",
     "comparison_group_rank": 1,
     "layers": [
@@ -2195,7 +2195,7 @@
     "company": "Tripo AI",
     "short": "Tripo AI",
     "slug": "tripo_ai",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "3D 生成",
     "comparison_group_rank": 2,
     "layers": [
@@ -2274,7 +2274,7 @@
     "company": "Runway",
     "short": "Runway",
     "slug": "runway",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "视频生成",
     "comparison_group_rank": 1,
     "layers": [
@@ -2349,7 +2349,7 @@
     "company": "Suno",
     "short": "Suno",
     "slug": "suno",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "音乐生成",
     "comparison_group_rank": 4,
     "layers": [
@@ -2424,7 +2424,7 @@
     "company": "Synthesia",
     "short": "Synthesia",
     "slug": "synthesia",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "数字人/企业视频",
     "comparison_group_rank": 5,
     "layers": [
@@ -2498,9 +2498,9 @@
     "company": "Anysphere / Cursor",
     "short": "Anysphere",
     "slug": "anysphere_cursor",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "代码开发/编程 Agent",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -2528,6 +2528,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "代码开发/编程 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "2025-01 ARR: >$100M；2025-04 revenue: FT 报道约 $200M ARR",
         "sort": 2025.0,
@@ -2536,8 +2541,13 @@
           "url": ""
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "个人开发者、创业团队、软件公司与企业研发团队",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AI Coding、IDE、开发者 Agent",
         "sort": "",
         "source": null
       },
@@ -2548,16 +2558,6 @@
           "label": "Cursor 官方 pricing",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "AI Coding、IDE、开发者 Agent",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -2579,9 +2579,9 @@
     "company": "Braintrust",
     "short": "Braintrust",
     "slug": "braintrust",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "评测与可观测性",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -2609,13 +2609,23 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "评测与可观测性",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "Starter/Pro subscription + processed data usage + score usage + Topics token usage + Enterprise custom pricing + hosted/on-prem/h…",
         "sort": "",
         "source": null
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "AI/ML 工程团队、模型评测团队与企业 AI 产品团队",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "LLM eval、observability、prompt/model 测试",
         "sort": "",
         "source": null
       },
@@ -2626,16 +2636,6 @@
           "label": "Braintrust Pricing",
           "url": "https://www.braintrust.dev/pricing"
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "LLM eval、observability、prompt/model 测试",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -2653,9 +2653,9 @@
     "company": "Browserbase",
     "short": "Browserbase",
     "slug": "browserbase",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "浏览器执行环境",
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -2683,6 +2683,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "浏览器执行环境",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "上线约 16 个月实现 >$3M revenue（累计/TTM/run-rate 口径未说明，2025-06）",
         "sort": 0.003,
@@ -2691,8 +2696,13 @@
           "url": "https://www.upstartsmedia.com/p/browserbase-raises-40m-and-launches-director"
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "Agent 开发者、自动化团队、代码与数据产品团队",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Agent 浏览器自动化运行时",
         "sort": "",
         "source": null
       },
@@ -2703,16 +2713,6 @@
           "label": "低门槛获客",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "Agent 浏览器自动化运行时",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -2734,9 +2734,9 @@
     "company": "Cognition AI / Devin",
     "short": "Cognition AI",
     "slug": "cognition_ai_devin",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "代码开发/编程 Agent",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -2764,6 +2764,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "代码开发/编程 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "$82M",
         "sort": 0.082,
@@ -2772,8 +2777,13 @@
           "url": ""
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "开发者、软件工程团队与企业研发组织",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AI coding agent、软件工程自动化、IDE/agent",
         "sort": "",
         "source": null
       },
@@ -2784,16 +2794,6 @@
           "label": "Devin 官方 pricing",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "AI coding agent、软件工程自动化、IDE/agent",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -2815,9 +2815,9 @@
     "company": "Dify / LangGenius",
     "short": "Dify",
     "slug": "dify_langgenius",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "Agent 开发框架",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -2845,26 +2845,18 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "Agent 开发框架",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "",
         "sort": "",
         "source": null
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "开发者、创业公司、企业 AI 与业务自动化团队",
-        "sort": "",
-        "source": null
-      },
-      "pricing": {
-        "value": "Custom / private deployment / marketplace",
-        "sort": "",
-        "source": {
-          "label": "高 ACV 仍需核验",
-          "url": ""
-        }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
         "sort": "",
         "source": null
       },
@@ -2872,6 +2864,14 @@
         "value": "低代码 AI 应用开发平台、Agent workflow",
         "sort": "",
         "source": null
+      },
+      "pricing": {
+        "value": "API limit: Team no Dify API rate limit；Enterprise: Custom / private deployment / marketplace",
+        "sort": "",
+        "source": {
+          "label": "适合嵌入业务系统",
+          "url": ""
+        }
       }
     },
     "source_links": [
@@ -2880,7 +2880,7 @@
         "url": "https://venturebeat.com/business/dify-raises-30-million-series-pre-a-to-power-enterprise-grade-agentic-workflows/"
       },
       {
-        "label": "高 ACV 仍需核验",
+        "label": "适合嵌入业务系统",
         "url": ""
       }
     ]
@@ -2889,9 +2889,9 @@
     "company": "Emergent",
     "short": "Emergent",
     "slug": "emergent",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "应用生成",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -2922,6 +2922,11 @@
           "url": ""
         }
       },
+      "tool_vertical": {
+        "value": "应用生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "最新收入线索: 2026-02 达 $100M ARR；2026-03 月收入 $8.4M 报道；2026-01 ARR: 从 $100K 到 $50M in seven months",
         "sort": 2026.0,
@@ -2930,9 +2935,14 @@
           "url": ""
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "非技术开发者、创始人、中小企业与 IT 服务商；2026-01 5M users；2026-04 8M+ users 报道",
         "sort": 2026.0,
+        "source": null
+      },
+      "product_type": {
+        "value": "Vibe coding、AI app builder、personal AI agent",
+        "sort": "",
         "source": null
       },
       "pricing": {
@@ -2942,16 +2952,6 @@
           "label": "官方 pricing",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "Vibe coding、AI app builder、personal AI agent",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -2973,9 +2973,9 @@
     "company": "LangChain",
     "short": "LangChain",
     "slug": "langchain",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "Agent 开发框架",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -3003,18 +3003,28 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "Agent 开发框架",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "Seat subscription + usage-based traces/deployment/sandbox/engine + enterprise annual contracts + self-hosted/hybrid",
         "sort": "",
         "source": null
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "AI 应用/Agent 开发者与企业 AI 工程团队；2024 GA 博客披露 5k+ monthly active teams",
         "sort": 2024.0,
         "source": {
           "label": "团队维度转化更关键",
           "url": ""
         }
+      },
+      "product_type": {
+        "value": "Agent / LLM 应用开发框架",
+        "sort": "",
+        "source": null
       },
       "pricing": {
         "value": "Monthly active teams: 2024 GA 博客披露 5k+ monthly active teams；Pricing: Developer free、Plus $39/seat/month、Enterprise custom;traces/…",
@@ -3023,16 +3033,6 @@
           "label": "团队维度转化更关键",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "Agent / LLM 应用开发框架",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -3050,9 +3050,9 @@
     "company": "LlamaIndex",
     "short": "LlamaIndex",
     "slug": "llamaindex",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "Agent 开发框架",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -3077,6 +3077,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "Agent 开发框架",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $10.9M 2025 revenue（QAI 第三方估算，非 ARR/公司披露）",
         "sort": 0.0109,
@@ -3085,8 +3090,13 @@
           "url": "https://qai.io/finance/companies/LLAMAINDEX"
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "RAG/知识应用开发者与企业数据团队",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "RAG 数据连接层、检索/索引框架",
         "sort": "",
         "source": null
       },
@@ -3097,16 +3107,6 @@
           "label": "企业文档工作流",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "RAG 数据连接层、检索/索引框架",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -3128,9 +3128,9 @@
     "company": "Lovable",
     "short": "Lovable",
     "slug": "lovable",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "应用生成",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -3158,6 +3158,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "应用生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "最新公开收入线索: 2026 年 6 月 Business Insider 报道 Lovable 已超过 $500M ARR；2025-07 ARR: 约 $100M ARR，公开报道称 launch 后约 8 个月达成",
         "sort": 2025.0,
@@ -3166,8 +3171,13 @@
           "url": ""
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "创始人、产品/设计/营销团队、开发机构与企业团队",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Vibe coding、AI app builder、no-code/low-code",
         "sort": "",
         "source": null
       },
@@ -3178,16 +3188,6 @@
           "label": "Lovable Pricing",
           "url": "https://lovable.dev/pricing"
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "Vibe coding、AI app builder、no-code/low-code",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -3209,9 +3209,9 @@
     "company": "Poolside AI",
     "short": "Poolside AI",
     "slug": "poolside_ai",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "代码开发/编程 Agent",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层",
       "应用层"
@@ -3240,6 +3240,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "代码开发/编程 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $50M 2025 revenue（GetLatka 第三方估算，非公司披露）",
         "sort": 0.05,
@@ -3248,8 +3253,13 @@
           "url": "https://getlatka.com/companies/poolside-ai"
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "软件工程团队、政府/国防与受监管行业客户",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Code model、software engineering automation、defense coding",
         "sort": "",
         "source": null
       },
@@ -3260,16 +3270,6 @@
           "label": "Poolside · 2026-05-05",
           "url": "https://poolside.ai/blog/introducing-the-poolside-platform"
         }
-      },
-      "model_dependency": {
-        "value": "自有模型+第三方",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "Code model、software engineering automation、defense coding",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -3291,9 +3291,9 @@
     "company": "Replit",
     "short": "Replit",
     "slug": "replit",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "代码开发/编程 Agent",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -3321,6 +3321,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "代码开发/编程 Agent",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "最新收入线索: 2025-10 BI: annual sales 约 $240M；2025-09 annualized revenue 超 $150M；目标 2026 年底 $1B revenue；2024 revenue: 约 $2.8M",
         "sort": 2025.0,
@@ -3329,13 +3334,18 @@
           "url": ""
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "学生、个人开发者、创业团队与企业研发团队；Total users: 约 40M users；Paying users: 约 150K paying users",
         "sort": 150.0,
         "source": {
           "label": "BI 2025-10 报道",
           "url": ""
         }
+      },
+      "product_type": {
+        "value": "AI coding、browser IDE、software agent、hosting",
+        "sort": "",
+        "source": null
       },
       "pricing": {
         "value": "custom，SSO/SAML、single-tenant、VPC 等",
@@ -3344,16 +3354,6 @@
           "label": "官方 pricing",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "AI coding、browser IDE、software agent、hosting",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -3379,9 +3379,9 @@
     "company": "StackBlitz / Bolt.new",
     "short": "StackBlitz",
     "slug": "stackblitz_bolt_new",
-    "sector": "开发工具与 Agent 平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "应用生成",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -3409,6 +3409,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "应用生成",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "最新收入线索: 2025-03 Bolt ARR 约 $40M；2025 年公司称下一个披露目标是 >$100M ARR；首周 ARR: 约新增 $1M ARR；第二周、第三周继续各新增约 $1M ARR",
         "sort": 2025.0,
@@ -3417,8 +3422,13 @@
           "url": ""
         }
       },
-      "developer_customers": {
+      "user_customers": {
         "value": "Web 开发者、创始人、产品团队、开发机构与企业团队",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "Browser IDE、AI app builder、vibe coding",
         "sort": "",
         "source": null
       },
@@ -3429,16 +3439,6 @@
           "label": "官方 pricing",
           "url": ""
         }
-      },
-      "model_dependency": {
-        "value": "第三方/多模型为主",
-        "sort": "",
-        "source": null
-      },
-      "product_type": {
-        "value": "Browser IDE、AI app builder、vibe coding",
-        "sort": "",
-        "source": null
       }
     },
     "source_links": [
@@ -3460,9 +3460,9 @@
     "company": "Anyscale",
     "short": "Anyscale",
     "slug": "anyscale",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "模型运行与推理",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -3487,6 +3487,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "模型运行与推理",
         "sort": "",
         "source": null
       },
@@ -3536,9 +3541,9 @@
     "company": "Baseten",
     "short": "Baseten",
     "slug": "baseten",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "模型运行与推理",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -3563,6 +3568,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "模型运行与推理",
         "sort": "",
         "source": null
       },
@@ -3612,9 +3622,9 @@
     "company": "Databricks",
     "short": "Databricks",
     "slug": "databricks",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "企业数据平台",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -3639,6 +3649,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "企业数据平台",
         "sort": "",
         "source": null
       },
@@ -3696,9 +3711,9 @@
     "company": "Fireworks AI",
     "short": "Fireworks AI",
     "slug": "fireworks_ai",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "模型运行与推理",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -3723,6 +3738,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "模型运行与推理",
         "sort": "",
         "source": null
       },
@@ -3779,9 +3799,9 @@
     "company": "Hugging Face",
     "short": "Hugging Face",
     "slug": "hugging_face",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "模型生态",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -3806,6 +3826,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "模型生态",
         "sort": "",
         "source": null
       },
@@ -3862,9 +3887,9 @@
     "company": "Mercor",
     "short": "Mercor",
     "slug": "mercor",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "训练数据与专家服务",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -3889,6 +3914,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "训练数据与专家服务",
         "sort": "",
         "source": null
       },
@@ -3938,9 +3968,9 @@
     "company": "Modal",
     "short": "Modal",
     "slug": "modal",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "模型运行与推理",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -3970,6 +4000,11 @@
           "label": "Business Insider",
           "url": "https://www.businessinsider.com/ai-startups-most-promising-2024-9"
         }
+      },
+      "infra_vertical": {
+        "value": "模型运行与推理",
+        "sort": "",
+        "source": null
       },
       "arr_revenue": {
         "value": "Usage-based compute by second + Team subscription + Enterprise custom contracts + committed spend through AWS/GCP marketplace",
@@ -4021,9 +4056,9 @@
     "company": "Scale AI",
     "short": "Scale AI",
     "slug": "scale_ai",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "训练数据与专家服务",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -4048,6 +4083,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "训练数据与专家服务",
         "sort": "",
         "source": null
       },
@@ -4097,9 +4137,9 @@
     "company": "Together AI",
     "short": "Together AI",
     "slug": "together_ai",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "模型运行与推理",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -4124,6 +4164,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "模型运行与推理",
         "sort": "",
         "source": null
       },
@@ -4166,7 +4211,7 @@
     "company": "AlphaSense",
     "short": "AlphaSense",
     "slug": "alphasense",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "金融/市场情报/专业研究",
     "comparison_group_rank": 3,
     "layers": [
@@ -4230,9 +4275,9 @@
     "company": "Exa",
     "short": "Exa",
     "slug": "exa",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "互联网搜索 API",
+    "comparison_group_rank": 5,
     "layers": [
       "应用层"
     ],
@@ -4260,6 +4305,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "互联网搜索 API",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $10M ARR / 年化收入（Sacra 估算，2025-09）",
         "sort": 0.01,
@@ -4268,7 +4318,7 @@
           "url": "https://sacra.com/c/exa/"
         }
       },
-      "customers": {
+      "user_customers": {
         "value": "AI 开发者、Agent/搜索产品团队与研究机构；数千家客户；覆盖 AI 开发工具、销售软件与研究平台",
         "sort": "",
         "source": {
@@ -4276,7 +4326,7 @@
           "url": ""
         }
       },
-      "data_type": {
+      "product_type": {
         "value": "搜索 API、Agent 检索基础设施",
         "sort": "",
         "source": null
@@ -4313,9 +4363,9 @@
     "company": "Glean Technologies",
     "short": "Glean Technologies",
     "slug": "glean_technologies",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "企业知识管理",
+    "comparison_group_rank": 7,
     "layers": [
       "应用层"
     ],
@@ -4343,6 +4393,11 @@
         "sort": 0.765,
         "source": null
       },
+      "tool_vertical": {
+        "value": "企业知识管理",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $100M",
         "sort": 0.1,
@@ -4351,12 +4406,12 @@
           "url": ""
         }
       },
-      "customers": {
+      "user_customers": {
         "value": "各类中大型企业及其知识工作团队；代表客户覆盖科技、金融、工业、媒体和消费互联网等行业",
         "sort": "",
         "source": null
       },
-      "data_type": {
+      "product_type": {
         "value": "Enterprise Search、企业知识管理、Work AI",
         "sort": "",
         "source": null
@@ -4389,9 +4444,9 @@
     "company": "GoLinks / GoSearch",
     "short": "GoLinks",
     "slug": "golinks_gosearch",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "企业知识管理",
+    "comparison_group_rank": 7,
     "layers": [
       "应用层"
     ],
@@ -4416,6 +4471,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "企业知识管理",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $15M 2024 revenue（GetLatka 第三方估算）",
         "sort": 0.015,
@@ -4424,19 +4484,19 @@
           "url": "https://getlatka.com/companies/golinks"
         }
       },
-      "customers": {
+      "user_customers": {
         "value": "各类企业的 IT、工程、销售、HR 与知识工作团队",
         "sort": "",
         "source": null
       },
-      "data_type": {
+      "product_type": {
         "value": "企业知识管理、内部搜索、GoSearch",
         "sort": "",
         "source": null
       },
       "pricing": {
-        "value": "Enterprise: Custom，含 SSO/SAML/SCIM、audit log、BYO LLM/BYOC",
-        "sort": "",
+        "value": "Enterprise: Custom，含 SSO/SAML/SCIM、audit log、BYO LLM/BYOC；Customer usage: YC: 75% of all employees at customers use monthly",
+        "sort": 75.0,
         "source": {
           "label": "真正 ACV 增长来源",
           "url": ""
@@ -4462,9 +4522,9 @@
     "company": "Hebbia",
     "short": "Hebbia",
     "slug": "hebbia",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "企业与专业服务 AI",
+    "comparison_group": "金融/投研工作流",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -4495,6 +4555,24 @@
           "url": ""
         }
       },
+      "vertical": {
+        "value": "金融/投研工作流",
+        "sort": "",
+        "source": null
+      },
+      "arr_usage": {
+        "value": "1,000+",
+        "sort": 1000.0,
+        "source": {
+          "label": "产品页",
+          "url": ""
+        }
+      },
+      "target_customers": {
+        "value": "投行、资管、研究机构与企业战略团队",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $13M ARR 且实现盈利（TechCrunch 知情人士口径，2024-06；公司未确认绝对值）",
         "sort": 0.013,
@@ -4502,16 +4580,6 @@
           "label": "TechCrunch · 2024-07-09",
           "url": "https://techcrunch.com/2024/07/09/ai-startup-hebbia-rased-130m-at-a-700m-valuation-on-13-million-of-profitable-revenue/"
         }
-      },
-      "customers": {
-        "value": "金融机构、律所、咨询与专业服务公司",
-        "sort": "",
-        "source": null
-      },
-      "data_type": {
-        "value": "企业知识检索、金融/法律研究工作流",
-        "sort": "",
-        "source": null
       },
       "pricing": {
         "value": "Matrix Enterprise 定制报价；按 named Core User license，特殊用量另行协商",
@@ -4532,6 +4600,10 @@
         "url": ""
       },
       {
+        "label": "产品页",
+        "url": ""
+      },
+      {
         "label": "TechCrunch · 2024-07-09",
         "url": "https://techcrunch.com/2024/07/09/ai-startup-hebbia-rased-130m-at-a-700m-valuation-on-13-million-of-profitable-revenue/"
       },
@@ -4545,9 +4617,9 @@
     "company": "Perplexity AI",
     "short": "Perplexity AI",
     "slug": "perplexity_ai",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "消费搜索",
+    "comparison_group_rank": 6,
     "layers": [
       "应用层"
     ],
@@ -4575,6 +4647,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "消费搜索",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "第三方估算约 $200M；2024 年底估算约 $80M",
         "sort": 0.2,
@@ -4583,18 +4660,18 @@
           "url": ""
         }
       },
-      "customers": {
+      "user_customers": {
         "value": "消费者、学生、知识工作者、企业团队与开发者；Enterprise 公开称 50,000+ organizations",
         "sort": "",
         "source": null
       },
-      "data_type": {
+      "product_type": {
         "value": "答案引擎、AI 搜索、AI 浏览器",
         "sort": "",
         "source": null
       },
       "pricing": {
-        "value": "Enterprise 组织数: 50,000+ organizations trust Perplexity Enterprise",
+        "value": "Enterprise 组织数: 50,000+ organizations trust Perplexity Enterprise；API 单价: Search API $5/1K；Sonar $1/$1 token + request fee；Sonar…",
         "sort": 50000.0,
         "source": {
           "label": "Perplexity Enterprise 官网页面",
@@ -4621,9 +4698,9 @@
     "company": "Pinecone",
     "short": "Pinecone",
     "slug": "pinecone",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "向量数据库",
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -4651,28 +4728,33 @@
         "sort": "",
         "source": null
       },
+      "infra_vertical": {
+        "value": "向量数据库",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "Self-serve plans、pay-as-you-go usage、enterprise minimum usage、committed-use contracts、BYOC、support/security add-ons",
         "sort": "",
         "source": null
       },
       "customers": {
-        "value": "各类 AI 应用企业与开发者，覆盖软件、SaaS 与消费品牌；数千家客户；覆盖企业软件、SaaS、消费品牌与 AI 公司",
+        "value": "客户: Thousands of customers;官网列 Gong、Adobe、Cisco、Workday、L'Oreal、Microsoft、OpenAI、Zapier 等；Customers: 官方客户页称 thousands of customers",
+        "sort": "",
+        "source": {
+          "label": "表明使用广泛,但需拆分免费、self-serve、enterprise",
+          "url": ""
+        }
+      },
+      "usage_scale": {
+        "value": "",
         "sort": "",
         "source": null
       },
-      "data_type": {
+      "product_type": {
         "value": "RAG 向量数据库、检索数据层",
         "sort": "",
         "source": null
-      },
-      "pricing": {
-        "value": "storage/read/write/egress/import/backup/assistant tokens/embedding/rerank",
-        "sort": "",
-        "source": {
-          "label": "收入与 RAG 应用使用量高度相关",
-          "url": ""
-        }
       }
     },
     "source_links": [
@@ -4681,7 +4763,7 @@
         "url": "https://www.pinecone.io/blog/series-b/"
       },
       {
-        "label": "收入与 RAG 应用使用量高度相关",
+        "label": "表明使用广泛,但需拆分免费、self-serve、enterprise",
         "url": ""
       }
     ]
@@ -4690,9 +4772,9 @@
     "company": "Tavily",
     "short": "Tavily",
     "slug": "tavily",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 开发与知识工具",
+    "comparison_group": "互联网搜索 API",
+    "comparison_group_rank": 5,
     "layers": [
       "应用层"
     ],
@@ -4720,6 +4802,11 @@
         "sort": "",
         "source": null
       },
+      "tool_vertical": {
+        "value": "互联网搜索 API",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "约 $2.8M 2025 annual revenue（GetLatka 第三方估算）",
         "sort": 0.0028,
@@ -4728,12 +4815,12 @@
           "url": "https://getlatka.com/companies/tavily.com"
         }
       },
-      "customers": {
+      "user_customers": {
         "value": "AI/Agent 开发者及金融、销售、法律、咨询等企业团队",
         "sort": "",
         "source": null
       },
-      "data_type": {
+      "product_type": {
         "value": "搜索 API、Agent 检索基础设施",
         "sort": "",
         "source": null
@@ -4770,9 +4857,9 @@
     "company": "Weaviate",
     "short": "Weaviate",
     "slug": "weaviate",
-    "sector": "数据与搜索",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "向量数据库",
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -4800,38 +4887,36 @@
         "sort": "",
         "source": null
       },
+      "infra_vertical": {
+        "value": "向量数据库",
+        "sort": "",
+        "source": null
+      },
       "arr_revenue": {
         "value": "Cloud plans + dedicated/enterprise contracts + usage-based embeddings/query agent + support/onboarding/training",
         "sort": "",
         "source": null
       },
       "customers": {
-        "value": "各类企业 AI/RAG 团队与开发者；数千家客户；覆盖金融、法律、医疗、媒体与企业搜索",
+        "value": "目标客户: AI application teams、enterprise search、RAG、recommendation、agent memory、multi-tenant SaaS、financial/legal/healthcare/media/e…",
+        "sort": 9.0,
+        "source": null
+      },
+      "usage_scale": {
+        "value": "",
         "sort": "",
         "source": null
       },
-      "data_type": {
+      "product_type": {
         "value": "RAG 向量数据库、检索数据层",
         "sort": "",
         "source": null
-      },
-      "pricing": {
-        "value": "Free/Flex/Premium/Dedicated",
-        "sort": "",
-        "source": {
-          "label": "自助到企业分层",
-          "url": ""
-        }
       }
     },
     "source_links": [
       {
         "label": "Forbes",
         "url": "https://www.forbes.com/companies/weaviate/"
-      },
-      {
-        "label": "自助到企业分层",
-        "url": ""
       }
     ]
   },
@@ -4839,7 +4924,7 @@
     "company": "Abridge",
     "short": "Abridge",
     "slug": "abridge",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -4917,7 +5002,7 @@
     "company": "Ambience Healthcare",
     "short": "Ambience Healthcare",
     "slug": "ambience_healthcare",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -4981,7 +5066,7 @@
     "company": "Bioptimus",
     "short": "Bioptimus",
     "slug": "bioptimus",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "生命科学/药物发现",
     "comparison_group_rank": 6,
     "layers": [
@@ -5042,7 +5127,7 @@
     "company": "Commure / Athelas",
     "short": "Commure",
     "slug": "commure_athelas",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -5113,7 +5198,7 @@
     "company": "Corgi",
     "short": "Corgi",
     "slug": "corgi",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "保险",
     "comparison_group_rank": 7,
     "layers": [
@@ -5184,7 +5269,7 @@
     "company": "Enveda Biosciences",
     "short": "Enveda Biosciences",
     "slug": "enveda_biosciences",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "生命科学/药物发现",
     "comparison_group_rank": 6,
     "layers": [
@@ -5248,7 +5333,7 @@
     "company": "EvolutionaryScale",
     "short": "EvolutionaryScale",
     "slug": "evolutionaryscale",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "生命科学/药物发现",
     "comparison_group_rank": 6,
     "layers": [
@@ -5302,7 +5387,7 @@
     "company": "Harvey",
     "short": "Harvey",
     "slug": "harvey",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "法律",
     "comparison_group_rank": 4,
     "layers": [
@@ -5359,7 +5444,7 @@
     "company": "Hippocratic AI",
     "short": "Hippocratic AI",
     "slug": "hippocratic_ai",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -5427,7 +5512,7 @@
     "company": "Isomorphic Labs",
     "short": "Isomorphic Labs",
     "slug": "isomorphic_labs",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "生命科学/药物发现",
     "comparison_group_rank": 6,
     "layers": [
@@ -5489,7 +5574,7 @@
     "company": "Legora",
     "short": "Legora",
     "slug": "legora",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "法律",
     "comparison_group_rank": 4,
     "layers": [
@@ -5553,7 +5638,7 @@
     "company": "Nabla",
     "short": "Nabla",
     "slug": "nabla",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -5621,7 +5706,7 @@
     "company": "OpenEvidence",
     "short": "OpenEvidence",
     "slug": "openevidence",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -5685,7 +5770,7 @@
     "company": "Rogo",
     "short": "Rogo",
     "slug": "rogo",
-    "sector": "行业 AI",
+    "sector": "企业与专业服务 AI",
     "comparison_group": "金融/投研工作流",
     "comparison_group_rank": 3,
     "layers": [
@@ -5749,7 +5834,7 @@
     "company": "Suki",
     "short": "Suki",
     "slug": "suki",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -5820,7 +5905,7 @@
     "company": "AIsphere / 爱诗科技 / PixVerse",
     "short": "AIsphere",
     "slug": "aisphere_爱诗科技_pixverse",
-    "sector": "多模态与内容生成",
+    "sector": "内容生成与互动",
     "comparison_group": "视频生成",
     "comparison_group_rank": 1,
     "layers": [
@@ -5906,9 +5991,9 @@
     "company": "GigaAI / 极佳视界",
     "short": "GigaAI",
     "slug": "gigaai_极佳视界",
-    "sector": "行业 AI",
-    "comparison_group": "物理 AI/世界模型仿真",
-    "comparison_group_rank": 11,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "物理与工业系统",
+    "comparison_group_rank": 6,
     "layers": [
       "模型层",
       "应用层"
@@ -5940,21 +6025,31 @@
           "url": ""
         }
       },
-      "vertical": {
-        "value": "物理 AI/世界模型仿真",
+      "infra_vertical": {
+        "value": "物理与工业系统",
         "sort": "",
         "source": null
       },
-      "arr_usage": {
-        "value": "签约 20+ 家国内外头部主机厂（官网，复核于 2026-07-13）",
-        "sort": 2026.0,
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "customers": {
+        "value": "20+ 家国内外头部主机厂",
+        "sort": 20.0,
         "source": {
-          "label": "GigaAI",
+          "label": "GigaAI 官网",
           "url": "https://gigaai.cc/"
         }
       },
-      "target_customers": {
-        "value": "机器人公司、主机厂与自动驾驶研发团队",
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "具身智能、世界模型、机器人/自动驾驶仿真",
         "sort": "",
         "source": null
       }
@@ -5969,7 +6064,7 @@
         "url": ""
       },
       {
-        "label": "GigaAI",
+        "label": "GigaAI 官网",
         "url": "https://gigaai.cc/"
       }
     ]
@@ -5978,7 +6073,7 @@
     "company": "United Imaging Intelligence / 联影智能",
     "short": "United Imaging Intelligence",
     "slug": "united_imaging_intelligence_联影智能",
-    "sector": "行业 AI",
+    "sector": "医疗与生命科学 AI",
     "comparison_group": "医疗",
     "comparison_group_rank": 5,
     "layers": [
@@ -6042,9 +6137,9 @@
     "company": "Terminus / 特斯联",
     "short": "Terminus",
     "slug": "terminus_特斯联",
-    "sector": "行业 AI",
-    "comparison_group": "AIoT/空间智能",
-    "comparison_group_rank": 9,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "物理与工业系统",
+    "comparison_group_rank": 6,
     "layers": [
       "应用层"
     ],
@@ -6072,21 +6167,34 @@
         "sort": "",
         "source": null
       },
-      "vertical": {
-        "value": "AIoT/空间智能",
+      "infra_vertical": {
+        "value": "物理与工业系统",
         "sort": "",
         "source": null
       },
-      "arr_usage": {
-        "value": "2024 年收入人民币 18.43 亿元；2025H1 收入人民币 6.32 亿元、客户 900+ 家（招股书口径）",
+      "arr_revenue": {
+        "value": "2024 年收入: 人民币 18.43 亿元",
         "sort": 0.2559722222222222,
         "source": {
           "label": "新浪财经 · 2025-11-26",
           "url": "https://finance.sina.com.cn/stock/hkstock/hkzmt/2025-11-26/doc-infysxmh2243579.shtml"
         }
       },
-      "target_customers": {
-        "value": "城市、园区、楼宇与公共空间运营方",
+      "customers": {
+        "value": "2025 年上半年客户/覆盖: 900+ 家客户、172 个城市；客户和项目: 官网未系统披露",
+        "sort": 2025.0,
+        "source": {
+          "label": "新浪财经 · 2025-11-26",
+          "url": "https://finance.sina.com.cn/stock/hkstock/hkzmt/2025-11-26/doc-infysxmh2243579.shtml"
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "AIoT、空间智能、城市/园区智能体",
         "sort": "",
         "source": null
       }
@@ -6103,76 +6211,12 @@
     ]
   },
   {
-    "company": "Neuracle / 博睿康",
-    "short": "Neuracle",
-    "slug": "neuracle_博睿康",
-    "sector": "行业 AI",
-    "comparison_group": "脑机接口/神经科技",
-    "comparison_group_rank": 10,
-    "layers": [
-      "应用层"
-    ],
-    "latest_round": "E 轮",
-    "latest_round_date": "2025-11",
-    "cells": {
-      "valuation": {
-        "value": "人民币 40 亿",
-        "sort": 0.5555555555555556,
-        "source": {
-          "label": "瑞财经",
-          "url": "https://m.rccaijing.com/news-7479734005119251959.html"
-        }
-      },
-      "latest_raise": {
-        "value": "人民币 3 亿元",
-        "sort": 0.04166666666666667,
-        "source": {
-          "label": "瑞财经",
-          "url": "https://m.rccaijing.com/news-7479734005119251959.html"
-        }
-      },
-      "total_funding": {
-        "value": "",
-        "sort": "",
-        "source": null
-      },
-      "vertical": {
-        "value": "脑机接口/神经科技",
-        "sort": "",
-        "source": null
-      },
-      "arr_usage": {
-        "value": "2025 年收入人民币 1.08 亿元（招股书口径，2026-06）",
-        "sort": 2026.0,
-        "source": {
-          "label": "每日经济新闻 · 2026-06-22",
-          "url": "https://www.nbd.com.cn/articles/2026-06-22/4433547.html"
-        }
-      },
-      "target_customers": {
-        "value": "医院、科研机构、康复与神经科技团队",
-        "sort": "",
-        "source": null
-      }
-    },
-    "source_links": [
-      {
-        "label": "瑞财经",
-        "url": "https://m.rccaijing.com/news-7479734005119251959.html"
-      },
-      {
-        "label": "每日经济新闻 · 2026-06-22",
-        "url": "https://www.nbd.com.cn/articles/2026-06-22/4433547.html"
-      }
-    ]
-  },
-  {
     "company": "Semi-tech / 赛美特",
     "short": "Semi-tech",
     "slug": "semi_tech_赛美特",
-    "sector": "行业 AI",
-    "comparison_group": "工业软件/半导体制造",
-    "comparison_group_rank": 8,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "物理与工业系统",
+    "comparison_group_rank": 6,
     "layers": [
       "应用层"
     ],
@@ -6200,21 +6244,34 @@
         "sort": "",
         "source": null
       },
-      "vertical": {
-        "value": "工业软件/半导体制造",
+      "infra_vertical": {
+        "value": "物理与工业系统",
         "sort": "",
         "source": null
       },
-      "arr_usage": {
-        "value": "2025 年收入人民币 7.31 亿元；年末客户 843 家（招股书口径，2026-04）",
-        "sort": 2026.0,
+      "arr_revenue": {
+        "value": "人民币 7.31 亿元",
+        "sort": 0.10152777777777779,
         "source": {
           "label": "东方财富 · 2026-04-14",
           "url": "https://finance.eastmoney.com/a/202604143704430518.html"
         }
       },
-      "target_customers": {
-        "value": "晶圆厂、封测厂与半导体制造运营团队",
+      "customers": {
+        "value": "843 家制造企业（2025 年末）",
+        "sort": 2025.0,
+        "source": {
+          "label": "东方财富 · 2026-04-14",
+          "url": "https://finance.eastmoney.com/a/202604143704430518.html"
+        }
+      },
+      "usage_scale": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "product_type": {
+        "value": "半导体 CIM、MES、工业软件、AI 赋能制造",
         "sort": "",
         "source": null
       }
@@ -6234,9 +6291,9 @@
     "company": "Enflame / 燧原科技",
     "short": "Enflame",
     "slug": "enflame_燧原科技",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "AI 芯片",
+    "comparison_group_rank": 5,
     "layers": [
       "应用层"
     ],
@@ -6261,6 +6318,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "AI 芯片",
         "sort": "",
         "source": null
       },
@@ -6317,9 +6379,9 @@
     "company": "Sunrise AI / 曦望智能",
     "short": "Sunrise AI",
     "slug": "sunrise_ai_曦望智能",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "AI 芯片",
+    "comparison_group_rank": 5,
     "layers": [
       "应用层"
     ],
@@ -6349,6 +6411,11 @@
           "label": "中国证券报",
           "url": ""
         }
+      },
+      "infra_vertical": {
+        "value": "AI 芯片",
+        "sort": "",
+        "source": null
       },
       "arr_revenue": {
         "value": "",
@@ -6393,9 +6460,9 @@
     "company": "ADA Space / 国星宇航",
     "short": "ADA Space",
     "slug": "ada_space_国星宇航",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "卫星与空间计算",
+    "comparison_group_rank": 7,
     "layers": [
       "应用层"
     ],
@@ -6420,6 +6487,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "卫星与空间计算",
         "sort": "",
         "source": null
       },
@@ -6472,9 +6544,9 @@
     "company": "Origin Quantum / 本源量子",
     "short": "Origin Quantum",
     "slug": "origin_quantum_本源量子",
-    "sector": "AI 基础设施与数据平台",
-    "comparison_group": "",
-    "comparison_group_rank": 99,
+    "sector": "AI 基础设施与产业系统",
+    "comparison_group": "量子计算",
+    "comparison_group_rank": 8,
     "layers": [
       "应用层"
     ],
@@ -6499,6 +6571,11 @@
       },
       "total_funding": {
         "value": "",
+        "sort": "",
+        "source": null
+      },
+      "infra_vertical": {
+        "value": "量子计算",
         "sort": "",
         "source": null
       },
