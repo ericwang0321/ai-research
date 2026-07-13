@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 公司全景导读与深研名单</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+body{background:#fff}
+.guide-shell{max-width:1040px;margin:0 auto;padding:28px 32px 72px}
+.guide-head{padding:22px 0 18px;border-bottom:1px solid var(--line)}
+.guide-head h1{font-size:30px;line-height:1.3;font-weight:850;margin-bottom:8px}
+.guide-head .lead{max-width:860px;color:var(--ink2);font-size:14px;line-height:1.75}
+.guide-meta{margin-top:8px;color:var(--ink3);font-size:12px}
+.guide-toc{position:sticky;top:59px;z-index:35;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.guide-toc a{flex:0 0 auto;border:1px solid var(--line);border-radius:16px;padding:5px 10px;color:var(--ink2);font-size:11.5px;font-weight:700;background:#fff}
+.guide-toc a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.guide-article{max-width:880px;margin:0 auto}
+.guide-article .section{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:30px 0 34px;margin:0;box-shadow:none}
+.guide-article .section:last-child{border-bottom:0}
+.guide-article .section-title{font-size:22px;line-height:1.35;margin-bottom:16px;scroll-margin-top:116px}
+.guide-article .subsection{font-size:15px;line-height:1.45;margin:20px 0 7px}
+.guide-article .subsection a{font-weight:800;color:var(--accent2)}
+.guide-article p{font-size:14px;line-height:1.85;color:var(--ink2);margin:0 0 12px}
+.guide-article strong{color:var(--ink);font-weight:800}
+.guide-article ol,.guide-article ul{padding-left:22px;margin:8px 0 14px;color:var(--ink2)}
+.guide-article li{margin:6px 0;line-height:1.75}
+.guide-article #top10{color:#991b1b}
+.guide-disclaimer{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink3);font-size:11.5px;line-height:1.7}
+@media(max-width:720px){.guide-shell{padding:18px 16px 54px}.guide-head h1{font-size:24px}.guide-article .section{padding:24px 0 28px}.guide-article .section-title{font-size:20px}.guide-article p{font-size:13.5px}}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <a class="crumb" href="../comparison.html">公司横向对比</a>
+</div>
+<main class="guide-shell">
+  <header class="guide-head">
+    <h1>AI 公司全景导读与深研名单</h1>
+    <div class="lead">用简单语言说明 6 个赛道、89 家公司在做什么、价值来自哪里，以及哪些公司值得进入下一轮投资尽调。</div>
+    <div class="guide-meta">研究基准日：2026-07-13 · Top 10 是深研优先级，不构成无条件投资建议</div>
+  </header>
+  <nav class="guide-toc"><a href="#method">阅读方法</a><a href="#top10">优先深研 10 家</a><a href="#general-ai">通用 AI</a><a href="#multimodal">多模态与内容生成</a><a href="#developer-tools">开发工具与 Agent 平台</a><a href="#data-search">数据与搜索</a><a href="#industry-ai">行业 AI</a><a href="#infrastructure">AI 基础设施与数据平台</a><a href="#why-not">为什么暂不优先</a><a href="#conclusion">结论</a></nav>
+  <article class="guide-article"><section class="section">
+<h2 class="section-title" id="method">阅读方法</h2>
+<p>AI 产业的价值并不会只留在模型公司。模型决定能力上限，但应用掌握用户入口，数据决定回答是否可靠，工作流决定产品是否真正进入业务，基础设施则承接训练、推理、部署和治理。长期价值更可能流向能够控制关键入口、沉淀专有数据、形成高切换成本，并把技术优势转化为稳定收入和现金流的公司。</p>
+<p>这份导读按六个赛道组织，每家公司用一段话回答五个问题：它做什么，和同类相比有什么不同，向谁收费，为什么客户愿意持续付费，以及现阶段是否值得进入下一轮尽调。判断尽量使用公开可回源的收入、客户、用户、用量、融资和估值信息；没有披露的数据不硬估，也不因为缺失就按零处理。</p>
+<p>“优先深研”不是给公司打分，更不是无条件投资建议。入选公司需要同时具备较清楚的控制点、已经出现的商业化证据和仍可讨论的投资路径；估值过高、交易状态变化、收入质量不透明、项目制过重、产品同质化或监管风险，都可能让战略价值很高的公司暂时排在后面。下一步仍要核验财务报表、客户合同、留存、毛利、股权条款和退出路径。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="top10">优先深研 10 家</h2>
+<p>以下名单用于进入下一轮商业、财务、技术与法律尽调，并按当前证据强度排序；它不是无条件投资建议，也不代表现有估值已经提供足够安全边际。后续判断仍应以数据室、合同抽样、客户访谈、单位经济性和股权文件为准。</p>
+<h3 class="subsection">1. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/anthropic.html" target="_blank" rel="noopener">Anthropic</a></h3>
+<p>控制点在于把前沿模型能力嵌入代码与高价值知识工作，并以安全品牌、长上下文、Claude Code、企业治理和多云分发形成组合壁垒；这使其更像企业 AI 与开发者工作平台，而不只是聊天产品。公司于 2026-05-28 完成 650 亿美元 Series H，投后估值 9,650 亿美元，并称 5 月初收入 run-rate 已越过 470 亿美元，商业化证据极强但并非审计收入。主要风险是估值容错率极低、训练推理资本强度、云与渠道依赖、低价模型替代及安全监管反噬。值得进入下一轮，重点核验 Claude Code 与 API 收入拆分、毛利、净留存、算力采购承诺和客户集中度。</p>
+<p>来源：<a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Anthropic Series H（2026-05-28）</a>；<a href="https://www.axios.com/2026/05/28/anthropic-ai-fundraising-openai" target="_blank" rel="noopener">Axios 融资复核（2026-05-28）</a></p>
+<h3 class="subsection">2. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/moonshot_ai_月之暗面_kimi.html" target="_blank" rel="noopener">Moonshot AI / 月之暗面 / Kimi</a></h3>
+<p>控制点是消费助手、长上下文、开放权重 MoE 模型、低价 API 与研究、编程、办公 Agent 共用一套产品入口，既争夺用户心智，也争夺开发者分发；护城河来自中文场景、模型效率、迭代速度及模型与应用的闭环。2026-05-07，TechCrunch 援引本轮财务顾问披露，约 20 亿美元融资已完成，估值约 200 亿美元，4 月 ARR 超过 2 亿美元，主要由订阅与 API 拉动；该 ARR 仍非审计口径。风险包括低价推理毛利、算力与出口限制、开放模型削弱 API 独占性、消费端低迁移成本及股东治理。值得深研其付费率、API 毛利、企业合同、留存和股权清洁度。</p>
+<p>来源：<a href="https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" target="_blank" rel="noopener">TechCrunch 融资及 ARR（2026-05-07）</a>；<a href="https://www.moonshot.ai/en" target="_blank" rel="noopener">Moonshot AI 产品动态（2026-04-20）</a></p>
+<h3 class="subsection">3. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/aisphere_爱诗科技_pixverse.html" target="_blank" rel="noopener">AIsphere / 爱诗科技 / PixVerse</a></h3>
+<p>控制点是自研视频生成基础模型、消费创作工具、企业 API 与实时交互世界模型同栈，既可用模板和分享获取全球用户，也能把模型能力卖给内容生产团队；单次榜单领先不构成永久壁垒，真正壁垒是生成质量、速度、成本、用户数据与分发飞轮。公司 2026-03-12 宣布完成 Series C，官方称进入独角兽行列；Bloomberg 报道融资额为 3 亿美元，但精确投后估值未披露。官方同期披露超过 1 亿用户、1,600 万月活和累计生成 21 亿条视频；超过 4,000 万美元 ARR 为媒体转述，未见公司新闻稿直接列示。风险是视频模型商品化、算力成本、版权合规和热度向高毛利收入转化。值得核验付费 cohort、API 占比及单条视频毛利。</p>
+<p>来源：<a href="https://pixverse.ai/en/blog/pixverse-joins-global-ai-unicorns-asia-largest-funding-ai-video" target="_blank" rel="noopener">PixVerse Series C 与运营数据（2026-03-12）</a>；<a href="https://www.bloomberg.com/news/articles/2026-03-12/alibaba-backed-video-ai-startup-pixverse-raises-300-million" target="_blank" rel="noopener">Bloomberg 融资额（2026-03-12）</a>；<a href="https://www.chnfund.com/article/AR51395e01-f7ab-67ad-7302-3a1ff40a14e7" target="_blank" rel="noopener">中国基金报 ARR 转述（2026-03-12）</a></p>
+<h3 class="subsection">4. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/lovable.html" target="_blank" rel="noopener">Lovable</a></h3>
+<p>控制点是让非工程师从自然语言直接生成、部署并持续修改应用，把 AI coding 的市场从开发者扩到创始人、设计与业务团队；项目分享、生成与修复数据、托管运行时和企业治理可共同形成壁垒。公司称 2026 年 6 月年化收入 run-rate 已超过 5 亿美元、累计项目超 5,000 万个且每周新增 100 万个。最近已完成交易仍是 2025-12-18 的 3.3 亿美元 Series B、估值 66 亿美元；截至 2026-07-08，拟融资 3 亿美元、估值 132 亿美元仍处洽谈，不能当作成交价。风险是生成应用的安全、维护与留存、第三方模型依赖及企业 shadow IT。值得核验净收入留存、企业 ARR、推理毛利和生产环境事故率。</p>
+<p>来源：<a href="https://techcrunch.com/2026/06/09/lovable-says-it-has-hit-500m-in-annualized-revenue-with-1-million-new-projects-a-week/" target="_blank" rel="noopener">TechCrunch 收入与项目数（2026-06-09）</a>；<a href="https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/" target="_blank" rel="noopener">TechCrunch 新轮洽谈（2026-07-08）</a>；<a href="https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/" target="_blank" rel="noopener">TechCrunch Series B（2025-12-18）</a></p>
+<h3 class="subsection">5. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/exa.html" target="_blank" rel="noopener">Exa</a></h3>
+<p>控制点是自建面向 Agent 的网页爬虫、索引、排序、内容抽取和垂直检索，而非转售传统搜索结果；结构化、低延迟、可引用且节省 token 的输出，使其有机会成为 AI 应用访问外部实时信息的基础层。公司于 2026-05-20 完成 2.5 亿美元 Series C，估值 22 亿美元，并披露服务超过 5,000 家公司和 40 万名开发者、跟踪超过 5,000 亿个 URL；收入和 ARR 未披露。护城河来自独立索引、专用检索模型、生产集成与规模成本曲线，风险则是模型平台内置搜索、API 切换成本低、内容授权与爬虫限制以及高 QPS 的基础设施毛利。值得深研其付费查询增长、客户集中、搜索质量留存和单位查询贡献利润。</p>
+<p>来源：<a href="https://exa.ai/blog/announcing-series-c" target="_blank" rel="noopener">Exa Series C、客户与索引规模（2026-05-20）</a></p>
+<h3 class="subsection">6. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/clay.html" target="_blank" rel="noopener">Clay</a></h3>
+<p>控制点是把 150 多个数据源、瀑布式补全、AI 网页研究、意向信号、CRM 同步与触达动作放进可编排工作台，成为销售和增长 Agent 的数据与行动层，而不是单一联系人数据库；多源市场、工作流模板、社区和深度嵌入共同增加迁移成本。公司确认 2025 年 12 月 ARR 达 1 亿美元、服务 1.4 万客户且企业净收入留存超过 200%。2026-01-28 的最新资本化事件是最高 5,500 万美元员工 tender，对应 50 亿美元估值，不是一级增资；Sacra 估算 2026 年 5 月 ARR 约 1.5 亿美元，非公司披露。风险是数据供应商成本与合规、外呼拥挤、CRM 内置化及估值倍数。值得核验 actions 与数据 credits 的分部毛利、真实付费 cohort 和企业续约。</p>
+<p>来源：<a href="https://www.businesswire.com/news/home/20260128514638/en/Clay-Announces-Second-Employee-Tender-Offer-in-Nine-Months-at-a-%245B-Valuation" target="_blank" rel="noopener">Clay tender 与公司指标（2026-01-28）</a>；<a href="https://sacra.com/research/clay-crosses-150m-year/" target="_blank" rel="noopener">Sacra ARR 估算（2026-06-30，估算截至 2026-05）</a></p>
+<h3 class="subsection">7. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/sierra.html" target="_blank" rel="noopener">Sierra</a></h3>
+<p>控制点是围绕客服与客户旅程构建可执行、可记忆、跨渠道的 Agent OS，并以结果计费而非仅按席位或 token 收费；这让产品直接对应解决率、转化、留存等业务预算，Agent Data Platform 与大型企业实施能力构成壁垒。公司称 2026-02-06 ARR 超过 1.5 亿美元；2026-05-04 宣布融资 9.5 亿美元、估值超过 150 亿美元，Axios 报道投后估值为 158 亿美元。公司同时披露服务超过 40% 的 Fortune 50，平台处理数十亿次客户交互。主要风险是结果归因争议、语音与长会话成本、定制交付拖累毛利、错误动作损伤客户品牌及既有软件套件捆绑。值得核验合同归因条款、毛利、净留存、人工兜底比例和大客户集中度。</p>
+<p>来源：<a href="https://sierra.ai/blog/better-customer-experiences-built-on-sierra" target="_blank" rel="noopener">Sierra 融资与客户规模（2026-05-04）</a>；<a href="https://sierra.ai/blog/year-two-in-review" target="_blank" rel="noopener">Sierra ARR（2026-02-06）</a>；<a href="https://www.axios.com/pro/enterprise-software-deals/2026/05/04/sierra-ai-valuation-agentic-enterprise" target="_blank" rel="noopener">Axios 交易口径（2026-05-04）</a></p>
+<h3 class="subsection">8. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/harvey.html" target="_blank" rel="noopener">Harvey</a></h3>
+<p>控制点是把法律研究、合同、尽调、诉讼与合规工作流做成可审计的专业 Agent，并以顶级客户信任、法律工程团队、客户自定义工作流与真实使用数据建立垂直壁垒；在 AI 时代，它争夺的是专业服务操作系统，而非通用问答入口。公司于 2026-03-25 完成 2 亿美元融资，估值 110 亿美元，并披露超过 10 万名律师、1,300 家机构、60 多个国家及 2.5 万个自定义 Agent；公司最近一次明确 ARR 披露为 2025 年 7 月超过 1 亿美元，Sacra 对 2026 年 5 月 3 亿美元 ARR 的数字属于估算。风险是法律错误责任、保密与特权数据、token 成本、客户自建和专业内容平台竞争。值得核验审计 ARR、模型后毛利、错误损失、续约及使用深度。</p>
+<p>来源：<a href="https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises" target="_blank" rel="noopener">Harvey 融资与客户数据（2026-03-25）</a>；<a href="https://www.harvey.ai/blog/harveys-three-year-anniversary" target="_blank" rel="noopener">Harvey 公司 ARR 里程碑（2025-07）</a>；<a href="https://sacra.com/c/harvey/" target="_blank" rel="noopener">Sacra ARR 估算（估算截至 2026-05）</a></p>
+<h3 class="subsection">9. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/abridge.html" target="_blank" rel="noopener">Abridge</a></h3>
+<p>控制点是从临床对话进入电子病历，再向护理文档、收入周期、临床决策和支付协同延伸；深度工作流集成、医学语境模型、医院信任与大规模真实对话数据，可能把单点语音记录升级为医疗智能基础层。公司 2026-06-11 披露已在 300 多个医疗系统上线、每年支持超过 1 亿次对话，覆盖机构合计服务 2.5 亿多患者。最近可核验的定价轮是 2025-06-24 的 3 亿美元 Series E，媒体估值 53 亿美元；2026 年 6 月药企战略投资金额及新估值未披露，ARR 亦未披露。主要风险是临床错误、隐私、收入编码审计、电子病历平台捆绑和实施周期。值得核验 ARR、活跃医生渗透率、单院扩张、毛利及安全事件。</p>
+<p>来源：<a href="https://www.abridge.com/press-release/patient-centered-clinician-intelligence-platform-keynote" target="_blank" rel="noopener">Abridge 平台与运营规模（2026-06-11）</a>；<a href="https://www.wsj.com/articles/abridge-whose-ai-app-takes-notes-for-doctors-valued-at-5-3-billion-at-funding-801825f3" target="_blank" rel="noopener">WSJ Series E 估值（2025-06-24）</a>；<a href="https://www.statnews.com/2026/06/11/abridge-inks-deals-with-nvidia-and-lilly/" target="_blank" rel="noopener">STAT 战略投资（2026-06-11）</a></p>
+<h3 class="subsection">10. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/databricks.html" target="_blank" rel="noopener">Databricks</a></h3>
+<p>控制点是企业私有数据、计算、权限、血缘和治理：当 Agent 需要安全调用内部数据时，统一目录与 Lakehouse 可成为默认后端；开源生态、大客户嵌入和跨云部署构成复合护城河。公司 2026-02-09 披露收入 run-rate 超 54 亿美元、同比增长超过 65%、AI 产品 run-rate 14 亿美元、过去 12 个月自由现金流为正，并拥有 800 多个年消费 run-rate 超 100 万美元的客户及 2 万多家组织。同期约 50 亿美元股权融资按 1,340 亿美元估值完成，另获约 20 亿美元债务额度；2026-06-08 报道的 1,650 亿至 1,750 亿美元新估值仍属洽谈。风险是云厂商捆绑、平台复杂度、AI 工作负载毛利和高估值。值得核验净留存、FCF 质量、AI 收入增量与客户集中度。</p>
+<p>来源：<a href="https://www.prnewswire.com/news-releases/databricks-grows-65-yoy-surpasses-5-4-billion-revenue-run-rate-doubles-down-on-lakebase-and-genie-302682674.html" target="_blank" rel="noopener">Databricks 财务与融资公告（2026-02-09）</a>；<a href="https://www.investing.com/news/stock-market-news/databricks-in-talks-to-raise-funds-at-over-165-billion-the-information-reports-4731960" target="_blank" rel="noopener">Reuters 新轮洽谈（2026-06-08）</a></p>
+</section>
+<section class="section">
+<h2 class="section-title" id="general-ai">通用 AI</h2>
+<p>通用 AI 赛道同时覆盖前沿基础模型、高效端侧模型、通用 Agent 与依托第三方模型形成的生产力应用。模型公司的价值主要来自能力领先、开发者生态、企业分发与算力效率；应用公司的价值则取决于能否占据高频入口，把模型能力沉淀为稳定工作流、用户数据和可重复付费。</p>
+<p>投资判断不应只看模型榜单或产品热度，而要区分技术领先能否转化为收入、毛利和留存。重点观察 API 与订阅的付费质量、企业合同及部署深度、推理和训练成本、核心团队稳定性与平台依赖；对尚无产品或收入的研究实验室，则应按高方差技术期权而非成熟软件公司审视。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/anthropic.html" target="_blank" rel="noopener">Anthropic</a></h3>
+<p>该公司研发前沿大模型，并以 Claude、代码 Agent、API 和企业服务切入高价值知识工作。独特点是安全品牌、长上下文、代码能力及云渠道协同；收入来自个人与团队订阅、企业席位和 API 用量。其商业价值在于成为企业可信模型与开发工具入口，但高估值、算力成本和云平台依赖仍需验证。列入优先深研：产品增长与企业分发较强，需重点核验毛利和留存。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/character_ai.html" target="_blank" rel="noopener">Character.AI</a></h3>
+<p>该公司提供角色聊天与 AI 陪伴社区，独特点是沉浸式角色互动、用户生成角色网络和创作者生态，而非单纯追求模型排名。收入可来自会员订阅、广告及技术授权，商业价值在于形成 AI 原生互动娱乐平台。核心风险集中于未成年人保护、心理健康、版权与核心技术团队流失。暂不优先：消费吸引力突出，但安全治理和收入质量的不确定性过高。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/deepseek_深度求索.html" target="_blank" rel="noopener">DeepSeek / 深度求索</a></h3>
+<p>该公司研发推理与通用大模型，以开源权重、低成本训练推理和低价 API 形成行业影响力，独特点是工程效率及对模型价格体系的冲击。收入方向主要是 API 用量与企业服务，商业价值还包括国产模型生态和开发者心智。其客户付费、毛利、治理及跨境合规仍缺少充分披露。暂不优先：技术信号强，但商业化与财务可验证性不足。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/genspark.html" target="_blank" rel="noopener">Genspark</a></h3>
+<p>该公司把搜索、研究、文档、演示、多媒体生成及业务操作整合为 AI 工作空间，独特点是跨工具完成可交付成果，而非只提供答案。收入来自个人订阅、团队席位、企业合同和任务额度，商业价值是成为中小团队的通用生产界面。其壁垒受制于第三方模型、同类平台内置功能和高成本任务的单位经济性。暂不优先：产品覆盖广，但留存、毛利与企业扩张尚待证明。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/granola.html" target="_blank" rel="noopener">Granola</a></h3>
+<p>该公司提供会议笔记与团队记忆工具，结合用户主动记录、后台转写、会后总结和跨会议检索；不需要机器人账号加入会议、可积累团队上下文并连接外部工具，是其主要特点。收入来自个人免费增值、团队与企业按席位订阅。商业价值在于把会议沉淀为可供外部 Agent 调用的组织数据层，但会议平台原生功能可能压缩空间。暂不优先：会议记录属于高频场景，但独立上下文层的长期护城河仍需验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/liquid_ai.html" target="_blank" rel="noopener">Liquid AI</a></h3>
+<p>该公司研发非 Transformer 的高效基础模型，面向端侧、边缘和私有部署，独特点是更低内存占用及与芯片、汽车和设备生态的适配。收入模式以商业授权、OEM、私有化部署和企业合同为主，而非纯按 token 售卖。其商业价值是打开云端巨头较弱的本地推理市场，但架构优势可能被主流模型优化追平，销售兑现周期也较长。暂不优先：路线差异鲜明，收入规模化仍待验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/manus_butterfly_effect.html" target="_blank" rel="noopener">Manus / Butterfly Effect</a></h3>
+<p>该公司提供能调用多模型、云端电脑、浏览器和外部工具的通用 Agent，可从自然语言任务生成研究、网页、演示及跨系统操作。独特点是工作流广度与交付速度；收入来自任务额度、团队计划、连接器和 API。商业价值在于把聊天升级为可执行自动化，但底层模型依赖、任务可靠性和毛利仍有不确定性。暂不优先：Meta 收购已于 2026 年 4 月被中国监管部门叫停并被要求撤回，当前独立经营状况及后续交易安排仍需核验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/modelbest_面壁智能.html" target="_blank" rel="noopener">ModelBest / 面壁智能</a></h3>
+<p>该公司以 MiniCPM 系列端侧小模型服务手机、电脑、汽车、机器人和行业专网，独特点是能力密度、低内存、本地隐私与国产硬件适配。收入可来自设备授权、私有化部署及行业项目，商业价值在于成为端侧 AI 的模型与系统软件层。当前量产出货、授权价格、收入质量和交付毛利披露有限。暂不优先：技术定位清晰，但需先证明合作已从演示转化为可重复量产收入。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/moonshot_ai_月之暗面_kimi.html" target="_blank" rel="noopener">Moonshot AI / 月之暗面 / Kimi</a></h3>
+<p>该公司兼具消费端助手、长上下文产品认知、开放模型、API 与研究、编程和办公 Agent，独特点是模型能力与产品入口并重。收入可来自会员订阅、API 用量和企业服务，商业价值在于把用户流量、开发者生态与高价值工作流汇成平台。主要风险是算力成本、付费转化、股权治理及估值兑现。列入优先深研：公司同时拥有基础模型、消费端产品和开放平台，需核验收入质量与单位经济性。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/openai.html" target="_blank" rel="noopener">OpenAI</a></h3>
+<p>该公司从前沿模型扩展至消费者助手、开发者 API、企业工作区、代码与通用 Agent，独特点是品牌、分发、开发生态和大规模算力资本的组合。收入来自个人及团队订阅、企业席位、API 用量和工作流服务。其商业价值在于同时占据消费者、开发者和企业工作入口，但巨额训练推理投入、治理监管和高估值都要求收入持续增长。暂不优先：平台地位突出，但现阶段风险回报受估值与资本强度约束。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/reka_ai.html" target="_blank" rel="noopener">Reka AI</a></h3>
+<p>该公司当前转向面向物理世界的多模态模型与基础设施，覆盖视频理解、推理基础设施、训练数据和机器人相关场景；2026 年 6 月又通过合作吸收 Moonvalley 的视频模型团队。收入仍可能来自 API、企业合同和定制合作，但公开商业化数据有限。商业价值在于为机器人和物理场景提供独立模型能力。暂不优先：转型与团队整合仍在早期，客户规模、收入和团队稳定性需继续观察。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/safe_superintelligence_inc_ssi.html" target="_blank" rel="noopener">Safe Superintelligence Inc. / SSI</a></h3>
+<p>该公司专注安全超级智能研究，独特点是由 Ilya Sutskever 等研究人员创立、目标集中于安全超级智能，并刻意回避短期产品周期。现阶段没有公开产品、价格、客户或收入，商业模式实质是以股权融资支持长期研发，未来可能通过模型授权、API、企业部署或战略交易变现。其商业价值完全依赖重大技术突破及安全可信度。暂不优先：属于高方差研发期权，当前证据不足以支撑成熟商业判断。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/stepfun_阶跃星辰.html" target="_blank" rel="noopener">StepFun / 阶跃星辰</a></h3>
+<p>该公司研发文本、图像、视频和音频模型，并推进汽车座舱、终端与国产芯片适配，独特点是全模态自研和产业协同。收入来自开放平台 API、开发者订阅以及政务、汽车和终端定制合同。商业价值在于连接国产模型、算力与汽车场景，但消费入口较弱，且高投入与复杂股东结构增加兑现压力。暂不优先：产业落地线索较多，仍应等待收入结构、毛利和量产占比披露。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/thinking_machines_lab.html" target="_blank" rel="noopener">Thinking Machines Lab</a></h3>
+<p>该公司是前沿研究实验室，并以 Tinker 训练 API 将微调、强化学习和开放模型训练产品化，独特点是用户控制算法与数据、平台负责分布式算力。收入来自训练及采样用量、存储费，未来可扩展企业容量和自有模型。商业价值是成为开放模型后训练基础设施，但付费市场、团队稳定性及云厂商替代风险尚未验证。暂不优先：产品路径清楚，商业采用仍处早期。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/zyphra.html" target="_blank" rel="noopener">Zyphra</a></h3>
+<p>该公司把开放模型、异构算力优化、推理云与团队 Agent 结合，独特点是面向长上下文工作负载的非主流芯片优化和全栈交付。收入可来自 token 用量、专用算力、集群租赁、企业工作区及部署授权。商业价值在于承接开放模型和替代硬件生态，但业务线分散、资本开支较重，客户与利用率证据有限。暂不优先：技术发布较多，但尚未证明推理云和团队 Agent 中哪一项能成为可持续的主要收入来源。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/零一万物_01_ai.html" target="_blank" rel="noopener">零一万物 / 01.AI</a></h3>
+<p>该公司由开源通用模型转向中型模型与企业 AI 平台，独特点是较低成本路线、创始人品牌及云生态协同。收入主要来自平台订阅、私有化部署授权、API 用量和行业项目，商业价值在于帮助企业以可控成本落地模型应用。转型降低前沿预训练压力，却也削弱技术稀缺性，并带来项目制毛利和渠道独立性问题。暂不优先：商业方向务实，但护城河与可重复收入仍待证明。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="multimodal">多模态与内容生成</h2>
+<p>多模态与内容生成正从单点模型演示走向完整生产工具，覆盖图像、视频、语音、音乐、数字人与三维资产。商业化也由面向个人的订阅和生成额度，逐步延伸到开发者 API、团队协作、企业合同及内容授权；真正的价值在于缩短生产周期、降低专业门槛，并把一次性生成嵌入可重复使用的工作流。</p>
+<p>赛道投资不能只比较输出效果。基础生成能力可能快速趋同，更可持续的差异来自创作者心智、专有反馈数据、工作流集成、企业信任、分发渠道与合规能力。判断时应重点核验付费留存、API 与企业收入占比、推理毛利和版权责任，同时区分消费爆款、专业生产平台及上游模型供应商的不同风险收益结构。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/aisphere_爱诗科技_pixverse.html" target="_blank" rel="noopener">AIsphere / 爱诗科技 / PixVerse</a></h3>
+<p>该公司同时研发视频生成大模型、世界模型和面向创作者的成片工具，并向企业开放 API；模板传播、低门槛创作和模型能力输出构成独特点。收入来自消费订阅、生成额度、API 套餐及行业方案，价值在于兼顾全球用户增长与企业调用。列入优先深研：重点核验付费留存、API 收入质量、推理毛利及世界模型能否形成持续差异。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/black_forest_labs.html" target="_blank" rel="noopener">Black Forest Labs</a></h3>
+<p>该公司专注视觉基础模型，覆盖图像生成、编辑、角色与品牌一致性，并通过开放权重连接开发者生态。其独特性来自核心研究团队、模型质量和下游创意软件合作，收入依靠按次 API、商业授权、企业定制及平台分发。商业价值是成为应用厂商的上游视觉能力层。暂不优先：收入规模和客户续约可见度仍不足，且版权与向视频、三维扩张的执行风险待验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/midjourney.html" target="_blank" rel="noopener">Midjourney</a></h3>
+<p>该公司以高审美图像生成和创作者社区建立强消费品牌，并逐步延伸至视频能力。独特点是产品化审美、社区反馈闭环和自筹运营，主要通过分层订阅、算力时长及隐私生成权益变现。其商业价值在于证明消费者愿意直接为图像生成工具付费。暂不优先：一级市场进入路径有限，企业 API 与工作流较弱，训练数据、输出版权和视频扩张带来的法律风险较高。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/kling_ai_可灵ai.html" target="_blank" rel="noopener">Kling AI / 可灵AI</a></h3>
+<p>该业务提供文生与图生视频、图片生成、口型同步、特效模板及 API，独特点是背靠快手的短视频、剪辑、广告和电商生态，具备快速迭代与内部场景分发优势。收入来自会员额度、企业方案、API 调用及生态内应用，商业价值是把生成能力直接接入内容生产和营销链路。暂不优先：2026 年 7 月大额外部融资已落地，但独立收入、关联交易和算力成本仍需核验；若后续分拆上市，还要核验独立治理和集团内部结算。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/luma_ai.html" target="_blank" rel="noopener">Luma AI</a></h3>
+<p>该公司从视频生成工具扩展为面向广告、影视、电商和创意团队的平台，兼具视频与图像模型、创意代理、编辑能力和 API。其独特性在于更贴近专业制作的输出格式、修改工具、专用容量与工作流，收入来自个人订阅、团队及企业合同、按量 API 和合作项目。商业价值是切入高价值生产流程。暂不优先：需要用企业续约、API 毛利和真实生产案例证明高资本投入可转化为稳定收入。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/pika.html" target="_blank" rel="noopener">Pika</a></h3>
+<p>该公司把视频生成包装成低门槛、社交传播友好的创作产品，重点提供关键帧衔接、替换、添加、扭转和表演驱动等特效。其独特性是鲜明的消费级产品设计和创作者品牌，收入来自订阅、月度额度、额外额度、商业使用权益及第三方 API 分发。商业价值是成为短视频特效入口。暂不优先：模型能力易被追平，付费留存、开发者用量和推理毛利尚需验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/runway.html" target="_blank" rel="noopener">Runway</a></h3>
+<p>该公司将视频与图像生成、视频编辑、角色动画、任务模板、团队空间和 API 组合为专业创意生产平台。独特点不在单一模型，而在从构思到编辑的工作流、影视合作、创作者品牌及企业交付能力；收入来自订阅额度、API 用量、企业合同和工作室合作。商业价值是成为影视广告生产基础设施。暂不优先：高估值需要收入、企业留存与毛利支撑，同时面临大厂模型和渠道打包竞争。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/meshy.html" target="_blank" rel="noopener">Meshy</a></h3>
+<p>该公司把文本或图片生成三维资产、贴图、重拓扑、绑定动画、导出和插件串成一体化工作流，服务游戏、打印、扩展现实、电商及设计用户。独特点是生产可用性、主流软件集成和企业级管理能力，收入来自个人及工作室订阅、生成额度、API 与企业计划。商业价值是降低三维资产制作门槛。暂不优先：融资估值信息不透明，付费结构、企业合同和算力毛利仍需深挖。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/tripo_ai.html" target="_blank" rel="noopener">Tripo AI</a></h3>
+<p>该公司从文本或图片生成三维模型，进一步覆盖分割、贴图、局部编辑、绑定动画及世界模型研究，形成基础模型、创作平台和 API 的组合。独特点是三维研究能力与面向游戏、电商、打印和扩展现实的资产工作流，收入来自订阅额度、团队方案、API 及行业客户。商业价值是把三维资产转化为可规模化生产资料。暂不优先：收入尚未披露，需核验企业复购、资产可编辑性、版权和单位成本。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/elevenlabs.html" target="_blank" rel="noopener">ElevenLabs</a></h3>
+<p>该公司从高自然度文本转语音扩展到语音识别、配音、声音克隆、语音智能体、音乐音效及声音市场，形成较完整的语音平台。独特点是低延迟、多语言、开发者 API 和授权声音生态，收入来自创作者订阅、按量 API、企业工作区、定制合同与声音许可。商业价值是成为内容本地化和企业交互的语音层。暂不优先：当前资本预期较高，需持续核验产品毛利、企业留存及深伪、版权和人格权成本。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/suno.html" target="_blank" rel="noopener">Suno</a></h3>
+<p>该公司以提示词生成歌曲为消费入口，并向多轨编辑、分轨、声音定制和创作者工具延伸。独特点是强用户心智、低门槛完整歌曲生成和社区传播，收入来自免费增值订阅、生成额度、商业使用权益及潜在授权合作。商业价值是把音乐创作扩展给非专业用户，并形成新的内容分发入口。暂不优先：投资回报高度取决于唱片与词曲版权能否建立可持续授权体系，法律责任和平台分成仍具不确定性。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/heygen.html" target="_blank" rel="noopener">HeyGen</a></h3>
+<p>该公司将数字人、视频翻译、配音、口型同步和虚拟分身做成易用的软件，面向营销、销售、培训及客户沟通。独特点是快速本地化、个人数字资产、企业工作区和完整 API，收入来自个人与团队订阅、生成额度、席位费、API 钱包及企业合同。商业价值是替代重复拍摄并降低多语言视频成本。暂不优先：需确认企业收入与毛利能否抵御通用视频工具竞争，同时控制身份滥用和深伪合规风险。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/synthesia.html" target="_blank" rel="noopener">Synthesia</a></h3>
+<p>该公司聚焦企业数字人视频，把培训、合规流程、内部沟通、产品演示和本地化从拍摄项目转成软件工作流。独特点是企业采购信任、品牌模板、学习系统集成、身份管理和演员授权体系，收入来自订阅额度、企业合同、定制数字人、接口及服务附加项。商业价值是让企业稳定复用视频生产。暂不优先：需验证持续续约和毛利，并观察低价数字人接口、通用生成工具及监管收紧对估值弹性的影响。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="developer-tools">开发工具与 Agent 平台</h2>
+<p>该赛道正在把大模型能力嵌入软件生产全流程，覆盖需求表达、代码生成、测试评测、浏览器执行、数据接入、部署托管与持续治理。价值不只来自替代部分开发工时，也来自让业务人员直接创建应用，并为企业提供可审计、可复用的 Agent 工程体系。</p>
+<p>商业模式大致分为席位订阅、用量计费、云端运行与托管、企业私有部署及专业服务。投资上应优先判断工作流入口、生产环境留存、企业付费转化和单位经济性；主要风险是模型能力被上游吸收、生成质量与安全事故、推理及算力成本，以及开源采用难以转成收入。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/anysphere_cursor.html" target="_blank" rel="noopener">Anysphere / Cursor</a></h3>
+<p>该公司以 AI 原生 IDE 为入口，将代码库理解、生成编辑、云端 Agent、审查与自动化整合进开发流程，独特点是成为专业开发者的日常工作台。收入来自个人和团队席位、企业合同及超额用量，商业价值在于把效率工具升级为工程协作平台。暂不优先：公开年化收入增长较快，但 SpaceX 收购协议尚未交割，预计 2026 年第三季度完成；同时需跟踪上游模型竞争及开发工具入口能否守住。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/braintrust.html" target="_blank" rel="noopener">Braintrust</a></h3>
+<p>该公司为生产级 AI 应用提供评测、追踪、运行监控和质量改进，独特点是用一个平台统一管理数据集、实验、线上运行记录、自动评分和问题定位。收入来自平台订阅、处理数据与评分用量及企业部署，商业价值是帮助企业在模型或提示词变更前后完成上线质量检查。暂不优先：产品位置关键，但企业收入、留存和数据规模带来的毛利尚待验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/browserbase.html" target="_blank" rel="noopener">Browserbase</a></h3>
+<p>该公司为 Agent 提供可登录、点击和处理动态网页的真实浏览器运行环境，并整合代理网络、身份、搜索抓取、模型网关和执行观测。收入由平台月费、浏览器时长、代理与调用用量及企业合同构成，商业价值是补足 Agent 从回答到行动的网页执行层。暂不优先：需求明确，但成功率、合规边界、基础设施毛利与自建替代仍需核验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/cognition_ai_devin.html" target="_blank" rel="noopener">Cognition AI / Devin</a></h3>
+<p>该公司以自主软件工程 Agent 承接真实代码库任务，可读写代码、运行测试、提交变更并处理审查，独特点是从辅助编程走向可度量的工程产能。收入来自订阅、团队席位、超额用量和企业私有部署，商业价值是直接对应研发预算与交付效率。暂不优先：潜在价值高，但任务成功率、毛利、客户续约和并购整合尚需更硬证据。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/dify_langgenius.html" target="_blank" rel="noopener">Dify / LangGenius</a></h3>
+<p>该公司提供开源低代码 AI 应用平台，把可视化工作流、知识检索、Agent、模型管理、插件与 API 发布连接起来，独特点是模型中立、自托管和较强社区分发。收入来自云端工作区、消息及资源用量、企业私有部署和支持服务，商业价值是降低企业应用构建门槛。暂不优先：产品与生态较强，但开源采用向付费合同转化的效率仍缺少财务验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/emergent.html" target="_blank" rel="noopener">Emergent</a></h3>
+<p>该公司面向非技术用户，以自然语言生成并部署全栈网页和移动应用，同时向个人 Agent 场景延伸，独特点是强调完整生命周期和真实运行环境。收入主要来自按月订阅、额度消耗、增购用量及企业方案，商业价值是扩大软件创建者人群并压缩交付周期。暂不优先：产品覆盖的用户和场景较广，但公开收入、留存、毛利、安全记录及团队交付能力都需核验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/langchain.html" target="_blank" rel="noopener">LangChain</a></h3>
+<p>该公司由开源 LLM 应用框架演进为 Agent 工程平台，覆盖编排、追踪、评测、部署、沙箱和治理，独特点是拥有较广的开发者生态，同时允许企业在同一平台接入不同模型。收入来自商业平台席位、运行记录与部署用量、企业合同和混合部署，商业价值是承接复杂 Agent 上线后的质量与运维预算。暂不优先：开发者知名度较高，但开源使用能否转化为可持续的企业付费收入仍是核心变量。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/llamaindex.html" target="_blank" rel="noopener">LlamaIndex</a></h3>
+<p>该公司聚焦企业私有数据与复杂文档进入 LLM 和 Agent 的数据层，提供解析、索引、检索、工作流与文档自动化，独特点是以数据和文档为中心而非泛化编排。收入来自按额度计费的云服务、托管索引和企业混合部署，商业价值在于把非结构化资料转成可执行知识。暂不优先：应用需求真实，但收入透明度、解析差异化和云厂商竞争仍需观察。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/lovable.html" target="_blank" rel="noopener">Lovable</a></h3>
+<p>该公司让创始人、产品和业务团队以自然语言创建可运行应用，并连接代码同步、数据库、认证、托管、安全扫描与组织治理，独特点是把软件创建入口扩展到非工程师。收入来自额度订阅、云端运行和应用内 AI 用量，以及企业治理合同，商业价值兼具自助增长与平台扩张。列入优先深研：需重点验证企业留存、托管附着率、综合毛利和安全治理能否支撑持续放大。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/poolside_ai.html" target="_blank" rel="noopener">Poolside AI</a></h3>
+<p>该公司同时建设代码模型、训练体系、软件工程 Agent、企业平台和安全部署能力，独特点是覆盖模型到应用的全栈路线，并面向政府、国防和受监管客户。收入更依赖企业订阅、模型与平台授权、私有部署及专业服务，商业价值是把敏感代码留在客户安全边界内。暂不优先：战略位置独特，但独立模型优势、可验证收入、销售周期和重资产投入风险尚未充分消除。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/replit.html" target="_blank" rel="noopener">Replit</a></h3>
+<p>该公司把浏览器开发环境、AI Agent、数据库、部署与托管放在同一平台，服务从学习者和创业者到企业团队，独特点是从提示生成延伸到持续运行的完整闭环。收入来自订阅额度、超额使用、云端资源和企业合同，商业价值在于以运行环境提高应用留存与扩张。暂不优先：平台基础扎实，但推理托管成本、生产安全、一次性项目流失和企业收入质量仍需验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/stackblitz_bolt_new.html" target="_blank" rel="noopener">StackBlitz / Bolt.new</a></h3>
+<p>该公司以浏览器内运行时为技术底座，让用户用自然语言生成、预览和发布网页应用，并保留传统开发者平台与企业工具能力，独特点是减少对远程开发环境的依赖。收入来自订阅、代币用量、团队席位、托管资源和企业合同，商业价值是兼顾自助构建与开发基础设施。暂不优先：技术积累明确，但增长持续性、用量毛利、企业转化和网页技术边界仍待证明。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="data-search">数据与搜索</h2>
+<p>数据与搜索处在模型与真实信息之间：一端为 Agent 提供实时、可引用的外部网页，另一端连接企业内部文档、权限与流程，底层则由向量检索和 RAG 数据层承接。三类产品都在解决模型知识过时、上下文分散和结果不可追溯的问题，但采购方、收费单位与竞争壁垒并不相同。</p>
+<p>投资判断应优先观察产品是否进入高频生产流程、数据与权限能力能否形成切换成本，以及检索质量提升是否足以覆盖抓取、索引和模型调用成本。开发者 API 更依赖调用量和企业承诺，企业搜索更看席位扩张与工作流黏性，向量数据库则要证明独立品类不会被通用数据平台吞并。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/exa.html" target="_blank" rel="noopener">Exa</a></h3>
+<p>该公司为 AI Agent 提供实时网页搜索、内容抽取和深度研究 API，差异在于自建面向 AI 的网页索引、只提取关键内容以减少模型输入量，以及提供垂直领域数据。收入来自按请求、页面和 Agent 运行计费及企业定制合同，价值是让 Agent 获得结构化、可引用的网页上下文。赛道需求强，但搜索巨头上收与接口切换成本低仍是核心风险。列入优先深研：重点核验生产调用留存、企业合同质量与索引成本优势。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/glean_technologies.html" target="_blank" rel="noopener">Glean Technologies</a></h3>
+<p>该公司连接企业各类 SaaS 与文档，提供权限感知的统一搜索、AI 助手和 Agent 编排；独特点是企业图谱、连接器与治理能力形成上下文层。商业模式以企业席位和定制合同为主，并可通过 Agent、API 与安全模块增购。其价值是提高知识获取和跨系统执行效率，但估值较高且受办公套件捆绑竞争。暂不优先：先观察净留存、Agent 活跃率和平台竞争胜负。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/golinks_gosearch.html" target="_blank" rel="noopener">GoLinks / GoSearch</a></h3>
+<p>该公司以可记忆的内部短链接切入，向企业搜索、AI 助手、工作流和人员图谱扩展；独特点是先用易记的内部短链接进入员工日常工作，再据此沉淀组织资源之间的关系。收入来自 SaaS 席位、Pro 订阅、企业合同及产品组合增购。商业价值在于低摩擦部署和日常使用习惯，但从实用工具升级为战略平台仍需证明。暂不优先：等待企业客单价、付费席位和搜索产品附加率更清晰。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/hebbia.html" target="_blank" rel="noopener">Hebbia</a></h3>
+<p>该公司用 Matrix 将文档、表格和数据包拆成可批量比较、追溯的研究工作流，面向金融、法律与专业服务。独特点是矩阵界面比聊天框更适合高风险尽调和条款分析；收入主要来自高客单企业合同、席位与定制连接。它可直接释放高薪知识工作者产能，但规模化、使用成本与平台竞争仍待验证。暂不优先：先核验客户扩张、续约质量和真实工作流使用深度。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/perplexity_ai.html" target="_blank" rel="noopener">Perplexity AI</a></h3>
+<p>该公司把带引用的答案引擎扩展到浏览器、企业研究空间与搜索 API，独特点是同时掌握消费者搜索入口和开发者检索能力。收入来自个人订阅、企业席位、API 用量及内容合作。商业价值在于重构搜索和网页行动入口，但高估值、推理成本、版权风险及大厂默认分发使回报要求苛刻。暂不优先：等待付费结构、单位经济和浏览器留存得到更强验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/pinecone.html" target="_blank" rel="noopener">Pinecone</a></h3>
+<p>该公司提供全托管向量数据库和 RAG 检索层，覆盖向量、稀疏与全文搜索，并向 Assistant、Inference 和私有云部署扩展。收入来自存储、读写、推理等用量费，以及企业最低消费、承诺合同和安全支持增购。其价值是降低生产级检索运维复杂度，但向量能力正被通用数据库商品化。暂不优先：先看企业用量、毛利与应用层增购能否守住定价权。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/tavily.html" target="_blank" rel="noopener">Tavily</a></h3>
+<p>该公司向 AI Agent 提供搜索、抽取、爬取和研究 API，差异在实时网页访问、安全防护与生产级稳定性。原有商业模式按 credits 和 API 调用收费，并以企业定制用量、SLA 与安全条款提高合同价值。产品具备清晰的基础设施价值，但已被 Nebius 全资收购，不再是独立一级市场标的。暂不优先：仅作为 Agent 搜索格局和并购估值参照。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/weaviate.html" target="_blank" rel="noopener">Weaviate</a></h3>
+<p>该公司以开源向量数据库获客，再通过托管云、专有部署、嵌入、查询 Agent 与企业服务商业化；独特点是开源分发、灵活部署和多租户能力。收入来自云资源与 AI 服务用量、预付承诺、支持培训和安全模块。其价值在于成为中立 RAG 与记忆数据层，但开源转付费和通用数据库挤压仍是关键不确定性。暂不优先：先验证云收入转化、企业留存与服务毛利。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="industry-ai">行业 AI</h2>
+<p>行业 AI 把模型嵌入医疗、法律、金融、销售、客服、药物研发和工业流程。与通用应用相比，它们面对更具体的任务、数据和责任边界，通常能获得更高客单价和更强切换成本，但也要承担更长销售周期、实施服务、专业准确性和监管要求。真正的壁垒不是给旧软件加一个聊天框，而是控制一段可量化、可审计、每天都会发生的核心工作流。</p>
+<p>比较这一赛道时，应先看客户是否已经在生产环境持续使用，再看使用规模、续约与扩张、收入质量、部署成本和结果责任。医疗与法律公司要特别核验准确性、合规和责任分配；企业职能应用则要确认产品能否从单点工具扩展成数据与执行平台，而不是依赖高强度定制维持收入。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/ai21_labs.html" target="_blank" rel="noopener">AI21 Labs</a></h3>
+<p>该公司以 Wordtune 写作工具切入，现聚焦 Jamba 长上下文模型与 Maestro 企业智能体编排平台，独特点是兼顾长文档处理、私有部署和结果校验。收入来自软件订阅、模型调用、私有化部署及企业平台合同，可帮助企业更稳定地处理合同、财报和内部知识库。暂不优先：技术路线有差异，但可验证收入和毛利仍不清晰；2026 年初公司曾披露与 Nvidia 等进行过初步战略交易接触，目前没有已完成收购的可靠证据。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/clay.html" target="_blank" rel="noopener">Clay</a></h3>
+<p>该公司为销售、市场和收入运营团队提供可编排的 GTM 数据工作台，将多源数据补全、智能研究、信号监测、客户关系系统同步和触达整合在一起。收费以工作流执行量、数据额度和企业合同为主，价值在于成为收入团队的数据与行动中枢，而非单一获客工具。列入优先深研：多源数据补全与销售工作流编排的使用场景清楚，需重点核验企业留存、毛利及数据供应依赖。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/cohere.html" target="_blank" rel="noopener">Cohere</a></h3>
+<p>该公司面向大型企业提供语言模型、检索增强、工作空间和私有部署，独特点是把安全、数据不出域、多语言及主权部署置于消费端声量之前。收入来自模型调用、企业订阅、专属托管实例、定制与部署服务，可承接金融、医疗和公共部门的生产级需求。暂不优先：企业定位清楚，但模型竞争力、平台毛利、诉讼和资本效率仍待验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/decagon_ai.html" target="_blank" rel="noopener">Decagon AI</a></h3>
+<p>该公司为企业构建覆盖聊天、语音和邮件的客服智能体，不只回答常见问题，还能执行会员、订单、账户及退款等操作；其流程规范、监控与人机协作工具形成差异化。收入主要来自高客单价企业合同，并可能随渠道、交互量或解决结果扩张，价值是降低服务成本并提升客户体验。暂不优先：客服 Agent 的使用场景明确，但结果定义、部署成本、毛利与同业竞争仍需核验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/sierra.html" target="_blank" rel="noopener">Sierra</a></h3>
+<p>该公司以 Agent OS 帮助大型品牌构建多渠道客服智能体，可调用企业系统完成任务，并通过数据、记忆和洞察扩展至客户关系管理。其企业合同结合按结果付费，把收入与问题解决、转化和留存价值绑定，商业上有望从客服成本预算进入客户终身价值预算。列入优先深研：场景清晰、平台化潜力强，需核验结果计费口径、毛利、大客户续约及既有软件厂商的挤压。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/writer.html" target="_blank" rel="noopener">Writer</a></h3>
+<p>该公司从企业写作升级为横向智能体平台，将自研模型、知识图谱、流程模板、连接器和品牌合规治理打包给大型客户，独特点是生成能力与企业控制层一体化。收入来自按席位订阅、企业合同、使用额度及解决方案包，可将内容生产延伸到多部门工作流。暂不优先：客户基础较好，但需证明使用不止于文案场景，并核验留存、毛利和大厂套件压力。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/alphasense.html" target="_blank" rel="noopener">AlphaSense</a></h3>
+<p>该公司为金融、咨询和企业战略团队整合财报、电话会、专家访谈、行业资料及内部内容，并以生成式搜索连接完整研究流程。独特点是内容授权、专业数据与工作流深度结合；收入主要来自企业年度订阅、席位、内容包和增值模块，可提高高价值研究的速度与覆盖。暂不优先：公司已有企业年度订阅和专业内容业务，但仍需评估内容成本、智能体功能的付费转化及成熟终端的竞争。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/abridge.html" target="_blank" rel="noopener">Abridge</a></h3>
+<p>该公司从临床对话自动生成病历切入，已延伸至护理文档、收入周期和临床决策支持，独特点是大规模医疗系统覆盖、深度电子病历集成及对话数据积累。收入以医疗系统企业合同、临床人员授权、模块和用量扩展为主，可同时节省医生时间并改善医疗运营。列入优先深研：公司已从临床记录延伸至护理文档、收入周期和决策支持，需核验活跃使用、合同扩张、毛利、合规安全及电子病历平台依赖。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/ambience_healthcare.html" target="_blank" rel="noopener">Ambience Healthcare</a></h3>
+<p>该公司从环境式临床记录切入，覆盖文档、编码、收入完整性及复杂专科流程，独特点是原生嵌入电子病历并直接用编码和临床效率证明价值。收入预计来自医疗系统企业合同、临床人员授权以及模块和用量阶梯，可同时降低记录负担并改善收费质量。暂不优先：产品价值明确，但客户扩张、实施效率、高毛利模块转化及同业竞争仍需验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/bioptimus.html" target="_blank" rel="noopener">Bioptimus</a></h3>
+<p>该公司构建病理及多模态生物学基础模型，并以临床空间生物数据引擎连接药企、科研和转化医学场景，独特点是模型资产与长期数据建设并行。收入路径包括商业授权、云市场部署及与药企共同开发，可用于生物标志物发现、患者分层和试验设计。暂不优先：技术与分发入口具潜力，但付费采用、合同规模、数据成本和真实临床决策影响仍不透明。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/commure_athelas.html" target="_blank" rel="noopener">Commure / Athelas</a></h3>
+<p>该公司把环境式记录、收入周期、患者接入、呼叫中心智能体、员工安全和诊断工具整合为医疗运营平台，覆盖范围明显宽于单一病历助手。收入来自企业软件合同、临床人员授权、按理赔或收款计费及运营服务，价值在于同时改善临床效率和现金回收。暂不优先：市场空间大，但业务复杂、服务占比、并购整合、合规风险与真实软件毛利需要先拆清。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/corgi.html" target="_blank" rel="noopener">Corgi</a></h3>
+<p>该公司不是向保险机构出售智能助手，而是面向科技创业公司经营全栈智能原生商业保险，将在线申请、承保、出单、保单服务和理赔流程整合。收入来自保费、承保利润及相关服务，独特点是创业者渠道、快速交付和对新型科技风险的理解，商业上可形成垂直金融基础设施。暂不优先：增长叙事突出，但赔付率、综合成本率、再保险、监管和风险资本约束尚未披露清楚。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/enveda_biosciences.html" target="_blank" rel="noopener">Enveda Biosciences</a></h3>
+<p>该公司以质谱、基础模型、自动化实验和生物筛选发掘植物与天然样本中的药物化学空间，差异化在于避开同质化的通用生成式药物发现。其并非软件订阅模式，而是推进自有候选药物，并通过授权、里程碑、版税或共同开发变现；商业价值取决于平台能否持续产出临床资产。暂不优先：管线进展可关注，但人体疗效、毒理、研发成本及大药企合作仍是关键验证项。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/evolutionaryscale.html" target="_blank" rel="noopener">EvolutionaryScale</a></h3>
+<p>该公司以 ESM 系列生物学基础模型同时理解和生成蛋白序列、结构与功能，独特点是已有湿实验验证，并借助云平台和算力生态扩大科研分发。收入路径包括模型接口、企业吞吐服务、私有部署、科研席位、定制设计及药企合作，可缩短蛋白发现与设计周期。暂不优先：技术信号很强，但收费、客户合同、使用量和合作经济条款尚不足以支持成熟商业判断。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/harvey.html" target="_blank" rel="noopener">Harvey</a></h3>
+<p>面向律所、企业法务及专业服务机构提供法律研究、合同审阅、尽调和复杂任务代理平台，独特点是把来源追溯、权限控制与专业工作流做成一体。收入主要来自按席位、产品模块和用量组合的企业合同，商业价值在于压缩高成本法律工时并沉淀协作入口。公开客户与收入增长线索较多，但仍需核验模型成本、客户留存及法律责任边界。列入优先深研：法律工作流专业性强、企业付费场景明确，仍需用续约和使用深度验证壁垒。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/hippocratic_ai.html" target="_blank" rel="noopener">Hippocratic AI</a></h3>
+<p>为医院、保险方和药企提供面向患者的医疗代理，聚焦随访、预约、慢病管理等非诊断任务，独特点是明确限制诊断与处方，并设置临床人员测试和人工升级机制。收入来自按场景、交互量、代理组合及实施支持计费的企业合同，价值是缓解护理和呼叫中心人力缺口。暂不优先：安全事故容忍度极低，合同续约、单位经济性和效果归因仍需硬数据验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/isomorphic_labs.html" target="_blank" rel="noopener">Isomorphic Labs</a></h3>
+<p>以蛋白结构预测积累为基础，将结构、结合亲和力、口袋发现和分子生成整合进药物设计引擎，并与大型药企推进多靶点合作及自研管线。收入和权益可能来自预付款、研发经费、里程碑、许可费与销售分成，商业价值是缩短候选药物发现周期。暂不优先：公司拥有 Alphabet 的技术与资金支持，但临床资产进展、药企合作的经济条款，以及外部投资人可获得的股权和经济权益仍不透明。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/legora.html" target="_blank" rel="noopener">Legora</a></h3>
+<p>为律所和企业法务提供研究、起草、审阅、数据室分析及客户门户，独特点是强调协作式工作台，并通过搜索、监管监测和办公软件代理补齐产品。收入以按席位、模块、门户和部署服务收费的企业订阅为主，价值在于提高律师产能并帮助律所保留客户入口。暂不优先：产品已覆盖多项核心法律工作流，但仍需验证毛利、不同客户群的留存、并购整合和高估值下的持续增长能力。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/nabla.html" target="_blank" rel="noopener">Nabla</a></h3>
+<p>从环境式临床记录切入，为医生生成病历并嵌入主流电子病历系统，独特点是兼具低摩擦个人入口与医疗机构级集成。收入可能来自医生或机构席位订阅、使用量阶梯、系统集成、接口和附加模块，商业价值是减少文书时间并改善接诊效率。暂不优先：临床记录正快速同质化，付费活跃用户、企业合同金额、续费率和编码增收能力尚待核验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/openevidence.html" target="_blank" rel="noopener">OpenEvidence</a></h3>
+<p>为临床医生提供带证据引用的医学搜索和问答，独特点是结合专业内容合作、医生身份验证与高频临床查询，而非单纯生成答案。医生端免费，收入主要来自合规医疗广告、赞助内容、医学信息分发及潜在机构合同，商业价值在于占据高意图专业流量入口。暂不优先：商业化需同时守住医学中立、广告合规和内容授权成本，当前估值也要求收入质量持续兑现。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/rogo.html" target="_blank" rel="noopener">Rogo</a></h3>
+<p>连接市场数据、公告、研究和机构内部资料，为投行、私募及资管团队生成可审计的模型、备忘录和演示材料，独特点是针对金融机构设计专用工作流，并提供深度定制实施服务。收入来自按席位、数据连接、工作流、安全部署和用量组合的定制企业合同，价值是减少分析师重复执行并提升交付一致性。暂不优先：高定制服务、金融数据授权和大型机构自建可能限制毛利与规模化速度。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/suki.html" target="_blank" rel="noopener">Suki</a></h3>
+<p>从医疗语音助手扩展为环境式临床智能层，覆盖病历生成、编码与收入周期、临床推理，并通过电子病历集成和合作伙伴接口分发。收入来自机构合同、医生席位、接口用量及高级模块，独特点是兼顾直销与嵌入式渠道，价值在于同时改善文书效率和收费流程。暂不优先：竞争密集，合作分成、实施成本、客户级效果及整体财务透明度仍需进一步核验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/gigaai_极佳视界.html" target="_blank" rel="noopener">GigaAI / 极佳视界</a></h3>
+<p>同时布局世界模型、视觉语言动作模型、自动驾驶仿真和机器人本体，独特点是尝试打通数据生成、训练、闭环测试与真实部署。收入可来自仿真软件、行业方案、机器人销售和运维，商业价值在于降低真实数据采集与极端场景测试成本。暂不优先：软硬一体带来较高资本和交付复杂度，仿真到现实的效果、软件收入占比及客户量产验收仍待验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/united_imaging_intelligence_联影智能.html" target="_blank" rel="noopener">United Imaging Intelligence / 联影智能</a></h3>
+<p>面向医院提供影像辅助诊断、质控、科研平台、医疗多模态模型和临床智能体，独特点是依托医疗设备生态、证照与医院渠道形成产品落地基础。收入可能来自软件授权、设备配套、项目部署和维护，商业价值是把影像数据与临床流程结合。暂不优先：与控股生态的业务边界、独立软件收入、非自有设备兼容性及外部投资人的治理和退出路径仍不清晰。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/terminus_特斯联.html" target="_blank" rel="noopener">Terminus / 特斯联</a></h3>
+<p>为城市、园区和楼宇提供感知、计算、推理与决策一体的空间智能方案，独特点是把人工智能代理落到物理空间运营。收入主要来自硬件、平台软件、系统集成和运维项目，商业价值是优化公共空间与大型设施的持续运营。暂不优先：业务可能仍偏重项目交付，软件复用率、订阅收入占比、毛利和回款质量尚需核验。公司曾于 2025 年 11 月更新港股上市申请，截至 2026 年 7 月还需核验申请是否有效或是否已经重新递表。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/neuracle_博睿康.html" target="_blank" rel="noopener">Neuracle / 博睿康</a></h3>
+<p>从脑电采集、生理多参和科研设备延伸至侵入式脑机接口及神经康复，独特点是具备科研硬件基础并向医疗级产品过渡。收入现阶段以设备销售为主，未来可扩展至植入器械、手术配套、康复设备和服务，商业价值在于把神经信号解码转化为患者功能改善。暂不优先：公司科创板 IPO 申请已于 2026 年 6 月进入审核问询，但临床安全、长期有效性、支付路径、植入规模和收入结构仍有较大不确定性，应按拟上市公司跟踪。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/semi_tech_赛美特.html" target="_blank" rel="noopener">Semi-tech / 赛美特</a></h3>
+<p>为半导体及先进制造企业提供制造执行、排产调度、设备自动化、质量控制和故障检测软件，独特点是产品模块完整且深入关键产线，人工智能主要作为知识检索、异常诊断和工艺优化增强层。收入来自软件授权、实施、二次开发、运维和升级，商业价值是国产替代与高切换成本。暂不优先：公司已于 2026 年 3 月再次向港交所递交上市申请；业务仍存在定制交付较重、受制造资本开支周期影响，以及人工智能模块能否独立收费等问题，应按拟上市公司跟踪。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="infrastructure">AI 基础设施与数据平台</h2>
+<p>这一赛道承接模型从数据准备、训练评测到部署推理的全流程，商业逻辑是将复杂算力、数据和工程能力封装为可重复使用的平台或产品。核心比较维度包括所处技术环节与差异化、用量向收入的转化效率、客户质量与集中度、开源生态的商业化能力，以及算力采购、交付周期和毛利结构带来的资本强度。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/anyscale.html" target="_blank" rel="noopener">Anyscale</a></h3>
+<p>公司以开源 Ray 为技术根基，为模型训练、推理、强化学习和仿真工作负载提供分布式运行时。其特点是用统一软件层降低集群编排难度，通过计算用量、企业合同和承诺消费变现。商业价值在于让团队不必自建复杂分布式基础设施。暂不优先：开源用户向付费客户的转化率与平台收入规模仍需验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/baseten.html" target="_blank" rel="noopener">Baseten</a></h3>
+<p>公司面向 AI 原生产品和企业团队提供模型部署与托管推理平台，把容器、加速卡调度和服务运维封装成开发接口。独特点是已进入多类高频推理产品的产线，通过托管推理和企业级部署服务变现。商业价值在于缩短模型上线周期并降低运维门槛。暂不优先：收入透明度有限，且差异化需经受云厂商与同类推理平台的持续竞争检验。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/databricks.html" target="_blank" rel="noopener">Databricks</a></h3>
+<p>公司将企业数据工程、分析、机器学习和 Agent 后端整合在同一平台，独特点是以已沉淀的数据与权限体系承接新的 AI 工作负载。公司主要依靠企业平台合同和用量扩张变现，商业价值是减少数据搬运与多系统协同成本。列入优先深研：已有大规模企业客户和可见收入运行率，数据黏性又能支撑 AI 产品向存量客户渗透。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/fireworks_ai.html" target="_blank" rel="noopener">Fireworks AI</a></h3>
+<p>公司为各类模型提供 API 和高性能推理服务，服务对象覆盖编程、搜索、语音与多模态等高频应用。独特点是把推理优化和多模型选择封装为开发者服务，商业模式与处理用量和企业部署相绑定。价值在于使客户更快、更稳定地调用模型。暂不优先：算力成本、价格竞争与大客户集中度对毛利的影响尚不清晰。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/hugging_face.html" target="_blank" rel="noopener">Hugging Face</a></h3>
+<p>公司以模型、数据集和开源工具社区为入口，向开发者与企业提供协作、托管推理及部署能力。独特点是拥有广泛的开源资产与开发者分发网络，通过企业服务和托管计算实现商业化。其价值在于降低模型发现、试用和协作门槛。暂不优先：庞大免费生态如何稳定转化为付费收入，以及托管业务的经济性，仍缺少充分披露。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/mercor.html" target="_blank" rel="noopener">Mercor</a></h3>
+<p>公司建立专家人才网络，为前沿模型和 AI 应用团队提供训练数据、评测与相关服务。独特点是用 AI 面试与匹配技术扩大可调度的专业人力供给，通过向客户交付专家数据和训练服务变现。商业价值是快速获得高质量、特定领域反馈。暂不优先：业务的人力交付强度、大客户集中度与训练数据需求的持久性尚待验证。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/modal.html" target="_blank" rel="noopener">Modal</a></h3>
+<p>公司提供无服务器 AI 运行时，让开发者以代码调用多类加速卡，执行推理、生成式媒体和其他弹性任务。独特点是按秒计费并隐藏集群编排，商业模式结合计算用量、团队订阅、企业合同和承诺消费。价值是减少闲置算力和运维工作。暂不优先：计算资源转售的毛利、供应稳定性及客户留存数据尚未充分披露。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/scale_ai.html" target="_blank" rel="noopener">Scale AI</a></h3>
+<p>公司向模型开发者与政企客户提供数据标注、人类反馈强化学习和模型评测。独特点是把大规模贡献者网络、质量流程与软件平台结合，通过数据项目和企业级交付变现。商业价值是提高模型训练与评测的可控性。暂不优先：人力密集交付、头部客户依赖与战略股东参与后的中立性风险需要更深审视。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/together_ai.html" target="_blank" rel="noopener">Together AI</a></h3>
+<p>公司围绕开源模型提供云端训练、托管推理和私有化部署，面向开发者、AI 原生产品与企业模型团队。独特点是把开源模型选择和大规模算力服务结合，通过训练与推理用量实现商业化。价值在于给客户更多模型选择和部署控制权。暂不优先：收入和毛利披露不足，重资产算力投入与同质化竞争可能压缩长期回报。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/enflame_燧原科技.html" target="_blank" rel="noopener">Enflame / 燧原科技</a></h3>
+<p>公司开发 AI 芯片与 GPGPU 算力产品，面向数据中心的训练和通用并行计算需求。独特点是在国产算力栈中同时提供硬件与配套平台，主要通过芯片、加速卡和整体方案交付变现。商业价值在于增加本土高性能算力供给与选择。暂不优先：收入高度集中于少数客户，且芯片迭代、供应链和软件生态均需持续重投入。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/sunrise_ai_曦望智能.html" target="_blank" rel="noopener">Sunrise AI / 曦望智能</a></h3>
+<p>公司聚焦 AI 推理 GPU、国产算力与配套算力平台，目标是为模型上线后的大规模调用提供本土硬件。独特点是从推理场景切入，并尝试将芯片与平台能力一体化交付；商业模式主要依赖硬件和算力方案销售。价值在于补充国内推理供给。暂不优先：客户、收入与量产交付披露有限，尚无法验证产品竞争力和单位经济性。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/ada_space_国星宇航.html" target="_blank" rel="noopener">ADA Space / 国星宇航</a></h3>
+<p>公司研制商业卫星，并将遥感数据、星基解决方案和星上 AI 计算结合。独特点是把部分数据处理前移到轨道端，通过卫星及相关服务、星基方案与待交付项目变现。商业价值是降低遥感数据回传压力，加快信息产出。暂不优先：它更接近商业航天与项目交付，建造资本强度、回款周期和订单执行风险高于纯软件平台。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/origin_quantum_本源量子.html" target="_blank" rel="noopener">Origin Quantum / 本源量子</a></h3>
+<p>公司布局量子计算机、量子云平台及教育工具，服务科研、高校和尝试量子应用的机构。独特点是从自主硬件向云端访问和开发生态延伸，通过设备、云服务与教育解决方案变现。商业价值在于提供本土量子技术的试用与研发入口。暂不优先：当前用户访问和教育覆盖不等于商业采用，短期也难成为主流 AI 算力的替代方案。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="why-not">为什么其余公司暂不优先</h2>
+<p>“暂不优先”主要有六类原因。第一，估值已经提前反映了很长时间的增长，留给新投资者的错误空间很小；第二，收入、客户留存、毛利或用量没有足够公开证据；第三，产品容易被基础模型、云平台或办公套件吸收；第四，商业模式依赖实施、定制或算力补贴，规模扩大未必改善经济性；第五，公司正在被收购、准备上市或缺少清晰的独立一级市场入口；第六，医疗责任、版权、数据合规或跨境监管可能显著改变回报。</p>
+<p>这些判断是研究优先级，不是永久结论。若后续出现可验证的收入增长、生产环境留存、单位经济性改善、估值回落、交易状态明确或新的独立分发入口，公司可以重新进入深研名单。相反，优先名单中的公司如果无法解释客户集中度、续约、毛利、现金消耗或股权条款，也应被降级。</p>
+</section>
+<section class="section">
+<h2 class="section-title" id="conclusion">结论</h2>
+<p>AI 时代最值得追踪的公司，不一定拥有参数最多的模型，而是能够持续控制企业或个人完成关键任务时必须经过的节点。模型入口、实时数据、专业工作流和企业数据底座是本轮研究最清楚的四类控制点，但每一种都面临平台上收和价格下降。优先深研的下一步，应把公开叙事拆成合同、留存、毛利、现金消耗、竞争替代和退出条款，用事实判断技术优势最终能否成为股东回报。</p>
+</section></article>
+  <div class="guide-disclaimer">本页基于公开资料整理。私营公司数据可能来自公司披露、权威媒体报道或明确标注的第三方估算；实际投资仍需核验财务报表、客户合同、股权条款和监管状态。</div>
+</main>
+</body></html>
