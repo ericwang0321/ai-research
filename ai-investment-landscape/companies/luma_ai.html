@@ -29,6 +29,14 @@ td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
 tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
 .kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
 
+.dc-verified{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.dc-verified-head{font-size:11.5px;font-weight:800;color:var(--ink3);margin-bottom:5px}
+.dc-verified-row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:10px;padding:5px 0;font-size:12.5px;line-height:1.5}
+.dc-verified-label{font-weight:750;color:var(--ink2)}
+.dc-verified-value{color:var(--ink)}
+.dc-verified-source{text-align:right;font-size:11.5px}
+@media(max-width:680px){.dc-verified-row{grid-template-columns:1fr;gap:2px}.dc-verified-source{text-align:left}}
+
 .dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
 .dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
 .dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
@@ -61,6 +69,7 @@ tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
     <h1 class="dc-title"><a href="https://lumalabs.ai/" target="_blank" rel="noopener">Luma AI</a></h1>
     <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
     <div class="dc-oneliner">Luma AI 已从 2024 年的 Dream Machine 视频生成工具，升级为面向广告、影视、电商和创意团队的平台。产品组合包括 creative agents、Ray video model、Uni image model、API 和 enterprise workflow。</div>
+    <div class="dc-verified"><div class="dc-verified-head">公开数据复核 · 2026-07-13</div><div class="dc-verified-row"><span class="dc-verified-label">收入/ARR</span><span class="dc-verified-value">约 $8M annualized revenue（Sacra 估算，截至 2024-12）</span><span class="dc-verified-source"><a href="https://sacra.com/c/luma-ai/" target="_blank" rel="noopener">Sacra</a></span></div></div>
   </div>
   <section class="section" id="sec-1">
 <h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>

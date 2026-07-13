@@ -225,8 +225,8 @@
     "layers": [
       "应用层"
     ],
-    "latest_round": "员工流动性/二级 headline",
-    "latest_round_date": "2026",
+    "latest_round": "Series C",
+    "latest_round_date": "2025-08-05",
     "cells": {
       "valuation": {
         "value": "$5B",
@@ -237,9 +237,12 @@
         }
       },
       "latest_raise": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "$100M",
+        "sort": 0.1,
+        "source": {
+          "label": "Clay · 2025-08-05",
+          "url": "https://www.clay.com/blog/clay-series-c-announcement-the-gtm-engineering-era-begins-now"
+        }
       },
       "total_funding": {
         "value": "",
@@ -269,6 +272,10 @@
       {
         "label": "NYT",
         "url": "https://www.nytimes.com/2026/06/18/technology/clay-employee-share-sale-valuation.html"
+      },
+      {
+        "label": "Clay · 2025-08-05",
+        "url": "https://www.clay.com/blog/clay-series-c-announcement-the-gtm-engineering-era-begins-now"
       },
       {
         "label": "Sacra · 2026-06-30",
@@ -1121,9 +1128,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "截至 2026-04 尚未产生收入，且没有近期产品销售计划",
+        "sort": 2026.0,
+        "source": {
+          "label": "Forbes AI 50 · 2026-04",
+          "url": "https://www.forbes.com/companies/safe-superintelligence/?list=ai50"
+        }
       },
       "user_group": {
         "value": "暂无公开产品用户；面向 AI 研究与潜在产业合作方",
@@ -1145,6 +1155,10 @@
       {
         "label": "The Information",
         "url": "https://www.theinformation.com/briefings/safe-superintelligence-inc-raises-2-billion-32-billion-valuation/"
+      },
+      {
+        "label": "Forbes AI 50 · 2026-04",
+        "url": "https://www.forbes.com/companies/safe-superintelligence/?list=ai50"
       }
     ]
   },
@@ -1622,9 +1636,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "FLUX.2 Klein from $0.014/image；Pro from $0.03；Max from $0.07；1 credit = $0.01",
+        "sort": 0.014,
+        "source": {
+          "label": "Black Forest Labs Pricing",
+          "url": "https://docs.bfl.ai/quick_start/pricing"
+        }
       }
     },
     "source_links": [
@@ -1639,6 +1656,10 @@
       {
         "label": "后续核验重点",
         "url": ""
+      },
+      {
+        "label": "Black Forest Labs Pricing",
+        "url": "https://docs.bfl.ai/quick_start/pricing"
       }
     ]
   },
@@ -1832,9 +1853,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "$240M annualized revenue run-rate（2025-12；月收入超过 $20M）",
+        "sort": 0.24,
+        "source": {
+          "label": "快手 · 2026-01-13",
+          "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-annualized-revenue-run-rate-hits-usd240-million"
+        }
       },
       "media": {
         "value": "AI 视频生成",
@@ -1847,15 +1871,26 @@
         "source": null
       },
       "pricing": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "Basic $0；Standard $8.80/月；Pro $32.56/月；Premier $80.96/月；Ultra $159.99/月（首购促销价更低，2026-07）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Kling Pricing · 2026-07-03",
+          "url": "https://kling.ai/blog/kling-video-3-0-credit-cost-guide"
+        }
       }
     },
     "source_links": [
       {
         "label": "WSJ",
         "url": "https://www.wsj.com/tech/kling-raises-2-billion-amid-planned-spinoff-from-kuaishou-8fcd1571"
+      },
+      {
+        "label": "快手 · 2026-01-13",
+        "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-annualized-revenue-run-rate-hits-usd240-million"
+      },
+      {
+        "label": "Kling Pricing · 2026-07-03",
+        "url": "https://kling.ai/blog/kling-video-3-0-credit-cost-guide"
       }
     ]
   },
@@ -1900,9 +1935,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $8M annualized revenue（Sacra 估算，截至 2024-12）",
+        "sort": 0.008,
+        "source": {
+          "label": "Sacra",
+          "url": "https://sacra.com/c/luma-ai/"
+        }
       },
       "media": {
         "value": "视频生成、3D/world model",
@@ -1924,6 +1962,10 @@
       {
         "label": "FT",
         "url": "https://www.ft.com/content/2009b57c-b12d-439d-bc94-9502fd8aaa1f"
+      },
+      {
+        "label": "Sacra",
+        "url": "https://sacra.com/c/luma-ai/"
       }
     ]
   },
@@ -1962,9 +2004,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "$30M ARR（公司披露，2026-03）",
+        "sort": 0.03,
+        "source": {
+          "label": "Meshy · 2026-03-09",
+          "url": "https://www.prnewswire.com/news-releases/meshy-unveils-meshy-labs-at-gdc-2026--breakthrough-ai-native-gameplay-and-30m-arr-milestone-302708046.html"
+        }
       },
       "media": {
         "value": "AI 3D、3D asset workflow",
@@ -1987,6 +2032,10 @@
     },
     "source_links": [
       {
+        "label": "Meshy · 2026-03-09",
+        "url": "https://www.prnewswire.com/news-releases/meshy-unveils-meshy-labs-at-gdc-2026--breakthrough-ai-native-gameplay-and-30m-arr-milestone-302708046.html"
+      },
+      {
         "label": "自助付费清晰",
         "url": ""
       }
@@ -2003,8 +2052,8 @@
       "模型层",
       "应用层"
     ],
-    "latest_round": "发布 video model",
-    "latest_round_date": "2025",
+    "latest_round": "自筹运营",
+    "latest_round_date": "截至 2026-07",
     "cells": {
       "valuation": {
         "value": "",
@@ -2012,9 +2061,12 @@
         "source": null
       },
       "latest_raise": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "无外部融资（官网称 $0 raised）",
+        "sort": 0,
+        "source": {
+          "label": "Midjourney Careers",
+          "url": "https://xam.midjourney.com/careers"
+        }
       },
       "total_funding": {
         "value": "",
@@ -2047,7 +2099,12 @@
         "source": null
       }
     },
-    "source_links": []
+    "source_links": [
+      {
+        "label": "Midjourney Careers",
+        "url": "https://xam.midjourney.com/careers"
+      }
+    ]
   },
   {
     "company": "Pika",
@@ -2090,9 +2147,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $7.6M 2024 revenue（GetLatka 第三方估算）",
+        "sort": 0.0076,
+        "source": {
+          "label": "GetLatka",
+          "url": "https://getlatka.com/companies/pika"
+        }
       },
       "media": {
         "value": "AI 视频生成",
@@ -2119,6 +2179,10 @@
         "url": "https://pika.art/blog/pika-raises-80m-so-anyone-can-make-video-on-command"
       },
       {
+        "label": "GetLatka",
+        "url": "https://getlatka.com/companies/pika"
+      },
+      {
         "label": "self-serve monetization 清晰",
         "url": ""
       }
@@ -2139,9 +2203,12 @@
     "latest_round_date": "2026-07",
     "cells": {
       "valuation": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "至少 $1B（媒体报道，2026-06）",
+        "sort": 1.0,
+        "source": {
+          "label": "Forbes · 2026-06-01",
+          "url": "https://www.forbes.com/sites/ywang/2026/06/01/under-30-alums-3d-model-startup-hits-unicorn-status-amid-ai-frenzy/"
+        }
       },
       "latest_raise": {
         "value": "$150M",
@@ -2186,6 +2253,10 @@
       }
     },
     "source_links": [
+      {
+        "label": "Forbes · 2026-06-01",
+        "url": "https://www.forbes.com/sites/ywang/2026/06/01/under-30-alums-3d-model-startup-hits-unicorn-status-amid-ai-frenzy/"
+      },
       {
         "label": "Axios",
         "url": "https://www.axios.com/newsletters/axios-pro-rata-37088959-7287-4885-915a-f3d1798830ec"
@@ -2237,9 +2308,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $90M annualized revenue（Sacra 估算，截至 2025-06）",
+        "sort": 0.09,
+        "source": {
+          "label": "Sacra",
+          "url": "https://sacra.com/c/runway/"
+        }
       },
       "media": {
         "value": "AI video、creative tools、multimodal generation",
@@ -2261,6 +2335,10 @@
       {
         "label": "TechCrunch",
         "url": "https://techcrunch.com/2026/02/10/ai-video-startup-runway-raises-315m-at-5-3b-valuation-eyes-more-capable-world-models/"
+      },
+      {
+        "label": "Sacra",
+        "url": "https://sacra.com/c/runway/"
       }
     ]
   },
@@ -2305,9 +2383,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "$300M ARR、200 万付费订阅用户（CEO 披露，2026-02）",
+        "sort": 0.3,
+        "source": {
+          "label": "TechCrunch · 2026-02-27",
+          "url": "https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/"
+        }
       },
       "media": {
         "value": "AI music、creator tools、generative audio",
@@ -2329,6 +2410,10 @@
       {
         "label": "WSJ",
         "url": "https://www.wsj.com/business/media/ai-music-platform-suno-valued-at-2-45-billion-b6bda919"
+      },
+      {
+        "label": "TechCrunch · 2026-02-27",
+        "url": "https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/"
       }
     ]
   },
@@ -2532,9 +2617,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "Starter $0/月；Pro $249/月；Enterprise 定制；另按 processed data、scores 与 token 超额计费",
+        "sort": 249.0,
+        "source": {
+          "label": "Braintrust Pricing",
+          "url": "https://www.braintrust.dev/pricing"
+        }
       },
       "model_dependency": {
         "value": "第三方/多模型为主",
@@ -2551,6 +2639,10 @@
       {
         "label": "Axios",
         "url": "https://www.axios.com/pro/enterprise-software-deals/2026/02/17/ai-observability-braintrust-80-million-800-million"
+      },
+      {
+        "label": "Braintrust Pricing",
+        "url": "https://www.braintrust.dev/pricing"
       }
     ]
   },
@@ -2589,9 +2681,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "上线约 16 个月实现 >$3M revenue（累计/TTM/run-rate 口径未说明，2025-06）",
+        "sort": 0.003,
+        "source": {
+          "label": "Upstarts · 2025-06-17",
+          "url": "https://www.upstartsmedia.com/p/browserbase-raises-40m-and-launches-director"
+        }
       },
       "developer_customers": {
         "value": "Agent 开发者、自动化团队、代码与数据产品团队",
@@ -2621,6 +2716,10 @@
       {
         "label": "Axios",
         "url": "https://www.axios.com/newsletters/axios-pro-rata-143fd942-6084-40da-9c54-36c23645c95a"
+      },
+      {
+        "label": "Upstarts · 2025-06-17",
+        "url": "https://www.upstartsmedia.com/p/browserbase-raises-40m-and-launches-director"
       },
       {
         "label": "低门槛获客",
@@ -2976,9 +3075,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $10.9M 2025 revenue（QAI 第三方估算，非 ARR/公司披露）",
+        "sort": 0.0109,
+        "source": {
+          "label": "QAI Finance",
+          "url": "https://qai.io/finance/companies/LLAMAINDEX"
+        }
       },
       "developer_customers": {
         "value": "RAG/知识应用开发者与企业数据团队",
@@ -3008,6 +3110,10 @@
       {
         "label": "LlamaIndex",
         "url": "https://www.prnewswire.com/news-releases/llamaindex-secures-19-million-series-a-to-power-enterprise-grade-knowledge-agents-302390936.html"
+      },
+      {
+        "label": "QAI Finance",
+        "url": "https://qai.io/finance/companies/LLAMAINDEX"
       },
       {
         "label": "企业文档工作流",
@@ -3063,9 +3169,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "Free $0；Pro $25/月；Business $50/月起；Enterprise 定制（年付价格更低，2026-05）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Lovable Pricing",
+          "url": "https://lovable.dev/pricing"
+        }
       },
       "model_dependency": {
         "value": "第三方/多模型为主",
@@ -3086,6 +3195,10 @@
       {
         "label": "TechCrunch/Forbes/BI/媒体汇总",
         "url": ""
+      },
+      {
+        "label": "Lovable Pricing",
+        "url": "https://lovable.dev/pricing"
       }
     ]
   },
@@ -3125,9 +3238,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $50M 2025 revenue（GetLatka 第三方估算，非公司披露）",
+        "sort": 0.05,
+        "source": {
+          "label": "GetLatka",
+          "url": "https://getlatka.com/companies/poolside-ai"
+        }
       },
       "developer_customers": {
         "value": "软件工程团队、政府/国防与受监管行业客户",
@@ -3135,9 +3251,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
+        "value": "Enterprise subscription 定制报价；官网没有标准金额",
         "sort": "",
-        "source": null
+        "source": {
+          "label": "Poolside · 2026-05-05",
+          "url": "https://poolside.ai/blog/introducing-the-poolside-platform"
+        }
       },
       "model_dependency": {
         "value": "自有模型+第三方",
@@ -3154,6 +3273,14 @@
       {
         "label": "Bloomberg",
         "url": "https://www.bloomberg.com/news/articles/2024-09-16/ai-startup-poolside-nears-3-billion-valuation"
+      },
+      {
+        "label": "GetLatka",
+        "url": "https://getlatka.com/companies/poolside-ai"
+      },
+      {
+        "label": "Poolside · 2026-05-05",
+        "url": "https://poolside.ai/blog/introducing-the-poolside-platform"
       }
     ]
   },
@@ -3374,9 +3501,12 @@
         }
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "Ray 开源生态被数千家组织使用（非 Anyscale 付费客户数，2025-04）",
+        "sort": 2025.0,
+        "source": {
+          "label": "Anyscale",
+          "url": "https://www.anyscale.com/press/google-cloud-partnership"
+        }
       },
       "product_type": {
         "value": "AI 应用运行时与模型工作负载",
@@ -3392,6 +3522,10 @@
       {
         "label": "logo 需区分 Ray 开源用户和 Anyscale 付费客户",
         "url": ""
+      },
+      {
+        "label": "Anyscale",
+        "url": "https://www.anyscale.com/press/google-cloud-partnership"
       }
     ]
   },
@@ -3522,9 +3656,12 @@
         }
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "20,000+ 家组织依赖 Databricks 构建和扩展数据、AI 应用与 Agent（2026-02）",
+        "sort": 20000.0,
+        "source": {
+          "label": "Databricks · 2026-02-09",
+          "url": "https://www.prnewswire.com/news-releases/databricks-grows-65-yoy-surpasses-5-4-billion-revenue-run-rate-doubles-down-on-lakebase-and-genie-302682674.html"
+        }
       },
       "product_type": {
         "value": "企业数据与 AI 平台、AI Agent 后端",
@@ -3544,6 +3681,10 @@
       {
         "label": "大客户扩张能力强，但也带来集中度和采购周期风险",
         "url": ""
+      },
+      {
+        "label": "Databricks · 2026-02-09",
+        "url": "https://www.prnewswire.com/news-releases/databricks-grows-65-yoy-surpasses-5-4-billion-revenue-run-rate-doubles-down-on-lakebase-and-genie-302682674.html"
       }
     ],
     "mega_valuation": true
@@ -3674,14 +3815,20 @@
         }
       },
       "customers": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "10,000+ 家公司使用 Hugging Face（2022，含开源/免费使用；非当前付费客户数）",
+        "sort": 10000.0,
+        "source": {
+          "label": "Hugging Face · 2022-05-09",
+          "url": "https://huggingface.co/blog/series-c"
+        }
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "13M 用户、2M+ 公共模型、500K+ 公共数据集（2025 年末口径）",
+        "sort": 0.013,
+        "source": {
+          "label": "Hugging Face · Spring 2026",
+          "url": "https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026"
+        }
       },
       "product_type": {
         "value": "模型社区、开发者平台、托管推理",
@@ -3697,6 +3844,14 @@
       {
         "label": "需要与公司财务核验,但可作早期商业化线索",
         "url": ""
+      },
+      {
+        "label": "Hugging Face · 2022-05-09",
+        "url": "https://huggingface.co/blog/series-c"
+      },
+      {
+        "label": "Hugging Face · Spring 2026",
+        "url": "https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026"
       }
     ]
   },
@@ -3748,9 +3903,12 @@
         "source": null
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "5M+ 专家网络、约 10,000 次 AI 面试/日、累计填补 192,000+ 个岗位（2026）",
+        "sort": 0.005,
+        "source": {
+          "label": "Mercor",
+          "url": "https://www.mercor.com/mission/"
+        }
       },
       "product_type": {
         "value": "Expert data 与 AI 训练服务",
@@ -3766,6 +3924,10 @@
       {
         "label": "非审计口径,但若成立,说明已超出传统早期 SaaS 规模,更接近 Scale AI/AI 数据服务大单模式",
         "url": ""
+      },
+      {
+        "label": "Mercor",
+        "url": "https://www.mercor.com/mission/"
       }
     ]
   },
@@ -3900,9 +4062,12 @@
         }
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "累计 15B 次训练 AI 模型的人工决策；向全球贡献者累计支付 $1B",
+        "sort": 1.0,
+        "source": {
+          "label": "Scale AI",
+          "url": "https://scale.com/about"
+        }
       },
       "product_type": {
         "value": "数据标注、RLHF、模型评测",
@@ -3918,6 +4083,10 @@
       {
         "label": "强势销售口径,需核验定义",
         "url": ""
+      },
+      {
+        "label": "Scale AI",
+        "url": "https://scale.com/about"
       }
     ]
   },
@@ -3966,9 +4135,12 @@
         "source": null
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "API 每月处理 400T+ 推理 tokens（2026-07）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Together AI · 2026-07-08",
+          "url": "https://www.together.ai/blog/provisioned-throughput"
+        }
       },
       "product_type": {
         "value": "Open model cloud、推理训练服务",
@@ -3980,6 +4152,10 @@
       {
         "label": "Reuters",
         "url": "https://www.investing.com/news/stock-market-news/together-ai-raises-800-million-at-83-billion-valuation-4771027"
+      },
+      {
+        "label": "Together AI · 2026-07-08",
+        "url": "https://www.together.ai/blog/provisioned-throughput"
       }
     ]
   },
@@ -4082,9 +4258,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $10M ARR / 年化收入（Sacra 估算，2025-09）",
+        "sort": 0.01,
+        "source": {
+          "label": "Sacra",
+          "url": "https://sacra.com/c/exa/"
+        }
       },
       "customers": {
         "value": "AI 开发者、Agent/搜索产品团队与研究机构；数千家客户；覆盖 AI 开发工具、销售软件与研究平台",
@@ -4100,9 +4279,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "Free 20,000 requests/月；Search $7/1k；Contents $1/1k；Deep Search $12-15/1k；Enterprise 定制",
+        "sort": 15.0,
+        "source": {
+          "label": "Exa Pricing",
+          "url": "https://exa.ai/pricing?tab=websets"
+        }
       }
     },
     "source_links": [
@@ -4111,8 +4293,16 @@
         "url": "https://exa.ai/blog/announcing-series-c"
       },
       {
+        "label": "Sacra",
+        "url": "https://sacra.com/c/exa/"
+      },
+      {
         "label": "adoption 已跨 coding agents、sales enrichment、AI apps",
         "url": ""
+      },
+      {
+        "label": "Exa Pricing",
+        "url": "https://exa.ai/pricing?tab=websets"
       }
     ]
   },
@@ -4169,9 +4359,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
+        "value": "Enterprise 定制报价；官网仅提供 Demo",
         "sort": "",
-        "source": null
+        "source": {
+          "label": "Glean",
+          "url": "https://www.glean.com/"
+        }
       }
     },
     "source_links": [
@@ -4182,6 +4375,10 @@
       {
         "label": "Business Insider 2025 年 2 月报道,Glean fiscal year ARR 达 $100M,较年内早些时候 $50M 提升",
         "url": ""
+      },
+      {
+        "label": "Glean",
+        "url": "https://www.glean.com/"
       }
     ]
   },
@@ -4217,9 +4414,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $15M 2024 revenue（GetLatka 第三方估算）",
+        "sort": 0.015,
+        "source": {
+          "label": "GetLatka",
+          "url": "https://getlatka.com/companies/golinks"
+        }
       },
       "customers": {
         "value": "各类企业的 IT、工程、销售、HR 与知识工作团队",
@@ -4244,6 +4444,10 @@
       {
         "label": "GoLinks",
         "url": "https://www.golinks.com/blog/golinks-raises-series-a/"
+      },
+      {
+        "label": "GetLatka",
+        "url": "https://getlatka.com/companies/golinks"
       },
       {
         "label": "真正 ACV 增长来源",
@@ -4289,9 +4493,12 @@
         }
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $13M ARR 且实现盈利（TechCrunch 知情人士口径，2024-06；公司未确认绝对值）",
+        "sort": 0.013,
+        "source": {
+          "label": "TechCrunch · 2024-07-09",
+          "url": "https://techcrunch.com/2024/07/09/ai-startup-hebbia-rased-130m-at-a-700m-valuation-on-13-million-of-profitable-revenue/"
+        }
       },
       "customers": {
         "value": "金融机构、律所、咨询与专业服务公司",
@@ -4304,9 +4511,12 @@
         "source": null
       },
       "pricing": {
-        "value": "",
+        "value": "Matrix Enterprise 定制报价；按 named Core User license，特殊用量另行协商",
         "sort": "",
-        "source": null
+        "source": {
+          "label": "Hebbia Pricing",
+          "url": "https://www.hebbia.com/pricing"
+        }
       }
     },
     "source_links": [
@@ -4317,6 +4527,14 @@
       {
         "label": "Bloomberg/百科口径",
         "url": ""
+      },
+      {
+        "label": "TechCrunch · 2024-07-09",
+        "url": "https://techcrunch.com/2024/07/09/ai-startup-hebbia-rased-130m-at-a-700m-valuation-on-13-million-of-profitable-revenue/"
+      },
+      {
+        "label": "Hebbia Pricing",
+        "url": "https://www.hebbia.com/pricing"
       }
     ]
   },
@@ -4479,9 +4697,12 @@
     "latest_round_date": "2025-08",
     "cells": {
       "valuation": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "$189.7M（Nebius 收购 100% 股权的会计购买对价，非融资后估值）",
+        "sort": 0.1897,
+        "source": {
+          "label": "Nebius SEC filing · 2026-02-19",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926064092/nbis-20260331xex99d2.htm"
+        }
       },
       "latest_raise": {
         "value": "$20M",
@@ -4497,9 +4718,12 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $2.8M 2025 annual revenue（GetLatka 第三方估算）",
+        "sort": 0.0028,
+        "source": {
+          "label": "GetLatka",
+          "url": "https://getlatka.com/companies/tavily.com"
+        }
       },
       "customers": {
         "value": "AI/Agent 开发者及金融、销售、法律、咨询等企业团队",
@@ -4522,8 +4746,16 @@
     },
     "source_links": [
       {
+        "label": "Nebius SEC filing · 2026-02-19",
+        "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926064092/nbis-20260331xex99d2.htm"
+      },
+      {
         "label": "TechCrunch",
         "url": "https://techcrunch.com/2025/08/06/tavily-raises-25m-to-connect-ai-agents-to-the-web/"
+      },
+      {
+        "label": "GetLatka",
+        "url": "https://getlatka.com/companies/tavily.com"
       },
       {
         "label": "ACV 和毛利关键",
@@ -5596,16 +5828,19 @@
     "latest_round_date": "2026-03",
     "cells": {
       "valuation": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "> $1B（C 轮后媒体口径，2026-03）",
+        "sort": 1.0,
+        "source": {
+          "label": "GeekWire · 2026-03-30",
+          "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
+        }
       },
       "latest_raise": {
         "value": "US$300M",
         "sort": 0.3,
         "source": {
-          "label": "投资界",
-          "url": "https://vc.pedaily.cn/company/687272.html"
+          "label": "GeekWire",
+          "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
         }
       },
       "total_funding": {
@@ -5637,19 +5872,30 @@
         "source": null
       },
       "pricing": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "API Starter：$1 可生成 5 个 V6 720p/5 秒无音频视频；Essential $100/月；Scale $1,500/月；Business $6,000/月",
+        "sort": 1.0,
+        "source": {
+          "label": "PixVerse API Pricing",
+          "url": "https://docs.platform.pixverse.ai/pricing-796039m0"
+        }
       }
     },
     "source_links": [
       {
-        "label": "投资界",
-        "url": "https://vc.pedaily.cn/company/687272.html"
+        "label": "GeekWire · 2026-03-30",
+        "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
+      },
+      {
+        "label": "GeekWire",
+        "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
       },
       {
         "label": "AIsphere 官网里程碑",
         "url": ""
+      },
+      {
+        "label": "PixVerse API Pricing",
+        "url": "https://docs.platform.pixverse.ai/pricing-796039m0"
       }
     ]
   },
@@ -6016,14 +6262,20 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2025 年营业收入人民币 9.9016 亿元（法定合并口径，非 ARR）",
+        "sort": 0.1375,
+        "source": {
+          "label": "燧原科技招股书 · 2026-04",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202604/002175_20260416_BH8W.pdf"
+        }
       },
       "customers": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "客户集中度：前五大客户占收入 96.89%，腾讯相关销售占 83.79%（FY2025）",
+        "sort": 2025.0,
+        "source": {
+          "label": "燧原科技招股书",
+          "url": "https://www.stcn.com/ipo/detail/3628.html"
+        }
       },
       "usage_scale": {
         "value": "面向通用并行计算",
@@ -6043,6 +6295,14 @@
       {
         "label": "美通社",
         "url": "https://www.prnasia.com/story/420582-1.shtml"
+      },
+      {
+        "label": "燧原科技招股书 · 2026-04",
+        "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202604/002175_20260416_BH8W.pdf"
+      },
+      {
+        "label": "燧原科技招股书",
+        "url": "https://www.stcn.com/ipo/detail/3628.html"
       },
       {
         "label": "对标 Nvidia GPU 生态",
@@ -6161,19 +6421,28 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2025 年收入人民币 7.02703 亿元；待交付卫星合同额人民币 12.312 亿元另列，不计入收入",
+        "sort": 0.0976,
+        "source": {
+          "label": "国星宇航港交所申请版本 · 2026-05",
+          "url": "https://www.hkexnews.hk/app/sehk/2026/108536/documents/sehk26051401390_c.pdf"
+        }
       },
       "customers": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2025 年卫星及相关服务 14 个客户、星基解决方案 19 个客户（两业务线可能重叠）",
+        "sort": 2025.0,
+        "source": {
+          "label": "国星宇航港交所申请版本",
+          "url": "https://www.hkexnews.hk/app/sehk/2026/108536/documents/sehk26051401390_c.pdf"
+        }
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "累计发射 27 颗卫星，其中 18 颗为自主开发 AI 智算/AI 卫星；另有 37 颗待交付订单（2026-05）",
+        "sort": 2026.0,
+        "source": {
+          "label": "国星宇航港交所申请版本",
+          "url": "https://www.hkexnews.hk/app/sehk/2026/108536/documents/sehk26051401390_c.pdf"
+        }
       },
       "product_type": {
         "value": "商业航天、遥感数据、星上 AI 计算",
@@ -6185,6 +6454,14 @@
       {
         "label": "界面新闻",
         "url": "https://m.jiemian.com/article/14436482.html"
+      },
+      {
+        "label": "国星宇航港交所申请版本 · 2026-05",
+        "url": "https://www.hkexnews.hk/app/sehk/2026/108536/documents/sehk26051401390_c.pdf"
+      },
+      {
+        "label": "国星宇航港交所申请版本",
+        "url": "https://www.hkexnews.hk/app/sehk/2026/108536/documents/sehk26051401390_c.pdf"
       }
     ]
   },
@@ -6223,19 +6500,28 @@
         "source": null
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2024 年营业收入人民币 9,938.49 万元；2025Q1 收入人民币 2,858.44 万元（Q1 未经审计）",
+        "sort": 0.0138,
+        "source": {
+          "label": "宏力达公告 · 2025-08-29",
+          "url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2025/2025-8/2025-08-29/11401559.PDF"
+        }
       },
       "customers": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "教育覆盖：支持 77 所高校开展量子计算教育（不等同付费客户数）",
+        "sort": 77.0,
+        "source": {
+          "label": "中国经济网 · 2025-09",
+          "url": "https://finance.ce.cn/stock/gsgdbd/202509/t20250929_2497373.shtml"
+        }
       },
       "usage_scale": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "量子云覆盖全球 100+ 国家、累计千万级用户访问（非注册/付费用户数）",
+        "sort": 100.0,
+        "source": {
+          "label": "本源量子云",
+          "url": "https://qcloud.originqc.com.cn/document/usermanual/index.html"
+        }
       },
       "product_type": {
         "value": "量子计算、量子云、前沿计算基础设施",
@@ -6247,6 +6533,18 @@
       {
         "label": "投资界",
         "url": "https://news.pedaily.cn/202606/564996.shtml"
+      },
+      {
+        "label": "宏力达公告 · 2025-08-29",
+        "url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2025/2025-8/2025-08-29/11401559.PDF"
+      },
+      {
+        "label": "中国经济网 · 2025-09",
+        "url": "https://finance.ce.cn/stock/gsgdbd/202509/t20250929_2497373.shtml"
+      },
+      {
+        "label": "本源量子云",
+        "url": "https://qcloud.originqc.com.cn/document/usermanual/index.html"
       }
     ]
   }
