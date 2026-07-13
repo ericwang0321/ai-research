@@ -40,9 +40,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "Jamba 客户覆盖 30+ 个国家；授权/SaaS 用量全部来自企业客户（透明度报告，2025-12）",
+        "sort": 2025.0,
+        "source": {
+          "label": "Stanford FMTI · 2025-12",
+          "url": "https://crfm.stanford.edu/fmti/December-2025/company-reports/AI21_FinalReport_FMTI2025.html"
+        }
       },
       "target_customers": {
         "value": "大型企业 IT、数据与安全团队、业务部门",
@@ -54,6 +57,10 @@
       {
         "label": "AI21",
         "url": "https://www.ai21.com/blog/ai21-completes-208-million-oversubscribed-series-c-round/"
+      },
+      {
+        "label": "Stanford FMTI · 2025-12",
+        "url": "https://crfm.stanford.edu/fmti/December-2025/company-reports/AI21_FinalReport_FMTI2025.html"
       }
     ]
   },
@@ -245,9 +252,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $150M ARR（Sacra 估算，2026-05）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Sacra · 2026-06-30",
+          "url": "https://sacra.com/research/clay-crosses-150m-year/"
+        }
       },
       "target_customers": {
         "value": "销售、市场营销、RevOps 与增长团队",
@@ -259,6 +269,10 @@
       {
         "label": "NYT",
         "url": "https://www.nytimes.com/2026/06/18/technology/clay-employee-share-sale-valuation.html"
+      },
+      {
+        "label": "Sacra · 2026-06-30",
+        "url": "https://sacra.com/research/clay-crosses-150m-year/"
       }
     ]
   },
@@ -370,9 +384,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "从 0 增长至八位数 ARR；单一财年新增 100+ 全球企业客户（官方，2025-06/2026-01）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Decagon",
+          "url": "https://decagon.ai/blog/series-c-announcement"
+        }
       },
       "target_customers": {
         "value": "客服中心、客户体验团队、消费品牌与服务企业",
@@ -388,6 +405,10 @@
       {
         "label": "BI + official Series D",
         "url": ""
+      },
+      {
+        "label": "Decagon",
+        "url": "https://decagon.ai/blog/series-c-announcement"
       }
     ]
   },
@@ -1374,9 +1395,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "250 家企业客户；收入同比增长 3 倍（官方，2024）",
+        "sort": 2024.0,
+        "source": {
+          "label": "Writer",
+          "url": "https://writer.com/newsroom/"
+        }
       },
       "target_customers": {
         "value": "大型企业 IT、数据与安全团队、业务部门",
@@ -1388,6 +1412,10 @@
       {
         "label": "Axios",
         "url": "https://www.axios.com/newsletters/axios-pro-rata-153997ea-fd35-40db-8ed2-8f01203881d8"
+      },
+      {
+        "label": "Writer",
+        "url": "https://writer.com/newsroom/"
       }
     ]
   },
@@ -4690,9 +4718,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "企业部署使用率 >80%；支持 200+ 专科（官方，2026-04）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Ambience · 2026-04-20",
+          "url": "https://www.ambiencehealthcare.com/blog/ambience-healthcare-unveils-platform-roadmap-to-rebuild-healthcare-with-ai"
+        }
       },
       "target_customers": {
         "value": "医院、医疗集团、医生与临床运营团队",
@@ -4704,6 +4735,10 @@
       {
         "label": "Becker's",
         "url": "https://www.beckershospitalreview.com/healthcare-information-technology/ai/ambience-healthcare-reaches-1-25b-valuation/"
+      },
+      {
+        "label": "Ambience · 2026-04-20",
+        "url": "https://www.ambiencehealthcare.com/blog/ambience-healthcare-unveils-platform-roadmap-to-rebuild-healthcare-with-ai"
       }
     ]
   },
@@ -4744,9 +4779,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "覆盖 16/20 头部药企、1,000+ 机构；模型累计下载 1,184,533 次（官网，复核于 2026-07-13）",
+        "sort": 1184533.0,
+        "source": {
+          "label": "Bioptimus",
+          "url": "https://www.bioptimus.com/"
+        }
       },
       "target_customers": {
         "value": "药企、生物科技公司、CRO 与科研机构",
@@ -4758,6 +4796,10 @@
       {
         "label": "Bioptimus",
         "url": "https://www.bioptimus.com/news/bioptimus-hits-76m-funding"
+      },
+      {
+        "label": "Bioptimus",
+        "url": "https://www.bioptimus.com/"
       }
     ]
   },
@@ -4872,9 +4914,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $100M 年化收入、数千家创业公司客户（Forbes，2026-05）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Forbes · 2026-05-06",
+          "url": "https://www.forbes.com/sites/richardnieva/2026/05/06/corgi-ai-unicorn/"
+        }
       },
       "target_customers": {
         "value": "中小企业、保险经纪、承保与理赔团队；官网有客户案例，缺总数",
@@ -4889,6 +4934,10 @@
       {
         "label": "Corgi",
         "url": "https://www.corgi.insure/press-releases/series-b1"
+      },
+      {
+        "label": "Forbes · 2026-05-06",
+        "url": "https://www.forbes.com/sites/richardnieva/2026/05/06/corgi-ai-unicorn/"
       },
       {
         "label": "公司披露、客户访谈、broker/channel checks",
@@ -4936,9 +4985,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "3 个临床资产覆盖 4 个适应症；6 个 IND-enabling 资产、17 个开发候选（官网，复核于 2026-07-13）",
+        "sort": 2026.0,
+        "source": {
+          "label": "Enveda",
+          "url": "https://enveda.com/pipeline/"
+        }
       },
       "target_customers": {
         "value": "药企、生物科技公司、CRO 与科研机构",
@@ -4950,6 +5002,10 @@
       {
         "label": "Enveda",
         "url": "https://enveda.com/news/enveda-raises-150m-series-d-funding-to-reach-unicorn-status-enrolls-first-patient-in-lead-program-and-adds-mikael-dolsten-to-board-of-directors/"
+      },
+      {
+        "label": "Enveda",
+        "url": "https://enveda.com/pipeline/"
       }
     ]
   },
@@ -5170,9 +5226,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "合作规模：Novartis、Lilly、J&J；Novartis 项目由 3 个靶点扩至最多 3 个新增项目（2025）",
+        "sort": 2025.0,
+        "source": {
+          "label": "Isomorphic Labs",
+          "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-novartis-collaboration-expansion"
+        }
       },
       "target_customers": {
         "value": "药企、生物科技公司、CRO 与科研机构",
@@ -5184,6 +5243,10 @@
       {
         "label": "Isomorphic Labs",
         "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-raises-2-1-billion-series-b"
+      },
+      {
+        "label": "Isomorphic Labs",
+        "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-novartis-collaboration-expansion"
       }
     ]
   },
@@ -5423,9 +5486,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "35,000+ 用户、50,000+ 次日查询、服务 250+ 家机构（官网，复核于 2026-07-13）",
+        "sort": 50000.0,
+        "source": {
+          "label": "Rogo",
+          "url": "https://www.rogo.ai/old-home"
+        }
       },
       "target_customers": {
         "value": "投行、资管、研究机构与企业战略团队",
@@ -5437,6 +5503,10 @@
       {
         "label": "Forge",
         "url": "https://forgeglobal.com/rogo_stock/"
+      },
+      {
+        "label": "Rogo",
+        "url": "https://www.rogo.ai/old-home"
       }
     ]
   },
@@ -5627,9 +5697,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "签约 20+ 家国内外头部主机厂（官网，复核于 2026-07-13）",
+        "sort": 2026.0,
+        "source": {
+          "label": "GigaAI",
+          "url": "https://gigaai.cc/"
+        }
       },
       "target_customers": {
         "value": "机器人公司、主机厂与自动驾驶研发团队",
@@ -5645,6 +5718,10 @@
       {
         "label": "投资界 / 财新",
         "url": ""
+      },
+      {
+        "label": "GigaAI",
+        "url": "https://gigaai.cc/"
       }
     ]
   },
@@ -5688,9 +5765,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "产品落地全球 4,000+ 家医院；AI 累计服务 4 亿+ 人次（官网，复核于 2026-07-13）",
+        "sort": 2026.0,
+        "source": {
+          "label": "联影智能",
+          "url": "https://www.uii-ai.com/aboutus.html"
+        }
       },
       "target_customers": {
         "value": "医院、影像科、医疗设备与临床 AI 团队",
@@ -5702,6 +5782,10 @@
       {
         "label": "上海证券报",
         "url": "https://paper.cnstock.com/html/2024-12/21/content_2008777.htm"
+      },
+      {
+        "label": "联影智能",
+        "url": "https://www.uii-ai.com/aboutus.html"
       }
     ]
   },
@@ -5745,9 +5829,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2024 年收入人民币 18.43 亿元；2025H1 收入人民币 6.32 亿元、客户 900+ 家（招股书口径）",
+        "sort": 0.2559722222222222,
+        "source": {
+          "label": "新浪财经 · 2025-11-26",
+          "url": "https://finance.sina.com.cn/stock/hkstock/hkzmt/2025-11-26/doc-infysxmh2243579.shtml"
+        }
       },
       "target_customers": {
         "value": "城市、园区、楼宇与公共空间运营方",
@@ -5759,6 +5846,10 @@
       {
         "label": "融中财经",
         "url": "https://www.thecapital.com.cn/researchDetail/118331"
+      },
+      {
+        "label": "新浪财经 · 2025-11-26",
+        "url": "https://finance.sina.com.cn/stock/hkstock/hkzmt/2025-11-26/doc-infysxmh2243579.shtml"
       }
     ]
   },
@@ -5802,9 +5893,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2025 年收入人民币 1.08 亿元（招股书口径，2026-06）",
+        "sort": 2026.0,
+        "source": {
+          "label": "每日经济新闻 · 2026-06-22",
+          "url": "https://www.nbd.com.cn/articles/2026-06-22/4433547.html"
+        }
       },
       "target_customers": {
         "value": "医院、科研机构、康复与神经科技团队",
@@ -5816,6 +5910,10 @@
       {
         "label": "瑞财经",
         "url": "https://m.rccaijing.com/news-7479734005119251959.html"
+      },
+      {
+        "label": "每日经济新闻 · 2026-06-22",
+        "url": "https://www.nbd.com.cn/articles/2026-06-22/4433547.html"
       }
     ]
   },
@@ -5859,9 +5957,12 @@
         "source": null
       },
       "arr_usage": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "2025 年收入人民币 7.31 亿元；年末客户 843 家（招股书口径，2026-04）",
+        "sort": 2026.0,
+        "source": {
+          "label": "东方财富 · 2026-04-14",
+          "url": "https://finance.eastmoney.com/a/202604143704430518.html"
+        }
       },
       "target_customers": {
         "value": "晶圆厂、封测厂与半导体制造运营团队",
@@ -5873,6 +5974,10 @@
       {
         "label": "新浪财经",
         "url": "https://finance.sina.com.cn/wm/2026-03-31/doc-inhsxeis2238944.shtml"
+      },
+      {
+        "label": "东方财富 · 2026-04-14",
+        "url": "https://finance.eastmoney.com/a/202604143704430518.html"
       }
     ]
   },
