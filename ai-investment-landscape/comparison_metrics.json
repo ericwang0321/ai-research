@@ -1103,11 +1103,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "闭源",
         "sort": "",
         "source": {
-          "label": "OpenAI",
-          "url": "https://openai.com/index/introducing-gpt-oss/"
+          "label": "GPT-5.5",
+          "url": "https://openai.com/index/introducing-gpt-5-5/"
         }
       }
     },
@@ -1121,8 +1121,8 @@
         "url": "https://openai.com/"
       },
       {
-        "label": "OpenAI",
-        "url": "https://openai.com/index/introducing-gpt-oss/"
+        "label": "GPT-5.5",
+        "url": "https://openai.com/index/introducing-gpt-5-5/"
       }
     ],
     "mega_valuation": true
@@ -1195,8 +1195,8 @@
         "value": "闭源",
         "sort": "",
         "source": {
-          "label": "Anthropic",
-          "url": "https://www.anthropic.com/claude"
+          "label": "Claude Sonnet 5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5"
         }
       }
     },
@@ -1210,8 +1210,8 @@
         "url": "https://www.anthropic.com/"
       },
       {
-        "label": "Anthropic",
-        "url": "https://www.anthropic.com/claude"
+        "label": "Claude Sonnet 5",
+        "url": "https://www.anthropic.com/news/claude-sonnet-5"
       }
     ],
     "mega_valuation": true
@@ -1281,11 +1281,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "开源",
         "sort": "",
         "source": {
-          "label": "Moonshot AI GitHub",
-          "url": "https://github.com/MoonshotAI/Kimi-K2"
+          "label": "Kimi K2.7 Code",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
         }
       }
     },
@@ -1299,8 +1299,8 @@
         "url": "https://www.moonshot.ai/"
       },
       {
-        "label": "Moonshot AI GitHub",
-        "url": "https://github.com/MoonshotAI/Kimi-K2"
+        "label": "Kimi K2.7 Code",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
       }
     ]
   },
@@ -1372,8 +1372,8 @@
         "value": "开源",
         "sort": "",
         "source": {
-          "label": "DeepSeek GitHub",
-          "url": "https://github.com/deepseek-ai/DeepSeek-V3"
+          "label": "DeepSeek V4 Pro",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
         }
       }
     },
@@ -1387,8 +1387,8 @@
         "url": "https://www.deepseek.com/"
       },
       {
-        "label": "DeepSeek GitHub",
-        "url": "https://github.com/deepseek-ai/DeepSeek-V3"
+        "label": "DeepSeek V4 Pro",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
       }
     ],
     "mega_valuation": true
@@ -1458,11 +1458,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "开源",
         "sort": "",
         "source": {
-          "label": "StepFun GitHub",
-          "url": "https://github.com/stepfun-ai"
+          "label": "Step 3.7 Flash",
+          "url": "https://github.com/stepfun-ai/Step-3.7-Flash"
         }
       }
     },
@@ -1476,8 +1476,8 @@
         "url": "https://www.stepfun.com/"
       },
       {
-        "label": "StepFun GitHub",
-        "url": "https://github.com/stepfun-ai"
+        "label": "Step 3.7 Flash",
+        "url": "https://github.com/stepfun-ai/Step-3.7-Flash"
       }
     ]
   },
@@ -1551,8 +1551,8 @@
         "value": "闭源",
         "sort": "",
         "source": {
-          "label": "Reka AI",
-          "url": "https://www.reka.ai/"
+          "label": "Reka Edge",
+          "url": "https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai"
         }
       }
     },
@@ -1570,8 +1570,8 @@
         "url": "https://getlatka.com/companies/reka.ai"
       },
       {
-        "label": "Reka AI",
-        "url": "https://www.reka.ai/"
+        "label": "Reka Edge",
+        "url": "https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai"
       }
     ]
   },
@@ -1730,11 +1730,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "开源",
         "sort": "",
         "source": {
-          "label": "AI21 Labs Hugging Face",
-          "url": "https://huggingface.co/ai21labs"
+          "label": "Jamba2",
+          "url": "https://www.ai21.com/blog/introducing-jamba2/"
         }
       }
     },
@@ -1752,8 +1752,8 @@
         "url": "https://www.ai21.com/"
       },
       {
-        "label": "AI21 Labs Hugging Face",
-        "url": "https://huggingface.co/ai21labs"
+        "label": "Jamba2",
+        "url": "https://www.ai21.com/blog/introducing-jamba2/"
       }
     ]
   },
@@ -1822,11 +1822,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "开源",
         "sort": "",
         "source": {
-          "label": "Cohere Labs Hugging Face",
-          "url": "https://huggingface.co/CohereLabs"
+          "label": "Command A+",
+          "url": "https://cohere.com/blog/command-a-plus"
         }
       }
     },
@@ -1840,8 +1840,8 @@
         "url": "https://cohere.com/"
       },
       {
-        "label": "Cohere Labs Hugging Face",
-        "url": "https://huggingface.co/CohereLabs"
+        "label": "Command A+",
+        "url": "https://cohere.com/blog/command-a-plus"
       }
     ]
   },
@@ -1912,11 +1912,11 @@
         }
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "开源",
         "sort": "",
         "source": {
-          "label": "Liquid AI Hugging Face",
-          "url": "https://huggingface.co/LiquidAI"
+          "label": "LFM2.5",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B"
         }
       }
     },
@@ -1934,8 +1934,8 @@
         "url": "https://getlatka.com/companies/liquid.ai"
       },
       {
-        "label": "Liquid AI Hugging Face",
-        "url": "https://huggingface.co/LiquidAI"
+        "label": "LFM2.5",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B"
       }
     ]
   },
@@ -2004,7 +2004,7 @@
         "value": "开源",
         "sort": "",
         "source": {
-          "label": "MiniCPM GitHub",
+          "label": "MiniCPM 5.0",
           "url": "https://github.com/OpenBMB/MiniCPM"
         }
       }
@@ -2019,7 +2019,7 @@
         "url": "https://modelbest.cn/"
       },
       {
-        "label": "MiniCPM GitHub",
+        "label": "MiniCPM 5.0",
         "url": "https://github.com/OpenBMB/MiniCPM"
       }
     ]
@@ -2091,8 +2091,8 @@
         "value": "开源",
         "sort": "",
         "source": {
-          "label": "Zyphra Hugging Face",
-          "url": "https://huggingface.co/Zyphra"
+          "label": "ZAYA1",
+          "url": "https://huggingface.co/Zyphra/ZAYA1-8B"
         }
       }
     },
@@ -2106,8 +2106,8 @@
         "url": "https://www.zyphra.com/"
       },
       {
-        "label": "Zyphra Hugging Face",
-        "url": "https://huggingface.co/Zyphra"
+        "label": "ZAYA1",
+        "url": "https://huggingface.co/Zyphra/ZAYA1-8B"
       }
     ]
   },
@@ -2179,11 +2179,11 @@
         }
       },
       "open_status": {
-        "value": "开源",
+        "value": "闭源",
         "sort": "",
         "source": {
-          "label": "01.AI Hugging Face",
-          "url": "https://huggingface.co/01-ai"
+          "label": "Yi-Lightning",
+          "url": "https://www.01.ai/"
         }
       }
     },
@@ -2201,8 +2201,8 @@
         "url": "https://getlatka.com/companies/01.ai"
       },
       {
-        "label": "01.AI Hugging Face",
-        "url": "https://huggingface.co/01-ai"
+        "label": "Yi-Lightning",
+        "url": "https://www.01.ai/"
       }
     ]
   },
@@ -2459,11 +2459,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "闭源",
         "sort": "",
         "source": {
-          "label": "Black Forest Labs Hugging Face",
-          "url": "https://huggingface.co/black-forest-labs"
+          "label": "[FLUX.2 [pro]](https://docs.bfl.ai/release-notes)",
+          "url": ""
         }
       }
     },
@@ -2477,8 +2477,8 @@
         "url": "https://bfl.ai/"
       },
       {
-        "label": "Black Forest Labs Hugging Face",
-        "url": "https://huggingface.co/black-forest-labs"
+        "label": "[FLUX.2 [pro]](https://docs.bfl.ai/release-notes)",
+        "url": ""
       }
     ]
   },
@@ -2733,8 +2733,8 @@
         "value": "闭源",
         "sort": "",
         "source": {
-          "label": "Runway",
-          "url": "https://runwayml.com/"
+          "label": "Runway Aleph 2",
+          "url": "https://runwayml.com/news/introducing-aleph-2-and-edit-studio"
         }
       }
     },
@@ -2752,8 +2752,8 @@
         "url": "https://sacra.com/c/runway/"
       },
       {
-        "label": "Runway",
-        "url": "https://runwayml.com/"
+        "label": "Runway Aleph 2",
+        "url": "https://runwayml.com/news/introducing-aleph-2-and-edit-studio"
       }
     ]
   },
@@ -2828,8 +2828,8 @@
         "value": "闭源",
         "sort": "",
         "source": {
-          "label": "Luma AI",
-          "url": "https://lumalabs.ai/"
+          "label": "Luma Ray3.2",
+          "url": "https://lumalabs.ai/news"
         }
       }
     },
@@ -2847,8 +2847,8 @@
         "url": "https://sacra.com/c/luma-ai/"
       },
       {
-        "label": "Luma AI",
-        "url": "https://lumalabs.ai/"
+        "label": "Luma Ray3.2",
+        "url": "https://lumalabs.ai/news"
       }
     ]
   },
@@ -3379,11 +3379,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "闭源",
         "sort": "",
         "source": {
-          "label": "TripoSR GitHub",
-          "url": "https://github.com/VAST-AI-Research/TripoSR"
+          "label": "Tripo H3.1",
+          "url": "https://www.tripo3d.ai/blog/introducing-hd-model-v3-1"
         }
       }
     },
@@ -3401,8 +3401,8 @@
         "url": "https://www.tripo3d.ai/"
       },
       {
-        "label": "TripoSR GitHub",
-        "url": "https://github.com/VAST-AI-Research/TripoSR"
+        "label": "Tripo H3.1",
+        "url": "https://www.tripo3d.ai/blog/introducing-hd-model-v3-1"
       }
     ]
   },
@@ -3470,8 +3470,8 @@
         "value": "开源",
         "sort": "",
         "source": {
-          "label": "Bioptimus Hugging Face",
-          "url": "https://huggingface.co/bioptimus"
+          "label": "H-optimus-1",
+          "url": "https://huggingface.co/bioptimus/H-optimus-1"
         }
       }
     },
@@ -3485,8 +3485,8 @@
         "url": "https://www.bioptimus.com/"
       },
       {
-        "label": "Bioptimus Hugging Face",
-        "url": "https://huggingface.co/bioptimus"
+        "label": "H-optimus-1",
+        "url": "https://huggingface.co/bioptimus/H-optimus-1"
       }
     ]
   },
@@ -3551,11 +3551,11 @@
         "source": null
       },
       "open_status": {
-        "value": "部分开源",
+        "value": "闭源",
         "sort": "",
         "source": {
-          "label": "EvolutionaryScale Hugging Face",
-          "url": "https://huggingface.co/EvolutionaryScale"
+          "label": "ESM3 98B",
+          "url": "https://www.evolutionaryscale.ai/"
         }
       }
     },
@@ -3569,8 +3569,8 @@
         "url": "https://www.evolutionaryscale.ai/"
       },
       {
-        "label": "EvolutionaryScale Hugging Face",
-        "url": "https://huggingface.co/EvolutionaryScale"
+        "label": "ESM3 98B",
+        "url": "https://www.evolutionaryscale.ai/"
       }
     ]
   },
