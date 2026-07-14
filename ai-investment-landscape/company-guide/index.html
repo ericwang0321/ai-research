@@ -107,7 +107,7 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> 与 Fireworks 一样受益于 AI 推理和生成式媒体工作负载增长；区别是 Modal 的市场还覆盖批处理、数据管道和训练任务，而不只按 token 提供模型 API。<a href="https://www.fortunebusinessinsights.com/ai-inference-market-113705" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>2026 年 5 月披露年化收入超过 US$300M，估值约为年化收入的 15.5 倍，商业化证据较强。<a href="https://modal.com/blog/modal-series-c" target="_blank" rel="noopener">收入来源</a></li><li>按秒弹性资源和开发者体验形成使用习惯，任务运行数据可持续改善启动时间、调度和 GPU 利用率。</li><li>相比 Fireworks，Modal 覆盖的计算任务更广；相比 Anyscale，它更强调无服务器体验而不是 Ray 生态。</li><li>主要风险是算力转售毛利、供应商议价、云厂商原生产品替代和客户是否会在规模扩大后自建。</li></ul>
-<p><strong>同赛道比较：</strong> Modal 与 Fireworks 同样有较硬收入证据，但 Modal 更像开发者运行时，Fireworks 更像模型推理平台，因此两家都保留。相比之下，Anyscale 依赖 Ray 生态但估值和收入数据较旧；Pinecone 聚焦向量数据库，市场边界更窄且容易受到通用数据库挤压，所以暂不列入优先名单。</p>
+<p><strong>同赛道比较：</strong> Modal 与 Fireworks 同样有较硬收入证据，但 Modal 更像带 GPU 的无服务器运行时：客户带来代码或模型，Modal 负责容器、调度和弹性扩缩；Fireworks 更像标准化模型 API 与推理优化平台。Prime Intellect 则处理任务环境、评测、强化学习和下一轮训练，卖的不只是计算运行。Anyscale 以开源 Ray 分布式计算生态为核心，并将 Ray Data、Train、Serve 和 RLlib 等工作负载做成托管平台；优势是创始团队和生态，风险是客户可自行部署 Ray，而且云厂商也能提供托管替代。<a href="https://docs.anyscale.com/get-started/what-is-ray" target="_blank" rel="noopener">关于 Ray</a></p>
 <p><strong>融资阶段：</strong> Series C。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，未见已递表或正式 IPO 流程；需要向公司或现有股东确认配额。</p>
 <h4 class="sub4">3. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/prime_intellect.html" target="_blank" rel="noopener">Prime Intellect</a>｜Agent 训练与强化学习基础设施</h4>
@@ -119,7 +119,7 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> 它同时连接训练、后训练和推理预算。公开市场报告对 Agent 后训练尚无稳定独立口径，但只要企业从调用通用模型转向训练专用 Agent，环境、评测和强化学习支出就会增长。</p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司 2026 年 7 月披露拥有 6,000 多家客户和超过 US$100M 年化收入，Series A 阶段已出现较强收入信号。<a href="https://www.primeintellect.ai/blog/series-a" target="_blank" rel="noopener">经营来源</a></li><li>客户任务的成功/失败、工具调用和奖励信号可以形成真正的结果反馈，比单纯积累文档更接近数据飞轮。</li><li>相比只做推理的 Fireworks/Baseten，它把产品延伸到训练和持续改进；若客户跨算力、训练、评测和部署使用，切换成本更高。</li><li>主要风险是年化收入中算力转售占比、真实软件毛利、客户集中度和 Series A 条款下的高估值。</li></ul>
-<p><strong>同赛道比较：</strong> Prime Intellect 比 Fireworks 和 Modal 更早期，但更直接连接任务结果、强化学习和评测，因此保留为高风险高潜力样本。Anyscale 的分布式计算生态更成熟，但暂未披露同等强度的收入和训练闭环；Baseten 更偏部署服务，缺少 Prime 这类任务反馈资产。</p>
+<p><strong>同赛道比较：</strong> Prime Intellect 比 Fireworks 和 Modal 更早期，但更直接连接任务结果、强化学习和评测，因此保留为高风险高潜力样本。Modal 解决“代码和模型如何在 GPU 上弹性运行”，Prime Intellect 解决“Agent 如何把任务成败转成评测和下一轮训练”，两者的底层计算有重叠，但产品控制点不同。Anyscale 的 Ray 分布式计算生态更成熟，但暂未披露同等强度的收入和训练闭环；Baseten 更偏部署服务，缺少 Prime 这类任务反馈资产。</p>
 <p><strong>融资阶段：</strong> Series A。融资轮次较早，但本轮筛选不以轮次作为排除条件。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选，且相对后期公司更可能存在后续新股轮次。仍需核验优先股条款、收入质量和具体配额。</p>
 <h3 class="subsection">基础模型（1 家）</h3>
@@ -132,7 +132,10 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> Fortune Business Insights 预计语音 AI 伴侣市场从 2026 年 US$13.67B 增至 2034 年 US$49.85B；ElevenLabs 的实际市场还包括配音、本地化、API 和企业客服，因此范围更宽。<a href="https://www.fortunebusinessinsights.com/voice-based-ai-companion-product-market-114738" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司 2026 年 5 月披露 ARR 已超过 US$500M，估值约为 ARR 的 22 倍，是基础模型公司中少见的硬收入锚。<a href="https://elevenlabs.io/blog/500m-arr-and-new-investors" target="_blank" rel="noopener">收入来源</a></li><li>多语言模型、低延迟 API、内容工具和企业 Voice Agent 可以复用同一语音技术栈，市场不依赖单一产品。</li><li>授权声音和真实企业交互有机会形成质量评测与本地化数据优势，但必须明确数据和人格权授权边界。</li><li>主要风险是版权、声音人格权、低价开源模型、企业语音 Agent 毛利和 US$11B 估值下的增长要求。</li></ul>
-<p><strong>同赛道比较：</strong> ElevenLabs 相比 Suno 的音乐场景更横向，API 和企业应用更多；相比 HeyGen、Synthesia，它控制更上游的语音模型。HeyGen 凭借直接用户分发和视频本地化工作流也进入名单：ElevenLabs 代表语音能力层，HeyGen 代表视频应用层，两者的控制点不重复。Suno 面临更集中的音乐版权风险；Synthesia 企业培训深度较强，但与 HeyGen 的产品重合度更高，本轮不再增加。</p>
+<p><strong>Artificial Analysis 独立 TTS 榜单（查询日：2026-07-14）：</strong></p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>ElevenLabs 模型</th><th>当前名次</th><th>质量 Elo</th><th>API 价格</th></tr></thead><tbody><tr><td>Eleven v3</td><td>12</td><td>1,174</td><td>US$100 / 100 万字符</td></tr><tr><td>Multilingual v2</td><td>25</td><td>1,107</td><td>US$100 / 100 万字符</td></tr><tr><td>Turbo v2.5</td><td>26</td><td>1,106</td><td>US$50 / 100 万字符</td></tr><tr><td>Flash v2.5</td><td>29</td><td>1,093</td><td>US$50 / 100 万字符</td></tr></tbody></table></div>
+<p>该榜单使用盲测用户偏好比较语音输出，名次会随投票和新模型变化。它说明 ElevenLabs 仍属较强 TTS 供应商，但 Eleven v3 当前并非纯听感榜第一。该排名不覆盖声音克隆质量、企业稳定性、长文一致性、版权合规和 Voice Agent 工作流。<a href="https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice/" target="_blank" rel="noopener">榜单来源</a></p>
+<p><strong>同赛道比较：</strong> ElevenLabs 相比 Suno 的音乐场景更横向，API 和企业应用更多；相比 HeyGen、Synthesia，它控制更上游的语音模型。HeyGen 凭借直接用户分发和视频本地化工作流也进入名单：ElevenLabs 代表语音能力层，HeyGen 代表视频应用层，两者的控制点不重复。Decagon 虽然也提供语音 Agent，但它卖的是客服自动解决、工作流执行和企业系统集成，应用自动解决率、操作成功率、CSAT 和转人工率评估，不能与 ElevenLabs 的 TTS Elo 直接比较。Suno 面临更集中的音乐版权风险；Synthesia 企业培训深度较强，但与 HeyGen 的产品重合度更高，本轮不再增加。</p>
 <p><strong>融资阶段：</strong> Series D / 追加融资。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，未见已经递表；但估值较高，需优先确认是否存在新股、老股或结构化二级额度。</p>
 <h3 class="subsection">横向 AI 应用（4 家）</h3>
@@ -145,6 +148,7 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> Grand View Research 预计广义数字人市场从 2026 年 US$46.3B 增长至 2030 年 US$270.6B。这是包含游戏、互动娱乐等在内的更广口径，不等于 HeyGen 可直接获取的 TAM，但可以反映数字身份与 AI 视频支出的扩张方向。<a href="https://www.grandviewresearch.com/industry-analysis/digital-avatar-market-report" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司 2026 年 6 月披露 ARR 超过 US$200M，8 个月翻倍，用户超过 3,000 万，覆盖 196 个国家，并被 85% 的 Fortune 100 公司采用。<a href="https://www.heygen.com/blog/heygen-surpasses-200m-arr" target="_blank" rel="noopener">经营来源</a></li><li>产品同时覆盖自助订阅、团队协作、企业部署和 API，比只卖单一生成模型更接近客户的最终视频工作流。</li><li>视频翻译、数字分身和品牌资产会产生持续修改和本地化需求，有机会提高使用频率与客户切换成本。</li><li>主要风险是数字身份与深伪合规、通用视频模型快速商品化、推理毛利，以及 2024 年 US$500M 估值明显滞后于 2026 年收入规模的可能性。</li></ul>
+<p><strong>Artificial Analysis 榜单状态（查询日：2026-07-14）：</strong> 当前 Artificial Analysis 的文生视频和图生视频榜单主要比较 Seedance、Wan、Kling、Veo、Runway 等通用视频生成模型，尚未收录 HeyGen Avatar V。因此，不能用该站的通用视频 Elo 判断 HeyGen 在数字人场景的模型强弱。HeyGen 更应与 Synthesia、Tavus、Captions 等产品比较身份一致性、口型同步、翻译准确率、长视频稳定性和每分钟成本。<a href="https://artificialanalysis.ai/video/leaderboard/text-to-video" target="_blank" rel="noopener">通用视频榜单</a></p>
 <p><strong>同赛道比较：</strong> HeyGen 相比 Synthesia 更兼顾个人自助创作、全球用户分发和企业视频，Synthesia 则更深入企业培训与合规场景。ElevenLabs 控制更上游的语音模型与 API，HeyGen 控制视频制作和本地化工作流，因此两者可以同时保留。相比 Black Forest Labs，HeyGen 已披露超过 US$200M ARR 并拥有直接用户入口；BFL 的图像模型和平台分发仍具价值，但收入和直接反馈证据较弱，因此本轮由 HeyGen 替代 BFL。</p>
 <p><strong>融资阶段：</strong> 2024 年融资轮（常按 Series A 口径记录）。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场或合规二级候选。公司仍是独立私营主体，未见已递表或已签收购；但 2024 年估值已过时，决策前必须重新核验最新新股或老股价格、份额和转让限制。</p>
