@@ -371,6 +371,83 @@
     ]
   },
   {
+    "company": "Prime Intellect",
+    "short": "Prime Intellect",
+    "md": "infra_prime_intellect",
+    "slug": "prime_intellect",
+    "sector": "AI 基础设施",
+    "comparison_group": "推理与模型部署",
+    "comparison_group_rank": 0,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series A",
+    "latest_round_date": "2026-07-08",
+    "cells": {
+      "valuation": {
+        "value": "$1B",
+        "sort": 1.0,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/"
+        }
+      },
+      "latest_raise": {
+        "value": "$130M",
+        "sort": 0.13,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/"
+        }
+      },
+      "subsector": {
+        "value": "推理与模型部署",
+        "sort": "",
+        "source": null
+      },
+      "core_product": {
+        "value": "Agent 强化学习、分布式训练与 GPU 算力平台｜模型 API / 云平台/托管服务",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "把企业任务、强化学习、评测与部署连成持续改进闭环",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "算力/托管 + API 按量 + 企业合同（占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Prime Intellect 官网/产品口径",
+          "url": "https://www.primeintellect.ai/"
+        }
+      },
+      "arr_revenue": {
+        "value": ">US$100M annualized revenue（截至 2026-07-08）",
+        "sort": 0.1,
+        "source": {
+          "label": "Prime Intellect Series A · 2026-07-08",
+          "url": "https://www.primeintellect.ai/blog/series-a"
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/"
+      },
+      {
+        "label": "Prime Intellect 官网/产品口径",
+        "url": "https://www.primeintellect.ai/"
+      },
+      {
+        "label": "Prime Intellect Series A · 2026-07-08",
+        "url": "https://www.primeintellect.ai/blog/series-a"
+      }
+    ]
+  },
+  {
     "company": "Databricks",
     "short": "Databricks",
     "md": "application_databricks",
