@@ -1352,7 +1352,7 @@
     "latest_round": "最新融资轮完成",
     "latest_round_date": "2026-03-31",
     "valuation_date": "2026-03-31",
-    "revenue_period": "2026-03-31（月收入年化）",
+    "revenue_period": "2026-03-31（月收入 × 12，仅作年化收入）",
     "multiple_type": "P/S",
     "ps_multiple": "35.5x（P/S）",
     "cells": {
@@ -1417,7 +1417,7 @@
         "value": "35.5x（P/S）",
         "sort": 35.5,
         "source": null,
-        "secondary": "估值 2026-03-31｜收入 2026-03-31（月收入年化）",
+        "secondary": "估值 2026-03-31｜收入 2026-03-31（月收入 × 12，仅作年化收入）",
         "calculation": "$852B / $2B monthly revenue（截至 2026-03-31）"
       },
       "open_status": {
