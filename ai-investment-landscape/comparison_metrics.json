@@ -5,7 +5,7 @@
     "md": "infra_anyscale",
     "slug": "anyscale",
     "sector": "AI 基础设施",
-    "comparison_group": "推理与模型部署",
+    "comparison_group": "模型开发与运行平台",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -30,7 +30,7 @@
         }
       },
       "subsector": {
-        "value": "推理与模型部署",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -85,7 +85,7 @@
     "md": "infra_baseten",
     "slug": "baseten",
     "sector": "AI 基础设施",
-    "comparison_group": "推理与模型部署",
+    "comparison_group": "模型开发与运行平台",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -110,7 +110,7 @@
         }
       },
       "subsector": {
-        "value": "推理与模型部署",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -165,7 +165,7 @@
     "md": "infra_fireworks_ai",
     "slug": "fireworks_ai",
     "sector": "AI 基础设施",
-    "comparison_group": "推理与模型部署",
+    "comparison_group": "模型开发与运行平台",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -190,7 +190,7 @@
         }
       },
       "subsector": {
-        "value": "推理与模型部署",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -252,7 +252,7 @@
     "md": "infra_modal",
     "slug": "modal",
     "sector": "AI 基础设施",
-    "comparison_group": "推理与模型部署",
+    "comparison_group": "模型开发与运行平台",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -277,7 +277,7 @@
         }
       },
       "subsector": {
-        "value": "推理与模型部署",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -339,7 +339,7 @@
     "md": "infra_together_ai",
     "slug": "together_ai",
     "sector": "AI 基础设施",
-    "comparison_group": "推理与模型部署",
+    "comparison_group": "模型开发与运行平台",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -364,7 +364,7 @@
         }
       },
       "subsector": {
-        "value": "推理与模型部署",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -426,7 +426,7 @@
     "md": "infra_prime_intellect",
     "slug": "prime_intellect",
     "sector": "AI 基础设施",
-    "comparison_group": "推理与模型部署",
+    "comparison_group": "模型开发与运行平台",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -451,7 +451,7 @@
         }
       },
       "subsector": {
-        "value": "推理与模型部署",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -513,7 +513,7 @@
     "md": "application_databricks",
     "slug": "databricks",
     "sector": "AI 基础设施",
-    "comparison_group": "企业数据平台",
+    "comparison_group": "企业数据与检索基础设施",
     "comparison_group_rank": 1,
     "layers": [
       "应用层"
@@ -538,7 +538,7 @@
         }
       },
       "subsector": {
-        "value": "企业数据平台",
+        "value": "企业数据与检索基础设施",
         "sort": "",
         "source": null
       },
@@ -601,8 +601,8 @@
     "md": "infra_hugging_face",
     "slug": "hugging_face",
     "sector": "AI 基础设施",
-    "comparison_group": "模型与开发者生态",
-    "comparison_group_rank": 2,
+    "comparison_group": "模型开发与运行平台",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -626,7 +626,7 @@
         }
       },
       "subsector": {
-        "value": "模型与开发者生态",
+        "value": "模型开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -689,7 +689,7 @@
     "slug": "scale_ai",
     "sector": "AI 基础设施",
     "comparison_group": "训练数据与专家服务",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -776,7 +776,7 @@
     "slug": "mercor",
     "sector": "AI 基础设施",
     "comparison_group": "训练数据与专家服务",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -862,8 +862,8 @@
     "md": "infra_pinecone",
     "slug": "pinecone",
     "sector": "AI 基础设施",
-    "comparison_group": "向量数据库",
-    "comparison_group_rank": 4,
+    "comparison_group": "企业数据与检索基础设施",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -887,7 +887,7 @@
         }
       },
       "subsector": {
-        "value": "向量数据库",
+        "value": "企业数据与检索基础设施",
         "sort": "",
         "source": null
       },
@@ -942,8 +942,8 @@
     "md": "infra_weaviate",
     "slug": "weaviate",
     "sector": "AI 基础设施",
-    "comparison_group": "向量数据库",
-    "comparison_group_rank": 4,
+    "comparison_group": "企业数据与检索基础设施",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -967,7 +967,7 @@
         }
       },
       "subsector": {
-        "value": "向量数据库",
+        "value": "企业数据与检索基础设施",
         "sort": "",
         "source": null
       },
@@ -1022,8 +1022,8 @@
     "md": "infra_enflame_燧原科技",
     "slug": "enflame_燧原科技",
     "sector": "AI 基础设施",
-    "comparison_group": "AI 芯片",
-    "comparison_group_rank": 5,
+    "comparison_group": "AI 芯片与算力硬件",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -1047,7 +1047,7 @@
         }
       },
       "subsector": {
-        "value": "AI 芯片",
+        "value": "AI 芯片与算力硬件",
         "sort": "",
         "source": null
       },
@@ -1109,8 +1109,8 @@
     "md": "infra_sunrise_ai_曦望智能",
     "slug": "sunrise_ai_曦望智能",
     "sector": "AI 基础设施",
-    "comparison_group": "AI 芯片",
-    "comparison_group_rank": 5,
+    "comparison_group": "AI 芯片与算力硬件",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -1134,7 +1134,7 @@
         }
       },
       "subsector": {
-        "value": "AI 芯片",
+        "value": "AI 芯片与算力硬件",
         "sort": "",
         "source": null
       },
@@ -1189,7 +1189,7 @@
     "md": "model_openai",
     "slug": "openai",
     "sector": "基础模型",
-    "comparison_group": "通用多模态模型",
+    "comparison_group": "通用模型",
     "comparison_group_rank": 0,
     "layers": [
       "模型层",
@@ -1215,7 +1215,7 @@
         }
       },
       "subsector": {
-        "value": "通用多模态模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1290,8 +1290,8 @@
     "md": "model_anthropic",
     "slug": "anthropic",
     "sector": "基础模型",
-    "comparison_group": "语言与推理模型",
-    "comparison_group_rank": 1,
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层",
       "应用层"
@@ -1316,7 +1316,7 @@
         }
       },
       "subsector": {
-        "value": "语言与推理模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1391,7 +1391,7 @@
     "md": "model_kimi_moonshot",
     "slug": "moonshot_ai_月之暗面_kimi",
     "sector": "基础模型",
-    "comparison_group": "通用多模态模型",
+    "comparison_group": "通用模型",
     "comparison_group_rank": 0,
     "layers": [
       "模型层",
@@ -1417,7 +1417,7 @@
         }
       },
       "subsector": {
-        "value": "通用多模态模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1491,8 +1491,8 @@
     "md": "model_deepseek",
     "slug": "deepseek_深度求索",
     "sector": "基础模型",
-    "comparison_group": "语言与推理模型",
-    "comparison_group_rank": 1,
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层",
       "应用层"
@@ -1517,7 +1517,7 @@
         }
       },
       "subsector": {
-        "value": "语言与推理模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1585,7 +1585,7 @@
     "md": "model_stepfun",
     "slug": "stepfun_阶跃星辰",
     "sector": "基础模型",
-    "comparison_group": "通用多模态模型",
+    "comparison_group": "通用模型",
     "comparison_group_rank": 0,
     "layers": [
       "模型层",
@@ -1611,7 +1611,7 @@
         }
       },
       "subsector": {
-        "value": "通用多模态模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1678,7 +1678,7 @@
     "md": "model_reka_ai",
     "slug": "reka_ai",
     "sector": "基础模型",
-    "comparison_group": "通用多模态模型",
+    "comparison_group": "通用模型",
     "comparison_group_rank": 0,
     "layers": [
       "模型层"
@@ -1703,7 +1703,7 @@
         }
       },
       "subsector": {
-        "value": "通用多模态模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1770,7 +1770,7 @@
     "md": "model_thinking_machines",
     "slug": "thinking_machines_lab",
     "sector": "基础模型",
-    "comparison_group": "通用多模态模型",
+    "comparison_group": "通用模型",
     "comparison_group_rank": 0,
     "layers": [
       "模型层"
@@ -1795,7 +1795,7 @@
         }
       },
       "subsector": {
-        "value": "通用多模态模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1862,8 +1862,8 @@
     "md": "model_ai21_labs",
     "slug": "ai21_labs",
     "sector": "基础模型",
-    "comparison_group": "语言与推理模型",
-    "comparison_group_rank": 1,
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层",
       "应用层"
@@ -1888,7 +1888,7 @@
         }
       },
       "subsector": {
-        "value": "语言与推理模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -1955,8 +1955,8 @@
     "md": "model_cohere",
     "slug": "cohere",
     "sector": "基础模型",
-    "comparison_group": "语言与推理模型",
-    "comparison_group_rank": 1,
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层",
       "应用层"
@@ -1981,7 +1981,7 @@
         }
       },
       "subsector": {
-        "value": "语言与推理模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -2055,8 +2055,8 @@
     "md": "model_liquid_ai",
     "slug": "liquid_ai",
     "sector": "基础模型",
-    "comparison_group": "高效与端侧模型",
-    "comparison_group_rank": 3,
+    "comparison_group": "端侧模型",
+    "comparison_group_rank": 1,
     "layers": [
       "模型层"
     ],
@@ -2080,7 +2080,7 @@
         }
       },
       "subsector": {
-        "value": "高效与端侧模型",
+        "value": "端侧模型",
         "sort": "",
         "source": null
       },
@@ -2147,8 +2147,8 @@
     "md": "model_modelbest_面壁智能",
     "slug": "modelbest_面壁智能",
     "sector": "基础模型",
-    "comparison_group": "高效与端侧模型",
-    "comparison_group_rank": 3,
+    "comparison_group": "端侧模型",
+    "comparison_group_rank": 1,
     "layers": [
       "模型层",
       "应用层"
@@ -2170,7 +2170,7 @@
         }
       },
       "subsector": {
-        "value": "高效与端侧模型",
+        "value": "端侧模型",
         "sort": "",
         "source": null
       },
@@ -2237,8 +2237,8 @@
     "md": "model_zyphra",
     "slug": "zyphra",
     "sector": "基础模型",
-    "comparison_group": "高效与端侧模型",
-    "comparison_group_rank": 3,
+    "comparison_group": "端侧模型",
+    "comparison_group_rank": 1,
     "layers": [
       "模型层"
     ],
@@ -2262,7 +2262,7 @@
         }
       },
       "subsector": {
-        "value": "高效与端侧模型",
+        "value": "端侧模型",
         "sort": "",
         "source": null
       },
@@ -2329,8 +2329,8 @@
     "md": "model_01ai",
     "slug": "零一万物_01_ai",
     "sector": "基础模型",
-    "comparison_group": "语言与推理模型",
-    "comparison_group_rank": 1,
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层",
       "应用层"
@@ -2355,7 +2355,7 @@
         }
       },
       "subsector": {
-        "value": "语言与推理模型",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -2429,8 +2429,8 @@
     "md": "model_safe_superintelligence",
     "slug": "safe_superintelligence_inc_ssi",
     "sector": "基础模型",
-    "comparison_group": "通用智能研究",
-    "comparison_group_rank": 4,
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
     "layers": [
       "模型层"
     ],
@@ -2454,7 +2454,7 @@
         }
       },
       "subsector": {
-        "value": "通用智能研究",
+        "value": "通用模型",
         "sort": "",
         "source": null
       },
@@ -2529,7 +2529,7 @@
     "slug": "poolside_ai",
     "sector": "基础模型",
     "comparison_group": "代码模型",
-    "comparison_group_rank": 5,
+    "comparison_group_rank": 2,
     "layers": [
       "模型层",
       "应用层"
@@ -2621,8 +2621,8 @@
     "md": "model_black_forest_labs",
     "slug": "black_forest_labs",
     "sector": "基础模型",
-    "comparison_group": "图像模型",
-    "comparison_group_rank": 6,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层"
     ],
@@ -2646,7 +2646,7 @@
         }
       },
       "subsector": {
-        "value": "图像模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -2713,8 +2713,8 @@
     "md": "application_midjourney",
     "slug": "midjourney",
     "sector": "基础模型",
-    "comparison_group": "图像模型",
-    "comparison_group_rank": 6,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -2736,7 +2736,7 @@
         }
       },
       "subsector": {
-        "value": "图像模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -2810,8 +2810,8 @@
     "md": "application_kling_ai_可灵ai",
     "slug": "kling_ai_可灵ai",
     "sector": "基础模型",
-    "comparison_group": "视频与世界模型",
-    "comparison_group_rank": 7,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -2836,7 +2836,7 @@
         }
       },
       "subsector": {
-        "value": "视频与世界模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -2910,8 +2910,8 @@
     "md": "application_runway",
     "slug": "runway",
     "sector": "基础模型",
-    "comparison_group": "视频与世界模型",
-    "comparison_group_rank": 7,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -2936,7 +2936,7 @@
         }
       },
       "subsector": {
-        "value": "视频与世界模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -3003,8 +3003,8 @@
     "md": "application_luma_ai",
     "slug": "luma_ai",
     "sector": "基础模型",
-    "comparison_group": "视频与世界模型",
-    "comparison_group_rank": 7,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -3029,7 +3029,7 @@
         }
       },
       "subsector": {
-        "value": "视频与世界模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -3096,8 +3096,8 @@
     "md": "application_pika",
     "slug": "pika",
     "sector": "基础模型",
-    "comparison_group": "视频与世界模型",
-    "comparison_group_rank": 7,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -3122,7 +3122,7 @@
         }
       },
       "subsector": {
-        "value": "视频与世界模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -3189,8 +3189,8 @@
     "md": "application_aishiai_爱诗科技",
     "slug": "aisphere_爱诗科技_pixverse",
     "sector": "基础模型",
-    "comparison_group": "视频与世界模型",
-    "comparison_group_rank": 7,
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -3215,7 +3215,7 @@
         }
       },
       "subsector": {
-        "value": "视频与世界模型",
+        "value": "视觉生成模型",
         "sort": "",
         "source": null
       },
@@ -3293,8 +3293,8 @@
     "md": "application_elevenlabs",
     "slug": "elevenlabs",
     "sector": "基础模型",
-    "comparison_group": "语音模型",
-    "comparison_group_rank": 8,
+    "comparison_group": "音频模型",
+    "comparison_group_rank": 6,
     "layers": [
       "模型层",
       "应用层"
@@ -3319,7 +3319,7 @@
         }
       },
       "subsector": {
-        "value": "语音模型",
+        "value": "音频模型",
         "sort": "",
         "source": null
       },
@@ -3393,8 +3393,8 @@
     "md": "application_suno",
     "slug": "suno",
     "sector": "基础模型",
-    "comparison_group": "音乐模型",
-    "comparison_group_rank": 9,
+    "comparison_group": "音频模型",
+    "comparison_group_rank": 6,
     "layers": [
       "模型层",
       "应用层"
@@ -3419,7 +3419,7 @@
         }
       },
       "subsector": {
-        "value": "音乐模型",
+        "value": "音频模型",
         "sort": "",
         "source": null
       },
@@ -3494,7 +3494,7 @@
     "slug": "meshy",
     "sector": "基础模型",
     "comparison_group": "3D 模型",
-    "comparison_group_rank": 10,
+    "comparison_group_rank": 5,
     "layers": [
       "模型层",
       "应用层"
@@ -3584,7 +3584,7 @@
     "slug": "tripo_ai",
     "sector": "基础模型",
     "comparison_group": "3D 模型",
-    "comparison_group_rank": 10,
+    "comparison_group_rank": 5,
     "layers": [
       "模型层",
       "应用层"
@@ -3687,8 +3687,8 @@
     "md": "model_bioptimus",
     "slug": "bioptimus",
     "sector": "基础模型",
-    "comparison_group": "生物基础模型",
-    "comparison_group_rank": 11,
+    "comparison_group": "生物模型",
+    "comparison_group_rank": 7,
     "layers": [
       "模型层"
     ],
@@ -3709,7 +3709,7 @@
         }
       },
       "subsector": {
-        "value": "生物基础模型",
+        "value": "生物模型",
         "sort": "",
         "source": null
       },
@@ -3776,8 +3776,8 @@
     "md": "model_evolutionaryscale",
     "slug": "evolutionaryscale",
     "sector": "基础模型",
-    "comparison_group": "生物基础模型",
-    "comparison_group_rank": 11,
+    "comparison_group": "生物模型",
+    "comparison_group_rank": 7,
     "layers": [
       "模型层"
     ],
@@ -3798,7 +3798,7 @@
         }
       },
       "subsector": {
-        "value": "生物基础模型",
+        "value": "生物模型",
         "sort": "",
         "source": null
       },
@@ -3865,8 +3865,8 @@
     "md": "application_gigaai_极佳视界",
     "slug": "gigaai_极佳视界",
     "sector": "基础模型",
-    "comparison_group": "物理世界模型",
-    "comparison_group_rank": 12,
+    "comparison_group": "世界模型",
+    "comparison_group_rank": 4,
     "layers": [
       "模型层",
       "应用层"
@@ -3891,7 +3891,7 @@
         }
       },
       "subsector": {
-        "value": "物理世界模型",
+        "value": "世界模型",
         "sort": "",
         "source": null
       },
@@ -3958,7 +3958,7 @@
     "md": "application_genspark",
     "slug": "genspark",
     "sector": "横向 AI 应用",
-    "comparison_group": "通用 Agent",
+    "comparison_group": "通用 Agent 与生产力",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -3983,7 +3983,7 @@
         }
       },
       "subsector": {
-        "value": "通用 Agent",
+        "value": "通用 Agent 与生产力",
         "sort": "",
         "source": null
       },
@@ -4050,7 +4050,7 @@
     "md": "application_manus",
     "slug": "manus_butterfly_effect",
     "sector": "横向 AI 应用",
-    "comparison_group": "通用 Agent",
+    "comparison_group": "通用 Agent 与生产力",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -4075,7 +4075,7 @@
         }
       },
       "subsector": {
-        "value": "通用 Agent",
+        "value": "通用 Agent 与生产力",
         "sort": "",
         "source": null
       },
@@ -4149,7 +4149,7 @@
     "md": "application_granola",
     "slug": "granola",
     "sector": "横向 AI 应用",
-    "comparison_group": "通用 Agent",
+    "comparison_group": "通用 Agent 与生产力",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -4174,7 +4174,7 @@
         }
       },
       "subsector": {
-        "value": "通用 Agent",
+        "value": "通用 Agent 与生产力",
         "sort": "",
         "source": null
       },
@@ -4234,7 +4234,7 @@
     "md": "application_cursor",
     "slug": "anysphere_cursor",
     "sector": "横向 AI 应用",
-    "comparison_group": "编程 Agent",
+    "comparison_group": "软件开发与应用生成",
     "comparison_group_rank": 1,
     "layers": [
       "应用层"
@@ -4259,7 +4259,7 @@
         }
       },
       "subsector": {
-        "value": "编程 Agent",
+        "value": "软件开发与应用生成",
         "sort": "",
         "source": null
       },
@@ -4333,7 +4333,7 @@
     "md": "application_cognition",
     "slug": "cognition_ai_devin",
     "sector": "横向 AI 应用",
-    "comparison_group": "编程 Agent",
+    "comparison_group": "软件开发与应用生成",
     "comparison_group_rank": 1,
     "layers": [
       "应用层"
@@ -4358,7 +4358,7 @@
         }
       },
       "subsector": {
-        "value": "编程 Agent",
+        "value": "软件开发与应用生成",
         "sort": "",
         "source": null
       },
@@ -4432,7 +4432,7 @@
     "md": "application_replit",
     "slug": "replit",
     "sector": "横向 AI 应用",
-    "comparison_group": "编程 Agent",
+    "comparison_group": "软件开发与应用生成",
     "comparison_group_rank": 1,
     "layers": [
       "应用层"
@@ -4457,7 +4457,7 @@
         }
       },
       "subsector": {
-        "value": "编程 Agent",
+        "value": "软件开发与应用生成",
         "sort": "",
         "source": null
       },
@@ -4531,8 +4531,8 @@
     "md": "application_lovable",
     "slug": "lovable",
     "sector": "横向 AI 应用",
-    "comparison_group": "应用生成",
-    "comparison_group_rank": 2,
+    "comparison_group": "软件开发与应用生成",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -4556,7 +4556,7 @@
         }
       },
       "subsector": {
-        "value": "应用生成",
+        "value": "软件开发与应用生成",
         "sort": "",
         "source": null
       },
@@ -4630,8 +4630,8 @@
     "md": "application_emergent",
     "slug": "emergent",
     "sector": "横向 AI 应用",
-    "comparison_group": "应用生成",
-    "comparison_group_rank": 2,
+    "comparison_group": "软件开发与应用生成",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -4655,7 +4655,7 @@
         }
       },
       "subsector": {
-        "value": "应用生成",
+        "value": "软件开发与应用生成",
         "sort": "",
         "source": null
       },
@@ -4729,8 +4729,8 @@
     "md": "application_stackblitz_bolt",
     "slug": "stackblitz_bolt_new",
     "sector": "横向 AI 应用",
-    "comparison_group": "应用生成",
-    "comparison_group_rank": 2,
+    "comparison_group": "软件开发与应用生成",
+    "comparison_group_rank": 1,
     "layers": [
       "应用层"
     ],
@@ -4754,7 +4754,7 @@
         }
       },
       "subsector": {
-        "value": "应用生成",
+        "value": "软件开发与应用生成",
         "sort": "",
         "source": null
       },
@@ -4828,8 +4828,8 @@
     "md": "infra_dify_langgenius",
     "slug": "dify_langgenius",
     "sector": "横向 AI 应用",
-    "comparison_group": "Agent 开发平台",
-    "comparison_group_rank": 3,
+    "comparison_group": "Agent 开发与运行平台",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -4853,7 +4853,7 @@
         }
       },
       "subsector": {
-        "value": "Agent 开发平台",
+        "value": "Agent 开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -4920,8 +4920,8 @@
     "md": "infra_langchain",
     "slug": "langchain",
     "sector": "横向 AI 应用",
-    "comparison_group": "Agent 开发平台",
-    "comparison_group_rank": 3,
+    "comparison_group": "Agent 开发与运行平台",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -4945,7 +4945,7 @@
         }
       },
       "subsector": {
-        "value": "Agent 开发平台",
+        "value": "Agent 开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -5012,8 +5012,8 @@
     "md": "infra_llamaindex",
     "slug": "llamaindex",
     "sector": "横向 AI 应用",
-    "comparison_group": "Agent 开发平台",
-    "comparison_group_rank": 3,
+    "comparison_group": "Agent 开发与运行平台",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -5034,7 +5034,7 @@
         }
       },
       "subsector": {
-        "value": "Agent 开发平台",
+        "value": "Agent 开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -5101,8 +5101,8 @@
     "md": "infra_braintrust",
     "slug": "braintrust",
     "sector": "横向 AI 应用",
-    "comparison_group": "AI 评测与可观测性",
-    "comparison_group_rank": 4,
+    "comparison_group": "Agent 开发与运行平台",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -5126,7 +5126,7 @@
         }
       },
       "subsector": {
-        "value": "AI 评测与可观测性",
+        "value": "Agent 开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -5193,8 +5193,8 @@
     "md": "infra_browserbase",
     "slug": "browserbase",
     "sector": "横向 AI 应用",
-    "comparison_group": "浏览器执行",
-    "comparison_group_rank": 5,
+    "comparison_group": "Agent 开发与运行平台",
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -5218,7 +5218,7 @@
         }
       },
       "subsector": {
-        "value": "浏览器执行",
+        "value": "Agent 开发与运行平台",
         "sort": "",
         "source": null
       },
@@ -5292,8 +5292,8 @@
     "md": "application_exa",
     "slug": "exa",
     "sector": "横向 AI 应用",
-    "comparison_group": "AI 搜索",
-    "comparison_group_rank": 6,
+    "comparison_group": "搜索与知识管理",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -5317,7 +5317,7 @@
         }
       },
       "subsector": {
-        "value": "AI 搜索",
+        "value": "搜索与知识管理",
         "sort": "",
         "source": null
       },
@@ -5384,8 +5384,8 @@
     "md": "application_tavily",
     "slug": "tavily",
     "sector": "横向 AI 应用",
-    "comparison_group": "AI 搜索",
-    "comparison_group_rank": 6,
+    "comparison_group": "搜索与知识管理",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -5409,7 +5409,7 @@
         }
       },
       "subsector": {
-        "value": "AI 搜索",
+        "value": "搜索与知识管理",
         "sort": "",
         "source": null
       },
@@ -5480,8 +5480,8 @@
     "md": "application_perplexity",
     "slug": "perplexity_ai",
     "sector": "横向 AI 应用",
-    "comparison_group": "AI 搜索",
-    "comparison_group_rank": 6,
+    "comparison_group": "搜索与知识管理",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -5505,7 +5505,7 @@
         }
       },
       "subsector": {
-        "value": "AI 搜索",
+        "value": "搜索与知识管理",
         "sort": "",
         "source": null
       },
@@ -5579,8 +5579,8 @@
     "md": "application_glean",
     "slug": "glean_technologies",
     "sector": "横向 AI 应用",
-    "comparison_group": "企业搜索与知识管理",
-    "comparison_group_rank": 7,
+    "comparison_group": "搜索与知识管理",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -5604,7 +5604,7 @@
         }
       },
       "subsector": {
-        "value": "企业搜索与知识管理",
+        "value": "搜索与知识管理",
         "sort": "",
         "source": null
       },
@@ -5678,8 +5678,8 @@
     "md": "application_golinks_gosearch",
     "slug": "golinks_gosearch",
     "sector": "横向 AI 应用",
-    "comparison_group": "企业搜索与知识管理",
-    "comparison_group_rank": 7,
+    "comparison_group": "搜索与知识管理",
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -5700,7 +5700,7 @@
         }
       },
       "subsector": {
-        "value": "企业搜索与知识管理",
+        "value": "搜索与知识管理",
         "sort": "",
         "source": null
       },
@@ -5767,8 +5767,8 @@
     "md": "application_decagon",
     "slug": "decagon_ai",
     "sector": "横向 AI 应用",
-    "comparison_group": "客服 Agent",
-    "comparison_group_rank": 8,
+    "comparison_group": "企业业务 Agent",
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -5792,7 +5792,7 @@
         }
       },
       "subsector": {
-        "value": "客服 Agent",
+        "value": "企业业务 Agent",
         "sort": "",
         "source": null
       },
@@ -5859,8 +5859,8 @@
     "md": "application_sierra",
     "slug": "sierra",
     "sector": "横向 AI 应用",
-    "comparison_group": "客服 Agent",
-    "comparison_group_rank": 8,
+    "comparison_group": "企业业务 Agent",
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -5884,7 +5884,7 @@
         }
       },
       "subsector": {
-        "value": "客服 Agent",
+        "value": "企业业务 Agent",
         "sort": "",
         "source": null
       },
@@ -5951,8 +5951,8 @@
     "md": "application_clay",
     "slug": "clay",
     "sector": "横向 AI 应用",
-    "comparison_group": "销售与 GTM",
-    "comparison_group_rank": 9,
+    "comparison_group": "企业业务 Agent",
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -5976,7 +5976,7 @@
         }
       },
       "subsector": {
-        "value": "销售与 GTM",
+        "value": "企业业务 Agent",
         "sort": "",
         "source": null
       },
@@ -6054,8 +6054,8 @@
     "md": "application_writer",
     "slug": "writer",
     "sector": "横向 AI 应用",
-    "comparison_group": "企业 AI 工作流",
-    "comparison_group_rank": 10,
+    "comparison_group": "企业业务 Agent",
+    "comparison_group_rank": 4,
     "layers": [
       "模型层",
       "应用层"
@@ -6080,7 +6080,7 @@
         }
       },
       "subsector": {
-        "value": "企业 AI 工作流",
+        "value": "企业业务 Agent",
         "sort": "",
         "source": null
       },
@@ -6141,7 +6141,7 @@
     "slug": "heygen",
     "sector": "横向 AI 应用",
     "comparison_group": "企业内容制作",
-    "comparison_group_rank": 11,
+    "comparison_group_rank": 5,
     "layers": [
       "应用层"
     ],
@@ -6233,7 +6233,7 @@
     "slug": "synthesia",
     "sector": "横向 AI 应用",
     "comparison_group": "企业内容制作",
-    "comparison_group_rank": 11,
+    "comparison_group_rank": 5,
     "layers": [
       "应用层"
     ],
@@ -6323,9 +6323,9 @@
     "short": "Character.AI",
     "md": "model_character_ai",
     "slug": "character_ai",
-    "sector": "基础模型",
-    "comparison_group": "语言与角色对话模型",
-    "comparison_group_rank": 2,
+    "sector": "横向 AI 应用",
+    "comparison_group": "角色聊天与 AI 陪伴",
+    "comparison_group_rank": 6,
     "layers": [
       "模型层",
       "应用层"
@@ -6350,7 +6350,7 @@
         }
       },
       "subsector": {
-        "value": "语言与角色对话模型",
+        "value": "角色聊天与 AI 陪伴",
         "sort": "",
         "source": null
       },
@@ -6387,13 +6387,10 @@
         "sort": "",
         "source": null
       },
-      "open_status": {
-        "value": "闭源",
+      "pricing": {
+        "value": "",
         "sort": "",
-        "source": {
-          "label": "Character.AI Research",
-          "url": "https://blog.character.ai/news/research/"
-        }
+        "source": null
       }
     },
     "source_links": [
@@ -6404,10 +6401,6 @@
       {
         "label": "Character.AI 官网/产品口径",
         "url": "https://character.ai/"
-      },
-      {
-        "label": "Character.AI Research",
-        "url": "https://blog.character.ai/news/research/"
       }
     ]
   },
@@ -6417,7 +6410,7 @@
     "md": "application_alphasense",
     "slug": "alphasense",
     "sector": "纵向 AI 应用",
-    "comparison_group": "金融与专业研究",
+    "comparison_group": "金融与保险",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -6442,7 +6435,7 @@
         }
       },
       "subsector": {
-        "value": "金融与专业研究",
+        "value": "金融与保险",
         "sort": "",
         "source": null
       },
@@ -6504,7 +6497,7 @@
     "md": "application_hebbia",
     "slug": "hebbia",
     "sector": "纵向 AI 应用",
-    "comparison_group": "金融与专业研究",
+    "comparison_group": "金融与保险",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -6529,7 +6522,7 @@
         }
       },
       "subsector": {
-        "value": "金融与专业研究",
+        "value": "金融与保险",
         "sort": "",
         "source": null
       },
@@ -6591,7 +6584,7 @@
     "md": "application_rogo",
     "slug": "rogo",
     "sector": "纵向 AI 应用",
-    "comparison_group": "金融与专业研究",
+    "comparison_group": "金融与保险",
     "comparison_group_rank": 0,
     "layers": [
       "应用层"
@@ -6616,7 +6609,7 @@
         }
       },
       "subsector": {
-        "value": "金融与专业研究",
+        "value": "金融与保险",
         "sort": "",
         "source": null
       },
@@ -6852,8 +6845,8 @@
     "md": "application_corgi",
     "slug": "corgi",
     "sector": "纵向 AI 应用",
-    "comparison_group": "保险",
-    "comparison_group_rank": 2,
+    "comparison_group": "金融与保险",
+    "comparison_group_rank": 0,
     "layers": [
       "应用层"
     ],
@@ -6877,7 +6870,7 @@
         }
       },
       "subsector": {
-        "value": "保险",
+        "value": "金融与保险",
         "sort": "",
         "source": null
       },
@@ -6940,7 +6933,7 @@
     "slug": "abridge",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7020,7 +7013,7 @@
     "slug": "ambience_healthcare",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7100,7 +7093,7 @@
     "slug": "nabla",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7177,7 +7170,7 @@
     "slug": "suki",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7257,7 +7250,7 @@
     "slug": "commure_athelas",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7344,7 +7337,7 @@
     "slug": "hippocratic_ai",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "模型层",
       "应用层"
@@ -7425,7 +7418,7 @@
     "slug": "openevidence",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7512,7 +7505,7 @@
     "slug": "united_imaging_intelligence_联影智能",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -7599,7 +7592,7 @@
     "slug": "enveda_biosciences",
     "sector": "纵向 AI 应用",
     "comparison_group": "生命科学与药物发现",
-    "comparison_group_rank": 4,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -7686,7 +7679,7 @@
     "slug": "isomorphic_labs",
     "sector": "纵向 AI 应用",
     "comparison_group": "生命科学与药物发现",
-    "comparison_group_rank": 4,
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
