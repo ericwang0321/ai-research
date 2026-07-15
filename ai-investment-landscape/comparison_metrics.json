@@ -196,8 +196,8 @@
     "latest_round_date": "2025-10",
     "valuation_date": "2025-10",
     "revenue_period": "2025-10-28",
-    "multiple_type": "P/S",
-    "ps_multiple": "<14.3x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<14.3x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$4B",
@@ -257,7 +257,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<14.3x（P/S）",
+        "value": "<14.3x（P/ARR）",
         "sort": 14.285714285714285,
         "source": null,
         "secondary": "估值 2025-10｜收入 2025-10-28",
@@ -294,8 +294,8 @@
     "latest_round_date": "2026-05",
     "valuation_date": "2026-05",
     "revenue_period": "2026-05-21",
-    "multiple_type": "P/S",
-    "ps_multiple": "<15.5x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<15.5x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$4.65B",
@@ -355,7 +355,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<15.5x（P/S）",
+        "value": "<15.5x（P/ARR）",
         "sort": 15.500000000000002,
         "source": null,
         "secondary": "估值 2026-05｜收入 2026-05-21",
@@ -392,8 +392,8 @@
     "latest_round_date": "2026-07",
     "valuation_date": "2026-07",
     "revenue_period": "2025-02",
-    "multiple_type": "P/S",
-    "ps_multiple": "<83.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<83.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$8.3B",
@@ -453,7 +453,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<83.0x（P/S）",
+        "value": "<83.0x（P/ARR）",
         "sort": 83.0,
         "source": null,
         "secondary": "估值 2026-07｜收入 2025-02",
@@ -490,8 +490,8 @@
     "latest_round_date": "2026-07-08",
     "valuation_date": "2026-07-08",
     "revenue_period": "2026-07-08",
-    "multiple_type": "P/S",
-    "ps_multiple": "<10.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<10.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$1B",
@@ -551,7 +551,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<10.0x（P/S）",
+        "value": "<10.0x（P/ARR）",
         "sort": 10.0,
         "source": null,
         "secondary": "估值 2026-07-08｜收入 2026-07-08",
@@ -588,8 +588,8 @@
     "latest_round_date": "2025-12",
     "valuation_date": "2025-12",
     "revenue_period": "2026-06-16",
-    "multiple_type": "P/S",
-    "ps_multiple": "19.4x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "19.4x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$134B",
@@ -649,7 +649,7 @@
         }
       },
       "ps_multiple": {
-        "value": "19.4x（P/S）",
+        "value": "19.4x（P/ARR）",
         "sort": 19.42028985507246,
         "source": null,
         "secondary": "估值 2025-12｜收入 2026-06-16",
@@ -687,8 +687,8 @@
     "latest_round_date": "2023-08-24",
     "valuation_date": "2023-08-24",
     "revenue_period": "2026-06-25",
-    "multiple_type": "P/S",
-    "ps_multiple": "<45.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<45.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$4.5B",
@@ -748,7 +748,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<45.0x（P/S）",
+        "value": "<45.0x（P/ARR）",
         "sort": 45.0,
         "source": null,
         "secondary": "估值 2023-08-24｜收入 2026-06-25",
@@ -883,8 +883,8 @@
     "latest_round_date": "2025-10",
     "valuation_date": "2025-10",
     "revenue_period": "2026-06",
-    "multiple_type": "P/S",
-    "ps_multiple": "<5.0x（P/S，gross）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<5.0x（P/ARR，gross）",
     "cells": {
       "valuation": {
         "value": "$10B",
@@ -944,7 +944,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<5.0x（P/S，gross）",
+        "value": "<5.0x（P/ARR，gross）",
         "sort": 5.0,
         "source": null,
         "secondary": "估值 2025-10｜收入 2026-06",
@@ -1352,9 +1352,9 @@
     "latest_round": "最新融资轮完成",
     "latest_round_date": "2026-03-31",
     "valuation_date": "2026-03-31",
-    "revenue_period": "2026-03-31（月收入 × 12，仅作年化收入）",
-    "multiple_type": "P/S",
-    "ps_multiple": "35.5x（P/S）",
+    "revenue_period": "2026-03-31（月收入 × 12 年化）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "35.5x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$852B",
@@ -1414,10 +1414,10 @@
         }
       },
       "ps_multiple": {
-        "value": "35.5x（P/S）",
+        "value": "35.5x（P/ARR）",
         "sort": 35.5,
         "source": null,
-        "secondary": "估值 2026-03-31｜收入 2026-03-31（月收入 × 12，仅作年化收入）",
+        "secondary": "估值 2026-03-31｜收入 2026-03-31（月收入 × 12 年化）",
         "calculation": "$852B / $2B monthly revenue（截至 2026-03-31）"
       },
       "open_status": {
@@ -1465,8 +1465,8 @@
     "latest_round_date": "2026-05-28",
     "valuation_date": "2026-05-28",
     "revenue_period": "2026-05 上旬",
-    "multiple_type": "P/S",
-    "ps_multiple": "<20.5x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<20.5x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$965B",
@@ -1526,7 +1526,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<20.5x（P/S）",
+        "value": "<20.5x（P/ARR）",
         "sort": 20.53191489361702,
         "source": null,
         "secondary": "估值 2026-05-28｜收入 2026-05 上旬",
@@ -3161,8 +3161,8 @@
     "latest_round_date": "2026-07-02",
     "valuation_date": "2026-07-02",
     "revenue_period": "2026-03",
-    "multiple_type": "P/S",
-    "ps_multiple": "约 36.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 36.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "约 US$18B",
@@ -3222,7 +3222,7 @@
         }
       },
       "ps_multiple": {
-        "value": "约 36.0x（P/S）",
+        "value": "约 36.0x（P/ARR）",
         "sort": 36.0,
         "source": null,
         "secondary": "估值 2026-07-02｜收入 2026-03",
@@ -4543,8 +4543,8 @@
     "latest_round_date": "2025-04",
     "valuation_date": "2025-04",
     "revenue_period": "2025-12",
-    "multiple_type": "P/S",
-    "ps_multiple": "<4.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<4.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "约 $500M",
@@ -4604,7 +4604,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<4.0x（P/S）",
+        "value": "<4.0x（P/ARR）",
         "sort": 4.0,
         "source": null,
         "secondary": "估值 2025-04｜收入 2025-12",
@@ -4749,8 +4749,8 @@
     "latest_round_date": "2025-11",
     "valuation_date": "2025-11",
     "revenue_period": "2026-06",
-    "multiple_type": "P/S",
-    "ps_multiple": "<7.3x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<7.3x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$29.3B",
@@ -4810,7 +4810,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<7.3x（P/S）",
+        "value": "<7.3x（P/ARR）",
         "sort": 7.325,
         "source": null,
         "secondary": "估值 2025-11｜收入 2026-06",
@@ -4859,8 +4859,8 @@
     "latest_round_date": "2026-05",
     "valuation_date": "2026-05",
     "revenue_period": "2026-05-27",
-    "multiple_type": "P/S",
-    "ps_multiple": "52.8x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "52.8x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$26B",
@@ -4920,7 +4920,7 @@
         }
       },
       "ps_multiple": {
-        "value": "52.8x（P/S）",
+        "value": "52.8x（P/ARR）",
         "sort": 52.84552845528455,
         "source": null,
         "secondary": "估值 2026-05｜收入 2026-05-27",
@@ -5079,8 +5079,8 @@
     "latest_round_date": "2025-12",
     "valuation_date": "2025-12",
     "revenue_period": "2026-06-09",
-    "multiple_type": "P/S",
-    "ps_multiple": "<13.2x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<13.2x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$6.6B",
@@ -5140,7 +5140,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<13.2x（P/S）",
+        "value": "<13.2x（P/ARR）",
         "sort": 13.2,
         "source": null,
         "secondary": "估值 2025-12｜收入 2026-06-09",
@@ -6664,8 +6664,8 @@
     "latest_round_date": "2025-08-05",
     "valuation_date": "2026-06-18",
     "revenue_period": "2025-12",
-    "multiple_type": "P/S",
-    "ps_multiple": "50.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "50.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$5B",
@@ -6725,7 +6725,7 @@
         }
       },
       "ps_multiple": {
-        "value": "50.0x（P/S）",
+        "value": "50.0x（P/ARR）",
         "sort": 50.0,
         "source": null,
         "secondary": "估值 2026-06-18｜收入 2025-12",
@@ -6978,8 +6978,8 @@
     "latest_round_date": "2026-01",
     "valuation_date": "2026-01",
     "revenue_period": "2025",
-    "multiple_type": "P/S",
-    "ps_multiple": "40.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "40.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$4B",
@@ -7039,7 +7039,7 @@
         }
       },
       "ps_multiple": {
-        "value": "40.0x（P/S）",
+        "value": "40.0x（P/ARR）",
         "sort": 40.0,
         "source": null,
         "secondary": "估值 2026-01｜收入 2025",
@@ -7668,8 +7668,8 @@
     "latest_round_date": "2026-05-28",
     "valuation_date": "2026-05-28",
     "revenue_period": "2026-05-06",
-    "multiple_type": "P/S",
-    "ps_multiple": "约 26.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 26.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$2.6B",
@@ -7729,7 +7729,7 @@
         }
       },
       "ps_multiple": {
-        "value": "约 26.0x（P/S）",
+        "value": "约 26.0x（P/ARR）",
         "sort": 26.0,
         "source": null,
         "secondary": "估值 2026-05-28｜收入 2026-05-06",
@@ -8134,8 +8134,8 @@
     "latest_round_date": "2026-05",
     "valuation_date": "2026-05",
     "revenue_period": "2023-10-04",
-    "multiple_type": "P/S",
-    "ps_multiple": "<70.0x（P/S）",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<70.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$7B",
@@ -8195,7 +8195,7 @@
         }
       },
       "ps_multiple": {
-        "value": "<70.0x（P/S）",
+        "value": "<70.0x（P/ARR）",
         "sort": 70.0,
         "source": null,
         "secondary": "估值 2026-05｜收入 2023-10-04",
