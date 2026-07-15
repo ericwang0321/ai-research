@@ -67,7 +67,7 @@ body{background:#fff}
 <main class="guide-shell">
   <header class="guide-head">
     <h1>AI 公司全景导读与深研框架</h1>
-    <div class="lead">用简单语言说明 4 个技术栈板块、85 家公司在做什么，并按业务质量而非固定配额筛选 11 家估值达到 US$500M 或以上、仍具私募投资属性且未进入明确上市或并购流程的公司。</div>
+    <div class="lead">用简单语言说明 4 个技术栈板块、85 家公司在做什么，并按业务质量而非固定配额筛选 10 家估值达到 US$500M 或以上、仍具私募投资属性且未进入明确上市或并购流程的公司。</div>
     <div class="guide-meta">研究基准日：2026-07-14 · 最新公开估值 &ge; US$500M · 融资轮次不限 · 排除已递表、正式上市流程、已签分拆或收购标的</div>
   </header>
   <nav class="guide-toc"><a href="#thesis">判断框架</a><a href="#priority">可投公司</a><a href="#infrastructure">AI 基础设施</a><a href="#foundation-models">基础模型</a><a href="#horizontal-apps">横向 AI 应用</a><a href="#vertical-apps">纵向 AI 应用</a><a href="#why-not">为什么暂不优先</a><a href="#conclusion">结论</a></nav>
@@ -84,7 +84,7 @@ body{background:#fff}
 <p>因此，本篇用“高质量数据 × 可观察结果 × 模型或系统适配 × 工作流分发 × 市场与定价能力”挑选深研对象，再加三道交易门槛：最新公开估值达到 US$500M 或以上；公司仍是独立私营主体；没有公开递表、正式启动上市流程、已签分拆或收购协议。融资轮次不设门槛，Series A 到后期轮次都可以入选。这里只把已经进入明确上市或并购流程的公司视为 Pre-IPO/不可投；“以后可能上市”或“正在洽谈新融资”不等于 Pre-IPO。未上市公司没有“市值”，本文统一使用最新公开估值。“可投资”表示仍具备私募股权交易属性，不代表当前一定有现成份额。</p>
 </section>
 <section class="section">
-<h2 class="section-title" id="priority">按赛道筛选的 11 家可投公司</h2>
+<h2 class="section-title" id="priority">按赛道筛选的 10 家可投公司</h2>
 <h3 class="subsection">AI 基础设施（3 家）</h3>
 <h4 class="sub4">1. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/fireworks_ai.html" target="_blank" rel="noopener">Fireworks AI</a>｜模型推理</h4>
 <p><strong>最新估值：</strong> US$4B。</p>
@@ -95,19 +95,19 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> Fortune Business Insights 预计全球 AI 推理市场从 2026 年 US$117.8B 增长到 2034 年 US$312.64B，年复合增长率 12.98%。这是本名单中最宽的基础设施支出池之一。<a href="https://www.fortunebusinessinsights.com/ai-inference-market-113705" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>创始人 Lin Qiao 曾负责 Meta PyTorch，团队具备大型生产系统的推理工程经验；这种能力比单一模型接口更难复制。</li><li>2025 年 10 月公司披露服务超过 10,000 家企业、日处理超过 10 万亿 token、年化收入超过 US$280M；2026 年官方材料进一步称日处理量已达 15 万亿 token。<a href="https://fireworks.ai/blog/deepseek-models" target="_blank" rel="noopener">经营来源</a></li><li>2025 年估值对应当时年化收入约 14 倍，收入支撑强于多数同阶段基础设施公司。但 2026 年 5 月已有新融资估值可能达到 US$15B 的报道，正式投资前必须重新核验价格。<a href="https://news.bloomberglaw.com/private-equity/fireworks-ai-in-talks-for-funding-at-15-billion-valuation" target="_blank" rel="noopener">融资传闻</a></li><li>主要风险是 GPU 成本、客户集中、云厂商和 Together/Baseten 的价格竞争，以及传闻新估值可能显著压缩回报空间。</li></ul>
-<p><strong>同赛道比较：</strong> Fireworks、Modal 和 Prime Intellect 都进入名单，但理由不同：Fireworks 的优势是推理规模与 ARR，Modal 是更通用的无服务器运行时，Prime Intellect 是训练反馈闭环。Baseten 最新估值已升至约 US$13B，公开 ARR 与毛利证据相对不足；Together AI 估值约 US$8.3B、资本开支更重；Anyscale 估值口径较旧且收入未公开，因此本轮暂不优先。</p>
+<p><strong>同赛道比较：</strong> 最简单的区别是，Fireworks 替企业管理“模型如何上线并长期稳定运行”，Modal 替开发者管理“运行代码所需的 GPU”，Prime Intellect 则帮助企业“把开源模型继续训练成自己的模型或 Agent”。企业使用 Fireworks 时，可以直接选择现成模型，也可以上传或微调自己的模型，再由 Fireworks 负责部署、扩容、响应速度和日常维护；使用 Modal 时，企业仍要自己准备模型和 Python 代码，只把需要 GPU 的任务交给平台按需运行；使用 Prime Intellect 时，企业会进一步定义任务、成功标准和评测方法，在租用的 GPU 上训练和改进专用模型。Baseten 与 Fireworks 最接近，同样帮助企业部署和托管模型，但最新估值已升至约 US$13B，公开收入和毛利证据较少；Together AI 同时出售 GPU 云、训练和模型 API，资本投入更重；Anyscale 主要帮助已经采用 Ray 的团队管理分布式计算。Fireworks 被保留，是因为它在“定制模型上线和维护”这一环已经同时证明了大规模用量与收入。</p>
 <p><strong>融资阶段：</strong> Series C；另有新一轮融资洽谈报道，但尚未按已完成交易计入估值。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，公开资料未显示已递交 IPO 文件；实际需要确认新股或老股额度、最新价格和转让限制。</p>
-<h4 class="sub4">2. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/modal.html" target="_blank" rel="noopener">Modal</a>｜Serverless GPU 运行时</h4>
+<h4 class="sub4">2. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/modal.html" target="_blank" rel="noopener">Modal</a>｜按需 GPU 云与运行平台</h4>
 <p><strong>最新估值：</strong> US$4.65B。</p>
 <p><strong>融资历史：</strong> 2026 年 5 月完成 US$355M Series C。<a href="https://www.axios.com/newsletters/axios-pro-rata-6dfd5c3c-d414-4213-be8b-86d42575232f" target="_blank" rel="noopener">融资来源</a></p>
 <p><strong>主营业务：</strong> 让开发者用 Python 直接调用 GPU、运行推理、视频生成、批处理和训练任务，并自动处理容器、扩缩容、队列和资源调度。</p>
 <p><strong>收费模式：</strong> 按实际 GPU、CPU、内存和任务运行时间计费，并向团队和企业提供承诺消费及定制合同。<a href="https://modal.com/" target="_blank" rel="noopener">产品来源</a></p>
-<p><strong>解决的关键问题：</strong> AI 团队经常在闲置 GPU 和突发容量不足之间摇摆，同时要投入大量工程人力维护集群。Modal 用无服务器模式把基础设施复杂度隐藏在开发接口之后。</p>
+<p><strong>解决的关键问题：</strong> AI 团队经常在闲置 GPU 和突发容量不足之间摇摆，同时要投入大量工程人力维护集群。Modal 让开发者在需要时启动 GPU、任务结束后自动释放，不必自己购买和维护机器。</p>
 <p><strong>所处赛道潜力：</strong> 与 Fireworks 一样受益于 AI 推理和生成式媒体工作负载增长；区别是 Modal 的市场还覆盖批处理、数据管道和训练任务，而不只按 token 提供模型 API。<a href="https://www.fortunebusinessinsights.com/ai-inference-market-113705" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
-<ul><li>2026 年 5 月披露年化收入超过 US$300M，估值约为年化收入的 15.5 倍，商业化证据较强。<a href="https://modal.com/blog/modal-series-c" target="_blank" rel="noopener">收入来源</a></li><li>按秒弹性资源和开发者体验形成使用习惯，任务运行数据可持续改善启动时间、调度和 GPU 利用率。</li><li>相比 Fireworks，Modal 覆盖的计算任务更广；相比 Anyscale，它更强调无服务器体验而不是 Ray 生态。</li><li>主要风险是算力转售毛利、供应商议价、云厂商原生产品替代和客户是否会在规模扩大后自建。</li></ul>
-<p><strong>同赛道比较：</strong> Modal 与 Fireworks 同样有较硬收入证据，但 Modal 更像带 GPU 的无服务器运行时：客户带来代码或模型，Modal 负责容器、调度和弹性扩缩；Fireworks 更像标准化模型 API 与推理优化平台。Prime Intellect 则处理任务环境、评测、强化学习和下一轮训练，卖的不只是计算运行。Anyscale 以开源 Ray 分布式计算生态为核心，并将 Ray Data、Train、Serve 和 RLlib 等工作负载做成托管平台；优势是创始团队和生态，风险是客户可自行部署 Ray，而且云厂商也能提供托管替代。<a href="https://docs.anyscale.com/get-started/what-is-ray" target="_blank" rel="noopener">关于 Ray</a></p>
+<ul><li>2026 年 5 月披露年化收入超过 US$300M，估值约为年化收入的 15.5 倍，商业化证据较强。<a href="https://modal.com/blog/modal-series-c" target="_blank" rel="noopener">收入来源</a></li><li>按秒弹性资源和开发者体验形成使用习惯，任务运行数据可持续改善启动时间、调度和 GPU 利用率。</li><li>相比 Fireworks，Modal 覆盖的计算任务更广；相比 Anyscale，它让普通 Python 开发者更容易直接使用 GPU，不要求客户先采用 Ray。</li><li>主要风险是算力转售毛利、供应商议价、云厂商原生产品替代和客户是否会在规模扩大后自建。</li></ul>
+<p><strong>同赛道比较：</strong> 可以把 Modal 理解为一台“需要时才开机、按使用时间付费的云端 GPU 电脑”。开发者上传自己的 Python 代码和模型，选择所需 GPU，Modal 负责启动机器、排队、扩容和任务结束后的关机；客户可以在上面跑模型推理、视频生成、批处理，也可以训练模型。Fireworks 则更像一支外包的模型运维团队：它不仅提供 GPU，还把模型做成可直接调用的 API，并负责微调、部署、速度优化和线上维护。Prime Intellect 更靠近训练环节，帮助客户设计任务和评测规则，再用强化学习把开源模型训练成专用 Agent。Anyscale 服务的是采用 Ray 的分布式计算团队，客户通常需要先理解 Ray 的开发方式；Modal 把入口简化为普通 Python 函数，对不想搭建集群的开发者更直接。<a href="https://docs.anyscale.com/get-started/what-is-ray" target="_blank" rel="noopener">关于 Ray</a> Modal 被保留，不是因为它只做推理，而是因为同一套按需 GPU 环境可以承接多种 AI 任务，客户用量扩大时会自然增加收入。</p>
 <p><strong>融资阶段：</strong> Series C。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，未见已递表或正式 IPO 流程；需要向公司或现有股东确认配额。</p>
 <h4 class="sub4">3. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/prime_intellect.html" target="_blank" rel="noopener">Prime Intellect</a>｜Agent 训练与强化学习基础设施</h4>
@@ -119,7 +119,7 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> 它同时连接训练、后训练和推理预算。公开市场报告对 Agent 后训练尚无稳定独立口径，但只要企业从调用通用模型转向训练专用 Agent，环境、评测和强化学习支出就会增长。</p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司 2026 年 7 月披露拥有 6,000 多家客户和超过 US$100M 年化收入，Series A 阶段已出现较强收入信号。<a href="https://www.primeintellect.ai/blog/series-a" target="_blank" rel="noopener">经营来源</a></li><li>客户任务的成功/失败、工具调用和奖励信号可以形成真正的结果反馈，比单纯积累文档更接近数据飞轮。</li><li>相比只做推理的 Fireworks/Baseten，它把产品延伸到训练和持续改进；若客户跨算力、训练、评测和部署使用，切换成本更高。</li><li>主要风险是年化收入中算力转售占比、真实软件毛利、客户集中度和 Series A 条款下的高估值。</li></ul>
-<p><strong>同赛道比较：</strong> Prime Intellect 比 Fireworks 和 Modal 更早期，但更直接连接任务结果、强化学习和评测，因此保留为高风险高潜力样本。Modal 解决“代码和模型如何在 GPU 上弹性运行”，Prime Intellect 解决“Agent 如何把任务成败转成评测和下一轮训练”，两者的底层计算有重叠，但产品控制点不同。Anyscale 的 Ray 分布式计算生态更成熟，但暂未披露同等强度的收入和训练闭环；Baseten 更偏部署服务，缺少 Prime 这类任务反馈资产。</p>
+<p><strong>同赛道比较：</strong> 可以把 Prime Intellect 理解为“训练企业专用模型和 Agent 的工作台”。客户先选择可自行部署的开源模型，再把自己的任务、工具和成功或失败标准做成训练环境；随后可在 Prime Intellect 租用 GPU，进行强化学习、评测和改进，最后把训练后的模型部署出来。Fireworks 主要接手已经选好或训练好的模型，帮助客户把它稳定上线；Modal 主要让客户的代码随时获得 GPU，虽然也能跑训练任务，但不会替客户建立任务奖励、评测和持续改进流程。Anyscale 主要替已经采用 Ray 的团队管理大规模计算集群，不专门替客户设计任务和奖励规则；Baseten 更专注让模型上线并保持稳定运行。Prime Intellect 被保留，是因为它尝试把“模型训练前的任务定义”和“上线后的使用结果”连回下一轮训练，潜在壁垒更高，但技术、收入质量和毛利也更需要验证。</p>
 <p><strong>融资阶段：</strong> Series A。融资轮次较早，但本轮筛选不以轮次作为排除条件。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选，且相对后期公司更可能存在后续新股轮次。仍需核验优先股条款、收入质量和具体配额。</p>
 <h3 class="subsection">基础模型（1 家）</h3>
@@ -135,7 +135,7 @@ body{background:#fff}
 <p><strong>Artificial Analysis 独立 TTS 榜单（查询日：2026-07-14）：</strong></p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>ElevenLabs 模型</th><th>当前名次</th><th>质量 Elo</th><th>API 价格</th></tr></thead><tbody><tr><td>Eleven v3</td><td>12</td><td>1,174</td><td>US$100 / 100 万字符</td></tr><tr><td>Multilingual v2</td><td>25</td><td>1,107</td><td>US$100 / 100 万字符</td></tr><tr><td>Turbo v2.5</td><td>26</td><td>1,106</td><td>US$50 / 100 万字符</td></tr><tr><td>Flash v2.5</td><td>29</td><td>1,093</td><td>US$50 / 100 万字符</td></tr></tbody></table></div>
 <p>该榜单使用盲测用户偏好比较语音输出，名次会随投票和新模型变化。它说明 ElevenLabs 仍属较强 TTS 供应商，但 Eleven v3 当前并非纯听感榜第一。该排名不覆盖声音克隆质量、企业稳定性、长文一致性、版权合规和 Voice Agent 工作流。<a href="https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice/" target="_blank" rel="noopener">榜单来源</a></p>
-<p><strong>同赛道比较：</strong> ElevenLabs 相比 Suno 的音乐场景更横向，API 和企业应用更多；相比 HeyGen、Synthesia，它控制更上游的语音模型。HeyGen 凭借直接用户分发和视频本地化工作流也进入名单：ElevenLabs 代表语音能力层，HeyGen 代表视频应用层，两者的控制点不重复。Decagon 虽然也提供语音 Agent，但它卖的是客服自动解决、工作流执行和企业系统集成，应用自动解决率、操作成功率、CSAT 和转人工率评估，不能与 ElevenLabs 的 TTS Elo 直接比较。Suno 面临更集中的音乐版权风险；Synthesia 企业培训深度较强，但与 HeyGen 的产品重合度更高，本轮不再增加。</p>
+<p><strong>同赛道比较：</strong> ElevenLabs 卖的是“声音能力”：客户可以直接使用它的配音和声音克隆产品，也可以通过 API 把语音生成、语音识别和实时对话能力装进自己的应用。HeyGen 和 Synthesia 卖的是“做完一条视频的完整工具”，除声音外还包括数字人、画面、口型、翻译和编辑；它们可能使用语音模型，但客户购买的是最终视频工作流。Suno 则专门生成歌曲，市场更集中，也更直接暴露于音乐版权风险。Decagon 虽然也让客服 Agent 开口说话，但客户付费买的是退款、改签或账户处理等客服结果，语音只是交互渠道之一。因此 ElevenLabs 与 HeyGen 可以同时保留：前者有机会成为多种产品都要调用的语音技术供应商，后者直接占据视频制作入口；不能用 ElevenLabs 的语音听感榜单去判断 HeyGen 或 Decagon 的产品强弱。</p>
 <p><strong>融资阶段：</strong> Series D / 追加融资。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，未见已经递表；但估值较高，需优先确认是否存在新股、老股或结构化二级额度。</p>
 <h3 class="subsection">横向 AI 应用（4 家）</h3>
@@ -149,7 +149,7 @@ body{background:#fff}
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司 2026 年 6 月披露 ARR 超过 US$200M，8 个月翻倍，用户超过 3,000 万，覆盖 196 个国家，并被 85% 的 Fortune 100 公司采用。<a href="https://www.heygen.com/blog/heygen-surpasses-200m-arr" target="_blank" rel="noopener">经营来源</a></li><li>产品同时覆盖自助订阅、团队协作、企业部署和 API，比只卖单一生成模型更接近客户的最终视频工作流。</li><li>视频翻译、数字分身和品牌资产会产生持续修改和本地化需求，有机会提高使用频率与客户切换成本。</li><li>主要风险是数字身份与深伪合规、通用视频模型快速商品化、推理毛利，以及 2024 年 US$500M 估值明显滞后于 2026 年收入规模的可能性。</li></ul>
 <p><strong>Artificial Analysis 榜单状态（查询日：2026-07-14）：</strong> 当前 Artificial Analysis 的文生视频和图生视频榜单主要比较 Seedance、Wan、Kling、Veo、Runway 等通用视频生成模型，尚未收录 HeyGen Avatar V。因此，不能用该站的通用视频 Elo 判断 HeyGen 在数字人场景的模型强弱。HeyGen 更应与 Synthesia、Tavus、Captions 等产品比较身份一致性、口型同步、翻译准确率、长视频稳定性和每分钟成本。<a href="https://artificialanalysis.ai/video/leaderboard/text-to-video" target="_blank" rel="noopener">通用视频榜单</a></p>
-<p><strong>同赛道比较：</strong> HeyGen 相比 Synthesia 更兼顾个人自助创作、全球用户分发和企业视频，Synthesia 则更深入企业培训与合规场景。ElevenLabs 控制更上游的语音模型与 API，HeyGen 控制视频制作和本地化工作流，因此两者可以同时保留。相比 Black Forest Labs，HeyGen 已披露超过 US$200M ARR 并拥有直接用户入口；BFL 的图像模型和平台分发仍具价值，但收入和直接反馈证据较弱，因此本轮由 HeyGen 替代 BFL。</p>
+<p><strong>同赛道比较：</strong> HeyGen 与 Synthesia 最相似，都是输入脚本后生成数字人视频，并提供翻译、配音和企业管理功能。区别是 HeyGen 同时服务个人创作者、营销团队和企业，产品更适合快速制作大量对外内容；Synthesia 更集中在企业培训、内部沟通和合规课程。ElevenLabs 主要提供声音模型和 API，通常只完成视频中的“声音”部分；HeyGen 则把数字人、画面、声音、口型和多语言版本组合成可直接交付的视频。Black Forest Labs 主要出售图像模型，客户仍需自行搭建视频制作流程。HeyGen 被保留，是因为它控制最终制作入口，并已披露超过 US$200M ARR 和 3,000 万用户；需要继续确认的是，视频底层模型越来越便宜后，客户是否仍会因数字分身、品牌素材和协作流程长期留在平台上。</p>
 <p><strong>融资阶段：</strong> 2024 年融资轮（常按 Series A 口径记录）。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场或合规二级候选。公司仍是独立私营主体，未见已递表或已签收购；但 2024 年估值已过时，决策前必须重新核验最新新股或老股价格、份额和转让限制。</p>
 <h4 class="sub4">6. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/decagon_ai.html" target="_blank" rel="noopener">Decagon AI</a>｜客服 Agent</h4>
@@ -161,10 +161,10 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> Fortune Business Insights 预计全球 Call Center AI 市场从 2026 年 US$2.98B 增至 2034 年 US$13.52B，年复合增长率 20.8%。<a href="https://www.fortunebusinessinsights.com/call-center-ai-market-109249" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司披露超过 80% 的模型流量运行在自训练模型上，并针对对话、工作流执行和幻觉检测做专用适配。<a href="https://decagon.ai/blog/introducing-decagon-labs" target="_blank" rel="noopener">技术来源</a></li><li>客服具有天然结果标签，若数据授权允许，解决/失败/人工升级可以持续改善模型和路由。</li><li>相比 Sierra，Decagon 的结果计费和大客户规模披露较少，但专用模型与生产反馈的连接更清楚。</li><li>主要风险是客户数据权利、错误执行责任、自动解决率口径、毛利和估值增长快于收入披露。</li></ul>
-<p><strong>同赛道比较：</strong> Decagon 与 Sierra 都服务企业客服。Sierra 商业化和结果计费更成熟，但估值约 US$15.8B，且公开说明客户数据不用于训练；Decagon 估值更低，并披露大部分模型流量来自自训练模型，反馈闭环更直接，因此本轮选 Decagon。Writer 和 Cohere 的产品范围更广，不是同等专注的客服执行平台。</p>
+<p><strong>同赛道比较：</strong> Decagon 和 Sierra 都能通过聊天、电话或邮件替企业处理客户问题，但产品重点不同。Decagon 更专注“把客服流程自动做完”：企业客服团队用自然语言写出退款、订阅变更、身份验证等处理规则，系统再把规则转成可执行流程；Decagon 还称超过 80% 的模型流量由自训练的客服专用模型处理，因此它更直接押注“专用模型能比通用模型更准确地做客服”。Sierra 的范围更宽，它希望成为企业统一的对外 AI 代理，除售后客服外还覆盖购买建议、续费挽留、交叉销售和主动触达，并把客户历史与各渠道对话放入同一记忆层；它主要组合多种先进模型，再通过流程、权限、测试和监控保证结果，而不是强调只用一套自研客服基础模型。收费方式也不同：Sierra 公开强调按成功完成的结果收费，例如问题解决或成功挽留；Decagon 采用定制企业合同，标准价格和统一计费口径未披露。选择 Decagon 的原因不是 Sierra 技术较差，而是 Decagon 估值较低，客服专用模型和生产结果之间的连接更容易验证；Sierra 在大客户覆盖、跨场景产品和商业模式上更成熟，但约 US$15.8B 的价格已经反映了更多成功预期。Writer 和 Cohere 提供更广泛的企业 AI 平台，并不只解决客服问题，因此不是最直接的同类。</p>
 <p><strong>融资阶段：</strong> Series D，之后完成员工二级流动性交易。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场或合规二级候选。公司没有公开递表，员工 tender 反而说明可能存在二级交易渠道；具体份额和转让限制需要核验。</p>
-<h4 class="sub4">7. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/glean_technologies.html" target="_blank" rel="noopener">Glean Technologies</a>｜企业搜索与知识上下文</h4>
+<h4 class="sub4">7. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/glean_technologies.html" target="_blank" rel="noopener">Glean Technologies</a>｜企业内部搜索与知识平台</h4>
 <p><strong>最新估值：</strong> US$7.2B。</p>
 <p><strong>融资历史：</strong> 2025 年 6 月完成 US$150M Series F。<a href="https://www.reuters.com/technology/search-startup-gleans-valuation-hits-72-billion-ai-funding-boom-2025-06-10/" target="_blank" rel="noopener">融资来源</a></p>
 <p><strong>主营业务：</strong> 连接企业 SaaS、文档、人员和权限，提供统一搜索、知识管理、AI 助手和 Agent 上下文层。</p>
@@ -173,7 +173,7 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> Fortune Business Insights 预计企业搜索市场从 2026 年 US$6.39B 增至 2034 年 US$12.76B；Agent 对内部上下文的需求可能使实际预算进一步扩展到知识管理和自动化。<a href="https://www.fortunebusinessinsights.com/enterprise-search-market-117155" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>2026 年 5 月公司披露 ARR 超过 US$300M，85% 以上客户已在五个以上部门使用，说明产品具有部门扩张能力。<a href="https://www.glean.com/press/glean-surpasses-300m-arr-unrivaled-enterprise-context-fuels-ai-adoption" target="_blank" rel="noopener">经营来源</a></li><li>企业图谱、连接器和权限继承是 Agent 进入真实工作流前必须经过的控制点。</li><li>客户数据属于客户，Glean 的壁垒不是跨客户训练，而是每家客户内部长期积累的索引、权限和使用上下文。</li><li>主要风险是 Microsoft、Google 和模型厂商捆绑同类能力，以及高估值下 Agent 收入是否真正增量。</li></ul>
-<p><strong>同赛道比较：</strong> Glean 面向企业内部数据，Exa 面向外部互联网，两者控制点不同，因此都入选。AlphaSense 在金融研究内容上更深，但应用范围更窄且已经进入更成熟的资本市场准备阶段；GoLinks 的入口轻量但平台收入与搜索规模较弱。Glean 的 ARR、跨部门扩张和权限图谱证据更完整。</p>
+<p><strong>同赛道比较：</strong> Glean、Exa、AlphaSense 和 GoLinks 都帮助用户找信息，但它们搜索的范围不同。Glean 连接一家企业内部的 Google Drive、Slack、Salesforce、Jira 等系统，搜索结果会继承员工原有权限，适合让员工和内部 Agent 找到公司知识；Exa 搜索公开互联网，并把结果通过 API 提供给外部 Agent；AlphaSense 主要服务投资、战略和市场研究团队，优势是财报电话会、券商研究和专家访谈等专业内容；GoLinks 更像企业内部的短链接和导航工具，部署轻，但没有 Glean 那么完整的搜索、权限和 Agent 上下文能力。Glean 被保留，是因为企业内部数据分散是跨部门的长期问题，且公司已经用 ARR 和多部门扩张证明客户愿意持续付费。</p>
 <p><strong>融资阶段：</strong> Series F。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为后期一级市场或二级候选。公司资本化较成熟但没有公开递表；正式投资前需确认是否已有未公开上市安排及股权转让限制。</p>
 <h4 class="sub4">8. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/exa.html" target="_blank" rel="noopener">Exa</a>｜Agent 互联网搜索 API</h4>
@@ -185,7 +185,7 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> 企业搜索市场 2026 年约 US$6.39B，但 Exa 面向的是更早期的 Agent 外部检索基础设施，两者并不完全相同。其上限取决于 Agent 调用互联网是否成为像数据库查询一样的标准动作。<a href="https://www.fortunebusinessinsights.com/enterprise-search-market-117155" target="_blank" rel="noopener">参考市场</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>独立网页索引比简单调用第三方搜索 API 更能控制抓取、排序、返回格式和模型训练反馈。</li><li>产品直接按请求收费，使用量与 Agent 活跃度绑定，商业模式清楚且可扩展。</li><li>相比 Glean 的企业内部搜索，Exa 控制外部互联网上下文；相比 Perplexity，它不是消费搜索入口，而是开发者基础设施。</li><li>主要风险是 ARR 未披露、搜索索引成本、Google/Bing/模型厂商进入，以及网页版权与抓取限制。</li></ul>
-<p><strong>同赛道比较：</strong> Tavily 与 Exa 最接近，但 Tavily 已被 Nebius 收购，不再具备独立投资入口；Perplexity 估值约 US$20B，更依赖消费搜索和品牌分发；Glean 处理企业内部权限数据。Exa 以 US$2.2B 估值提供独立索引和 Agent API，交易阶段与产品控制点更适合本轮研究。</p>
+<p><strong>同赛道比较：</strong> Exa 卖给开发者的是“让 Agent 查询互联网的搜索接口”，用户通常看不到 Exa 页面，而是由其他 AI 产品在后台调用它。Tavily 做法最接近，但已被 Nebius 收购，不能再单独投资。Perplexity 直接面向消费者提供搜索和答案产品，核心是用户入口、品牌和订阅；Exa 不与客户争夺终端用户，而是向各种 Agent 收取搜索和内容提取费用。Glean 搜索企业内部文档，并严格遵守公司权限；Exa 搜索公开网页。Exa 被保留，是因为它自建网页索引，能够控制抓取、排序和返回格式，又以 US$2.2B 估值保留独立投资入口；最需要验证的是收入、索引成本，以及 Google、Bing 或模型厂商是否会压低搜索 API 的价格。</p>
 <p><strong>融资阶段：</strong> Series C。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，未见已递表或签署收购；需核验收入、毛利和最新轮投资条款。</p>
 <h3 class="subsection">纵向 AI 应用（3 家）</h3>
@@ -198,34 +198,22 @@ body{background:#fff}
 <p><strong>所处赛道潜力：</strong> Fortune Business Insights 预计环境式临床文档市场从 2026 年 US$1.46B 增至 2034 年 US$7B，年复合增长率 21.6%。<a href="https://www.fortunebusinessinsights.com/ambient-clinical-documentation-market-116784" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>2026 年 6 月公司披露覆盖 300 多个医疗系统，每年支持超过 1 亿次临床对话，公开部署规模领先同类。<a href="https://www.abridge.com/press-release/patient-centered-clinician-intelligence-platform-keynote" target="_blank" rel="noopener">经营来源</a></li><li>医生修改、编码接受、拒付和返工是高价值结果标签，可用于改善专业模型与工作流。</li><li>相比 Nabla 和 Suki，Abridge 的医院覆盖和工作流宽度更强；相比 Ambience，其专科编码表达略弱但规模更大。</li><li>主要风险是病历数据权利、HIPAA 与医疗责任、Epic 等电子病历平台依赖、实施成本和 ARR 未披露。</li></ul>
-<p><strong>同赛道比较：</strong> Abridge、Ambience、Nabla 和 Suki 都做环境式临床记录。Abridge 的公开医院覆盖和年处理对话规模最大，因此优先；Ambience 在专科编码和收入完整性上更深，但客户与收入披露较少；Nabla 和 Suki 的个人医生入口更轻，但医院级扩张证据较弱。Commure 产品更宽，却混合了运营服务和并购资产，软件质量更难拆分。</p>
+<p><strong>同赛道比较：</strong> Abridge、Ambience、Nabla 和 Suki 的共同入口都是“医生看诊时自动听取对话并生成病历”，但向后延伸的方向不同。Abridge 已从病历生成扩展到护理文档、医疗编码和收入周期，并披露覆盖 300 多个医疗系统、每年处理超过 1 亿次临床对话；Ambience 更强调不同专科的编码准确性和医院少漏收收入；Nabla 和 Suki 更像医生个人助手，部署较轻，也更容易从单个医生开始使用，但公开的医院级覆盖规模较小。Commure 提供的范围更广，还包含医院运营、人员和其他并购业务，难以单独判断临床记录产品的收入与毛利。Abridge 被保留，是因为它不仅减少医生写病历的时间，还能影响编码、拒付和回款，医院付费理由更强；真正需要验证的是客户合同金额、部署成本和数据使用权。</p>
 <p><strong>融资阶段：</strong> Series E。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为后期一级市场或二级候选。公司仍为独立私营主体，未见已递表；需要核验医疗系统合同、股权额度和转让限制。</p>
 <h4 class="sub4">10. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/harvey.html" target="_blank" rel="noopener">Harvey</a>｜法律 AI 工作平台</h4>
 <p><strong>最新估值：</strong> US$11B。</p>
-<p><strong>融资历史：</strong> 2026 年 3 月完成 US$200M 新融资，由 GIC 和 Sequoia 联合领投。<a href="https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises" target="_blank" rel="noopener">融资来源</a></p>
+<p><strong>融资历史：</strong> 2026 年 3 月完成 US$200M Series G，由 GIC 和 Sequoia 联合领投。<a href="https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises" target="_blank" rel="noopener">融资来源</a></p>
 <p><strong>主营业务：</strong> 为律所和企业法务提供法律研究、起草、合同审阅、尽调、知识库和端到端法律 Agent，并把来源追溯、权限和协作工作流整合在同一平台。</p>
 <p><strong>收费模式：</strong> 主要采用企业年度合同、专业人员席位、产品模块和使用量组合收费；公开价格未披露。<a href="https://www.harvey.ai/" target="_blank" rel="noopener">公司来源</a></p>
 <p><strong>解决的关键问题：</strong> 法律工作文本密集、人工成本高、错误责任重。通用聊天工具不能满足来源追溯、权限、法域知识和审计要求，Harvey 把模型能力适配成专业工作系统。</p>
 <p><strong>所处赛道潜力：</strong> Fortune Business Insights 预计全球法律 AI 软件市场从 2026 年 US$5.21B 增至 2034 年 US$40.94B，年复合增长率 29.4%。高价值专业工时和企业法务预算使该赛道具备较强定价能力。<a href="https://www.fortunebusinessinsights.com/legal-ai-software-market-111369" target="_blank" rel="noopener">市场来源</a></p>
 <p><strong>Investment Highlights：</strong></p>
 <ul><li>公司 2025 年末 ARR 超过 US$190M，其他 2026 年报道已指向 US$200M 以上；按较保守的 US$190M 计算，估值约 58 倍 ARR，收入真实但价格昂贵。<a href="https://www.linkedin.com/posts/winston-weinberg_2025-was-a-big-year-for-harvey-a-few-highlights-activity-7415020362184187905-Cnia/" target="_blank" rel="noopener">收入来源</a></li><li>头部律所、企业法务、法律人才、权限治理和专业工作流共同形成分发与产品壁垒，而不是只在通用模型上增加提示词。</li><li>法律研究、文档修改、律师接受或退回、工作流完成情况可以形成专业评测信号，但客户保密数据不能被默认跨客户训练。</li><li>主要风险是约 58 倍 ARR 的估值、推理成本、法律错误责任、客户数据权利和基础模型厂商或 Thomson Reuters/LexisNexis 的平台竞争。</li></ul>
-<p><strong>同赛道比较：</strong> 当前 Landscape 中的直接法律对手是 Legora：2026 年 ARR 超过 US$100M、估值约 US$5.6B，价格更低且国际扩张很快；但 Harvey 的 ARR、头部专业服务客户、产品矩阵和品牌仍领先，因此本轮先选 Harvey。Legora 并非技术不行，而是当前更像高质量追赶者；如果更看重进场价格，它是最应保留的法律 AI 备选。<a href="https://legora.com/newsroom/legal-teams-adoption-of-ai-propels-legora-past-100-million-in-annual-recurring-revenue" target="_blank" rel="noopener">Legora 来源</a></p>
+<p><strong>同赛道比较：</strong> Harvey 与 Legora 都把法律研究、起草、合同审阅、尽调和团队知识库放进律师的日常工作台，属于最直接的同类。Harvey 进入头部律所和大型企业法务更早，产品模块、专业服务客户和品牌更完整；Legora 2026 年 ARR 已超过 US$100M、估值约 US$5.6B，价格更低且国际扩张很快，因此并非技术较差，而是当前规模和客户沉淀仍在追赶。如果更看重行业领导地位和大客户分发，Harvey 更合适；如果更看重进场价格，Legora 是最值得保留的备选。<a href="https://legora.com/newsroom/legal-teams-adoption-of-ai-propels-legora-past-100-million-in-annual-recurring-revenue" target="_blank" rel="noopener">Legora 来源</a></p>
 <p>Hebbia 也能做合同和法律文件分析，2024 年融资时约 US$13M ARR、US$700M 估值，但它的主战场仍是金融和跨行业专业研究，尚未证明对法律工作流的覆盖和收入规模能超过 Harvey，因此本轮不把它当作法律首选。<a href="https://techcrunch.com/2024/07/09/ai-startup-hebbia-rased-130m-at-a-700m-valuation-on-13-million-of-profitable-revenue/" target="_blank" rel="noopener">Hebbia 来源</a> CoCounsel 的原公司 Casetext 已被 Thomson Reuters 以 US$650M 收购，Lexis+ with Protégé 则属于 LexisNexis/RELX；两者都有强法律数据和工作流，但已不是可单独投资的私营公司。<a href="https://www.thomsonreuters.com/en-us/posts/innovation/thomson-reuters-completes-acquisition-of-casetext-inc/" target="_blank" rel="noopener">CoCounsel 交易来源</a> <a href="https://www.lexisnexis.com/en-us/products/lexis-plus-ai.page" target="_blank" rel="noopener">Lexis+ 产品来源</a></p>
-<p><strong>融资阶段：</strong> 2026 年后期成长融资；公司未采用新的标准 Series 字母命名。</p>
+<p><strong>融资阶段：</strong> Series G。</p>
 <p><strong>是否可以进行投资：</strong> 可以继续作为后期一级市场或二级候选。公司仍为独立私营主体，截至研究基准日未见已递表；由于估值和资本化程度较高，必须确认是否仍有新股额度、二级卖方及优先权差异。</p>
-<h4 class="sub4">11. <a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/enveda_biosciences.html" target="_blank" rel="noopener">Enveda Biosciences</a>｜AI 药物发现</h4>
-<p><strong>最新估值：</strong> 超过 US$1B。</p>
-<p><strong>融资历史：</strong> 2025 年 9 月完成 US$150M Series D并达到独角兽估值。<a href="https://enveda.com/news/enveda-raises-150m-series-d-funding-to-reach-unicorn-status-enrolls-first-patient-in-lead-program-and-adds-mikael-dolsten-to-board-of-directors/" target="_blank" rel="noopener">融资来源</a></p>
-<p><strong>主营业务：</strong> 收集植物和天然样本，通过质谱形成化学数据，利用 PRISM 模型识别候选分子，再通过自动化湿实验和生物筛选验证，最终推进自有临床管线。</p>
-<p><strong>收费模式：</strong> 当前没有商业产品收入，未来价值主要来自药物授权、预付款、研发里程碑、版税、共同开发和自有药物销售权益。<a href="https://media.bailliegifford.com/mws/oeydd1sk/20260526171650-enveda-s4-ep1-transcript.pdf" target="_blank" rel="noopener">收入来源</a></p>
-<p><strong>解决的关键问题：</strong> 大量天然化学空间难以被传统方法读取，药物发现失败率又极高。Enveda 用模型缩小候选范围，再用真实实验结果验证并反哺下一轮发现。</p>
-<p><strong>所处赛道潜力：</strong> Grand View Research 估计 AI 药物发现市场从 2023 年 US$1.49B 增长到 2030 年 US$9.17B，年复合增长率 29.6%。真正的价值捕获还取决于药物资产本身，而不是软件市场规模。<a href="https://www.grandviewresearch.com/horizon/outlook/artificial-intelligence-in-drug-discovery-ai-market-size/global" target="_blank" rel="noopener">市场来源</a></p>
-<p><strong>Investment Highlights：</strong></p>
-<ul><li>PRISM 使用超过 10 亿条小分子质谱数据训练，天然样本、模型和湿实验共同构成较难复制的数据资产。<a href="https://www.businesswire.com/news/home/20250529231524/en/Enveda-Biosciences-Announces-Microsoft-Collaboration-and-Reveals-Foundation-Model-to-%E2%80%9CRead-and-Translate%E2%80%9D-Chemistry" target="_blank" rel="noopener">模型来源</a></li><li>公司公开管线包含 3 个临床资产、6 个 IND-enabling 资产和 17 个开发候选，模型结果已经进入真实药物开发流程。<a href="https://enveda.com/pipeline/" target="_blank" rel="noopener">管线来源</a></li><li>相比只出售模型 API 的生物基础模型公司，Enveda 能通过自有药物权益保留更高价值。</li><li>主要风险是当前商业收入为零、临床结果二元、研发周期长、现金消耗高；AI 只能提高发现效率，不能替代人体疗效。</li></ul>
-<p><strong>同赛道比较：</strong> Isomorphic Labs 的结构模型和药企合作更强，但最新公开估值没有可靠口径，不满足本轮“估值必须披露”的条件；Bioptimus 和 EvolutionaryScale 主要提供生物基础模型，商业收入和价值捕获路径更早。Enveda 同时拥有天然样本数据、湿实验和自有管线，因此反馈闭环与经济权益更完整。</p>
-<p><strong>融资阶段：</strong> Series D。</p>
-<p><strong>是否可以进行投资：</strong> 可以继续作为一级市场候选。公司仍为独立私营主体，未见已递表；适合能够承担生物科技临床风险和较长持有周期的投资人。</p>
 </section>
 <section class="section">
 <h2 class="section-title" id="infrastructure">AI 基础设施</h2>
@@ -237,7 +225,7 @@ body{background:#fff}
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/fireworks_ai.html" target="_blank" rel="noopener">Fireworks AI</a></h3>
 <p>公司为各类模型提供 API 和高性能推理服务，服务对象覆盖编程、搜索、语音与多模态等高频应用。独特点是把推理优化和多模型选择封装为开发者服务，商业模式与处理用量和企业部署相绑定。价值在于使客户更快、更稳定地调用模型。进入本轮优先深研：US$280M 以上年化收入和日处理 15 万亿 token 提供了同类少见的商业化锚；仍需拆解算力成本、价格竞争、大客户集中度、真实毛利和新融资价格。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/modal.html" target="_blank" rel="noopener">Modal</a></h3>
-<p>公司提供无服务器 AI 运行时，让开发者以代码调用多类加速卡，执行推理、生成式媒体和其他弹性任务。独特点是按秒计费并隐藏集群编排，商业模式结合计算用量、团队订阅、企业合同和承诺消费。价值是减少闲置算力和运维工作。进入本轮优先深研：最新估值高于门槛、公司仍有私募投资路径，且年化收入已具规模；仍需拆解计算资源转售与软件毛利，并核验供应稳定性和客户留存。</p>
+<p>公司提供按需 GPU 云，让开发者用 Python 直接运行推理、生成式媒体、批处理和训练任务。平台按秒计费，并自动处理机器启动、排队、扩容和释放；商业模式结合计算用量、团队订阅、企业合同和承诺消费。价值是减少闲置算力和集群运维工作。进入本轮优先深研：最新估值高于门槛、公司仍有私募投资路径，且年化收入已具规模；仍需拆解计算资源转售与软件毛利，并核验供应稳定性和客户留存。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/together_ai.html" target="_blank" rel="noopener">Together AI</a></h3>
 <p>公司围绕开源模型提供云端训练、托管推理和私有化部署，面向开发者、AI 原生产品与企业模型团队。独特点是把开源模型选择和大规模算力服务结合，通过训练与推理用量实现商业化。价值在于给客户更多模型选择和部署控制权。暂不优先：收入和毛利披露不足，重资产算力投入与同质化竞争可能压缩长期回报。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/prime_intellect.html" target="_blank" rel="noopener">Prime Intellect</a></h3>
@@ -409,7 +397,7 @@ body{background:#fff}
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/united_imaging_intelligence_联影智能.html" target="_blank" rel="noopener">United Imaging Intelligence / 联影智能</a></h3>
 <p>面向医院提供影像辅助诊断、质控、科研平台、医疗多模态模型和临床智能体，独特点是依托医疗设备生态、证照与医院渠道形成产品落地基础。收入可能来自软件授权、设备配套、项目部署和维护，商业价值是把影像数据与临床流程结合。暂不优先：与控股生态的业务边界、独立软件收入、非自有设备兼容性及外部投资人的治理和退出路径仍不清晰。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/enveda_biosciences.html" target="_blank" rel="noopener">Enveda Biosciences</a></h3>
-<p>该公司以质谱、基础模型、自动化实验和生物筛选发掘植物与天然样本中的药物化学空间，差异化在于避开同质化的通用生成式药物发现。其并非软件订阅模式，而是推进自有候选药物，并通过授权、里程碑、版税或共同开发变现；商业价值取决于平台能否持续产出临床资产。进入本轮优先深研：样本、质谱、模型与湿实验构成最清楚的数据闭环之一，但人体疗效、毒理和平台真实命中率仍是决定性验证项。</p>
+<p>该公司以质谱、基础模型、自动化实验和生物筛选发掘植物与天然样本中的药物化学空间，差异化在于避开同质化的通用生成式药物发现。其并非软件订阅模式，而是推进自有候选药物，并通过授权、里程碑、版税或共同开发变现；商业价值取决于平台能否持续产出临床资产。暂不优先：公司主要标签和价值捕获方式更接近临床阶段生物科技，AI 是研发工具而不是独立出售的核心产品，因此不进入本轮 AI 一级市场候选名单。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/isomorphic_labs.html" target="_blank" rel="noopener">Isomorphic Labs</a></h3>
 <p>以蛋白结构预测积累为基础，将结构、结合亲和力、口袋发现和分子生成整合进药物设计引擎，并与大型药企推进多靶点合作及自研管线。收入和权益可能来自预付款、研发经费、里程碑、许可费与销售分成，商业价值是缩短候选药物发现周期。暂不优先：公司拥有 Alphabet 的技术与资金支持，但临床资产进展、药企合作的经济条款，以及外部投资人可获得的股权和经济权益仍不透明。</p>
 </section>
