@@ -6937,23 +6937,23 @@
     "layers": [
       "应用层"
     ],
-    "latest_round": "Series E / new financing",
-    "latest_round_date": "2025-06",
+    "latest_round": "Series E extension",
+    "latest_round_date": "2026-04",
     "cells": {
       "valuation": {
         "value": "$5.3B",
         "sort": 5.3,
         "source": {
-          "label": "WSJ",
-          "url": "https://www.wsj.com/articles/abridge-whose-ai-app-takes-notes-for-doctors-valued-at-5-3-billion-at-funding-801825f3"
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/11/abridge-operating-system-medicine-nvidia-eli-lilly-artsight/"
         }
       },
       "latest_raise": {
-        "value": "$300M",
-        "sort": 0.3,
+        "value": "$316M",
+        "sort": 0.316,
         "source": {
-          "label": "WSJ",
-          "url": "https://www.wsj.com/articles/abridge-whose-ai-app-takes-notes-for-doctors-valued-at-5-3-billion-at-funding-801825f3"
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/11/abridge-operating-system-medicine-nvidia-eli-lilly-artsight/"
         }
       },
       "subsector": {
@@ -6990,19 +6990,26 @@
         }
       },
       "arr_revenue": {
-        "value": "",
-        "sort": "",
-        "source": null
+        "value": "约 $100M ARR；$117M contracted ARR（2025 Q1）",
+        "sort": 0.1,
+        "source": {
+          "label": "The Information · 2025 Q1 数据",
+          "url": "https://www.theinformation.com/articles/abridge-talks-raise-5-billion-valuation-ai-health-startups-draw-investors/"
+        }
       }
     },
     "source_links": [
       {
-        "label": "WSJ",
-        "url": "https://www.wsj.com/articles/abridge-whose-ai-app-takes-notes-for-doctors-valued-at-5-3-billion-at-funding-801825f3"
+        "label": "Fortune",
+        "url": "https://fortune.com/2026/06/11/abridge-operating-system-medicine-nvidia-eli-lilly-artsight/"
       },
       {
         "label": "Abridge 官网/产品口径",
         "url": "https://www.abridge.com/"
+      },
+      {
+        "label": "The Information · 2025 Q1 数据",
+        "url": "https://www.theinformation.com/articles/abridge-talks-raise-5-billion-valuation-ai-health-startups-draw-investors/"
       }
     ]
   },
