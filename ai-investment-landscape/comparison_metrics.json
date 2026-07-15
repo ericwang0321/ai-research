@@ -683,12 +683,12 @@
     "layers": [
       "应用层"
     ],
-    "latest_round": "后续公开融资",
-    "latest_round_date": "2024-2026",
-    "valuation_date": "2024-2026",
+    "latest_round": "Series D",
+    "latest_round_date": "2023-08-24",
+    "valuation_date": "2023-08-24",
     "revenue_period": "2026-06-25",
     "multiple_type": "P/S",
-    "ps_multiple": "",
+    "ps_multiple": "<45.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$4.5B",
@@ -699,8 +699,8 @@
         }
       },
       "latest_raise": {
-        "value": "未见公司正式新一轮公告",
-        "sort": "",
+        "value": "$235M",
+        "sort": 0.235,
         "source": {
           "label": "Axios",
           "url": "https://www.axios.com/2023/08/24/hugging-face-ai-salesforce-billion"
@@ -748,11 +748,11 @@
         }
       },
       "ps_multiple": {
-        "value": "",
-        "sort": "",
+        "value": "<45.0x（P/S）",
+        "sort": 45.0,
         "source": null,
-        "missing_label": "没有",
-        "reason": "valuation_date_not_precise"
+        "secondary": "估值 2023-08-24｜收入 2026-06-25",
+        "calculation": "$4.5B / >US$100M annual revenue run-rate（截至 2026-06-25）"
       }
     },
     "source_links": [
@@ -3115,7 +3115,7 @@
         "sort": "",
         "source": null,
         "missing_label": "没有",
-        "reason": "valuation_date_not_precise"
+        "reason": "valuation_not_disclosed"
       },
       "open_status": {
         "value": "闭源",
@@ -3580,27 +3580,27 @@
       "模型层",
       "应用层"
     ],
-    "latest_round": "C 轮",
-    "latest_round_date": "2026-03",
-    "valuation_date": "2026-03",
+    "latest_round": "C 轮扩展",
+    "latest_round_date": "2026-07-14",
+    "valuation_date": "2026-07-14",
     "revenue_period": "2025 Q4",
     "multiple_type": "P/ARR",
-    "ps_multiple": "",
+    "ps_multiple": "<50.0x（P/ARR）",
     "cells": {
       "valuation": {
-        "value": "> $1B（C 轮后媒体口径，2026-03）",
-        "sort": 1.0,
+        "value": "$2B（Series C extension，2026-07）",
+        "sort": 2.0,
         "source": {
-          "label": "GeekWire · 2026-03-30",
-          "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
+          "label": "Axios · 2026-07-14",
+          "url": "https://www.axios.com/newsletters/axios-pro-rata-c00bc78e-07ca-4665-9c03-58dc9e2b9585"
         }
       },
       "latest_raise": {
-        "value": "US$300M",
-        "sort": 0.3,
+        "value": "C 轮累计 US$439M",
+        "sort": 0.439,
         "source": {
-          "label": "GeekWire",
-          "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
+          "label": "Axios",
+          "url": "https://www.axios.com/newsletters/axios-pro-rata-c00bc78e-07ca-4665-9c03-58dc9e2b9585"
         }
       },
       "subsector": {
@@ -3645,11 +3645,11 @@
         }
       },
       "ps_multiple": {
-        "value": "",
-        "sort": "",
+        "value": "<50.0x（P/ARR）",
+        "sort": 50.0,
         "source": null,
-        "missing_label": "没有",
-        "reason": "bounds_do_not_determine_multiple"
+        "secondary": "估值 2026-07-14｜收入 2025 Q4",
+        "calculation": "US$2B / >$40M ARR（约 2025 Q4）"
       },
       "open_status": {
         "value": "闭源",
@@ -3662,12 +3662,12 @@
     },
     "source_links": [
       {
-        "label": "GeekWire · 2026-03-30",
-        "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
+        "label": "Axios · 2026-07-14",
+        "url": "https://www.axios.com/newsletters/axios-pro-rata-c00bc78e-07ca-4665-9c03-58dc9e2b9585"
       },
       {
-        "label": "GeekWire",
-        "url": "https://www.geekwire.com/2026/singapores-pixverse-picks-seattle-area-for-its-first-u-s-office-amid-300m-funding-round/"
+        "label": "Axios",
+        "url": "https://www.axios.com/newsletters/axios-pro-rata-c00bc78e-07ca-4665-9c03-58dc9e2b9585"
       },
       {
         "label": "AIsphere 官网/产品口径",
@@ -3980,7 +3980,7 @@
         "sort": "",
         "source": null,
         "missing_label": "没有",
-        "reason": "valuation_date_not_precise"
+        "reason": "valuation_not_disclosed"
       },
       "open_status": {
         "value": "闭源",
@@ -4020,17 +4020,17 @@
     ],
     "latest_round": "Series A3",
     "latest_round_date": "2026-07",
-    "valuation_date": "2026-06",
+    "valuation_date": "2026-06-01",
     "revenue_period": "2025-09",
     "multiple_type": "P/ARR",
-    "ps_multiple": "",
+    "ps_multiple": "<83.3x（P/ARR）",
     "cells": {
       "valuation": {
-        "value": "至少 $1B（媒体报道，2026-06）",
+        "value": "$1B（2026-06）",
         "sort": 1.0,
         "source": {
-          "label": "Forbes · 2026-06-01",
-          "url": "https://www.forbes.com/sites/ywang/2026/06/01/under-30-alums-3d-model-startup-hits-unicorn-status-amid-ai-frenzy/"
+          "label": "CB Insights · 2026-06",
+          "url": "https://www.cbinsights.com/company/tripo-ai/financials"
         }
       },
       "latest_raise": {
@@ -4083,11 +4083,11 @@
         }
       },
       "ps_multiple": {
-        "value": "",
-        "sort": "",
+        "value": "<83.3x（P/ARR）",
+        "sort": 83.33333333333333,
         "source": null,
-        "missing_label": "没有",
-        "reason": "bounds_do_not_determine_multiple"
+        "secondary": "估值 2026-06-01｜收入 2025-09",
+        "calculation": "US$1B / >$12M ARR（截至 2025-09）"
       },
       "open_status": {
         "value": "闭源",
@@ -4100,8 +4100,8 @@
     },
     "source_links": [
       {
-        "label": "Forbes · 2026-06-01",
-        "url": "https://www.forbes.com/sites/ywang/2026/06/01/under-30-alums-3d-model-startup-hits-unicorn-status-amid-ai-frenzy/"
+        "label": "CB Insights · 2026-06",
+        "url": "https://www.cbinsights.com/company/tripo-ai/financials"
       },
       {
         "label": "Axios",
@@ -5871,7 +5871,7 @@
         }
       },
       "arr_revenue": {
-        "value": ">$3M revenue（截至 2025-06；累计/TTM/年化口径未说明）",
+        "value": ">$3M 累计收入（成立至 2025-06，约 16 个月）",
         "sort": 0.003,
         "source": {
           "label": "Upstarts·创始人采访 · 2025-06-17",
@@ -5883,7 +5883,7 @@
         "sort": "",
         "source": null,
         "missing_label": "没有",
-        "reason": "revenue_period_not_disclosed"
+        "reason": "cumulative_revenue_not_annual"
       },
       "pricing": {
         "value": "Developer price: $20/month + usage",
