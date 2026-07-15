@@ -39,6 +39,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "AI/ML 工程团队、数据科学团队与企业平台工程团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "Ray 生态把分布式 AI 工作负载带入企业生产环境",
         "sort": "",
@@ -109,6 +114,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "AI 应用开发团队、模型团队与企业 AI 工程团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "面向高频 AI 产品提供低延迟托管推理",
         "sort": "",
@@ -176,6 +186,11 @@
       },
       "core_product": {
         "value": "模型 API 与推理服务｜模型 API / 云平台/托管服务",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "AI 原生应用团队、模型开发者与企业 AI 团队",
         "sort": "",
         "source": null
       },
@@ -256,6 +271,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "AI 开发者、研究团队与需要弹性 GPU 的企业工程团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "按秒计费并隐藏 GPU 集群编排复杂度",
         "sort": "",
@@ -330,6 +350,11 @@
       },
       "core_product": {
         "value": "Open model cloud、推理训练服务｜模型 API / 云平台/托管服务",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "开放模型开发者、AI 应用团队与企业模型团队",
         "sort": "",
         "source": null
       },
@@ -410,6 +435,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "模型研究团队、AI 原生公司与强化学习开发者",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "把企业任务、强化学习、评测与部署连成持续改进闭环",
         "sort": "",
@@ -484,6 +514,11 @@
       },
       "core_product": {
         "value": "企业数据与 AI 平台、AI Agent 后端｜企业 SaaS / 云平台/托管服务",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "大型企业的数据、分析、AI/ML 与平台工程团队",
         "sort": "",
         "source": null
       },
@@ -565,6 +600,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "模型开发者、研究人员、开源社区与企业 AI 团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "开放模型资产与开发者分发网络规模突出",
         "sort": "",
@@ -639,6 +679,11 @@
       },
       "core_product": {
         "value": "数据标注、RLHF、模型评测｜数据服务 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "基础模型公司、政府机构与需要训练数据的企业 AI 团队",
         "sort": "",
         "source": null
       },
@@ -719,6 +764,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "基础模型公司、AI 研究团队与需要专业人才数据的企业",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "用 AI 面试调度大规模专业人才网络",
         "sort": "",
@@ -796,6 +846,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "RAG、搜索与推荐应用开发者及企业 AI 团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "以全托管方式降低向量检索运维门槛",
         "sort": "",
@@ -866,6 +921,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "RAG、企业搜索与 Agent 开发团队及企业数据团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "开源分发、灵活部署与多租户能力结合",
         "sort": "",
@@ -933,6 +993,11 @@
       },
       "core_product": {
         "value": "AI 芯片、GPGPU、国产算力｜硬件/芯片",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "云服务商、数据中心、模型公司与大型企业算力客户",
         "sort": "",
         "source": null
       },
@@ -1013,6 +1078,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "模型公司、智算中心、云服务商与企业算力客户",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "从国产推理 GPU 切入并推进软硬一体交付",
         "sort": "",
@@ -1081,6 +1151,11 @@
       },
       "core_product": {
         "value": "Frontier model、ChatGPT/Codex、Agent、企业 AI｜Web 应用 / 模型 API / 移动应用 / 开发工具",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "消费用户、开发者、企业与政府、教育和研究机构",
         "sort": "",
         "source": null
       },
@@ -1175,6 +1250,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、企业知识工作者、代码团队、研究人员",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "安全品牌、代码能力与企业云渠道协同",
         "sort": "",
@@ -1263,6 +1343,11 @@
       },
       "core_product": {
         "value": "LLM、长上下文、Agent、C端助手、代码模型｜Web 应用 / 模型 API / 移动应用 / 开发工具",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "消费用户、开发者、知识工作者、企业技术团队",
         "sort": "",
         "source": null
       },
@@ -1356,6 +1441,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、研究人员、消费用户、企业技术团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "训练推理效率与开放权重扩大开发者分发",
         "sort": "",
@@ -1437,6 +1527,11 @@
       },
       "core_product": {
         "value": "多模态模型、视频/音频、国产芯片适配｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "消费用户、开发者、企业客户、终端与算力生态伙伴",
         "sort": "",
         "source": null
       },
@@ -1522,6 +1617,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "多模态应用开发者、企业技术团队、研究人员",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "以较小模型实现多模态理解与部署效率平衡",
         "sort": "",
@@ -1601,6 +1701,11 @@
       },
       "core_product": {
         "value": "Frontier AI systems、多模态、研究型模型平台｜模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "AI 开发者、研究人员、定制模型与训练团队",
         "sort": "",
         "source": null
       },
@@ -1687,6 +1792,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、个人用户与企业客户",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "长文档处理、结果校验与私有部署结合",
         "sort": "",
@@ -1767,6 +1877,11 @@
       },
       "core_product": {
         "value": "Enterprise LLM、RAG、合规私有化模型｜模型 API / 私有化部署",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "开发者、个人用户与企业客户",
         "sort": "",
         "source": null
       },
@@ -1859,6 +1974,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、设备厂商、端侧 AI 团队、企业技术团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "非 Transformer 架构面向低内存和端侧部署",
         "sort": "",
@@ -1936,6 +2056,11 @@
       },
       "core_product": {
         "value": "端侧小模型、MiniCPM｜模型 API / 私有化部署",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "设备厂商、端侧开发者、企业客户、消费应用团队",
         "sort": "",
         "source": null
       },
@@ -2021,6 +2146,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开源开发者、端侧与机器人团队、企业技术客户",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "面向端侧 Agent 的高效架构与全栈交付",
         "sort": "",
@@ -2101,6 +2231,11 @@
       },
       "core_product": {
         "value": "开源 LLM、企业 AI 方案、低成本推理｜模型 API / 私有化部署",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "开源开发者、企业客户、私有化部署与行业解决方案团队",
         "sort": "",
         "source": null
       },
@@ -2190,6 +2325,11 @@
       },
       "core_product": {
         "value": "Safety-first superintelligence、研究型 AI lab",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "暂无公开产品用户；面向 AI 研究与潜在产业合作方",
         "sort": "",
         "source": null
       },
@@ -2283,6 +2423,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "软件工程团队、政府/国防与受监管行业客户",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "代码模型到企业开发工作台的全栈路线",
         "sort": "",
@@ -2365,6 +2510,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、创意软件厂商、设计与媒体企业",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "FLUX 模型兼顾图像质量与开发者生态",
         "sort": "",
@@ -2442,6 +2592,11 @@
       },
       "core_product": {
         "value": "图像生成、创作者工具｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "图像创作者、设计师、营销团队与消费用户",
         "sort": "",
         "source": null
       },
@@ -2535,6 +2690,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "消费用户、视频创作者、制作团队、API 开发者",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "快手内容生态提供训练反馈与产品分发",
         "sort": "",
@@ -2625,6 +2785,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "影视制作人、广告与创意团队、企业客户、开发者",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "把自研视频模型嵌入专业影视工作流",
         "sort": "",
@@ -2705,6 +2870,11 @@
       },
       "core_product": {
         "value": "视频生成、3D/world model｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "视频创作者、影视与广告团队、游戏工作室、开发者",
         "sort": "",
         "source": null
       },
@@ -2791,6 +2961,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "消费用户、社交视频创作者、营销与内容团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "低门槛特效产品强化消费端传播",
         "sort": "",
@@ -2871,6 +3046,11 @@
       },
       "core_product": {
         "value": "AI 视频生成、世界模型、创作工具/API｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "消费用户、视频创作者、广告与短视频团队、开发者",
         "sort": "",
         "source": null
       },
@@ -2968,6 +3148,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "内容创作者、开发者、媒体与本地化团队、企业客服团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "多语言语音模型、低延迟 API 与授权声音生态结合",
         "sort": "",
@@ -3058,6 +3243,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "消费用户、音乐人、短视频与内容创作者",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "完整歌曲生成与社区传播形成用户心智",
         "sort": "",
@@ -3139,6 +3329,11 @@
       },
       "core_product": {
         "value": "AI 3D、3D asset workflow｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "3D 艺术家、游戏开发者、产品设计师、企业工作室",
         "sort": "",
         "source": null
       },
@@ -3225,6 +3420,11 @@
       },
       "core_product": {
         "value": "AI 3D、3D foundation model、asset workflow｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "3D 创作者、游戏与电商团队、产品设计师、开发者",
         "sort": "",
         "source": null
       },
@@ -3318,6 +3518,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "药企、生物科技公司、科研机构与生物模型开发者",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "生物模型资产与长期训练数据建设并行",
         "sort": "",
@@ -3394,6 +3599,11 @@
       },
       "core_product": {
         "value": "生物基础模型、蛋白质设计｜模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "药企、生物科技公司、科研机构与生物模型开发者",
         "sort": "",
         "source": null
       },
@@ -3480,6 +3690,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "机器人公司、主机厂、自动驾驶与仿真研发团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "打通仿真数据、模型训练、测试与真实部署",
         "sort": "",
@@ -3562,6 +3777,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "个人知识工作者、专业用户、中小团队、企业团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "跨工具执行并交付成果而非只生成答案",
         "sort": "",
@@ -3641,6 +3861,11 @@
       },
       "core_product": {
         "value": "通用 Agent、自动化工作流｜Web 应用 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "个人专业用户、创业团队、运营与研究团队、企业用户",
         "sort": "",
         "source": null
       },
@@ -3733,6 +3958,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "会议密集型专业人士、管理者、销售与项目团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "个人会议记忆持续沉淀高质量工作上下文",
         "sort": "",
@@ -3805,6 +4035,11 @@
       },
       "core_product": {
         "value": "AI Coding、IDE、开发者 Agent｜开发工具 / 桌面应用 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "个人开发者、创业团队、软件公司与企业研发团队",
         "sort": "",
         "source": null
       },
@@ -3897,6 +4132,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、软件工程团队与企业研发组织",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "从代码辅助延伸到可度量的工程产能",
         "sort": "",
@@ -3983,6 +4223,11 @@
       },
       "core_product": {
         "value": "AI coding、browser IDE、software agent、hosting｜开发工具 / 桌面应用 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "学生、个人开发者、创业团队与企业研发团队",
         "sort": "",
         "source": null
       },
@@ -4075,6 +4320,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "创始人、产品/设计/营销团队、开发机构与企业团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "把软件创建入口扩展到非工程师",
         "sort": "",
@@ -4161,6 +4411,11 @@
       },
       "core_product": {
         "value": "Vibe coding、AI app builder、personal AI agent｜Web 应用 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "非技术开发者、创始人、中小企业与 IT 服务商",
         "sort": "",
         "source": null
       },
@@ -4253,6 +4508,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "Web 开发者、创始人、产品团队、开发机构与企业团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "浏览器本地运行降低开发环境等待与依赖",
         "sort": "",
@@ -4342,6 +4602,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "开发者、创业公司、企业 AI 与业务自动化团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "模型中立、自托管与开源社区分发结合",
         "sort": "",
@@ -4424,6 +4689,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "AI 应用/Agent 开发者与企业 AI 工程团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "开发者生态与跨模型编排能力覆盖广",
         "sort": "",
@@ -4500,6 +4770,11 @@
       },
       "core_product": {
         "value": "RAG 数据连接层、检索/索引框架｜开发框架/SDK / 企业 SaaS / 私有化部署",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "RAG/知识应用开发者与企业数据团队",
         "sort": "",
         "source": null
       },
@@ -4585,6 +4860,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "AI/ML 工程团队、模型评测团队与企业 AI 产品团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "统一管理评测数据、实验与线上问题定位",
         "sort": "",
@@ -4664,6 +4944,11 @@
       },
       "core_product": {
         "value": "Agent 浏览器自动化运行时｜开发工具 / 企业 SaaS / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "Agent 开发者、自动化团队、代码与数据产品团队",
         "sort": "",
         "source": null
       },
@@ -4756,6 +5041,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "AI 开发者、Agent/搜索产品团队与研究机构",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "独立网页索引为 Agent 提供结构化实时上下文",
         "sort": "",
@@ -4835,6 +5125,11 @@
       },
       "core_product": {
         "value": "搜索 API、Agent 检索基础设施｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "AI/Agent 开发者及金融、销售、法律、咨询等企业团队",
         "sort": "",
         "source": null
       },
@@ -4921,6 +5216,11 @@
       },
       "core_product": {
         "value": "答案引擎、AI 搜索、AI 浏览器｜Web 应用 / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "消费者、学生、知识工作者、企业团队与开发者",
         "sort": "",
         "source": null
       },
@@ -5013,6 +5313,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "各类中大型企业及其知识工作团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "企业图谱、连接器与权限治理形成上下文层",
         "sort": "",
@@ -5099,6 +5404,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "各类企业的 IT、工程、销售、HR 与知识工作团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "短链接入口沉淀组织资源关系网络",
         "sort": "",
@@ -5178,6 +5488,11 @@
       },
       "core_product": {
         "value": "Customer support AI、enterprise agent、CX automation｜Web 应用 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "客服中心、客户体验团队、消费品牌与服务企业",
         "sort": "",
         "source": null
       },
@@ -5263,6 +5578,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "客服中心、客户体验团队、消费品牌与服务企业",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "结果计费把产品价值与客服业务目标绑定",
         "sort": "",
@@ -5342,6 +5662,11 @@
       },
       "core_product": {
         "value": "GTM AI、sales automation｜Web 应用 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "销售、市场营销、RevOps 与增长团队",
         "sort": "",
         "source": null
       },
@@ -5439,6 +5764,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "大型企业 IT、数据与安全团队、业务部门",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "自研模型与企业控制层在同一平台交付",
         "sort": "",
@@ -5511,6 +5841,11 @@
       },
       "core_product": {
         "value": "AI avatar、视频生成｜Web 应用 / 企业 SaaS / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "市场营销、销售、培训团队、内容创作者与企业客户",
         "sort": "",
         "source": null
       },
@@ -5593,6 +5928,11 @@
       },
       "core_product": {
         "value": "AI avatar、enterprise video、synthetic media｜Web 应用 / 企业 SaaS / 模型 API",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "企业培训、市场营销、内部沟通与客服团队",
         "sort": "",
         "source": null
       },
@@ -5679,6 +6019,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "角色扮演与陪伴用户、互动内容消费者、角色创作者",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "角色网络与长对话反馈形成独特训练数据闭环",
         "sort": "",
@@ -5761,6 +6106,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "投行、资管、研究机构与企业战略团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "内容授权、专业数据与研究工作流结合",
         "sort": "",
@@ -5835,6 +6185,11 @@
       },
       "core_product": {
         "value": "企业知识检索、金融/法律研究工作流｜专业工作台 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "投行、资管、研究机构与企业战略团队",
         "sort": "",
         "source": null
       },
@@ -5915,6 +6270,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "投行、资管、研究机构与企业战略团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "金融专用工作流与深度定制实施结合",
         "sort": "",
@@ -5989,6 +6349,11 @@
       },
       "core_product": {
         "value": "Legal AI、律所/企业法务 Agent｜专业工作台 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "律师事务所、企业法务与专业服务机构",
         "sort": "",
         "source": null
       },
@@ -6069,6 +6434,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "律师事务所、企业法务与专业服务机构",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "协作工作台连接搜索、监管与办公软件",
         "sort": "",
@@ -6143,6 +6513,11 @@
       },
       "core_product": {
         "value": "AI-native insurance、创业公司商业保险、承保/理赔工作流｜企业 SaaS / 专业工作台",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "中小企业、保险经纪、承保与理赔团队",
         "sort": "",
         "source": null
       },
@@ -6223,6 +6598,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "医院覆盖、电子病历集成与临床对话数据结合",
         "sort": "",
@@ -6293,6 +6673,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "嵌入电子病历并以编码和效率证明价值",
         "sort": "",
@@ -6357,6 +6742,11 @@
       },
       "core_product": {
         "value": "医疗 AI scribe｜专业工作台 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
         "sort": "",
         "source": null
       },
@@ -6430,6 +6820,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "直销与嵌入式渠道同时覆盖临床工作流",
         "sort": "",
@@ -6497,6 +6892,11 @@
       },
       "core_product": {
         "value": "Healthcare AI、RCM、AI billing、医疗运营｜专业工作台 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
         "sort": "",
         "source": null
       },
@@ -6578,6 +6978,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "非诊断边界、临床测试与人工升级机制清晰",
         "sort": "",
@@ -6645,6 +7050,11 @@
       },
       "core_product": {
         "value": "医疗搜索、医生问答、临床决策支持｜专业工作台 / 企业 SaaS",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "医院、医疗集团、医生与临床运营团队",
         "sort": "",
         "source": null
       },
@@ -6725,6 +7135,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "医院、影像科、医疗设备与临床 AI 团队",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "医疗设备生态、证照与医院渠道支持 AI 落地",
         "sort": "",
@@ -6802,6 +7217,11 @@
         "sort": "",
         "source": null
       },
+      "user_group": {
+        "value": "药企、生物科技公司、CRO 与科研机构",
+        "sort": "",
+        "source": null
+      },
       "core_advantage": {
         "value": "天然产物数据库与临床管线形成验证闭环",
         "sort": "",
@@ -6874,6 +7294,11 @@
       },
       "core_product": {
         "value": "AI drug discovery、protein-ligand prediction、AI biology｜专业工作台 / 数据服务",
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "药企、生物科技公司、CRO 与科研机构",
         "sort": "",
         "source": null
       },
