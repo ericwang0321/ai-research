@@ -12,6 +12,10 @@
     ],
     "latest_round": "Series C extension",
     "latest_round_date": "2022-08",
+    "valuation_date": "2021-12",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $1B",
@@ -66,6 +70,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -92,6 +103,10 @@
     ],
     "latest_round": "Series F",
     "latest_round_date": "2026-06",
+    "valuation_date": "2026-06",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$13B",
@@ -146,6 +161,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -172,6 +194,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2025-10",
+    "valuation_date": "2025-10",
+    "revenue_period": "2025-10-28",
+    "multiple_type": "P/S",
+    "ps_multiple": "<14.3x（P/S）",
     "cells": {
       "valuation": {
         "value": "$4B",
@@ -229,6 +255,13 @@
           "label": "Fireworks AI Series C · 2025-10-28",
           "url": "https://fireworks.ai/blog/series-c"
         }
+      },
+      "ps_multiple": {
+        "value": "<14.3x（P/S）",
+        "sort": 14.285714285714285,
+        "source": null,
+        "secondary": "估值 2025-10｜收入 2025-10-28",
+        "calculation": "$4B / >US$280M annualized revenue（截至 2025-10-28）"
       }
     },
     "source_links": [
@@ -259,6 +292,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "2026-05-21",
+    "multiple_type": "P/S",
+    "ps_multiple": "<15.5x（P/S）",
     "cells": {
       "valuation": {
         "value": "$4.65B",
@@ -316,6 +353,13 @@
           "label": "Modal Series C · 2026-05-21",
           "url": "https://modal.com/blog/modal-series-c"
         }
+      },
+      "ps_multiple": {
+        "value": "<15.5x（P/S）",
+        "sort": 15.500000000000002,
+        "source": null,
+        "secondary": "估值 2026-05｜收入 2026-05-21",
+        "calculation": "$4.65B / >US$300M annualized revenue（截至 2026-05-21）"
       }
     },
     "source_links": [
@@ -346,6 +390,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2026-07",
+    "valuation_date": "2026-07",
+    "revenue_period": "2025-02",
+    "multiple_type": "P/S",
+    "ps_multiple": "<83.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$8.3B",
@@ -403,6 +451,13 @@
           "label": "Forbes / Bloomberg · 2025-02-21",
           "url": "https://www.forbes.com/sites/esatdedezade/2025/02/21/together-ais-valuation-soars-to-33-billion-as-demand-for-ai-computing-grows/"
         }
+      },
+      "ps_multiple": {
+        "value": "<83.0x（P/S）",
+        "sort": 83.0,
+        "source": null,
+        "secondary": "估值 2026-07｜收入 2025-02",
+        "calculation": "$8.3B / >US$100M annualized revenue（截至 2025-02）"
       }
     },
     "source_links": [
@@ -433,6 +488,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2026-07-08",
+    "valuation_date": "2026-07-08",
+    "revenue_period": "2026-07-08",
+    "multiple_type": "P/S",
+    "ps_multiple": "<10.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$1B",
@@ -490,6 +549,13 @@
           "label": "Prime Intellect Series A · 2026-07-08",
           "url": "https://www.primeintellect.ai/blog/series-a"
         }
+      },
+      "ps_multiple": {
+        "value": "<10.0x（P/S）",
+        "sort": 10.0,
+        "source": null,
+        "secondary": "估值 2026-07-08｜收入 2026-07-08",
+        "calculation": "$1B / >US$100M annualized revenue（截至 2026-07-08）"
       }
     },
     "source_links": [
@@ -520,6 +586,10 @@
     ],
     "latest_round": "Series L",
     "latest_round_date": "2025-12",
+    "valuation_date": "2025-12",
+    "revenue_period": "2026-06-16",
+    "multiple_type": "P/S",
+    "ps_multiple": "19.4x（P/S）",
     "cells": {
       "valuation": {
         "value": "$134B",
@@ -577,6 +647,13 @@
           "label": "CNBC · 2026-06-16",
           "url": "https://www.cnbc.com/2026/06/16/databricks-revenue-growth-tops-80percent-to-6point9-billion-annualized.html"
         }
+      },
+      "ps_multiple": {
+        "value": "19.4x（P/S）",
+        "sort": 19.42028985507246,
+        "source": null,
+        "secondary": "估值 2025-12｜收入 2026-06-16",
+        "calculation": "$134B / US$6.9B annualized revenue（截至 2026-06-16）"
       }
     },
     "source_links": [
@@ -608,6 +685,10 @@
     ],
     "latest_round": "后续公开融资",
     "latest_round_date": "2024-2026",
+    "valuation_date": "2024-2026",
+    "revenue_period": "2026-06-25",
+    "multiple_type": "P/S",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$4.5B",
@@ -665,6 +746,13 @@
           "label": "Clem Delangue CEO · 2026-06-25",
           "url": "https://www.linkedin.com/posts/clementdelangue_we-just-crossed-100m-annual-run-rate-i-activity-7475870231043842048-Ig0H"
         }
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "valuation_date_not_precise"
       }
     },
     "source_links": [
@@ -695,6 +783,10 @@
     ],
     "latest_round": "Meta strategic investment",
     "latest_round_date": "2025-06",
+    "valuation_date": "2025-06",
+    "revenue_period": "FY2025",
+    "multiple_type": "P/S",
+    "ps_multiple": ">29.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "约 $29B-$30B",
@@ -752,6 +844,13 @@
           "label": "Forbes · 2026-05-14",
           "url": "https://www.forbes.com/sites/richardnieva/2026/05/14/scale-meta-deal/?streamIndex=0"
         }
+      },
+      "ps_multiple": {
+        "value": ">29.0x（P/S）",
+        "sort": 29.0,
+        "source": null,
+        "secondary": "估值 2025-06｜收入 FY2025",
+        "calculation": "约 $29B-$30B / 略低于 US$1B revenue（FY2025）"
       }
     },
     "source_links": [
@@ -782,6 +881,10 @@
     ],
     "latest_round": "Series C 媒体报道",
     "latest_round_date": "2025-10",
+    "valuation_date": "2025-10",
+    "revenue_period": "2026-06",
+    "multiple_type": "P/S",
+    "ps_multiple": "<5.0x（P/S，gross）",
     "cells": {
       "valuation": {
         "value": "$10B",
@@ -839,6 +942,13 @@
           "label": "TechCrunch·CEO 口径 · 2026-07-08",
           "url": "https://techcrunch.com/2026/07/08/these-ai-startups-are-growing-revenue-at-faster-and-faster-rates/"
         }
+      },
+      "ps_multiple": {
+        "value": "<5.0x（P/S，gross）",
+        "sort": 5.0,
+        "source": null,
+        "secondary": "估值 2025-10｜收入 2026-06",
+        "calculation": "$10B / >US$2B gross annualized revenue（2026-06）"
       }
     },
     "source_links": [
@@ -869,6 +979,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2023-04",
+    "valuation_date": "2023-04",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$750M",
@@ -923,6 +1037,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -949,6 +1070,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2023-04",
+    "valuation_date": "2023-04",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $200M",
@@ -1003,6 +1128,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -1029,6 +1161,10 @@
     ],
     "latest_round": "D 轮",
     "latest_round_date": "2023-09",
+    "valuation_date": "2023-09",
+    "revenue_period": "FY2025",
+    "multiple_type": "P/S",
+    "ps_multiple": "16.2x（P/S）",
     "cells": {
       "valuation": {
         "value": "人民币 160 亿",
@@ -1086,6 +1222,13 @@
           "label": "燧原科技上交所招股书 · 2026-04-16",
           "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202604/002175_20260416_BH8W.pdf"
         }
+      },
+      "ps_multiple": {
+        "value": "16.2x（P/S）",
+        "sort": 16.15900460792745,
+        "source": null,
+        "secondary": "估值 2023-09｜收入 FY2025",
+        "calculation": "人民币 160 亿 / 人民币9.9016亿元合并营业收入（FY2025）"
       }
     },
     "source_links": [
@@ -1116,6 +1259,10 @@
     ],
     "latest_round": "新一轮融资",
     "latest_round_date": "2026-04-20",
+    "valuation_date": "2026-04-20",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "人民币 100 亿",
@@ -1170,6 +1317,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -1197,6 +1351,10 @@
     ],
     "latest_round": "最新融资轮完成",
     "latest_round_date": "2026-03-31",
+    "valuation_date": "2026-03-31",
+    "revenue_period": "2026-03-31（月收入年化）",
+    "multiple_type": "P/S",
+    "ps_multiple": "35.5x（P/S）",
     "cells": {
       "valuation": {
         "value": "$852B",
@@ -1255,6 +1413,13 @@
           "url": "https://openai.com/index/accelerating-the-next-phase-ai/"
         }
       },
+      "ps_multiple": {
+        "value": "35.5x（P/S）",
+        "sort": 35.5,
+        "source": null,
+        "secondary": "估值 2026-03-31｜收入 2026-03-31（月收入年化）",
+        "calculation": "$852B / $2B monthly revenue（截至 2026-03-31）"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -1298,6 +1463,10 @@
     ],
     "latest_round": "Series H",
     "latest_round_date": "2026-05-28",
+    "valuation_date": "2026-05-28",
+    "revenue_period": "2026-05 上旬",
+    "multiple_type": "P/S",
+    "ps_multiple": "<20.5x（P/S）",
     "cells": {
       "valuation": {
         "value": "$965B",
@@ -1356,6 +1525,13 @@
           "url": "https://www.anthropic.com/news/series-h"
         }
       },
+      "ps_multiple": {
+        "value": "<20.5x（P/S）",
+        "sort": 20.53191489361702,
+        "source": null,
+        "secondary": "估值 2026-05-28｜收入 2026-05 上旬",
+        "calculation": "$965B / >$47B revenue run-rate（2026-05 上旬）"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -1399,6 +1575,10 @@
     ],
     "latest_round": "最新私募融资",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "2026-04",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<100.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "约 $20B",
@@ -1457,6 +1637,13 @@
           "url": "https://www.bloomberg.com/news/articles/2026-05-07/kimi-chatbot-maker-moonshot-ai-valued-at-20-billion-in-meituan-led-round"
         }
       },
+      "ps_multiple": {
+        "value": "<100.0x（P/ARR）",
+        "sort": 100.0,
+        "source": null,
+        "secondary": "估值 2026-05｜收入 2026-04",
+        "calculation": "约 $20B / >$200M ARR（2026-04）"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -1499,6 +1686,10 @@
     ],
     "latest_round": "WSJ 报道 fresh funding 与扩招",
     "latest_round_date": "2026-06/07",
+    "valuation_date": "2026-06/07",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": ">$50B",
@@ -1554,6 +1745,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -1593,6 +1791,10 @@
     ],
     "latest_round": "Pre-IPO（进行中）",
     "latest_round_date": "2026 年",
+    "valuation_date": "2026 年",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "投前约 $5B-$6B",
@@ -1648,6 +1850,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -1685,6 +1894,10 @@
     ],
     "latest_round": "Series B(战略轮)",
     "latest_round_date": "2025-07-22",
+    "valuation_date": "2025-07-22",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$1B+",
@@ -1740,6 +1953,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -1777,6 +1997,10 @@
     ],
     "latest_round": "官方/媒体宣布 cofounders 与融资",
     "latest_round_date": "2025-07-15",
+    "valuation_date": "2025-07-15",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $12B",
@@ -1832,6 +2056,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -1870,6 +2101,10 @@
     ],
     "latest_round": "Series C 完成",
     "latest_round_date": "2023-11",
+    "valuation_date": "2023-11",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$1.4B",
@@ -1925,6 +2160,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -1963,6 +2205,10 @@
     ],
     "latest_round": "追加融资/second close",
     "latest_round_date": "2025-09",
+    "valuation_date": "2025-09",
+    "revenue_period": "FY2025",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 29.2x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "约 $7B",
@@ -2021,6 +2267,13 @@
           "url": "https://techcrunch.com/2026/02/13/coheres-240m-year-sets-stage-for-ipo/"
         }
       },
+      "ps_multiple": {
+        "value": "约 29.2x（P/ARR）",
+        "sort": 29.166666666666668,
+        "source": null,
+        "secondary": "估值 2025-09｜收入 FY2025",
+        "calculation": "约 $7B / 约 $240M ARR（FY2025）"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -2062,6 +2315,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2024年12月13日",
+    "valuation_date": "2024年12月13日",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$2.28–2.35B",
@@ -2117,6 +2374,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -2155,6 +2419,10 @@
     ],
     "latest_round": "新一轮融资 / 加码端侧 AI",
     "latest_round_date": "2025–2026 线索",
+    "valuation_date": "2025–2026 线索",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -2207,6 +2475,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -2244,6 +2519,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2025-06",
+    "valuation_date": "2025-06",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $1B",
@@ -2299,6 +2578,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -2337,6 +2623,10 @@
     ],
     "latest_round": "新一轮(IT桔子数据)",
     "latest_round_date": "2024-08",
+    "valuation_date": "2024-08",
+    "revenue_period": "FY2024",
+    "multiple_type": "P/S",
+    "ps_multiple": "<104.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "~104 亿",
@@ -2395,6 +2685,13 @@
           "url": "https://m.bjnews.com.cn/detail/1736178494129531.html"
         }
       },
+      "ps_multiple": {
+        "value": "<104.0x（P/S）",
+        "sort": 103.99999991359999,
+        "source": null,
+        "secondary": "估值 2024-08｜收入 FY2024",
+        "calculation": "~104 亿 / 确认收入>人民币1亿元（FY2024）"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -2436,6 +2733,10 @@
     ],
     "latest_round": "Growth financing",
     "latest_round_date": "2025-03",
+    "valuation_date": "2025-03",
+    "revenue_period": "2026-04",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$32B",
@@ -2494,6 +2795,13 @@
           "url": "https://www.forbes.com/companies/safe-superintelligence/?list=ai50"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "pre_revenue"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -2536,6 +2844,10 @@
     ],
     "latest_round": "更高估值融资报道",
     "latest_round_date": "2026 前后",
+    "valuation_date": "2026 前后",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$12-14B",
@@ -2591,6 +2903,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -2628,6 +2947,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2025-12-01",
+    "valuation_date": "2025-12-01",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$3.25B",
@@ -2683,6 +3006,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -2721,6 +3051,10 @@
     ],
     "latest_round": "自筹运营",
     "latest_round_date": "截至 2026-07",
+    "valuation_date": "",
+    "revenue_period": "FY2023",
+    "multiple_type": "P/S",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -2776,6 +3110,13 @@
           "url": "https://www.theinformation.com/articles/midjourney-profitable-chasing-hardware-dreams-can-survive-google"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "valuation_date_not_precise"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -2818,6 +3159,10 @@
     ],
     "latest_round": "外部融资协议/资本注入",
     "latest_round_date": "2026-07-02",
+    "valuation_date": "2026-07-02",
+    "revenue_period": "2026-03",
+    "multiple_type": "P/S",
+    "ps_multiple": "约 36.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "约 US$18B",
@@ -2876,6 +3221,13 @@
           "url": "https://ir.kuaishou.com/news-releases/news-release-details/kuaishou-technology-announces-first-quarter-2026-unaudited"
         }
       },
+      "ps_multiple": {
+        "value": "约 36.0x（P/S）",
+        "sort": 36.0,
+        "source": null,
+        "secondary": "估值 2026-07-02｜收入 2026-03",
+        "calculation": "约 US$18B / 约 $500M annualized revenue run-rate（截至 2026-03）；Q1 收入>人民币6.5亿元"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -2918,6 +3270,10 @@
     ],
     "latest_round": "Growth round",
     "latest_round_date": "2026-02",
+    "valuation_date": "2026-02",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$5.3B",
@@ -2973,6 +3329,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3011,6 +3374,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2025-11",
+    "valuation_date": "2025-11",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $4B",
@@ -3066,6 +3433,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3104,6 +3478,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2024-06",
+    "valuation_date": "2024-06",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $700M",
@@ -3159,6 +3537,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3197,6 +3582,10 @@
     ],
     "latest_round": "C 轮",
     "latest_round_date": "2026-03",
+    "valuation_date": "2026-03",
+    "revenue_period": "2025 Q4",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "> $1B（C 轮后媒体口径，2026-03）",
@@ -3255,6 +3644,13 @@
           "url": "https://www.linkedin.com/posts/pixverse_pixverse-pixverseai-agenticeconomy-activity-7386675417811795968-fYa3"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "bounds_do_not_determine_multiple"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3301,6 +3697,10 @@
     ],
     "latest_round": "Series D / additional funding and ARR update",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "2026-05-05",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<22.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$11B",
@@ -3359,6 +3759,13 @@
           "url": "https://elevenlabs.io/blog/500m-arr-and-new-investors"
         }
       },
+      "ps_multiple": {
+        "value": "<22.0x（P/ARR）",
+        "sort": 22.0,
+        "source": null,
+        "secondary": "估值 2026-05｜收入 2026-05-05",
+        "calculation": "$11B / >$500M ARR（截至 2026-05-05）"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3401,6 +3808,10 @@
     ],
     "latest_round": "New round",
     "latest_round_date": "2025-11",
+    "valuation_date": "2025-11",
+    "revenue_period": "2026-02",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "8.2x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$2.45B",
@@ -3459,6 +3870,13 @@
           "url": "https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/"
         }
       },
+      "ps_multiple": {
+        "value": "8.2x（P/ARR）",
+        "sort": 8.166666666666668,
+        "source": null,
+        "secondary": "估值 2025-11｜收入 2026-02",
+        "calculation": "$2.45B / $300M ARR（2026-02）"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3501,6 +3919,10 @@
     ],
     "latest_round": "运营指标披露",
     "latest_round_date": "2026",
+    "valuation_date": "",
+    "revenue_period": "2026-03",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -3553,6 +3975,13 @@
           "url": "https://www.prnewswire.com/news-releases/meshy-unveils-meshy-labs-at-gdc-2026--breakthrough-ai-native-gameplay-and-30m-arr-milestone-302708046.html"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "valuation_date_not_precise"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3591,6 +4020,10 @@
     ],
     "latest_round": "Series A3",
     "latest_round_date": "2026-07",
+    "valuation_date": "2026-06",
+    "revenue_period": "2025-09",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "至少 $1B（媒体报道，2026-06）",
@@ -3649,6 +4082,13 @@
           "url": "https://www.forbes.com/sites/charliefink/2025/09/08/tripo-grows-3d-ai-business-eyes-consumer-future-with-3d-tiktok/"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "bounds_do_not_determine_multiple"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3694,6 +4134,10 @@
     ],
     "latest_round": "Funding milestone",
     "latest_round_date": "2025-01-14",
+    "valuation_date": "2025-01-14",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -3746,6 +4190,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "开源",
         "sort": "",
@@ -3783,6 +4234,10 @@
     ],
     "latest_round": "Seed",
     "latest_round_date": "2024-06-25",
+    "valuation_date": "2024-06-25",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -3835,6 +4290,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3873,6 +4335,10 @@
     ],
     "latest_round": "B2 轮",
     "latest_round_date": "2026-06-15",
+    "valuation_date": "2026-06-15",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "人民币 100 亿",
@@ -3928,6 +4394,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "open_status": {
         "value": "闭源",
         "sort": "",
@@ -3965,6 +4438,10 @@
     ],
     "latest_round": "Series B extension",
     "latest_round_date": "2026-06",
+    "valuation_date": "2026-06",
+    "revenue_period": "2026-05",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "10.4x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$2.6B",
@@ -4023,6 +4500,13 @@
           "url": "https://podcasts.apple.com/us/podcast/inside-genspark-%240-to-%24250m-arr-in-12-months-with-wen-sang/id1742267001?i=1000767644840"
         }
       },
+      "ps_multiple": {
+        "value": "10.4x（P/ARR）",
+        "sort": 10.4,
+        "source": null,
+        "secondary": "估值 2026-06｜收入 2026-05",
+        "calculation": "$2.6B / $250M ARR（12 个月内达到，2026-05 披露）"
+      },
       "pricing": {
         "value": "官方披露价格: Team Plan: $30 / user / month,2–150 users,12,000 credits/month per seat;Enterprise: Contact Sales",
         "sort": 150.0,
@@ -4057,6 +4541,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2025-04",
+    "valuation_date": "2025-04",
+    "revenue_period": "2025-12",
+    "multiple_type": "P/S",
+    "ps_multiple": "<4.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "约 $500M",
@@ -4115,6 +4603,13 @@
           "url": "https://www.linkedin.com/posts/manus-im_manus-100m-rr-activity-7407057038477991936-ORhs"
         }
       },
+      "ps_multiple": {
+        "value": "<4.0x（P/S）",
+        "sort": 4.0,
+        "source": null,
+        "secondary": "估值 2025-04｜收入 2025-12",
+        "calculation": "约 $500M / $100M ARR；总收入 run-rate>$125M（2025-12）"
+      },
       "pricing": {
         "value": "Starter $39、Pro $199、Team $39/seat 线索",
         "sort": 39.0,
@@ -4156,6 +4651,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2026-03",
+    "valuation_date": "2026-03",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$1.5B",
@@ -4211,6 +4710,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -4241,6 +4747,10 @@
     ],
     "latest_round": "Series D",
     "latest_round_date": "2025-11",
+    "valuation_date": "2025-11",
+    "revenue_period": "2026-06",
+    "multiple_type": "P/S",
+    "ps_multiple": "<7.3x（P/S）",
     "cells": {
       "valuation": {
         "value": "$29.3B",
@@ -4299,6 +4809,13 @@
           "url": "https://www.forbes.com/sites/richardnieva/2026/06/08/cursor-4-billion-annualized-revenue/"
         }
       },
+      "ps_multiple": {
+        "value": "<7.3x（P/S）",
+        "sort": 7.325,
+        "source": null,
+        "secondary": "估值 2025-11｜收入 2026-06",
+        "calculation": "$29.3B / >$4B annualized revenue（2026-06）"
+      },
       "pricing": {
         "value": "Individual price: $20/mo",
         "sort": 20.0,
@@ -4340,6 +4857,10 @@
     ],
     "latest_round": "Series D",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "2026-05-27",
+    "multiple_type": "P/S",
+    "ps_multiple": "52.8x（P/S）",
     "cells": {
       "valuation": {
         "value": "$26B",
@@ -4398,6 +4919,13 @@
           "url": "https://cognition.com/blog/series-d"
         }
       },
+      "ps_multiple": {
+        "value": "52.8x（P/S）",
+        "sort": 52.84552845528455,
+        "source": null,
+        "secondary": "估值 2026-05｜收入 2026-05-27",
+        "calculation": "$26B / $492M run-rate revenue（2026-05-27）"
+      },
       "pricing": {
         "value": "Teams: $80/month team plan + $40/month per full dev seat",
         "sort": 80.0,
@@ -4439,6 +4967,10 @@
     ],
     "latest_round": "Financing / Series D",
     "latest_round_date": "2026-03",
+    "valuation_date": "2026-03",
+    "revenue_period": "2026-04-15",
+    "multiple_type": "P/S",
+    "ps_multiple": "36.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$9B",
@@ -4497,6 +5029,13 @@
           "url": "https://a16z.com/podcast/replits-ceo-on-vibe-coding-wealth-building-and-what-most-people-get-wrong-about-ai/"
         }
       },
+      "ps_multiple": {
+        "value": "36.0x（P/S）",
+        "sort": 36.0,
+        "source": null,
+        "secondary": "估值 2026-03｜收入 2026-04-15",
+        "calculation": "$9B / $250M annual revenue（2026-04-15）"
+      },
       "pricing": {
         "value": "custom，SSO/SAML、single-tenant、VPC 等",
         "sort": "",
@@ -4538,6 +5077,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2025-12",
+    "valuation_date": "2025-12",
+    "revenue_period": "2026-06-09",
+    "multiple_type": "P/S",
+    "ps_multiple": "<13.2x（P/S）",
     "cells": {
       "valuation": {
         "value": "$6.6B",
@@ -4596,6 +5139,13 @@
           "url": "https://techcrunch.com/2026/06/09/lovable-says-it-has-hit-500m-in-annualized-revenue-with-1-million-new-projects-a-week/"
         }
       },
+      "ps_multiple": {
+        "value": "<13.2x（P/S）",
+        "sort": 13.2,
+        "source": null,
+        "secondary": "估值 2025-12｜收入 2026-06-09",
+        "calculation": "$6.6B / >$500M annualized revenue run-rate（2026-06-09）"
+      },
       "pricing": {
         "value": "Free $0；Pro $25/月；Business $50/月起；Enterprise 定制（年付价格更低，2026-05）",
         "sort": 2026.0,
@@ -4637,6 +5187,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2026-01",
+    "valuation_date": "2026-01",
+    "revenue_period": "2026-02-17",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 3.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "约 $300M",
@@ -4695,6 +5249,13 @@
           "url": "https://www.businesswire.com/news/home/20260217938088/en/Emergent-Reaches-%24100M-ARR-in-8-Months-Becoming-One-of-the-Fastest-Growing-Vibe-Coding-Platforms"
         }
       },
+      "ps_multiple": {
+        "value": "约 3.0x（P/ARR）",
+        "sort": 2.9999999999999996,
+        "source": null,
+        "secondary": "估值 2026-01｜收入 2026-02-17",
+        "calculation": "约 $300M / $100M ARR（2026-02-17）"
+      },
       "pricing": {
         "value": "custom",
         "sort": "",
@@ -4736,6 +5297,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2025-01",
+    "valuation_date": "2025-01",
+    "revenue_period": "2024-12",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "33.8x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$700M",
@@ -4794,6 +5359,13 @@
           "url": "https://www.founderboat.com/interviews/2025-09-30-bolt-new/"
         }
       },
+      "ps_multiple": {
+        "value": "33.8x（P/ARR）",
+        "sort": 33.81642512077295,
+        "source": null,
+        "secondary": "估值 2025-01｜收入 2024-12",
+        "calculation": "$700M / $20.7M ARR（约 2024-12 达到，2025-09 披露）"
+      },
       "pricing": {
         "value": "Teams: $30/member/月",
         "sort": 30.0,
@@ -4835,6 +5407,10 @@
     ],
     "latest_round": "Pre-A",
     "latest_round_date": "2026",
+    "valuation_date": "2026",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$180M",
@@ -4890,6 +5466,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Custom / private deployment / marketplace",
         "sort": "",
@@ -4927,6 +5510,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2025-10",
+    "valuation_date": "2025-10",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$1.25B",
@@ -4982,6 +5569,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Monthly active teams: 2024 GA 博客披露 5k+ monthly active teams",
         "sort": 2024.0,
@@ -5019,6 +5613,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2025-03",
+    "valuation_date": "2025-03",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -5071,6 +5669,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Enterprise: custom,volume discount,5x rate limits,SSO,SaaS/Hybrid",
         "sort": 5.0,
@@ -5108,6 +5713,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2026-02-17",
+    "valuation_date": "2026-02-17",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$800M",
@@ -5163,6 +5772,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Starter $0/月；Pro $249/月；Enterprise 定制；另按 processed data、scores 与 token 超额计费",
         "sort": 249.0,
@@ -5200,6 +5816,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2025-06",
+    "valuation_date": "2025-06",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$300M",
@@ -5258,6 +5878,13 @@
           "url": "https://www.upstartsmedia.com/p/browserbase-raises-40m-and-launches-director"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_period_not_disclosed"
+      },
       "pricing": {
         "value": "Developer price: $20/month + usage",
         "sort": 20.0,
@@ -5299,6 +5926,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$2.2B",
@@ -5354,6 +5985,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Free 20,000 requests/月；Search $7/1k；Contents $1/1k；Deep Search $12-15/1k；Enterprise 定制",
         "sort": 15.0,
@@ -5391,6 +6029,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2025-08",
+    "valuation_date": "2025-08",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$189.7M（Nebius 收购 100% 股权的会计购买对价，非融资后估值）",
@@ -5446,6 +6088,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Custom calls/rate limits/support/security",
         "sort": "",
@@ -5487,6 +6136,10 @@
     ],
     "latest_round": "后续轮",
     "latest_round_date": "2025-09",
+    "valuation_date": "2025-09",
+    "revenue_period": "2025-09-10",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 100.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "~$20B",
@@ -5545,6 +6198,13 @@
           "url": "https://techcrunch.com/2025/09/10/perplexity-reportedly-raised-200m-at-20b-valuation/"
         }
       },
+      "ps_multiple": {
+        "value": "约 100.0x（P/ARR）",
+        "sort": 100.0,
+        "source": null,
+        "secondary": "估值 2025-09｜收入 2025-09-10",
+        "calculation": "~$20B / 接近 $200M ARR（2025-09-10）"
+      },
       "pricing": {
         "value": "50,000+ organizations trust Perplexity Enterprise",
         "sort": 50000.0,
@@ -5586,6 +6246,10 @@
     ],
     "latest_round": "Series F",
     "latest_round_date": "2025-06",
+    "valuation_date": "2025-06",
+    "revenue_period": "2026-05-28",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<24.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$7.2B",
@@ -5644,6 +6308,13 @@
           "url": "https://www.glean.com/press/glean-surpasses-300m-arr-unrivaled-enterprise-context-fuels-ai-adoption"
         }
       },
+      "ps_multiple": {
+        "value": "<24.0x（P/ARR）",
+        "sort": 24.0,
+        "source": null,
+        "secondary": "估值 2025-06｜收入 2026-05-28",
+        "calculation": "$7.2B / >$300M ARR（2026-05-28）"
+      },
       "pricing": {
         "value": "Enterprise 定制报价；官网仅提供 Demo",
         "sort": "",
@@ -5685,6 +6356,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2022-02",
+    "valuation_date": "2022-02",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -5737,6 +6412,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Custom，含 SSO/SAML/SCIM、audit log、BYO LLM/BYOC",
         "sort": "",
@@ -5774,6 +6456,10 @@
     ],
     "latest_round": "Employee tender",
     "latest_round_date": "2026-03",
+    "valuation_date": "2026-03",
+    "revenue_period": "2025-06-23",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$4.5B",
@@ -5832,6 +6518,13 @@
           "url": "https://decagon.ai/blog/series-c-announcement"
         }
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_amount_not_disclosed"
+      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -5866,6 +6559,10 @@
     ],
     "latest_round": "Series E",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "2026-06",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "79.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$15.8B",
@@ -5924,6 +6621,13 @@
           "url": "https://www.linkedin.com/posts/brettaylor_sierra-just-hit-200m-in-arr-it-took-seven-activity-7466233808489566209-QsxX"
         }
       },
+      "ps_multiple": {
+        "value": "79.0x（P/ARR）",
+        "sort": 79.0,
+        "source": null,
+        "secondary": "估值 2026-05｜收入 2026-06",
+        "calculation": "$15.8B / $200M ARR（2026-06）"
+      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -5958,6 +6662,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2025-08-05",
+    "valuation_date": "2026-06-18",
+    "revenue_period": "2025-12",
+    "multiple_type": "P/S",
+    "ps_multiple": "50.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$5B",
@@ -6016,6 +6724,13 @@
           "url": "https://www.forbes.com/companies/clay/"
         }
       },
+      "ps_multiple": {
+        "value": "50.0x（P/S）",
+        "sort": 50.0,
+        "source": null,
+        "secondary": "估值 2026-06-18｜收入 2025-12",
+        "calculation": "$5B / $100M annualized revenue（2025-12 达到）"
+      },
       "pricing": {
         "value": "quote，bulk enrichment、governance、support",
         "sort": "",
@@ -6062,6 +6777,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2024-11",
+    "valuation_date": "2024-11",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$1.9B",
@@ -6117,6 +6836,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "Starter 14-day trial; up to 5 users; Enterprise contact sales; pricing FAQ 显示 Starter 为月/年 per-seat + fixed credit limits,Enterprise 包含 regular seats、unlimited free users、optional…",
         "sort": 14.0,
@@ -6147,6 +6873,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2024-06",
+    "valuation_date": "2024-06",
+    "revenue_period": "2026-06-25",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<2.5x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$500M",
@@ -6205,6 +6935,13 @@
           "url": "https://www.heygen.com/blog/heygen-surpasses-200m-arr"
         }
       },
+      "ps_multiple": {
+        "value": "<2.5x（P/ARR）",
+        "sort": 2.5,
+        "source": null,
+        "secondary": "估值 2024-06｜收入 2026-06-25",
+        "calculation": "$500M / >$200M ARR（2026-06-25）"
+      },
       "pricing": {
         "value": "Pay-As-You-Go start with $5;Enterprise contact sales;Direct API/Skills usage 与 web plan credits 分离",
         "sort": 5.0,
@@ -6239,6 +6976,10 @@
     ],
     "latest_round": "Series E",
     "latest_round_date": "2026-01",
+    "valuation_date": "2026-01",
+    "revenue_period": "2025",
+    "multiple_type": "P/S",
+    "ps_multiple": "40.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$4B",
@@ -6297,6 +7038,13 @@
           "url": "https://www.forbes.com/sites/alexyork/2026/04/16/video-meet-the-4-billion-startup-remaking-corporate-training-with-ai-avatars/?ss=under30"
         }
       },
+      "ps_multiple": {
+        "value": "40.0x（P/S）",
+        "sort": 40.0,
+        "source": null,
+        "secondary": "估值 2026-01｜收入 2025",
+        "calculation": "$4B / $100M annual run-rate（2025 年达到）"
+      },
       "pricing": {
         "value": "现行 pricing: Basic Free;Starter $29/mo;Creator $89/mo;Enterprise custom;官网顶部称 plans starting from $18/month when annual/lower price promo",
         "sort": 29.0,
@@ -6332,6 +7080,10 @@
     ],
     "latest_round": "Series A",
     "latest_round_date": "2023-03",
+    "valuation_date": "2023-03",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "投后约 $1B",
@@ -6387,6 +7139,13 @@
         "sort": "",
         "source": null
       },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
       "pricing": {
         "value": "",
         "sort": "",
@@ -6417,6 +7176,10 @@
     ],
     "latest_round": "New funding",
     "latest_round_date": "2026-06",
+    "valuation_date": "2026-06",
+    "revenue_period": "2026 Q1",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<12.5x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$7.5B",
@@ -6474,6 +7237,13 @@
           "label": "AlphaSense · 2026-06-03",
           "url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/"
         }
+      },
+      "ps_multiple": {
+        "value": "<12.5x（P/ARR）",
+        "sort": 12.5,
+        "source": null,
+        "secondary": "估值 2026-06｜收入 2026 Q1",
+        "calculation": "$7.5B / >$600M ARR（2026 Q1）"
       }
     },
     "source_links": [
@@ -6504,6 +7274,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2024-07",
+    "valuation_date": "2024-07",
+    "revenue_period": "2024-07",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 53.8x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "约 $700M",
@@ -6561,6 +7335,13 @@
           "label": "TechCrunch · 2024-07-09",
           "url": "https://techcrunch.com/2024/07/09/ai-startup-hebbia-rased-130m-at-a-700m-valuation-on-13-million-of-profitable-revenue/"
         }
+      },
+      "ps_multiple": {
+        "value": "约 53.8x（P/ARR）",
+        "sort": 53.84615384615385,
+        "source": null,
+        "secondary": "估值 2024-07｜收入 2024-07",
+        "calculation": "约 $700M / 约 $13M ARR（Series B 融资时，2024-07 报道）"
       }
     },
     "source_links": [
@@ -6591,6 +7372,10 @@
     ],
     "latest_round": "Series D",
     "latest_round_date": "2026-04",
+    "valuation_date": "2026-04",
+    "revenue_period": "FY2025",
+    "multiple_type": "P/S",
+    "ps_multiple": "<133.3x（P/S）",
     "cells": {
       "valuation": {
         "value": "$2B",
@@ -6648,6 +7433,13 @@
           "label": "Forbes company profile · 2026-04-16",
           "url": "https://www.forbes.com/companies/rogo/"
         }
+      },
+      "ps_multiple": {
+        "value": "<133.3x（P/S）",
+        "sort": 133.33333333333334,
+        "source": null,
+        "secondary": "估值 2026-04｜收入 FY2025",
+        "calculation": "$2B / >$15M revenue（FY2025）"
       }
     },
     "source_links": [
@@ -6678,6 +7470,10 @@
     ],
     "latest_round": "Series G",
     "latest_round_date": "2026-03",
+    "valuation_date": "2026-03",
+    "revenue_period": "2025 年末",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<57.9x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "~$11B",
@@ -6735,6 +7531,13 @@
           "label": "Winston Weinberg CEO · 2026-01",
           "url": "https://www.linkedin.com/posts/winston-weinberg_2025-was-a-big-year-for-harvey-a-few-highlights-activity-7415020362184187905-Cnia/"
         }
+      },
+      "ps_multiple": {
+        "value": "<57.9x（P/ARR）",
+        "sort": 57.89473684210526,
+        "source": null,
+        "secondary": "估值 2026-03｜收入 2025 年末",
+        "calculation": "~$11B / >$190M ARR（2025 年末）"
       }
     },
     "source_links": [
@@ -6765,6 +7568,10 @@
     ],
     "latest_round": "Series D extension",
     "latest_round_date": "2026-04",
+    "valuation_date": "2026-04",
+    "revenue_period": "2026-04-02",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "<56.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$5.6B",
@@ -6822,6 +7629,13 @@
           "label": "Legora · 2026-04-02",
           "url": "https://legora.com/newsroom/legal-teams-adoption-of-ai-propels-legora-past-100-million-in-annual-recurring-revenue"
         }
+      },
+      "ps_multiple": {
+        "value": "<56.0x（P/ARR）",
+        "sort": 55.99999999999999,
+        "source": null,
+        "secondary": "估值 2026-04｜收入 2026-04-02",
+        "calculation": "$5.6B / >$100M ARR（2026-04-02）"
       }
     },
     "source_links": [
@@ -6852,6 +7666,10 @@
     ],
     "latest_round": "Series B1",
     "latest_round_date": "2026-05-28",
+    "valuation_date": "2026-05-28",
+    "revenue_period": "2026-05-06",
+    "multiple_type": "P/S",
+    "ps_multiple": "约 26.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$2.6B",
@@ -6909,6 +7727,13 @@
           "label": "Forbes · 2026-05-06",
           "url": "https://www.forbes.com/sites/richardnieva/2026/05/06/corgi-ai-unicorn/"
         }
+      },
+      "ps_multiple": {
+        "value": "约 26.0x（P/S）",
+        "sort": 26.0,
+        "source": null,
+        "secondary": "估值 2026-05-28｜收入 2026-05-06",
+        "calculation": "$2.6B / 约 $100M annualized revenue（2026-05-06）"
       }
     },
     "source_links": [
@@ -6939,6 +7764,10 @@
     ],
     "latest_round": "Series E extension",
     "latest_round_date": "2026-04",
+    "valuation_date": "2026-04",
+    "revenue_period": "2025 Q1",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "约 53.0x（P/ARR）",
     "cells": {
       "valuation": {
         "value": "$5.3B",
@@ -6996,6 +7825,13 @@
           "label": "The Information · 2025 Q1 数据",
           "url": "https://www.theinformation.com/articles/abridge-talks-raise-5-billion-valuation-ai-health-startups-draw-investors/"
         }
+      },
+      "ps_multiple": {
+        "value": "约 53.0x（P/ARR）",
+        "sort": 52.99999999999999,
+        "source": null,
+        "secondary": "估值 2026-04｜收入 2025 Q1",
+        "calculation": "$5.3B / 约 $100M ARR；$117M contracted ARR（2025 Q1）"
       }
     },
     "source_links": [
@@ -7026,6 +7862,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2025-07",
+    "valuation_date": "2025-07",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$1.25B",
@@ -7080,6 +7920,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -7106,6 +7953,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2025-06",
+    "valuation_date": "2025-06",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -7157,6 +8008,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -7183,6 +8041,10 @@
     ],
     "latest_round": "Series D",
     "latest_round_date": "2024-10",
+    "valuation_date": "2024-10",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "约 $500M",
@@ -7237,6 +8099,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -7263,6 +8132,10 @@
     ],
     "latest_round": "新融资",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "2023-10-04",
+    "multiple_type": "P/S",
+    "ps_multiple": "<70.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "$7B",
@@ -7320,6 +8193,13 @@
           "label": "Athelas / Commure 合并公告 · 2023-10-04",
           "url": "https://www.athelas.com/tbh/athelas-commure-merging-to-create-a-6b-healthcare-infrastructure-company"
         }
+      },
+      "ps_multiple": {
+        "value": "<70.0x（P/S）",
+        "sort": 70.0,
+        "source": null,
+        "secondary": "估值 2026-05｜收入 2023-10-04",
+        "calculation": "$7B / >$100M combined revenue run-rate（2023-10-04）"
       }
     },
     "source_links": [
@@ -7351,6 +8231,10 @@
     ],
     "latest_round": "Series C",
     "latest_round_date": "2025-11",
+    "valuation_date": "2025-11",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "$3.5B",
@@ -7405,6 +8289,13 @@
         "value": "",
         "sort": "",
         "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
       }
     },
     "source_links": [
@@ -7431,6 +8322,10 @@
     ],
     "latest_round": "Series D",
     "latest_round_date": "2026-01",
+    "valuation_date": "2026-01",
+    "revenue_period": "2025",
+    "multiple_type": "P/S",
+    "ps_multiple": "<120.0x（P/S）",
     "cells": {
       "valuation": {
         "value": "约 $12B",
@@ -7488,6 +8383,13 @@
           "label": "TechCrunch·公司口径 · 2026-01-21",
           "url": "https://techcrunch.com/2026/01/21/openevidence-hits-12b-valuation-with-new-round-led-by-thrive-dst/"
         }
+      },
+      "ps_multiple": {
+        "value": "<120.0x（P/S）",
+        "sort": 120.0,
+        "source": null,
+        "secondary": "估值 2026-01｜收入 2025",
+        "calculation": "约 $12B / >$100M annual revenue（2025 年达到，2026-01-21 披露）"
       }
     },
     "source_links": [
@@ -7518,6 +8420,10 @@
     ],
     "latest_round": "增资轮",
     "latest_round_date": "2024-12-20",
+    "valuation_date": "2024-12-20",
+    "revenue_period": "FY2024",
+    "multiple_type": "P/S",
+    "ps_multiple": "约 34.7x（P/S）",
     "cells": {
       "valuation": {
         "value": "投后约人民币 100 亿",
@@ -7575,6 +8481,13 @@
           "label": "联影医疗公告·巨潮资讯 · 2025-12-13",
           "url": "https://static.cninfo.com.cn/finalpage/2025-12-13/1224876229.PDF"
         }
+      },
+      "ps_multiple": {
+        "value": "约 34.7x（P/S）",
+        "sort": 34.72222222222222,
+        "source": null,
+        "secondary": "估值 2024-12-20｜收入 FY2024",
+        "calculation": "投后约人民币 100 亿 / 人民币2.88亿元营业收入（FY2024，未经审计）"
       }
     },
     "source_links": [
@@ -7605,6 +8518,10 @@
     ],
     "latest_round": "Series D",
     "latest_round_date": "2025-09",
+    "valuation_date": "2025-09",
+    "revenue_period": "2026-06-04",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "超过 $1B",
@@ -7662,6 +8579,13 @@
           "label": "Baillie Gifford·创始人采访 · 2026-06-04",
           "url": "https://media.bailliegifford.com/mws/oeydd1sk/20260526171650-enveda-s4-ep1-transcript.pdf"
         }
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "pre_revenue"
       }
     },
     "source_links": [
@@ -7693,6 +8617,10 @@
     ],
     "latest_round": "Series B",
     "latest_round_date": "2026-05",
+    "valuation_date": "2026-05",
+    "revenue_period": "FY2024",
+    "multiple_type": "",
+    "ps_multiple": "",
     "cells": {
       "valuation": {
         "value": "",
@@ -7747,6 +8675,13 @@
           "label": "UK Companies House·FY2024 accounts",
           "url": "https://find-and-update.company-information.service.gov.uk/company/13223825/filing-history/MzQ4MjkxNDg2M2FkaXF6a2N4/document?format=pdf&download=0"
         }
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "collaboration_income_is_not_sales"
       }
     },
     "source_links": [
