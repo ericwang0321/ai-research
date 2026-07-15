@@ -34,8 +34,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 应用运行时与模型工作负载｜模型 API / 云平台/托管服务",
+      "main_business": {
+        "value": "运行和扩展分布式 AI 任务；托管 Ray 集群与模型服务；企业级部署与技术支持",
+        "items": [
+          "运行和扩展分布式 AI 任务",
+          "托管 Ray 集群与模型服务",
+          "企业级部署与技术支持"
+        ],
         "sort": "",
         "source": null
       },
@@ -109,8 +114,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "模型部署与推理平台｜模型 API / 云平台/托管服务",
+      "main_business": {
+        "value": "部署和托管企业自有模型；提供低延迟推理与自动扩缩；维护模型运行和监控",
+        "items": [
+          "部署和托管企业自有模型",
+          "提供低延迟推理与自动扩缩",
+          "维护模型运行和监控"
+        ],
         "sort": "",
         "source": null
       },
@@ -184,8 +194,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "模型 API 与推理服务｜模型 API / 云平台/托管服务",
+      "main_business": {
+        "value": "提供开放及定制模型 API；进行模型微调与推理优化；托管企业模型并持续维护",
+        "items": [
+          "提供开放及定制模型 API",
+          "进行模型微调与推理优化",
+          "托管企业模型并持续维护"
+        ],
         "sort": "",
         "source": null
       },
@@ -266,8 +281,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Serverless AI runtime｜模型 API / 云平台/托管服务",
+      "main_business": {
+        "value": "按需出租云端 GPU 和 CPU；运行模型推理、训练和批处理；按实际计算时间收费",
+        "items": [
+          "按需出租云端 GPU 和 CPU",
+          "运行模型推理、训练和批处理",
+          "按实际计算时间收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -348,8 +368,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Open model cloud、推理训练服务｜模型 API / 云平台/托管服务",
+      "main_business": {
+        "value": "提供开放模型 API 和推理云；出租 GPU 用于训练与微调；交付企业定制模型服务",
+        "items": [
+          "提供开放模型 API 和推理云",
+          "出租 GPU 用于训练与微调",
+          "交付企业定制模型服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -430,8 +455,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Agent 强化学习、分布式训练与 GPU 算力平台｜模型 API / 云平台/托管服务",
+      "main_business": {
+        "value": "提供 GPU 算力市场和分布式训练；支持模型后训练、强化学习与评测；托管训练任务和实验流程",
+        "items": [
+          "提供 GPU 算力市场和分布式训练",
+          "支持模型后训练、强化学习与评测",
+          "托管训练任务和实验流程"
+        ],
         "sort": "",
         "source": null
       },
@@ -512,8 +542,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "企业数据与 AI 平台、AI Agent 后端｜企业 SaaS / 云平台/托管服务",
+      "main_business": {
+        "value": "统一管理企业数据、分析与 AI；训练、部署和治理企业模型与 Agent；按云计算与平台用量收费",
+        "items": [
+          "统一管理企业数据、分析与 AI",
+          "训练、部署和治理企业模型与 Agent",
+          "按云计算与平台用量收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -595,8 +630,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "模型社区、开发者平台、托管推理｜开发框架/SDK / 云平台/托管服务",
+      "main_business": {
+        "value": "运营模型、数据集和应用社区；提供模型托管、推理与企业协作；销售企业平台和算力服务",
+        "items": [
+          "运营模型、数据集和应用社区",
+          "提供模型托管、推理与企业协作",
+          "销售企业平台和算力服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -677,8 +717,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "数据标注、RLHF、模型评测｜数据服务 / 企业 SaaS",
+      "main_business": {
+        "value": "生产模型训练和评测数据；组织专家标注与模型评测；交付政府和企业 AI 项目",
+        "items": [
+          "生产模型训练和评测数据",
+          "组织专家标注与模型评测",
+          "交付政府和企业 AI 项目"
+        ],
         "sort": "",
         "source": null
       },
@@ -759,8 +804,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Expert data 与 AI 训练服务｜数据服务 / 企业 SaaS",
+      "main_business": {
+        "value": "招募和匹配领域专家；为模型公司生产专家训练数据；按人才与数据项目收费",
+        "items": [
+          "招募和匹配领域专家",
+          "为模型公司生产专家训练数据",
+          "按人才与数据项目收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -841,8 +891,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "RAG 向量数据库、检索数据层｜数据库 / 云平台/托管服务",
+      "main_business": {
+        "value": "提供托管向量数据库；支持 RAG、搜索和 Agent 记忆；按存储与查询用量收费",
+        "items": [
+          "提供托管向量数据库",
+          "支持 RAG、搜索和 Agent 记忆",
+          "按存储与查询用量收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -916,8 +971,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "RAG 向量数据库、检索数据层｜数据库 / 云平台/托管服务",
+      "main_business": {
+        "value": "提供开源及托管向量数据库；支持 RAG、搜索和 Agent 记忆；销售云服务与企业部署",
+        "items": [
+          "提供开源及托管向量数据库",
+          "支持 RAG、搜索和 Agent 记忆",
+          "销售云服务与企业部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -991,8 +1051,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 芯片、GPGPU、国产算力｜硬件/芯片",
+      "main_business": {
+        "value": "研发和销售国产 AI 加速芯片；提供训练与推理计算平台；向数据中心和企业交付软硬件",
+        "items": [
+          "研发和销售国产 AI 加速芯片",
+          "提供训练与推理计算平台",
+          "向数据中心和企业交付软硬件"
+        ],
         "sort": "",
         "source": null
       },
@@ -1073,8 +1138,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 推理 GPU、国产算力、算力平台｜硬件/芯片",
+      "main_business": {
+        "value": "研发和销售 AI 推理 GPU；提供推理服务器与算力平台；面向智算中心交付软硬件",
+        "items": [
+          "研发和销售 AI 推理 GPU",
+          "提供推理服务器与算力平台",
+          "面向智算中心交付软硬件"
+        ],
         "sort": "",
         "source": null
       },
@@ -1149,8 +1219,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Frontier model、ChatGPT/Codex、Agent、企业 AI｜Web 应用 / 模型 API / 移动应用 / 开发工具",
+      "main_business": {
+        "value": "研发通用多模态基础模型；运营 ChatGPT、Codex 和 Sora；销售订阅、API 与企业服务",
+        "items": [
+          "研发通用多模态基础模型",
+          "运营 ChatGPT、Codex 和 Sora",
+          "销售订阅、API 与企业服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -1245,8 +1320,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Frontier LLM、安全模型、企业/API、Claude Code｜Web 应用 / 模型 API / 移动应用 / 开发工具",
+      "main_business": {
+        "value": "研发 Claude 语言与多模态模型；运营 Claude 和 Claude Code；销售订阅、API 与企业服务",
+        "items": [
+          "研发 Claude 语言与多模态模型",
+          "运营 Claude 和 Claude Code",
+          "销售订阅、API 与企业服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -1341,8 +1421,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "LLM、长上下文、Agent、C端助手、代码模型｜Web 应用 / 模型 API / 移动应用 / 开发工具",
+      "main_business": {
+        "value": "研发 Kimi 语言、推理与代码模型；运营 Kimi 助手和 Agent；销售会员、API 与企业部署",
+        "items": [
+          "研发 Kimi 语言、推理与代码模型",
+          "运营 Kimi 助手和 Agent",
+          "销售会员、API 与企业部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -1436,8 +1521,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Frontier model、推理模型、开源模型、低成本训练/推理｜Web 应用 / 模型 API / 移动应用",
+      "main_business": {
+        "value": "研发并开放语言、推理与代码模型；运营 DeepSeek 助手；提供按量计费的模型 API",
+        "items": [
+          "研发并开放语言、推理与代码模型",
+          "运营 DeepSeek 助手",
+          "提供按量计费的模型 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -1525,8 +1615,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "多模态模型、视频/音频、国产芯片适配｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "研发语言、图像、视频和语音模型；提供模型 API 与开发平台；为终端和企业适配模型",
+        "items": [
+          "研发语言、图像、视频和语音模型",
+          "提供模型 API 与开发平台",
+          "为终端和企业适配模型"
+        ],
         "sort": "",
         "source": null
       },
@@ -1612,8 +1707,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "物理 AI、多模态模型与推理基础设施｜模型 API",
+      "main_business": {
+        "value": "研发多模态与端侧物理 AI 模型；提供模型 API 与边缘部署；面向企业交付定制模型",
+        "items": [
+          "研发多模态与端侧物理 AI 模型",
+          "提供模型 API 与边缘部署",
+          "面向企业交付定制模型"
+        ],
         "sort": "",
         "source": null
       },
@@ -1699,8 +1799,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Frontier AI systems、多模态、研究型模型平台｜模型 API",
+      "main_business": {
+        "value": "研发通用多模态模型系统；为企业定制和训练模型；提供分布式训练与研究平台",
+        "items": [
+          "研发通用多模态模型系统",
+          "为企业定制和训练模型",
+          "提供分布式训练与研究平台"
+        ],
         "sort": "",
         "source": null
       },
@@ -1787,8 +1892,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Enterprise LLM、写作助手、RAG、AI orchestration｜模型 API / 私有化部署",
+      "main_business": {
+        "value": "研发企业语言模型；提供 Agent 编排与结果校验平台；销售 API 和私有化部署",
+        "items": [
+          "研发企业语言模型",
+          "提供 Agent 编排与结果校验平台",
+          "销售 API 和私有化部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -1875,8 +1985,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Enterprise LLM、RAG、合规私有化模型｜模型 API / 私有化部署",
+      "main_business": {
+        "value": "研发企业级多语言模型；提供检索增强与企业搜索能力；销售 API、私有及主权部署",
+        "items": [
+          "研发企业级多语言模型",
+          "提供检索增强与企业搜索能力",
+          "销售 API、私有及主权部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -1969,8 +2084,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "非 Transformer / liquid foundation models｜模型 API / 私有化部署",
+      "main_business": {
+        "value": "研发高效非 Transformer 模型；提供端侧和本地模型部署；销售模型 API 与软件许可",
+        "items": [
+          "研发高效非 Transformer 模型",
+          "提供端侧和本地模型部署",
+          "销售模型 API 与软件许可"
+        ],
         "sort": "",
         "source": null
       },
@@ -2054,8 +2174,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "端侧小模型、MiniCPM｜模型 API / 私有化部署",
+      "main_business": {
+        "value": "研发 MiniCPM 端侧小模型；适配手机、汽车与智能硬件；提供模型授权和企业部署",
+        "items": [
+          "研发 MiniCPM 端侧小模型",
+          "适配手机、汽车与智能硬件",
+          "提供模型授权和企业部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -2141,8 +2266,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "开源/agent foundation model｜模型 API",
+      "main_business": {
+        "value": "研发高效开放模型和端侧 Agent；提供模型训练与推理工具；面向企业交付定制方案",
+        "items": [
+          "研发高效开放模型和端侧 Agent",
+          "提供模型训练与推理工具",
+          "面向企业交付定制方案"
+        ],
         "sort": "",
         "source": null
       },
@@ -2229,8 +2359,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "开源 LLM、企业 AI 方案、低成本推理｜模型 API / 私有化部署",
+      "main_business": {
+        "value": "研发和开放语言模型；提供企业私有化部署；交付行业模型与 AI 解决方案",
+        "items": [
+          "研发和开放语言模型",
+          "提供企业私有化部署",
+          "交付行业模型与 AI 解决方案"
+        ],
         "sort": "",
         "source": null
       },
@@ -2323,8 +2458,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Safety-first superintelligence、研究型 AI lab",
+      "main_business": {
+        "value": "研发安全超级智能系统；集中开展模型与安全研究；尚未对外销售产品或服务",
+        "items": [
+          "研发安全超级智能系统",
+          "集中开展模型与安全研究",
+          "尚未对外销售产品或服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -2418,8 +2558,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Code model、software engineering automation、defense coding｜模型 API",
+      "main_business": {
+        "value": "研发代码基础模型；提供企业软件开发 Agent；支持私有及政府环境部署",
+        "items": [
+          "研发代码基础模型",
+          "提供企业软件开发 Agent",
+          "支持私有及政府环境部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -2505,8 +2650,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "图像基础模型、FLUX｜模型 API",
+      "main_business": {
+        "value": "研发 FLUX 图像生成模型；提供图像生成 API；销售模型许可与企业部署",
+        "items": [
+          "研发 FLUX 图像生成模型",
+          "提供图像生成 API",
+          "销售模型许可与企业部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -2590,8 +2740,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "图像生成、创作者工具｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "运营图像与视频生成应用；销售个人创作者订阅；提供团队协作与商用权益",
+        "items": [
+          "运营图像与视频生成应用",
+          "销售个人创作者订阅",
+          "提供团队协作与商用权益"
+        ],
         "sort": "",
         "source": null
       },
@@ -2685,8 +2840,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 视频生成｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "运营 AI 视频和图像生成应用；销售创作者会员与生成额度；提供企业模型 API",
+        "items": [
+          "运营 AI 视频和图像生成应用",
+          "销售创作者会员与生成额度",
+          "提供企业模型 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -2780,8 +2940,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI video、creative tools、multimodal generation｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "研发视频生成与编辑模型；销售创意制作软件订阅；提供企业工具和模型 API",
+        "items": [
+          "研发视频生成与编辑模型",
+          "销售创意制作软件订阅",
+          "提供企业工具和模型 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -2868,8 +3033,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "视频生成、3D/world model｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "研发视频、3D 与世界模型；运营 Dream Machine 创作应用；销售订阅和模型 API",
+        "items": [
+          "研发视频、3D 与世界模型",
+          "运营 Dream Machine 创作应用",
+          "销售订阅和模型 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -2956,8 +3126,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 视频生成｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "运营消费级 AI 视频应用；提供视频特效和编辑工具；销售会员与生成额度",
+        "items": [
+          "运营消费级 AI 视频应用",
+          "提供视频特效和编辑工具",
+          "销售会员与生成额度"
+        ],
         "sort": "",
         "source": null
       },
@@ -3044,8 +3219,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 视频生成、世界模型、创作工具/API｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "研发视频生成与世界模型；运营 PixVerse 创作应用；销售会员和企业 API",
+        "items": [
+          "研发视频生成与世界模型",
+          "运营 PixVerse 创作应用",
+          "销售会员和企业 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -3143,8 +3323,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "语音 AI、TTS、配音、声音克隆、Voice Agent｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "研发语音合成与声音克隆模型；提供配音、本地化和有声内容工具；销售订阅、API 与语音 Agent",
+        "items": [
+          "研发语音合成与声音克隆模型",
+          "提供配音、本地化和有声内容工具",
+          "销售订阅、API 与语音 Agent"
+        ],
         "sort": "",
         "source": null
       },
@@ -3238,8 +3423,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI music、creator tools、generative audio｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "运营 AI 音乐生成应用；提供歌曲创作和编辑工具；销售个人与团队订阅",
+        "items": [
+          "运营 AI 音乐生成应用",
+          "提供歌曲创作和编辑工具",
+          "销售个人与团队订阅"
+        ],
         "sort": "",
         "source": null
       },
@@ -3327,8 +3517,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 3D、3D asset workflow｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "提供 AI 生成 3D 资产工具；连接游戏和设计制作流程；销售订阅和企业 API",
+        "items": [
+          "提供 AI 生成 3D 资产工具",
+          "连接游戏和设计制作流程",
+          "销售订阅和企业 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -3418,8 +3613,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI 3D、3D foundation model、asset workflow｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "研发并提供 3D 生成模型；运营 3D 资产制作平台；销售订阅、API 与企业服务",
+        "items": [
+          "研发并提供 3D 生成模型",
+          "运营 3D 资产制作平台",
+          "销售订阅、API 与企业服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -3513,8 +3713,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "生物基础模型、AI biology｜模型 API",
+      "main_business": {
+        "value": "研发生物与病理基础模型；向药企和研究机构提供模型能力；通过合作和授权推进商业化",
+        "items": [
+          "研发生物与病理基础模型",
+          "向药企和研究机构提供模型能力",
+          "通过合作和授权推进商业化"
+        ],
         "sort": "",
         "source": null
       },
@@ -3597,8 +3802,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "生物基础模型、蛋白质设计｜模型 API",
+      "main_business": {
+        "value": "研发蛋白质基础模型；提供蛋白设计 API 和工具；与药企开展研发合作",
+        "items": [
+          "研发蛋白质基础模型",
+          "提供蛋白设计 API 和工具",
+          "与药企开展研发合作"
+        ],
         "sort": "",
         "source": null
       },
@@ -3685,8 +3895,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "具身智能、世界模型、机器人/自动驾驶仿真｜模型 API",
+      "main_business": {
+        "value": "研发世界模型和机器人基础模型；提供自动驾驶与机器人仿真平台；交付模型、软件和机器人方案",
+        "items": [
+          "研发世界模型和机器人基础模型",
+          "提供自动驾驶与机器人仿真平台",
+          "交付模型、软件和机器人方案"
+        ],
         "sort": "",
         "source": null
       },
@@ -3772,8 +3987,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI Workspace、多工具 Agent、自动化｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "提供通用 AI 工作区；自动完成研究、文档和业务任务；销售个人与企业订阅",
+        "items": [
+          "提供通用 AI 工作区",
+          "自动完成研究、文档和业务任务",
+          "销售个人与企业订阅"
+        ],
         "sort": "",
         "source": null
       },
@@ -3859,8 +4079,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "通用 Agent、自动化工作流｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "提供可执行多步骤任务的通用 Agent；自动操作浏览器和云端工具；销售订阅、团队版和 API",
+        "items": [
+          "提供可执行多步骤任务的通用 Agent",
+          "自动操作浏览器和云端工具",
+          "销售订阅、团队版和 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -3953,8 +4178,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI meeting notes、meeting memory、企业上下文、MCP workflow｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "记录并整理会议内容；沉淀个人和团队会议知识；销售个人与企业订阅",
+        "items": [
+          "记录并整理会议内容",
+          "沉淀个人和团队会议知识",
+          "销售个人与企业订阅"
+        ],
         "sort": "",
         "source": null
       },
@@ -4033,8 +4263,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI Coding、IDE、开发者 Agent｜开发工具 / 桌面应用 / 企业 SaaS",
+      "main_business": {
+        "value": "提供 AI 原生代码编辑器；完成代码生成、修改和调试；销售个人订阅与企业席位",
+        "items": [
+          "提供 AI 原生代码编辑器",
+          "完成代码生成、修改和调试",
+          "销售个人订阅与企业席位"
+        ],
         "sort": "",
         "source": null
       },
@@ -4127,8 +4362,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI coding agent、软件工程自动化、IDE/agent｜开发工具 / 桌面应用 / 企业 SaaS",
+      "main_business": {
+        "value": "提供 Devin 软件开发 Agent；自动完成和维护工程任务；销售团队及企业合同",
+        "items": [
+          "提供 Devin 软件开发 Agent",
+          "自动完成和维护工程任务",
+          "销售团队及企业合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -4221,8 +4461,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI coding、browser IDE、software agent、hosting｜开发工具 / 桌面应用 / 企业 SaaS",
+      "main_business": {
+        "value": "提供浏览器开发和托管平台；用 Agent 生成并修改软件；销售订阅、托管和企业服务",
+        "items": [
+          "提供浏览器开发和托管平台",
+          "用 Agent 生成并修改软件",
+          "销售订阅、托管和企业服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -4315,8 +4560,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Vibe coding、AI app builder、no-code/low-code｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "用自然语言生成 Web 应用；提供编辑、托管和团队协作；销售个人与企业订阅",
+        "items": [
+          "用自然语言生成 Web 应用",
+          "提供编辑、托管和团队协作",
+          "销售个人与企业订阅"
+        ],
         "sort": "",
         "source": null
       },
@@ -4409,8 +4659,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Vibe coding、AI app builder、personal AI agent｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "用自然语言生成和运行应用；提供部署、托管与业务 Agent；销售订阅和企业服务",
+        "items": [
+          "用自然语言生成和运行应用",
+          "提供部署、托管与业务 Agent",
+          "销售订阅和企业服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -4503,8 +4758,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Browser IDE、AI app builder、vibe coding｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "在浏览器中生成和运行 Web 应用；提供开发环境、部署与托管；销售订阅和企业服务",
+        "items": [
+          "在浏览器中生成和运行 Web 应用",
+          "提供开发环境、部署与托管",
+          "销售订阅和企业服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -4597,8 +4857,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "低代码 AI 应用开发平台、Agent workflow｜开发框架/SDK / 企业 SaaS / 私有化部署",
+      "main_business": {
+        "value": "提供 AI 应用和 Agent 开发平台；支持工作流编排与模型接入；销售云服务和私有化部署",
+        "items": [
+          "提供 AI 应用和 Agent 开发平台",
+          "支持工作流编排与模型接入",
+          "销售云服务和私有化部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -4684,8 +4949,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Agent / LLM 应用开发框架｜开发框架/SDK / 企业 SaaS / 私有化部署",
+      "main_business": {
+        "value": "提供 Agent 开发框架；提供测试、监控和部署平台；销售云服务和企业合同",
+        "items": [
+          "提供 Agent 开发框架",
+          "提供测试、监控和部署平台",
+          "销售云服务和企业合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -4768,8 +5038,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "RAG 数据连接层、检索/索引框架｜开发框架/SDK / 企业 SaaS / 私有化部署",
+      "main_business": {
+        "value": "连接企业文档与模型；构建 RAG、检索和文档 Agent；销售云平台与企业部署",
+        "items": [
+          "连接企业文档与模型",
+          "构建 RAG、检索和文档 Agent",
+          "销售云平台与企业部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -4855,8 +5130,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "LLM eval、observability、prompt/model 测试｜开发工具 / 企业 SaaS / 模型 API",
+      "main_business": {
+        "value": "评测和比较模型输出；监控线上 AI 应用质量；销售开发工具和企业平台",
+        "items": [
+          "评测和比较模型输出",
+          "监控线上 AI 应用质量",
+          "销售开发工具和企业平台"
+        ],
         "sort": "",
         "source": null
       },
@@ -4942,8 +5222,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Agent 浏览器自动化运行时｜开发工具 / 企业 SaaS / 模型 API",
+      "main_business": {
+        "value": "为 Agent 提供托管浏览器；执行网页操作并记录运行过程；按浏览器用量和企业合同收费",
+        "items": [
+          "为 Agent 提供托管浏览器",
+          "执行网页操作并记录运行过程",
+          "按浏览器用量和企业合同收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -5036,8 +5321,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "搜索 API、Agent 检索基础设施｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "建立面向 Agent 的互联网索引；提供网页搜索和内容提取 API；按查询用量和企业合同收费",
+        "items": [
+          "建立面向 Agent 的互联网索引",
+          "提供网页搜索和内容提取 API",
+          "按查询用量和企业合同收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -5123,8 +5413,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "搜索 API、Agent 检索基础设施｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "为 Agent 提供联网搜索 API；返回网页内容、答案和引用；按查询用量和企业合同收费",
+        "items": [
+          "为 Agent 提供联网搜索 API",
+          "返回网页内容、答案和引用",
+          "按查询用量和企业合同收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -5214,8 +5509,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "答案引擎、AI 搜索、AI 浏览器｜Web 应用 / 模型 API",
+      "main_business": {
+        "value": "运营 AI 搜索和答案引擎；提供企业搜索与 AI 浏览器；销售订阅、广告和搜索 API",
+        "items": [
+          "运营 AI 搜索和答案引擎",
+          "提供企业搜索与 AI 浏览器",
+          "销售订阅、广告和搜索 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -5308,8 +5608,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Enterprise Search、企业知识管理、Work AI｜企业 SaaS / 专业工作台",
+      "main_business": {
+        "value": "搜索企业内部文档和应用；构建企业知识图谱与 Agent；销售企业席位和平台合同",
+        "items": [
+          "搜索企业内部文档和应用",
+          "构建企业知识图谱与 Agent",
+          "销售企业席位和平台合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -5399,8 +5704,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "企业知识管理、内部搜索、GoSearch｜企业 SaaS / 专业工作台",
+      "main_business": {
+        "value": "管理企业短链接和内部知识；提供跨应用搜索与问答；销售企业软件订阅",
+        "items": [
+          "管理企业短链接和内部知识",
+          "提供跨应用搜索与问答",
+          "销售企业软件订阅"
+        ],
         "sort": "",
         "source": null
       },
@@ -5486,8 +5796,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Customer support AI、enterprise agent、CX automation｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "为企业部署客服 Agent；自动处理咨询并调用业务系统；按企业合同和使用量收费",
+        "items": [
+          "为企业部署客服 Agent",
+          "自动处理咨询并调用业务系统",
+          "按企业合同和使用量收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -5573,8 +5888,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Customer Service Agent、企业客服自动化｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "为企业部署品牌化客服 Agent；自动解决客户问题和执行交易；按完成结果和企业合同收费",
+        "items": [
+          "为企业部署品牌化客服 Agent",
+          "自动解决客户问题和执行交易",
+          "按完成结果和企业合同收费"
+        ],
         "sort": "",
         "source": null
       },
@@ -5660,8 +5980,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "GTM AI、sales automation｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "整合销售线索和外部数据；用 AI 研究客户并自动执行触达；销售席位、数据额度和企业合同",
+        "items": [
+          "整合销售线索和外部数据",
+          "用 AI 研究客户并自动执行触达",
+          "销售席位、数据额度和企业合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -5759,8 +6084,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "企业 GenAI 平台、私有模型、workflow｜Web 应用 / 企业 SaaS",
+      "main_business": {
+        "value": "构建企业 AI Agent 和工作流；提供自研模型、权限和治理；销售企业平台与私有部署",
+        "items": [
+          "构建企业 AI Agent 和工作流",
+          "提供自研模型、权限和治理",
+          "销售企业平台与私有部署"
+        ],
         "sort": "",
         "source": null
       },
@@ -5839,8 +6169,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI avatar、视频生成｜Web 应用 / 企业 SaaS / 模型 API",
+      "main_business": {
+        "value": "生成数字人和营销视频；提供视频翻译与本地化；销售订阅、企业版和 API",
+        "items": [
+          "生成数字人和营销视频",
+          "提供视频翻译与本地化",
+          "销售订阅、企业版和 API"
+        ],
         "sort": "",
         "source": null
       },
@@ -5926,8 +6261,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI avatar、enterprise video、synthetic media｜Web 应用 / 企业 SaaS / 模型 API",
+      "main_business": {
+        "value": "生成企业培训和沟通视频；提供数字人与模板管理；销售企业席位和平台合同",
+        "items": [
+          "生成企业培训和沟通视频",
+          "提供数字人与模板管理",
+          "销售企业席位和平台合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6014,8 +6354,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "角色对话模型、AI companion、互动内容平台｜Web 应用 / 移动应用",
+      "main_business": {
+        "value": "研发角色对话模型；运营角色聊天与 AI 陪伴平台；销售消费订阅与增值服务",
+        "items": [
+          "研发角色对话模型",
+          "运营角色聊天与 AI 陪伴平台",
+          "销售消费订阅与增值服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -6101,8 +6446,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "金融/市场情报/专业研究 AI 应用｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "提供市场情报和企业研究平台；检索财报、电话会和专业内容；销售机构级数据与软件订阅",
+        "items": [
+          "提供市场情报和企业研究平台",
+          "检索财报、电话会和专业内容",
+          "销售机构级数据与软件订阅"
+        ],
         "sort": "",
         "source": null
       },
@@ -6183,8 +6533,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "企业知识检索、金融/法律研究工作流｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "批量分析企业和专业文档；支持金融、法律与尽调工作流；销售专业工作台和企业合同",
+        "items": [
+          "批量分析企业和专业文档",
+          "支持金融、法律与尽调工作流",
+          "销售专业工作台和企业合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6265,8 +6620,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "金融 AI Agent、投行/资管工作流｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "为金融机构提供研究与分析 Agent；自动处理投行和资管工作流；销售机构级软件与实施服务",
+        "items": [
+          "为金融机构提供研究与分析 Agent",
+          "自动处理投行和资管工作流",
+          "销售机构级软件与实施服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -6347,8 +6707,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Legal AI、律所/企业法务 Agent｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "为律所和法务提供法律 Agent；完成检索、起草和尽调任务；销售机构席位和企业合同",
+        "items": [
+          "为律所和法务提供法律 Agent",
+          "完成检索、起草和尽调任务",
+          "销售机构席位和企业合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6429,8 +6794,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Legal AI、律所/企业法务 Agent｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "为律所和法务提供协作式 AI 工作台；完成检索、审阅和起草任务；销售机构席位和企业合同",
+        "items": [
+          "为律所和法务提供协作式 AI 工作台",
+          "完成检索、审阅和起草任务",
+          "销售机构席位和企业合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6511,8 +6881,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI-native insurance、创业公司商业保险、承保/理赔工作流｜企业 SaaS / 专业工作台",
+      "main_business": {
+        "value": "为科技公司配置商业保险；数字化投保、续保和理赔流程；通过保险佣金和平台服务变现",
+        "items": [
+          "为科技公司配置商业保险",
+          "数字化投保、续保和理赔流程",
+          "通过保险佣金和平台服务变现"
+        ],
         "sort": "",
         "source": null
       },
@@ -6593,8 +6968,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "医疗 AI scribe、临床文档｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "将医患对话生成临床文档；辅助编码和收入周期管理；销售医院级软件合同",
+        "items": [
+          "将医患对话生成临床文档",
+          "辅助编码和收入周期管理",
+          "销售医院级软件合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6668,8 +7048,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "医疗 AI scribe、编码和运营 workflow｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "将临床对话生成文档和编码；辅助医院运营与收入周期管理；销售医院级软件合同",
+        "items": [
+          "将临床对话生成文档和编码",
+          "辅助医院运营与收入周期管理",
+          "销售医院级软件合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6740,8 +7125,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "医疗 AI scribe｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "将医患对话生成临床笔记；提供医生工作台和医院集成；销售个人订阅和机构合同",
+        "items": [
+          "将医患对话生成临床笔记",
+          "提供医生工作台和医院集成",
+          "销售个人订阅和机构合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6815,8 +7205,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "医疗语音助手、ambient documentation｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "提供医生语音助手；生成临床文档并接入电子病历；销售席位、API 和医院合同",
+        "items": [
+          "提供医生语音助手",
+          "生成临床文档并接入电子病历",
+          "销售席位、API 和医院合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6890,8 +7285,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Healthcare AI、RCM、AI billing、医疗运营｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "提供临床文档和医疗运营软件；管理计费、理赔和收入周期；销售软件、服务和交易型合同",
+        "items": [
+          "提供临床文档和医疗运营软件",
+          "管理计费、理赔和收入周期",
+          "销售软件、服务和交易型合同"
+        ],
         "sort": "",
         "source": null
       },
@@ -6973,8 +7373,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "Healthcare agent、patient-facing non-diagnostic AI｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "提供面向患者的非诊断医疗 Agent；执行随访、教育和运营任务；销售医疗机构合同和用量服务",
+        "items": [
+          "提供面向患者的非诊断医疗 Agent",
+          "执行随访、教育和运营任务",
+          "销售医疗机构合同和用量服务"
+        ],
         "sort": "",
         "source": null
       },
@@ -7048,8 +7453,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "医疗搜索、医生问答、临床决策支持｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "为医生提供医学搜索和问答；整合临床证据与专业内容；通过机构合作和广告变现",
+        "items": [
+          "为医生提供医学搜索和问答",
+          "整合临床证据与专业内容",
+          "通过机构合作和广告变现"
+        ],
         "sort": "",
         "source": null
       },
@@ -7130,8 +7540,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "医疗 AI、影像 AI、医疗大模型、医院智能体｜专业工作台 / 企业 SaaS",
+      "main_business": {
+        "value": "研发医疗影像 AI 和医疗大模型；提供诊断辅助与医院 Agent；销售软件许可和医院项目",
+        "items": [
+          "研发医疗影像 AI 和医疗大模型",
+          "提供诊断辅助与医院 Agent",
+          "销售软件许可和医院项目"
+        ],
         "sort": "",
         "source": null
       },
@@ -7212,8 +7627,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI drug discovery、天然产物药物发现｜专业工作台 / 数据服务",
+      "main_business": {
+        "value": "用 AI 从天然产物中发现药物；自主推进候选药物与临床管线；通过药物授权和里程碑变现",
+        "items": [
+          "用 AI 从天然产物中发现药物",
+          "自主推进候选药物与临床管线",
+          "通过药物授权和里程碑变现"
+        ],
         "sort": "",
         "source": null
       },
@@ -7292,8 +7712,13 @@
         "sort": "",
         "source": null
       },
-      "core_product": {
-        "value": "AI drug discovery、protein-ligand prediction、AI biology｜专业工作台 / 数据服务",
+      "main_business": {
+        "value": "用 AI 进行药物发现和分子设计；与大型药企共同推进研发项目；通过合作、授权和里程碑变现",
+        "items": [
+          "用 AI 进行药物发现和分子设计",
+          "与大型药企共同推进研发项目",
+          "通过合作、授权和里程碑变现"
+        ],
         "sort": "",
         "source": null
       },
