@@ -38,6 +38,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Ion Stoica、Robert Nishihara、Philipp Moritz、Michael I. Jordan 等 UC Berkeley RISELab / Ray 相关团队",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "运行和扩展分布式 AI 任务；托管 Ray 集群与模型服务；企业级部署与技术支持",
         "items": [
@@ -129,6 +134,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Tuhin Srivastava、Amir Haghighat、Phil Howes、Pankaj Gupta",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "部署和托管企业自有模型；提供低延迟推理与自动扩缩；维护模型运行和监控",
         "items": [
@@ -217,6 +227,11 @@
       },
       "subsector": {
         "value": "模型开发与运行平台",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "CEO Lin Qiao; 多位创始成员曾在 Meta 参与 PyTorch 和大规模 AI 基础设施",
         "sort": "",
         "source": null
       },
@@ -318,6 +333,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Erik Bernhardsson、Akshat Bubna",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "按需出租云端 GPU 和 CPU；运行模型推理、训练和批处理；按实际计算时间收费",
         "items": [
@@ -413,6 +433,11 @@
       },
       "subsector": {
         "value": "模型开发与运行平台",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Vipul Ved Prakash",
         "sort": "",
         "source": null
       },
@@ -514,6 +539,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Vincent Weisser、Johannes Hagemann",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供 GPU 算力市场和分布式训练；支持模型后训练、强化学习与评测；托管训练任务和实验流程",
         "items": [
@@ -609,6 +639,11 @@
       },
       "subsector": {
         "value": "企业数据与检索基础设施",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Ali Ghodsi、Andy Konwinski、Ion Stoica、Matei Zaharia、Patrick Wendell、Reynold Xin、Arsalan Tavakoli 等，源自 UC Berkeley AMPLab / Apache Spark 生态",
         "sort": "",
         "source": null
       },
@@ -711,6 +746,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Clément Delangue、Julien Chaumond、Thomas Wolf",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "运营模型、数据集和应用社区；提供模型托管、推理与企业协作；销售企业平台和算力服务",
         "items": [
@@ -806,6 +846,11 @@
       },
       "subsector": {
         "value": "训练数据与专家服务",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Alexandr Wang、Lucy Guo",
         "sort": "",
         "source": null
       },
@@ -907,6 +952,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Brendan Foody、Adarsh Hiremath、Surya Midha",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "招募和匹配领域专家；为模型公司生产专家训练数据；按人才与数据项目收费",
         "items": [
@@ -1005,6 +1055,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Edo Liberty,前 AWS/Yahoo 研究与向量搜索相关背景",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供托管向量数据库；支持 RAG、搜索和 Agent 记忆；按存储与查询用量收费",
         "items": [
@@ -1096,6 +1151,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Bob van Luijt（联合创始人兼 CEO）、Etienne Dilocker（联合创始人兼 CTO）、Micha Verhagen（联合创始人）",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供开源及托管向量数据库；支持 RAG、搜索和 Agent 记忆；销售云服务与企业部署",
         "items": [
@@ -1184,6 +1244,11 @@
       },
       "subsector": {
         "value": "AI 芯片与算力硬件",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "公开报道提到赵立东、张亚林等；张亚林任 CEO",
         "sort": "",
         "source": null
       },
@@ -1285,6 +1350,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "徐冰（董事长）、王勇与王湛（联席 CEO）；源自商汤大芯片部门",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发和销售 AI 推理 GPU；提供推理服务器与算力平台；面向智算中心交付软硬件",
         "items": [
@@ -1374,6 +1444,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Sam Altman、Greg Brockman、Ilya Sutskever、Wojciech Zaremba、John Schulman、Elon Musk 等早期联合创始人与支持者",
         "sort": "",
         "source": null
       },
@@ -1489,6 +1564,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Dario Amodei、Daniela Amodei、Jared Kaplan、Jack Clark、Chris Olah、Ben Mann、Sam McCandlish、Tom Brown 等前 OpenAI 成员",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发 Claude 语言与多模态模型；运营 Claude 和 Claude Code；销售订阅、API 与企业服务",
         "items": [
@@ -1598,6 +1678,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "杨植麟、周昕宇、吴昕宇等，核心团队来自清华、CMU、Google、Meta 等技术背景",
         "sort": "",
         "source": null
       },
@@ -1712,6 +1797,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "梁文锋,幻方量化 / High-Flyer 背景",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发并开放语言、推理与代码模型；运营 DeepSeek 助手；提供按量计费的模型 API",
         "items": [
@@ -1814,6 +1904,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "姜大昕（兼算法负责人）",
         "sort": "",
         "source": null
       },
@@ -1920,6 +2015,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Dani Yogatama、Yi Tay(已于 2024 年 11 月离职)、Qi Liu、Cyprien de Masson d'Autume、Mikel Artetxe — 共 5 位联合创始人",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发多模态与端侧物理 AI 模型；提供模型 API 与边缘部署；面向企业交付定制模型",
         "items": [
@@ -2020,6 +2120,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Barret Zoph、Lilian Weng、Andrew Tulloch、Luke Metz、Jonathan Lachman 等 OpenAI/Meta/Mistral 背景成员;部分成员 2025-2026 年被 Meta/OpenAI 挖走",
         "sort": "",
         "source": null
       },
@@ -2127,6 +2232,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Amnon Shashua、Yoav Shoham、Ori Goshen;部分公开资料还列 Maykel Zayton",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发企业语言模型；提供 Agent 编排与结果校验平台；销售 API 和私有化部署",
         "items": [
@@ -2228,6 +2338,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Aidan Gomez、Ivan Zhang、Nick Frosst",
         "sort": "",
         "source": null
       },
@@ -2341,6 +2456,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Ramin Hasani(CEO)、Mathias Lechner、Alexander Amini、Daniela Rus(MIT CSAIL 主任)",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发高效非 Transformer 模型；提供端侧和本地模型部署；销售模型 API 与软件许可",
         "items": [
@@ -2439,6 +2559,11 @@
       },
       "subsector": {
         "value": "端侧模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "李大海（联合创始人兼 CEO）、刘知远（联合创始人兼首席科学家）、曾国洋（CTO）",
         "sort": "",
         "source": null
       },
@@ -2545,6 +2670,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Krithik Puthalath、Beren Millidge、Tomas Figliolia、Daniel/Danny Martinelli 等",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发高效开放模型和端侧 Agent；提供模型训练与推理工具；面向企业交付定制方案",
         "items": [
@@ -2646,6 +2776,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "李开复(Kai-Fu Lee),创新工场董事长",
         "sort": "",
         "source": null
       },
@@ -2756,6 +2891,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Ilya Sutskever、Daniel Gross、Daniel Levy",
         "sort": "",
         "source": null
       },
@@ -2870,6 +3010,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Jason Warner、Eiso Kant",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发代码基础模型；提供企业软件开发 Agent；支持私有及政府环境部署",
         "items": [
@@ -2973,6 +3118,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Robin Rombach、Andreas Blattmann、Patrick Esser 等，均与 Latent Diffusion / Stable Diffusion 研究脉络高度相关",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发 FLUX 图像生成模型；提供图像生成 API；销售模型许可与企业部署",
         "items": [
@@ -3071,6 +3221,11 @@
       },
       "subsector": {
         "value": "视觉生成模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "David Holz，曾共同创立 Leap Motion",
         "sort": "",
         "source": null
       },
@@ -3185,6 +3340,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "快手可灵 AI 团队；依托宿华、程一笑创立的快手体系（非独立创业公司）",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "运营 AI 视频和图像生成应用；销售创作者会员与生成额度；提供企业模型 API",
         "items": [
@@ -3296,6 +3456,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Cristóbal Valenzuela、Alejandro Matamala、Anastasis Germanidis 等",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发视频生成与编辑模型；销售创意制作软件订阅；提供企业工具和模型 API",
         "items": [
@@ -3397,6 +3562,11 @@
       },
       "subsector": {
         "value": "视觉生成模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Amit Jain、Alex Yu 等线索",
         "sort": "",
         "source": null
       },
@@ -3504,6 +3674,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Demi Guo、Chenlin Meng 等 Stanford PhD dropout 背景",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "运营消费级 AI 视频应用；提供视频特效和编辑工具；销售会员与生成额度",
         "items": [
@@ -3605,6 +3780,11 @@
       },
       "subsector": {
         "value": "视觉生成模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "王长虎（创始人兼 CEO）；前字节跳动视觉技术负责人",
         "sort": "",
         "source": null
       },
@@ -3723,6 +3903,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Mati Staniszewski(CEO,前 Palantir)、Piotr Dabkowski(CTO,前 Google)",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发语音合成与声音克隆模型；提供配音、本地化和有声内容工具；销售订阅、API 与语音 Agent",
         "items": [
@@ -3834,6 +4019,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Mikey Shulman 等 co-founder/CEO 线索",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "运营 AI 音乐生成应用；提供歌曲创作和编辑工具；销售个人与团队订阅",
         "items": [
@@ -3936,6 +4126,11 @@
       },
       "subsector": {
         "value": "3D 模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "胡渊鸣 / Ethan Hu（创始人兼 CEO，MIT CSAIL 博士）",
         "sort": "",
         "source": null
       },
@@ -4043,6 +4238,11 @@
       },
       "subsector": {
         "value": "3D 模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "宋亚宸 / Simon Song（创始人兼 CEO，前 MiniMax 联合创始人）",
         "sort": "",
         "source": null
       },
@@ -4157,6 +4357,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Ex-Google DeepMind、Owkin、Google Brain、Meta、MIT、ETH Zürich、Cambridge、Helmholtz 等背景",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发生物与病理基础模型；向药企和研究机构提供模型能力；通过合作和授权推进商业化",
         "items": [
@@ -4254,6 +4459,11 @@
       },
       "subsector": {
         "value": "生物模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Alexander Rives 等前 Meta ESM / protein language model 研究团队",
         "sort": "",
         "source": null
       },
@@ -4361,6 +4571,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "极佳视界世界模型与机器人团队；公开资料未完整披露创始人姓名",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发世界模型和机器人基础模型；提供自动驾驶与机器人仿真平台；交付模型、软件和机器人方案",
         "items": [
@@ -4464,6 +4679,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "景鲲 / Eric Jing（创始人，前百度 COO）；全球化 AI 产品团队",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供通用 AI 工作区；自动完成研究、文档和业务任务；销售个人与企业订阅",
         "items": [
@@ -4564,6 +4784,11 @@
       },
       "subsector": {
         "value": "通用 Agent 与生产力",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "肖弘、季逸超 Peak Ji、张涛等公开报道口径",
         "sort": "",
         "source": null
       },
@@ -4677,6 +4902,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Chris Pedregal、Sam Stephenson",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "记录并整理会议内容；沉淀个人和团队会议知识；销售个人与企业订阅",
         "items": [
@@ -4770,6 +5000,11 @@
       },
       "subsector": {
         "value": "软件开发与应用生成",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Michael Truell、Sualeh Asif、Aman Sanger、Arvid Lunnemark",
         "sort": "",
         "source": null
       },
@@ -4883,6 +5118,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Scott Wu、Steven Hao、Walden Yan",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供 Devin 软件开发 Agent；自动完成和维护工程任务；销售团队及企业合同",
         "items": [
@@ -4990,6 +5230,11 @@
       },
       "subsector": {
         "value": "软件开发与应用生成",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Amjad Masad、Haya Odeh、Faris Masad",
         "sort": "",
         "source": null
       },
@@ -5103,6 +5348,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Anton Osika、Fabian Hedin",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "用自然语言生成 Web 应用；提供编辑、托管和团队协作；销售个人与企业订阅",
         "items": [
@@ -5210,6 +5460,11 @@
       },
       "subsector": {
         "value": "软件开发与应用生成",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Mukund Jha、Madhav Jha",
         "sort": "",
         "source": null
       },
@@ -5323,6 +5578,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Eric Simons、Albert Pai",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "在浏览器中生成和运行 Web 应用；提供开发环境、部署与托管；销售订阅和企业服务",
         "items": [
@@ -5433,6 +5693,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "张路宇 / Luyu Zhang（创始人兼 CEO）；LangGenius / Dify 开源团队",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供 AI 应用和 Agent 开发平台；支持工作流编排与模型接入；销售云服务和私有化部署",
         "items": [
@@ -5536,6 +5801,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Harrison Chase",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供 Agent 开发框架；提供测试、监控和部署平台；销售云服务和企业合同",
         "items": [
@@ -5633,6 +5903,11 @@
       },
       "subsector": {
         "value": "Agent 开发与运行平台",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Jerry Liu; Simon Suo 等早期共同公司化成员",
         "sort": "",
         "source": null
       },
@@ -5739,6 +6014,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Ankur Goyal",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "评测和比较模型输出；监控线上 AI 应用质量；销售开发工具和企业平台",
         "items": [
@@ -5839,6 +6119,11 @@
       },
       "subsector": {
         "value": "Agent 开发与运行平台",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Paul Klein IV",
         "sort": "",
         "source": null
       },
@@ -5952,6 +6237,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Will Bryk、Jeff Wang 等；Will Bryk 为 CEO",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "建立面向 Agent 的互联网索引；提供网页搜索和内容提取 API；按查询用量和企业合同收费",
         "items": [
@@ -6052,6 +6342,11 @@
       },
       "subsector": {
         "value": "搜索与知识管理",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Rotem Weiss",
         "sort": "",
         "source": null
       },
@@ -6159,6 +6454,11 @@
       },
       "subsector": {
         "value": "搜索与知识管理",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Aravind Srinivas、Denis Yarats、Johnny Ho、Andy Konwinski",
         "sort": "",
         "source": null
       },
@@ -6272,6 +6572,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Arvind Jain、T.R. Vishwanath、Piyush Prahladka、Tony Gentilcore 等前 Google/Search/enterprise infra 背景团队",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "搜索企业内部文档和应用；构建企业知识图谱与 Agent；销售企业席位和平台合同",
         "items": [
@@ -6379,6 +6684,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Jorge Zamora",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "管理企业短链接和内部知识；提供跨应用搜索与问答；销售企业软件订阅",
         "items": [
@@ -6479,6 +6789,11 @@
       },
       "subsector": {
         "value": "企业业务 Agent",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Jesse Zhang、Ashwin Sreenivas",
         "sort": "",
         "source": null
       },
@@ -6585,6 +6900,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Bret Taylor(CEO,前 Salesforce co-CEO、OpenAI board chair、Google Maps co-creator、Twitter board chair)、Clay Bavor(CTO,前 Google executive)",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "为企业部署品牌化客服 Agent；自动解决客户问题和执行交易；按完成结果和企业合同收费",
         "items": [
@@ -6685,6 +7005,11 @@
       },
       "subsector": {
         "value": "企业业务 Agent",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Kareem Amin、Varun Anand",
         "sort": "",
         "source": null
       },
@@ -6803,6 +7128,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "May Habib、Waseem AlShikh",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "构建企业 AI Agent 和工作流；提供自研模型、权限和治理；销售企业平台与私有部署",
         "items": [
@@ -6896,6 +7226,11 @@
       },
       "subsector": {
         "value": "企业内容制作",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Joshua Xu、Wayne Liang",
         "sort": "",
         "source": null
       },
@@ -6999,6 +7334,11 @@
       },
       "subsector": {
         "value": "企业内容制作",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Victor Riparbelli、Steffen Tjerrild、Lourdes Agapito、Matthias Niessner",
         "sort": "",
         "source": null
       },
@@ -7106,6 +7446,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Noam Shazeer、Daniel De Freitas",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发角色对话模型；运营角色聊天与 AI 陪伴平台；销售消费订阅与增值服务",
         "items": [
@@ -7199,6 +7544,11 @@
       },
       "subsector": {
         "value": "金融与保险",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Jack Kokko(CEO,前 Wall Street analyst)、Raj Neervannan(CTO)",
         "sort": "",
         "source": null
       },
@@ -7300,6 +7650,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "George Sivulka,前 Stanford PhD student",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "批量分析企业和专业文档；支持金融、法律与尽调工作流；销售专业工作台和企业合同",
         "items": [
@@ -7395,6 +7750,11 @@
       },
       "subsector": {
         "value": "金融与保险",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Gabe Stengel,CEO & Co-Founder,前 Lazard 背景",
         "sort": "",
         "source": null
       },
@@ -7496,6 +7856,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Winston Weinberg(CEO,前 O'Melveny associate)、Gabriel Pereyra(President,前 DeepMind/Meta/Google Brain 研究与工程背景)",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "为律所和法务提供法律 Agent；完成检索、起草和尽调任务；销售机构席位和企业合同",
         "items": [
@@ -7591,6 +7956,11 @@
       },
       "subsector": {
         "value": "法律",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Max Junestrand",
         "sort": "",
         "source": null
       },
@@ -7692,6 +8062,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Nico Laqua、Emily Yuan",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "为科技公司配置商业保险；数字化投保、续保和理赔流程；通过保险佣金和平台服务变现",
         "items": [
@@ -7787,6 +8162,11 @@
       },
       "subsector": {
         "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Shiv Rao, MD 等;公司起源与 UPMC、University of Pittsburgh、Carnegie Mellon 临床/AI生态有关",
         "sort": "",
         "source": null
       },
@@ -7888,6 +8268,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Michael Ng(CEO)、Nikhil Buduma(co-founder / Chief Scientist)",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "将临床对话生成文档和编码；辅助医院运营与收入周期管理；销售医院级软件合同",
         "items": [
@@ -7973,6 +8358,11 @@
       },
       "subsector": {
         "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Alexandre Lebrun 等;团队有 AI、healthcare 和 product engineering 背景",
         "sort": "",
         "source": null
       },
@@ -8067,6 +8457,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Punit Soni,Founder & CEO;曾有 Google/Flipkart 产品领导背景",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供医生语音助手；生成临床文档并接入电子病历；销售席位、API 和医院合同",
         "items": [
@@ -8155,6 +8550,11 @@
       },
       "subsector": {
         "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Tanay Tandon(CEO,Athelas co-founder)、Hemant Taneja(General Catalyst CEO,Commure co-founder/backer)、Dan Warner(President)、Ian Shakil(CSO,Augmedix founder)、Gopesh 等工程/运营团队",
         "sort": "",
         "source": null
       },
@@ -8257,6 +8657,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Munjal Shah",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "提供面向患者的非诊断医疗 Agent；执行随访、教育和运营任务；销售医疗机构合同和用量服务",
         "items": [
@@ -8345,6 +8750,11 @@
       },
       "subsector": {
         "value": "医疗",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Daniel Nadler、Zachary Ziegler",
         "sort": "",
         "source": null
       },
@@ -8446,6 +8856,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "沈定刚等联合创始人与联影智能医疗 AI 团队",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发医疗影像 AI 和医疗大模型；提供诊断辅助与医院 Agent；销售软件许可和医院项目",
         "items": [
@@ -8541,6 +8956,11 @@
       },
       "subsector": {
         "value": "生命科学与药物发现",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Viswa Colluru",
         "sort": "",
         "source": null
       },
@@ -8640,6 +9060,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "Sir Demis Hassabis",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "用 AI 进行药物发现和分子设计；与大型药企共同推进研发项目；通过合作、授权和里程碑变现",
         "items": [
@@ -8733,6 +9158,11 @@
       },
       "subsector": {
         "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "王小川及原搜狗、百度、华为、微软、字节、腾讯等团队成员",
         "sort": "",
         "source": null
       },
@@ -8837,6 +9267,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "朱军、骆怡航及清华多模态生成团队",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "研发 Vidu 视频生成与世界模型；运营创作者应用和模型 API；向内容机构和企业销售生成服务",
         "items": [
@@ -8858,7 +9293,7 @@
         "source": null
       },
       "revenue_structure": {
-        "value": "订阅 + API 按量 + 企业合同（占比未披露）",
+        "value": "订阅 + 企业合同（占比未披露）",
         "sort": "",
         "source": {
           "label": "ShengShu 官网/产品口径",
@@ -8940,6 +9375,11 @@
         "sort": "",
         "source": null
       },
+      "founder_team": {
+        "value": "陈冕及原剪映、CapCut 等创作工具团队成员",
+        "sort": "",
+        "source": null
+      },
       "main_business": {
         "value": "运营 AI 图像创作社区 LiblibAI；提供星流 AI 设计 Agent；以 LibTV 服务短剧、影视和广告团队",
         "items": [
@@ -8997,6 +9437,222 @@
       {
         "label": "LiblibAI 官网/产品口径",
         "url": "https://www.liblib.art/"
+      }
+    ]
+  },
+  {
+    "company": "Higgsfield AI",
+    "short": "Higgsfield AI",
+    "md": "model_higgsfield_ai",
+    "slug": "higgsfield_ai",
+    "sector": "基础模型",
+    "comparison_group": "视觉生成模型",
+    "comparison_group_rank": 3,
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "Series A extension",
+    "latest_round_date": "2026-01",
+    "valuation_date": "2026-01",
+    "revenue_period": "2026-01-15",
+    "multiple_type": "P/ARR",
+    "ps_multiple": ">6.5x（P/ARR）",
+    "cells": {
+      "valuation": {
+        "value": ">US$1.3B",
+        "sort": 1.3,
+        "source": {
+          "label": "Higgsfield / PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html"
+        }
+      },
+      "latest_raise": {
+        "value": "US$80M；Series A 累计 >US$130M",
+        "sort": 0.08,
+        "source": {
+          "label": "Higgsfield / PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html"
+        }
+      },
+      "subsector": {
+        "value": "视觉生成模型",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Alex Mashrabov（联合创始人兼 CEO，前 Snap 生成式 AI 负责人）、Yerzat Dulat（联合创始人）；团队覆盖生成模型、电影制作和消费产品",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "研发图像与视频生成模型；运营多模型创意制作平台；向品牌和企业销售内容工作流",
+        "items": [
+          "研发图像与视频生成模型",
+          "运营多模型创意制作平台",
+          "向品牌和企业销售内容工作流"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "视频与图像创作者、品牌、广告公司、影视制作人与企业营销团队",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "自研视觉模型与多模型工作流共同承接高频创作反馈",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "订阅 + API 按量 + 企业合同（占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Higgsfield AI 官网/产品口径",
+          "url": "https://higgsfield.ai/"
+        }
+      },
+      "arr_revenue": {
+        "value": "US$200M annual run rate（截至 2026-01-15）",
+        "sort": 0.2,
+        "source": {
+          "label": "Higgsfield Series A extension · 2026-01-15",
+          "url": "https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html"
+        }
+      },
+      "ps_multiple": {
+        "value": ">6.5x（P/ARR）",
+        "sort": 6.5,
+        "source": null,
+        "secondary": "估值 2026-01｜收入 2026-01-15",
+        "calculation": ">US$1.3B / US$200M annual run rate（截至 2026-01-15）"
+      },
+      "open_status": {
+        "value": "闭源",
+        "sort": "",
+        "source": {
+          "label": "Higgsfield proprietary models",
+          "url": "https://higgsfield.ai/about"
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "Higgsfield / PR Newswire",
+        "url": "https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html"
+      },
+      {
+        "label": "Higgsfield AI 官网/产品口径",
+        "url": "https://higgsfield.ai/"
+      },
+      {
+        "label": "Higgsfield Series A extension · 2026-01-15",
+        "url": "https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html"
+      },
+      {
+        "label": "Higgsfield proprietary models",
+        "url": "https://higgsfield.ai/about"
+      }
+    ]
+  },
+  {
+    "company": "Lambda",
+    "short": "Lambda",
+    "md": "infra_lambda",
+    "slug": "lambda",
+    "sector": "AI 基础设施",
+    "comparison_group": "AI 芯片与算力硬件",
+    "comparison_group_rank": 3,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series E",
+    "latest_round_date": "2025-11",
+    "valuation_date": "2025-02",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": "约 US$2.5B",
+        "sort": 2.5,
+        "source": {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2025/11/18/ai-data-center-provider-lambda-raises-whopping-1-5b-after-multibillion-dollar-microsoft-deal/"
+        }
+      },
+      "latest_raise": {
+        "value": ">US$1.5B",
+        "sort": 1.5,
+        "source": {
+          "label": "Lambda",
+          "url": "https://lambda.ai/blog/lambda-raises-over-1.5b-from-twg-global-usit-to-build-superintelligence-cloud-infrastructure"
+        }
+      },
+      "subsector": {
+        "value": "AI 芯片与算力硬件",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Stephen Balaban、Michael Balaban；2026 年 Michel Combes 出任 CEO，Stephen Balaban 转任联合创始人兼 CTO，Michael Balaban 任联合创始人兼 CPO",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "按需出租 NVIDIA GPU；建设和运营大规模 AI 集群；销售服务器与长期算力合同",
+        "items": [
+          "按需出租 NVIDIA GPU",
+          "建设和运营大规模 AI 集群",
+          "销售服务器与长期算力合同"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "前沿模型实验室、AI 原生公司、科研机构、云服务商与大型企业",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "长期专注 AI 的 GPU 供应、集群工程和大型基础设施交付",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "算力/托管 + 企业合同 + 硬件销售（占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Lambda 官网/产品口径",
+          "url": "https://lambda.ai/"
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      }
+    },
+    "source_links": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2025/11/18/ai-data-center-provider-lambda-raises-whopping-1-5b-after-multibillion-dollar-microsoft-deal/"
+      },
+      {
+        "label": "Lambda",
+        "url": "https://lambda.ai/blog/lambda-raises-over-1.5b-from-twg-global-usit-to-build-superintelligence-cloud-infrastructure"
+      },
+      {
+        "label": "Lambda 官网/产品口径",
+        "url": "https://lambda.ai/"
       }
     ]
   }

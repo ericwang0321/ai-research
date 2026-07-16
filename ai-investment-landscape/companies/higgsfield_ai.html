@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Higgsfield AI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-verified{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.dc-verified-head{font-size:11.5px;font-weight:800;color:var(--ink3);margin-bottom:5px}
+.dc-verified-row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:10px;padding:5px 0;font-size:12.5px;line-height:1.5}
+.dc-verified-label{font-weight:750;color:var(--ink2)}
+.dc-verified-value{color:var(--ink)}
+.dc-verified-source{text-align:right;font-size:11.5px}
+@media(max-width:680px){.dc-verified-row{grid-template-columns:1fr;gap:2px}.dc-verified-source{text-align:left}}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-status{font-size:11px;font-weight:600;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;padding:3px 9px;border-radius:14px}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-link-hint{margin:-2px 0 12px;color:var(--ink3);font-size:12.5px;line-height:1.5}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 基础模型</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eef2ff;color:#4338ca">基础模型</span>
+      <span class="dc-layer">模型 / 应用</span>
+      <span class="dc-region">美国 San Francisco</span>
+    </div>
+    <h1 class="dc-title"><a href="https://higgsfield.ai/" target="_blank" rel="noopener">Higgsfield AI</a></h1>
+    <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
+    <div class="dc-oneliner">Higgsfield AI 是一家把自研图像、视频模型与第三方前沿模型放进同一创意工作流的视觉生成公司，既向个人创作者销售订阅和生成额度，也向品牌、广告公司及企业团队销售高频内容生产平台。</div>
+    <div class="dc-verified"><div class="dc-verified-head">公开数据复核 · 2026-07-16</div><div class="dc-verified-row"><span class="dc-verified-label">收入/ARR</span><span class="dc-verified-value">US$200M annual run rate（截至 2026-01-15）</span><span class="dc-verified-source"><a href="https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html" target="_blank" rel="noopener">Higgsfield Series A extension · 2026-01-15</a></span></div></div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>Higgsfield AI 是一家把自研图像、视频模型与第三方前沿模型放进同一创意工作流的视觉生成公司，既向个人创作者销售订阅和生成额度，也向品牌、广告公司及企业团队销售高频内容生产平台。</p>
+<p>公司不是只做一个视频模型。它以 Soul、Higgsfield DOP、Cinema Studio、Soul ID、Marketing Studio 等自研能力控制人物一致性、镜头语言、广告制作和完整工作流，同时接入 Kling、Veo、Sora、Seedance、Wan 等外部模型。投资价值取决于两个问题：其 US$200M 年化收入能否在快速补贴和高推理成本之外保持真实毛利，以及创作工作流和用户反馈能否形成比“聚合多个模型”更持久的壁垒。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2024-04</td><td>Seed</td><td>US$8M</td><td>未披露</td><td>Menlo Ventures 领投，Charge Ventures、Bitkraft Ventures、General Catalyst 等参与</td><td>初期聚焦个性化移动端 AI 视频</td><td><a href="https://www.businesswire.com/news/home/20240403369573/en/Higgsfield-AI-Secures-%248M-in-Seed-Funding-to-Unlock-Personalized-AI-Video-Creation" target="_blank" rel="noopener">BusinessWire</a></td></tr><tr><td>2025-09</td><td>Series A</td><td>US$50M</td><td>未披露</td><td>GFT Ventures 领投，BroadLight、NextEquity、AI Capital、Menlo、Alpha Square 等参与</td><td>扩展 click-to-video 与社交媒体创作平台</td><td><a href="https://www.prnewswire.com/news-releases/higgsfield-announces-50m-series-a-to-propel-click-to-video-ai-for-social-media-302550070.html" target="_blank" rel="noopener">Higgsfield / PR Newswire</a></td></tr><tr><td>2026-01</td><td>Series A extension</td><td>US$80M；Series A 累计 >US$130M</td><td>>US$1.3B</td><td>Accel、AI Capital Partners、Menlo Ventures 等参与</td><td>同时披露 US$200M annual run rate</td><td><a href="https://www.prnewswire.com/news-releases/higgsfield-announces-130m-series-a-and-reports-200m-annual-run-rate-302661805.html" target="_blank" rel="noopener">Higgsfield / PR Newswire</a></td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Higgsfield, Inc. / Higgsfield AI</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://higgsfield.ai/" target="_blank" rel="noopener">https://higgsfield.ai/</a></td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2023 年；Web 创作平台于 2025 年上线</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Francisco, 美国</td></tr><tr><td class="kv-key">创始人与团队</td><td class="kv-val">Alex Mashrabov（联合创始人兼 CEO，前 Snap 生成式 AI 负责人）、Yerzat Dulat（联合创始人）；团队覆盖生成模型、电影制作和消费产品</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">面向创作者、营销团队、广告公司和影视制作人的一体化 AI 视频与图像创作平台</td></tr><tr><td class="kv-key">自研模型与系统</td><td class="kv-val">Soul 2.0、Soul Cinema、Higgsfield DOP、Soul ID、Soul HEX、Cinema Studio、cinematic reasoning / orchestration layer</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">图像与视频生成、角色一致性、镜头控制、URL-to-ad、故事板、口型同步、Supercomputer 创意 Agent、企业工作区</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">个人及团队订阅、生成 credits、企业合同；当前公开页面未显示独立公共 API 定价</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2026-01 Series A extension US$80M；Series A 累计超过 US$130M</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">2026-01 融资后估值超过 US$1.3B</td></tr><tr><td class="kv-key">公开经营数据</td><td class="kv-val">2026-01 披露 US$200M annual run rate；2026-07 官网称 25M+ 用户、850M+ generations、约 6M generations/day</td></tr></tbody></table></div>
+<p>Higgsfield 的主归属应是“基础模型 / 视觉生成模型”，同时保留“模型层 + 应用层”标签。原因是公司明确对外销售自研、可复用的视觉模型和生成系统，但真正产生收入的入口又是面向创作者与企业的完整应用。它和 Black Forest Labs 这类更纯粹的模型供应商不同，也和只聚合第三方模型的创作工具不同。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 个人与团队订阅</h3>
+<p>Higgsfield 采用订阅加 credits 的消费模式。不同生成模型、视频时长、分辨率和专业工具消耗不同数量的 credits；个人计划覆盖低频创作者，Team 计划提供共享工作区和协作，企业计划则通过销售团队报价。订阅收入的优点是现金回收快、可通过创作者自然传播获客；风险是模型成本变化快，用户也容易在 Runway、Kling、Pika、Luma、Adobe 和多个低价聚合平台之间迁移。</p>
+<h3 class="subsection">4.2 企业创意工作流</h3>
+<p>企业版面向品牌、广告代理、营销、设计、销售和培训团队，销售的不只是单次生成，而是一条可重复的内容流水线：从 brief、脚本和产品链接出发，自动选择模型，生成图像和视频，再完成角色一致性、镜头、剪辑、本地化与发布。官网称企业客户可把内容生产时间降低 90%，并显示 100,000+ teams 的使用口径；这些是公司自述，尽调时仍需核验付费团队数、合同金额和续约率。</p>
+<h3 class="subsection">4.3 模型与创作者生态</h3>
+<p>Higgsfield 同时分发自研模型和外部模型。对用户而言，一份订阅可以减少在多个模型网站间切换；对公司而言，平台可从 credits、订阅和企业合同中获得收入，并通过工作流数据了解哪类模型、镜头和广告素材更有效。Higgsfield Earn 还向创作者支付报酬，试图建立创作者供给、品牌需求和平台分发之间的网络效应。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品/能力</th><th>解决的问题</th><th>投资意义</th></tr></thead><tbody><tr><td>Soul 2.0 / Soul Cinema</td><td>时尚、人物和电影感图像生成</td><td>自研模型资产，可与纯模型公司比较</td></tr><tr><td>Higgsfield DOP</td><td>电影镜头运动和视频生成</td><td>把导演语言、镜头和运动控制嵌入模型</td></tr><tr><td>Soul ID / Soul HEX</td><td>跨镜头人物与色彩一致性</td><td>解决广告、连续内容和虚拟角色最常见的生产问题</td></tr><tr><td>Cinema Studio</td><td>镜头、焦段、色彩和多镜头工作流</td><td>面向专业影视和广告团队，提高付费上限</td></tr><tr><td>Marketing Studio / Click-to-Ad</td><td>从商品链接快速生成社交广告</td><td>直接连接可量化的营销产出，而不只是生成演示</td></tr><tr><td>Supercomputer</td><td>在聊天界面规划并调用多个模型完成成片</td><td>把模型聚合转化为工作流编排和创意 Agent</td></tr><tr><td>第三方模型接入</td><td>接入 Kling、Veo、Sora、Seedance、Wan 等</td><td>扩大选择，但也带来上游依赖和毛利压力</td></tr></tbody></table></div>
+<p>技术护城河不应只用“有没有自研模型”判断。Higgsfield 更值得关注的是其 cinematic logic layer 能否把用户意图翻译成镜头、节奏、角色和画面控制，再把最终使用、修改和传播结果反馈给模型与工作流。如果反馈只用于界面推荐，壁垒有限；如果公司拥有合法复用权，并能持续训练自有模型、路由和评估系统，数据飞轮才真正成立。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>最新公开口径</th><th>解读</th></tr></thead><tbody><tr><td>年化收入</td><td>US$200M annual run rate（2026-01-15，公司披露）</td><td>低于一年达到较大规模，但需核验净收入、退款、促销和毛利</td></tr><tr><td>用户</td><td>25M+（官网，复核于 2026-07-16）</td><td>消费分发已经形成规模；注册用户不等于付费用户</td></tr><tr><td>累计生成</td><td>850M+ generations，其中 300M+ videos（官网，复核于 2026-07-16）</td><td>高频使用为模型和工作流反馈提供潜在数据来源</td></tr><tr><td>日生成量</td><td>约 6M generations/day，其中约 2M videos/day（官网）</td><td>推理成本和上游模型分成会直接影响毛利</td></tr><tr><td>企业采用</td><td>官网称 100,000+ teams，并提及 Fortune 500 agencies</td><td>需进一步区分试用团队、付费团队和大型企业合同</td></tr><tr><td>创作者计划</td><td>10,000+ creators commissioned，累计支付 US$1M+</td><td>有助于形成内容供给，也可能构成获客补贴</td></tr></tbody></table></div>
+<p>US$1.3B 以上估值对应 US$200M 年化收入的静态 P/ARR 下限约 6.5 倍。这个倍数看起来不高，但不能直接按 SaaS 理解：若收入大量来自低毛利的第三方模型 credits 转售，价值应更接近内容计算平台；若自研模型和企业工作流占比提升，并形成较高留存和毛利，则可获得更高软件倍数。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Higgsfield 的收入可以拆成个人订阅、团队订阅、额外 credits 和企业合同，直接成本则包括自研模型推理、向第三方模型采购生成量、存储与带宽、支付手续费、内容审核和创作者补贴。核心单位经济性不是单纯“每个用户付多少钱”，而是每美元收入对应多少 GPU 和第三方模型成本。</p>
+<p>尽调应要求按模型拆分 generation gross margin：自研 Soul / DOP 的毛利理论上可由自身推理效率控制；Veo、Kling、Sora 等外部模型通常需要向供应商支付费用，毛利和产品连续性受上游影响。还应按用户 cohort 核验首次订阅、三个月留存、credits 购买、企业扩张和退款。US$200M annual run rate 只有在留存、毛利和现金消耗可持续时才有投资意义。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司</th><th>核心位置</th><th>与 Higgsfield 的区别</th></tr></thead><tbody><tr><td>Runway</td><td>自研视频模型与专业影视编辑平台</td><td>自研模型和影视品牌更成熟；Higgsfield 更强调多模型聚合、社交广告与快速工作流</td></tr><tr><td>Kling AI</td><td>快手体系的视频与图像模型、消费应用和 API</td><td>模型能力与产业分发更强；Higgsfield 是独立公司，工作流更跨模型</td></tr><tr><td>Luma AI</td><td>视频、图像和世界模型及 Dream Machine</td><td>更强调自研模型与专业创意平台；Higgsfield 的增长和收入披露更强</td></tr><tr><td>Pika</td><td>低门槛、社交传播友好的视频特效应用</td><td>Pika 更偏消费特效；Higgsfield 覆盖专业制作和企业营销</td></tr><tr><td>Black Forest Labs</td><td>上游图像基础模型与 API</td><td>BFL 更纯模型层；Higgsfield 直接拥有创作者和企业应用入口</td></tr><tr><td>Adobe / Canva</td><td>既有创意软件、版权内容和企业分发</td><td>大厂工作流和采购优势强；Higgsfield 迭代更快，但更易被功能整合</td></tr></tbody></table></div>
+<p>在同类对比中，Higgsfield 的优势是收入增速、消费分发和工作流完整性，弱点是自研模型与外部聚合边界仍不够透明。最重要的尽调不是比较某一次视频榜单，而是拆解付费用户为何留在平台，以及多少使用由 Higgsfield 自有能力而非可替换的第三方模型驱动。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Alex Mashrabov 曾任 Snap 生成式 AI 负责人，并创立被 Snap 收购的 AI Factory，具备把生成式模型做成消费产品的经验。Yerzat Dulat 是联合创始人。团队同时招募模型研究、视频生成、电影制作、产品增长和企业销售人才，这种组合与公司的“模型 + 创作应用”路线匹配。</p>
+<p>团队优势是懂消费增长、社交内容和视觉产品，不只做研究 demo；风险是从高速增长的消费工具转向企业平台，需要补齐安全、版权、权限、审计、销售和客户成功能力。创始团队与投资人持股、关键模型团队稳定性和第三方模型采购关系仍需在一级市场材料中核验。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li>年化收入可能受到促销、年付预收、credits 会计口径和短期爆款增长影响，需核验真实 ARR、留存与退款。</li><li>视频生成推理成本高，且第三方模型采购可能使收入增长不能同步转化为毛利。</li><li>Kling、Runway、Luma、Adobe、Canva、OpenAI 和 Google 均可把相似功能打包进已有渠道。</li><li>平台同时强调自研模型与多模型聚合，若用户主要为第三方模型付费，技术护城河会被高估。</li><li>训练数据、人物肖像、版权、deepfake、广告真实性和未成年人内容带来法律与品牌风险。</li><li>创作者快速迁移和模型价格下降可能压低订阅留存及 credits 单价。</li><li>高速扩张会增加内容审核、支付欺诈、企业安全和跨境数据治理压力。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="ai21_labs.html">AI21 Labs</a><a class="sib-chip" href="anthropic.html">Anthropic</a><a class="sib-chip" href="deepseek_深度求索.html">DeepSeek</a><a class="sib-chip" href="moonshot_ai_月之暗面_kimi.html">Moonshot AI</a><a class="sib-chip" href="openai.html">OpenAI</a><a class="sib-chip" href="reka_ai.html">Reka AI</a><a class="sib-chip" href="stepfun_阶跃星辰.html">StepFun</a><a class="sib-chip" href="thinking_machines_lab.html">Thinking Machines Lab</a></div>
+</div>
+</body></html>

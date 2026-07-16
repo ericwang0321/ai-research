@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lambda · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-status{font-size:11px;font-weight:600;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;padding:3px 9px;border-radius:14px}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-link-hint{margin:-2px 0 12px;color:var(--ink3);font-size:12.5px;line-height:1.5}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · AI 基础设施</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#f1f5f9;color:#475569">AI 基础设施</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 California</span><span class="dc-status">潜在 IPO / 需核验上市进程</span>
+    </div>
+    <h1 class="dc-title"><a href="https://lambda.ai/" target="_blank" rel="noopener">Lambda</a></h1>
+    <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
+    <div class="dc-oneliner">Lambda 是一家专门为 AI 训练和推理提供 NVIDIA GPU、云端集群、数据中心及服务器的算力基础设施公司，客户购买的是可立即使用的大规模计算能力，而不是一个已经部署好的模型 API。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>Lambda 是一家专门为 AI 训练和推理提供 NVIDIA GPU、云端集群、数据中心及服务器的算力基础设施公司，客户购买的是可立即使用的大规模计算能力，而不是一个已经部署好的模型 API。</p>
+<p>它与 Fireworks、Baseten 的核心区别是：Lambda 主要把 GPU 机器、网络和数据中心交给客户，客户仍需自己准备模型、代码和运行系统；Fireworks、Baseten 则进一步替客户完成模型部署、推理优化和线上维护。Lambda 的上行来自 AI 算力需求和大型长期合同，下行来自高资本开支、债务、客户集中、电力和 GPU 折旧。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2021-07</td><td>Series A + debt facility</td><td>US$15M equity + US$9.5M debt</td><td>未披露</td><td>1517 Fund、Gradient Ventures 等</td><td>扩建 GPU Cloud 与本地 AI 基础设施产品</td><td><a href="https://lambda.ai/blog/lambda-raises-24-5-to-build-a-gpu-cloud-and-deep-learning-infrastructure" target="_blank" rel="noopener">Lambda</a></td></tr><tr><td>2023-03</td><td>Series B</td><td>US$44M</td><td>未披露</td><td>Mercato Partners 领投，1517、Gradient Ventures、Bloomberg Beta 等参与</td><td>部署 H100 容量和高速网络</td><td><a href="https://lambda.ai/blog/lambda-raises-44m-to-build-worlds-best-cloud-for-training-ai" target="_blank" rel="noopener">Lambda</a></td></tr><tr><td>2024-02</td><td>Series C</td><td>US$320M</td><td>该轮公开报道常见 US$1.5B 口径</td><td>USIT 领投，B Capital、SK Telecom、T. Rowe Price 等参与</td><td>扩大 GPU cloud</td><td><a href="https://lambda.ai/blog/lambda-raises-320m-to-build-a-gpu-cloud-for-ai" target="_blank" rel="noopener">Lambda</a></td></tr><tr><td>2025-02</td><td>Series D</td><td>US$480M</td><td>约 US$2.5B（PitchBook 估计）</td><td>Andra Capital、SGW 共同领投，NVIDIA、ARK Invest、IQT 等参与</td><td>扩大云平台和 GPU 部署</td><td><a href="https://techcrunch.com/2025/11/18/ai-data-center-provider-lambda-raises-whopping-1-5b-after-multibillion-dollar-microsoft-deal/" target="_blank" rel="noopener">TechCrunch</a></td></tr><tr><td>2025-11</td><td>Series E</td><td>>US$1.5B</td><td>未披露</td><td>TWG Global 领投，USIT 及现有投资人参与</td><td>建设 gigawatt-scale AI factories</td><td><a href="https://lambda.ai/blog/lambda-raises-over-1.5b-from-twg-global-usit-to-build-superintelligence-cloud-infrastructure" target="_blank" rel="noopener">Lambda</a></td></tr></tbody></table></div>
+<p>注意：2025 年曾有公司以 US$4B–US$5B 估值融资的市场消息，但 Lambda 没有确认 Series E 估值，TechCrunch 也明确表示无法核实。因此首页只显示最近可回源的 US$2.5B Series D 估值，并将 Series E 单独显示为最新融资。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Lambda, Inc.（原 Lambda Labs）</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://lambda.ai/" target="_blank" rel="noopener">https://lambda.ai/</a></td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2012 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">San Jose / San Francisco Bay Area, 美国</td></tr><tr><td class="kv-key">创始人与团队</td><td class="kv-val">Stephen Balaban、Michael Balaban；2026 年 Michel Combes 出任 CEO，Stephen Balaban 转任联合创始人兼 CTO，Michael Balaban 任联合创始人兼 CPO</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">面向前沿实验室、企业和 hyperscaler 的 AI 专用 GPU 云、集群与 AI factories</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">On-Demand Cloud、1-Click Clusters、Private Cloud、AI factories、GPU workstations / servers、serverless inference</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">前沿模型实验室、AI 原生公司、科研机构、大型企业、云服务商和需要大规模训练/推理的团队</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">GPU 按小时租赁、预留集群、长期算力与数据中心合同、服务器和工作站硬件销售</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">2025-11 Series E 超过 US$1.5B</td></tr><tr><td class="kv-key">最近可核验估值</td><td class="kv-val">2025-02 Series D 估计 US$2.5B；Series E 未披露估值</td></tr><tr><td class="kv-key">公开经营指标</td><td class="kv-val">2025-03 官方称超过 150,000 Cloud users；绝对收入或 ARR 未由公司公开披露</td></tr><tr><td class="kv-key">资本化状态</td><td class="kv-val">2025 年媒体报道已聘请投行准备潜在 IPO；截至本报告日未确认已正式递表</td></tr></tbody></table></div>
+<p>Lambda 的主归属是“AI 基础设施 / AI 芯片与算力硬件”。这里的“硬件”不是指公司自己设计 GPU，而是因为它建设和运营 GPU 密集型数据中心、采购 NVIDIA 系统并销售服务器。它也提供软件和推理 API，但主要资本、收入和风险仍由算力容量驱动。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 On-Demand Cloud</h3>
+<p>开发者可以按需启动配有 B200、GH200、H100、A100 等 GPU 的 Linux 虚拟机。官方文档显示 On-Demand Cloud 以小时定价、按分钟计费，实例通过健康检查后开始计费，终止后停止。客户负责选择镜像、上传代码和模型、运行训练或推理任务；Lambda 负责机器、网络、电力和基础云平台。</p>
+<h3 class="subsection">4.2 1-Click Clusters 与预留容量</h3>
+<p>需要多机训练的客户可预留由多台 NVIDIA HGX 系统和高速 InfiniBand 网络组成的集群，按每 GPU/小时计价并按预留条款结算。客户购买的是一段时间内可预测的算力、网络性能和容量保障。与单机按需租赁相比，合同金额更大、利用率更稳定，但 Lambda 也需要提前采购和部署大量硬件。</p>
+<h3 class="subsection">4.3 AI factories 与大型企业合同</h3>
+<p>Lambda 为 hyperscaler、前沿实验室和大型企业建设或运营专用 AI 数据中心。2025 年公司宣布与 Microsoft 签订数十亿美元协议，使用数万块 NVIDIA GPU 提供 AI 基础设施。此类合同可锁定长期收入，却可能形成高客户集中，也会绑定特定 GPU、场地、电力和融资安排。</p>
+<h3 class="subsection">4.4 硬件销售</h3>
+<p>公司长期销售深度学习工作站、服务器和整套 GPU 系统。硬件业务帮助建立开发者品牌和客户渠道，但毛利、库存、供应链和营运资金特征与云软件不同。投资分析必须把硬件销售、GPU 云租赁和长期数据中心合同分开，而不能只看合并收入。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品</th><th>客户实际获得什么</th><th>与相邻平台的区别</th></tr></thead><tbody><tr><td>On-Demand Cloud</td><td>可按分钟计费的 GPU 虚拟机</td><td>类似“租一台云端 GPU 电脑”，客户自己运行模型和代码</td></tr><tr><td>1-Click Clusters</td><td>预配置的多机 GPU 集群和高速网络</td><td>面向大模型训练、微调和大规模推理</td></tr><tr><td>Private Cloud / AI factories</td><td>专用数据中心、算力集群与运营能力</td><td>合同更长、更重资产，接近 AI 数据中心供应商</td></tr><tr><td>Serverless inference</td><td>可直接调用的开放模型推理</td><td>向 Fireworks/Together 方向延伸，但目前不是全部业务核心</td></tr><tr><td>Workstations / servers</td><td>客户自有的 NVIDIA GPU 硬件</td><td>一次性硬件销售，不是云订阅</td></tr></tbody></table></div>
+<p>技术能力主要体现在大规模 GPU 集群的建设和运营：电力与冷却、机架密度、高速互联、存储、故障恢复、调度和供应链。官网称 AI factories 采用高密度液冷和高速互联，并针对训练和推理工作负载优化。这里的壁垒比普通云主机更偏资本、工程和交付能力，而不是独有模型。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营指标</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>最新公开口径</th><th>解读</th></tr></thead><tbody><tr><td>Cloud users</td><td>150,000+（2025-03，公司披露）</td><td>开发者入口较广，但用户数不等于付费或收入规模</td></tr><tr><td>Series E</td><td>>US$1.5B（2025-11）</td><td>为 gigawatt-scale AI factories 提供资本</td></tr><tr><td>Microsoft 合同</td><td>multibillion-dollar，涉及 tens of thousands of NVIDIA GPUs（2025-11，公司披露）</td><td>证明大型客户需求，也提高客户与交付集中度</td></tr><tr><td>Series D 估值</td><td>约 US$2.5B（PitchBook 估计，TechCrunch 援引）</td><td>是最近可直接回源的估值；Series E 定价未披露</td></tr><tr><td>收入 / ARR</td><td>公司未公开披露绝对值</td><td>第三方估算不进入本站 ARR / 收入列</td></tr><tr><td>融资与信贷</td><td>2026 年将 senior secured credit facility 提高至 US$1B</td><td>算力扩张需要股权和债务共同融资</td></tr></tbody></table></div>
+<p>Lambda 不能按典型 SaaS 倍数估值。即使收入高速增长，也必须看折旧、电力、GPU 利用率、融资成本和合同期限。长期合同如果由高质量客户承担最低消费，可提高可预测性；如果公司先承担 GPU 和数据中心承诺、客户又保留较大取消权，风险会留在 Lambda 资产负债表上。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Lambda 的经济模型可简化为：购买或融资取得 GPU 服务器和数据中心容量，以按需租赁、预留集群或长期合同出售，再用利用率、采购价格和运营效率覆盖折旧、电力、网络、场地、维修与资本成本。</p>
+<p>最关键的指标包括 GPU 利用率、每 GPU 小时净收入、每 GPU 小时电力和场地成本、硬件折旧期、融资利率、客户合同期限和最低消费。新一代 GPU 上线会提高售价和需求，但也可能让旧 GPU 更快贬值。与 Fireworks 相比，Lambda 承担更多资产和容量风险；与传统 hyperscaler 相比，它更专注 AI、部署更快，但资本成本和产品广度通常较弱。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>竞争方</th><th>客户购买内容</th><th>Lambda 的相对位置</th></tr></thead><tbody><tr><td>CoreWeave</td><td>大规模 GPU 云和长期 AI 基础设施合同</td><td>最直接对手；CoreWeave 已上市、规模更大，Lambda 仍具私营属性但也在准备资本化</td></tr><tr><td>Crusoe / Nebius / Nscale</td><td>AI 数据中心与 GPU 云</td><td>均争夺电力、GPU、场地和大客户长期合同</td></tr><tr><td>AWS / Azure / GCP / Oracle</td><td>综合云、GPU 和企业采购体系</td><td>大厂渠道与服务更完整；Lambda 专注 AI、产品更直接</td></tr><tr><td>RunPod / Vast.ai</td><td>更灵活或更低价的 GPU 租赁</td><td>对开发者和小团队更便宜；Lambda 更强调企业级集群和大型合同</td></tr><tr><td>Modal / Anyscale</td><td>在云算力上提供更高层的运行环境</td><td>客户更少管理集群；Lambda 提供更底层和更大规模的算力</td></tr><tr><td>Fireworks / Baseten / Together AI</td><td>模型 API、部署、推理优化及部分 GPU 云</td><td>更接近模型运行软件；Lambda 更接近机器、集群和数据中心</td></tr></tbody></table></div>
+<p>Lambda 的优势是长期 AI 专注、NVIDIA 生态、开发者品牌和大型 GPU 交付能力；弱点是差异化容易被“同一种 GPU”压缩。长期护城河必须来自更低资本成本、更快部署、更高利用率、可靠运营和锁定电力/场地，而不是硬件本身。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Stephen Balaban 和 Michael Balaban 于 2012 年创立 Lambda。Stephen 长期负责技术与机器学习方向，Michael 负责产品。2026 年公司引入曾领导 Alcatel-Lucent、Vodafone Europe 和 SoftBank International 的 Michel Combes 任 CEO，创始人分别转任 CTO 和 CPO，表明公司正在从创始人主导的 GPU 云转向大规模电信与基础设施运营组织。</p>
+<p>团队升级有利于数据中心建设、资本市场和大型合同，但也带来治理变化。尽调需确认创始人与新 CEO 的职责边界、董事会控制、资本开支审批、客户合同和 IPO 时间表。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li>GPU、数据中心、电力和网络需要巨额资本，扩张依赖股权、债务和长期采购承诺。</li><li>Microsoft 等大型合同能验证需求，也可能造成客户集中和议价风险。</li><li>NVIDIA GPU 本身不是独家资产，CoreWeave、云厂商和新 GPU 云会进行价格竞争。</li><li>GPU 更新很快，旧设备利用率下降或折旧加速会侵蚀利润。</li><li>电力、冷却、场地、互联和供应链延迟可能导致合同交付失败。</li><li>公司未公开绝对收入、毛利、客户集中、债务成本和自由现金流，估值缺少透明财务锚。</li><li>Series E 未披露估值，市场传闻不能代替已完成交易定价。</li><li>潜在 IPO 可能缩短私募投资期限，也可能使新投资者承担上市定价和锁定风险。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anyscale.html">Anyscale</a><a class="sib-chip" href="baseten.html">Baseten</a><a class="sib-chip" href="databricks.html">Databricks</a><a class="sib-chip" href="fireworks_ai.html">Fireworks AI</a><a class="sib-chip" href="hugging_face.html">Hugging Face</a><a class="sib-chip" href="modal.html">Modal</a><a class="sib-chip" href="prime_intellect.html">Prime Intellect</a><a class="sib-chip" href="together_ai.html">Together AI</a></div>
+</div>
+</body></html>
