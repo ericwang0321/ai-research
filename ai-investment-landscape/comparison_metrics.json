@@ -8698,5 +8698,306 @@
         "url": "https://find-and-update.company-information.service.gov.uk/company/13223825/filing-history/MzQ4MjkxNDg2M2FkaXF6a2N4/document?format=pdf&download=0"
       }
     ]
+  },
+  {
+    "company": "Baichuan / 百川智能",
+    "short": "Baichuan",
+    "md": "model_baichuan",
+    "slug": "baichuan_百川智能",
+    "sector": "基础模型",
+    "comparison_group": "通用模型",
+    "comparison_group_rank": 0,
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "A轮累计完成",
+    "latest_round_date": "2024-07",
+    "valuation_date": "2024-07",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "RMB 5B（A轮累计）",
+        "sort": 0.6915,
+        "source": {
+          "label": "第一财经 · 2024-07-25",
+          "url": "https://www.yicai.com/news/102205958.html"
+        }
+      },
+      "subsector": {
+        "value": "通用模型",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "研发中文与医疗增强大模型；提供模型 API 和企业私有化部署；开发临床辅助和医疗 AI 产品",
+        "items": [
+          "研发中文与医疗增强大模型",
+          "提供模型 API 和企业私有化部署",
+          "开发临床辅助和医疗 AI 产品"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "医疗机构、医生、企业开发者与私有化部署客户",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "医疗模型、验证器和临床工作流形成专业适配",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "API 按量 + 企业合同 + 私有化部署（占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Baichuan 官网/产品口径",
+          "url": "https://www.baichuan-ai.com/"
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
+      "open_status": {
+        "value": "闭源",
+        "sort": "",
+        "source": {
+          "label": "Baichuan-M4 · 2026-06",
+          "url": "https://arxiv.org/abs/2606.08982"
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "第一财经 · 2024-07-25",
+        "url": "https://www.yicai.com/news/102205958.html"
+      },
+      {
+        "label": "Baichuan 官网/产品口径",
+        "url": "https://www.baichuan-ai.com/"
+      },
+      {
+        "label": "Baichuan-M4 · 2026-06",
+        "url": "https://arxiv.org/abs/2606.08982"
+      }
+    ]
+  },
+  {
+    "company": "ShengShu / 生数科技",
+    "short": "ShengShu",
+    "md": "application_shengshu_生数科技",
+    "slug": "shengshu_生数科技",
+    "sector": "基础模型",
+    "comparison_group": "世界模型",
+    "comparison_group_rank": 4,
+    "layers": [
+      "模型层",
+      "应用层"
+    ],
+    "latest_round": "B轮",
+    "latest_round_date": "2026-04-10",
+    "valuation_date": "2026-04",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "近 RMB 2B",
+        "sort": 0.2929,
+        "source": {
+          "label": "生数科技 · 2026-04-10",
+          "url": "https://www.genspi.com/zh/news/series-b-funding/"
+        }
+      },
+      "subsector": {
+        "value": "世界模型",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "研发 Vidu 视频生成与世界模型；运营创作者应用和模型 API；向内容机构和企业销售生成服务",
+        "items": [
+          "研发 Vidu 视频生成与世界模型",
+          "运营创作者应用和模型 API",
+          "向内容机构和企业销售生成服务"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "视频创作者、影视与广告团队、开发者、具身智能合作伙伴",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "自研视频模型同时覆盖创作者入口和企业 API",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "订阅 + API 按量 + 企业合同（占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "ShengShu 官网/产品口径",
+          "url": "https://www.genspi.com/zh/"
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      },
+      "open_status": {
+        "value": "闭源",
+        "sort": "",
+        "source": {
+          "label": "Vidu S1",
+          "url": "https://www.genspi.com/zh/"
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "生数科技 · 2026-04-10",
+        "url": "https://www.genspi.com/zh/news/series-b-funding/"
+      },
+      {
+        "label": "ShengShu 官网/产品口径",
+        "url": "https://www.genspi.com/zh/"
+      },
+      {
+        "label": "Vidu S1",
+        "url": "https://www.genspi.com/zh/"
+      }
+    ]
+  },
+  {
+    "company": "LiblibAI",
+    "short": "LiblibAI",
+    "md": "application_liblibai",
+    "slug": "liblibai",
+    "sector": "横向 AI 应用",
+    "comparison_group": "企业内容制作",
+    "comparison_group_rank": 5,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "B+轮",
+    "latest_round_date": "2026-06-18",
+    "valuation_date": "2026-06-18",
+    "revenue_period": "2026-05",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": ">US$2B（B+轮投后，2026-06）",
+        "sort": 2.0,
+        "source": {
+          "label": "36氪 · 2026-06-24",
+          "url": "https://www.36kr.com/p/3867005912758915"
+        }
+      },
+      "latest_raise": {
+        "value": "近 US$300M",
+        "sort": 0.3,
+        "source": {
+          "label": "36氪 · 2026-06-24",
+          "url": "https://www.36kr.com/p/3867005912758915"
+        }
+      },
+      "subsector": {
+        "value": "企业内容制作",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "运营 AI 图像创作社区 LiblibAI；提供星流 AI 设计 Agent；以 LibTV 服务短剧、影视和广告团队",
+        "items": [
+          "运营 AI 图像创作社区 LiblibAI",
+          "提供星流 AI 设计 Agent",
+          "以 LibTV 服务短剧、影视和广告团队"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "设计师、图片与视频创作者、短剧影视团队、广告公司与品牌客户",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "创作者、模型素材和工作流可复用于多款创意产品",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "订阅 + 企业合同 + 实施/服务（占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "LiblibAI 官网/产品口径",
+          "url": "https://www.liblib.art/"
+        }
+      },
+      "arr_revenue": {
+        "value": ">US$300M ARR（截至 2026-05）",
+        "sort": 0.3,
+        "source": {
+          "label": "36氪 · 2026-06-24",
+          "url": "https://www.36kr.com/p/3867005912758915"
+        }
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "bounds_do_not_determine_multiple"
+      },
+      "pricing": {
+        "value": "",
+        "sort": "",
+        "source": null
+      }
+    },
+    "source_links": [
+      {
+        "label": "36氪 · 2026-06-24",
+        "url": "https://www.36kr.com/p/3867005912758915"
+      },
+      {
+        "label": "LiblibAI 官网/产品口径",
+        "url": "https://www.liblib.art/"
+      }
+    ]
   }
 ]

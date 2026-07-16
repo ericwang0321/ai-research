@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LiblibAI · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-verified{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.dc-verified-head{font-size:11.5px;font-weight:800;color:var(--ink3);margin-bottom:5px}
+.dc-verified-row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:10px;padding:5px 0;font-size:12.5px;line-height:1.5}
+.dc-verified-label{font-weight:750;color:var(--ink2)}
+.dc-verified-value{color:var(--ink)}
+.dc-verified-source{text-align:right;font-size:11.5px}
+@media(max-width:680px){.dc-verified-row{grid-template-columns:1fr;gap:2px}.dc-verified-source{text-align:left}}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-status{font-size:11px;font-weight:600;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;padding:3px 9px;border-radius:14px}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-link-hint{margin:-2px 0 12px;color:var(--ink3);font-size:12.5px;line-height:1.5}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 横向 AI 应用</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eff6ff;color:#1d4ed8">横向 AI 应用</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">中国北京</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.liblib.art/" target="_blank" rel="noopener">LiblibAI</a></h1>
+    <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
+    <div class="dc-oneliner">- 公司定位：从 AI 图像模型社区扩展到设计 Agent 和专业视频生产的创意应用平台</div>
+    <div class="dc-verified"><div class="dc-verified-head">公开数据复核 · 2026-07-16</div><div class="dc-verified-row"><span class="dc-verified-label">收入/ARR</span><span class="dc-verified-value">&gt;US$300M ARR（截至 2026-05）</span><span class="dc-verified-source"><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪 · 2026-06-24</a></span></div><div class="dc-verified-row"><span class="dc-verified-label">最新估值/交易价值</span><span class="dc-verified-value">&gt;US$2B（B+轮投后，2026-06）</span><span class="dc-verified-source"><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪 · 2026-06-24</a></span></div><div class="dc-verified-row"><span class="dc-verified-label">最近融资</span><span class="dc-verified-value">近 US$300M</span><span class="dc-verified-source"><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪 · 2026-06-24</a></span></div></div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<ul><li>公司定位：从 AI 图像模型社区扩展到设计 Agent 和专业视频生产的创意应用平台</li><li>所属层级：应用层</li><li>核心判断是，LiblibAI 不以训练通用基础模型为主，而是通过创作者、模型素材、工作流和专业客户形成应用层数据飞轮；2026 年 B+ 轮、ARR 和用户数据已经公开，商业化证据强于多数国内 AI 创作应用。</li></ul>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>日期</th><th>轮次/事件</th><th>融资金额</th><th>估值</th><th>投资方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2024-07</td><td>一年内前三轮融资累计</td><td>数亿元人民币</td><td>未披露</td><td>源码资本、高榕创投、金沙江创投、明势资本及战略投资方等</td><td>公开报道只披露三轮累计金额，未拆分每轮金额</td><td><a href="https://www.bbtnews.com.cn/2024/0729/523716.shtml" target="_blank" rel="noopener">北京商报</a></td></tr><tr><td>2025-02</td><td>第四轮融资</td><td>数亿元人民币</td><td>未披露</td><td>顺为资本、渶策资本领投，巨人网络等参与</td><td>公司宣布一年内连续完成四轮融资</td><td><a href="https://www.yicai.com/news/102484302.html" target="_blank" rel="noopener">第一财经</a></td></tr><tr><td>2025-10</td><td>B 轮</td><td>US$130M</td><td>未披露</td><td>红杉中国、CMC 资本及战略投资方联合领投，顺为、源码等增持</td><td>用于创意应用产品矩阵扩张</td><td><a href="https://www.yicai.com/news/102876754.html" target="_blank" rel="noopener">第一财经</a></td></tr><tr><td>2026-06-18</td><td>B+ 轮</td><td>近 US$300M</td><td>>US$2B</td><td>Granite Asia、腾讯、顺为联合领投，HT Investment、时代资本等参与</td><td>投后估值超过 US$2B</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td></tr></tbody></table></div>
+<ul><li>最新已完成资本事件：2026 年 6 月近 US$300M B+ 轮。</li><li>最新已完成交易估值：超过 US$2B。</li></ul>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">LiblibAI；母公司演语科技 Evoken</td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2023 年</td></tr><tr><td class="kv-key">总部/主体</td><td class="kv-val">中国北京</td></tr><tr><td class="kv-key">创始人/核心团队</td><td class="kv-val">陈冕及原剪映、CapCut 等创作工具团队成员</td></tr><tr><td class="kv-key">四层分类</td><td class="kv-val">横向 AI 应用</td></tr><tr><td class="kv-key">细分领域</td><td class="kv-val">AI 创作平台、设计 Agent、专业视频生产</td></tr><tr><td class="kv-key">主要产品</td><td class="kv-val">LiblibAI、星流 AI 设计 Agent、LibTV</td></tr><tr><td class="kv-key">用户群体</td><td class="kv-val">设计师、图片与视频创作者、短剧和影视团队、广告公司及品牌客户</td></tr><tr><td class="kv-key">当前阶段</td><td class="kv-val">未上市；B+ 轮</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://www.liblib.art/" target="_blank" rel="noopener">LiblibAI</a></td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式</h2>
+<h3 class="subsection">4.1 收入来源</h3>
+<p>公司通过个人订阅和生成额度、专业团队合同、企业解决方案以及平台增值服务收费。LiblibAI 提供创作社区与模型工作流，星流面向设计交付，LibTV 切入短剧、影视和广告视频制作；公开资料未披露各产品收入占比。</p>
+<h3 class="subsection">4.2 商业价值</h3>
+<p>LiblibAI 的价值不只是接入图像或视频模型。创作者上传和训练模型、工作流及素材，普通用户复用这些资产；更多使用又能帮助公司发现高频需求，并把用户导向星流和 LibTV。真正需要核验的是这些反馈和内容资产能否合法、持续地改善推荐、工作流和产品转化。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<ul><li>LiblibAI：AI 图像创作社区，支持模型、LoRA、工作流和素材的训练、分享与复用。</li><li>星流：把生成能力封装成面向设计任务的 Agent，服务品牌和专业设计流程。</li><li>LibTV：面向短剧、影视、广告和品牌内容的 AI 视频生产平台。</li><li>公司主要整合和适配多种底层模型，不把自研通用基础模型作为核心卖点，因此归入横向 AI 应用。</li></ul>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>商业化与运营数据</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>数据</th><th>来源</th><th>可信度</th></tr></thead><tbody><tr><td>ARR</td><td>超 US$300M（截至 2026-05）</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td><td>高</td></tr><tr><td>用户</td><td>LiblibAI 累计用户超过 3,000 万</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td><td>高</td></tr><tr><td>内容资产</td><td>超过 50 万个原创模型，累计沉淀过亿张专业图片和视频素材</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td><td>中高</td></tr><tr><td>使用规模</td><td>日均生成图片超过 500 万张</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td><td>中高</td></tr><tr><td>专业客户</td><td>LibTV 服务近 1,000 个短剧、影视、广告和品牌团队（截至 2026-05）</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td><td>高</td></tr><tr><td>最新估值</td><td>超 US$2B（2026-06 B+ 轮投后）</td><td><a href="https://www.36kr.com/p/3867005912758915" target="_blank" rel="noopener">36氪</a></td><td>高</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>竞争格局</h2>
+<p>LiblibAI 与 Midjourney、Canva、Adobe、稿定、即梦以及各类图像和视频生成工具竞争。它的区别在于先聚集模型和工作流创作者，再把社区资产带入设计 Agent 与专业视频生产。相较自研视频模型的 Kling、Vidu 或 PixVerse，LiblibAI 更依赖模型整合和产品运营；优势是用户与工作流，风险是底层模型供应商可能压缩产品差异。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>资本化/IPO 状态备注</h2>
+<ul><li>独立未上市公司，未见正式递表或已启动 IPO 的公开信息。</li></ul>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>投资方结构</h2>
+<ul><li>主要投资方包括 Granite Asia、腾讯、顺为资本、红杉中国、CMC 资本、高榕创投、源码资本、明势资本、蚂蚁集团和巨人网络等。</li><li>产业资本和财务投资人均较多，有利于分发和后续融资，但需核验董事会权利及优先条款。</li></ul>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>研究结论</h2>
+<p>LiblibAI 是国内应用层少数同时披露融资、估值、ARR、用户和专业客户数据的公司，值得进入创意应用的重点比较池。下一步应把公开增长数据与审计收入、现金回款、付费留存和推理毛利对上，并确认社区内容与反馈是否真正形成公司可控制的数据资产。</p>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anysphere_cursor.html">Anysphere</a><a class="sib-chip" href="cognition_ai_devin.html">Cognition AI</a><a class="sib-chip" href="emergent.html">Emergent</a><a class="sib-chip" href="genspark.html">Genspark</a><a class="sib-chip" href="granola.html">Granola</a><a class="sib-chip" href="lovable.html">Lovable</a><a class="sib-chip" href="manus_butterfly_effect.html">Manus</a><a class="sib-chip" href="replit.html">Replit</a></div>
+</div>
+</body></html>
