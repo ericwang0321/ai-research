@@ -9486,27 +9486,27 @@
         "source": null
       },
       "main_business": {
-        "value": "研发图像与视频生成模型；运营多模型创意制作平台；向品牌和企业销售内容工作流",
+        "value": "研发图像、视频与角色一致性模型；运营多模型创意 Agent 与企业内容平台；提供 Apps、Websites、Games、3D 工具及 MCP/CLI",
         "items": [
-          "研发图像与视频生成模型",
-          "运营多模型创意制作平台",
-          "向品牌和企业销售内容工作流"
+          "研发图像、视频与角色一致性模型",
+          "运营多模型创意 Agent 与企业内容平台",
+          "提供 Apps、Websites、Games、3D 工具及 MCP/CLI"
         ],
         "sort": "",
         "source": null
       },
       "user_group": {
-        "value": "视频与图像创作者、品牌、广告公司、影视制作人与企业营销团队",
+        "value": "图像与视频创作者、品牌与广告团队、开发者及独立游戏创作者",
         "sort": "",
         "source": null
       },
       "core_advantage": {
-        "value": "自研视觉模型与多模型工作流共同承接高频创作反馈",
+        "value": "自研视觉模型、多模型编排与可发布 Apps/Games 共用同一资产和 credits 体系",
         "sort": "",
         "source": null
       },
       "revenue_structure": {
-        "value": "订阅 + API 按量 + 企业合同（占比未披露）",
+        "value": "订阅 + 企业合同（另有 credits 加购；占比未披露）",
         "sort": "",
         "source": {
           "label": "Higgsfield AI 官网/产品口径",
