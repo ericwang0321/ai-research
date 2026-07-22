@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creatify · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.research-figure{margin:15px 0 19px}
+.research-figure img{display:block;width:100%;max-height:560px;object-fit:contain;background:#f8fafc;border:1px solid var(--line);border-radius:8px}
+.research-figure figcaption{margin-top:7px;color:var(--ink3);font-size:12px;line-height:1.55}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-verified{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.dc-verified-head{font-size:11.5px;font-weight:800;color:var(--ink3);margin-bottom:5px}
+.dc-verified-row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:10px;padding:5px 0;font-size:12.5px;line-height:1.5}
+.dc-verified-label{font-weight:750;color:var(--ink2)}
+.dc-verified-value{color:var(--ink)}
+.dc-verified-source{text-align:right;font-size:11.5px}
+@media(max-width:680px){.dc-verified-row{grid-template-columns:1fr;gap:2px}.dc-verified-source{text-align:left}}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-status{font-size:11px;font-weight:600;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;padding:3px 9px;border-radius:14px}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-link-hint{margin:-2px 0 12px;color:var(--ink3);font-size:12.5px;line-height:1.5}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 横向 AI 应用</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#eff6ff;color:#1d4ed8">横向 AI 应用</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 California</span>
+    </div>
+    <h1 class="dc-title"><a href="https://creatify.ai/" target="_blank" rel="noopener">Creatify</a></h1>
+    <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
+    <div class="dc-oneliner">Creatify 是面向电商、App、游戏和广告代理商的 AI 广告生产与优化平台。客户输入商品链接、品牌素材或广告目标后，平台可以研究同类广告、生成脚本和多种视频素材、批量制作不同版本，并将广告发布到 Meta、TikTok 和 AppLovin 等渠道。它解决的不是单纯“生成一条视频”，而是降低效果广告反复制作、测试和淘汰素材的成本。</div>
+    <div class="dc-verified"><div class="dc-verified-head">公开数据复核 · 2026-07-16</div><div class="dc-verified-row"><span class="dc-verified-label">收入/ARR</span><span class="dc-verified-value">&gt;US$9M ARR（截至 2025-05-28）</span><span class="dc-verified-source"><a href="https://www.businesswire.com/news/home/20250528506486/en/Creatify-Crosses-%249M-ARR-Raises-%2415.5M-Series-A-to-Launch-the-First-End-to-End-AI-Ad-Agent-for-Video" target="_blank" rel="noopener">Creatify / BusinessWire · 2025-05-28</a></span></div><div class="dc-verified-row"><span class="dc-verified-label">最近融资</span><span class="dc-verified-value">US$15.5M；累计融资 US$23M</span><span class="dc-verified-source"><a href="https://www.businesswire.com/news/home/20250528506486/en/Creatify-Crosses-%249M-ARR-Raises-%2415.5M-Series-A-to-Launch-the-First-End-to-End-AI-Ad-Agent-for-Video" target="_blank" rel="noopener">Creatify / BusinessWire · 2025-05-28</a></span></div><div class="dc-verified-row"><span class="dc-verified-label">公开价格</span><span class="dc-verified-value">Starter US$39/月；Pro US$99/月；Enterprise 询价</span><span class="dc-verified-source"><a href="https://creatify.ai/pricing" target="_blank" rel="noopener">Creatify 定价 · 2026-07-22</a></span></div></div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>Creatify 是面向电商、App、游戏和广告代理商的 AI 广告生产与优化平台。客户输入商品链接、品牌素材或广告目标后，平台可以研究同类广告、生成脚本和多种视频素材、批量制作不同版本，并将广告发布到 Meta、TikTok 和 AppLovin 等渠道。它解决的不是单纯“生成一条视频”，而是降低效果广告反复制作、测试和淘汰素材的成本。</p>
+<p>公司于 2025 年 5 月完成 US$15.5M Series A，累计融资 US$23M；同月披露上线约 18 个月达到超过 US$9M ARR、1.5M+ 用户和 10,000+ 团队。最新估值没有公开。Creatify 已研发 Aurora 数字人视频模型，但平台同时聚合 100 多种外部图像、视频和音频模型，因此主分类应为“横向 AI 应用 / 企业内容制作”，而不是基础模型。其长期价值取决于能否把广告投放结果持续反馈给创意生成与测试系统，而不只是销售模型 credits。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2023</td><td>公司成立并启动产品</td><td>-</td><td>-</td><td>Yinan Na、Ledell Wu、Xin Zhou</td><td>非融资事件</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2025-05-28</td><td>Series A</td><td>US$15.5M；累计融资 US$23M</td><td>未披露</td><td>WndrCo、Kindred Ventures 共同领投；Comcast Ventures 参与，早期投资方包括 NFDG、Millennium New Horizons、Creator Ventures、Leadout Capital 等</td><td>同时发布 AdMax，并披露 >US$9M ARR</td><td><a href="https://www.businesswire.com/news/home/20250528506486/en/Creatify-Crosses-%249M-ARR-Raises-%2415.5M-Series-A-to-Launch-the-First-End-to-End-AI-Ad-Agent-for-Video" target="_blank" rel="noopener">Creatify / BusinessWire</a></td></tr></tbody></table></div>
+<p>Series A 公告称累计融资 US$23M，但没有逐项披露早期融资的日期、轮次和金额，因此本时间线不把 US$7.5M 差额自行拆成某一轮。截止 2026-07-22，未找到 Creatify 完成新一轮融资或公开新估值的可靠公告。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Creatify / Creatify Lab, Inc.</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://creatify.ai/" target="_blank" rel="noopener">https://creatify.ai/</a></td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2023 年；公司称 2025 年 5 月时产品已上线约 18 个月</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">美国 California（公开报道通常标注 Mountain View / San Francisco Bay Area）</td></tr><tr><td class="kv-key">创始人与团队</td><td class="kv-val">Yinan Na（联合创始人兼 CEO，曾参与 Meta Feed Ads 和 Snap 内容理解系统）；Ledell Wu（联合创始人兼首席研究科学家，前 FAIR）；Xin Zhou（联合创始人兼 CTO，前 Meta Reels 推荐工程负责人）</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">将广告洞察、视频和图片生成、批量创意测试、投放及效果分析连接为一套 AI 广告工作流</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">AdMax、Ad Flow、Ad Chat、URL to Video、Asset Generator、AI Avatars、Product Ads、AI Shorts、Batch Generation、Ad Cloner、Creatify API、Creatify Studio</td></tr><tr><td class="kv-key">自研模型</td><td class="kv-val">Aurora：由单张图片与音频或文字生成会说话、具有动作和表情的数字人视频</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">电商商家、DTC 品牌、移动 App 与游戏发行商、广告代理商、平台型企业及内部增长团队</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">个人与团队订阅、生成 credits、API 按量、企业合同及代制作/媒体服务；收入占比未披露</td></tr><tr><td class="kv-key">公开价格</td><td class="kv-val">Starter US$39/月、Pro US$99/月；Enterprise 询价（<a href="https://creatify.ai/pricing" target="_blank" rel="noopener">Creatify 定价</a>）</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">US$15.5M Series A（2025-05-28）</td></tr><tr><td class="kv-key">累计融资</td><td class="kv-val">US$23M（Series A 公告口径）</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">未公开披露</td></tr><tr><td class="kv-key">公开经营数据</td><td class="kv-val">>US$9M ARR、1.5M+ 用户、10,000+ 团队（2025-05-28，公司披露）</td></tr></tbody></table></div>
+<p>Creatify 的主分类是“横向 AI 应用 / 企业内容制作”。Aurora 证明公司并非完全依赖第三方模型，但客户主要购买的是可直接用于获客的广告、批量测试和效果优化，而不是一套通用于其他行业的基础视频模型。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 当前公开价格与收入来源</h3>
+<p>截至 2026-07-22，<a href="https://creatify.ai/pricing" target="_blank" rel="noopener">Creatify 定价页</a>显示 Starter 为 US$39/月并包含 100 credits，Pro 为 US$99/月并包含 300 credits；Pro 可以按月提高到 5,000 credits。Enterprise 采用询价模式，增加团队、品牌空间、API 批量折扣、定制模板、白标、企业安全、客户经理以及 Creatify Studio 代制作服务。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收费方式</th><th>当前公开口径</th><th>客户购买什么</th><th>收入质量需要核验什么</th></tr></thead><tbody><tr><td>Starter 订阅</td><td>US$39/月，100 credits</td><td>面向创作者和小商家的广告生成工具</td><td>月度留存、credits 使用率和促销折扣</td></tr><tr><td>Pro 订阅</td><td>US$99/月起，300–5,000 credits</td><td>更多模型、模板、数字人、广告追踪、投放与团队协作</td><td>订阅收入和额外 credits 分别占多少</td></tr><tr><td>API 按量</td><td>按不同生成接口与资产计费；企业可获用量折扣</td><td>把 URL 转视频、数字人、产品广告和 Aurora 接入外部产品</td><td>API 毛利和客户集中度</td></tr><tr><td>企业合同</td><td>询价</td><td>多席位、品牌空间、白标、安全、定制模板与支持</td><td>合同期限、续约、最低消费和服务成本</td></tr><tr><td>Creatify Studio</td><td>企业方案内提供代制作和广告效果指导</td><td>由 Creatify 团队帮助生产、审核和迭代广告</td><td>人工服务占比是否压低软件毛利</td></tr><tr><td>媒体与投放服务</td><td>官网列示 AI-powered media buying services</td><td>广告发布、测试和投放建议</td><td>媒体预算是否按总额计入收入，以及收入确认口径</td></tr></tbody></table></div>
+<p>2025 年 5 月披露的 US$9M ARR 可以证明早期付费需求，但公开资料没有拆分订阅、API、credits、企业合同和服务收入。若大量收入来自代制作或媒体投放，公司不能直接按纯 SaaS 毛利和估值倍数理解。</p>
+<h3 class="subsection">4.2 客户为什么付费</h3>
+<p>效果广告需要持续制作新素材。一个有效广告会逐渐产生审美疲劳，不同人群、地区和渠道也需要不同脚本、人物、语言和开头。传统流程要经过调研、脚本、演员、拍摄、剪辑、审批、上传和数据回收，每增加一个版本都带来额外成本。</p>
+<p>Creatify 把这些步骤压缩到同一工作流：先从商品链接和广告库形成创意方向，再生成多种脚本、数字人和产品画面，批量制作版本，最后投放并观察 CPA、ROAS、点击率和安装等结果。客户购买的是更快的创意迭代速度，以及用相同预算测试更多假设的能力。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 用三层结构理解 Creatify</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品层</th><th>主要产品</th><th>用户实际做什么</th><th>投资意义</th></tr></thead><tbody><tr><td>广告洞察与规划</td><td>Ad Chat、Inspiration Library、Competitor Ad Tracker、URL to Video 的商品解析</td><td>查看同类热门广告，从商品链接提取卖点，用对话查找什么创意可能有效</td><td>将公开广告、品牌素材和营销目标转成可执行的创意假设</td></tr><tr><td>素材与广告生成</td><td>Asset Generator、AI Avatars、Product Ads、AI Shorts、Aurora、Ad Cloner、Batch Generation</td><td>生成脚本、图像、数字人、配音和视频，并一次制作多个广告版本</td><td>聚合 100+ 模型扩大能力覆盖；Aurora 提供部分自研模型资产</td></tr><tr><td>编排、投放与反馈</td><td>Ad Flow、Smart Assets、Ad Launcher、AI Media Buyer、Ad Insights、Creatify Studio</td><td>管理素材和品牌，发布到 Meta、TikTok、AppLovin，比较广告结果并继续迭代</td><td>若结果数据能稳定反馈到生成和选择系统，产品可从制作工具升级为广告优化平台</td></tr></tbody></table></div>
+<p>这个结构解释了 Creatify 与普通数字人工具的区别。URL to Video、AI Avatars 和 Product Ads 负责生产内容，AdMax 和 Ad Flow 负责组织广告流程，Ad Launcher 与效果报告才有机会把内容连接到真实商业结果。</p>
+<h3 class="subsection">5.2 Aurora 自研模型与外部模型聚合</h3>
+<p><a href="https://creatify.ai/introducing-aurora" target="_blank" rel="noopener">Aurora</a> 是 Creatify 自研的数字人视频模型。输入一张人物图片及音频或脚本后，模型生成说话、唱歌、眨眼、动作和表情，并尽量保持人物身份及时间连续性。官方将其描述为面向专业数字人广告的 diffusion transformer 模型；Aurora 也通过 Creatify API、fal.ai、Runware 和 ElevenLabs 等外部入口提供，说明它可以脱离 Creatify 前端单独调用。</p>
+<p>但 Aurora 只覆盖平台的一部分生成任务。定价页同时列出 100+ premium image, video and audio models，Asset Generator 也明确把多家模型放在同一入口。因此，Creatify 的技术资产应拆成三部分：Aurora 等自研模型、第三方生成模型，以及把广告目标、品牌资产、生成步骤、投放渠道和结果数据连接起来的应用与编排层。投资时不能把全部生成量都当成 Creatify 自研模型使用量。</p>
+<h3 class="subsection">5.3 数据飞轮是否成立</h3>
+<p>Creatify 具备比单次视频生成器更好的反馈条件。广告每次投放都会产生可观察结果，例如停留率、点击率、安装、获客成本、广告支出回报和素材衰减速度。DeNA 的公开案例显示团队用 10–12 个版本进行多轮测试，并把每轮结果带入下一轮；Alibaba 集成案例称三个月生成 200,000+ 广告，80% 以上被用于实际广告活动。这些结果标签理论上可以帮助平台学习什么脚本、人物、画面和节奏适合特定商品及渠道。</p>
+<p><a href="https://creatify.ai/terms" target="_blank" rel="noopener">Creatify 服务条款</a>赋予公司对用户输入的文字、图片和生成资产一项长期、全球、可再许可的使用权，用于提供、维护、推广和改进服务；社区资产及其修改可以明确用于训练 Creatify 的模型或系统。这为消费与标准订阅产品改进模型和工作流提供了较宽的合同基础。</p>
+<p>但公开条款没有明确说明客户广告账户中的 CTR、CPA、ROAS、安装和销售结果能否跨客户训练统一系统，也没有披露企业合同是否禁止训练、如何匿名化数据，以及反馈实际进入 Aurora、创意排序还是单客户报告。因此，Creatify 目前应表述为“拥有形成广告结果数据飞轮的产品结构和部分合同基础”，不能直接写成“已经形成可验证的跨客户数据飞轮”。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>市场空间、发展阶段与商业化</h2>
+<h3 class="subsection">6.1 市场规模：Creatify 只覆盖 AI 营销市场的一部分</h3>
+<p>目前没有权威公开报告单独统计“AI 视频广告生成、测试与优化平台”。更接近的上层市场是 AI in marketing，但其范围还包括搜索广告、客户分析、推荐、营销自动化和服务，明显大于 Creatify 当前业务。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>市场口径</th><th>来源原始规模</th><th>CAGR</th><th>与 Creatify 的关系</th></tr></thead><tbody><tr><td>AI in marketing</td><td>2024 年 US$20.4B；2026 年约 US$35.0B；2030 年 US$82.2B</td><td>2025–2030 CAGR 25.0%</td><td>覆盖社交广告、搜索营销、分析、自动化及服务；Creatify 只参与创意生产、测试和部分投放优化</td></tr><tr><td>数字视频买方采用</td><td>IAB 2025 调查称 86% 买方已使用或计划使用生成式 AI 制作视频广告；买方预计 2026 年生成式 AI 创意将占全部广告约 40%</td><td>非市场收入预测</td><td>说明采用速度快，但不等于 Creatify 的市场份额或可获取收入</td></tr></tbody></table></div>
+<p>来源：<a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-marketing-market-report" target="_blank" rel="noopener">Grand View Research · Artificial Intelligence in Marketing</a>、<a href="https://www.iab.com/news/nearly-90-of-advertisers-will-use-gen-ai-to-build-video-ads/" target="_blank" rel="noopener">IAB · 2025 Digital Video Ad Spend &amp; Strategy</a>。</p>
+<p>Creatify 的实际可获取市场应从效果广告创意预算自下而上计算，而不是把整个广告支出当成软件市场：</p>
+<p>可获取收入 = 付费广告主数量 × 每个广告主的软件、API 与服务年收入。</p>
+<p>其收入上限取决于平台能否从低价内容生成进入团队年度合同，并通过投放、测试和结果优化占据更高价值。若只销售生成 credits，收入会受到模型降价和同质化竞争；若能稳定降低 CPA 或提高 ROAS，定价可以更接近广告效果和节省的营销成本。</p>
+<h3 class="subsection">6.2 行业发展阶段</h3>
+<ol><li><strong>广告素材数量正在快速增加。</strong>生成模型降低图片和视频生产成本，广告主可以为不同人群、语言和渠道制作更多版本，创意测试从季度项目变成持续流程。</li><li><strong>价值正从“会生成”转向“知道生成什么”。</strong>视频模型能力会扩散，平台更需要证明它能找到有效卖点、维持品牌一致性，并用投放结果淘汰无效素材。</li><li><strong>媒体平台正在向上整合。</strong>Meta、Google、TikTok 和 AppLovin 已经掌握投放、用户和转化数据，也可以直接生成和优化广告。独立平台需要跨渠道、跨模型和品牌工作流来保持价值。</li><li><strong>真实性和版权风险上升。</strong>数字人、声音、竞品广告克隆和 UGC 风格内容容易涉及肖像权、授权、误导性广告和 deepfake 监管，企业客户会要求更清晰的审核和来源记录。</li><li><strong>AI 服务与软件边界仍在形成。</strong>品牌可能购买自助软件，也可能要求平台代做创意、审核和投放。后者有助于初期成交，但会增加人力和降低毛利。</li></ol>
+<h3 class="subsection">6.3 商业化与运营指标</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>最新公开口径</th><th>来源</th><th>投资解读</th></tr></thead><tbody><tr><td>ARR</td><td>>US$9M（2025-05-28）</td><td>公司 Series A 公告</td><td>上线约 18 个月达到；尚无公开 2026 年更新</td></tr><tr><td>用户</td><td>>1.5M（2025-05-28）</td><td>公司融资博客</td><td>注册用户不等于付费或月活用户</td></tr><tr><td>团队</td><td>>10,000（2025-05-28）</td><td>公司 Series A 公告</td><td>需要拆分自助团队和企业付费客户</td></tr><tr><td>Alibaba 使用量</td><td>三个月 200,000+ 视频；80%+ 被用于实际活动（2025-12 案例）</td><td>Creatify / Alibaba 案例</td><td>证明平台集成和实际采用，但未披露为 Creatify 带来的合同收入</td></tr><tr><td>DeNA 广告测试</td><td>每轮 10–12 个版本；3/4 超过基准，最高 creative score 3.0（2026-05 案例）</td><td>Creatify / DeNA 案例</td><td>说明测试闭环可改善广告结果；单一案例不能代表平台平均水平</td></tr><tr><td>最新估值</td><td>未披露</td><td>Series A 公告</td><td>无法计算公开 P/ARR，也无法判断当前交易价格是否合理</td></tr></tbody></table></div>
+<p>US$9M ARR、10,000+ 团队和 1.5M+ 用户之间仍缺少付费转换数据。假设所有 10,000 个团队都贡献收入，平均 ARR 约为 US$900；但实际很可能由少量较大企业和大量低价自助用户共同构成。尽调需要直接取得客户数、付费团队数、净收入留存和企业合同分布。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Creatify 的直接成本包括自研 Aurora 推理、向第三方图像/视频/音频模型支付费用、存储和带宽、广告平台连接、客户支持、内容审核、支付手续费，以及 Creatify Studio 的人工制作成本。相同的 US$1 收入可能来自高毛利软件订阅，也可能来自成本更高的第三方模型 credits、代制作或媒体服务，因此 ARR 本身不足以判断盈利质量。</p>
+<p>尽调应按产品和客户拆分以下指标：</p>
+<ul><li>Starter、Pro、API、Enterprise 和 Studio 分别贡献的 ARR 与增长；</li><li>自研 Aurora 与第三方模型分别贡献的生成量、收入和毛利；</li><li>credits 的实际消耗率、未使用 credits 的收入确认和退款；</li><li>自助用户三个月及十二个月留存、企业净收入留存和扩张率；</li><li>前十大客户占收入比例，以及 Alibaba、Comcast 等平台集成的合同规模；</li><li>代制作、广告效果指导和媒体投放的人力成本；</li><li>生成一个最终被投放的广告所需平均模型调用次数和成本。</li></ul>
+<p>如果公司能提高自研模型使用比例，并让客户因广告账户、品牌资产、模板和历史测试结果留在平台，毛利与留存可能同步改善；如果用户主要购买可替换的第三方模型生成量，价格下降会同时压低收入和毛利。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司/产品</th><th>核心位置</th><th>与 Creatify 的区别</th></tr></thead><tbody><tr><td>HeyGen</td><td>企业数字人、翻译和多语言视频平台</td><td>企业培训、销售与内容本地化范围更广；Creatify 更聚焦效果广告、批量测试和投放结果</td></tr><tr><td>Synthesia</td><td>标准化企业数字人视频和培训内容</td><td>企业治理与培训场景更成熟；Creatify 更偏电商、App、游戏和广告代理商</td></tr><tr><td>Higgsfield AI</td><td>自研视觉模型、多模型创意 Agent 和影视/广告生产</td><td>模型与专业创意控制更广；Creatify 的广告目标、竞品研究、发布和效果反馈更集中</td></tr><tr><td>Arcads</td><td>UGC 风格数字人广告</td><td>在社交广告素材上最接近；Creatify 还覆盖竞品追踪、产品广告、批量测试、API 和投放连接</td></tr><tr><td>Omneky</td><td>企业广告生成、跨渠道投放与优化</td><td>更强调广告账户数据和持续优化；Creatify 的自助视频与数字人生成入口更强</td></tr><tr><td>Pencil</td><td>品牌广告创意、生成和效果预测</td><td>更靠近品牌与广告团队的创意工作流；Creatify 在 URL-to-video 和 UGC 数字人上更产品化</td></tr><tr><td>AdCreative.ai</td><td>广告图片、文案和创意分析</td><td>以静态广告和低门槛自助工具见长；Creatify 更重视频、数字人和完整广告生命周期</td></tr><tr><td>Meta / Google / TikTok / AppLovin</td><td>原生广告投放、生成和优化</td><td>掌握最完整的用户及转化数据，并可捆绑生成工具；Creatify 的优势只能来自跨平台、跨模型和品牌资产工作流</td></tr></tbody></table></div>
+<p>Creatify 最值得验证的差异不是数字人数量或模型目录，而是能否在多个广告平台之间保留品牌资产和实验历史，并让每次投放结果改善下一轮创意。若这一闭环成立，它更接近广告操作系统；若不成立，它更接近功能齐全但容易替换的 AI 广告生成器。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p><a href="https://creatify.ai/about" target="_blank" rel="noopener">Creatify 创始团队页面</a>显示三位创始人的背景与产品方向高度相关。Yinan Na 在 Meta Feed Ads 团队参与早期视频广告模型，并在 Snap 建设 AI 内容审核和理解系统；Ledell Wu 曾在 FAIR 参与 PyTorch-BigGraph 和 StarSpace 等研究；Xin Zhou 曾负责 Meta Reels 推荐工程，具备大规模推荐与 AI 基础设施经验。</p>
+<p>团队同时理解广告排序、推荐系统、生成模型和消费产品，这是 Creatify 相对普通创意工具的重要优势。风险是公司从低价自助生成扩展到企业广告优化，需要补齐企业销售、数据治理、广告归因、品牌安全、媒体服务和客户成功能力。还应核实 Aurora 核心研究团队规模，以及广告投放数据和生成模型团队是否真正共享评估体系。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li>最新估值和 2026 年收入未披露，无法判断当前价格、P/ARR 和收入增长是否合理。</li><li>US$9M ARR 为公司在 2025 年融资时披露，未经独立财务核验，也没有拆分软件、credits、API 和服务收入。</li><li>Meta、Google、TikTok 和 AppLovin 拥有更完整的投放与转化数据，可以将生成、测试和优化直接捆绑进广告平台。</li><li>平台聚合 100+ 外部模型；若客户主要为外部模型生成量付费，技术差异和毛利容易被高估。</li><li>Creatify Studio、媒体投放和效果指导可能增加人力及媒体成本，使收入不能按纯 SaaS 理解。</li><li>数字人、声音、竞品广告克隆和 UGC 风格素材带来肖像、版权、deepfake、误导广告和品牌安全风险。</li><li>普通条款赋予公司较广的数据使用权，但企业合同、广告转化数据复用和跨客户训练边界尚未公开，可能限制数据飞轮。</li><li>客户可以在 HeyGen、Arcads、Higgsfield、AdCreative.ai 及大量模型平台之间迁移；模板和模型目录本身不能形成长期锁定。</li><li>广告结果同时受出价、受众、产品、落地页和渠道变化影响，平台可能错误地把效果归因于创意模型。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="anysphere_cursor.html">Anysphere</a><a class="sib-chip" href="cognition_ai_devin.html">Cognition AI</a><a class="sib-chip" href="emergent.html">Emergent</a><a class="sib-chip" href="genspark.html">Genspark</a><a class="sib-chip" href="granola.html">Granola</a><a class="sib-chip" href="lovable.html">Lovable</a><a class="sib-chip" href="manus_butterfly_effect.html">Manus</a><a class="sib-chip" href="replit.html">Replit</a></div>
+</div>
+</body></html>

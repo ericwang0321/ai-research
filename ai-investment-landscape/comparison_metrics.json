@@ -7407,6 +7407,114 @@
     ]
   },
   {
+    "company": "Creatify",
+    "short": "Creatify",
+    "md": "application_creatify",
+    "slug": "creatify",
+    "sector": "横向 AI 应用",
+    "comparison_group": "企业内容制作",
+    "comparison_group_rank": 5,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series A",
+    "latest_round_date": "2025-05-28",
+    "valuation_date": "2025-05-28",
+    "revenue_period": "2025-05-28",
+    "multiple_type": "",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "US$15.5M；累计融资 US$23M",
+        "sort": 0.0155,
+        "source": {
+          "label": "Creatify / BusinessWire · 2025-05-28",
+          "url": "https://www.businesswire.com/news/home/20250528506486/en/Creatify-Crosses-%249M-ARR-Raises-%2415.5M-Series-A-to-Launch-the-First-End-to-End-AI-Ad-Agent-for-Video"
+        }
+      },
+      "subsector": {
+        "value": "企业内容制作",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Yinan Na（联合创始人兼 CEO，曾参与 Meta Feed Ads 和 Snap 内容理解系统）；Ledell Wu（联合创始人兼首席研究科学家，前 FAIR）；Xin Zhou（联合创始人兼 CTO，前 Meta Reels 推荐工程负责人）",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "研究竞品广告并生成创意方案；批量生成数字人、产品图片和视频广告；连接广告发布、测试和效果分析",
+        "items": [
+          "研究竞品广告并生成创意方案",
+          "批量生成数字人、产品图片和视频广告",
+          "连接广告发布、测试和效果分析"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "电商商家、App 与游戏增长团队、品牌和广告代理商",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "把广告生成、批量测试和投放结果连接为同一反馈流程",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "订阅 + API 按量 + 企业合同 + 实施/服务（另有生成 credits 和媒体服务；占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Creatify 官网/产品口径",
+          "url": "https://creatify.ai/"
+        }
+      },
+      "arr_revenue": {
+        "value": ">US$9M ARR（截至 2025-05-28）",
+        "sort": 0.009,
+        "source": {
+          "label": "Creatify / BusinessWire · 2025-05-28",
+          "url": "https://www.businesswire.com/news/home/20250528506486/en/Creatify-Crosses-%249M-ARR-Raises-%2415.5M-Series-A-to-Launch-the-First-End-to-End-AI-Ad-Agent-for-Video"
+        }
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "valuation_not_disclosed"
+      },
+      "pricing": {
+        "value": "Starter US$39/月；Pro US$99/月；Enterprise 询价",
+        "sort": 39,
+        "source": {
+          "label": "Creatify 定价 · 2026-07-22",
+          "url": "https://creatify.ai/pricing"
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "Creatify / BusinessWire · 2025-05-28",
+        "url": "https://www.businesswire.com/news/home/20250528506486/en/Creatify-Crosses-%249M-ARR-Raises-%2415.5M-Series-A-to-Launch-the-First-End-to-End-AI-Ad-Agent-for-Video"
+      },
+      {
+        "label": "Creatify 官网/产品口径",
+        "url": "https://creatify.ai/"
+      },
+      {
+        "label": "Creatify 定价 · 2026-07-22",
+        "url": "https://creatify.ai/pricing"
+      }
+    ]
+  },
+  {
     "company": "Character.AI",
     "short": "Character.AI",
     "md": "model_character_ai",
