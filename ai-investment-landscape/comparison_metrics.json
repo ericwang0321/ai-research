@@ -7509,6 +7509,125 @@
     ]
   },
   {
+    "company": "Clipto.AI",
+    "short": "Clipto.AI",
+    "md": "application_clipto",
+    "slug": "clipto_ai",
+    "sector": "横向 AI 应用",
+    "comparison_group": "搜索与知识管理",
+    "comparison_group_rank": 3,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Pre-A++",
+    "latest_round_date": "2026-01-05",
+    "valuation_date": "2026-01-05",
+    "revenue_period": "2026-01-05",
+    "multiple_type": "P/ARR",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": ">US$250M",
+        "sort": 0.25,
+        "source": {
+          "label": "ION Analytics",
+          "url": "https://ionanalytics.com/insights/mergermarket/clipto-ai-plans-usd-50m-usd-100m-capital-raise-within-six-months-ceo/"
+        }
+      },
+      "latest_raise": {
+        "value": "最新单轮未披露；2025 年累计约 US$20M",
+        "sort": "",
+        "source": {
+          "label": "ION Analytics · 2026-04-28",
+          "url": "https://ionanalytics.com/insights/mergermarket/clipto-ai-plans-usd-50m-usd-100m-capital-raise-within-six-months-ceo/"
+        }
+      },
+      "subsector": {
+        "value": "搜索与知识管理",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Hongwen “Henry” Kang（创始人兼 CEO，前腾讯；曾创办 ZenVideo 并被腾讯收购）；公司 2026 年 4 月称团队约 20 人",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "在本地设备索引视频、音频和图片；提供自然语言片段搜索、转录和媒体问答；连接媒体资料库与专业剪辑工作流",
+        "items": [
+          "在本地设备索引视频、音频和图片",
+          "提供自然语言片段搜索、转录和媒体问答",
+          "连接媒体资料库与专业剪辑工作流"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "视频创作者、播客与采访团队、研究人员及拥有大量媒体资料的个人用户",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "端侧多媒体检索兼顾隐私、免上传和本地资料库黏性",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "订阅（企业合同和收入占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Clipto.AI 官网/产品口径",
+          "url": "https://www.clipto.com/"
+        }
+      },
+      "arr_revenue": {
+        "value": ">US$15M ARR（公司公告，2026-01-05）",
+        "sort": 0.015,
+        "source": {
+          "label": "Clipto.AI 融资公告 · 2026-01-05",
+          "url": "https://www.globenewswire.com/news-release/2026/01/05/3212803/0/en/clipto-ai-announces-new-funding-to-accelerate-on-device-ai-innovation.html"
+        }
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "bounds_do_not_determine_multiple"
+      },
+      "pricing": {
+        "value": "首月 US$9.99，之后 US$24.99/月；年付 US$149.88",
+        "sort": 24.99,
+        "source": {
+          "label": "Clipto 定价 · 2026-07-22",
+          "url": "https://www.clipto.com/pricing"
+        }
+      }
+    },
+    "source_links": [
+      {
+        "label": "ION Analytics",
+        "url": "https://ionanalytics.com/insights/mergermarket/clipto-ai-plans-usd-50m-usd-100m-capital-raise-within-six-months-ceo/"
+      },
+      {
+        "label": "ION Analytics · 2026-04-28",
+        "url": "https://ionanalytics.com/insights/mergermarket/clipto-ai-plans-usd-50m-usd-100m-capital-raise-within-six-months-ceo/"
+      },
+      {
+        "label": "Clipto.AI 官网/产品口径",
+        "url": "https://www.clipto.com/"
+      },
+      {
+        "label": "Clipto.AI 融资公告 · 2026-01-05",
+        "url": "https://www.globenewswire.com/news-release/2026/01/05/3212803/0/en/clipto-ai-announces-new-funding-to-accelerate-on-device-ai-innovation.html"
+      },
+      {
+        "label": "Clipto 定价 · 2026-07-22",
+        "url": "https://www.clipto.com/pricing"
+      }
+    ]
+  },
+  {
     "company": "AlphaSense",
     "short": "AlphaSense",
     "md": "application_alphasense",

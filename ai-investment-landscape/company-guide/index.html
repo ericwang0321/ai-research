@@ -22,6 +22,9 @@ code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-fa
 .section p{margin:9px 0;color:var(--ink)}
 .section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
 blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.research-figure{margin:15px 0 19px}
+.research-figure img{display:block;width:100%;max-height:560px;object-fit:contain;background:#f8fafc;border:1px solid var(--line);border-radius:8px}
+.research-figure figcaption{margin-top:7px;color:var(--ink3);font-size:12px;line-height:1.55}
 .table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
 table{border-collapse:collapse;width:100%;font-size:13px}
 th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
@@ -67,7 +70,7 @@ body{background:#fff}
 <main class="guide-shell">
   <header class="guide-head">
     <h1>AI 公司全景导读与深研框架</h1>
-    <div class="lead">用简单语言说明 4 个技术栈板块、90 家公司在做什么，并按业务质量而非固定配额筛选 10 家估值达到 US$500M 或以上、仍具私募投资属性且未进入明确上市或并购流程的公司。</div>
+    <div class="lead">用简单语言说明 4 个技术栈板块、91 家公司在做什么，并按业务质量而非固定配额筛选 10 家估值达到 US$500M 或以上、仍具私募投资属性且未进入明确上市或并购流程的公司。</div>
     <div class="guide-meta">研究基准日：2026-07-16 · 最新公开估值 &ge; US$500M · 融资轮次不限 · 排除已递表、正式上市流程、已签分拆或收购标的</div>
   </header>
   <nav class="guide-toc"><a href="#thesis">判断框架</a><a href="#priority">可投公司</a><a href="#infrastructure">AI 基础设施</a><a href="#foundation-models">基础模型</a><a href="#horizontal-apps">横向 AI 应用</a><a href="#vertical-apps">纵向 AI 应用</a><a href="#why-not">为什么暂不优先</a><a href="#conclusion">结论</a></nav>
@@ -360,6 +363,8 @@ body{background:#fff}
 <p>该公司连接企业各类 SaaS 与文档，提供权限感知的统一搜索、AI 助手和 Agent 编排；独特点是企业图谱、连接器与治理能力形成上下文层。商业模式以企业席位和定制合同为主，并可通过 Agent、API 与安全模块增购。其价值是提高知识获取和跨系统执行效率。进入本轮优先深研：最新估值高于门槛、仍有私募投资路径，且企业上下文与权限图谱形成明确控制点；需核验净留存、Agent 增量收入和办公套件的捆绑竞争。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/golinks_gosearch.html" target="_blank" rel="noopener">GoLinks / GoSearch</a></h3>
 <p>该公司以可记忆的内部短链接切入，向企业搜索、AI 助手、工作流和人员图谱扩展；独特点是先用易记的内部短链接进入员工日常工作，再据此沉淀组织资源之间的关系。收入来自 SaaS 席位、Pro 订阅、企业合同及产品组合增购。商业价值在于低摩擦部署和日常使用习惯，但从实用工具升级为战略平台仍需证明。暂不优先：等待企业客单价、付费席位和搜索产品附加率更清晰。</p>
+<h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/clipto_ai.html" target="_blank" rel="noopener">Clipto.AI</a></h3>
+<p>该公司把视频、音频和图片留在用户电脑上建立本地索引，用户可以按人物、动作、场景和对白搜索片段，并完成转录、摘要、媒体问答及剪辑导出。独特点是端侧处理兼顾隐私、免上传和较低云端推理成本；收入主要来自个人订阅。商业价值在于把难以检索的媒体资料变成可长期调用的个人知识库。暂不优先：最新估值仅超过 US$250M，低于本轮候选门槛；US$15M ARR 的披露时间点存在冲突，自研模型也缺少独立基准，而且本地隐私架构限制了跨用户训练数据飞轮。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/decagon_ai.html" target="_blank" rel="noopener">Decagon AI</a></h3>
 <p>该公司为企业构建覆盖聊天、语音和邮件的客服智能体，不只回答常见问题，还能执行会员、订单、账户及退款等操作；其流程规范、监控与人机协作工具形成差异化。收入主要来自高客单价企业合同，并可能随渠道、交互量或解决结果扩张，价值是降低服务成本并提升客户体验。进入本轮优先深研：超过 80% 的模型流量运行在自训练模型上，是深度适配的直接证据；仍需核验训练数据权利、结果定义、部署成本和模型后毛利。</p>
 <h3 class="subsection"><a href="https://ericwang0321.github.io/ai-research/ai-investment-landscape/companies/sierra.html" target="_blank" rel="noopener">Sierra</a></h3>
