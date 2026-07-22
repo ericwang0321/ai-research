@@ -8051,7 +8051,7 @@
     "slug": "harvey",
     "sector": "纵向 AI 应用",
     "comparison_group": "法律",
-    "comparison_group_rank": 1,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -8154,7 +8154,7 @@
     "slug": "legora",
     "sector": "纵向 AI 应用",
     "comparison_group": "法律",
-    "comparison_group_rank": 1,
+    "comparison_group_rank": 2,
     "layers": [
       "应用层"
     ],
@@ -8360,7 +8360,7 @@
     "slug": "abridge",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -8463,7 +8463,7 @@
     "slug": "ambience_healthcare",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -8559,7 +8559,7 @@
     "slug": "nabla",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -8652,7 +8652,7 @@
     "slug": "suki",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -8748,7 +8748,7 @@
     "slug": "commure_athelas",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -8851,7 +8851,7 @@
     "slug": "hippocratic_ai",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "模型层",
       "应用层"
@@ -8948,7 +8948,7 @@
     "slug": "openevidence",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -9051,7 +9051,7 @@
     "slug": "united_imaging_intelligence_联影智能",
     "sector": "纵向 AI 应用",
     "comparison_group": "医疗",
-    "comparison_group_rank": 2,
+    "comparison_group_rank": 3,
     "layers": [
       "应用层"
     ],
@@ -9154,7 +9154,7 @@
     "slug": "enveda_biosciences",
     "sector": "纵向 AI 应用",
     "comparison_group": "生命科学与药物发现",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 4,
     "layers": [
       "应用层"
     ],
@@ -9257,7 +9257,7 @@
     "slug": "isomorphic_labs",
     "sector": "纵向 AI 应用",
     "comparison_group": "生命科学与药物发现",
-    "comparison_group_rank": 3,
+    "comparison_group_rank": 4,
     "layers": [
       "模型层",
       "应用层"
@@ -9780,6 +9780,106 @@
       {
         "label": "Higgsfield proprietary models",
         "url": "https://higgsfield.ai/about"
+      }
+    ]
+  },
+  {
+    "company": "Maxima",
+    "short": "Maxima",
+    "md": "application_maxima",
+    "slug": "maxima",
+    "sector": "纵向 AI 应用",
+    "comparison_group": "财务与会计",
+    "comparison_group_rank": 1,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Seed + Series A",
+    "latest_round_date": "2025-11-18",
+    "valuation_date": "2025-11-18",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": "US$143M",
+        "sort": 0.143,
+        "source": {
+          "label": "Reuters",
+          "url": "https://www.investing.com/news/stock-market-news/ai-accounting-startup-maxima-raises-41-million-in-kleiner-perkinsbacked-round-4364956"
+        }
+      },
+      "latest_raise": {
+        "value": "Seed + Series A 合计 US$41M",
+        "sort": 0.041,
+        "source": {
+          "label": "Reuters · 2025-11-18",
+          "url": "https://www.investing.com/news/stock-market-news/ai-accounting-startup-maxima-raises-41-million-in-kleiner-perkinsbacked-round-4364956"
+        }
+      },
+      "subsector": {
+        "value": "财务与会计",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Yogi Goel（联合创始人兼 CEO，曾任职 EY、Citigroup、Barclays、Rubrik）；Akshaya Srivatsa（联合创始人兼 CPO，曾参与 Meta、Twitter 的基础设施与 AI 系统）；Jack Liao（联合创始人兼 CTO，曾任职 Netflix、Bolt、Airbnb）",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "连接企业财务系统并建立 Finance Graph；准备分录、对账、交易匹配和差异分析；由 Max 会计 Agent 跨工作流执行并交给会计审核",
+        "items": [
+          "连接企业财务系统并建立 Finance Graph",
+          "准备分录、对账、交易匹配和差异分析",
+          "由 Max 会计 Agent 跨工作流执行并交给会计审核"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "中大型企业的会计、财务控制、共享服务与审计协作团队",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "在不替换 ERP 的情况下，把交易级会计准备、控制和审计证据连接为同一执行层",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "企业合同 + 软件许可（平台费 + 模块费；占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Maxima 官网/产品口径",
+          "url": "https://www.maxima.ai/"
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      }
+    },
+    "source_links": [
+      {
+        "label": "Reuters",
+        "url": "https://www.investing.com/news/stock-market-news/ai-accounting-startup-maxima-raises-41-million-in-kleiner-perkinsbacked-round-4364956"
+      },
+      {
+        "label": "Reuters · 2025-11-18",
+        "url": "https://www.investing.com/news/stock-market-news/ai-accounting-startup-maxima-raises-41-million-in-kleiner-perkinsbacked-round-4364956"
+      },
+      {
+        "label": "Maxima 官网/产品口径",
+        "url": "https://www.maxima.ai/"
       }
     ]
   },

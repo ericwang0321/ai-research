@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maxima · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.research-figure{margin:15px 0 19px}
+.research-figure img{display:block;width:100%;max-height:560px;object-fit:contain;background:#f8fafc;border:1px solid var(--line);border-radius:8px}
+.research-figure figcaption{margin-top:7px;color:var(--ink3);font-size:12px;line-height:1.55}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-verified{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.dc-verified-head{font-size:11.5px;font-weight:800;color:var(--ink3);margin-bottom:5px}
+.dc-verified-row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:10px;padding:5px 0;font-size:12.5px;line-height:1.5}
+.dc-verified-label{font-weight:750;color:var(--ink2)}
+.dc-verified-value{color:var(--ink)}
+.dc-verified-source{text-align:right;font-size:11.5px}
+@media(max-width:680px){.dc-verified-row{grid-template-columns:1fr;gap:2px}.dc-verified-source{text-align:left}}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-status{font-size:11px;font-weight:600;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;padding:3px 9px;border-radius:14px}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-link-hint{margin:-2px 0 12px;color:var(--ink3);font-size:12.5px;line-height:1.5}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 纵向 AI 应用</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">纵向 AI 应用</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">美国 California</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.maxima.ai/" target="_blank" rel="noopener">Maxima</a></h1>
+    <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
+    <div class="dc-oneliner">Maxima 是面向中大型企业会计团队的 AI 会计平台。它连接 ERP、银行、支付、薪酬、采购、账单和数据仓库，按照企业自己的会计政策准备分录、对账、交易匹配和差异说明，再由会计人员审核并批准写回总账。它不是新的 ERP，也不只是提醒员工完成月结任务，而是位于业务系统和 ERP 之间，直接准备原来由会计人员在表格里完成的工作。</div>
+    <div class="dc-verified"><div class="dc-verified-head">公开数据复核 · 2026-07-22</div><div class="dc-verified-row"><span class="dc-verified-label">最近融资</span><span class="dc-verified-value">Seed + Series A 合计 US$41M</span><span class="dc-verified-source"><a href="https://www.investing.com/news/stock-market-news/ai-accounting-startup-maxima-raises-41-million-in-kleiner-perkinsbacked-round-4364956" target="_blank" rel="noopener">Reuters · 2025-11-18</a></span></div></div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>Maxima 是面向中大型企业会计团队的 AI 会计平台。它连接 ERP、银行、支付、薪酬、采购、账单和数据仓库，按照企业自己的会计政策准备分录、对账、交易匹配和差异说明，再由会计人员审核并批准写回总账。它不是新的 ERP，也不只是提醒员工完成月结任务，而是位于业务系统和 ERP 之间，直接准备原来由会计人员在表格里完成的工作。</p>
+<p>公司于 2025 年 11 月披露 Seed 与 Series A 合计融资 US$41M；Reuters 报道交易后估值为 US$143M。2026 年 6 月推出统一会计 Agent“Max”时，公司称平台累计处理超过 US$400B 会计交易量，客户包括 Rippling、Scale AI、Zendesk 和 Bilt Rewards，但没有公开 ARR、收入、付费客户总数或毛利。Maxima 值得进入 Landscape，因为它已经在高交易量、强审计要求的生产环境中形成案例，而且当前公开估值低于多数同阶段热门垂直 AI 公司。</p>
+<p>Maxima 的数据壁垒需要谨慎描述。公司明确承诺客户数据不用于模型训练，OpenAI、Anthropic 和 Google 也只能以零保留方式进行推理。因此，公司不能依靠把不同客户的账务数据汇总训练一个共享模型来形成传统数据飞轮。更现实的护城河是 Finance Graph、系统连接、企业会计政策配置、审批和审计证据链，以及把不同公司部署经验转化为更快实施和更可靠产品的能力。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2024</td><td>公司成立</td><td>-</td><td>-</td><td>Yogi Goel、Akshaya Srivatsa、Jack Liao</td><td>非融资事件</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2025-11-18</td><td>Seed + Series A</td><td>合计 US$41M</td><td>US$143M post-money</td><td>Redpoint Ventures、Kleiner Perkins、Audacious Ventures 领投；Joe Montana / Liquid 2 及多位财务高管参与</td><td>公司与媒体只披露两轮合计金额，没有公开拆分 Seed 和 Series A 的各自金额及定价</td><td><a href="https://www.investing.com/news/stock-market-news/ai-accounting-startup-maxima-raises-41-million-in-kleiner-perkinsbacked-round-4364956" target="_blank" rel="noopener">Reuters</a></td></tr></tbody></table></div>
+<p>截止 2026-07-22，未找到 Maxima 完成后续融资或公开新估值的可靠报道。融资公告把 Seed 与 Series A 合并披露，因此不能自行拆分成两条金额不明的融资记录。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Maxima / Indus AI Technologies, Inc. dba Maxima</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://www.maxima.ai/" target="_blank" rel="noopener">https://www.maxima.ai/</a></td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2024 年</td></tr><tr><td class="kv-key">总部</td><td class="kv-val">美国 California，San Mateo</td></tr><tr><td class="kv-key">创始人与团队</td><td class="kv-val">Yogi Goel（联合创始人兼 CEO，曾任职 EY、Citigroup、Barclays、Rubrik）；Akshaya Srivatsa（联合创始人兼 CPO，曾参与 Meta、Twitter 的基础设施与 AI 系统）；Jack Liao（联合创始人兼 CTO，曾任职 Netflix、Bolt、Airbnb）</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">让 AI 准备企业会计工作，由会计人员审核；在不替换 ERP 的情况下自动化 record-to-report 流程</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">Max 会计 Agent、Finance Graph、Journal Entry Automation、Account Reconciliations、Transaction Matching、Flux Analysis、Close Management</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">交易量大、多实体、多币种、使用复杂财务系统并有审计或 SOX 要求的企业会计团队</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">企业平台费 + 按工作流模块收费；价格随公司规模、交易量、实体数量和系统复杂度变化；收入占比未披露</td></tr><tr><td class="kv-key">公开价格</td><td class="kv-val">未公布固定价格，需要申请演示和报价</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">Seed + Series A 合计 US$41M（2025-11-18）</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">US$143M post-money（Reuters，2025-11-18）</td></tr><tr><td class="kv-key">公开经营数据</td><td class="kv-val">累计处理 >US$400B 会计交易量（2026-06）；ARR、收入和客户总数未披露</td></tr></tbody></table></div>
+<p>Maxima 的主分类应是“纵向 AI 应用 / 财务与会计”。虽然会计是任何行业都会使用的职能，但产品需要理解会计政策、总账、分录、对账、审计、职责分离和 SOX 控制，不是可以直接复制到销售、客服或研发的通用 Agent。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 收费结构</h3>
+<p><a href="https://www.maxima.ai/product" target="_blank" rel="noopener">Maxima 产品页</a>明确说明，定价由两部分组成：根据企业规模收取的平台费，以及根据所选工作流收取的模块费。最终报价还会考虑交易量、法人实体数量和系统复杂度。公司没有公开标准套餐、最低合同额、API 单价或平均合同价值。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收费项目</th><th>公开口径</th><th>客户购买什么</th><th>尽调需要核验什么</th></tr></thead><tbody><tr><td>企业平台费</td><td>按企业规模定价</td><td>Finance Graph、连接、权限、审批、审计日志和平台访问</td><td>年度合同期限、续约率、平台费占收入比例</td></tr><tr><td>模块费</td><td>按所选工作流收费</td><td>分录、对账、交易匹配、差异分析、月结管理等模块</td><td>每个模块价格、模块渗透率和交叉销售速度</td></tr><tr><td>规模相关费用</td><td>受交易量、实体数量和系统复杂度影响</td><td>处理更大、更复杂的会计环境</td><td>是否按用量收费、增长是否提高收入和计算成本</td></tr><tr><td>部署与支持</td><td>未披露是否单独收费</td><td>系统连接、会计政策配置、验证、上线和持续支持</td><td>前置实施收入与人工成本是否进入 ARR 或毛利</td></tr></tbody></table></div>
+<p>Maxima 的合同理论上具有较高黏性：客户一旦完成 ERP、银行、薪酬和数据仓库连接，配置会计规则、审批人及审计证据，替换平台需要重新验证控制流程。但这也意味着实施和前向部署可能较重，不能在没有数据的情况下直接假设它具有标准 SaaS 的高毛利和短回收期。</p>
+<h3 class="subsection">4.2 客户为什么付费</h3>
+<p>月结并不是把已有数字做成报表。会计人员需要从多个系统提取交易、清洗和匹配数据、判断该进入哪个科目及期间、准备分录和支持文件、完成对账、解释余额变化，再让不同人员复核和批准。企业增加法人实体、银行账户、支付渠道和币种后，工作量会以组合方式增长。</p>
+<p>Maxima 把这类准备工作提前到月内持续完成。客户购买的直接结果包括减少表格操作和人工分录、缩短结账天数、减少新增会计人员、提高对账覆盖率，并在审计时保留每项结果对应的来源、规则、修改和批准记录。这些结果比“节省聊天时间”更容易量化，也使 Maxima 有机会按企业会计成本和控制风险定价。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 用三层结构理解 Maxima</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品层</th><th>主要组成</th><th>用户实际得到什么</th><th>投资意义</th></tr></thead><tbody><tr><td>数据与控制底座</td><td>Finance Graph、ERP/银行/支付/薪酬/数据仓库连接、企业会计政策、权限、审批和交易级 lineage</td><td>把分散的财务数据映射到同一交易上下文，保留来源及审计证据</td><td>决定实施深度、准确性、迁移成本和客户黏性</td></tr><tr><td>会计执行模块</td><td>分录准备、账户对账、交易匹配、差异分析、工作底稿和月结管理</td><td>按预设规则持续准备会计工作，自动处理清晰项目，把异常交给人工</td><td>直接替代重复人工准备，ROI 可以用工时、结账天数和错误率衡量</td></tr><tr><td>Max 会计 Agent</td><td>通过统一入口分配薪酬分录、应计、对账和差异分析等任务</td><td>用户像把工作交给同事一样描述任务，Agent 跨模块执行并返回待审核结果</td><td>降低多模块使用门槛，但价值仍依赖底层连接、规则和证据链</td></tr></tbody></table></div>
+<p>这三层不能混为同一个聊天机器人。Max 是交互和任务编排层；真正使输出可以写入企业账簿的是底层 Finance Graph、确定性规则、权限和审计控制；分录、对账和差异分析模块则负责具体会计任务。</p>
+<h3 class="subsection">5.2 各模块怎样工作</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>模块</th><th>解决的问题</th><th>关键控制</th></tr></thead><tbody><tr><td>Journal Entry Automation</td><td>从银行、账单、薪酬和业务数据准备大批量会计分录</td><td>复用企业规则、逐笔验证、异常提醒、职责分离和批准后写回 ERP</td></tr><tr><td>Account Reconciliations</td><td>核对总账、银行、子账和工作底稿是否一致</td><td>重要性阈值、余额计算、未清项目滚动和实时异常监控</td></tr><tr><td>Transaction Matching</td><td>处理一对一、一对多和多对多交易匹配</td><td>持续数据标准化、智能分组、时间戳、评论和复核证据</td></tr><tr><td>Flux Analysis</td><td>找出余额变化原因并起草差异说明</td><td>从账户下钻到交易，关联供应商、部门、实体和来源数据</td></tr><tr><td>Close Management</td><td>管理月结任务、负责人、截止时间和控制事项</td><td>依赖关系、审批、变更记录、延误和控制缺口提醒</td></tr><tr><td>Max</td><td>接收跨工作流的会计任务并持续运行</td><td>后台任务可恢复、人工审核门槛、没有批准不能写入总账</td></tr></tbody></table></div>
+<h3 class="subsection">5.3 模型、规则与系统架构</h3>
+<p>Maxima 不是自研基础模型公司。安全页面显示平台使用 OpenAI、Anthropic 和 Google 等模型，并要求这些提供商不得训练、微调或保留客户数据。大模型负责理解文件、会计语境、异常和说明；金额计算、映射条件、重要性阈值、审批和写回总账则必须由企业规则及控制约束。投资时应把“模型推理能力”和“会计系统可靠性”分开评估。</p>
+<p>Max 的工程文章进一步披露，长时间运行的 Agent 任务使用 Temporal 保存每一步，Redis 处理实时事件，Postgres 保存可恢复记录；即使浏览器关闭、服务器更新或任务重试，执行过程仍可以恢复。这个架构本身不是会计模型壁垒，但它说明团队在解决生产 Agent 的可靠性，而不是只做一次性演示。</p>
+<h3 class="subsection">5.4 数据飞轮是否成立</h3>
+<p>Maxima 可以在单个客户内部形成“工作流反馈闭环”：会计人员修改映射、处理异常、批准或拒绝分录后，企业的政策和例外规则会更完整，后续月份可以自动处理更多相似交易。随着连接的账户、实体和模块增加，Finance Graph 也会积累更完整的公司级上下文。</p>
+<p>但这不等同于跨客户训练数据飞轮。<a href="https://www.maxima.ai/security" target="_blank" rel="noopener">Maxima 安全页面</a>明确写明客户数据保持隔离、不用于模型训练，第三方模型只能执行零数据保留的推理。公开资料也没有证明客户的分录、纠错或审计结果会被匿名化后训练 Maxima 的共享模型。因此，更准确的判断是：</p>
+<ol><li><strong>客户内部闭环成立的条件较好。</strong>同一企业每月重复处理相似账户、供应商、政策和审批，反馈可以提高该部署的自动化率。</li><li><strong>跨客户数据飞轮没有公开证据。</strong>严格隔离是大型企业采购的必要条件，也限制了直接复用敏感账务数据。</li><li><strong>公司级学习更可能来自产品和实施经验。</strong>Maxima 可以把不含客户机密的连接方式、控制设计、评估方法和部署模板做成通用产品，但需要尽调验证。</li></ol>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>市场空间、发展阶段与商业化</h2>
+<h3 class="subsection">6.1 市场规模：应使用会计软件市场，而不是全部财务人员成本</h3>
+<p>公开报告没有单独统计“企业 record-to-report AI Agent”。较可比的上层市场是会计软件，但它还包括 ERP、总账、应收、应付、税务和面向中小企业的产品，明显大于 Maxima 当前覆盖范围。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>市场口径</th><th>来源原始规模</th><th>CAGR</th><th>与 Maxima 的关系</th></tr></thead><tbody><tr><td>全球会计软件</td><td>2024 年 US$19.4B；2026 年 US$22.5B；2030 年 US$31.3B</td><td>2025–2030 CAGR 8.4%</td><td>包含广泛会计软件与服务；Maxima 只覆盖企业 record-to-report 和月结自动化的一部分</td></tr><tr><td>美国会计软件</td><td>2024 年 US$6.09B；2030 年 US$8.74B</td><td>2025–2030 CAGR 6.3%</td><td>更接近 Maxima 当前销售区域，但仍包含中小企业会计、税务及其他模块</td></tr></tbody></table></div>
+<p>来源：<a href="https://www.grandviewresearch.com/industry-analysis/accounting-software-market-report" target="_blank" rel="noopener">Grand View Research · Accounting Software Market</a>、<a href="https://www.grandviewresearch.com/industry-analysis/us-accounting-software-market-report" target="_blank" rel="noopener">Grand View Research · U.S. Accounting Software Market</a>。</p>
+<p>Maxima 的实际可获取市场应从目标企业自下而上估算：</p>
+<p>可获取收入 = 符合复杂度门槛的企业数量 × 平均平台费与模块费 × 可销售模块数量。</p>
+<p>市场价值不仅来自软件预算，也来自原本用于手工准备、外包和审计返工的人力成本。但这些节省不能全部当成 Maxima 收入；公司必须证明客户愿意把节省的一部分转化为长期软件合同。</p>
+<h3 class="subsection">6.2 行业发展阶段</h3>
+<ol><li><strong>会计 AI 正从辅助写作进入执行。</strong>早期产品以生成差异说明和查询数据为主，新一代平台开始准备分录、对账和工作底稿。</li><li><strong>ERP 是否被替换形成两条路线。</strong>Maxima、Numeric、BlackLine 和 FloQast 叠加在现有 ERP 之上；Rillet 和 DualEntry 则试图替换 ERP。前者部署风险较低，后者控制的数据和收入范围更大。</li><li><strong>可靠性比模型排行榜更重要。</strong>会计输出会影响财务报表和审计，企业更看重来源追溯、审批、职责分离、异常处理和重复执行，而不是通用模型分数。</li><li><strong>大型 ERP 和成熟厂商会加入竞争。</strong>SAP、Oracle、Microsoft、BlackLine 和 FloQast拥有既有客户、系统权限和销售渠道，可以把 AI 功能加入现有合同。</li><li><strong>实施能力可能成为增长瓶颈。</strong>每家企业的科目、政策、数据结构和控制不同，若每个模块都需要大量会计顾问配置，增长速度和毛利会受限制。</li></ol>
+<h3 class="subsection">6.3 商业化与运营指标</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>最新公开口径</th><th>来源</th><th>投资解读</th></tr></thead><tbody><tr><td>平台处理量</td><td>>US$400B 会计交易量（2026-06）</td><td>Maxima / Max 发布</td><td>证明已进入生产环境；不是收入或客户资产规模</td></tr><tr><td>Rippling</td><td>2.6M 月交易、150 个银行账户、50+ 实体；约 90% 大型账户交易自动处理；每月节省约 700 小时</td><td>Maxima 客户案例</td><td>展示高交易量现金会计和 SOX 控制能力</td></tr><tr><td>Scale AI</td><td>每月处理 US$500M 交易；98% 自动对账；90 天内人工分录准备减少 60%</td><td>Maxima 客户案例</td><td>证明跨系统对账和规模化使用，但属于单一客户案例</td></tr><tr><td>Gorgias</td><td>90% 现金交易自动化；月结缩短 2 天；公司称节省 US$60K</td><td>Maxima 客户案例</td><td>说明中型企业也可能获得可量化 ROI</td></tr><tr><td>公开收入</td><td>未披露</td><td>截至 2026-07-22 公开资料复核</td><td>无法计算 P/ARR、增长、毛利或客户集中度</td></tr><tr><td>最新估值</td><td>US$143M post-money（2025-11-18）</td><td>Reuters</td><td>相对早期垂直 AI 公司不高，但需要结合未披露收入和实施成本判断</td></tr></tbody></table></div>
+<p>这些运营数据主要来自 Maxima 自己发布的客户案例，尚未经过独立审计。US$400B 是累计处理的交易金额，不是支付总额、收入或资产管理规模；自动化率也可能按工作流、交易或特定账户计算，不能直接外推到全部客户。</p>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Maxima 的收入应主要来自企业平台费和模块费，直接成本包括第三方模型推理、数据同步与存储、长时间 Agent 任务、企业安全、客户支持，以及会计规则配置和前向部署团队。相比视频或图像生成，单次模型成本可能不是最大成本；实施、验证和持续维护更可能决定毛利和扩张速度。</p>
+<p>尽调需要取得以下数据：</p>
+<ul><li>ARR、年度收入、增长率、毛利和现金消耗；</li><li>企业客户总数、平均合同价值、合同期限、续约率和净收入留存；</li><li>平台费与分录、对账、匹配、差异分析等模块费的收入占比；</li><li>从签约到首个模块上线所需时间、内部工时和第三方实施成本；</li><li>客户从一个模块扩展到多个模块的比例与周期；</li><li>前五大和前十大客户收入占比；</li><li>每百万笔交易的推理、数据和支持成本；</li><li>公司披露的自动化率如何定义，人工复核和异常处理成本是否计入。</li></ul>
+<p>如果 Maxima 能用标准连接器、可复用政策模板和自助配置缩短实施，并让客户按模块持续扩张，收入可同时具备较高留存和较好的毛利。如果每个客户都需要大量会计顾问和定制工程，平台可能更接近高价值软件加服务业务。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司/产品</th><th>核心位置</th><th>与 Maxima 的区别</th><th>什么情况下优先选择对方</th></tr></thead><tbody><tr><td>Numeric</td><td>AI close management、对账、差异分析和分录自动化</td><td>与 Maxima 最接近；Numeric 更强调现代 close 工作台与会计团队协作，Maxima 更强调从交易层准备工作并形成完整证据链</td><td>已采用 Numeric、重视易用的月结协作和快速部署时</td></tr><tr><td>BlackLine</td><td>成熟的企业财务结账、对账、交易匹配和公司间会计平台</td><td>客户、全球实施和复杂控制经验更成熟；Maxima 架构更年轻，试图让 Agent 直接准备工作</td><td>超大型全球企业、复杂公司间会计或采购风险容忍度较低时</td></tr><tr><td>FloQast</td><td>面向会计团队的月结、合规和工作流平台</td><td>FloQast 公开称有 3,500+ 客户，协作和变更管理更成熟；Maxima 更强调交易级自动准备而不只是协调</td><td>主要痛点是月结管理、团队协作和较低实施风险时</td></tr><tr><td>Rillet</td><td>AI-native ERP，直接成为总账和财务系统</td><td>Rillet 替换 NetSuite/Sage 等系统并控制 GL、应收、收入确认和报表；Maxima 保留现有 ERP，只自动化其上游准备</td><td>客户愿意更换 ERP，并希望统一总账、收入确认和财务运营时</td></tr><tr><td>DualEntry</td><td>AI-native ERP 和旧系统迁移</td><td>与 Rillet 类似，控制面更广但更换系统风险更高；Maxima 更容易在大型企业现有系统上落地</td><td>企业正在进行 ERP 替换或从旧系统迁移时</td></tr><tr><td>SAP / Oracle / Microsoft</td><td>ERP 与财务系统记录层</td><td>掌握系统权限、总账数据和既有合同，可以捆绑 AI 会计功能；Maxima 提供跨系统、较快迭代的独立层</td><td>客户偏好单一供应商或原生 ERP AI 已足够满足需求时</td></tr></tbody></table></div>
+<p>Maxima 的选择逻辑不是“功能比所有对手更多”，而是在不更换 ERP 的前提下，比传统月结工具更深入地准备账务工作。如果客户只需要管理任务，FloQast 或 Numeric 可能更轻；如果客户愿意更换总账系统，Rillet 或 DualEntry 可能拥有更完整的数据和收入；如果客户需要成熟全球控制，BlackLine 风险更低。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p><a href="https://www.kleinerperkins.com/perspectives/maxima-bringing-ai-agents-to-the-heart-of-enterprise-accounting/" target="_blank" rel="noopener">Kleiner Perkins 的投资说明</a>称，Yogi Goel 在 EY、Citigroup、Barclays 和 Rubrik 累积约二十年会计与财务经验；Akshaya Srivatsa 和 Jack Liao 曾在 Meta、Twitter、Netflix 等公司建设基础设施和 AI 系统。这个组合适合 Maxima：CEO 理解会计流程、审计和企业采购，产品及技术创始人负责数据系统和生产 Agent。</p>
+<p>官网团队名单还显示公司招聘了来自 EY、KPMG、PwC 的前向部署人员，以及来自 BlackLine、FloQast、AuditBoard 和 Deloitte 的企业销售人员。这有助于缩短会计客户的教育和实施周期，也说明产品可能需要较重的行业销售与部署。尽调应核实每新增 US$1 ARR 需要多少部署和客户成功工时，以及创始人是否能把专家经验固化为标准产品。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li>ARR、收入、毛利、客户总数和集中度均未披露，无法判断 US$143M 估值对应的收入倍数和经营质量。</li><li>US$400B 是累计处理交易金额，不是收入；客户案例中的自动化率和节省时间也不是全平台平均值。</li><li>企业会计系统实施复杂，连接、规则配置、数据验证和审计测试可能需要大量前向部署人员，限制毛利和扩张速度。</li><li>BlackLine、FloQast、Numeric 已覆盖相近流程，SAP、Oracle 和 Microsoft 还可以把 AI 功能捆绑进现有 ERP 合同。</li><li>Rillet 和 DualEntry 等 AI-native ERP 从系统记录层控制更多数据与收入；如果企业愿意替换 ERP，Maxima 的叠加层位置可能受压。</li><li>会计错误可能引发重述、审计缺陷和法律责任；即使人工最终批准，客户仍会要求明确的责任、赔偿和保险安排。</li><li>公司依赖 OpenAI、Anthropic 和 Google 等第三方模型，模型价格、可用性和企业条款变化会影响产品成本和能力。</li><li>客户数据严格隔离且不用于训练有利于安全采购，但也限制跨客户训练的传统数据飞轮。</li><li>创始时间短，当前大型客户多为科技公司；尚需验证制造、金融、零售等更复杂行业和海外会计准则的可复制性。</li><li>公司公开宣传“100% accuracy”时需要核验分母、异常排除和人工审核口径，不能将其理解为所有会计判断都没有错误。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="harvey.html">Harvey</a><a class="sib-chip" href="hebbia.html">Hebbia</a><a class="sib-chip" href="legora.html">Legora</a><a class="sib-chip" href="rogo.html">Rogo</a></div>
+</div>
+</body></html>
