@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maneva · 深度研究</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1a1f36;--ink2:#475569;--ink3:#94a3b8;--line:#e5e8ee;--accent:#2563eb;--accent2:#1e40af;--accent-bg:#eff4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:13px;font-family:"SF Mono",Menlo,monospace}
+
+/* 顶部栏(返回按钮) */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 28px;display:flex;align-items:center;gap:14px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.back-btn:hover{background:var(--accent2);text-decoration:none}
+.topbar .crumb{color:var(--ink3);font-size:13px}
+
+/* 共用 section/表格 */
+.section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin-bottom:12px;scroll-margin-top:64px}
+.section-title{margin:0 0 15px;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px;padding-bottom:10px;border-bottom:2px solid var(--accent-bg)}
+.sec-num{background:var(--accent);color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.subsection{margin:18px 0 8px;font-size:15px;font-weight:700;color:var(--accent2);padding-left:9px;border-left:3px solid var(--accent)}
+.sub4{margin:14px 0 6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.section p{margin:9px 0;color:var(--ink)}
+.section ul,.section ol{margin:9px 0;padding-left:21px}.section li{margin:5px 0;color:var(--ink)}.section li::marker{color:var(--accent)}
+blockquote{margin:12px 0;padding:11px 15px;background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;color:#78350f;font-size:13.5px}
+.research-figure{margin:15px 0 19px}
+.research-figure img{display:block;width:100%;max-height:560px;object-fit:contain;background:#f8fafc;border:1px solid var(--line);border-radius:8px}
+.research-figure figcaption{margin-top:7px;color:var(--ink3);font-size:12px;line-height:1.55}
+.table-wrap{overflow-x:auto;margin:14px 0;border-radius:9px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f8fafc;font-weight:700;text-align:left;padding:9px 13px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:8px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#f8fafc}td strong{color:var(--accent2)}
+.kv-table .kv-key{background:#f8fafc;font-weight:600;color:var(--ink2);width:155px;white-space:nowrap}
+
+.dc-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:24px auto 16px;max-width:980px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.dc-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.dc-badge{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:14px}
+.dc-layer{font-size:11px;font-weight:600;color:var(--ink2);background:#eef2f7;padding:3px 10px;border-radius:14px}
+.dc-region{font-size:11px;color:var(--ink3)}
+.dc-status{font-size:11px;font-weight:600;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;padding:3px 9px;border-radius:14px}
+.dc-title{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--ink);margin-bottom:8px}
+.dc-title a{color:inherit;text-decoration:none}
+.dc-title a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.dc-link-hint{margin:-2px 0 12px;color:var(--ink3);font-size:12.5px;line-height:1.5}
+.dc-oneliner{font-size:14.5px;line-height:1.7;color:var(--ink);background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 10px 10px 0}
+.content{max-width:980px;margin:0 auto;padding:0 0 60px}
+.siblings{max-width:980px;margin:24px auto 60px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.siblings .st{font-size:12px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.sib-chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;color:var(--ink2);margin:3px 4px 3px 0}
+.sib-chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+</style></head><body>
+<div class="topbar">
+  <a class="back-btn" href="../matrix.html">← 返回首页</a>
+  <span class="crumb">AI 一级市场投资 · 纵向 AI 应用</span>
+</div>
+<div class="content">
+  <div class="dc-card">
+    <div class="dc-badges">
+      <span class="dc-badge" style="background:#ecfdf5;color:#047857">纵向 AI 应用</span>
+      <span class="dc-layer">应用</span>
+      <span class="dc-region">加拿大 Toronto / 美国 Palo Alto</span>
+    </div>
+    <h1 class="dc-title"><a href="https://www.maneva.ai/" target="_blank" rel="noopener">Maneva</a></h1>
+    <div class="dc-link-hint">点击公司名称可跳转公司官网。</div>
+    <div class="dc-oneliner">Maneva 是面向制造工厂的 Video-to-Action AI 公司。它把工厂已有摄像头、边缘计算设备和生产系统连接起来，持续观察产品、机器、人员与工序，再把视频转成缺陷剔除、停机预警、安全提醒、根因分析和产线控制动作。客户购买的不是一套通用视觉模型，而是减少废品、停机、人工检查和安全事故的生产结果，因此主分类应为“纵向 AI 应用 / 工业制造”。</div>
+  </div>
+  <section class="section" id="sec-1">
+<h2 class="section-title"><span class="sec-num">1</span>一句话结论</h2>
+<p>Maneva 是面向制造工厂的 Video-to-Action AI 公司。它把工厂已有摄像头、边缘计算设备和生产系统连接起来，持续观察产品、机器、人员与工序，再把视频转成缺陷剔除、停机预警、安全提醒、根因分析和产线控制动作。客户购买的不是一套通用视觉模型，而是减少废品、停机、人工检查和安全事故的生产结果，因此主分类应为“纵向 AI 应用 / 工业制造”。</p>
+<p>公司于 2026 年 6 月完成 US$27M Series A，累计融资 US$38.4M；最新估值、收入、ARR、客户总数和毛利均未公开。Maneva 披露 VITA 可在完整线速下每秒作出最多 30 次接收、剔除或改道判断，公开案例还包括停机间隔从 1.5 分钟延长到 25 分钟、产量提高最多 10%、安全合规改善约 50% 和缺陷检测准确率最高 99.9%。这些数字说明产品切中了高价值问题，但目前主要来自公司案例，尚不能视为经过独立审计的全客户平均水平。</p>
+<p>Maneva 最值得研究的地方是工厂内的数据闭环。每个缺陷、停机、人工纠正和最终生产结果都可能成为比普通图片更有价值的结果标签，帮助同一工厂的模型、阈值和操作流程持续改善。不过，公开隐私政策和网站使用条款没有明确授予 Maneva 跨客户复用生产视频训练统一模型的权利，企业合同内容也未公开。因此目前只能确认“单个工厂内部具备反馈闭环”，不能直接认定公司已经形成跨客户数据飞轮。</p>
+</section>
+<section class="section" id="sec-2">
+<h2 class="section-title"><span class="sec-num">2</span>融资历程完整时间线</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>估值</th><th>投资方/参与方</th><th>备注</th><th>来源</th></tr></thead><tbody><tr><td>2021</td><td>公司成立</td><td>-</td><td>-</td><td>Rae Jeong、Kelvin Chan</td><td>非融资事件</td><td>非融资金额/估值事件；不提供融资来源链接</td></tr><tr><td>2025</td><td>Seed</td><td>US$10M</td><td>未披露</td><td>Bling Capital 与 Freestyle Capital 共同领投；另有其他机构和天使投资人参与</td><td>用于产品开发、扩展工程与部署团队及北美市场</td><td><a href="https://www.maneva.ai/resources/resource/maneva-secures-10m-seed-funding-to-transform-manufacturing-with-ai-powered-automation" target="_blank" rel="noopener">Maneva 官方融资公告</a></td></tr><tr><td>2026-06-10</td><td>Series A</td><td>US$27M；累计融资 US$38.4M</td><td>未披露</td><td>U.S. Venture Partners 领投；Bling Capital、Freestyle Capital 继续参与，另有其他基金和天使投资人</td><td>用于深化 VITA 与 ALIS、扩展地区和行业、推出工厂编排及知识 Agent</td><td><a href="https://www.axios.com/pro/supply-chain-deals/2026/06/10/maneva-27m-series-a-for-factory-ai" target="_blank" rel="noopener">Axios</a></td></tr></tbody></table></div>
+<p>累计融资 US$38.4M 比两轮公开金额合计多 US$1.4M，但公司没有在 Series A 公告中拆分这部分资金的日期、轮次和投资方。本时间线不把差额自行编成一轮融资。</p>
+</section>
+<section class="section" id="sec-3">
+<h2 class="section-title"><span class="sec-num">3</span>公司概览</h2>
+<div class="table-wrap"><table class="kv-table"><tbody><tr><td class="kv-key">公司</td><td class="kv-val">Maneva；早期资料和数据库中也可见 Laplace Robotics 名称</td></tr><tr><td class="kv-key">官网</td><td class="kv-val"><a href="https://www.maneva.ai/" target="_blank" rel="noopener">https://www.maneva.ai/</a></td></tr><tr><td class="kv-key">成立时间</td><td class="kv-val">2021 年（公司官方口径；部分数据库记为 2022 年）</td></tr><tr><td class="kv-key">总部与办公室</td><td class="kv-val">加拿大 Toronto / North York；美国 Palo Alto</td></tr><tr><td class="kv-key">创始人与团队</td><td class="kv-val">Rae Jeong（联合创始人兼 CEO，曾在 Google DeepMind 从事机器人和深度强化学习研究，早年在 Alberta 做过焊接工作）；Kelvin Chan（联合创始人兼 CTO，前 Magna International 研发工程师，负责计算机视觉、RF、深度学习和汽车制造感知技术）</td></tr><tr><td class="kv-key">核心定位</td><td class="kv-val">用深度学习计算机视觉和边缘 AI 将工厂视频转为实时生产判断及动作</td></tr><tr><td class="kv-key">核心产品</td><td class="kv-val">VITA、ALIS、Orchestration Platform，以及 Knowledge、Control Agents、根因分析和报告模块</td></tr><tr><td class="kv-key">目标客户</td><td class="kv-val">食品饮料、糖果、肉类加工、木材、钢铁、玻璃、汽车、电子、医药、化妆品及仓储配送工厂</td></tr><tr><td class="kv-key">商业模式</td><td class="kv-val">企业软件合同、软件许可和实施/部署服务；公开资料未披露收入占比和标准计价单位</td></tr><tr><td class="kv-key">公开价格</td><td class="kv-val">未公开；官网要求申请演示或报价</td></tr><tr><td class="kv-key">最新融资</td><td class="kv-val">US$27M Series A（2026-06-10）</td></tr><tr><td class="kv-key">累计融资</td><td class="kv-val">US$38.4M（公司 Series A 公告口径）</td></tr><tr><td class="kv-key">最新估值</td><td class="kv-val">未公开披露</td></tr><tr><td class="kv-key">公开收入</td><td class="kv-val">未披露收入或 ARR</td></tr><tr><td class="kv-key">安全与部署</td><td class="kv-val">SOC 2、ISO 27001；默认数据基础设施包括 AWS S3 和 RDS，并提供数据驻留、出口管制和隐私支持</td></tr></tbody></table></div>
+<p>Maneva 不销售工业机器人本体，也不是以普通 MES、城市管理或传统工业软件为主。其核心功能离不开实时视觉模型：系统必须理解工厂中的产品、设备、人员和动作顺序，并把判断接入生产流程。这个边界使它符合当前 Landscape 对纵向 AI 应用的要求。</p>
+</section>
+<section class="section" id="sec-4">
+<h2 class="section-title"><span class="sec-num">4</span>业务模式与收费方式</h2>
+<h3 class="subsection">4.1 收费结构</h3>
+<p>Maneva 没有公布每个摄像头、Agent、产线、工厂或年度合同的价格。官网只提供 Book a Demo 和 Get our prices，网站条款允许订阅和周期性收费，但不能据此判断企业合同的实际计价方式。结合产品部署形态，公开资料能够确认的是软件需要按工厂环境配置、连接摄像头和生产系统，并由部署团队上线；不能把它直接当作完全自助的标准 SaaS。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>收入组成</th><th>公开口径</th><th>客户实际购买什么</th><th>尽调需要核验什么</th></tr></thead><tbody><tr><td>企业软件合同</td><td>价格未披露</td><td>VITA、ALIS、Orchestration Platform 的持续使用、安全、监控和更新</td><td>合同期限、最低承诺、续约率、净收入留存和前十大客户占比</td></tr><tr><td>软件许可</td><td>未披露按 Agent、摄像头、产线或工厂计价</td><td>质检、停机、安全、生产效率及管理模块</td><td>新增摄像头、产线和工厂是否带来可重复扩张收入</td></tr><tr><td>实施与部署</td><td>是否单独收费未披露</td><td>现场评估、摄像头与边缘设备配置、模型训练、系统连接、测试及操作培训</td><td>首次上线周期、部署工程师工时、硬件和差旅成本是否压低毛利</td></tr><tr><td>设备安排</td><td>客户通常自有硬件；Maneva 推荐兼容摄像头，特殊情况下可提供租赁</td><td>RGB、深度、短波红外、X-ray、热成像或高分辨率摄像头及 NVIDIA 边缘设备</td><td>硬件采购、租赁和维护是否计入收入，相关毛利与资金占用</td></tr></tbody></table></div>
+<p>客户愿意付费，是因为工厂问题可以直接换算成经济损失：一次停机减少产量，漏检会带来返工、报废和召回，人工巡检受疲劳与覆盖范围限制，安全事故还可能造成停产和责任成本。Maneva 如果能稳定减少这些损失，就可以从生产、质量、维护和安全预算中获得高于普通分析软件的定价；反之，如果项目需要大量定制却不能复制，收入会更像工程服务。</p>
+</section>
+<section class="section" id="sec-5">
+<h2 class="section-title"><span class="sec-num">5</span>产品与技术</h2>
+<h3 class="subsection">5.1 用三层结构理解 Maneva</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>产品层</th><th>主要产品</th><th>看什么、做什么</th><th>为什么不能混在一起</th></tr></thead><tbody><tr><td>产品与机器视觉层</td><td>VITA</td><td>观察产品、包装和设备；检测标签错误、表面缺陷、异物、尺寸偏差、溢出、计数、卡料和机器异常，并触发接收、剔除、改道、停线或提醒</td><td>VITA 解决单件产品和机器状态判断，是最接近传统工业视觉、但以学习型模型替代固定规则的部分</td></tr><tr><td>人员与流程监督层</td><td>ALIS</td><td>观察整条产线中的人员和工序；识别瓶颈、工位节拍、PPE、洗手、危险区域、跌倒和手部接近危险设备等事件</td><td>ALIS 处理的是时间顺序、人员行为、流程效率和安全，不只是产品缺陷</td></tr><tr><td>工厂运营与行动层</td><td>Orchestration Platform</td><td>汇总多条产线和多个工厂，展示实时指标，完成根因分析、生产问答、班次报告和跨工厂比较，并通过 API 连接 ERP、MES、SCADA 和受监督的产线控制</td><td>这一层把分散视觉 Agent 变成生产管理系统，决定 Maneva 能否从单点检测扩展为工厂级运营入口</td></tr></tbody></table></div>
+<p>最简单的理解是：VITA 看“产品和机器有没有问题”，ALIS 看“人员和流程是否安全、顺畅”，Orchestration Platform 再回答“为什么发生、谁要处理、如何在全厂执行”。公司所谓 Video-to-Action，关键不在于生成更多告警，而在于把判断连接到剔除、改道、维护、培训和产线控制。</p>
+<h3 class="subsection">5.2 部署与技术架构</h3>
+<p>Maneva 尽量复用客户已有摄像头，并支持普通 RGB、深度、短波红外、X-ray、热成像及高分辨率设备。VITA 和 ALIS 在 NVIDIA 边缘设备上运行，使系统能够在工厂现场低延迟判断，不必把所有视频先传到云端。Orchestration Platform 再汇总实时指标、事件和视频证据，并连接企业生产系统。</p>
+<p>公司把传统机器视觉和自身路线区分为两类：传统系统依赖固定规则、受灯光和摆位影响、产品变化后需要重新编程；Maneva 则针对每个生产环境训练模型，并在实际运行中继续优化。这个方向合理，但“可适配”不代表零部署成本。不同材料、速度、遮挡、灯光、相机角度和缺陷稀缺程度仍会影响数据采集、标注、验证和上线时间。</p>
+<p>Orchestration Platform 还使用 Kaizen / factory memory 叙事，把根因、处理动作、Agent 配置和报告保留下来。投资价值不只来自视觉模型准确率，而是能否把这些生产事件形成可查询的工厂记忆，让后续异常更快定位、不同班次共享经验，并把单一产线经验扩展到多个工厂。</p>
+<h3 class="subsection">5.3 数据飞轮与合同权利</h3>
+<p>Maneva 的产品天然产生高质量结果标签：产品最后是否被判定为缺陷、机器是否真的停机、警报是否被操作员确认、PPE 违规是否得到纠正、调整后产量是否改善。这些标签比普通互联网图片更接近客户愿意付费的业务结果。</p>
+<p>但需要区分三个层次：</p>
+<ol><li>同一工厂内部的反馈闭环。官网明确称 VITA、ALIS 会根据实际环境持续学习，生产案例也提到通过实时反馈和模型性能跟踪进行优化。只要企业合同允许，这些反馈可以改善该客户的模型、阈值和工作流。</li><li>跨工厂的产品经验。Maneva 可以把不含客户机密的部署方法、相机配置、评估框架、异常处理和系统连接固化进产品，提高后续上线效率；这是一种工程和产品飞轮。</li><li>跨客户训练数据飞轮。公开隐私政策主要说明个人数据、网站和应用数据如何处理，网站条款只允许按照隐私政策访问、存储和处理用户提供的信息，并未明确赋予 Maneva 使用客户生产视频跨租户训练统一模型的权利。真正的企业主协议、数据处理协议、匿名化和模型改进条款没有公开，因此目前不能确认这一层成立。</li></ol>
+<p>更准确的投资表述是：Maneva 已具备形成工厂结果数据闭环的产品结构，单客户内学习逻辑清楚；跨客户数据能否合法复用、实际进入哪些共享模型，以及客户能否选择退出，仍是必须查合同才能回答的问题。</p>
+</section>
+<section class="section" id="sec-6">
+<h2 class="section-title"><span class="sec-num">6</span>市场空间、发展阶段与商业化</h2>
+<h3 class="subsection">6.1 市场规模：使用 AI in manufacturing，而不是全部制造业产值</h3>
+<p>公司融资公告把全球制造业描述为约 US$46T 年产值，并称平均工厂效率约 60%、潜在效率缺口达到 US$18T。这个数字描述客户损失和价值池，不是 Maneva 可以获得的软件收入，也不能直接当作市场规模。</p>
+<p>较可比的公开市场是 AI in manufacturing。Grand View Research 预计该市场从 2024 年 US$5.3B 增长至 2030 年 US$47.9B，2025–2030 CAGR 为 46.5%。报告覆盖硬件、软件和服务，以及生产计划、预测维护、质量检测、机器人和供应链等广泛用途；2024 年硬件还占最大收入份额。因此 Maneva 当前的视频质检、设备监控、安全和运营软件只覆盖其中一部分。</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>市场口径</th><th>来源原始规模</th><th>CAGR</th><th>与 Maneva 的关系</th></tr></thead><tbody><tr><td>全球 AI in manufacturing</td><td>2024 年 US$5.3B；2026 年 US$9.7B；2030 年 US$47.9B</td><td>2025–2030 CAGR 46.5%</td><td>包括硬件、软件、服务及多种制造应用；Maneva 只参与视觉质检、停机、安全和运营决策</td></tr><tr><td>全球 smart manufacturing</td><td>2024 年 US$349.48B；2032 年 US$998.99B</td><td>2025–2032 CAGR 14.2%</td><td>还包括自动化设备、IoT、连接、控制系统和大量非 AI 软件，只能说明整体数字化预算，不能视为 Maneva TAM</td></tr></tbody></table></div>
+<p>来源：<a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-in-manufacturing-market" target="_blank" rel="noopener">Grand View Research · Artificial Intelligence in Manufacturing</a>、<a href="https://www.fortunebusinessinsights.com/press-release/global-smart-manufacturing-market-10209" target="_blank" rel="noopener">Fortune Business Insights · Smart Manufacturing</a>。</p>
+<p>更合理的自下而上市场估算应是：</p>
+<p>可获取收入 = 可部署工厂数量 × 每厂可覆盖产线数量 × 每条产线年度软件及服务收入。</p>
+<p>还需要按行业分别估算，因为糖果包装、木材缺陷、钢铁设备和医药合规所需数据、相机、验证和责任不同。市场很大并不能自动带来规模化；关键是一个训练及部署模板能否在相似产线间重复使用。</p>
+<h3 class="subsection">6.2 行业发展阶段</h3>
+<ol><li>工业视觉正从固定规则走向学习型模型。传统自动光学检测适合稳定产品和受控环境，深度学习更适合高变化缺陷、自然灯光和复杂动作，但需要更多真实生产验证。</li><li>价值从“发现问题”转向“闭环处理”。仅提供仪表盘会增加新的观察任务；真正高价值的系统需要连接剔除、维护工单、产线控制和人员流程。</li><li>边缘 AI 降低实时部署门槛。更强的 NVIDIA 边缘设备让视频在工厂现场处理，改善延迟、带宽和数据驻留，但也带来设备维护、版本管理和现场支持成本。</li><li>制造采购周期通常较长。客户需要经过试点、现场安全、网络、工会或员工隐私、质量验证和生产停线风险评估，单厂成功不等于快速复制到全部工厂。</li><li>大型自动化厂商和云平台正在进入。Cognex、Keyence、Siemens、Rockwell、Microsoft、AWS 及专业创业公司都可从摄像头、控制系统、MES 或云平台向相邻功能扩展。</li></ol>
+<h3 class="subsection">6.3 商业化与运营指标</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>指标</th><th>最新公开口径</th><th>来源</th><th>投资解读</th></tr></thead><tbody><tr><td>停机改善</td><td>某木材客户的停机间隔从每 1.5 分钟一次延长到每 25 分钟一次，约 16x</td><td>Maneva Series A 公告</td><td>可直接映射产量和利润，但客户未具名，需核验基线、周期和其他改造因素</td></tr><tr><td>产量提升</td><td>VITA 部署称产量提高 8%；官网汇总口径为最多 10%</td><td>Maneva Series A 公告 / 官网</td><td>不同页面口径不同，可能来自不同客户；不能视为全客户平均值</td></tr><tr><td>视觉准确率</td><td>最高 99.9%</td><td>Maneva 官网</td><td>必须取得精确率、召回率、误剔除率、漏检率、样本量和缺陷基准率</td></tr><tr><td>安全表现</td><td>ALIS 部署称约 50% 改善</td><td>Maneva Series A 公告</td><td>未披露“安全表现”的定义，需区分 PPE 合规、近失事件和真实事故率</td></tr><tr><td>决策速度</td><td>VITA 每秒最多作出 30 次接收、剔除或改道判断</td><td>Maneva Series A 公告</td><td>说明适合高速产线，但还需核验端到端延迟和控制系统可靠性</td></tr><tr><td>客户与行业</td><td>公开具名合作包括 Laura Secord；另称服务 Fortune 500 工业客户及十余类制造行业</td><td>Maneva 官网 / 融资公告</td><td>大部分客户匿名，付费客户总数、合同规模和多工厂扩张未披露</td></tr><tr><td>收入 / ARR</td><td>未披露</td><td>截至 2026-07-23 公开资料复核</td><td>无法计算 P/ARR、收入增长、毛利或客户集中度</td></tr><tr><td>最新估值</td><td>未披露</td><td>Series A 公告</td><td>US$27M 融资额不是公司估值，不应在首页误显示为估值</td></tr></tbody></table></div>
+</section>
+<section class="section" id="sec-7">
+<h2 class="section-title"><span class="sec-num">7</span>单位经济性 / 关键财务逻辑</h2>
+<p>Maneva 的直接成本不仅是模型推理。公司需要现场评估、采集和标注视频、配置摄像头及边缘设备、训练与验证模型、连接控制系统、处理安全和网络要求，并在不同产品、灯光、速度和班次变化后维护系统。客户通常拥有硬件可减少 Maneva 的资本开支，但前向部署工程师、差旅、实施和持续支持仍可能显著影响毛利。</p>
+<p>尽调应按客户和产品拆分以下指标：</p>
+<ul><li>ARR、年度收入、收入增长、软件毛利、服务毛利和现金消耗；</li><li>按摄像头、Agent、产线、工厂或结果计费的实际合同结构；</li><li>从签约到首个生产上线所需时间、内部工时和客户配合成本；</li><li>试点转正式合同的比例，以及单条产线扩展到多产线、多工厂的周期；</li><li>新增一个 VITA 或 ALIS 部署所需数据量、标注量和重新训练成本；</li><li>边缘设备、摄像头、网络、安装、维护和租赁收入的归属及毛利；</li><li>模型误报、漏报、人工复核和停线错误的经济成本；</li><li>前五大与前十大客户收入占比、合同续约和客户集中度；</li><li>公司宣称的产量、停机、安全和准确率如何定义，是否由客户或第三方验证。</li></ul>
+<p>如果 Maneva 能用相似行业模板和自动化训练把新产线部署时间持续缩短，并让客户从单点质检扩展到安全、维护和全厂编排，收入可能同时获得高留存和扩张。如果每个客户都需要大量定制模型和驻场工程，业务会更接近高价值工业软件加服务，估值倍数也应低于轻部署 SaaS。</p>
+</section>
+<section class="section" id="sec-8">
+<h2 class="section-title"><span class="sec-num">8</span>竞争格局</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>公司 / 产品</th><th>核心位置</th><th>与 Maneva 的区别</th><th>什么情况下优先选择对方</th></tr></thead><tbody><tr><td>Cognex / Keyence</td><td>工业相机、机器视觉设备和成熟质检系统</td><td>渠道、硬件、可靠性和工业认证更成熟；Maneva 更强调复用现有相机、视频时序理解和跨质量、安全及运营的学习型系统</td><td>产品稳定、规则清楚、需要成熟硬件一体化和全球维护时</td></tr><tr><td>Instrumental</td><td>制造数据、质量、追溯、视觉检测和根因分析平台</td><td>在电子制造、高混合产品、测试数据和数字线程上更深；Maneva 更强调实时视频、人员安全及整条产线动作</td><td>主要问题是电子产品质量、NPI、测试数据关联和跨供应商追溯时</td></tr><tr><td>Landing AI</td><td>通用企业计算机视觉平台</td><td>更像让企业快速训练和部署多类视觉模型的平台；Maneva 直接销售制造现场的预设业务结果和产线工作流</td><td>客户已有机器学习团队，希望自行建设多个行业视觉应用时</td></tr><tr><td>Augury</td><td>机器健康、预测维护和工业运营 AI</td><td>以振动、温度、磁场等传感器和长期机器故障数据见长；Maneva 以视频覆盖产品、机器、人员和流程</td><td>关键问题是旋转设备故障诊断，且客户愿意安装专用传感器时</td></tr><tr><td>Tulip</td><td>无代码前线运营、工人指导和生产应用平台</td><td>更侧重操作员应用、工作说明、数据采集和生产流程数字化；Maneva 更重实时视觉判断与自动动作</td><td>客户的主要问题是纸面流程、工人指导和低代码生产应用时</td></tr><tr><td>Invisible AI 等视频分析公司</td><td>用摄像头分析工位周期、流程和安全</td><td>与 ALIS 在人员及流程观察上更接近；Maneva 同时覆盖产品质检、机器状态和控制动作</td><td>客户只需要劳动效率、工位分析或隐私优先的视频运营分析时</td></tr><tr><td>Siemens / Rockwell / Microsoft / AWS</td><td>自动化控制、MES、工业数据和云平台</td><td>掌握既有系统、渠道和企业合同，可把视觉与 Agent 功能捆绑销售；Maneva 的优势是产品集中、部署灵活和跨设备兼容</td><td>客户坚持单一大型供应商、已深度绑定既有自动化平台或需要全球服务覆盖时</td></tr></tbody></table></div>
+<p>Maneva 的差异不应只写成“模型更先进”。更具体的选择逻辑是：它试图用现有摄像头同时处理产品、机器、人员和流程，再把观察连接到动作。若客户只需要成熟固定质检、专用机器健康或低代码工人应用，相应对手更合适；若客户希望从一个视频入口覆盖多个工厂问题，并逐步建立统一运营层，Maneva 的产品组合更有吸引力。</p>
+</section>
+<section class="section" id="sec-9">
+<h2 class="section-title"><span class="sec-num">9</span>团队与背景</h2>
+<p>Rae Jeong 兼具现场制造和前沿 AI 背景。他早年在 Alberta 从事焊接，后来在 University of Waterloo 学习工程，并在 Google DeepMind 参与机器人和长期强化学习研究。这使他既理解工厂停机、人员接受和实际工作环境，也能判断强化学习与边缘视觉的技术边界。</p>
+<p>Kelvin Chan 在 University of Waterloo 学习机电工程，之后在 Magna International 研发下一代感知技术，覆盖计算机视觉、RF 和深度学习。汽车供应链要求系统在真实设备、严格节拍和复杂环境下长期运行，这段经历与 Maneva 的部署挑战直接相关。</p>
+<p>公司还引入具有数十年食品与制造运营经验的人员，帮助把 AI 需求翻译成工厂语言。这个组合比纯研究团队更适合工业销售，但也说明业务高度依赖前向部署和行业专家。尽调需要核实模型、产品、部署、销售和制造专家的人员比例，以及核心知识能否从个人经验固化为标准产品。</p>
+</section>
+<section class="section" id="sec-10">
+<h2 class="section-title"><span class="sec-num">10</span>主要风险</h2>
+<ol><li>收入、ARR、客户总数、毛利、续约和客户集中度均未披露，无法判断商业化规模及 Series A 定价是否合理。</li><li>公开 ROI 和准确率主要来自公司案例，缺少独立验证；99.9% 准确率在低缺陷率环境中可能掩盖误报或漏报。</li><li>每个工厂的产品、相机、灯光、速度和控制系统不同，定制数据采集、标注、验证和部署可能限制毛利与扩张速度。</li><li>公开合同没有证明客户生产视频可跨租户用于训练；严格的数据隔离有利于采购，却限制传统跨客户数据飞轮。</li><li>系统会影响剔除、改道、停线和安全提醒，错误动作可能造成产量损失、设备损害或人身风险，责任和保险边界必须清楚。</li><li>对人员行为、PPE、工位效率和危险区域的持续视频分析可能引发员工隐私、工会、劳动管理和监控合规问题。</li><li>Cognex、Keyence、Siemens、Rockwell、Microsoft、AWS 及专业创业公司都拥有相邻入口，可能捆绑硬件、控制和云服务压低独立软件价格。</li><li>边缘设备和多种摄像头降低云端延迟，但增加设备版本、现场网络、安全补丁和维护复杂度。</li><li>公开具名客户和量化案例仍少，尚不清楚同一产品能否跨食品、木材、钢铁、医药和汽车稳定复制。</li><li>公司同时扩展质检、维护、安全、生产效率、知识 Agent 和工厂控制，产品范围过宽可能分散研发及部署资源。</li></ol>
+</section>
+  <div class="siblings"><div class="st">同行业公司</div><a class="sib-chip" href="abridge.html">Abridge</a><a class="sib-chip" href="alphasense.html">AlphaSense</a><a class="sib-chip" href="ambience_healthcare.html">Ambience Healthcare</a><a class="sib-chip" href="corgi.html">Corgi</a><a class="sib-chip" href="harvey.html">Harvey</a><a class="sib-chip" href="hebbia.html">Hebbia</a><a class="sib-chip" href="legora.html">Legora</a><a class="sib-chip" href="rogo.html">Rogo</a></div>
+</div>
+</body></html>

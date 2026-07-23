@@ -9982,5 +9982,98 @@
         "url": "https://lambda.ai/"
       }
     ]
+  },
+  {
+    "company": "Maneva",
+    "short": "Maneva",
+    "md": "application_maneva",
+    "slug": "maneva",
+    "sector": "纵向 AI 应用",
+    "comparison_group": "工业制造",
+    "comparison_group_rank": 5,
+    "layers": [
+      "应用层"
+    ],
+    "latest_round": "Series A",
+    "latest_round_date": "2026-06-10",
+    "valuation_date": "2026-06-10",
+    "revenue_period": "",
+    "multiple_type": "",
+    "ps_multiple": "",
+    "cells": {
+      "valuation": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "latest_raise": {
+        "value": "US$27M；累计融资 US$38.4M",
+        "sort": 0.027,
+        "source": {
+          "label": "Axios",
+          "url": "https://www.axios.com/pro/supply-chain-deals/2026/06/10/maneva-27m-series-a-for-factory-ai"
+        }
+      },
+      "subsector": {
+        "value": "工业制造",
+        "sort": "",
+        "source": null
+      },
+      "founder_team": {
+        "value": "Rae Jeong（联合创始人兼 CEO，曾在 Google DeepMind 从事机器人和深度强化学习研究，早年在 Alberta 做过焊接工作）；Kelvin Chan（联合创始人兼 CTO，前 Magna International 研发工程师，负责计算机视觉、RF、深度学习和汽车制造感知技术）",
+        "sort": "",
+        "source": null
+      },
+      "main_business": {
+        "value": "用工厂视频实时检测产品、机器、人员和流程异常；通过 VITA 与 ALIS 执行质检、停机预警、安全和效率任务；以 Orchestration Platform 连接多产线、根因分析和生产系统",
+        "items": [
+          "用工厂视频实时检测产品、机器、人员和流程异常",
+          "通过 VITA 与 ALIS 执行质检、停机预警、安全和效率任务",
+          "以 Orchestration Platform 连接多产线、根因分析和生产系统"
+        ],
+        "sort": "",
+        "source": null
+      },
+      "user_group": {
+        "value": "工厂管理层、生产、质量、设备维护与安全团队",
+        "sort": "",
+        "source": null
+      },
+      "core_advantage": {
+        "value": "复用现有摄像头，把视觉判断连接到可量化的工厂动作和生产结果",
+        "sort": "",
+        "source": null
+      },
+      "revenue_structure": {
+        "value": "企业合同 + 软件许可 + 实施/服务（计价单位及占比未披露）",
+        "sort": "",
+        "source": {
+          "label": "Maneva 官网/产品口径",
+          "url": "https://www.maneva.ai/"
+        }
+      },
+      "arr_revenue": {
+        "value": "",
+        "sort": "",
+        "source": null
+      },
+      "ps_multiple": {
+        "value": "",
+        "sort": "",
+        "source": null,
+        "missing_label": "没有",
+        "reason": "revenue_or_arr_not_disclosed"
+      }
+    },
+    "source_links": [
+      {
+        "label": "Axios",
+        "url": "https://www.axios.com/pro/supply-chain-deals/2026/06/10/maneva-27m-series-a-for-factory-ai"
+      },
+      {
+        "label": "Maneva 官网/产品口径",
+        "url": "https://www.maneva.ai/"
+      }
+    ]
   }
 ]
